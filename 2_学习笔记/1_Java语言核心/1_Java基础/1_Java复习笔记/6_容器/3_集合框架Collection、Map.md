@@ -1,16 +1,37 @@
-# 1、Java集合类简介
+<h1>目录</h1>
+- [1 Java集合类简介](#1%20Java%E9%9B%86%E5%90%88%E7%B1%BB%E7%AE%80%E4%BB%8B)
+- [2 Java集合和数组的区别](#2%20Java%E9%9B%86%E5%90%88%E5%92%8C%E6%95%B0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB)
+- [3 Java集合类之间的继承关系](#3%20Java%E9%9B%86%E5%90%88%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB)
+- [4 Collection接口](#4%20Collection%E6%8E%A5%E5%8F%A3)
+	- [4.1 简介](#4.1%20%E7%AE%80%E4%BB%8B)
+	- [4.2 接口中定义的方法](#4.2%20%E6%8E%A5%E5%8F%A3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%9A%84%E6%96%B9%E6%B3%95)
+	- [4.3 使用Iterator遍历集合元素](#4.3%20%E4%BD%BF%E7%94%A8Iterator%E9%81%8D%E5%8E%86%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0)
+- [5 Set集合](#5%20Set%E9%9B%86%E5%90%88)
+	- [5.1 简介](#5.1%20%E7%AE%80%E4%BB%8B)
+- [6 List集合](#6%20List%E9%9B%86%E5%90%88)
+	- [6.1 简介](#6.1%20%E7%AE%80%E4%BB%8B)
+	- [6.2 接口中定义的方法](#6.2%20%E6%8E%A5%E5%8F%A3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%9A%84%E6%96%B9%E6%B3%95)
+- [7 Queue集合](#7%20Queue%E9%9B%86%E5%90%88)
+	- [7.1 简介](#7.1%20%E7%AE%80%E4%BB%8B)
+	- [7.2 接口中定义的方法](#7.2%20%E6%8E%A5%E5%8F%A3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%9A%84%E6%96%B9%E6%B3%95)
+- [8 Map集合](#8%20Map%E9%9B%86%E5%90%88)
+	- [8.1 简介](#8.1%20%E7%AE%80%E4%BB%8B)
+	- [8.2 与Set集合、List集合的关系](#8.2%20%E4%B8%8ESet%E9%9B%86%E5%90%88%E3%80%81List%E9%9B%86%E5%90%88%E7%9A%84%E5%85%B3%E7%B3%BB)
+	- [8.3 接口中定义的方法](#8.3%20%E6%8E%A5%E5%8F%A3%E4%B8%AD%E5%AE%9A%E4%B9%89%E7%9A%84%E6%96%B9%E6%B3%95)
+
+## 1 Java集合类简介
 
 Java集合大致可以风分为Set、List、Queue和Map四种体系，其中Set代表无序、不可重复的集合；List代表有序、重复的集合；而Map则代表具有映射关系的集合，Java5又增加了Queue体系集合，代表一种队列集合实现。
 
 Java集合就像一种容器，可以把多个对象（实际是对象的引用，当习惯上都称为对象）“丢进”该容器中。从Java5增加了泛型以后，Java集合可以记住容器中对象的数据类型，使得代码更加简洁、健壮。
 
-# 2、Java集合和数组的区别
+## 2 Java集合和数组的区别
 
 1. 数组长度在初始化时固定，意味着只能保存定长的数据。而集合可以保存数量不确定的数据。同时可以保存具有映射关系的数据（即关联数组，键值对Key-Value）
 
 2. 数组元素即可以是基本类型的值，也可以是对象。集合里只能保存对象（实际上只是保存对象的引用变量），基本数据类型的变量要转换成对应的包装类才能放入集合类中。
 
-# 3、Java集合类之间的继承关系
+## 3 Java集合类之间的继承关系
 
 Java的集合类主要有两个接口派生而出：Collection 和 Map，Collection和Map是Java集合框架的根接口。
 
@@ -24,15 +45,15 @@ Map实现类用于保存具有映射关系的数据。Map保存的每项数据�
 
 图中，`HashMap、TreeMap`是我们经常会用到的集合类。
 
-# 4、Collection接口
+## 4 Collection接口
 
-## 4.1 简介
+### 4.1 简介
 
 Collection接口是Set、Queue、List的父接口。
 
 Collection接口中定义了多种方法可供子类进行实现，以实现数据操作。由于方法比较多，直接把JDK问到上的内容搬过来
 
-## 4.2 接口中定义的方法
+### 4.2 接口中定义的方法
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226115446830.png)
 
@@ -40,7 +61,7 @@ Collection接口中定义了多种方法可供子类进行实现，以实现数�
 
 其中重点介绍iterator()方法，该方法的方绘制是`Iterator<E>`
 
-## 4.3 使用Iterator遍历集合元素
+### 4.3 使用Iterator遍历集合元素
 
 Iterator接口经常被称作迭代器，它是Collection接口的父接口。但Iterator主要用于遍历集合中的元素。
 
@@ -87,16 +108,16 @@ public class IteratorExample1 {
 ```
 
 输出结果如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226120624272.png)
-# 5、Set集合
+## 5 Set集合
 
-## 5.1 简介
+### 5.1 简介
 
 Set集合与Collection集合基本相同，没有提供任何额外的方法。实际上Set就是Collection，只是行为略有不同（Set不允许包含重复元素）。
 
 Set集合不允许包含相同的元素，如果试图把两个相同的元素加入同一个Set集合中，则添加操作失败，add()方法返回false，且新元素不会被加入
-# 6、List集合
+## 6 List集合
 
-## 6.1 简介
+### 6.1 简介
 
 List集合代表一个元素有序、可重复的集合，集合中每个元素都有其对应的顺序索引。
 
@@ -104,7 +125,7 @@ List集合允许使用重复元素，可以通过索引来访问指定位置的�
 
 List作为Collection接口的子接口，可以使用Collection接口里的全部方法。而且由于List是有序集合，因此List集合里增加了一些根据索引来操作集合元素的方法。
 
-## 6.2 接口中定义的方法
+### 6.2 接口中定义的方法
 
 > `void add(int index, Object element):` 在列表的指定位置插入指定元素（可选操作）。  
 > `boolean addAll(int index, Collection<? extends E> c) `:  将集合c 中的所有元素都插入到列表中的指定位置index处。  
@@ -121,21 +142,21 @@ List作为Collection接口的子接口，可以使用Collection接口里的全�
 > `void replaceAll(UnaryOperator operator)`:根据operator指定的计算规则重新设置List集合的所有元素。  
 > `void sort(Comparator c)`:根据Comparator参数对List集合的元素排序。
 
-# 7、Queue集合
+## 7 Queue集合
 
-## 7.1 简介
+### 7.1 简介
 
 Queue用户模拟队列这种数据结构，队列通常是指“先进先出FIFO”的容器，队列的头部是在队列中存放时间最长的元素，队列的尾部是保存在队列中存放时间最短的元素。
 
 新元素插入到队列的尾部，访问元素操作会返回队列头部的元素。通常，队列不允许随机访问队列中的元素。
 
-## 7.2 接口中定义的方法
+### 7.2 接口中定义的方法
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226123429786.png)
 
-# 8、Map集合
+## 8 Map集合
 
-## 8.1 简介
+### 8.1 简介
 
 Map用户保存具有映射关系的数据，因此Map集合里保存着两组数，一组值用户保存Map中的Key，另一组值用户保存Map里的Value，key和value都是可以任何引用类型的数据。Map的key不允许重复，即同一个Map对象的任何两个key通过equals方法比较总是返回false。
 
@@ -144,7 +165,7 @@ Map用户保存具有映射关系的数据，因此Map集合里保存着两组�
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226123719090.png)
 
 
-## 8.2 与Set集合、List集合的关系
+### 8.2 与Set集合、List集合的关系
 
 1. 与Set集合的关系
 	如果 把Map集合里所有的key 放在一起看，它们就组成了一个Set集合（所有的key没有顺序，key之间不能重复），实际上Map确定包含了一个keySet()方法,用户返回Map里所有key组成的Set集合
@@ -152,7 +173,7 @@ Map用户保存具有映射关系的数据，因此Map集合里保存着两组�
 2. 与List集合的关系
 	如果把Map里所有value放在一起看，它们有非常类似一个list：元素之间可以重复，每个元素可以根据索引来查找，只是Map中索引不再使用整数值，而是以另外一个对象作为索引
 
-## 8.3 接口中定义的方法
+### 8.3 接口中定义的方法
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226124025240.png)
 

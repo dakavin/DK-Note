@@ -1,3 +1,11 @@
+<h1>目录</h1>
+- [1 基本类型](#1%20%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B)
+- [2 条件分支和循环语句关键字](#2%20%E6%9D%A1%E4%BB%B6%E5%88%86%E6%94%AF%E5%92%8C%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%E5%85%B3%E9%94%AE%E5%AD%97)
+- [3 异常处理机制](#3%20%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6)
+- [4 类或变量的权限控制](#4%20%E7%B1%BB%E6%88%96%E5%8F%98%E9%87%8F%E7%9A%84%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6)
+- [5 修饰字段变量的关键字](#5%20%E4%BF%AE%E9%A5%B0%E5%AD%97%E6%AE%B5%E5%8F%98%E9%87%8F%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97)
+- [6 其他关键字](#6%20%E5%85%B6%E4%BB%96%E5%85%B3%E9%94%AE%E5%AD%97)
+
 
 Java关键字列表如下，包含50个关键，所有字符都是小写
 
@@ -5,7 +13,7 @@ Java关键字列表如下，包含50个关键，所有字符都是小写
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201214944775.png)
 
-## 1、基本类型
+## 1 基本类型
 
 先介绍基本类型关键字如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201215014942.png)
 
@@ -114,7 +122,7 @@ public class Test {
     
 
 
-## 2、条件分支和循环语句关键字
+## 2 条件分支和循环语句关键字
 
 - `for 为了（循环语句）  `
     一个Java语言的关键字，用来声明一个循环。程序员可以指定要循环的语句，推出条件和初始化变量。
@@ -144,7 +152,7 @@ public class Test {
     continue语句与break语句相关，但较少用到。continue语句用于使其所在的for、while或do-while语句开始下一次循环。在while与do-while语句中，continue语句的执行意味着立即执行测试部分；在for循环语句中，continue语句的执行则意味着使控制传递到增量部分。
     
 
-## 3、异常处理机制
+## 3 异常处理机制
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201215532744.png)
 
@@ -352,7 +360,7 @@ public class TestException1 {
 ```
   
   
-## 4、类或变量的权限控制
+## 4 类或变量的权限控制
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201223833031.png)
 
@@ -369,7 +377,7 @@ public class TestException1 {
 
   
   
-## 5、修饰字段变量的关键字
+## 5 修饰字段变量的关键字
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201224033572.png)
 
@@ -411,7 +419,7 @@ public class TestException1 {
     **偏向锁。** 获取的过程如下，当锁对象第一次被线程获取的时候，虚拟机把对象头中的标志位设为“01”，即偏向模式。同时使用CAS操作把获取到这个锁的线程的ID记录在对象的Mark Word之中的偏向线程ID，并将是否偏向锁的状态位置置为1。如果CAS操作成功，持有偏向锁的线程以后每次进入这个锁相关的同步块时，直接检查ThreadId是否和自身线程Id一致，如果一致，则认为当前线程已经获取了锁，虚拟机就可以不再进行任何同步操作（例如Locking、Unlocking及对Mark Word的Update等）。  
     **详见原理：** [https://www.jianshu.com/p/ce4f5e43e0a8?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin](https://www.jianshu.com/p/ce4f5e43e0a8?utm_campaign=haruki&utm_content=note&utm_medium=reader_share&utm_source=weixin)
 
-## 其他关键字
+## 6 其他关键字
 
 - `this 这个`  
     Java语言的关键字，用来代表它出现的类的一个实例。this可以用来访问类变量和类方法。

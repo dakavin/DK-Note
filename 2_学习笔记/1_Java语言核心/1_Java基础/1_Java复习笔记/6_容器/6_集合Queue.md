@@ -1,3 +1,16 @@
+<h1>目录</h1>
+- [1 前言](#1%20%E5%89%8D%E8%A8%80)
+- [2 PriorityQueue](#2%20PriorityQueue)
+	- [2.1 PriorityQueue的排序方式](#2.1%20PriorityQueue%E7%9A%84%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F)
+	- [2.2 PriorityQueue的方法](#2.2%20PriorityQueue%E7%9A%84%E6%96%B9%E6%B3%95)
+	- [2.3 PriorityQueue的本质](#2.3%20PriorityQueue%E7%9A%84%E6%9C%AC%E8%B4%A8)
+- [3 Deque接口与ArrayDeque实现类](#3%20Deque%E6%8E%A5%E5%8F%A3%E4%B8%8EArrayDeque%E5%AE%9E%E7%8E%B0%E7%B1%BB)
+	- [3.1 Deque接口](#3.1%20Deque%E6%8E%A5%E5%8F%A3)
+	- [3.2 Deque与Queue、Stack的关系](#3.2%20Deque%E4%B8%8EQueue%E3%80%81Stack%E7%9A%84%E5%85%B3%E7%B3%BB)
+	- [3.3 ArrayDeque的本质](#3.3%20ArrayDeque%E7%9A%84%E6%9C%AC%E8%B4%A8)
+	- [3.4 ArrayDeque常用方法](#3.4%20ArrayDeque%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95)
+
+## 1 前言
 
 Queue用于模拟队列这种数据结构，队列通常是指“先进先出”的容器，新元素插入到队列尾部，访问元素操作会返回队列头部的元素。通常，队列不允许随机访问队列中的元素
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227002105453.png)
@@ -6,11 +19,11 @@ Queue用于模拟队列这种数据结构，队列通常是指“先进先出”
 
 下面我们就来介绍Queue中的一个重要的实现类PriorityQueue
 
-# 1、PriorityQueue
+## 2 PriorityQueue
 
 PriorityQueue保存队列元素的顺序不是按加入队列的顺序，而是按照队列元素的大小进行重新排序。因此当调用peek()或pool()方法取出队列中头部的元素时，并不是取出最先进入队列的元素，而是`取出队列中最小的元素`。
 
-## 1.1 PriorityQueue的排序方式
+### 2.1 PriorityQueue的排序方式
 
 PriorityQueue中的元素可以默认自然排序（也就是数字默认是小的在队列头，字符串则按字典序排列）或者通过提供的Comparator（比较器）在队列实例化时指定的排序方式。
 
@@ -60,13 +73,13 @@ public class PriorityQueueTest {
 
 由此可以看出，默认情况下PriorityQueue采用自然排序。指定Comparator的情况下，PriorityQueue采用指定的排序方式。
 
-## 1.2 PriorityQueue的方法
+### 2.2 PriorityQueue的方法
 
 PriorityQueue实现了Queue接口，下面列举PriorityQueue的方法
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227003128387.png)
 
 
-## 1.3 PriorityQueue的本质
+### 2.3 PriorityQueue的本质
 
 PriorityQueue本质也是一个动态数组，在这一方面与ArrayList是一致的。
 
@@ -128,9 +141,9 @@ public PriorityQueue(int initialCapacity,
 
 **④方法iterator()中提供的迭代器并不保证以有序的方式遍历优PriorityQueue中的元素。**
 
-# 2、Deque接口与ArrayDeque实现类
+## 3 Deque接口与ArrayDeque实现类
 
-## 2.1 Deque接口
+### 3.1 Deque接口
 
 Deque接口是Queue接口的子接口，它代表一个双端队列。LinkedList也实现了Deque接口，所以也可以被当作双端队列使用。
 
@@ -140,7 +153,7 @@ Deque接口是Queue接口的子接口，它代表一个双端队列。LinkedList
 
 从上面方法中可以看出，Deque不仅可以当成双端队列使用，而且可以被当成栈来使用，因为该类里还包含了pop(出栈)、push(入栈)两个方法
 
-## 2.2 Deque与Queue、Stack的关系
+### 3.2 Deque与Queue、Stack的关系
 
 当Deque当作Queue队列使用时(FIFO)，添加元素是添加到队尾，删除时删除的是头部元素。从Queue接口继承的方法对应Deque的方法如图所示：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227005237502.png)
 Deque 也能当Stack栈用（LIFO）。这时入栈、出栈元素都是在 双端队列的头部 进行。Deque 中和Stack对应的方法如图所示：
@@ -148,7 +161,7 @@ Deque 也能当Stack栈用（LIFO）。这时入栈、出栈元素都是在 双�
 
 **注意：** Stack过于古老，并且实现地非常不好，因此现在基本已经不用了，可以直接用Deque来代替Stack进行栈操作。
 
-## 2.3 ArrayDeque的本质
+### 3.3 ArrayDeque的本质
 
 `循环数组`
 
@@ -227,7 +240,7 @@ private void doubleCapacity() {
 由此，我们便理解了ArrayDeque循环数组添加以及扩容的过程，其他操作类似。  
 **注意：** ArrayDeque不是线程安全的。 当作为栈使用时，性能比Stack好；当作为队列使用时，性能比LinkedList好。
 
-## 2.4 ArrayDeque常用方法
+### 3.4 ArrayDeque常用方法
 
 ```java
  1.添加元素

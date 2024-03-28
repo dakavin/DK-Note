@@ -1,6 +1,31 @@
-# 1、概述
+<h1>目录</h1>
+- [1 概述](#1%20%E6%A6%82%E8%BF%B0)
+	- [1.1 反射机制定义](#1.1%20%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E5%AE%9A%E4%B9%89)
+- [2 通过Java反射查看类信息](#2%20%E9%80%9A%E8%BF%87Java%E5%8F%8D%E5%B0%84%E6%9F%A5%E7%9C%8B%E7%B1%BB%E4%BF%A1%E6%81%AF)
+	- [2.1 反射机制相关类](#2.1%20%E5%8F%8D%E5%B0%84%E6%9C%BA%E5%88%B6%E7%9B%B8%E5%85%B3%E7%B1%BB)
+	- [2.2 Class类](#2.2%20Class%E7%B1%BB)
+	- [2.3 Field类](#2.3%20Field%E7%B1%BB)
+	- [2.4 Method类](#2.4%20Method%E7%B1%BB)
+	- [2.5 Constructor类](#2.5%20Constructor%E7%B1%BB)
+- [3 代理模式](#3%20%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F)
+	- [3.1 概述](#3.1%20%E6%A6%82%E8%BF%B0)
+		- [3.1.1 代理模式的理解](#3.1.1%20%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%90%86%E8%A7%A3)
+		- [3.1.2 代理模式的参与者](#3.1.2%20%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8F%82%E4%B8%8E%E8%80%85)
+		- [3.1.3 代理模式的分类](#3.1.3%20%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%88%86%E7%B1%BB)
+		- [3.1.4 代理模式的实现思路](#3.1.4%20%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%80%9D%E8%B7%AF)
+		- [3.1.5 静态代理模式的简单实现](#3.1.5%20%E9%9D%99%E6%80%81%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0)
+	- [3.2 Java斥射机制与动态代理](#3.2%20Java%E6%96%A5%E5%B0%84%E6%9C%BA%E5%88%B6%E4%B8%8E%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86)
+		- [3.2.1 动态代理介绍](#3.2.1%20%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E4%BB%8B%E7%BB%8D)
+		- [3.2.2 动态代理涉及的主要类](#3.2.2%20%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86%E6%B6%89%E5%8F%8A%E7%9A%84%E4%B8%BB%E8%A6%81%E7%B1%BB)
+		- [3.2.3 动态代](#3.2.3%20%E5%8A%A8%E6%80%81%E4%BB%A3)
+- [4 泛型与Class类](#4%20%E6%B3%9B%E5%9E%8B%E4%B8%8EClass%E7%B1%BB)
+	- [4.1 概述](#4.1%20%E6%A6%82%E8%BF%B0)
+	- [4.2 使用反射来获取泛型信息](#4.2%20%E4%BD%BF%E7%94%A8%E5%8F%8D%E5%B0%84%E6%9D%A5%E8%8E%B7%E5%8F%96%E6%B3%9B%E5%9E%8B%E4%BF%A1%E6%81%AF)
 
-## 1.1 反射机制定义
+
+## 1 概述
+
+### 1.1 反射机制定义
 
 Java反射机制是在运行状态中，对任意一个类，都能知道这个类中的所有属性和方法；对任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制
 
@@ -17,15 +42,15 @@ Java反射机制是在运行状态中，对任意一个类，都能知道这个�
 	3. 单纯的反射机制应用框架：例如EventBus
 	4. 动态生成类框架；例如json；
 
-# 2、通过Java反射查看类信息
+## 2 通过Java反射查看类信息
 
-## 2.1 反射机制相关类
+### 2.1 反射机制相关类
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228000815202.png)
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228000818307.png)
 
-## 2.2 Class类
+### 2.2 Class类
 
 [Class](https://links.jianshu.com/go?to=https%3A%2F%2Fdeveloper.android.google.cn%2Freference%2Fjava%2Flang%2FClass)代表类的实体，在运行的Java应用程序中表示类和接口。在这个类中提供了很多有用的方法，这里对他们简单的分类介绍。
 
@@ -59,12 +84,12 @@ Class<?> classType1 = str.getClass();
 - 类中其他重要的方法
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228001210418.png)
 
-## 2.3 Field类
+### 2.3 Field类
 
 [Field](https://links.jianshu.com/go?to=https%3A%2F%2Fdeveloper.android.google.cn%2Freference%2Fjava%2Flang%2Freflect%2FField)代表类的成员变量（成员变量也称为类的属性）。
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228001235542.png)
 
-## 2.4 Method类
+### 2.4 Method类
 
 [Method](https://links.jianshu.com/go?to=https%3A%2F%2Fdeveloper.android.google.cn%2Freference%2Fjava%2Flang%2Freflect%2FMethod)代表类的方法。
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228001248918.png)
@@ -87,21 +112,21 @@ setAccessible(boolean flag)：将Method对象的acessible设置为指定的布�
 值为true，指示该Method在使用时应该取消Java语言的访问权限检查；值为  
 false，则知识该Method在使用时要实施Java语言的访问权限检查。
 
-## 2.5 Constructor类
+### 2.5 Constructor类
 
 [Constructor](https://links.jianshu.com/go?to=https%3A%2F%2Fdeveloper.android.google.cn%2Freference%2Fjava%2Flang%2Freflect%2FConstructor)代表类的构造方法。
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228001437097.png)
 
-# 3、代理模式
+## 3 代理模式
 
-## 3.1 概述
+### 3.1 概述
 
 定义：给某个对象提供一个代理对象，并由代理对象控制对于原对象的访问，即客户不直接操控原对象，而是通过代理对象问接地操控原对象。
 
-### 3.1.1 代理模式的理解
+#### 3.1.1 代理模式的理解
 
 代理模式使用代理对象完成用户请求，屏蔽用户对真实对象的访问。现实世界的代理人被授权执行当事人的一些事宜，无需当事人出面，从第三方的角度看，似乎当事人并不存在，因为他只和代理人通信。而事实上代理人是要有当事人的授权，并且在核心问题上还需要请示当事人。在软件设计中，使用代理模式的意图也很多，比如因为安全原因需要屏蔽客户端直接访问真实对象，或者在远程调用中需要使用代理类处理远程方法调用的技术细节，也可能为了提升系统性能，对真实对象进行封装，从而达到延迟加载的目的。
-### 3.1.2 代理模式的参与者
+#### 3.1.2 代理模式的参与者
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228001803829.png)
 
@@ -111,33 +136,33 @@ false，则知识该Method在使用时要实施Java语言的访问权限检查�
 - 目标对象：RealSubject 是原对象，也就是被代理的对象。
 - 代理对象：Proxy是代理对象，用来封装真是主题类的代理类。
 - 客户端：使用代理类和主题接口完成一些工作。
-### 3.1.3 代理模式的分类
+#### 3.1.3 代理模式的分类
 
 代理的实现分为：
 
 - 静态代理：代理类是在`编译时就实现好的`。也就是说Java 编译完成后代理类是一个实际的 class 文件；
 - 动态代理：`代理类是在运行时生成的`。也就是说 Java 编译完之后并没有实际的class 文件，而是在运行时动志生成的类字节码，并加载到JVM中。
-### 3.1.4 代理模式的实现思路
+#### 3.1.4 代理模式的实现思路
 
 - 代理对象和目标对象均实现同一个行为接口
 - 代理类和目标类分别具体实现接口逻辑。
 - 在代理类的构造函数中实例化一个目标对象。
 - 在代理类中调用目标对象的行为接口。
 - 客户端想要调用目标对象的行为接口，只能通过代理类来操作。
-### 3.1.5 静态代理模式的简单实现
+#### 3.1.5 静态代理模式的简单实现
 
 假如有这样的需求，要在某些模块方法调用前后加上一些统一的前后处理操作，比如在添加购物车、修改订单等操作前后统一加上登陆验证与日志记录处理，该怎样实现？首先想到最简单的就是直接修改源码，在对应模块的对应方法前后添加操作。如果模块很多，你会发现，修改源码不仅非常麻烦、难以维护，而且会使代码显得十分臃肿。这时侯就轮到代理模式上场了，它可以在被调用方法前后加上自己的操作，而不需要更改被调用类的源码，大大地降低了模块之问的耦合性，体现了极大的优势。
 
-## 3.2 Java斥射机制与动态代理
+### 3.2 Java斥射机制与动态代理
 
-### 3.2.1 动态代理介绍
+#### 3.2.1 动态代理介绍
 
 动态代理是指在运行时动态生成代理类。即代理类的字节码将在运行时生成并载入当前代理的 ClassLoader。与静态处理类相比，动态类有诸多好处。
 
 1. 不需要为(RealSubject )写一个形式上完全一样的封装类，假如主题接口  
     (Subiect）中的方法很多，为每一个接口写一个代理方法也很麻烦。如果接口有变动，则目标对象和代理类都要修改，不利于系统维护；
 2. 使用一些动态代理的生成方法甚至可以在运行时制定代理类的执行逻辑，从而大大提升系统的灵活性。
-### 3.2.2 动态代理涉及的主要类
+#### 3.2.2 动态代理涉及的主要类
 
 主要涉及两个类，这两个类都是java lang.reflect包下的类，内部主要通过反射来实现的。
 
@@ -169,7 +194,8 @@ ClassLoader loader：类加载器对象，哪个类加载器加载这个代理�
 Class<?>[] interfaces：接口，表明代理类需要实现哪些接口；
 InvocationHandler h：调用处理器类的实例，指定代理类干什么；
 ```
-### 3.2.动态代理简单实现
+#### 3.2.3 动态代
+理简单实现
 
 ```java
 public class DynamicProxyDemo {
@@ -217,13 +243,13 @@ class ProxyHandler implements InvocationHandler {
     }
 ```
 
-# 4、泛型与Class类
+## 4 泛型与Class类
 
-## 4.1 概述
+### 4.1 概述
 
 从JDK 1.5后，Java中引入泛型机制，Class 类也增加了泛型功能，从而允许使用泛型来限制Class类。例如：String.class的类型实际上是`Class<String>`。  
 如果Class对应的类暂时未知，则使用`Class<?>`(?是通配符)。通过反射中使用泛型，可以避免使用反射生成的对象需要强制类型转换。泛型的好处众多，最主要的一点就是避免类型转换，防止出现ClassCastException，即类型转换异常。
-## 4.2 使用反射来获取泛型信息
+### 4.2 使用反射来获取泛型信息
 
 通过指定类对应的 Class 对象，可以获得该类里包含的所有Field，不管该Field 是使用 private 修饰，还是使用public 修饰。获得了Field 对象后，就可以很容易地获得该 Field 的数据类型，即使用如下代码即可获得指定Field 的类型。
 

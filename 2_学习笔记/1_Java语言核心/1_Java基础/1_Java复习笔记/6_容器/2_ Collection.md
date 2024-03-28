@@ -1,3 +1,17 @@
+<h1>目录</h1>
+- [1 前言](#1%20%E5%89%8D%E8%A8%80)
+- [2 List](#2%20List)
+	- [2.1 Vectory](#2.1%20Vectory)
+	- [2.2 ArrayList](#2.2%20ArrayList)
+	- [2.3 LinkedList](#2.3%20LinkedList)
+- [3 Set](#3%20Set)
+	- [3.1 HashSet](#3.1%20HashSet)
+- [4 Map](#4%20Map)
+	- [4.1 hashMap](#4.1%20hashMap)
+	- [4.2 HashTable](#4.2%20HashTable)
+	- [4.3 ConcurrentHashMap](#4.3%20ConcurrentHashMap)
+
+## 1 前言
 
 Java集合框架Collection是由一套设计优良的接口和类组成的，使我们操作成批的数据或对象元素极为方便，这些接口和类有很多对抽象数据类型操作的API。并且Java用面向对象的设计对这些数据结构和算法进行了封装，这就极大的减化了我们在编程上的工作量。
 
@@ -15,11 +29,11 @@ HashMap实现的是map接口，继承的AbstractMap抽象类，
 
 HashTable实现的是map接口，继承的Dictionary类
 
-## 1、List
+## 2 List
 
 List存储一组不唯一，有序（按插入顺序存储）的对象，类似于Java数组，能够通过索引（元素在List中位置，类似于数组的下标）来访问List中的元素
 
-### 1.1 Vectory
+### 2.1 Vectory
 
 内部维护了一个Object数组，在源码中Vectory定义了一个Object[]的成员变量
 
@@ -48,7 +62,7 @@ public synchronized void add(E obj){
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218224914436.png)
 
 
-### 1.2 ArrayList
+### 2.2 ArrayList
 
 和Vectory一样，内部实现也是一个Object数组，用来存储一组不唯一，有序的对象，不同的是，ArrayList是非同步的，所以在单线程环境中一般使用ArrayList，多线程环境中使用Vectory
 
@@ -78,7 +92,7 @@ public boolean add(E e){
 **ArrayList的遍历方法**
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218225301342.png)
 
-### 1.3 LinkedList
+### 2.3 LinkedList
 
 LinkedList和ArrayList,Vectory都不一样，它是一个双向链表。用来存储存储一组不唯一，有序（按插入顺序存储）的对象
 
@@ -125,10 +139,10 @@ public boolean add(E e) {
 **LinkedList的遍历方法：**
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218225500437.png)
 
-## 2、Set
+## 3 Set
 
 是一种`无序，不包含重复元素的Collection`, Set和 List虽然都是存储的对象但是实现方式却完全不一样，List是以数组为基础实现的而set是以hashMap为基础实现的
-### 2.1 HashSet
+### 3.1 HashSet
 
 内部`通过HashMap实现`，从源码中可以看到，内部维护了一个HashMap的对象
 
@@ -156,12 +170,12 @@ public boolean add(E e) {
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218225658345.png)
 
 
-## 3、Map
+## 4 Map
 
 
 Map是一种`储存键值对 (key-value)对象的collection`,在key-value的结果储存中，key不能重复，value可以重复。
 
-### 3.1 hashMap
+### 4.1 hashMap
 
 是一个散列表，通过链地址法来解决冲突。
 
@@ -212,7 +226,7 @@ key允许为null(但只能有一条并且放在tbl[0]，如果再写入会将第
 
 
 
-### 3.2 HashTable
+### 4.2 HashTable
 
 是一个散列表，用来储存键值对(key-value)对像的collection。它是继承自Dictionary,实现的Map接口。
 
@@ -250,7 +264,7 @@ public synchronized V put(K key, V value){
 
 从上面的遍历方式我们可以看出来，HashTable比HashMap多了Elements的遍历，所以HashTable和HashMap继承类是不一样的。
 
-### 3.3 ConcurrentHashMap
+### 4.3 ConcurrentHashMap
 
 和HashMap,HashTable一样都是储存键值对(key-value)对像的collection，HashMap是非线程安全，而HashTable是线程安全，所以在多线程中，我们一般使用HashTable,但HashTable是对整个hash表结构做锁定操作的，这样在锁表的期间，别的线程就需要等待了，性能不是很好。
 

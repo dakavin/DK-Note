@@ -1,7 +1,16 @@
+<h1>目录</h1>
+- [1 前言](#1%20%E5%89%8D%E8%A8%80)
+- [2 while循环](#2%20while%E5%BE%AA%E7%8E%AF)
+- [3 do while循环](#3%20do%20while%E5%BE%AA%E7%8E%AF)
+- [4 for循环](#4%20for%E5%BE%AA%E7%8E%AF)
+- [5 双重for循环](#5%20%E5%8F%8C%E9%87%8Dfor%E5%BE%AA%E7%8E%AF)
+- [6 break语句的使用](#6%20break%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%BD%BF%E7%94%A8)
+- [7 continue的使用](#7%20continue%E7%9A%84%E4%BD%BF%E7%94%A8)
+
+## 1 前言
 
 有些程序段在某些条件下重复执行多次，称为循环结构程序。Java提供了3种循环语句实现循环结构，包括while语句、do-while语句、for语句。它们的共同点是根据给定条件来判断是否继续执行指定的程序段（循环体）。如果满足执行条件，就继续执行循环体，否则就不再执行循环体，结束循环语句。
-
-## 1、while循环
+## 2 while循环
 
 while循环的语法如下：
 
@@ -21,7 +30,7 @@ while循环的语法如下：
 
 4. 使用while循环，计算1+2+3+....+100的和，并显示结果 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240202000417225.png)
 
-## 2、do while循环
+## 3 do while循环
 
 do-while循环的语法如下：
 
@@ -42,7 +51,7 @@ do-while循环的语法如下：
 4. 使用do-while循环，计算1+2+3+...+100的和，并显示结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240202000439499.png)
 
 
-## 3、for循环
+## 4 for循环
 
 for循环的语法结构：
 
@@ -67,7 +76,7 @@ for循环的语法结构：
 6. 使用for循环，计算1+2+3+...+100的和，并显示结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240202001540267.png)
 
 
-## 4、双重for循环
+## 5 双重for循环
 
 打印乘法口诀表
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240202001555280.png)
@@ -77,7 +86,7 @@ for循环的语法结构：
 
 
 
-## 5、break语句的使用 
+## 6 break语句的使用 
 break是结束当前最近的一个循环
 
 使用while循环计算1+2+3+...,当和超过100时，结束循环，输出一共相加了多少个数![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240202001626799.png)
@@ -87,7 +96,7 @@ break是结束当前最近的一个循环
 
 输出为：123
 
-## 6、 continue的使用
+## 7 continue的使用
  
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240202001652063.png)
 

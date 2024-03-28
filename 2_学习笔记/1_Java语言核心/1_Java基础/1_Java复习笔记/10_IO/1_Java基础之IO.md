@@ -1,5 +1,15 @@
+<h1>目录</h1>
+- [1 Java IO的体系结构](#1%20Java%20IO%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84)
+- [2 IO流](#2%20IO%E6%B5%81)
+	- [2.1 流的概念和作用](#2.1%20%E6%B5%81%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E4%BD%9C%E7%94%A8)
+	- [2.2 流的分类](#2.2%20%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB)
+	- [2.3 字节流](#2.3%20%E5%AD%97%E8%8A%82%E6%B5%81)
+	- [2.4 字符流](#2.4%20%E5%AD%97%E7%AC%A6%E6%B5%81)
+- [3 非流式](#3%20%E9%9D%9E%E6%B5%81%E5%BC%8F)
+	- [3.1 File类](#3.1%20File%E7%B1%BB)
+	- [3.2 RandomAccessFile类](#3.2%20RandomAccessFile%E7%B1%BB)
 
-# 1、Java IO的体系结构
+## 1 Java IO的体系结构
 
 Java I/O主要包括如下几个层次，包含三个部分：
 
@@ -11,16 +21,16 @@ Java I/O主要包括如下几个层次，包含三个部分：
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228003634305.png)
 
-# 2、IO流
+## 2 IO流
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228003641107.png)
 
-## 2.1 流的概念和作用
+### 2.1 流的概念和作用
 
 流是一组有顺序的，有起点和终点的字节集合，是对数据传输的总称或抽象。即**数据在设备间传输称之为流**。
 
 流的**本质**是**数据传输**，根据数据传输的特性将流区分为各种类，方便更直观的进行数据操作。
-## 2.2 流的分类
+### 2.2 流的分类
 
 **（1）根据处理数据类型的不同分为：字符流和字节流**
         **1)**  **字节流：** 数据流中最小的数据单元是字节
@@ -47,7 +57,7 @@ Java I/O主要包括如下几个层次，包含三个部分：
         3、Char[]: CharArrayReader,CharArrayWriter
         4、String:StringBufferInputStream, StringReader, StringWriter
         5、网络数据流：InputStream,OutputStream, Reader, Writer
-## 2.3 字节流
+### 2.3 字节流
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228003856307.png)
 
@@ -85,7 +95,7 @@ Java I/O主要包括如下几个层次，包含三个部分：
 **其它方法**
         void flush() ：刷新输出流，强制缓冲区中的输出字节被写出。
         void close() ：关闭输出流，释放和这个流相关的系统资源。
-## 2.4 字符流
+### 2.4 字符流
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228004106854.png)
 
@@ -117,13 +127,13 @@ Java I/O主要包括如下几个层次，包含三个部分：
         (4)  public void write(String str) throws IOException； //将字符串str中的字符写入输出流
         (5)  public void write(String str,int off,int len) throws IOException； //将字符串str 中从索引off开始处的len个字符写入输出流
 
-# 3、非流式
+## 3 非流式
 
-## 3.1 File类
+### 3.1 File类
 
 File类是对文件系统中文件以及文件夹进行封装的对象，可以通过对象的思想来操作文件和文件夹。File类保存文件或目录的各种数据信息，包括文件名、文件长度、最后修改时间、是否可读、获取当前文件的路径名、判断文件是否存在、获取当前目录中的文件列表、创建、删除文件和目录等方法。
 
-## 3.2 RandomAccessFile类
+### 3.2 RandomAccessFile类
 
 该对象不是流体系中的一员，其封装了字节流，同时还封装了一个缓冲区（字符数组），通过内部的指针来操作字符数组中的数据。该对象特点：
 
