@@ -2,7 +2,7 @@
 
 ## 1.1 Vue3介绍
 
-![](assets/Pasted%20image%2020240319223802.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240319223802.png)
 
 > Vue (发音为 /vjuː/，类似 **view**) 是一款用于构建用户界面的 JavaScript 框架。它基于标准 HTML、CSS 和 JavaScript 构建，并提供了一套声明式的、组件化的编程模型，帮助你高效地开发用户界面。无论是简单还是复杂的界面，Vue 都可以胜任。官网为:<https://cn.vuejs.org/>
 
@@ -13,7 +13,7 @@
 -   **响应性**：Vue 会自动跟踪 JavaScript 状态并在其发生变化时响应式地更新 DOM 
 	- `如下图：js中的message发生变化，span中的内容也变化`
 
-![](assets/Pasted%20image%2020240319224506.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240319224506.png)
 ## 1.2 快速使用（非工程化）
 
 ```html
@@ -75,7 +75,7 @@
 # 2、Vue3 通过Vite实现工程化
 
 ## 2.1 Vite介绍
-![|200](assets/Pasted%20image%2020240319231356.png)![|400](assets/Pasted%20image%2020240319231405.png)
+![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240319231405.png)
 > 在浏览器支持 ES 模块之前，JavaScript 并没有提供原生机制让开发者以模块化的方式进行开发。这也正是我们对 “打包” 这个概念熟悉的原因：使用工具抓取、处理并将我们的源码模块串联成可以在浏览器中运行的文件。时过境迁，我们见证了诸如 [webpack](https://webpack.js.org/ "webpack")、[Rollup](https://rollupjs.org/ "Rollup") 和 [Parcel](https://parceljs.org/ "Parcel") 等工具的变迁，它们极大地改善了前端开发者的开发体验
 
 + 当我们开始构建越来越大型的应用时，需要处理的 JavaScript 代码量也呈指数级增长。
@@ -104,7 +104,7 @@
 npm create vite@latest
 ```
 
-+ `第一次使用vite时会提示下载vite,输入y回车即可,下次使用vite就不会出现了`![](assets/Pasted%20image%2020240319232117.png)
++ `第一次使用vite时会提示下载vite,输入y回车即可,下次使用vite就不会出现了`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240319232117.png)
 + `注意： 选择vue+JavaScript选项即可`
 
 > 2 安装项目所需依赖
@@ -119,13 +119,13 @@ npm install
 
 > 3 启动项目
 
-+ 查看项目下的package.json![|400](assets/Pasted%20image%2020240319232816.png)
++ 查看项目下的package.json![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240319232816.png)
 - 启动项目
 ```shell
 npm run dev
 ```
 
-![](assets/Pasted%20image%2020240319232949.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240319232949.png)
 
 > 5 停止项目
 
@@ -134,7 +134,7 @@ npm run dev
 
 > 1. 下面是 Vite 项目结构和入口的详细说明
 
-![|200](assets/Pasted%20image%2020240320135725.png)
+![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240320135725.png)
 
 - ,vscode 目录：和编辑器有关，无序理会
 
@@ -189,7 +189,7 @@ export default defineConfig({
 
 - `一个页面作为整体，是由多个部分组成的，每个部分在这里就可以理解为一个组件`
 - `每个.vue文件就可以理解为一个组件`，多个.vue文件可以构成一个整体页面
-- 组件化给我们带来的另一个好处就是`组件的复用和维护`非常的方便![](assets/Pasted%20image%2020240320140822.png)
+- 组件化给我们带来的另一个好处就是`组件的复用和维护`非常的方便![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240320140822.png)
 > `什么是.vue文件?`
 
 + 传统的页面有`.html文件.css文件和.js文件`三个文件组成(多文件组件) 
@@ -200,14 +200,14 @@ export default defineConfig({
 	+ script标签           代表组件的js代码 代替传统的.js文件
 	+ style标签            代表组件的css样式代码 代替传统的.css文件	
 
-- template标签下，vscode的语法只能有一个内标签，否则报红(不影响使用)![](assets/Pasted%20image%2020240320144357.png)
+- template标签下，vscode的语法只能有一个内标签，否则报红(不影响使用)![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240320144357.png)
 
 > `工程化vue项目如何组织这些组件?`
 
 + index.html是项目的入口,其中 `<div id ='app'></div>`是用于挂载所有组建的元素
 + index.html中的`script标签引入了一个main.js文件，具体的挂载过程在main.js中执行`
 + main.js是vue工程中非常重要的文件,他`决定这项目使用哪些依赖,导入的第一个组件`
-+ App.vue是vue中的核心组件,所有的其他组件都要通过该组件进行导入,该组件通过路由可以控制页面的切换![|400](assets/Pasted%20image%2020240320142456.png)  ![](assets/Pasted%20image%2020240320140952.png)
++ App.vue是vue中的核心组件,所有的其他组件都要通过该组件进行导入,该组件通过路由可以控制页面的切换![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240320142456.png)  ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240320140952.png)
 	1. index.html页面导入main.js文件
 	2. main.js文件，将App.vue这个组件，挂载到index.html页面中id为app的元素上
 ### 4. 响应式入门和setup函数
@@ -325,7 +325,7 @@ npm run dev
 ```
 ### 5. 关于样式的导入问题
 
-1. 全局样式引入，修改main.js文件中的引入的css样式文件即可，或者继续导入其他的css样式文件![|300](assets/Pasted%20image%2020240320145139.png)
+1. 全局样式引入，修改main.js文件中的引入的css样式文件即可，或者继续导入其他的css样式文件![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240320145139.png)
 
    ```javascript
 import './style/reset.css' //书写引入的资源的相对路径即可！
@@ -364,9 +364,9 @@ import './style/reset.css'
 
 ### 3.1 vscode快速创建vue3模版
 
-![](assets/Pasted%20image%2020240320163057.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240320163057.png)
 
-- 修改vue.json文件![](assets/Pasted%20image%2020240320163132.png)
+- 修改vue.json文件![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/Pasted%20image%2020240320163132.png)
 
 - vue2
 ```json
