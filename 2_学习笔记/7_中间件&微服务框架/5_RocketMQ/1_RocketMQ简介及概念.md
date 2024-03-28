@@ -1,0 +1,106 @@
+# 一、RocketMQ简介
+
+`MQ==Message Queue`
+
+官网： [http://rocketmq.apache.org/](http://rocketmq.apache.org/)
+
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230649596.png)
+
+RocketMQ是阿里巴巴2016年MQ中间件，使用Java语言开发，`RocketMQ 是一款开源的分布式消息系统`，基于高可用分布式集群技术，提供低延时的、高可靠的消息发布与订阅服务。同时，广泛应用于多个领域，包括异步通信解耦、企业解决方案、金融支付、电信、电子商务、快递物流、广告营销、社交、即时通信、移动应用、手游、视频、物联网、车联网等。
+
+具有以下特点：
+
+1.  能够`保证严格的消息顺序`
+2.  提供`丰富的消息拉取模式`
+3.  高效的`订阅者水平扩展能力`
+4.  实时的`消息订阅机制`
+5.  `亿级消息堆积能力`
+
+# 二、为什么要使用MQ
+
+1. 要做到系统解耦，当新的模块进来时，可以做到代码改动最小; `能够解耦`
+
+2. 设置流程缓冲池，可以让后端系统按自身吞吐能力进行消费，不被冲垮; `能够削峰，限流`
+
+3. 强弱依赖梳理能把非关键调用链路的操作异步化并提升整体系统的吞吐能力;`能够异步`
+
+- 总结：Mq的作用 `削峰限流 异步 解耦合`
+## 2.1 定义
+
+- Message
+	- 消息：一句话/一个短信/邮件  ---  数据（计算机领域 数据--业务）
+
+- Queue
+	- 队列：数据结构（栈FILO、数组、链表、树、图）
+
+- 中间件（缓存中间件  redis memcache  数据库中间件 mycat  canal   消息中间件mq ）
+
+	- 面向消息的`中间件(message-oriented middleware)` MOM能够很好的解决以上的问题。
+
+	- 是`指利用高效可靠的消息传递机制进行与平台无关（跨平台）的数据交流`，并基于数据通信来进行分布式系统的集成
+
+	- 通过提供`消息传递和消息排队模型`在分布式环境下提供应用解耦，弹性伸缩，冗余存储，流量削峰，异步通信，数据同步等
+
+- `大致流程`
+
+	- 发送者把消息发给消息服务器[MQ]，消息服务器把消息存放在若干`队列/主题`中，在合适的时候，消息服务器会把消息转发给接受者。在这个过程中，`发送和接受是异步的`,也就是发送无需等待，发送者和接受者的生命周期也没有必然关系。在发布pub/订阅sub模式下，也可以完成一对多的通信，可以让一个消息有多个接受者，例如：微信订阅号就是这样的![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230754300.png)
+
+## 2.2 特点
+
+### 2.2.1 异步处理模式
+
+消息发送者可以发送一个消息而无需等待响应。消息发送者把消息发送到一条虚拟的通道(主题或队列)上;
+
+消息接收者则订阅或监听该通道。一条信息可能最终转发给一个或多个消息接收者，这些接收者都无需对消息发送者做出回应。整个过程都是异步的。
+
+案例：
+
+也就是说，一个系统和另一个系统间进行通信的时候，假如系统A希望发送一个消息给系统B，让它去处理，但是系统A不关注系统B到底怎么处理或者有没有处理好，所以系统A把消息发送给MQ，然后就不管这条消息的“死活” 了，接着系统B从MQ里面消费出来处理即可。至于怎么处理，是否处理完毕，什么时候处理，都是系统B的事，与系统A无关。
+
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230824175.png)
+
+这样的一种通信方式，就是所谓的“异步”通信方式，对于系统A来说，只要把消息发给MQ,然后系统B就会异步处去进行处理了，系统A不能“同步”的等待系统B处理完。这样的好处是什么呢？解耦
+### 2.2.2 应用系统的解耦
+
+  `发送者和接收者不必了解对方，只需要确认消息`
+
+  `发送者和接收者不必同时在线`
+### 2.2.3 现实中的业务
+
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230830235.png)
+
+# 三、各个MQ产品的比较
+
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230834794.png)
+
+- 吞吐量：单位时间内，接收和处理消息的速度 如，10w条/秒 3M/s
+- 时效性：延迟
+
+# 四、RocketMQ重要概念【重点】
+
+- 注意：每一个MQ的结构不一样，但是作用还是一样的
+
+`Producer`：消息的发送者，生产者；举例：发件人
+
+`Consumer`：消息接收者，消费者；举例：收件人
+
+`Broker`：暂存和传输消息的`通道`；举例：快递
+
+`NameServer`：管理Broker；负责管理broker集群的，每个broker都需要向它进行注册，相当于broker的注册中心，保留了broker的信息；
+
+`Queue`：队列，消息存放的位置(真实存在的结构)，一个Broker中可以有多个队列
+
+`Topic`：主题，消息的分类
+
+`ProducerGroup`：生产者组
+
+`ConsumerGroup`：消费者组，多个消费者组可以同时消费一个主题的消息
+
+消息发送的流程是，Producer询问NameServer，NameServer分配一个broker 然后Consumer也要询问NameServer，得到一个具体的broker，然后消费消息![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230926430.png)
+
+- 读（高可用性）：负载均衡，生产者可以通过nameserver向不同的broker发送消息
+- 写（高可用性）：负载均衡，消费者可以通过nameserver向不同的broker获取消息，且不同的broker之间有主从集群
+- 单机版本，即只有一个broker
+# 五、 生产和消费理解【重点】
+
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230939230.png)

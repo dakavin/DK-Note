@@ -1,0 +1,1 @@
+[另外一种 Dubbo 的配置方式 —— Dubbo x Spring XML](https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/quick-start/spring-xml/)。
