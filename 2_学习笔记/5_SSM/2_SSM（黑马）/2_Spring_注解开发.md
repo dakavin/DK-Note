@@ -1,3 +1,44 @@
+# 目录
+
+- [八、IOC/DI注解开发](#八、IOC/DI注解开发)
+	- [1、环境准备](#1%E3%80%81%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+	- [2、注解开发定义bean](#2%E3%80%81%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E5%AE%9A%E4%B9%89bean)
+	- [3、纯注解开发模式](#3%E3%80%81%E7%BA%AF%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E6%A8%A1%E5%BC%8F)
+		- [思路分析](#%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90)
+		- [实现步骤](#%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4)
+		- [小结](#%E5%B0%8F%E7%BB%93)
+	- [4、注解开发bean的作用范围和生命周期](#4%E3%80%81%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91bean%E7%9A%84%E4%BD%9C%E7%94%A8%E8%8C%83%E5%9B%B4%E5%92%8C%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
+		- [bean的作用范围](#bean%E7%9A%84%E4%BD%9C%E7%94%A8%E8%8C%83%E5%9B%B4)
+		- [bean的生命周期](#bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
+		- [小结](#%E5%B0%8F%E7%BB%93)
+	- [5、注解开发依赖注入](#5%E3%80%81%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5)
+		- [环境准备](#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+		- [注解实现按照类型注入](#%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0%E6%8C%89%E7%85%A7%E7%B1%BB%E5%9E%8B%E6%B3%A8%E5%85%A5)
+		- [注解实现只能找名称注入](#%E6%B3%A8%E8%A7%A3%E5%AE%9E%E7%8E%B0%E5%8F%AA%E8%83%BD%E6%89%BE%E5%90%8D%E7%A7%B0%E6%B3%A8%E5%85%A5)
+		- [简单数据类型注入](#%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%B3%A8%E5%85%A5)
+		- [注解读取properties配置文件](#%E6%B3%A8%E8%A7%A3%E8%AF%BB%E5%8F%96properties%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
+
+- [九、IOC/DI注解开发管理第三方bean](#九、IOC/DI注解开发管理第三方bean)
+	- [1、环境准备](#1%E3%80%81%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+	- [2、注解开发管理第三方bean](#2%E3%80%81%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86%E7%AC%AC%E4%B8%89%E6%96%B9bean)
+	- [3、引入外部配置类](#3%E3%80%81%E5%BC%95%E5%85%A5%E5%A4%96%E9%83%A8%E9%85%8D%E7%BD%AE%E7%B1%BB)
+		- [使用包扫描引入(不推荐)](#%E4%BD%BF%E7%94%A8%E5%8C%85%E6%89%AB%E6%8F%8F%E5%BC%95%E5%85%A5(%E4%B8%8D%E6%8E%A8%E8%8D%90))
+		- [使用@Import引入](#%E4%BD%BF%E7%94%A8@Import%E5%BC%95%E5%85%A5)
+	- [4、注解开发实现为第三方bean注入资源](#4%E3%80%81%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E5%AE%9E%E7%8E%B0%E4%B8%BA%E7%AC%AC%E4%B8%89%E6%96%B9bean%E6%B3%A8%E5%85%A5%E8%B5%84%E6%BA%90)
+		- [简单数据类型](#%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+		- [引用数据类型](#%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+
+
+- [十、注解开发总结](#十、注解开发总结)
+
+- [十一、Spring整合](#十一、Spring整合)
+	- [1、整合MyBatis](#1%E3%80%81%E6%95%B4%E5%90%88MyBatis)
+		- [环境准备](#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+		- [思路分析](#%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90)
+		- [整合步骤](#%E6%95%B4%E5%90%88%E6%AD%A5%E9%AA%A4)
+	- [2、整合Junit](#2%E3%80%81%E6%95%B4%E5%90%88Junit)
+		- [依赖是junit的整合方式](#%E4%BE%9D%E8%B5%96%E6%98%AFjunit%E7%9A%84%E6%95%B4%E5%90%88%E6%96%B9%E5%BC%8F)
+		- [依赖是junit-jupiter-api的整合方式](#%E4%BE%9D%E8%B5%96%E6%98%AFjunit-jupiter-api%E7%9A%84%E6%95%B4%E5%90%88%E6%96%B9%E5%BC%8F)
 
 # 八、IOC/DI注解开发
 
@@ -50,7 +91,7 @@ public class App {
     }  
 }
 ```
-##  2、注解开发定义bean
+## 2、注解开发定义bean
 
 - `步骤一：`删除原有的XML配置  
 	将配置文件中的bean标签删除掉
@@ -142,11 +183,11 @@ BookService bookService = (BookService) context.getBean("bookServiceImpl");
 ## 3、纯注解开发模式
 
 上面已经可以使用注解来配置bean,但是依然有用到配置文件，在配置文件中对包进行了扫描，Spring在3.0版已经支持纯注解开发，使用Java类替代配置文件，开启了Spring快速开发赛道，那么具体如何实现?
-### 3.1 思路分析
+### 思路分析
 
 实现思路为：
 - 将配置文件applicationContext.xml删掉，用类来替换
-### 3.2 实现步骤
+### 实现步骤
 
 - `步骤一：`创建配置类  
 	创建一个配置类SpringConfig
@@ -220,7 +261,7 @@ AnnotationConfigApplicationContext context = new AnnotationConfigApplicationCont
 |位置|类定义上方|
 |作用|设置spring配置类扫描路径，用于加载使用注解格式定义的bean|
 |属性|value（默认）：扫描路径，此路径可以逐层向下扫描|
-### 3.3 小结
+### 小结
 
 这部分要重点掌握的是使用注解完成Spring的bean管理，需要掌握的内容为:
 
@@ -232,7 +273,7 @@ AnnotationConfigApplicationContext context = new AnnotationConfigApplicationCont
 ## 4、注解开发bean的作用范围和生命周期
 
 使用注解已经完成了bean的管理，接下来按照前面所学习的内容，将通过配置实现的内容都换成对应的注解实现，包含两部分内容:`bean作用范围(scope)`和`bean生命周期(init和destroy)`。
-### 4.1 bean的作用范围
+### bean的作用范围
 
 - 修改`AppForAnnotation`类，并运行查看结果
 ```java
@@ -272,7 +313,7 @@ public class BookDaoImpl implements BookDao {
 |位置|类定义上方|
 |作用|设置该类创建对象的作用范围，可用于设置创建出的bean是否为单例对象|
 |属性|value（默认）：定义bean作用范围，`默认值singleton（单例）`，`可选值prototype（非单例）`|
-### 4.2 bean的生命周期
+### bean的生命周期
 
 - 在BookDaoImpl中添加两个方法，`init`和`destroy`，方法名可以任意，再添加一个构造方法
 ```java
@@ -358,7 +399,7 @@ public class AppForAnnotation {
 |位置|方法上|
 |作用|设置该方法为销毁方法|
 |属性|无|
-### 4.3 小结
+### 小结
 
 配置文件中的bean标签中的  
 
@@ -373,7 +414,7 @@ public class AppForAnnotation {
 ## 5、注解开发依赖注入
 
 - Spring为了使用注解简化开发，并没有提供`构造函数注入`、`setter注入`对应的注解，只提供了自动装配的注解实现。
-### 5.1 环境准备
+### 环境准备
 
 - 创建一个Maven项目
 - pom.xml添加Spring的依赖
@@ -419,7 +460,7 @@ public class App {
 }
 ```
 - 环境准备好后，直接运行App类会有问题，因为还没有提供配置注入BookDao的，所以bookDao对象为Null,调用其save方法就会报`控指针异常`。
-### 5.2 注解实现按照类型注入
+### 注解实现按照类型注入
 
 对于这个问题使用注解该如何解决?
 
@@ -500,7 +541,7 @@ public class BookDaoImpl2 implements BookDao {
 ```
 
 还是不行的，因为按照类型会找到多个bean对象，此时会按照`bookDao`名称去找，因为IOC容器只有名称叫`bookDao1`和`bookDao2`，所以找不到，会报`NoUniqueBeanDefinitionException`
-### 5.3 注解实现只能找名称注入
+### 注解实现只能找名称注入
 
 当根据类型在容器中找到多个bean,注入参数的属性名又和容器中bean的名称不一致，这个时候该如何解决，就需要使用到`@Qualifier`来`指定注入哪个名称的bean对象`。`@Qualifier`注解后的值就是需要注入的bean的名称。
 ```java
@@ -518,7 +559,7 @@ public class BookServiceImpl implements BookService {
 ```
 
 `注意:@Qualifier不能独立使用，必须和@Autowired一起使用`
-### 5.4 简单数据类型注入
+### 简单数据类型注入
 
 - 引用类型看完，简单类型注入就比较容易懂了。简单类型注入的是基本数据类型或者字符串类型，下面在`BookDaoImpl`类中添加一个`name`属性，用其进行简单类型注入
 ```java
@@ -546,7 +587,7 @@ public class BookDaoImpl implements BookDao {
 注意数据格式要匹配，如将”abc”注入给int值，这样程序就会报错。
 
 介绍完后，会有一种感觉就是这个注解好像没什么用，跟直接赋值是一个效果，还没有直接赋值简单，所以这个注解存在的意义是什么?继续往下看
-### 5.5 注解读取properties配置文件
+### 注解读取properties配置文件
 
 `@Value`一般会被用在从properties配置文件中读取内容进行使用，具体如何实现?
 
@@ -755,7 +796,7 @@ public class JdbcConfig {
 那现在又有了一个新问题，这个配置类如何能被Spring配置类加载到，并创建DataSource对象在IOC容器中?
 
 针对这个问题，有两个解决方案，接着往下看
-### 3.1 使用包扫描引入(不推荐)
+### 使用包扫描引入(不推荐)
 
 - `步骤一：`在Spring的配置类上添加包扫描  
 	注意要将JdbcConfig类放在包扫描的地址下
@@ -788,7 +829,7 @@ public class JdbcConfig {
 
 
 这种方式虽然能够扫描到，但是不能很快的知晓都引入了哪些配置类(因为把包下的所有配置类都扫描了)，所有这种方式不推荐使用。
-### 3.2 使用@Import引入
+### 使用@Import引入
 
 方案一实现起来有点小复杂，Spring早就想到了这一点，于是又给我们提供了第二种方案。  
 
@@ -850,7 +891,7 @@ public class SpringConfig {
 在使用@Bean创建bean对象的时候，如果方法在创建的过程中需要其他资源该怎么办?
 
 这些资源会有两大类，分别是`简单数据类型` 和`引用数据类型`。
-### 4.1 简单数据类型
+### 简单数据类型
 
 对于下面代码关于数据库的四要素不应该写死在代码中，应该是从properties配置文件中读取。如何来优化下面的代码?
 ```java
@@ -953,7 +994,7 @@ public class JdbcConfig {
 输出结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211652313.png)
 
 
-### 4.2 引用数据类型
+### 引用数据类型
 
 假设在构建DataSource对象的时候，需要用到BookDao对象，该如何把BookDao对象注入进方法内让其使用呢?
 
@@ -989,6 +1030,8 @@ public DataSource dataSource(BookDao bookDao) {
 
 # 十、注解开发总结
 
+
+
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211659159.png)
 
 
@@ -999,10 +1042,9 @@ public DataSource dataSource(BookDao bookDao) {
 - Atuowired
 - Bean
 # 十一、Spring整合
-
 ## 1、整合MyBatis
 
-### 1.1 环境准备
+### 环境准备
 
 - 在准备环境的同时，我们也来回顾一下MyBatis开发的相关内容
 
@@ -1229,7 +1271,7 @@ public class App {
 - `步骤九：`运行程序，结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211706530.png)
 
 
-### 1.2 思路分析
+### 思路分析
 
 Mybatis的基础环境我们已经准备好了，接下来就得分析下在上述的内容中，哪些对象可以交给Spring来管理?
 
@@ -1245,7 +1287,7 @@ Mybatis的基础环境我们已经准备好了，接下来就得分析下在上�
 - 第三部分主要用于做连接池，Spring之前我们已经整合了Druid连接池，这块也需要交给Spring
 - 前面三部分一起都是为了创建SqlSession对象用的，那么用Spring管理SqlSession对象吗?回忆下SqlSession是由SqlSessionFactory创建出来的，所以只需要将SqlSessionFactory交给Spring管理即可。
 - 第四部分是Mapper接口和映射文件[如果使用注解就没有该映射文件]，这个是在获取到SqlSession以后执行具体操作的时候用，所以它和SqlSessionFactory创建的时机都不在同一个时间，可能需要单独管理。
-### 1.3 整合步骤
+### 整合步骤
 
 前面我们已经分析了Spring与Mybatis的整合，大体需要做两件事，
 
@@ -1406,7 +1448,7 @@ public class App {
 
 ## 2、整合Junit
 
-### 2.1 依赖是junit的整合方式
+### 依赖是junit的整合方式
 
 - `步骤一：`引入依赖
 ```xml
@@ -1475,7 +1517,7 @@ public class AccountServiceTest {
 |位置|测试类定义上方|
 |作用|设置JUnit加载的Spring核心配置|
 |属性|classes：核心配置类，可以使用数组的格式设定加载多个配置类  <br>locations:配置文件，可以使用数组的格式设定加载多个配置文件名称|
-### 2.1 依赖是junit-jupiter-api的整合方式
+### 依赖是junit-jupiter-api的整合方式
 
 1.  整合测试环境作用
 

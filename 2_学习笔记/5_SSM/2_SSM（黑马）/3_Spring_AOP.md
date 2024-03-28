@@ -10,7 +10,7 @@
 ## 1、什么是AOP？
 
 - AOP(Aspect Oriented Programming)面向切面编程，是一种编程范式，指导开发者如何组织程序结构
-    - OOP(Object Oriented Programming)面向对象编程
+- OOP(Object Oriented Programming)面向对象编程
 
 我们都知道OOP是一种编程思想，那么AOP也是一种编程思想，编程思想主要的内容就是指导程序员该如何编写程序，所以它们两个是不同的`编程范式`。
 ## 2、AOP的作用
@@ -57,7 +57,7 @@ public class BookDaoImpl implements BookDao {
 	- delete和update方法有，那什么select方法为什么又没有呢?
 
 - 这个案例中其实就使用了Spring的AOP，在不惊动(改动)原有设计(代码)的前提下，想给谁添加额外功能就给谁添加。这个也就是Spring的理念：
-	- `无入侵式/无侵入式`
+	- `无入侵式！无侵入式!`
 
 说了这么多，Spring到底是如何实现的呢?![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211804575.png)
 
