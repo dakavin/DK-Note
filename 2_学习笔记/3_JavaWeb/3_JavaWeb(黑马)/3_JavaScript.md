@@ -1,5 +1,48 @@
- 
-## 1、概述
+ ## 目录
+
+- [1 概述](#1%20%E6%A6%82%E8%BF%B0)
+	- [1.1 概念](#1.1%20%E6%A6%82%E5%BF%B5)
+	- [1.2 功能](#1.2%20%E5%8A%9F%E8%83%BD)
+	- [1.3 JavaScript发展史](#1.3%20JavaScript%E5%8F%91%E5%B1%95%E5%8F%B2)
+- [2 ECMAScript基本语法](#2%20ECMAScript%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95)
+	- [2.1 与HTML结合方式](#2.1%20%E4%B8%8EHTML%E7%BB%93%E5%90%88%E6%96%B9%E5%BC%8F)
+	- [2.2 注释](#2.2%20%E6%B3%A8%E9%87%8A)
+	- [2.3 数据类型](#2.3%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+	- [2.4 变量](#2.4%20%E5%8F%98%E9%87%8F)
+	- [2.5 运算符](#2.5%20%E8%BF%90%E7%AE%97%E7%AC%A6)
+	- [2.6 流程控制语句](#2.6%20%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5)
+	- [2.7 JS特殊语法](#2.7%20JS%E7%89%B9%E6%AE%8A%E8%AF%AD%E6%B3%95)
+	- [2.8 类型转换问题](#2.8%20%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E9%97%AE%E9%A2%98)
+	- [2.9 练习：99乘法表](#2.9%20%E7%BB%83%E4%B9%A0%EF%BC%9A99%E4%B9%98%E6%B3%95%E8%A1%A8)
+- [3 ECMAScript基本对象](#3%20ECMAScript%E5%9F%BA%E6%9C%AC%E5%AF%B9%E8%B1%A1)
+	- [3.1 Function：函数对象](#3.1%20Function%EF%BC%9A%E5%87%BD%E6%95%B0%E5%AF%B9%E8%B1%A1)
+	- [3.2 Array：数组对象](#3.2%20Array%EF%BC%9A%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1)
+	- [3.3 包装类](#3.3%20%E5%8C%85%E8%A3%85%E7%B1%BB)
+	- [3.4 Date：日期对象](#3.4%20Date%EF%BC%9A%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1)
+	- [3.5 Math：数学对象](#3.5%20Math%EF%BC%9A%E6%95%B0%E5%AD%A6%E5%AF%B9%E8%B1%A1)
+	- [3.6 RegExp：正则表达式对象](#3.6%20RegExp%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%AF%B9%E8%B1%A1)
+	- [3.7 String对象](#3.7%20String%E5%AF%B9%E8%B1%A1)
+	- [3.8 自定义对象&JSON](#3.8%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%B9%E8%B1%A1&JSON)
+	- [3.9 Global对象](#3.9%20Global%E5%AF%B9%E8%B1%A1)
+- [4 DOM对象简单学习](#4%20DOM%E5%AF%B9%E8%B1%A1%E7%AE%80%E5%8D%95%E5%AD%A6%E4%B9%A0)
+- [5 事件简单学习](#5%20%E4%BA%8B%E4%BB%B6%E7%AE%80%E5%8D%95%E5%AD%A6%E4%B9%A0)
+- [6 BOM对象](#6%20BOM%E5%AF%B9%E8%B1%A1)
+	- [6.1 概念](#6.1%20%E6%A6%82%E5%BF%B5)
+	- [6.2 组成](#6.2%20%E7%BB%84%E6%88%90)
+	- [6.3 Window：窗口对象](#6.3%20Window%EF%BC%9A%E7%AA%97%E5%8F%A3%E5%AF%B9%E8%B1%A1)
+	- [6.4 Location：地址栏对象](#6.4%20Location%EF%BC%9A%E5%9C%B0%E5%9D%80%E6%A0%8F%E5%AF%B9%E8%B1%A1)
+	- [6.5 History：历史记录对象](#6.5%20History%EF%BC%9A%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E5%AF%B9%E8%B1%A1)
+- [7 DOM](#7%20DOM)
+	- [7.1 概念](#7.1%20%E6%A6%82%E5%BF%B5)
+	- [7.2 W3C DOM 标准组成部分](#7.2%20W3C%20DOM%20%E6%A0%87%E5%87%86%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86)
+	- [7.3 核心DOM模型](#7.3%20%E6%A0%B8%E5%BF%83DOM%E6%A8%A1%E5%9E%8B)
+	- [7.4 HTML DOM](#7.4%20HTML%20DOM)
+- [8 事件监听机制](#8%20%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E6%9C%BA%E5%88%B6)
+	- [8.1 概念](#8.1%20%E6%A6%82%E5%BF%B5)
+	- [8.2 事件绑定](#8.2%20%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A)
+	- [8.3 常见事件](#8.3%20%E5%B8%B8%E8%A7%81%E4%BA%8B%E4%BB%B6)
+
+## 1 概述
 
 ### 1.1 概念
 
@@ -20,7 +63,7 @@
 
 - `JavaScript = ECMAScript + JavaScript自己特有的东西(BOM+DOM)`
 
-## 2、ECMAScript基本语法
+## 2 ECMAScript基本语法
 
 ### 2.1 与HTML结合方式
 
@@ -216,7 +259,7 @@
 </html>
 ```
 
-## 3、ECMAScript基本对象
+## 3 ECMAScript基本对象
 
 ### 3.1 Function：函数对象
 
@@ -499,7 +542,7 @@ var user = {
 </html>
 ~~~
 
-### 3.8 Global对象
+### 3.9 Global对象
 
 1. 特点：`全局对象，这个Global中封装的方法不需要对象就可以直接调用。  方法名();`
 2. 方法：
@@ -528,7 +571,7 @@ var user = {
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074208796.png)
 
-## 4、DOM对象简单学习
+## 4 DOM对象简单学习
 
 * 功能：`控制html文档的内容`
 * 获取页面标签(元素)对象：Element
@@ -545,7 +588,7 @@ var user = {
 
 ![[Pasted image 20230707115829.png]]
 
-## 5、事件简单学习
+## 5 事件简单学习
 
 * 功能： `某些组件被执行了某些操作后，触发某些代码的执行`。
 	* 造句：  xxx被xxx,我就xxx
@@ -617,7 +660,7 @@ var user = {
 ```
 
 
-## 6、BOM对象
+## 6 BOM对象
 
 ### 6.1 概念
 
@@ -762,7 +805,7 @@ var user = {
 3. 属性：
 	* length	返回当前窗口历史列表中的 URL 数量。
 
-## 7、DOM
+## 7 DOM
 
 ### 7.1 概念
 
@@ -953,7 +996,7 @@ var user = {
 			div1.style.fontSize = "20px";
 	2. 提前定义好类选择器的样式，通过元素的className属性来设置其class属性值。
 
-## 8、事件监听机制
+## 8 事件监听机制
 
 ### 8.1 概念
 
@@ -963,7 +1006,7 @@ var user = {
 	* `监听器：代码`。
 	* 注册监听：将事件，事件源，监听器结合在一起。 当事件源上发生了某个事件，则触发执行某个监听器代码。
 
-### 8.1 事件绑定
+### 8.2 事件绑定
 
 - 方式一：通过`HTML标签中的事件属性`进行绑定
 ```html
@@ -988,7 +1031,7 @@ var user = {
 ```
 
 
-### 8. 常见事件
+### 8.3 常见事件
 
 1. 点击事件：
 	1. `onclick`：单击事件

@@ -1,4 +1,5 @@
-<h1>目录</h1>
+## 目录
+
 - [1 HashMap](#1%20HashMap)
 - [2 HashMap和Hashtable的区别](#2%20HashMap%E5%92%8CHashtable%E7%9A%84%E5%8C%BA%E5%88%AB)
 - [3 HashMap判断key和value相等的标准](#3%20HashMap%E5%88%A4%E6%96%ADkey%E5%92%8Cvalue%E7%9B%B8%E7%AD%89%E7%9A%84%E6%A0%87%E5%87%86)

@@ -1,5 +1,12 @@
+## 目录
 
-## 1、 web相关概念回顾
+- [1 web相关概念回顾](#1%20web%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E5%9B%9E%E9%A1%BE)
+- [2 web服务器软件](#2%20web%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6)
+- [3 IDEA与tomcat的相关配置](#3%20IDEA%E4%B8%8Etomcat%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE)
+	- [3.1 tomcat的安装与卸载](#3.1%20tomcat%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD)
+	- [3.2 IDEA与tomcat的相关配置](#3.2%20IDEA%E4%B8%8Etomcat%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE)
+
+## 1 web相关概念回顾
 
 1. `软件架构`
 	1. C/S：客户端/服务器端
@@ -20,7 +27,7 @@
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%B5%84%E6%BA%90%E5%88%86%E7%B1%BB.bmp)
 
-## 2、web服务器软件
+## 2 web服务器软件
 
 * 服务器：安装了服务器软件的计算机
 	* 如：电脑中安装了mysql服务器，通过账户密码可以访问到，就称此电脑为mysql服务器
@@ -38,7 +45,7 @@
 >JavaEE：Java语言在企业级开发中使用的技术规范的总和，一共规定了13项大的规范
 
 
-## 3、IDEA与tomcat的相关配置
+## 3 IDEA与tomcat的相关配置
 
 ### 3.1 tomcat的安装与卸载
 

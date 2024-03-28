@@ -1,5 +1,28 @@
+## 目录
 
-## 1、会话技术
+- [1 会话技术](#1%20%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF)
+- [2 Cookie](#2%20Cookie)
+	- [2.1 概念](#2.1%20%E6%A6%82%E5%BF%B5)
+	- [2.2 快速入门](#2.2%20%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
+	- [2.3 实现原理](#2.3%20%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86)
+	- [2.4 Cookie的细节](#2.4%20Cookie%E7%9A%84%E7%BB%86%E8%8A%82)
+	- [2.5 Cookie的特点和作用](#2.5%20Cookie%E7%9A%84%E7%89%B9%E7%82%B9%E5%92%8C%E4%BD%9C%E7%94%A8)
+	- [2.6 案例：记住上一次访问时间](#2.6%20%E6%A1%88%E4%BE%8B%EF%BC%9A%E8%AE%B0%E4%BD%8F%E4%B8%8A%E4%B8%80%E6%AC%A1%E8%AE%BF%E9%97%AE%E6%97%B6%E9%97%B4)
+- [3 JSP：入门](#3%20JSP%EF%BC%9A%E5%85%A5%E9%97%A8)
+	- [3.1 概念](#3.1%20%E6%A6%82%E5%BF%B5)
+	- [3.2 原理](#3.2%20%E5%8E%9F%E7%90%86)
+	- [3.3 JSP的脚本](#3.3%20JSP%E7%9A%84%E8%84%9A%E6%9C%AC)
+	- [3.4 JSp的内置对象](#3.4%20JSp%E7%9A%84%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1)
+	- [3.5 案例：改造2.6案例](#3.5%20%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%94%B9%E9%80%A02.6%E6%A1%88%E4%BE%8B)
+- [4 Session：主菜](#4%20Session%EF%BC%9A%E4%B8%BB%E8%8F%9C)
+	- [4.1 概念](#4.1%20%E6%A6%82%E5%BF%B5)
+	- [4.2 快速入门](#4.2%20%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
+	- [4.3 原理](#4.3%20%E5%8E%9F%E7%90%86)
+	- [4.4 细节](#4.4%20%E7%BB%86%E8%8A%82)
+	- [4.5 特点](#4.5%20%E7%89%B9%E7%82%B9)
+- [5 案例：验证码](#5%20%E6%A1%88%E4%BE%8B%EF%BC%9A%E9%AA%8C%E8%AF%81%E7%A0%81)
+
+## 1 会话技术
 
 1. 会话：`一次会话中包含多次请求和响应`。
 	* 一次会话：浏览器第一次给服务器资源发送请求，会话建立，直到有一方断开为止
@@ -9,7 +32,7 @@
 	1. `客户端会话技术：Cookie`
 	2. `服务器端会话技术：Session`
 
-## 2、Cookie
+## 2 Cookie
 
 ### 2.1 概念
 
@@ -128,7 +151,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 }
 ```
 
-## 3、JSP：入门
+## 3 JSP：入门
 
 ### 3.1 概念
 
@@ -207,7 +230,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 ```
 
 
-## 4、Session：主菜
+## 4 Session：主菜
 
 ### 4.1 概念
 
@@ -265,7 +288,7 @@ response.addCookie(c);
 	2. session没有数据大小限制，Cookie有
 	3. session数据安全，Cookie相对于不安全
 
-## 5、案例：验证码
+## 5 案例：验证码
 
 - 案例需求：
 	1. 访问带有验证码的登录页面login.jsp

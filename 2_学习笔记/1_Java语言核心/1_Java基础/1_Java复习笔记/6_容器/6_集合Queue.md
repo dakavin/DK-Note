@@ -1,4 +1,5 @@
-<h1>目录</h1>
+## 目录
+
 - [1 前言](#1%20%E5%89%8D%E8%A8%80)
 - [2 PriorityQueue](#2%20PriorityQueue)
 	- [2.1 PriorityQueue的排序方式](#2.1%20PriorityQueue%E7%9A%84%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F)

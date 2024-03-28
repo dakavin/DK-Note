@@ -1,4 +1,5 @@
-<h1>目录</h1>
+## 目录
+
 - [1 异常分类](#1%20%E5%BC%82%E5%B8%B8%E5%88%86%E7%B1%BB)
 	- [1.1 RuntimeException](#1.1%20RuntimeException)
 	- [1.2 IOException](#1.2%20IOException)

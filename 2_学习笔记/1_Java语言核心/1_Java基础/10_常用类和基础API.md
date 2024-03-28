@@ -1,12 +1,62 @@
+## 目录
 
-## 本章专题与脉络
+- [1 本章专题与脉络](#1%20%E6%9C%AC%E7%AB%A0%E4%B8%93%E9%A2%98%E4%B8%8E%E8%84%89%E7%BB%9C)
+- [2 字符串相关类之不可变字符序列：String](#2%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%85%B3%E7%B1%BB%E4%B9%8B%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E5%BA%8F%E5%88%97%EF%BC%9AString)
+	- [2.1 String的特性](#2.1%20String%E7%9A%84%E7%89%B9%E6%80%A7)
+	- [2.2 String的内存结构](#2.2%20String%E7%9A%84%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84)
+		- [2.2.1 概述](#2.2.1%20%E6%A6%82%E8%BF%B0)
+		- [2.2.2 练习类型1：拼接](#2.2.2%20%E7%BB%83%E4%B9%A0%E7%B1%BB%E5%9E%8B1%EF%BC%9A%E6%8B%BC%E6%8E%A5)
+		- [2.2.3 练习类型2：new](#2.2.3%20%E7%BB%83%E4%B9%A0%E7%B1%BB%E5%9E%8B2%EF%BC%9Anew)
+		- [2.2.4 练习类型3：intern()](#2.2.4%20%E7%BB%83%E4%B9%A0%E7%B1%BB%E5%9E%8B3%EF%BC%9Aintern())
+	- [2.3 String的常用API-1](#2.3%20String%E7%9A%84%E5%B8%B8%E7%94%A8API-1)
+		- [2.3.1 构造器](#2.3.1%20%E6%9E%84%E9%80%A0%E5%99%A8)
+		- [2.3.2 String与其他结构间的转换](#2.3.2%20String%E4%B8%8E%E5%85%B6%E4%BB%96%E7%BB%93%E6%9E%84%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2)
+	- [2.4 String的常用API-2](#2.4%20String%E7%9A%84%E5%B8%B8%E7%94%A8API-2)
+		- [2.4.1 系列1：常用方法](#2.4.1%20%E7%B3%BB%E5%88%971%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95)
+		- [2.4.2 系列2：查找](#2.4.2%20%E7%B3%BB%E5%88%972%EF%BC%9A%E6%9F%A5%E6%89%BE)
+		- [2.4.3 系列3：字符串截取](#2.4.3%20%E7%B3%BB%E5%88%973%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96)
+		- [2.4.4 系列4：和字符/字符数组相关](#2.4.4%20%E7%B3%BB%E5%88%974%EF%BC%9A%E5%92%8C%E5%AD%97%E7%AC%A6/%E5%AD%97%E7%AC%A6%E6%95%B0%E7%BB%84%E7%9B%B8%E5%85%B3)
+		- [2.4.5 系列5：开头与结尾](#2.4.5%20%E7%B3%BB%E5%88%975%EF%BC%9A%E5%BC%80%E5%A4%B4%E4%B8%8E%E7%BB%93%E5%B0%BE)
+		- [2.4.6 系列6：替换](#2.4.6%20%E7%B3%BB%E5%88%976%EF%BC%9A%E6%9B%BF%E6%8D%A2)
+	- [2.5 常见算法题目](#2.5%20%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95%E9%A2%98%E7%9B%AE)
+- [3 字符串相关类之可变字符序列：StringBuffer、StringBuilder](#3%20%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%85%B3%E7%B1%BB%E4%B9%8B%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E5%BA%8F%E5%88%97%EF%BC%9AStringBuffer%E3%80%81StringBuilder)
+	- [3.1 StringBuffer与StringBuilder的理解](#3.1%20StringBuffer%E4%B8%8EStringBuilder%E7%9A%84%E7%90%86%E8%A7%A3)
+	- [3.2 StringBuilder、StringBuffer的API](#3.2%20StringBuilder%E3%80%81StringBuffer%E7%9A%84API)
+	- [3.3 效率测试](#3.3%20%E6%95%88%E7%8E%87%E6%B5%8B%E8%AF%95)
+	- [3.4 练习](#3.4%20%E7%BB%83%E4%B9%A0)
+- [4 JDK8之前：日期时间API](#4%20JDK8%E4%B9%8B%E5%89%8D%EF%BC%9A%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4API)
+	- [4.1 java.lang.System类的方法](#4.1%20java.lang.System%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95)
+	- [4.2 java.util.Date](#4.2%20java.util.Date)
+	- [4.3 java.text.SimpleDateFormat](#4.3%20java.text.SimpleDateFormat)
+	- [4.4 java.util.Calendar(日历)](#4.4%20java.util.Calendar(%E6%97%A5%E5%8E%86))
+	- [4.5 练习](#4.5%20%E7%BB%83%E4%B9%A0)
+- [5 JDK8：新的日期时间API](#5%20JDK8%EF%BC%9A%E6%96%B0%E7%9A%84%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4API)
+	- [5.1 本地日期时间：LocalDate、LocalTime、LocalDateTime](#5.1%20%E6%9C%AC%E5%9C%B0%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%EF%BC%9ALocalDate%E3%80%81LocalTime%E3%80%81LocalDateTime)
+	- [5.2 瞬时：Instant](#5.2%20%E7%9E%AC%E6%97%B6%EF%BC%9AInstant)
+	- [5.3 日期时间格式化：DateTimeFormatter](#5.3%20%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96%EF%BC%9ADateTimeFormatter)
+	- [5.4 其它API](#5.4%20%E5%85%B6%E5%AE%83API)
+	- [5.5 与传统日期处理的转换](#5.5%20%E4%B8%8E%E4%BC%A0%E7%BB%9F%E6%97%A5%E6%9C%9F%E5%A4%84%E7%90%86%E7%9A%84%E8%BD%AC%E6%8D%A2)
+- [6 Java比较器](#6%20Java%E6%AF%94%E8%BE%83%E5%99%A8)
+	- [6.1 自然排序：java.lang.Comparable](#6.1%20%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F%EF%BC%9Ajava.lang.Comparable)
+	- [6.2 定制排序：java.util.Comparator](#6.2%20%E5%AE%9A%E5%88%B6%E6%8E%92%E5%BA%8F%EF%BC%9Ajava.util.Comparator)
+- [7 系统相关类](#7%20%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3%E7%B1%BB)
+	- [7.1 java.lang.System类](#7.1%20java.lang.System%E7%B1%BB)
+	- [7.2 java.lang.Runtime类](#7.2%20java.lang.Runtime%E7%B1%BB)
+- [8 和数学相关的类](#8%20%E5%92%8C%E6%95%B0%E5%AD%A6%E7%9B%B8%E5%85%B3%E7%9A%84%E7%B1%BB)
+	- [8.1 java.lang.Math](#8.1%20java.lang.Math)
+	- [8.2 java.math包](#8.2%20java.math%E5%8C%85)
+		- [8.2.1 BigInteger](#8.2.1%20BigInteger)
+		- [8.2.2 BigDecimal](#8.2.2%20BigDecimal)
+	- [8.3 java.util.Random](#8.3%20java.util.Random)
+
+## 1 本章专题与脉络
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015609244.png)
 
 
-## 1. 字符串相关类之不可变字符序列：String
+## 2 字符串相关类之不可变字符序列：String
 
-### 1.1 String的特性
+### 2.1 String的特性
 
 - `java.lang.String` 类代表字符串。Java程序中所有的字符串文字（例如`"hello"` ）都可以看作是实现此类的实例。
 
@@ -52,9 +102,9 @@
 
 - Java 语言提供对字符串串联符号（"+"）以及将其他对象转换为字符串的特殊支持（toString()方法）。
 
-### 1.2 String的内存结构
+### 2.2 String的内存结构
 
-#### 1.2.1 概述
+#### 2.2.1 概述
 
 因为字符串对象设计为不可变，那么所以字符串有常量池来保存很多常量对象。
 
@@ -64,7 +114,7 @@ JDK6中，字符串常量池在方法区。JDK7开始，就移到堆空间，直
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015649713.png)
 
-#### 1.2.2 练习类型1：拼接
+#### 2.2.2 练习类型1：拼接
 
 ```java
 String s1 = "hello";
@@ -98,7 +148,7 @@ System.out.println(p1.name == "Tom"); //
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015721282.png)
 
 
-#### 1.2.3 练习类型2：new
+#### 2.2.3 练习类型2：new
 
 String str1 = “abc”; 与 String str2 = new String(“abc”);的区别？
 
@@ -133,7 +183,7 @@ System.out.println(s3 == s4);//false
 两个
 ```
 
-#### 1.2.4 练习类型3：intern()
+#### 2.2.4 练习类型3：intern()
 
 - **String s1 = "a";** 
 
@@ -268,9 +318,9 @@ public class StringTest {
 
 ```
 
-### 1.3 String的常用API-1
+### 2.3 String的常用API-1
 
-#### 1.3.1 构造器
+#### 2.3.1 构造器
 
 * `public String() ` ：初始化新创建的 String对象，以使其表示空字符序列。
 * ` String(String original)`： 初始化一个新创建的 `String` 对象，使其表示一个与参数相同的字符序列；换句话说，新创建的字符串是该参数字符串的副本。
@@ -316,7 +366,7 @@ public static void main(String[] args) {
 }
 ```
 
-#### 1.3.2 String与其他结构间的转换
+#### 2.3.2 String与其他结构间的转换
 
 **字符串 --> 基本数据类型、包装类：**
 
@@ -369,11 +419,11 @@ public void test01() throws Exception {
 }
 ```
 
-### 1.4 String的常用API-2
+### 2.4 String的常用API-2
 
 `String` 类包括的方法可用于检查序列的单个字符、比较字符串、搜索字符串、提取子字符串、创建字符串副本并将所有字符全部转换为大写或小写。 
 
-#### 1.4.1 系列1：常用方法
+#### 2.4.1 系列1：常用方法
 
 （1）boolean isEmpty()：字符串是否为空
 （2）int length()：返回字符串的长度
@@ -434,7 +484,7 @@ public void test01() throws Exception {
 	}
 ```
 
-#### 1.4.2 系列2：查找
+#### 2.4.2 系列2：查找
 
 （11）boolean contains(xx)：是否包含xx
 （12）int indexOf(xx)：从前往后找当前字符串中xx，即如果有返回第一次出现的下标，要是没有返回-1
@@ -452,7 +502,7 @@ public void test01() throws Exception {
 	}
 ```
 
-#### 1.4.3 系列3：字符串截取
+#### 2.4.3 系列3：字符串截取
 
 （16）String substring(int beginIndex) ：返回一个新的字符串，它是此字符串的从beginIndex开始截取到最后的一个子字符串。 
 （17）String substring(int beginIndex, int endIndex) ：返回一个新字符串，它是此字符串从beginIndex开始截取到endIndex(不包含)的一个子字符串。 
@@ -477,7 +527,7 @@ public void test02(){
 }
 ```
 
-#### 1.4.4 系列4：和字符/字符数组相关
+#### 2.4.4 系列4：和字符/字符数组相关
 
 （18）char charAt(index)：返回[index]位置的字符
 （19）char[] toCharArray()： 将此字符串转换为一个新的字符数组返回
@@ -518,7 +568,7 @@ public void test02(){
 	}
 ```
 
-#### 1.4.5 系列5：开头与结尾
+#### 2.4.5 系列5：开头与结尾
 
 （24）boolean startsWith(xx)：测试此字符串是否以指定的前缀开始 
 （25）boolean startsWith(String prefix, int toffset)：测试此字符串从指定索引开始的子字符串是否以指定前缀开始
@@ -544,7 +594,7 @@ public void test02(){
 	}
 ```
 
-#### 1.4.6 系列6：替换
+#### 2.4.6 系列6：替换
 
 （27）String replace(char oldChar, char newChar)：返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的。 不支持正则。
 （28）String replace(CharSequence target, CharSequence replacement)：使用指定的字面值替换序列替换此字符串所有匹配字面值目标序列的子字符串。 
@@ -567,7 +617,7 @@ public void test1(){
 }
 ```
 
-### 1.5 常见算法题目
+### 2.5 常见算法题目
 
 **题目1：** 模拟一个trim方法，去除字符串两端的空格。
 
@@ -811,11 +861,11 @@ public void test1(){
 	}
 ```
 
-## 2. 字符串相关类之可变字符序列：StringBuffer、StringBuilder
+## 3 字符串相关类之可变字符序列：StringBuffer、StringBuilder
 
 因为String对象是不可变对象，虽然可以共享常量对象，但是对于频繁字符串的修改和拼接操作，效率极低，空间消耗也比较高。因此，JDK又在java.lang包提供了可变字符序列StringBuffer和StringBuilder类型。
 
-### 2.1 StringBuffer与StringBuilder的理解
+### 3.1 StringBuffer与StringBuilder的理解
 
 - java.lang.StringBuffer代表`可变的字符序列`，JDK1.0中声明，可以对字符串内容进行增删，`此时不会产生新的对象`。比如：
 
@@ -842,7 +892,7 @@ public void test1(){
   - StringBuffer:可变的字符序列；线程安全（方法有synchronized修饰），效率低；底层使用char[]数组存储 (JDK8.0中)
   - StringBuilder:可变的字符序列； jdk1.5引入，线程不安全的，效率高；底层使用char[]数组存储(JDK8.0中)
 
-### 2.2 StringBuilder、StringBuffer的API
+### 3.2 StringBuilder、StringBuffer的API
 
 StringBuilder、StringBuffer的API是完全一致的，并且很多方法与String相同。
 
@@ -920,7 +970,7 @@ public void test6(){
 }
 ```
 
-### 2.3 效率测试
+### 3.3 效率测试
 
 ```java
 //初始设置
@@ -954,7 +1004,7 @@ System.out.println("String的执行时间：" + (endTime - startTime));
 
 ```
 
-### 2.4 练习
+### 3.4 练习
 
 笔试题：程序输出：
 
@@ -972,9 +1022,9 @@ System.out.println(sb1);//
 
 ```
 
-## 3. JDK8之前：日期时间API
+## 4 JDK8之前：日期时间API
 
-### 3.1 java.lang.System类的方法
+### 4.1 java.lang.System类的方法
 
 - System类提供的public static long currentTimeMillis()：用来返回当前时间与1970年1月1日0时0分0秒之间以毫秒为单位的时间差。
   
@@ -987,7 +1037,7 @@ System.out.println(sb1);//
   
   > 在国际无线电通信场合，为了统一起见，使用一个统一的时间，称为通用协调时(UTC, Universal Time Coordinated)。UTC与格林尼治平均时(GMT, Greenwich Mean Time)一样，都与英国伦敦的本地时相同。这里，UTC与GMT含义完全相同。 
 
-### 3.2 java.util.Date
+### 4.2 java.util.Date
 
 表示特定的瞬间，精确到毫秒。
 
@@ -1036,7 +1086,7 @@ public void test5(){
 }
 ```
 
-### 3.3 java.text.SimpleDateFormat
+### 4.3 java.text.SimpleDateFormat
 
 - java.text.SimpleDateFormat类是一个不与语言环境有关的方式来格式化和解析日期的具体类。
 - 可以进行格式化：日期 --> 文本
@@ -1073,7 +1123,7 @@ public void test2() throws ParseException{
 }
 ```
 
-### 3.4 java.util.Calendar(日历)
+### 4.4 java.util.Calendar(日历)
 
 - Date类的API大部分被废弃了，替换为Calendar。
 
@@ -1158,7 +1208,7 @@ public class TestCalendar {
 }
 ```
 
-### 3.5 练习
+### 4.5 练习
 
 输入年份和月份，输出该月日历。
 
@@ -1166,7 +1216,7 @@ public class TestCalendar {
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020237127.png)
 
-## 4. JDK8：新的日期时间API
+## 5 JDK8：新的日期时间API
 
 如果我们可以跟别人说：“我们在1502643933071见面，别晚了！”那么就再简单不过了。但是我们希望时间与昼夜和四季有关，于是事情就变复杂了。JDK 1.0中包含了一个java.util.Date类，但是它的大多数方法已经在JDK 1.1引入Calendar类之后被弃用了。而Calendar并不比Date好多少。它们面临的问题是：
 
@@ -1198,7 +1248,7 @@ Java 8 以一个新的开始为 Java 创建优秀的 API。新的日期时间API
 
 尽管有68个新的公开类型，但是大多数开发者只会用到基础包和format包，大概占总数的三分之一。
 
-### 4.1 本地日期时间：LocalDate、LocalTime、LocalDateTime
+### 5.1 本地日期时间：LocalDate、LocalTime、LocalDateTime
 
 | 方法                                                         | **描述**                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -1267,7 +1317,7 @@ public class TestLocalDateTime {
 }
 ```
 
-### 4.2 瞬时：Instant
+### 5.2 瞬时：Instant
 
 -  Instant：时间线上的一个瞬时点。 这可能被用来记录应用程序中的事件时间戳。
    -  时间戳是指格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总秒数。
@@ -1294,7 +1344,7 @@ public class TestLocalDateTime {
 >  说明信件的发送地的地方时间是二○○二年十一月八号，星期五，早上九点四十二分（二十二秒），这个地方的本地时领先UTC八个小时(+0800， 就是东八区时间)。电子邮件信头的Date域使用二十四小时的时钟，而不使用AM和PM来标记上下午。 
 >
 
-### 4.3 日期时间格式化：DateTimeFormatter
+### 5.3 日期时间格式化：DateTimeFormatter
 
 该类提供了三种格式化方法：
 
@@ -1381,7 +1431,7 @@ public class TestDatetimeFormatter {
 }
 ```
 
-### 4.4 其它API
+### 5.4 其它API
 
 **1、指定时区日期时间：ZondId和ZonedDateTime**
 
@@ -1547,7 +1597,7 @@ public void test1(){
 }
 ```
 
-### 4.5 与传统日期处理的转换
+### 5.5 与传统日期处理的转换
 
 | **类**                                                       | **To** **遗留类**                     | **From** **遗留类**         |
 | ------------------------------------------------------------ | ------------------------------------- | --------------------------- |
@@ -1560,7 +1610,7 @@ public void test1(){
 | **java.time.ZoneId与java.util.TimeZone**                     | Timezone.getTimeZone(id)              | timeZone.toZoneId()         |
 | **java.time.format.DateTimeFormatter与java.text.DateFormat** | formatter.toFormat()                  | 无                          |
 
-## 5. Java比较器
+## 6 Java比较器
 
 我们知道基本数据类型的数据（除boolean类型外）需要比较大小的话，之间使用比较运算符即可，但是引用数据类型是不能直接使用比较运算符来比较大小的。那么，如何解决这个问题呢？
 
@@ -1570,7 +1620,7 @@ public void test1(){
   - 自然排序：java.lang.Comparable
   - 定制排序：java.util.Comparator
 
-### 5.1 自然排序：java.lang.Comparable
+### 6.1 自然排序：java.lang.Comparable
 
 - Comparable接口强行对实现它的每个类的对象进行整体排序。这种排序被称为类的自然排序。
 - 实现 Comparable 的类必须实现 `compareTo(Object obj) `方法，两个对象即通过 compareTo(Object obj) 方法的返回值来比较大小。如果当前对象this大于形参对象obj，则返回正整数，如果当前对象this小于形参对象obj，则返回负整数，如果当前对象this等于形参对象obj，则返回零。
@@ -1814,7 +1864,7 @@ public class ComparableTest{
 
 ```
 
-### 5.2 定制排序：java.util.Comparator
+### 6.2 定制排序：java.util.Comparator
 
 - 思考
   - 当元素的类型没有实现java.lang.Comparable接口而又不方便修改代码（例如：一些第三方的类，你只有.class文件，没有源文件）
@@ -1932,9 +1982,9 @@ System.out.println(Arrays.toString(all));
 
 ```
 
-## 6. 系统相关类
+## 7 系统相关类
 
-### 6.1 java.lang.System类
+### 7.1 java.lang.System类
 
 - System类代表系统，系统级的很多属性和控制方法都放置在该类的内部。该类位于`java.lang包`。
 
@@ -2073,7 +2123,7 @@ public class TestSystemArrayCopy {
 }
 ```
 
-### 6.2 java.lang.Runtime类
+### 7.2 java.lang.Runtime类
 
 每个 Java 应用程序都有一个 `Runtime` 类实例，使应用程序能够与其运行的环境相连接。
 
@@ -2107,9 +2157,9 @@ public class TestRuntime {
 }
 ```
 
-## 7. 和数学相关的类
+## 8 和数学相关的类
 
-### 7.1 java.lang.Math
+### 8.1 java.lang.Math
 
 `java.lang.Math` 类包含用于执行基本数学运算的方法，如初等指数、对数、平方根和三角函数。类似这样的工具类，其所有方法均为静态方法，并且不会创建对象，调用起来非常简单。
 
@@ -2160,9 +2210,9 @@ double rand = Math.random();
 double pi = Math.PI;
 ```
 
-### 7.2 java.math包
+### 8.2 java.math包
 
-#### 7.2.1 BigInteger
+#### 8.2.1 BigInteger
 
 - Integer类作为int的包装类，能存储的最大整型值为2^31-1，Long类也是有限的，最大为2^63-1。如果要表示再大的整数，不管是基本数据类型还是他们的包装类都无能为力，更不用说进行运算了。
 
@@ -2201,7 +2251,7 @@ public void test01(){
 }
 ```
 
-#### 7.2.2 BigDecimal
+#### 8.2.2 BigDecimal
 
 - 一般的Float类和Double类可以用来做科学计算或工程计算，但在**商业计算中，要求数字精度比较高，故用到java.math.BigDecimal类。**
 
@@ -2234,7 +2284,7 @@ public void test03(){
 
 ```
 
-### 7.3 java.util.Random
+### 8.3 java.util.Random
 
 用于产生随机数
 

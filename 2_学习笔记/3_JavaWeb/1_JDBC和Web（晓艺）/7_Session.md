@@ -1,5 +1,12 @@
+## 目录
 
-## 一、 Session
+- [1 Session](#1%20Session)
+	- [1.1 概念：](#1.1%20%E6%A6%82%E5%BF%B5%EF%BC%9A)
+	- [1.2 常用方法：](#1.2%20%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%EF%BC%9A)
+	- [1.3 原理](#1.3%20%E5%8E%9F%E7%90%86)
+	- [1.4 session的特点](#1.4%20session%E7%9A%84%E7%89%B9%E7%82%B9)
+
+## 1 Session
 
 ### 1.1 概念：
 
@@ -31,7 +38,7 @@ ii. 如果请求头中不存在名为JSESSIONID的cookie，request.getSession()�
 
      void removeAttribute(String name)      
 
-### 2.3 原理
+### 1.3 原理
 
 ![](file:///C:/Users/mikey/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)
 
@@ -66,7 +73,7 @@ response.addCookie(c);
 
 session.setMaxInactiveInterval(int seconds);
 
-### 2.5  session的特点
+### 1.4 session的特点
 
 1. session用于存储一次会话的多次请求的数据，存在服务器端
 

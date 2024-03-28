@@ -1,5 +1,13 @@
+## 目录
 
-## 一、Apache-DBUtils简介
+- [1 Apache-DBUtils简介](#1%20Apache-DBUtils%E7%AE%80%E4%BB%8B)
+- [2 主要API的使用](#2%20%E4%B8%BB%E8%A6%81API%E7%9A%84%E4%BD%BF%E7%94%A8)
+	- [2.1 DbUtils](#2.1%20DbUtils)
+	- [2.2 QueryRunner类](#2.2%20QueryRunner%E7%B1%BB)
+	- [2.3 ResultSetHandler接口及实现类](#2.3%20ResultSetHandler%E6%8E%A5%E5%8F%A3%E5%8F%8A%E5%AE%9E%E7%8E%B0%E7%B1%BB)
+- [3 JDBC总结](#3%20JDBC%E6%80%BB%E7%BB%93)
+
+## 1 Apache-DBUtils简介
 
 - `commons-dbutils` 是 Apache 组织提供的一个开源 JDBC工具类库，它是对JDBC的简单封装，学习成本极低，并且使用dbutils能极大简化jdbc编码的工作量，同时也不会影响程序的性能。
 
@@ -9,7 +17,7 @@
   - 工具类：`org.apache.commons.dbutils.DbUtils`   
 - API包说明：
 
-## 二、主要API的使用
+## 2 主要API的使用
 
 ### 2.1 DbUtils
 
@@ -213,7 +221,7 @@ public void testQueryValue() throws Exception{
 }
 ```
 
-## JDBC总结
+## 3 JDBC总结
 
 ```java
 总结

@@ -1,7 +1,25 @@
+## 目录
+
+- [1 操作和访问数据库](#1%20%E6%93%8D%E4%BD%9C%E5%92%8C%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93)
+- [2 使用Statement操作数据表的弊端](#2%20%E4%BD%BF%E7%94%A8Statement%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E5%BC%8A%E7%AB%AF)
+- [3 PreparedStatement的使用](#3%20PreparedStatement%E7%9A%84%E4%BD%BF%E7%94%A8)
+	- [3.1 PreparedStatement介绍](#3.1%20PreparedStatement%E4%BB%8B%E7%BB%8D)
+	- [3.2 PreparedStatement vs Statement](#3.2%20PreparedStatement%20vs%20Statement)
+	- [3.3 Java与SQL对应数据类型转换表](#3.3%20Java%E4%B8%8ESQL%E5%AF%B9%E5%BA%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A1%A8)
+	- [3.4 使用PreparedStatement实现增、删、改操作](#3.4%20%E4%BD%BF%E7%94%A8PreparedStatement%E5%AE%9E%E7%8E%B0%E5%A2%9E%E3%80%81%E5%88%A0%E3%80%81%E6%94%B9%E6%93%8D%E4%BD%9C)
+	- [3.5 使用PreparedStatement实现查询操作](#3.5%20%E4%BD%BF%E7%94%A8PreparedStatement%E5%AE%9E%E7%8E%B0%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C)
+- [4 ResultSet与ResultSetMetaData](#4%20ResultSet%E4%B8%8EResultSetMetaData)
+	- [4.1 ResultSet](#4.1%20ResultSet)
+	- [4.2 ResultSetMetaData](#4.2%20ResultSetMetaData)
+- [5 资源的释放](#5%20%E8%B5%84%E6%BA%90%E7%9A%84%E9%87%8A%E6%94%BE)
+- [6 JDBC API小结](#6%20JDBC%20API%E5%B0%8F%E7%BB%93)
+- [7 使用PreparedStatement的好处](#7%20%E4%BD%BF%E7%94%A8PreparedStatement%E7%9A%84%E5%A5%BD%E5%A4%84)
+- [8 章节练习](#8%20%E7%AB%A0%E8%8A%82%E7%BB%83%E4%B9%A0)
+
 
 - CRUD是指 **Create（创建）、Retrieve（读取）、Update（更新）和Delete（删除）** 这四个操作，是指在数据库或系统中对数据进行基本操作的常用术语
 
-## 一、操作和访问数据库
+## 1 操作和访问数据库
 
 - 数据库连接被用于向数据库服务器发送命令和 SQL 语句，并接受数据库服务器返回的结果。`其实一个数据库连接就是一个Socket连接`。
 
@@ -11,7 +29,7 @@
 	- `CallableStatement`：用于执行 SQL 存储过程
 
 
-## 二、使用Statement操作数据表的弊端
+## 2 使用Statement操作数据表的弊端
 
 - 通过调用 Connection 对象的 createStatement() 方法创建该对象。该对象用于执行静态的 SQL 语句，并且返回执行结果。
 
@@ -144,7 +162,7 @@ public class StatementTest {
 ```
 
 
-## 三、 PreparedStatement的使用
+## 3 PreparedStatement的使用
 
 ### 3.1 PreparedStatement介绍
 
@@ -319,7 +337,7 @@ public <T> List<T> getForList(Class<T> clazz, String sql, Object ... args){
 > 说明：使用PreparedStatement实现的查询操作可以替换Statement实现的查询操作，解决Statement拼串和SQL注入问题。
 >
 
-## 四、ResultSet与ResultSetMetaData
+## 4 ResultSet与ResultSetMetaData
 
 ### 4.1 ResultSet
 
@@ -377,14 +395,14 @@ public <T> List<T> getForList(Class<T> clazz, String sql, Object ... args){
 
 
 
-## 五、资源的释放
+## 5 资源的释放
 
 - 释放ResultSet, Statement,Connection。
 - 数据库连接（Connection）是非常稀有的资源，用完后必须马上释放，如果Connection不能及时正确的关闭将导致系统宕机。Connection的使用原则是**尽量晚创建，尽量早的释放。**
 - 可以在finally中关闭，保证及时其他代码出现异常，资源也一定能被关闭。
 
 
-## 六、JDBC API小结
+## 6 JDBC API小结
 
 - 两种思想
   - 面向接口编程的思想
@@ -402,7 +420,7 @@ public <T> List<T> getForList(Class<T> clazz, String sql, Object ... args){
     - 获取列的别名：getColumnLabel()
   - 通过反射，创建指定类的对象，获取指定的属性并赋值
 
-## 7. 使用PreparedStatement的好处
+## 7 使用PreparedStatement的好处
 
 1. 使用了占位符的方式，解决了Statement中存在的拼串操作；
 2. 使用的是预编译方式，避免了直接SQL注入导致逻辑变化；
@@ -425,7 +443,7 @@ public void test2(){
 
 ***
 
-## 章节练习
+## 8 章节练习
 
 **练习题1：从控制台向数据库的表customers中插入一条数据，表结构如下：**
 

@@ -1,5 +1,12 @@
+## 目录
 
-## 一、 Filter：过滤器
+- [1 Filter：过滤器](#1%20Filter%EF%BC%9A%E8%BF%87%E6%BB%A4%E5%99%A8)
+- [2 Listener：监听器](#2%20Listener%EF%BC%9A%E7%9B%91%E5%90%AC%E5%99%A8)
+- [3 Filter、Listener和Servlet的关系](#3%20Filter%E3%80%81Listener%E5%92%8CServlet%E7%9A%84%E5%85%B3%E7%B3%BB)
+- [4 过滤器实战](#4%20%E8%BF%87%E6%BB%A4%E5%99%A8%E5%AE%9E%E6%88%98)
+- [5 常用Listener](#5%20%E5%B8%B8%E7%94%A8Listener)
+
+## 1 Filter：过滤器
 
 1. 概念：当访问服务器的资源时，过滤器可以将请求拦截下来，进行一些特定的处理，然后可以选择继续传递请求或者不放行。
 
@@ -8,13 +15,13 @@
 	- 敏感字符过滤
 	- 修改请求内容或自定义响应内容
 
-## 二、 Listener：监听器
+## 2 Listener：监听器
 
  1. 概念：通过listener 可以监听web 服务器中某一个执行动作，再执行预先定义的动作。
 
 2. 功能：监听servletContext（servlet上下文，对应整个web应用），session，request等对象创建消亡或者修改。
 
-## 三、 Filter、Listener和Servlet的关系
+## 3 Filter、Listener和Servlet的关系
 
 ![](file:///C:/Users/mikey/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg)
 
@@ -24,7 +31,7 @@
 
 2. 监听器则是监听web应用及请求与响应过程中的一些动作变化。
 
-## 四、 过滤器实战     
+## 4 过滤器实战     
 
 1.   定义一个类，实现接口Filter
 
@@ -81,7 +88,7 @@ public class FilterDemo1 implements Filter {
 
 6.   自定义类实现HttpServletRequestWrapper，在过滤器中将该对象向后传递，增强原request对象的功能
 
-## 五、 常用Listener
+## 5 常用Listener
 
 1. ServletContextListener:监听ServletContext对象的创建和销毁
 

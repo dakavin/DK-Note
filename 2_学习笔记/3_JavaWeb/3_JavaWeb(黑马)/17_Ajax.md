@@ -1,4 +1,17 @@
-## 1、Ajax
+## 目录
+
+- [1 Ajax](#1%20Ajax)
+	- [1.1 Ajax介绍](#1.1%20Ajax%E4%BB%8B%E7%BB%8D)
+	- [1.2 Ajax的作用](#1.2%20Ajax%E7%9A%84%E4%BD%9C%E7%94%A8)
+	- [1.3 同步异步](#1.3%20%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5)
+- [2 原生Ajax](#2%20%E5%8E%9F%E7%94%9FAjax)
+- [3 Axios](#3%20Axios)
+	- [3.1 Axios的基本使用](#3.1%20Axios%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8)
+	- [3.2 Axios快速入门](#3.2%20Axios%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
+	- [3.3 请求方法的别名](#3.3%20%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95%E7%9A%84%E5%88%AB%E5%90%8D)
+	- [3.4 案例](#3.4%20%E6%A1%88%E4%BE%8B)
+
+## 1 Ajax
 
 ### 1.1 Ajax介绍
 
@@ -32,7 +45,7 @@ Ajax: 全称`Asynchronous JavaScript And XML`，异步的JavaScript和XML。其�
 
   浏览器页面发送请求给服务器，在`服务器处理请求的过程中，浏览器页面还可以做其他的操作`。
 
-## 2、原生Ajax
+## 2 原生Ajax
 
 对于Ajax技术有了充分的认知了，我们接下来`通过代码来演示Ajax的效果`。此处我们先采用`原生的Ajax代码`来演示。因为Ajax请求是基于客户端发送请求，服务器响应数据的技术。所以为了完成快速入门案例，我们需要提供服服务器端和编写客户端。
 
@@ -87,7 +100,7 @@ Ajax: 全称`Asynchronous JavaScript And XML`，异步的JavaScript和XML。其�
 
 并且通过浏览器的f12抓包，我们点击网络中的XHR请求，发现可以抓包到我们发送的Ajax请求。XHR代表的就是异步请求
 
-## 3、Axios
+## 3 Axios
 
 上述`原生的Ajax请求的代码编写起来还是比较繁琐的`，所以接下来我们学习一门更加简单的发送Ajax请求的技术Axios 。Axios是对原生的AJAX进行封装，简化书写。Axios官网是：[https://www.axios-http.cn]
 
@@ -131,7 +144,7 @@ axios()是用来发送异步请求的，小括号中`使用 js的JSON对象`传�
 
 `then() 需要传递一个匿名函数`。我们将 then()中传递的匿名函数称为 **回调函数**，意思是该匿名函数在发送请求时不会被调用，而是在成功响应后调用的函数。而该`回调函数中的 resp 参数是对响应的数据进行封装的对象`，通过 resp.data 可以获取到响应的数据。
 
-### 1.3.2 Axios快速入门
+### 3.2 Axios快速入门
 
 - 后端实现
     查询所有员工信息服务器
@@ -208,7 +221,7 @@ post请求代码如下：
 ```
 
 浏览器打开，f12抓包，然后分别点击2个按钮，查看控制台效果如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922201731621.png)
-### 1.3.3 请求方法的别名
+### 3.3 请求方法的别名
 
 Axios还针对不同的请求，提供了别名方式的api,具体如下：
 
@@ -233,7 +246,7 @@ axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(
 })
 ```
 
-### 1.3.4 案例
+### 3.4 案例
 
 - 需求：基于Vue及Axios完成数据的动态加载展示，如下图所示![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922201808049.png)
 - 分析：

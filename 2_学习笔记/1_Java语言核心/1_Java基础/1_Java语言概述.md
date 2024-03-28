@@ -1,5 +1,77 @@
+## 目录
 
-## 1. Java知识脉络图
+- [1 Java知识脉络图](#1%20Java%E7%9F%A5%E8%AF%86%E8%84%89%E7%BB%9C%E5%9B%BE)
+	- [1.1 Java基础全程脉络图](#1.1%20Java%E5%9F%BA%E7%A1%80%E5%85%A8%E7%A8%8B%E8%84%89%E7%BB%9C%E5%9B%BE)
+	- [1.2 本章专题与脉络](#1.2%20%E6%9C%AC%E7%AB%A0%E4%B8%93%E9%A2%98%E4%B8%8E%E8%84%89%E7%BB%9C)
+- [2 抽丝剥茧话Java](#2%20%E6%8A%BD%E4%B8%9D%E5%89%A5%E8%8C%A7%E8%AF%9DJava)
+	- [2.1 当前大学生就业形势](#2.1%20%E5%BD%93%E5%89%8D%E5%A4%A7%E5%AD%A6%E7%94%9F%E5%B0%B1%E4%B8%9A%E5%BD%A2%E5%8A%BF)
+	- [2.2 IT互联网是否依旧靠谱](#2.2%20IT%E4%BA%92%E8%81%94%E7%BD%91%E6%98%AF%E5%90%A6%E4%BE%9D%E6%97%A7%E9%9D%A0%E8%B0%B1)
+	- [2.3 IT行业岗位分析](#2.3%20IT%E8%A1%8C%E4%B8%9A%E5%B2%97%E4%BD%8D%E5%88%86%E6%9E%90)
+	- [2.4 软件开发之Java开发](#2.4%20%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B9%8BJava%E5%BC%80%E5%8F%91)
+	- [2.5 到底多少人在用Java](#2.5%20%E5%88%B0%E5%BA%95%E5%A4%9A%E5%B0%91%E4%BA%BA%E5%9C%A8%E7%94%A8Java)
+	- [2.6 八卦一下程序员](#2.6%20%E5%85%AB%E5%8D%A6%E4%B8%80%E4%B8%8B%E7%A8%8B%E5%BA%8F%E5%91%98)
+	- [2.7 Java系列课程体系](#2.7%20Java%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B%E4%BD%93%E7%B3%BB)
+	- [2.8 Java职业晋升路线图](#2.8%20Java%E8%81%8C%E4%B8%9A%E6%99%8B%E5%8D%87%E8%B7%AF%E7%BA%BF%E5%9B%BE)
+- [3 计算机的硬件与软件](#3%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E7%A1%AC%E4%BB%B6%E4%B8%8E%E8%BD%AF%E4%BB%B6)
+	- [3.1 计算机组成：硬件+软件](#3.1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%EF%BC%9A%E7%A1%AC%E4%BB%B6+%E8%BD%AF%E4%BB%B6)
+	- [3.2 CPU、内存与硬盘](#3.2%20CPU%E3%80%81%E5%86%85%E5%AD%98%E4%B8%8E%E7%A1%AC%E7%9B%98)
+	- [3.3 输入设备：键盘输入](#3.3%20%E8%BE%93%E5%85%A5%E8%AE%BE%E5%A4%87%EF%BC%9A%E9%94%AE%E7%9B%98%E8%BE%93%E5%85%A5)
+- [4 软件相关介绍](#4%20%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3%E4%BB%8B%E7%BB%8D)
+	- [4.1 什么是软件](#4.1%20%E4%BB%80%E4%B9%88%E6%98%AF%E8%BD%AF%E4%BB%B6)
+	- [4.2 人机交互方式](#4.2%20%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F)
+	- [4.3 常用的DOS命令](#4.3%20%E5%B8%B8%E7%94%A8%E7%9A%84DOS%E5%91%BD%E4%BB%A4)
+- [5 计算机编程语言](#5%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80)
+	- [5.1 计算机语言是什么](#5.1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E6%98%AF%E4%BB%80%E4%B9%88)
+	- [5.2 计算机语言简史](#5.2%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E7%AE%80%E5%8F%B2)
+	- [5.3 计算机语言排行榜](#5.3%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80%E6%8E%92%E8%A1%8C%E6%A6%9C)
+	- [5.4 编程语言，该学哪个？](#5.4%20%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%EF%BC%8C%E8%AF%A5%E5%AD%A6%E5%93%AA%E4%B8%AA%EF%BC%9F)
+- [6 Java语言概述](#6%20Java%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0)
+	- [6.1 Java概述](#6.1%20Java%E6%A6%82%E8%BF%B0)
+	- [6.2 Java语言简史](#6.2%20Java%E8%AF%AD%E8%A8%80%E7%AE%80%E5%8F%B2)
+	- [6.3 Java之父](#6.3%20Java%E4%B9%8B%E7%88%B6)
+	- [6.4 公司八卦](#6.4%20%E5%85%AC%E5%8F%B8%E5%85%AB%E5%8D%A6)
+	- [6.5 Java技术体系平台](#6.5%20Java%E6%8A%80%E6%9C%AF%E4%BD%93%E7%B3%BB%E5%B9%B3%E5%8F%B0)
+- [7 Java开发环境搭建（掌握）](#7%20Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%EF%BC%88%E6%8E%8C%E6%8F%A1%EF%BC%89)
+	- [7.1 什么是JDK、JRE](#7.1%20%E4%BB%80%E4%B9%88%E6%98%AFJDK%E3%80%81JRE)
+	- [7.2 JDK版本选择](#7.2%20JDK%E7%89%88%E6%9C%AC%E9%80%89%E6%8B%A9)
+	- [7.3 JDK的下载](#7.3%20JDK%E7%9A%84%E4%B8%8B%E8%BD%BD)
+	- [7.4 JDK的安装](#7.4%20JDK%E7%9A%84%E5%AE%89%E8%A3%85)
+	- [7.5 配置path环境变量](#7.5%20%E9%85%8D%E7%BD%AEpath%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)
+		- [7.5.1 理解path环境变量](#7.5.1%20%E7%90%86%E8%A7%A3path%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)
+		- [7.5.2 JDK8配置方案1：只配置path](#7.5.2%20JDK8%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%881%EF%BC%9A%E5%8F%AA%E9%85%8D%E7%BD%AEpath)
+		- [7.5.3 JDK8配置方案2：配置JAVA_HOME+path（推荐）](#7.5.3%20JDK8%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%882%EF%BC%9A%E9%85%8D%E7%BD%AEJAVA_HOME+path%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89)
+		- [7.5.4 JDK17配置方案：自动配置](#7.5.4%20JDK17%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88%EF%BC%9A%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE)
+- [8 开发体验：HelloWorld（掌握）](#8%20%E5%BC%80%E5%8F%91%E4%BD%93%E9%AA%8C%EF%BC%9AHelloWorld%EF%BC%88%E6%8E%8C%E6%8F%A1%EF%BC%89)
+	- [8.1 开发步骤](#8.1%20%E5%BC%80%E5%8F%91%E6%AD%A5%E9%AA%A4)
+	- [8.2 编写](#8.2%20%E7%BC%96%E5%86%99)
+	- [8.3 编译](#8.3%20%E7%BC%96%E8%AF%91)
+	- [8.4 运行](#8.4%20%E8%BF%90%E8%A1%8C)
+- [9 Java开发工具](#9%20Java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7)
+	- [9.1 都有哪些开发Java的工具](#9.1%20%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E5%BC%80%E5%8F%91Java%E7%9A%84%E5%B7%A5%E5%85%B7)
+	- [9.2 如何选择](#9.2%20%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9)
+- [10 HelloWorld案例常见错误](#10%20HelloWorld%E6%A1%88%E4%BE%8B%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF)
+	- [10.1 拼写问题](#10.1%20%E6%8B%BC%E5%86%99%E9%97%AE%E9%A2%98)
+	- [10.2 编译、运行路径问题](#10.2%20%E7%BC%96%E8%AF%91%E3%80%81%E8%BF%90%E8%A1%8C%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98)
+	- [10.3 语法问题](#10.3%20%E8%AF%AD%E6%B3%95%E9%97%AE%E9%A2%98)
+	- [10.4 字符编码问题](#10.4%20%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98)
+	- [10.5 建议](#10.5%20%E5%BB%BA%E8%AE%AE)
+- [11 HelloWorld小结](#11%20HelloWorld%E5%B0%8F%E7%BB%93)
+	- [11.1 Java程序的结构与格式](#11.1%20Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BB%93%E6%9E%84%E4%B8%8E%E6%A0%BC%E5%BC%8F)
+	- [11.2 Java程序的入口](#11.2%20Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%85%A5%E5%8F%A3)
+	- [11.3 两种常见的输出语句](#11.3%20%E4%B8%A4%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5)
+	- [11.4 源文件名与类名](#11.4%20%E6%BA%90%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%8E%E7%B1%BB%E5%90%8D)
+- [12 注释(comment)](#12%20%E6%B3%A8%E9%87%8A(comment))
+- [13 Java API文档](#13%20Java%20API%E6%96%87%E6%A1%A3)
+- [14 Java核心机制：JVM](#14%20Java%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6%EF%BC%9AJVM)
+	- [14.1 Java语言的优缺点](#14.1%20Java%E8%AF%AD%E8%A8%80%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9)
+		- [14.1.1 优点](#14.1.1%20%E4%BC%98%E7%82%B9)
+		- [14.1.2 缺点](#14.1.2%20%E7%BC%BA%E7%82%B9)
+	- [14.2 JVM功能说明](#14.2%20JVM%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E)
+		- [14.2.1 功能1：实现Java程序的跨平台性](#14.2.1%20%E5%8A%9F%E8%83%BD1%EF%BC%9A%E5%AE%9E%E7%8E%B0Java%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E6%80%A7)
+		- [14.2.2 功能2：自动内存管理(内存分配、内存回收)](#14.2.2%20%E5%8A%9F%E8%83%BD2%EF%BC%9A%E8%87%AA%E5%8A%A8%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86(%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E3%80%81%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6))
+- [15 章节案例](#15%20%E7%AB%A0%E8%8A%82%E6%A1%88%E4%BE%8B)
+
+## 1 Java知识脉络图
 
 ### 1.1 Java基础全程脉络图
 
@@ -10,7 +82,7 @@
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230921234103851.png)
 
-## 2. 抽丝剥茧话Java
+## 2 抽丝剥茧话Java
 
 ### 2.1 当前大学生就业形势
 
@@ -133,7 +205,7 @@
 
 薪资数据统计来源：拉勾网
 
-## 3. 计算机的硬件与软件
+## 3 计算机的硬件与软件
 
 ### 3.1 计算机组成：硬件+软件
 
@@ -170,7 +242,7 @@
 
 
 
-## 4. 软件相关介绍
+## 4 软件相关介绍
 
 ### 4.1 什么是软件
 
@@ -243,7 +315,7 @@ DOS（Disk Operating System，磁盘操作系统）是Microsoft公司在Windows�
 | ↑  ↓              | 调阅历史操作命令     |
 | Delete和Backspace | 删除字符             |
 
-## 5. 计算机编程语言
+## 5 计算机编程语言
 
 ### 5.1 计算机语言是什么
 
@@ -396,7 +468,7 @@ TIOBE （https://www.tiobe.com/tiobe-index/）是一个流行编程语言排行�
 - 如果你掌握了一种编程语言，也会更容易上手其它的编程语言。关键是学习如何使用`程序设计方法`来解决问题。这也是本套课程的主旨。
 - `Talk is cheap，Show me the code`。
 
-## 6. Java语言概述
+## 6 Java语言概述
 
 ### 6.1 Java概述
 
@@ -512,7 +584,7 @@ Gosling团队率先创造了这个语言，并命名为“`Oak`"（起名的原�
 >
 > Android开发不等同于Java ME的开发
 
-## 7. Java开发环境搭建（掌握）
+## 7 Java开发环境搭建（掌握）
 
 ### 7.1 什么是JDK、JRE
 
@@ -836,7 +908,7 @@ Spring 官方说明：`https://spring.io/blog/2022/01/20/spring-boot-3-0-0-m1-is
 
 > 思考：如果你仍然希望在JDK8下开发Java程序？如何做呢？
 
-## 8. 开发体验：HelloWorld（掌握）
+## 8 开发体验：HelloWorld（掌握）
 
 JDK安装完毕，我们就可以开发第一个Java程序了，习惯性的称为：HelloWorld。
 
@@ -945,7 +1017,7 @@ java HelloChina
 
 
 
-## 9. Java开发工具
+## 9 Java开发工具
 
 ### 9.1 都有哪些开发Java的工具
 
@@ -969,7 +1041,7 @@ java HelloChina
 
 后期我们使用IDE，提供`更强大的功能支持`。
 
-## 10. HelloWorld案例常见错误
+## 10 HelloWorld案例常见错误
 
 ### 10.1 拼写问题
 
@@ -1056,7 +1128,7 @@ javac -encoding utf-8 Review01.java
 
   - 变量类型、变量、赋值符号、变量值之间填充相应空格，更美观。比如： int num = 10;
 
-## 11. HelloWorld小结
+## 11 HelloWorld小结
 
 ### 11.1 Java程序的结构与格式
 
@@ -1126,7 +1198,7 @@ public static void main(String[] args){
 但是一个源文件只能有一个public的类。
 ```
 
-## 12. 注释(comment)
+## 12 注释(comment)
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922000220324.png)
 
@@ -1243,7 +1315,7 @@ public class HelloWorld{
 }
 ```
 
-## 13. Java API文档
+## 13 Java API文档
 
 - API （Application Programming Interface，应用程序编程接口）是 Java 提供的基本编程接口。
 - Java语言提供了大量的基础类，因此 Oracle 也为这些基础类提供了相应的说明文档，用于告诉开发者如何使用这些类，以及这些类里包含的方法。大多数Java书籍中的类的介绍都要参照它来完成，它是编程者经常查阅的资料。
@@ -1257,7 +1329,7 @@ public class HelloWorld{
   - 在线看：https://docs.oracle.com/en/java/javase/17/docs/api/index.html
   - 离线下载：https://www.oracle.com/java/technologies/javase-jdk17-doc-downloads.html
 
-## 14. Java核心机制：JVM
+## 14 Java核心机制：JVM
 
 ### 14.1 Java语言的优缺点
 
@@ -1326,7 +1398,7 @@ Java确实是从C语言和C++语言继承了许多成份，甚至可以将Java�
 >
 > Java程序还会出现内存溢出和内存泄漏问题吗？  Yes!
 
-## 15. 章节案例
+## 15 章节案例
 
 **案例1：个人信息输出**
 

@@ -1,5 +1,16 @@
+## 目录
 
-## 一、 请求信息封装对象Request
+- [1 请求信息封装对象Request](#1%20%E8%AF%B7%E6%B1%82%E4%BF%A1%E6%81%AF%E5%B0%81%E8%A3%85%E5%AF%B9%E8%B1%A1Request)
+	- [1.1 获取请求消息数据处理](#1.1%20%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86)
+	- [1.2 获取请求头数据](#1.2%20%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E5%A4%B4%E6%95%B0%E6%8D%AE)
+	- [1.3 请求转发：](#1.3%20%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91%EF%BC%9A)
+- [2 响应信息封装对象Response](#2%20%E5%93%8D%E5%BA%94%E4%BF%A1%E6%81%AF%E5%B0%81%E8%A3%85%E5%AF%B9%E8%B1%A1Response)
+	- [2.1 设置响应行](#2.1%20%E8%AE%BE%E7%BD%AE%E5%93%8D%E5%BA%94%E8%A1%8C)
+	- [2.2 设置响应头：](#2.2%20%E8%AE%BE%E7%BD%AE%E5%93%8D%E5%BA%94%E5%A4%B4%EF%BC%9A)
+	- [2.3 设置响应体：](#2.3%20%E8%AE%BE%E7%BD%AE%E5%93%8D%E5%BA%94%E4%BD%93%EF%BC%9A)
+	- [2.4 重定向：](#2.4%20%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%9A)
+
+## 1 请求信息封装对象Request
 
 ### 1.1 获取请求消息数据处理
 
@@ -59,7 +70,7 @@ requestDispatcher.forward(ServletRequest request, ServletResponse response)
 
 2). 只能转发到当前服务器内部资源中。
 
-## 二、 响应信息封装对象Response
+## 2 响应信息封装对象Response
 
 由tomcat服务器创建，servlet中处理，最终返回给客户端（或浏览器），到达客户的形式就是响应报文。
 
@@ -87,7 +98,7 @@ response.setContentType("text/html;charset=utf-8");
 
 response.getWriter().write("你好" );
 
-### 2.4  重定向：
+### 2.4 重定向：
 
 response.sendRedirect("/day15/responseDemo2");
 

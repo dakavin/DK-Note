@@ -1,7 +1,23 @@
+## 目录
 
-# 一、Ajax
+- [1 Ajax](#1%20Ajax)
+	- [1.1 概念](#1.1%20%E6%A6%82%E5%BF%B5)
+	- [1.2 实现方式](#1.2%20%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F)
+		- [1.2.1 原生的JS实现方式（了解）](#1.2.1%20%E5%8E%9F%E7%94%9F%E7%9A%84JS%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89)
+		- [1.2.2 JQeury实现方式](#1.2.2%20JQeury%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F)
+		- [1.2.3 aixos原生方式](#1.2.3%20aixos%E5%8E%9F%E7%94%9F%E6%96%B9%E5%BC%8F)
+- [2 JSON](#2%20JSON)
+	- [2.1 概念](#2.1%20%E6%A6%82%E5%BF%B5)
+	- [2.2 语法](#2.2%20%E8%AF%AD%E6%B3%95)
+		- [2.2.1 基本规则](#2.2.1%20%E5%9F%BA%E6%9C%AC%E8%A7%84%E5%88%99)
+		- [2.2.2 获取数据](#2.2.2%20%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE)
+	- [2.3 JSON数据和Java对象的相互转换](#2.3%20JSON%E6%95%B0%E6%8D%AE%E5%92%8CJava%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%9B%B8%E4%BA%92%E8%BD%AC%E6%8D%A2)
+- [3 案例](#3%20%E6%A1%88%E4%BE%8B)
+	- [3.1 校验用户名是否存在](#3.1%20%E6%A0%A1%E9%AA%8C%E7%94%A8%E6%88%B7%E5%90%8D%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8)
 
-## 1、 概念
+## 1 Ajax
+
+### 1.1 概念
 
 - ASynchronous JavaScript And XML	异步的JavaScript 和 XML
 
@@ -17,15 +33,15 @@
 
 - `优点：提升用户的体验`
 
-## 2、 实现方式
+### 1.2 实现方式
 
-### 2.1 原生的JS实现方式（了解）
+#### 1.2.1 原生的JS实现方式（了解）
 
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075257367.png)
 
 
 
-### 2.2 JQeury实现方式
+#### 1.2.2 JQeury实现方式
 
 - $.ajax()
 * 语法：$.ajax({键值对});
@@ -61,7 +77,7 @@ $.ajax({
 	* callback：回调函数
 	* type：响应结果的类型
 
-### 2.3 aixos原生方式
+#### 1.2.3 aixos原生方式
 
 - 第一步：导入axios的js文件![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075321283.png)
 
@@ -74,9 +90,9 @@ $.ajax({
 	
 	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075326946.png)
 
-# 二、JSON
+## 2 JSON
 
-## 1、概念
+### 2.1 概念
 
 - JavaScript Object Notation		JavaScript对象表示法
 ```js
@@ -92,9 +108,9 @@ var p = {"name":"张三","age":23,"gender":"男"};
 * 进行数据的传输
 * JSON 比 XML 更小、更快，更易解析。
 
-## 2、 语法
+### 2.2 语法
 
-### 2.1 基本规则
+#### 2.2.1 基本规则
 
 * 数据在名称/值对中：`json数据是由键值对构成的`
 	* 键`用引号(单双都行)引起来，也可以不使用引号`
@@ -109,7 +125,7 @@ var p = {"name":"张三","age":23,"gender":"男"};
 * `花括号保存对象`：`使用{}定义json 格式`
 * `方括号保存数组`：[]
 
-### 2.2 获取数据
+#### 2.2.2 获取数据
 
 1. json对象.键名
 2. json对象["键名"]  `在遍历的时候使用这个方法`
@@ -141,7 +157,7 @@ for (var i = 0; i < ps.length; i++) {
 ```
 
 
-## 3、 JSON数据和Java对象的相互转换
+### 2.3 JSON数据和Java对象的相互转换
 
 * JSON解析器：
 	* 常见的解析器：Jsonlib，Gson，fastjson，jackson
@@ -181,9 +197,9 @@ for (var i = 0; i < ps.length; i++) {
 
 
 
-# 三、案例
+## 3 案例
 
-## 校验用户名是否存在
+### 3.1 校验用户名是否存在
 
 1. 服务器响应的数据，在客户端使用时，要想当做json数据格式使用。有两种解决方案：
 	- $.get(type):将最后一个参数type指定为"json"

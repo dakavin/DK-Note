@@ -1,4 +1,5 @@
-<h1>目录</h1>
+## 目录
+
 - [1 前言](#1%20%E5%89%8D%E8%A8%80)
 - [2 while循环](#2%20while%E5%BE%AA%E7%8E%AF)
 - [3 do while循环](#3%20do%20while%E5%BE%AA%E7%8E%AF)

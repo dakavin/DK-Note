@@ -1,5 +1,11 @@
+## 目录
 
-## 一、JDBC事务
+- [1 JDBC事务](#1%20JDBC%E4%BA%8B%E5%8A%A1)
+- [2 JDBC工具类](#2%20JDBC%E5%B7%A5%E5%85%B7%E7%B1%BB)
+- [3 JDBC连接池](#3%20JDBC%E8%BF%9E%E6%8E%A5%E6%B1%A0)
+	- [3.1 连接池概念：](#3.1%20%E8%BF%9E%E6%8E%A5%E6%B1%A0%E6%A6%82%E5%BF%B5%EF%BC%9A)
+
+## 1 JDBC事务
 
 - 案例：转账
 
@@ -49,7 +55,7 @@ connection. setAutoCommit(boolean autoCommit) ：调用该方法设置参数为f
 
 中途发生异常，在catch中回滚事务
 
-## 二、JDBC工具类
+## 2 JDBC工具类
 
 **1.**   工具类概念：
 
@@ -107,7 +113,7 @@ public class JDBCUtils {
 }
 ```
 
-## 三、JDBC连接池
+## 3 JDBC连接池
 
 ### 3.1 连接池概念：
 

@@ -1,10 +1,49 @@
-## 2. Java8新特性：Lambda表达式
 
-### 2.1 关于Java8新特性简介
+## 目录
+
+- [1 Java8新特性：Lambda表达式](#1%20Java8%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%9ALambda%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+	- [1.1 关于Java8新特性简介](#1.1%20%E5%85%B3%E4%BA%8EJava8%E6%96%B0%E7%89%B9%E6%80%A7%E7%AE%80%E4%BB%8B)
+	- [1.2 冗余的匿名内部类](#1.2%20%E5%86%97%E4%BD%99%E7%9A%84%E5%8C%BF%E5%90%8D%E5%86%85%E9%83%A8%E7%B1%BB)
+	- [1.3 好用的lambda表达式](#1.3%20%E5%A5%BD%E7%94%A8%E7%9A%84lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F)
+	- [1.4 Lambda 及其使用举例](#1.4%20Lambda%20%E5%8F%8A%E5%85%B6%E4%BD%BF%E7%94%A8%E4%B8%BE%E4%BE%8B)
+	- [1.5 语法](#1.5%20%E8%AF%AD%E6%B3%95)
+	- [1.6 关于类型推断](#1.6%20%E5%85%B3%E4%BA%8E%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD)
+- [2 Java8新特性：函数式(Functional)接口](#2%20Java8%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%9A%E5%87%BD%E6%95%B0%E5%BC%8F(Functional)%E6%8E%A5%E5%8F%A3)
+	- [2.1 什么是函数式接口](#2.1%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3)
+	- [2.2 如何理解函数式接口](#2.2%20%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3)
+	- [2.3 举例](#2.3%20%E4%B8%BE%E4%BE%8B)
+	- [2.4 Java 内置函数式接口](#2.4%20Java%20%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3)
+		- [2.4.1 之前的函数式接口](#2.4.1%20%E4%B9%8B%E5%89%8D%E7%9A%84%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3)
+		- [2.4.2 四大核心函数式接口](#2.4.2%20%E5%9B%9B%E5%A4%A7%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3)
+		- [2.4.3 其它接口](#2.4.3%20%E5%85%B6%E5%AE%83%E6%8E%A5%E5%8F%A3)
+		- [2.4.4 内置接口代码演示](#2.4.4%20%E5%86%85%E7%BD%AE%E6%8E%A5%E5%8F%A3%E4%BB%A3%E7%A0%81%E6%BC%94%E7%A4%BA)
+		- [2.4.5 练习](#2.4.5%20%E7%BB%83%E4%B9%A0)
+- [3 Java8新特性：方法引用与构造器引用](#3%20Java8%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%9A%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%E4%B8%8E%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8)
+	- [3.1 方法引用](#3.1%20%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8)
+		- [3.1.1 方法引用格式](#3.1.1%20%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%E6%A0%BC%E5%BC%8F)
+		- [3.1.2 方法引用使用前提](#3.1.2%20%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8%E4%BD%BF%E7%94%A8%E5%89%8D%E6%8F%90)
+		- [3.1.3 举例](#3.1.3%20%E4%B8%BE%E4%BE%8B)
+	- [3.2 构造器引用](#3.2%20%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8)
+	- [3.3 数组构造引用](#3.3%20%E6%95%B0%E7%BB%84%E6%9E%84%E9%80%A0%E5%BC%95%E7%94%A8)
+- [4 Java8新特性：强大的Stream API](#4%20Java8%E6%96%B0%E7%89%B9%E6%80%A7%EF%BC%9A%E5%BC%BA%E5%A4%A7%E7%9A%84Stream%20API)
+	- [4.1 说明](#4.1%20%E8%AF%B4%E6%98%8E)
+	- [4.2 为什么要使用Stream API](#4.2%20%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8Stream%20API)
+	- [4.3 什么是Stream](#4.3%20%E4%BB%80%E4%B9%88%E6%98%AFStream)
+	- [4.4 Stream的操作三个步骤](#4.4%20Stream%E7%9A%84%E6%93%8D%E4%BD%9C%E4%B8%89%E4%B8%AA%E6%AD%A5%E9%AA%A4)
+		- [4.4.1 创建Stream实例](#4.4.1%20%E5%88%9B%E5%BB%BAStream%E5%AE%9E%E4%BE%8B)
+		- [4.4.2 一系列中间操作](#4.4.2%20%E4%B8%80%E7%B3%BB%E5%88%97%E4%B8%AD%E9%97%B4%E6%93%8D%E4%BD%9C)
+		- [4.4.3 终止操作](#4.4.3%20%E7%BB%88%E6%AD%A2%E6%93%8D%E4%BD%9C)
+	- [4.5 Java9新增API](#4.5%20Java9%E6%96%B0%E5%A2%9EAPI)
+	- [4.6 练习](#4.6%20%E7%BB%83%E4%B9%A0)
+
+
+## 1 Java8新特性：Lambda表达式
+
+### 1.1 关于Java8新特性简介
 
 Java 8 (又称为 JDK 8或JDK1.8) 是 Java 语言开发的一个主要版本。 Java 8 是oracle公司于2014年3月发布，可以看成是自Java 5 以来最具革命性的版本。Java 8为Java语言、编译器、类库、开发工具与JVM带来了大量新特性。
 
-![](assets/image-20230922070017893.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070017893.png)
 
 
 - 速度更快
@@ -24,7 +63,7 @@ Java 8 (又称为 JDK 8或JDK1.8) 是 Java 语言开发的一个主要版本。 
   - javascript运行在jvm已经不是新鲜事了，Rhino早在jdk6的时候已经存在。现在替代Rhino，官方的解释是Rhino相比其他JavaScript引擎（比如google的V8）实在太慢了，改造Rhino还不如重写。所以Nashorn的性能也是其一个亮点。
   - Nashorn 项目在 JDK 9 中得到改进；在JDK11 中`Deprecated`，后续JDK15版本中`remove`。在JDK11中取以代之的是GraalVM。（GraalVM是一个运行时平台，它支持Java和其他基于Java字节码的语言，但也支持其他语言，如JavaScript，Ruby，Python或LLVM。性能是Nashorn的2倍以上。）
 
-### 2.2 冗余的匿名内部类
+### 1.2 冗余的匿名内部类
 
 当需要启动一个线程去完成任务时，通常会通过`java.lang.Runnable`接口来定义任务内容，并使用`java.lang.Thread`类来启动该线程。代码如下：
 
@@ -55,24 +94,24 @@ public class UseFunctionalProgramming {
 * 必须覆盖重写抽象`run`方法，所以方法名称、方法参数、方法返回值**不得不**再写一遍，且不能写错；
 * 而实际上，**似乎只有方法体才是关键所在**。
 
-### 2.3 好用的lambda表达式
+### 1.3 好用的lambda表达式
 
 
-### 2.4 Lambda 及其使用举例
+### 1.4 Lambda 及其使用举例
 
 Lambda 是一个**匿名函数**，我们可以把 Lambda 表达式理解为是**一段可以传递的代码**（将代码像数据一样进行传递）。使用它可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到了提升。
 
 - 从匿名类到 Lambda 的转换举例1
 
-![](assets/image-20230922070037279.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070037279.png)
 
 
 
 - 从匿名类到 Lambda 的转换举例2
 
-![](assets/image-20230922070050629.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070050629.png)
 
-### 2.5 语法
+### 1.5 语法
 
 Lambda 表达式：在Java 8 语言中引入的一种新的语法元素和操作符。这个操作符为 “`->`” ， 该操作符被称为 `Lambda 操作符`或`箭头操作符`。它将 Lambda 分为两个部分：
 
@@ -250,11 +289,11 @@ public void test7(){
 }
 ```
 
-### 2.6 关于类型推断
+### 1.6 关于类型推断
 
 在语法格式三 Lambda 表达式中的参数类型都是由编译器推断得出的。Lambda 表达式中无需指定类型，程序依然可以编译，这是因为 javac 根据程序的上下文，在后台推断出了参数的类型。Lambda 表达式的类型依赖于上下文环境，是由编译器推断出来的。这就是所谓的“`类型推断`”。
 
-![](assets/image-20230922070121664.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070121664.png)
 
 举例：
 
@@ -269,18 +308,18 @@ public void test() {
 }
 ```
 
-## 3. Java8新特性：函数式(Functional)接口
+## 2 Java8新特性：函数式(Functional)接口
 
-### 3.1 什么是函数式接口
+### 2.1 什么是函数式接口
 
 - 只包含`一个抽象方法`（Single Abstract Method，简称SAM）的接口，称为函数式接口。当然该接口可以包含其他非抽象方法。
 - 你可以通过 Lambda 表达式来创建该接口的对象。（若 Lambda 表达式抛出一个受检异常(即：非运行时异常)，那么该异常需要在目标接口的抽象方法上进行声明）。
 - 我们可以在一个接口上使用 `@FunctionalInterface` 注解，这样做可以检查它是否是一个函数式接口。同时 javadoc 也会包含一条声明，说明这个接口是一个函数式接口。
 - 在`java.util.function`包下定义了Java 8 的丰富的函数式接口
 
-### 3.2 如何理解函数式接口
+### 2.2 如何理解函数式接口
 
-![](assets/image-20230922070129905.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070129905.png)
 
 - Java从诞生日起就是一直倡导“一切皆对象”，在Java里面面向对象(OOP)编程是一切。但是随着python、scala等语言的兴起和新技术的挑战，Java不得不做出调整以便支持更加广泛的技术要求，即Java不但可以支持OOP还可以支持OOF（面向函数编程）
   - Java8引入了Lambda表达式之后，Java也开始支持函数式编程。
@@ -292,26 +331,26 @@ public void test() {
 - 在函数式编程语言当中，函数被当做一等公民对待。在将函数作为一等公民的编程语言中，Lambda表达式的类型是函数。但是在Java8中，有所不同。在Java8中，Lambda表达式是对象，而不是函数，它们必须依附于一类特别的对象类型——函数式接口。
 - 简单的说，在Java8中，Lambda表达式就是一个函数式接口的实例。这就是Lambda表达式和函数式接口的关系。也就是说，只要一个对象是函数式接口的实例，那么该对象就可以用Lambda表达式来表示。
 
-### 3.3 举例
+### 2.3 举例
 
 举例1：
 
-![](assets/image-20230922070137125.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070137125.png)
 
 举例2：
 
-![](assets/image-20230922070142448.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070142448.png)
 
 作为参数传递 Lambda 表达式：
 
-![](assets/image-20230922070158143.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070158143.png)
 
 
 > 作为参数传递 Lambda 表达式：为了将 Lambda 表达式作为参数传递，接收Lambda 表达式的参数类型必须是与该 Lambda 表达式兼容的函数式接口的类型。
 
-### 3.4 Java 内置函数式接口
+### 2.4 Java 内置函数式接口
 
-#### 3.4.1 之前的函数式接口
+#### 2.4.1 之前的函数式接口
 
 之前学过的接口，有些就是函数式接口，比如：
 
@@ -324,7 +363,7 @@ public void test() {
 - `java.util.Comparator<T>`
 	- public int compare(T t1, T t2)
 
-#### 3.4.2 四大核心函数式接口
+#### 2.4.2 四大核心函数式接口
 
 | 函数式接口              | 称谓    | 参数类型 | 用途                                                        |
 | ------------------ | ----- | ---- | --------------------------------------------------------- |
@@ -332,7 +371,7 @@ public void test() {
 | `Supplier<T>  `    | 供给型接口 | 无    | 返回类型为T的对象，包含方法：`T get()  `                                |
 | `Function<T, R>  ` | 函数型接口 | T    | 对类型为T的对象应用操作，并返回结果。结果是R类型的对象。包含方法：`R apply(T t)  `        |
 | `Predicate<T>  `   | 判断型接口 | T    | 确定类型为T的对象是否满足某约束，并返回 boolean 值。包含方法：`boolean test(T t)  ` |
-#### 3.4.3 其它接口
+#### 2.4.3 其它接口
 
 **类型1：消费型接口**
 
@@ -401,7 +440,7 @@ public void test() {
 | IntPredicate     | boolean test(int value)    | 接收一个int值    |
 | LongPredicate    | boolean test(long value)   | 接收一个long值   |
 
-#### 3.4.4 内置接口代码演示
+#### 2.4.4 内置接口代码演示
 
 举例1：
 
@@ -481,7 +520,7 @@ public class TestFunction {
 
 ```
 
-#### 3.4.5 练习
+#### 2.4.5 练习
 
 **练习1：无参无返回值形式**
 
@@ -831,11 +870,11 @@ public class TestLambda {
 }
 ```
 
-## 4. Java8新特性：方法引用与构造器引用
+## 3 Java8新特性：方法引用与构造器引用
 
 Lambda表达式是可以简化函数式接口的变量或形参赋值的语法。而方法引用和构造器引用是为了简化Lambda表达式的。
 
-### 4.1 方法引用
+### 3.1 方法引用
 
 当要传递给Lambda体的操作，已经有实现的方法了，可以使用方法引用！
 
@@ -843,7 +882,7 @@ Lambda表达式是可以简化函数式接口的变量或形参赋值的语法�
 
 > 语法糖（Syntactic sugar），也译为糖衣语法，是由英国计算机科学家彼得·约翰·兰达（Peter J. Landin）发明的一个术语，指计算机语言中添加的某种语法，这种语法`对语言的功能并没有影响，但是更方便程序员使用`。通常来说使用语法糖能够增加程序的可读性，从而减少程序代码出错的机会。
 
-#### 4.1.1 方法引用格式
+#### 3.1.1 方法引用格式
 
 - 格式：使用方法引用操作符 “`::`” 将类(或对象) 与 方法名分隔开来。
   - 两个:中间不能有空格，而且必须英文状态下半角输入
@@ -853,7 +892,7 @@ Lambda表达式是可以简化函数式接口的变量或形参赋值的语法�
   - 情况2：`类 :: 静态方法名`
   - 情况3：`类 :: 实例方法名`
 
-#### 4.1.2 方法引用使用前提
+#### 3.1.2 方法引用使用前提
 
 **要求1：** Lambda体只有一句语句，并且是通过调用一个对象的/类现有的方法来完成的
 
@@ -874,7 +913,7 @@ Lambda表达式是可以简化函数式接口的变量或形参赋值的语法�
 
 ​        () -> Math.random() 都是无参
 
-#### 4.1.3 举例
+#### 3.1.3 举例
 
 ```java
 public class MethodRefTest {
@@ -989,7 +1028,7 @@ public class MethodRefTest {
 }
 ```
 
-### 4.2 构造器引用
+### 3.2 构造器引用
 
 当Lambda表达式是创建一个对象，并且满足Lambda表达式形参，正好是给创建这个对象的构造器的实参列表，就可以使用构造器引用。
 
@@ -1129,7 +1168,7 @@ public class Employee {
 
 ```
 
-### 4.3 数组构造引用
+### 3.3 数组构造引用
 
 当Lambda表达式是创建一个数组对象，并且满足Lambda表达式形参，正好是给创建这个数组对象的长度，就可以数组构造引用。
 
@@ -1155,19 +1194,19 @@ public void test4(){
 }
 ```
 
-## 5. Java8新特性：强大的Stream API
+## 4 Java8新特性：强大的Stream API
 
-### 5.1 说明
+### 4.1 说明
 
 - Java8中有两大最为重要的改变。第一个是 Lambda 表达式；另外一个则是 Stream API。
 - Stream API ( java.util.stream) 把真正的函数式编程风格引入到Java中。这是目前为止对Java类库`最好的补充`，因为Stream API可以极大提供Java程序员的生产力，让程序员写出高效率、干净、简洁的代码。
 - Stream 是 Java8 中处理集合的关键抽象概念，它可以指定你希望对集合进行的操作，可以执行非常复杂的查找、过滤和映射数据等操作。 **使用Stream API 对集合数据进行操作，就类似于使用 SQL 执行的数据库查询。** 也可以使用 Stream API 来并行执行操作。简言之，Stream API 提供了一种高效且易于使用的处理数据的方式。
 
-### 5.2 为什么要使用Stream API
+### 4.2 为什么要使用Stream API
 
 实际开发中，项目中多数数据源都来自于MySQL、Oracle等。但现在数据源可以更多了，有MongDB，Radis等，而这些NoSQL的数据就需要Java层面去处理。
 
-### 5.3 什么是Stream
+### 4.3 什么是Stream
 
 Stream 是数据渠道，用于操作数据源（集合、数组等）所生成的元素序列。
 
@@ -1183,7 +1222,7 @@ Stream 和 Collection 集合的区别：**Collection 是一种静态的内存数
 
 ④ Stream一旦执行了终止操作，就不能再调用其它中间操作或终止操作了。
 
-### 5.4 Stream的操作三个步骤
+### 4.4 Stream的操作三个步骤
 
 **1- 创建 Stream**
 一个数据源（如：集合、数组），获取一个流
@@ -1194,9 +1233,9 @@ Stream 和 Collection 集合的区别：**Collection 是一种静态的内存数
 **3- 终止操作(终端操作)**
 终止操作的方法返回值类型就不再是Stream了，因此一旦执行终止操作，就结束整个Stream操作了。一旦执行终止操作，就执行中间操作链，最终产生结果并结束Stream。
 
-![](assets/image-20230922070540162.png)
+![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070540162.png)
 
-#### 5.4.1 创建Stream实例
+#### 4.4.1 创建Stream实例
 
 **方式一：通过集合**
 
@@ -1287,7 +1326,7 @@ public void test05() {
 
 ```
 
-#### 5.4.2 一系列中间操作
+#### 4.4.2 一系列中间操作
 
 多个中间操作可以连接起来形成一个流水线，除非流水线上触发终止操作，否则中间操作不会执行任何的处理！而在终止操作时一次性全部处理，称为“惰性求值”。
 
@@ -1427,7 +1466,7 @@ public class StreamMiddleOperate {
 
 ```
 
-#### 5.4.3 终止操作
+#### 4.4.3 终止操作
 
 - 终端操作会从流的流水线生成结果。其结果可以是任何不是流的值，例如：List、Integer，甚至是 void 。
 
@@ -1663,7 +1702,7 @@ public class StreamEndding {
 }
 ```
 
-### 5.5 Java9新增API
+### 4.5 Java9新增API
 
 **新增1：Stream实例化方法**
 
@@ -1705,7 +1744,7 @@ Stream.iterate(1,i -> i < 100,i -> i + 1).forEach(System.out::println);
 
 ```
 
-### 5.6 练习
+### 4.6 练习
 
 现在有两个 ArrayList 集合存储队伍当中的多个成员姓名，要求使用传统的for循环（或增强for循环）依次进行以
 下若干操作步骤：

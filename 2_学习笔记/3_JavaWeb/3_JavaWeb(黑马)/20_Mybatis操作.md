@@ -1,10 +1,50 @@
-# 重点内容导引
+## 目录
 
-- 
-# 1. Mybatis基础操作
+- [1 Mybatis基础操作](#1%20Mybatis%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C)
+	- [1.1 需求](#1.1%20%E9%9C%80%E6%B1%82)
+	- [1.2 准备](#1.2%20%E5%87%86%E5%A4%87)
+	- [1.3 删除](#1.3%20%E5%88%A0%E9%99%A4)
+		- [1.3.1 功能实现](#1.3.1%20%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0)
+		- [1.3.2 日志输入！](#1.3.2%20%E6%97%A5%E5%BF%97%E8%BE%93%E5%85%A5%EF%BC%81)
+		- [1.3.3 预编译SQL](#1.3.3%20%E9%A2%84%E7%BC%96%E8%AF%91SQL)
+			- [1.3.3.1 介绍](#1.3.3.1%20%E4%BB%8B%E7%BB%8D)
+			- [1.3.3.2 SQL注入](#1.3.3.2%20SQL%E6%B3%A8%E5%85%A5)
+			- [1.3.3.3 参数占位符](#1.3.3.3%20%E5%8F%82%E6%95%B0%E5%8D%A0%E4%BD%8D%E7%AC%A6)
+	- [1.4 新增](#1.4%20%E6%96%B0%E5%A2%9E)
+		- [1.4.1 基本新增](#1.4.1%20%E5%9F%BA%E6%9C%AC%E6%96%B0%E5%A2%9E)
+		- [1.4.2 主键返回！](#1.4.2%20%E4%B8%BB%E9%94%AE%E8%BF%94%E5%9B%9E%EF%BC%81)
+	- [1.5 更新](#1.5%20%E6%9B%B4%E6%96%B0)
+	- [1.6 查询](#1.6%20%E6%9F%A5%E8%AF%A2)
+		- [1.6.1 根据ID查询](#1.6.1%20%E6%A0%B9%E6%8D%AEID%E6%9F%A5%E8%AF%A2)
+		- [1.6.2 数据封装！](#1.6.2%20%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85%EF%BC%81)
+		- [1.6.3 条件查询！](#1.6.3%20%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%EF%BC%81)
+		- [1.6.4 参数名说明](#1.6.4%20%E5%8F%82%E6%95%B0%E5%90%8D%E8%AF%B4%E6%98%8E)
+- [2 Mybatis的XML配置文件](#2%20Mybatis%E7%9A%84XML%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
+	- [2.1 XML配置文件规范](#2.1%20XML%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%A7%84%E8%8C%83)
+	- [2.2 XML配置文件实现](#2.2%20XML%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%AE%9E%E7%8E%B0)
+	- [2.3 MybatisX的使用！](#2.3%20MybatisX%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%81)
+- [3 Mybatis动态SQL！](#3%20Mybatis%E5%8A%A8%E6%80%81SQL%EF%BC%81)
+	- [3.1 什么是动态SQL](#3.1%20%E4%BB%80%E4%B9%88%E6%98%AF%E5%8A%A8%E6%80%81SQL)
+	- [3.2 动态SQL-if](#3.2%20%E5%8A%A8%E6%80%81SQL-if)
+		- [3.2.1 条件查询](#3.2.1%20%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2)
+		- [3.2.2 更新员工](#3.2.2%20%E6%9B%B4%E6%96%B0%E5%91%98%E5%B7%A5)
+	- [3.3 动态SQL-foreach](#3.3%20%E5%8A%A8%E6%80%81SQL-foreach)
+	- [3.4 动态SQL-sql&include](#3.4%20%E5%8A%A8%E6%80%81SQL-sql&include)
+- [4 MyBatis高级扩展](#4%20MyBatis%E9%AB%98%E7%BA%A7%E6%89%A9%E5%B1%95)
+	- [4.1 Mapper批量映射优化](#4.1%20Mapper%E6%89%B9%E9%87%8F%E6%98%A0%E5%B0%84%E4%BC%98%E5%8C%96)
+	- [4.2 插件和分页插件PageHelper](#4.2%20%E6%8F%92%E4%BB%B6%E5%92%8C%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6PageHelper)
+		- [4.2.1 插件机制和PageHelper插件介绍](#4.2.1%20%E6%8F%92%E4%BB%B6%E6%9C%BA%E5%88%B6%E5%92%8CPageHelper%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D)
+		- [4.2.2 PageHelper插件使用](#4.2.2%20PageHelper%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8)
+	- [4.3 逆向工程和MybatisX插件](#4.3%20%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E5%92%8CMybatisX%E6%8F%92%E4%BB%B6)
+		- [4.3.1 ORM思维介绍](#4.3.1%20ORM%E6%80%9D%E7%BB%B4%E4%BB%8B%E7%BB%8D)
+		- [4.3.2 逆向工程](#4.3.2%20%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B)
+		- [4.3.3 逆向工程插件MyBatisX使用](#4.3.3%20%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B%E6%8F%92%E4%BB%B6MyBatisX%E4%BD%BF%E7%94%A8)
+- [5 MyBatis总结](#5%20MyBatis%E6%80%BB%E7%BB%93)
+
+## 1 Mybatis基础操作
 
 学习完mybatis入门后，我们继续学习mybatis基础操作。
-## 1.1 需求
+### 1.1 需求
 
 需求说明：
 
@@ -28,7 +68,7 @@
    - 根据主键ID删除
    - 根据主键ID批量删除
 
-## 1.2 准备
+### 1.2 准备
 
 实施前的准备工作：
 
@@ -159,9 +199,9 @@ public interface EmpMapper {
 
 ![image-20221210182500817](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210182500817.png)
 
-## 1.3 删除
+### 1.3 删除
 
-### 1.3.1 功能实现
+#### 1.3.1 功能实现
 
 页面原型：
 
@@ -224,7 +264,7 @@ class SpringbootMybatisCrudApplicationTests {
 }
 ~~~
 
-### 1.3.2 日志输入！
+#### 1.3.2 日志输入！
 
 在Mybatis当中我们可以借助日志，查看到sql语句的执行、执行传递的参数以及执行结果。具体操作如下：
 
@@ -243,9 +283,9 @@ mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 
 > 但是我们发现输出的SQL语句：delete from emp where id = ?，`我们输入的参数16并没有在后面拼接，id的值是使用?进行占位。那这种SQL语句我们称为预编译SQL`。
 
-### 1.3.3 预编译SQL
+#### 1.3.3 预编译SQL
 
-#### 1.3.3.1 介绍
+##### 1.3.3.1 介绍
 
 预编译SQL有两个优势：
 
@@ -259,7 +299,7 @@ mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 > 更安全(防止SQL注入)：将敏感字进行转义，保障SQL的安全性。
 
 
-#### 1.3.3.2 SQL注入
+##### 1.3.3.2 SQL注入
 
 SQL注入：是通过操作输入的数据来修改事先定义好的SQL语句，以达到执行代码对服务器进行攻击的方法。
 
@@ -333,7 +373,7 @@ java -jar sql_prepared_demo-0.0.1-SNAPSHOT.jar
 
 
 
-#### 1.3.3.3 参数占位符
+##### 1.3.3.3 参数占位符
 
 在Mybatis中提供的参数占位符有两种：${...} 、#{...}
 
@@ -347,13 +387,13 @@ java -jar sql_prepared_demo-0.0.1-SNAPSHOT.jar
 
 > 注意事项：在项目开发中，建议使用#{...}，生成预编译SQL，防止SQL注入安全。
 
-## 1.4 新增
+### 1.4 新增
 
 功能：新增员工信息
 
 ![image-20221211134239610](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211134239610.png)
 
-### 1.4.1 基本新增
+#### 1.4.1 基本新增
 
 员工表结构：
 
@@ -419,7 +459,7 @@ class SpringbootMybatisCrudApplicationTests {
 >
 > ![image-20221211140222240](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211140222240.png)
 
-### 1.4.2 主键返回！
+#### 1.4.2 主键返回！
 
 概念：在数据添加成功后，需要获取插入数据库数据的主键。
 
@@ -482,7 +522,7 @@ class SpringbootMybatisCrudApplicationTests {
 ~~~
 
 
-## 1.5 更新
+### 1.5 更新
 
 功能：修改员工信息
 
@@ -547,9 +587,9 @@ class SpringbootMybatisCrudApplicationTests {
 ```
 
 
-## 1.6 查询
+### 1.6 查询
 
-### 1.6.1 根据ID查询
+#### 1.6.1 根据ID查询
 
 在员工管理的页面中，当我们进行更新数据时，会点击 “编辑” 按钮，然后此时会发送一个请求到服务端，会根据Id查询该员工信息，并将员工数据回显在页面上。
 
@@ -594,7 +634,7 @@ class SpringbootMybatisCrudApplicationTests {
 > 而在测试的过程中，我们会发现有几个字段(deptId、createTime、updateTime)是没有数据值的
 
 
-### 1.6.2 数据封装！
+#### 1.6.2 数据封装！
 
 我们看到查询返回的结果中大部分字段是有值的，但是deptId，createTime，updateTime这几个字段是没有值的，而数据库中是有对应的字段值的，这是为什么呢？
 
@@ -692,7 +732,7 @@ mybatis.configuration.map-underscore-to-camel-case=true
 
 > 要使用驼峰命名前提是 实体类的属性 与 数据库表中的字段名严格遵守驼峰命名。
 
-### 1.6.3 条件查询！
+#### 1.6.3 条件查询！
 
 在员工管理的列表页面中，我们需要根据条件查询员工信息，查询条件包括：姓名、性别、入职时间。 
 
@@ -765,7 +805,7 @@ public interface EmpMapper {
 > ![image-20221212120006242](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212120006242.png)
 
 
-### 1.6.4 参数名说明
+#### 1.6.4 参数名说明
 
 在上面我们所编写的条件查询功能中，我们需要保证接口中方法的形参名和SQL语句中的参数占位符名相同。
 
@@ -795,14 +835,14 @@ public interface EmpMapper {
 >
 > ![image-20221212151736274](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212151736274.png)
 
-# 2. Mybatis的XML配置文件!
+## 2 Mybatis的XML配置文件
 
 Mybatis的开发有两种方式：
 
 1. 注解
 2. XML
 
-## 2.1 XML配置文件规范
+### 2.1 XML配置文件规范
 
 使用Mybatis的注解方式，主要是来完成一些简单的增删改查功能。
 
@@ -823,7 +863,7 @@ Mybatis的开发有两种方式：
 > - resultType属性，指的是查询返回的单条记录所封装的类型。
 
 
-## 2.2 XML配置文件实现
+### 2.2 XML配置文件实现
 
 第1步：创建XML映射文件
 - `切记包名要用 / 分隔`
@@ -900,7 +940,7 @@ public List<Emp> list(@Param("name") String name, @Param("gender")Short gender,
 >
 > ![image-20221212163719534](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212163719534.png)
 
-## 2.3 MybatisX的使用！
+### 2.3 MybatisX的使用！
 
 MybatisX是一款基于IDEA的快速开发Mybatis的插件，为效率而生。
 
@@ -924,9 +964,9 @@ MybatisX的安装：
 
 **结论：** 使用Mybatis的注解，主要是来完成一些简单的增删改查功能。如果需要实现复杂的SQL功能，建议使用XML来配置映射语句。
 
-# 3. Mybatis动态SQL！
+## 3 Mybatis动态SQL！
 
-## 3.1 什么是动态SQL
+### 3.1 什么是动态SQL
 
 在页面原型中，列表上方的条件是动态的，是可以不传递的，也可以只传递其中的1个或者2个或者全部。
 
@@ -961,7 +1001,7 @@ SQL语句会随着用户的输入或外部条件的变化而变化，我们称�
 
 在Mybatis中提供了很多实现动态SQL的标签，我们学习Mybatis中的动态SQL就是掌握这些动态SQL标签。
 
-## 3.2 动态SQL-if
+### 3.2 动态SQL-if
 
 `<if>`：用于判断条件是否成立。使用test属性进行条件判断，如果条件为true，则拼接SQL。
 
@@ -973,7 +1013,7 @@ SQL语句会随着用户的输入或外部条件的变化而变化，我们称�
 
 接下来，我们就通过`<if>`标签来改造之前条件查询的案例。
 
-### 3.2.1 条件查询
+#### 3.2.1 条件查询
 
 示例：把SQL语句改造为动态SQL方式
 
@@ -1105,7 +1145,7 @@ public void testList(){
 >
 > ![image-20221213141909455](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213141909455.png)
 
-### 3.2.2 更新员工
+#### 3.2.2 更新员工
 
 案例：完善更新员工功能，修改为动态更新员工数据信息
 
@@ -1280,7 +1320,7 @@ public void testUpdate2(){
 
   - 动态地在行首插入 SET 关键字，并会删掉额外的逗号。（用在update语句中）
 
-## 3.3 动态SQL-foreach
+### 3.3 动态SQL-foreach
 
 案例：员工删除功能（既支持删除单条记录，又支持批量删除）
 
@@ -1334,7 +1374,7 @@ XML映射文件：
 >
 > ![image-20221213164957636](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213164957636.png)
 
-## 3.4 动态SQL-sql&include
+### 3.4 动态SQL-sql&include
 
 问题分析：
 
@@ -1382,9 +1422,9 @@ SQL片段： 抽取重复的代码
 
 
 
-# 4. MyBatis高级扩展
+## 4 MyBatis高级扩展
 
-## 4.1 Mapper批量映射优化
+### 4.1 Mapper批量映射优化
 
 1.  需求
 
@@ -1412,9 +1452,9 @@ SQL片段： 抽取重复的代码
         ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214839215.png)
 
 
-## 4.2 插件和分页插件PageHelper
+### 4.2 插件和分页插件PageHelper
 
-### 1. 插件机制和PageHelper插件介绍
+#### 4.2.1 插件机制和PageHelper插件介绍
 
 MyBatis 对插件进行了标准化的设计，并提供了一套可扩展的插件机制。插件可以在用于语句执行过程中进行拦截，并允许通过自定义处理程序来拦截和修改 SQL 语句、映射语句的结果等。
 
@@ -1430,7 +1470,7 @@ MyBatis 对插件进行了标准化的设计，并提供了一套可扩展的插
 
 <https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md#如何配置数据库方言>
 
-### 2. PageHelper插件使用
+#### 4.2.2 PageHelper插件使用
 
 1.  pom.xml引入依赖
     ```xml
@@ -1483,9 +1523,9 @@ MyBatis 对插件进行了标准化的设计，并提供了一套可扩展的插
 
 - `注意：不能将2条查询语句得到的结果放在一个分页区`
 
-## 4.3 逆向工程和MybatisX插件
+### 4.3 逆向工程和MybatisX插件
 
-### 1. ORM思维介绍
+#### 4.3.1 ORM思维介绍
 
 `ORM（Object-Relational Mapping，对象-关系映射）`是一种将数据库和面向对象编程语言中的对象之间进行转换的技术。它将对象和关系数据库的概念进行映射，最后我们就可以通过方法调用进行数据库操作!!
 
@@ -1508,7 +1548,7 @@ MyBatis 对插件进行了标准化的设计，并提供了一套可扩展的插
 
 常见的半自动 ORM 框架包括 MyBatis 等；常见的全自动 ORM 框架包括 Hibernate、Spring Data JPA、MyBatis-Plus 等。
 
-### 2. 逆向工程
+#### 4.3.2 逆向工程
 
 `MyBatis 的逆向工程是一种自动化生成持久层代码和映射文件的工具`，它可以根据数据库表结构和设置的参数生成对应的实体类、Mapper.xml 文件、Mapper 接口等代码文件，简化了开发者手动生成的过程。`逆向工程使开发者可以快速地构建起 DAO 层`，并快速上手进行业务开发。
 
@@ -1518,7 +1558,7 @@ MyBatis 的逆向工程有两种方式：通过 `MyBatis Generator 插件`实现
 
 **注意：逆向工程只能生成单表crud的操作，多表查询依然需要我们自己编写！**
 
-### 3. 逆向工程插件MyBatisX使用
+#### 4.3.3 逆向工程插件MyBatisX使用
 
 MyBatisX 是一个 MyBatis 的代码生成插件，可以通过简单的配置和操作快速生成 MyBatis Mapper、pojo 类和 Mapper.xml 文件。下面是使用 MyBatisX 插件实现逆向工程的步骤：
 
@@ -1572,7 +1612,7 @@ MyBatisX 是一个 MyBatis 的代码生成插件，可以通过简单的配置�
 
     ```
 
-# 5. MyBatis总结
+## 5 MyBatis总结
 
 | 核心点           | 掌握目标                                    |
 | ------------- | --------------------------------------- |

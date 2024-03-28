@@ -1,5 +1,27 @@
+## 目录
 
-## 1、Servlet
+- [1 Servlet](#1%20Servlet)
+	- [1.1 概念](#1.1%20%E6%A6%82%E5%BF%B5)
+	- [1.2 快速入门](#1.2%20%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
+	- [1.3 执行原理](#1.3%20%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86)
+	- [1.4 Servlet中的生命周期方法](#1.4%20Servlet%E4%B8%AD%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95)
+	- [1.5 Servlet3.0](#1.5%20Servlet3.0)
+	- [1.6 Servlet的体系结构](#1.6%20Servlet%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84)
+	- [1.7 Servlet访问路径](#1.7%20Servlet%E8%AE%BF%E9%97%AE%E8%B7%AF%E5%BE%84)
+- [2 HTTP](#2%20HTTP)
+	- [2.1 概念](#2.1%20%E6%A6%82%E5%BF%B5)
+	- [2.2 请求消息数据格式](#2.2%20%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F)
+	- [2.3 响应消息数据格式](#2.3%20%E5%93%8D%E5%BA%94%E6%B6%88%E6%81%AF%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F)
+- [3 Request](#3%20Request)
+	- [3.1 request对象和response对象的原理](#3.1%20request%E5%AF%B9%E8%B1%A1%E5%92%8Cresponse%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8E%9F%E7%90%86)
+	- [3.2 request对象继承体系结构](#3.2%20request%E5%AF%B9%E8%B1%A1%E7%BB%A7%E6%89%BF%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84)
+	- [3.3 request功能](#3.3%20request%E5%8A%9F%E8%83%BD)
+		- [3.3.1 获取请求消息数据](#3.3.1%20%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82%E6%B6%88%E6%81%AF%E6%95%B0%E6%8D%AE)
+		- [3.3.2 其他功能(重要！！！)](#3.3.2%20%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD(%E9%87%8D%E8%A6%81%EF%BC%81%EF%BC%81%EF%BC%81))
+- [4 案例：用户登录](#4%20%E6%A1%88%E4%BE%8B%EF%BC%9A%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95)
+- [5 BeanUtils工具类](#5%20BeanUtils%E5%B7%A5%E5%85%B7%E7%B1%BB)
+
+## 1 Servlet
 
 ### 1.1 概念
 
@@ -141,7 +163,7 @@ HttpServlet  -- 抽象类，继承GenericServlet
 	2. /xxx/xxx:多层路径，目录结构
 	3. `*.do：扩展名匹配`
 
-## 2、HTTP
+## 2 HTTP
 
 ### 2.1 概念
 
@@ -213,7 +235,7 @@ username=zhangsan
 
 - `在下一节课中有介绍！`
 
-## 3、Request
+## 3 Request
 
 ### 3.1 request对象和response对象的原理
 
@@ -307,7 +329,7 @@ org.apache.catalina.connector.RequestFacade 类(tomcat)
 4. `获取ServletContext`：
 	* ServletContext getServletContext()
 
-## 4、案例：用户登录
+## 4 案例：用户登录
 
 * 用户登录案例需求：
 	1. 编写login.html登录页面
@@ -457,7 +479,7 @@ public class FailServlet extends HttpServlet {
 
 
 
-## 5、BeanUtils工具类
+## 5 BeanUtils工具类
 
 - 简化数据封装，主要用于封装JavaBean的
 
