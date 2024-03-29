@@ -14,8 +14,6 @@ REST是一种软件架构风格，可以降低开发的复杂性，提高系统�
 # 一、SpringMVC概述
 
 学习SpringMVC我们先来回顾下现在Web程序是如何做的，我们现在的Web程序大都基于MVC三层架构来实现的。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212106277.png)
-
-
 - 如果所有的处理都交给`Servlet`来处理的话，所有的东西都耦合在一起，对后期的维护和扩展极其不利
     - 所以将后端服务器`Servlet`拆分成三层，分别是`web`、`service`和`dao`
         - `web`层主要由`servlet`来处理，负责页面请求和数据的收集以及响应结果给前端
