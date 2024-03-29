@@ -132,6 +132,6 @@
 	5. `内存占用`：ArrayList底层数组预留了一定容量空间，而LinkedList每个元素都消耗比ArrayList更多的空间
 ## 9、说一说ArrayList的扩容机制吧
 
-详细见文件[1_ArrayList源码分析](※集合源码分析※/1_ArrayList源码分析.md)
+详细见文件[1_ArrayList源码分析](../2_集合源码分析‼️‼️/1_ArrayList源码分析.md)
 
 和文件中的[7.2.2 ArrayList部分源码分析](../../../../2_笔记/1_Java基础/14_数据结构与集合源码/14_数据结构与集合源码.md#7.2.2%20ArrayList部分源码分析)

@@ -2,7 +2,7 @@
 前置文章：[7.3.2 LinkedList源码分析](../../../../../2_笔记/1_Java基础/14_数据结构与集合源码/14_数据结构与集合源码.md#7.3.2%20LinkedList源码分析)
 # 1、LinkedList简介
 
-`LinkedList` 是一个基于双向链表实现的集合类，经常被拿来和 `ArrayList` 做比较。关于 `LinkedList` 和`ArrayList`的详细对比，[8、ArrayList 和 LinkedList 的区别？](../2_List.md#8、ArrayList%20和%20LinkedList%20的区别？)有详细介绍到。
+`LinkedList` 是一个基于双向链表实现的集合类，经常被拿来和 `ArrayList` 做比较。关于 `LinkedList` 和`ArrayList`的详细对比，[8、ArrayList 和 LinkedList 的区别？](../2_集合/2_List.md#8、ArrayList%20和%20LinkedList%20的区别？)有详细介绍到。
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318134424.png)
 
 不过，我们在项目中一般是不会使用到 `LinkedList` 的，需要用到 `LinkedList` 的场景几乎都可以使用 `ArrayList` 来代替，并且，性能通常会更好！
