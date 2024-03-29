@@ -1,12 +1,80 @@
 
-# 目录：
+## 目录
 
+- [1 课程介绍](#1%20%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D)
+	- [1.1 为什么要学?](#1.1%20%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6?)
+	- [1.2 学什么?](#1.2%20%E5%AD%A6%E4%BB%80%E4%B9%88?)
+	- [1.3 怎么学?](#1.3%20%E6%80%8E%E4%B9%88%E5%AD%A6?)
+- [2 Spring相关概念](#2%20Spring%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5)
+	- [2.1 初识Spring](#2.1%20%E5%88%9D%E8%AF%86Spring)
+		- [2.1.1 Spring家族](#2.1.1%20Spring%E5%AE%B6%E6%97%8F)
+		- [2.1.2 Spring发展史](#2.1.2%20Spring%E5%8F%91%E5%B1%95%E5%8F%B2)
+	- [2.2 Spring系统架构](#2.2%20Spring%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84)
+		- [2.2.1 系统架构图](#2.2.1%20%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%9B%BE)
+		- [2.2.2 课程学习路线](#2.2.2%20%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF)
+	- [2.3 Spring核心概念](#2.3%20Spring%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5)
+		- [2.3.1 目前项目中的问题](#2.3.1%20%E7%9B%AE%E5%89%8D%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98)
+		- [2.3.2 IOC、IOC容器、Bean、DI](#2.3.2%20IOC%E3%80%81IOC%E5%AE%B9%E5%99%A8%E3%80%81Bean%E3%80%81DI)
+		- [2.3.3 形象理解](#2.3.3%20%E5%BD%A2%E8%B1%A1%E7%90%86%E8%A7%A3)
+		- [2.3.4 核心概念小结](#2.3.4%20%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E5%B0%8F%E7%BB%93)
+- [3 三、入门案例](#3%20%E4%B8%89%E3%80%81%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B)
+	- [3.1 IOC入门案例](#3.1%20IOC%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B)
+		- [3.1.1 思路分析](#3.1.1%20%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90)
+		- [3.1.2 代码实现](#3.1.2%20%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0)
+	- [3.2 DI入门案例](#3.2%20DI%E5%85%A5%E9%97%A8%E6%A1%88%E4%BE%8B)
+		- [3.2.1 思路分析](#3.2.1%20%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90)
+		- [3.2.2 代码实现](#3.2.2%20%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0)
+- [4 IOC相关内容](#4%20IOC%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9)
+	- [4.1 bean基础配置](#4.1%20bean%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE)
+		- [4.1.1 bean的基础配置---id和class](#4.1.1%20bean%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE---id%E5%92%8Cclass)
+		- [4.1.2 bean的name属性](#4.1.2%20bean%E7%9A%84name%E5%B1%9E%E6%80%A7)
+		- [4.1.3 bean作用范围scope配置](#4.1.3%20bean%E4%BD%9C%E7%94%A8%E8%8C%83%E5%9B%B4scope%E9%85%8D%E7%BD%AE)
+			- [4.1.3.1 验证IOC容器中对象是否为单例](#4.1.3.1%20%E9%AA%8C%E8%AF%81IOC%E5%AE%B9%E5%99%A8%E4%B8%AD%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%8D%95%E4%BE%8B)
+			- [4.1.3.2 配置bean为非单例](#4.1.3.2%20%E9%85%8D%E7%BD%AEbean%E4%B8%BA%E9%9D%9E%E5%8D%95%E4%BE%8B)
+			- [4.1.3.3 scope使用后续思考](#4.1.3.3%20scope%E4%BD%BF%E7%94%A8%E5%90%8E%E7%BB%AD%E6%80%9D%E8%80%83)
+	- [4.2 bean实例化](#4.2%20bean%E5%AE%9E%E4%BE%8B%E5%8C%96)
+		- [4.2.1 构造方法实例化](#4.2.1%20%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95%E5%AE%9E%E4%BE%8B%E5%8C%96)
+		- [4.2.2 静态工厂实例化（了解）](#4.2.2%20%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82%E5%AE%9E%E4%BE%8B%E5%8C%96%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89)
+		- [4.2.3 实例工厂和FactoryBean](#4.2.3%20%E5%AE%9E%E4%BE%8B%E5%B7%A5%E5%8E%82%E5%92%8CFactoryBean)
+			- [4.2.3.1 实例工厂实例化（了解）](#4.2.3.1%20%E5%AE%9E%E4%BE%8B%E5%B7%A5%E5%8E%82%E5%AE%9E%E4%BE%8B%E5%8C%96%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89)
+			- [4.2.3.2 FactoryBean（重点）](#4.2.3.2%20FactoryBean%EF%BC%88%E9%87%8D%E7%82%B9%EF%BC%89)
+		- [4.2.4 bean实例化小结](#4.2.4%20bean%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%B0%8F%E7%BB%93)
+	- [4.3 bean的生命周期](#4.3%20bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
+		- [4.3.1 生命周期设置](#4.3.1%20%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E8%AE%BE%E7%BD%AE)
+		- [4.3.2 close关闭容器](#4.3.2%20close%E5%85%B3%E9%97%AD%E5%AE%B9%E5%99%A8)
+		- [4.3.3 注册钩子关闭容器](#4.3.3%20%E6%B3%A8%E5%86%8C%E9%92%A9%E5%AD%90%E5%85%B3%E9%97%AD%E5%AE%B9%E5%99%A8)
+		- [4.3.4 bean生命周期小结](#4.3.4%20bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%B0%8F%E7%BB%93)
+- [5 DI相关内容](#5%20DI%E7%9B%B8%E5%85%B3%E5%86%85%E5%AE%B9)
+	- [5.1 setter注入](#5.1%20setter%E6%B3%A8%E5%85%A5)
+		- [5.1.1 环境准备](#5.1.1%20%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+		- [5.1.2 注入引用数据类型](#5.1.2%20%E6%B3%A8%E5%85%A5%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+		- [5.1.3 注入简单数据类型](#5.1.3%20%E6%B3%A8%E5%85%A5%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+	- [5.2 构造器注入（了解）](#5.2%20%E6%9E%84%E9%80%A0%E5%99%A8%E6%B3%A8%E5%85%A5%EF%BC%88%E4%BA%86%E8%A7%A3%EF%BC%89)
+		- [5.2.1 环境准备](#5.2.1%20%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+		- [5.2.2 构造器注入引用数据类型](#5.2.2%20%E6%9E%84%E9%80%A0%E5%99%A8%E6%B3%A8%E5%85%A5%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+		- [5.2.3 构造器注入多个引用数据类型](#5.2.3%20%E6%9E%84%E9%80%A0%E5%99%A8%E6%B3%A8%E5%85%A5%E5%A4%9A%E4%B8%AA%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+		- [5.2.4 构造器注入多个简单数据类型](#5.2.4%20%E6%9E%84%E9%80%A0%E5%99%A8%E6%B3%A8%E5%85%A5%E5%A4%9A%E4%B8%AA%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
+		- [5.2.5 目前存在的问题](#5.2.5%20%E7%9B%AE%E5%89%8D%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98)
+		- [5.2.6 小结](#5.2.6%20%E5%B0%8F%E7%BB%93)
+	- [5.3 自动配置](#5.3%20%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE)
+		- [5.3.1 什么是依赖自动装配?](#5.3.1%20%E4%BB%80%E4%B9%88%E6%98%AF%E4%BE%9D%E8%B5%96%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D?)
+		- [5.3.2 自动装配方式有哪些？](#5.3.2%20%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F)
+		- [5.3.3 环境准备](#5.3.3%20%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+		- [5.3.4 完成自动装配的配置](#5.3.4%20%E5%AE%8C%E6%88%90%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D%E7%9A%84%E9%85%8D%E7%BD%AE)
+		- [5.3.5 小结](#5.3.5%20%E5%B0%8F%E7%BB%93)
+	- [5.4 集合注入](#5.4%20%E9%9B%86%E5%90%88%E6%B3%A8%E5%85%A5)
+		- [5.4.1 环境准备](#5.4.1%20%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87)
+		- [5.4.2 注入数组类型](#5.4.2%20%E6%B3%A8%E5%85%A5%E6%95%B0%E7%BB%84%E7%B1%BB%E5%9E%8B)
+		- [5.4.3 注入List类型](#5.4.3%20%E6%B3%A8%E5%85%A5List%E7%B1%BB%E5%9E%8B)
+		- [5.4.4 注入Set类型](#5.4.4%20%E6%B3%A8%E5%85%A5Set%E7%B1%BB%E5%9E%8B)
+		- [5.4.5 注入Map类型](#5.4.5%20%E6%B3%A8%E5%85%A5Map%E7%B1%BB%E5%9E%8B)
+		- [5.4.6 注入Properties类型](#5.4.6%20%E6%B3%A8%E5%85%A5Properties%E7%B1%BB%E5%9E%8B)
 
-# 一、 课程介绍
+## 1 课程介绍
 
 对于一门新技术，我们需要从`为什么要学`、`学什么`以及`怎么学`这三个方向入手来学习。那对于Spring来说:
 
-## 1、 为什么要学?
+### 1.1 为什么要学?
 
 - `从使用和占有率看`
     
@@ -25,7 +93,7 @@
 
 - `综上所述`，Spring是一款非常优秀而且功能强大的框架，不仅要学，而且还要学好。
 
-## 2、学什么?
+### 1.2 学什么?
 
 从上面的介绍中，我们可以看到Spring框架主要的优势是在`简化开发`和`框架整合`上，至于如何实现就是我们要学习Spring框架的主要内容:
 
@@ -53,7 +121,7 @@
     3. AOP
     4. 声明式事务(AOP的具体应用)
 
-## 3、怎么学?
+### 1.3 怎么学?
 
 - `学习Spring框架设计思想`
     - 对于Spring来说，它能迅速占领全球市场，不只是说它的某个功能比较强大，更重要是在它的`思想`上。
@@ -66,11 +134,11 @@
     - Spring很优秀，需要认真重点的学习
     - Spring的学习主线是IOC、AOP、声明式事务和整合MyBais
 - 接下来，咱们就开始进入Spring框架的学习。
-# 二、Spring相关概念
+## 2 Spring相关概念
 
-## 1、初识Spring
+### 2.1 初识Spring
 
-### 1.1 Spring家族
+#### 2.1.1 Spring家族
 
 - 官网：[https://spring.io](https://spring.io/) 从官网我们可以大概了解到：
     
@@ -92,7 +160,7 @@
 
 除了上面的这三个技术外，还有很多其他的技术，也比较流行，如SpringData，SpringSecurity等，这些都可以被应用在我们的项目中。我们这里所*学习的Spring其实指的是Spring Framework*。
 
-### 1.2 Spring发展史
+#### 2.1.2 Spring发展史
 
 接下来我们介绍下Spring Framework这个技术是如何来的呢?
 
@@ -115,9 +183,9 @@
     - Spring其实是Spring家族中的Spring Framework
     - Spring Framework是Spring家族中其他框架的底层基础，学好Spring可以为其他Spring框架的学习打好基础
 
-## 2、Spring系统架构
+### 2.2 Spring系统架构
 
-### 2.1 系统架构图
+#### 2.2.1 系统架构图
 
 - Spring Framework是Spring生态圈中`最基础的项目`，是`其他项目的根基`。
 
@@ -144,7 +212,7 @@
 5. `Test层`
     - Spring主要整合了Junit来完成单元测试和集成测试
 
-### 2.2 课程学习路线
+#### 2.2.2 课程学习路线
 
 - 介绍完Spring的体系结构后，从中我们可以得出对于Spring的学习主要包含四部分内容，分别是:
     1. Spring的IOC/DI
@@ -155,11 +223,11 @@
 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211119468.png)
 
 
-## 3、Spring核心概念
+### 2.3 Spring核心概念
 
 在Spring核心概念这部分内容中主要包含`IOC/DI`、`IOC容器`和`Bean`,那么问题就来了，这些都是什么呢?
 
-### 3.1 目前项目中的问题
+#### 2.3.1 目前项目中的问题
 
 要想解答这个问题，就需要先分析下目前咱们代码在编写过程中遇到的问题
 
@@ -205,7 +273,7 @@ public class BookDaoImpl2 implements BookDao {
     - `这种实现思就是Spring的一个核心概念`
     - `IoC(Inversion of Control)控制反转`
 
-### 3.2 IOC、IOC容器、Bean、DI
+#### 2.3.2 IOC、IOC容器、Bean、DI
 
 1. `IOC(Inversion of Control)控制反转`
 
@@ -251,7 +319,7 @@ public class BookDaoImpl2 implements BookDao {
         - 在IOC容器内将有依赖关系的bean进行关系绑定（DI）
         - 最终结果为:***使用对象时不仅可以直接从IOC容器中获取，并且获取到的bean已经绑定了所有的依赖关系***.
 
-### 3.3 形象理解
+#### 2.3.3 形象理解
 
 - 从前有个人叫小明，小明有三大爱好，逛知乎，打游戏，抢红包
 ```java
@@ -419,7 +487,7 @@ ming.grab();
 >我曾经有很强的控制欲，过度依赖于我的手机，导致我和手机之间耦合程度太高，只要手机出现一点点问题，我都要改造我自己，这实在是既浪费时间又容易出问题。自从我把控制权交给了造物主，他每天在唤醒我以前，就已经替我选好了手机，我只要按照平时一样玩手机就可以了，根本不用关心是什么手机。即便手机出了问题，也可以由造物主直接搞定，不需要再改造我自己了，我现在买了七部手机，都交给了造物主，每天换一部，美滋滋！  
 >我也从其中获得了这样的感悟： 如果一个类A 的功能实现需要借助于类B，那么就称类B是类A的依赖，如果在类A的内部去实例化类B，那么两者之间会出现较高的耦合，一旦类B出现了问题，类A也需要进行改造，如果这样的情况较多，每个类之间都有很多依赖，那么就会出现牵一发而动全身的情况，程序会极难维护，并且很容易出现问题。要解决这个问题，就要把A类对B类的控制权抽离出来，交给一个第三方去做，把控制权反转给第三方，就称作控制反转（IOC Inversion Of Control）。控制反转是一种思想，是能够解决问题的一种可能的结果，而依赖注入（Dependency Injection）就是其最典型的实现方法。由第三方（我们称作IOC容器）来控制依赖，把他通过构造函数、属性或者工厂模式等方法，注入到类A内，这样就极大程度的对类A和类B进行了解耦。
 
-### 3.4 核心概念小结
+#### 2.3.4 核心概念小结
 
 重点要理解`什么是IOC/DI思想`、`什么是IOC容器`和`什么是Bean`：
 
@@ -431,15 +499,15 @@ ming.grab();
 3. 什么是Bean?
     - 容器中所存放的一个个对象就叫Bean或Bean对象
 
-# 三、入门案例
+## 3 三、入门案例
 
 - 介绍完Spring的核心概念后，接下来我们得思考一个问题就是，Spring到底是如何来实现IOC和DI的，那接下来就通过一些简单的入门案例，来演示下具体实现过程:
 
-## 1、IOC入门案例
+### 3.1 IOC入门案例
 
 对于入门案例，我们得先`分析思路`然后再`代码实现`
 
-### 1.1 思路分析
+#### 3.1.1 思路分析
 
 1. Spring是使用容器来管理bean对象的，那么`管什么?`
     - 主要`管理项目中所使用到的类对象`，比如(Service和Dao)
@@ -455,7 +523,7 @@ ming.grab();
 
 - 总结：管Service和Dao、xml配置到IoC、使用接口获取IoC、使用接口中的方法获取IoC中的Bean、提前需要导pom文件中对应的依赖
 
-### 1.2 代码实现
+#### 3.1.2 代码实现
 
 - 需求分析:将BookServiceImpl和BookDaoImpl交给Spring管理，并从容器中获取对应的bean对象进行方法调用。
 
@@ -495,6 +563,7 @@ public class BookServiceImpl implements BookService {
 ```
 
 4. resources下添加spring配置文件
+
 >右键 -> 新建 -> XML配置文件 -> Spring配置
 
 5. 在配置文件中完成bean的配置
@@ -546,11 +615,11 @@ public class App {
 	
 - 至此，Spring的IOC入门案例已经完成，但是在`BookServiceImpl`的类中依然存在`BookDaoImpl`对象的new操作，它们之间的耦合度还是比较高，这块该如何解决，就需要用到下面的`DI(依赖注入)`。
 
-## 2、 DI入门案例
+### 3.2 DI入门案例
 
 - 对于DI的入门案例，我们依然先`分析思路`然后再`代码实现`
 
-### 2.1 思路分析
+#### 3.2.1 思路分析
 
 1. 要想实现依赖注入，必须要基于IOC管理Bean
     - DI的入门案例要依赖于前面的IOC入门案例
@@ -561,7 +630,7 @@ public class App {
 4. `Service与Dao之间的关系如何描述？`
     - `使用配置文件`
 
-### 2.2 代码实现
+#### 3.2.2 代码实现
 
 需求：基于IOC入门案例，在BookServiceImpl类中删除new对象的方式，使用Spring的DI完成Dao层的注入
 
@@ -630,13 +699,13 @@ public class BookServiceImpl implements BookService {
 	>book service save …  
 	>book dao save …
 
-# 四、IOC相关内容
+## 4 IOC相关内容
 
 通过前面两个案例，我们已经学习了`bean如何定义配置`，`DI如何定义配置`以及`容器对象如何获取`的内容，接下来主要是把这三块内容展开进行详细的讲解，深入的学习下这三部分的内容，首先是bean基础配置。
-## 1、bean基础配置
+### 4.1 bean基础配置
 
 对于bean的配置中，主要会讲解`bean基础配置`,`bean的别名配置`,`bean的作用范围配置`(重点),这三部分内容
-### 1.1 bean的基础配置---id和class
+#### 4.1.1 bean的基础配置---id和class
 
 - 对于bean的基础配置，在前面的案例中已经使用过:
 ```xml
@@ -645,8 +714,7 @@ public class BookServiceImpl implements BookService {
 
 - 其中，bean标签的功能、使用方式以及id和class属性的作用，我们通过一张图来描述下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211139131.png)
 
-
-### 1.2 bean的name属性
+#### 4.1.2 bean的name属性
 
 我们可以在bean标签中配置name属性，来充当别名，下面我们来演示
 
@@ -682,18 +750,18 @@ public class App {
 	>set方法被调用啦  
 	>book service save …  
 	>book dao save …
-	
+
 `注意事项`：
-	- bean依赖注入的ref属性指定bean，必须在容器中存在，而ref的值也可以是name里的别名，不过还是建议用id值来注入
-	- 如果我们在调用getBean(String name)方法时，传入了一个不存在该名称的bean对象，则会报错`NoSuchBeanDefinitionException`，此时我们要检查一下是哪边写错了（例如bean的id和name都没有service100，而getBean的参数却写了service100）
-### 1.3 bean作用范围scope配置
+- bean依赖注入的ref属性指定bean，必须在容器中存在，而ref的值也可以是name里的别名，不过还是建议用id值来注入
+- 如果我们在调用getBean(String name)方法时，传入了一个不存在该名称的bean对象，则会报错`NoSuchBeanDefinitionException`，此时我们要检查一下是哪边写错了（例如bean的id和name都没有service100，而getBean的参数却写了service100）
+#### 4.1.3 bean作用范围scope配置
 
 关于bean的作用范围是bean属性配置的一个重点内容。  
 bean的scope有两个取值：
 
 - `singleton：单例（默认）`
 - `prototype：非单例`
-#### 1.3.1 验证IOC容器中对象是否为单例
+##### 4.1.3.1 验证IOC容器中对象是否为单例
 
 - 验证思路：我们只需要对同一个bean创建两个对象，然后打印二者的地址值，看看是否一致
 - 代码实现
@@ -718,7 +786,7 @@ public class App {
     
     - 配置bean的scope属性为prototype
 
-#### 1.3.2 配置bean为非单例
+##### 4.1.3.2 配置bean为非单例
 
 在Spring配置文件中，配置scope属性来实现bean的非单例创建
 
@@ -734,7 +802,7 @@ public class App {
 	>com.blog.service.impl.BookServiceImpl@25bbe1b6  
 	>com.blog.service.impl.BookServiceImpl@5702b3b1
 
-#### 1.3.3 scope使用后续思考
+##### 4.1.3.3 scope使用后续思考
 
 介绍完`scope`属性以后，我们来思考几个问题:
 
@@ -754,7 +822,7 @@ public class App {
 - 哪些bean对象不适合交给容器进行管理?
     - 封装实例的域对象（domain，pojo），因为会引发线程安全问题，所以不适合。
 
-## 2、bean实例化
+### 4.2 bean实例化
 
 - 对象已经能交给Spring的IOC容器来创建了，但是容器是如何来创建对象的呢?
     
@@ -766,7 +834,7 @@ public class App {
     - bean本质上就是对象，对象在new的时候会使用构造方法完成，那创建bean也是使用构造方法完成的。
         - 基于这个知识点出发，我们来验证spring中bean的三种创建方式，
 
-### 2.1 构造方法实例化
+#### 4.2.1 构造方法实例化
 
 - 在之前的BookDaoImpl类中添加一个无参构造函数，并打印一句话，方便观察结果。
 ```java
@@ -798,7 +866,7 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-- 运行程序，能执行成功，说明内部走的依然是构造函数，能访问到类中的私有构造方法，`显而易见Spring底层用的是反射`![[![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211153979.png)
+- 运行程序，能执行成功，说明内部走的依然是构造函数，能访问到类中的私有构造方法，`显而易见Spring底层用的是反射`![![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211153979.png)
 
 
 - 我们在构造函数中添加一个参数试试
@@ -818,7 +886,7 @@ public class BookDaoImpl implements BookDao {
 
 - 完事儿之后记得将空参构造器还原回去，把其中的输出语句也删了，方便我们进行下一步的测试
 
-### 2.2 静态工厂实例化（了解）
+#### 4.2.2 静态工厂实例化（了解）
 
 - 创建一个工厂类BookDaoFactory并提供一个静态方法
 ```java
@@ -883,9 +951,9 @@ public class BookDaoFactory {
 
 - 介绍完静态工厂实例化后，这种方式一般是用来兼容早期的一些老系统，所以`了解为主`。
 
-### 2.3 实例工厂和FactoryBean
+#### 4.2.3 实例工厂和FactoryBean
 
-#### 2.3.1 实例工厂实例化（了解）
+##### 4.2.3.1 实例工厂实例化（了解）
 
 接下来继续来研究Spring的第三种bean的创建方式`实例工厂实例化`
 
@@ -948,7 +1016,7 @@ public class App {
 
 - 实例工厂实例化的方式就已经介绍完了，配置的过程还是比较复杂，要写两行配置，而且这两行还是高耦合的，所以Spring为了简化这种配置方式就提供了一种叫`FactoryBean`的方式来简化开发。
 
-#### 2.3.2 FactoryBean（重点）
+##### 4.2.3.2 FactoryBean（重点）
 
 - 具体的使用步骤为：
 
@@ -987,13 +1055,13 @@ default boolean isSingleton() {
 }
 ```
 
-- 方法一:getObject()，被重写后，在方法中进行对象的创建并返回
+- 方法一：getObject()，被重写后，在方法中进行对象的创建并返回
     
-- 方法二:getObjectType(),被重写后，主要返回的是被创建类的Class对象
+- 方法二：getObjectType(),被重写后，主要返回的是被创建类的Class对象
     
-- 方法三:没有被重写，因为它已经给了默认值，从方法名中可以看出其作用是设置对象是否为单例，默认true，这里就不加以验证了
+- 方法三：没有被重写，因为它已经给了默认值，从方法名中可以看出其作用是设置对象是否为单例，默认true，这里就不加以验证了
 
-### 2.4 bean实例化小结
+#### 4.2.4 bean实例化小结
 
 - bean是如何创建的呢?
     - 通过构造方法
@@ -1005,7 +1073,7 @@ default boolean isSingleton() {
             这些方式中，重点掌握`构造方法`和`FactoryBean`即可。
             >需要注意的一点是，构造方法在类中默认会提供，但是如果重写了构造方法，默认的就会消失，在使用的过程中需要注意，如果需要重写构造方法，最好把默认的构造方法也重写下。
 
-## 3、bean的生命周期
+### 4.3 bean的生命周期
 
 关于bean的相关知识还有最后一个是`bean的生命周期`，对于生命周期，我们主要围绕着`bean生命周期控制`来讲解
 
@@ -1017,7 +1085,7 @@ default boolean isSingleton() {
     - `在bean创建后到销毁前做一些事情`。
 - 现在我们面临的问题是如何在bean的创建之后和销毁之前把我们需要添加的内容添加进去。
 
-### 3.1 生命周期设置
+#### 4.3.1 生命周期设置
 
 具体的控制有两个阶段:
 
@@ -1061,7 +1129,7 @@ public class BookDaoImpl implements BookDao {
 
 知道了出现问题的原因，具体该如何解决呢?继续往下看
 
-### 3.2 close关闭容器
+#### 4.3.2 close关闭容器
 
 - `ApplicationContext中没有close方法，它的子类中有close方法`
 - `所以需要将ApplicationContext更换成ClassPathXmlApplicationContext，然后调用close方法就好啦`
@@ -1080,7 +1148,7 @@ public class App {
 - 运行程序，输出如下，可以看到destory正常输出：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211223337.png)
 
 
-### 3.3 注册钩子关闭容器
+#### 4.3.3 注册钩子关闭容器
 
 - 在容器未关闭之前，提前设置好回调函数，让JVM在退出之前回调此函数来关闭容器
     
@@ -1183,7 +1251,7 @@ public void setBookDao(BookDao bookDao) {
 >
 >解惑：所有IOC容器中的bean的初始化和销毁都会运行，所以service也会运行
 
-### 3.4 bean生命周期小结
+#### 4.3.4 bean生命周期小结
 
 1. 关于Spring中对bean生命周期控制提供了两种方式:
     - 在配置文件中的bean标签中添加`init-method`和`destroy-method`属性
@@ -1204,7 +1272,7 @@ public void setBookDao(BookDao bookDao) {
         - registerShutdownHook()方法
 
 
-# 五、DI相关内容
+## 5 DI相关内容
 
 上面我们已经完成了bean相关操作的讲解，接下来就进入第二个大的模块`DI依赖注入`。
 
@@ -1226,7 +1294,7 @@ public void setBookDao(BookDao bookDao) {
         - 简单类型
         - 引用类型
 
-## 1、setter注入
+### 5.1 setter注入
 
 - 对于setter方式注入引用类型的方式之前已经学习过，快速回顾下:
 - 在bean中定义引用类型属性，并提供可访问的set方法
@@ -1253,7 +1321,7 @@ public class BookServiceImpl implements BookService {
 >	 
 >	ref=”bookDao”中bookDao的作用是让Spring能在IOC容器中找到id为bookDao的Bean对象给bookService进行注入
 
-### 1.1 环境准备
+#### 5.1.1 环境准备
 
 - 先来做一些准备工作，我们在dao包下新建一个UserDao接口
 ```java
@@ -1327,7 +1395,7 @@ public class App {
 }
 ```
 
-### 1.2 注入引用数据类型
+#### 5.1.2 注入引用数据类型
 
 需求:在bookServiceImpl对象中注入userDao
 
@@ -1380,7 +1448,7 @@ public class BookServiceImpl implements BookService {
 - `步骤三：`运行程序，结果如下，userDao已经成功注入。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211244676.png)
 
 
-### 1.3 注入简单数据类型
+#### 5.1.3 注入简单数据类型
 
 需求：给BookDaoImpl注入一些简单数据类型的数据  
 参考引用数据类型的注入，我们可以推出具体的步骤为:
@@ -1445,9 +1513,9 @@ public class BookDaoImpl implements BookDao {
     - 对于引用数据类型使用的是`<property name="" ref=""/>`
     - 对于简单数据类型使用的是`<property name="" value=""/>`
 
-## 2、构造器注入（了解）
+### 5.2 构造器注入（了解）
 
-### 2.1 环境准备
+#### 5.2.1 环境准备
 
 - 修改BookDao、BookDaoImpl、UserDao、UserDaoImpl、BookService和BookServiceImpl类
 ```java
@@ -1517,7 +1585,7 @@ public class App {
     }  
 }
 ```
-### 2.2 构造器注入引用数据类型
+#### 5.2.2 构造器注入引用数据类型
 
 接下来，在上面这个环境中来完成构造器注入的学习:
 
@@ -1566,7 +1634,7 @@ public class BookServiceImpl implements BookService{
 	运行App类，查看结果，说明bookDao已经成功注入。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211303890.png)
 
 
-### 2.3 构造器注入多个引用数据类型
+#### 5.2.3 构造器注入多个引用数据类型
 
 需求：在BookServiceImpl使用构造函数注入多个引用数据类型，比如userDao
 
@@ -1614,7 +1682,7 @@ public class BookServiceImpl implements BookService {
 	结果中出现了userDao的输出，说明userDao成功注入![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211307699.png)
 
 
-### 2.4 构造器注入多个简单数据类型
+#### 5.2.4 构造器注入多个简单数据类型
 
 需求:在BookDaoImpl中，使用构造函数注入databaseName和connectionNum两个参数。  
 参考引用数据类型的注入，我们可以推出具体的步骤为:
@@ -1664,7 +1732,7 @@ public class BookDaoImpl implements BookDao {
 
 
 
-### 2.5 目前存在的问题
+#### 5.2.5 目前存在的问题
 
 - `<constructor-arg>`标签内的name，必须与构造函数中的参数名一致，这两块存在紧耦合。
 - 那么我们怎么解决这个问题呢？
@@ -1701,7 +1769,7 @@ public class BookDaoImpl implements BookDao {
 4. 如果有必要可以两者同时使用，使用构造器注入完成强制依赖的注入，使用setter注入完成可选依赖的注入
 5. 实际开发过程中还要根据实际情况分析，如果受控对象没有提供setter方法就必须使用构造器注入
 6. `自己开发的模块推荐使用setter注入`
-### 2.6 小结
+#### 5.2.6 小结
 
 这部分主要讲解的是Spring的依赖注入的实现方式:
 
@@ -1722,7 +1790,7 @@ public class BookDaoImpl implements BookDao {
 - 依赖注入的方式选择上
     - 建议使用setter注入
     - 第三方技术根据情况选择
-## 3、自动配置
+### 5.3 自动配置
 
 前面花了大量的时间把Spring的注入去学习了下，总结起来就两个字`麻烦`。
 
@@ -1733,16 +1801,16 @@ public class BookDaoImpl implements BookDao {
 
 所以什么是自动配置以及如何实现自动配置，就是接下来要学习的内容
 
-### 3.1 什么是依赖自动装配?
+#### 5.3.1 什么是依赖自动装配?
 
 IOC容器根据bean所依赖的资源在容器中`自动查找并注入`到bean中的过程称为自动装配
-### 3.2 自动装配方式有哪些？
+#### 5.3.2 自动装配方式有哪些？
 
 - 按类型（常用）
 - 按名称
 - 按构造方法
 - 不启用自动装配
-### 3.3 环境准备
+#### 5.3.3 环境准备
 
 - 修改BookDao、BookDaoImpl、BookService和BookServiceImpl类
 ```java
@@ -1803,7 +1871,7 @@ public class App {
 }
 ```
 
-### 3.4 完成自动装配的配置
+#### 5.3.4 完成自动装配的配置
 
 自动装配只需要修改applicationContext.xml配置文件即可:
 
@@ -1877,7 +1945,7 @@ public class BookServiceImpl implements BookService{
         - 这个规则是set方法生成的`默认规则`，set方法的生成是把属性名首字母大写前面加set形成的方法名
     - 所以按照名称注入，其实是和对应的set方法有关，但是如果按照标准起名称，属性名和set对应的名是一致的
 
-### 3.5 小结
+#### 5.3.5 小结
 
 - 如果按照名称去找对应的bean对象，找不到则注入Null
 - 当某一个类型在IOC容器中有多个对象，`按照名称注入只找其指定名称对应的bean对象，不会报错`
@@ -1888,7 +1956,7 @@ public class BookServiceImpl implements BookService{
     3. 使用按名称装配时（byName）`必须保障容器中具有指定名称的bean`，因变量名与配置耦合，`不推荐使用`
     4. `自动装配优先级低于setter注入与构造器注入`，同时出现时自动装配配置失效
 
-## 4、集合注入
+### 5.4 集合注入
 
 前面我们已经能完成引入数据类型和简单数据类型的注入，但是还有一种数据类型`集合`，集合中既可以装简单数据类型也可以装引用数据类型，对于集合，在Spring中该如何注入呢?
 
@@ -1901,7 +1969,7 @@ public class BookServiceImpl implements BookService{
 - Properties
 
 针对不同的集合类型，该如何实现注入呢?接着往下看
-### 4.1 环境准备
+#### 5.4.1 环境准备
 
 - 修改BookDaoImpl类
 ```java
@@ -1980,7 +2048,7 @@ public class App {
 ```
 
 - 准备工作完毕，接下来，在上面这个环境中来完成`集合注入`的学习，下面所有的配置方式，都是在bookDao的bean标签中使用`<property>`进行注入
-### 4.2 注入数组类型
+#### 5.4.2 注入数组类型
 
 ```xml
 <property name="array">  
@@ -1991,7 +2059,7 @@ public class App {
     </array>  
 </property>
 ```
-### 4.3 注入List类型
+#### 5.4.3 注入List类型
 
 ```xml
 <property name="list">  
@@ -2002,7 +2070,7 @@ public class App {
     </list>  
 </property>
 ```
-### 4.4 注入Set类型
+#### 5.4.4 注入Set类型
 
 ```xml
 <property name="set">  
@@ -2014,7 +2082,7 @@ public class App {
     </set>  
 </property>
 ```
-### 4.5 注入Map类型
+#### 5.4.5 注入Map类型
 
 ```xml
 <property name="map">  
@@ -2025,7 +2093,7 @@ public class App {
     </map>  
 </property>
 ```
-### 4.6 注入Properties类型
+#### 5.4.6 注入Properties类型
 
 ```xml
 <property name="properties">  
