@@ -1,7 +1,8 @@
-一、yarn的简介：
+一、yarn的简介
+
 Yarn是facebook发布的一款取代npm的包管理工具。
 
-二、yarn的特点：
+二、yarn的特点
 
 速度超快。
 Yarn 缓存了每个下载过的包，所以再次使用时无需重复下载。 同时利用并行下载以最大化资源 利用率，因此安装速度更快。
@@ -11,19 +12,20 @@ Yarn 缓存了每个下载过的包，所以再次使用时无需重复下载。
 使用详细、简洁的锁文件格式和明确的安装算法，Yarn 能够保证在不同系统上无差异的工作。
 
 三、yarn的安装:
+
 ```shell
 npm install -g yarn
 npm uninstall yarn -g  //yarn卸载
 ```
 
-配置环境变量
-复制bin地址：`E:\Nodejs\GlobalNodeModules\node_modules\yarn\bin`
+- 查看yarn的安装
+```shell
+yarn -v  // 查看yarn 版本
+```
 
-![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240329220006.png)
+- 如果使用yarn指令出错，请检查环境变量中，是否有node全局文件夹
 
-![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240329220011.png)
-
-五、yarn的常用命令：
+四、yarn的常用命令
 
 ```shell
 yarn -v  // 查看yarn 版本
@@ -96,7 +98,8 @@ yarn cache dir # 返回 全局缓存位置
 yarn cache clean # 清除缓存
 ```
 
-五、npm 与 yarn命令比较:
+五、npm 与 yarn命令比较
+
 
 比如说你的项目模块依赖是图中描述的，@1.2.1代表这个模块的版本。在你安装A的时候需要安装依赖C和D，很多依赖不会指定版本号，默认会安装最新的版本，这样就会出现问题：比如今天安装模块的时候C和D是某一个版本，而当以后C、D更新的时候，再次安装模块就会安装C和D的最新版本，如果新的版本无法兼容你的项目，你的程序可能就会出BUG，甚至无法运行。这就是npm的弊端，而yarn为了解决这个问题推出了yarn.lock的机制，这是作者项目中的yarn.lock文件
 

@@ -84,12 +84,12 @@ npm config set registry https://registry.npmjs.org/
 
 + 如果需要修改全局依赖的安装路径，可以按照以下步骤操作：
 
-  1. 创建一个新的全局依赖存储目录，例如 `E:\Nodejs\GlobalNodeModules`。
+  1. 创建一个新的全局依赖存储目录，例如 `E:\Nodejs\node_global
 
   2. 打开命令行终端，执行以下命令来配置新的全局依赖存储路径：
 
 ``` shell
-npm config set prefix "E:\Nodejs\GlobalNodeModules"
+npm config set prefix "E:\Nodejs\node_global"
 ```
 
   3. 确认配置已生效，可以使用以下命令查看当前的全局依赖存储路径：
@@ -98,9 +98,38 @@ npm config set prefix "E:\Nodejs\GlobalNodeModules"
 npm config get prefix
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319215216.png)
+![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240330153622.png)
 
-> 4.`升级npm版本`
+
+> 4.`配置全局缓存位置`
+
++ 如果需要修改全局缓存路径，可以按照以下步骤操作：
+
+  1. 创建一个新的全局依赖存储目录，例如 `E:\Nodejs\node_cache
+
+  2. 打开命令行终端，执行以下命令来配置新的全局依赖存储路径：
+
+``` shell
+npm config set cache "E:\Nodejs\node_cache"
+```
+
+  3. 确认配置已生效，可以使用以下命令查看当前的全局依赖存储路径：
+
+``` shell
+npm config get cache
+```
+
+![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240330153629.png)
+
+> 4. `设置node_global全局变量`
+
++ “此电脑”-->右键“属性”-->“高级系统设置”-->“高级”-->“环境变量”![image.png|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240330153723.png)
+
+- 在用户变量中的PATH中（`重要！！！`）：
+	
+	- 将我们创建的`node_global`文件夹添加即可![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240330155708.png)
+
+> 5.`升级npm版本`
 
 + cmd 输入npm -v 查看版本（`管理员运行`）
 
