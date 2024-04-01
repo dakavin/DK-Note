@@ -10,7 +10,7 @@
 通常情况下，大部分需要浮点数精确运算结果的业务场景（比如涉及到钱的场景）都是通过 `BigDecimal` 来做的。
 
 《阿里巴巴 Java 开发手册》中提到：**浮点数之间的等值判断，基本数据类型不能用 == 来比较，包装数据类型不能用 equals 来判断。**
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228210817922.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/73bd65b8374a1f53eceeefda4248f7b4.png)
 
 具体原因我们在上面已经详细介绍了，这里就不多提了。
 
@@ -34,7 +34,7 @@ System.out.println(x.compareTo(y));// 0
 我们在使用 `BigDecimal` 时，为了防止精度丢失，推荐使用它的`BigDecimal(String val)`构造方法或者 `BigDecimal.valueOf(double val)` 静态方法来创建对象。
 
 《阿里巴巴 Java 开发手册》对这部分内容也有提到，如下图所示。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228211013977.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d96a175a0b955642764630aff44816c4.png)
 ### 2.2 加减乘除
 
 `add` 方法用于将两个 `BigDecimal` 对象相加，`subtract` 方法用于将两个 `BigDecimal` 对象相减。`multiply` 方法用于将两个 `BigDecimal` 对象相乘，`divide` 方法用于将两个 `BigDecimal` 对象相除。
@@ -101,7 +101,7 @@ System.out.println(n);// 1.255
 ```
 ## 3、BigDecimal等值比较问题
 
-《阿里巴巴 Java 开发手册》中提到：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228211520799.png)
+《阿里巴巴 Java 开发手册》中提到：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bf09b9c45d2d95a8076556b5db6471df.png)
 `BigDecimal` 使用 `equals()` 方法进行等值比较出现问题的代码示例：
 
 ```java
@@ -113,7 +113,7 @@ System.out.println(a.equals(b));//false
 这是因为 `equals()` 方法不仅仅会比较值的大小（value）还会比较精度（scale），而 `compareTo()` 方法比较的时候会忽略精度。
 
 1.0 的 scale 是 1，1 的 scale 是 0，因此 `a.equals(b)` 的结果是 false。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240228211546556.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/12c34cbb7b7992d3922346c1134c678b.png)
 
 `compareTo()` 方法可以比较两个 `BigDecimal` 的值，如果相等就返回 0，如果第 1 个数比第 2 个数大则返回 1，反之返回-1。
 

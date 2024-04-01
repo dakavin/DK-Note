@@ -23,28 +23,28 @@ HTTP 主要有这些不足，例举如下。
 `TCP/IP 是可能被窃听的网络`
 - 如果要问为什么通信时不加密是一个缺点，这是因为，按 TCP/IP 协议族的工作机制，通信内容在所有的通信线路上都有可能遭到窥视。 
 - 所谓互联网，是由能连通到全世界的网络组成的。无论世界哪个角落的服务器在和客户端通信时，在此通信线路上的某些网络设备、光缆、计算机等都不可能是个人的私有物，所以不排除某个环节中会遭到恶意窥视行为。 
-- 即使已经过加密处理的通信，也会被窥视到通信内容，这点和未加密的通信是相同的。只是说如果通信经过加密，就有可能让人无法破解报文信息的含义，但加密处理后的报文信息本身还是会被看到的。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101205548.png)
+- 即使已经过加密处理的通信，也会被窥视到通信内容，这点和未加密的通信是相同的。只是说如果通信经过加密，就有可能让人无法破解报文信息的含义，但加密处理后的报文信息本身还是会被看到的。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/71ac73438d121d2d856f290d4881e48e.png)
 - 窃听相同段上的通信并非难事。只需要收集在互联网上流动的数 据包（帧）就行了。对于收集来的数据包的解析工作，可交给那些抓包（Packet Capture）或嗅探器（Sniffer）工具。 
 
 - 下面的图片示例就是被广泛使用的抓包工具 Wireshark。它可以 获取 HTTP 协议的请求和响应的内容，并对其进行解析。 
 
-- 像使用 GET 方法发送请求、响应返回了 200 OK，查看 HTTP 响应报文的全部内容等一系列的事情都可以做到。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101205726.png)
+- 像使用 GET 方法发送请求、响应返回了 200 OK，查看 HTTP 响应报文的全部内容等一系列的事情都可以做到。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a00cca1cca692a59de3171fceb5ce5d4.png)
 `加密处理防止被窃听`
 在目前大家正在研究的如何防止窃听保护信息的几种对策中，最为普及的就是加密技术。加密的对象可以有这么几个。 
 - 通信的加密 
 	- 一种方式就是`将通信加密`。
 		- HTTP 协议中没有加密机制，但可以通过和 SSL（Secure Socket Layer，安全套接层）或 TLS（Transport Layer Security，安全层传输协议）的组合使用， 加密 HTTP 的通信内容。 
-		- 用 SSL建立安全通信线路之后，就可以在这条线路上进行 HTTP 通信了。`与 SSL组合使用的 HTTP 被称为 HTTPS（HTTP Secure，超文本传输安全协议）或 HTTP over SSL`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101205859.png)
+		- 用 SSL建立安全通信线路之后，就可以在这条线路上进行 HTTP 通信了。`与 SSL组合使用的 HTTP 被称为 HTTPS（HTTP Secure，超文本传输安全协议）或 HTTP over SSL`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8730b4cb700eab5bea7c699c769e9fec.png)
 	- 还有一种将参与通信的`内容本身加密`的方式。
 		- 由于 HTTP 协议中 没有加密机制，那么就对 HTTP 协议传输的内容本身加密。即把 HTTP 报文里所含的内容进行加密处理。
-		- 在这种情况下，客户端需要对 HTTP 报文进行加密处理后再发送 请求。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101205933.png)
+		- 在这种情况下，客户端需要对 HTTP 报文进行加密处理后再发送 请求。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/429baee99571d441846f1b62d74370fa.png)
 		- 诚然，为了做到有效的内容加密，前提是要求客户端和服务器同 时具备加密和解密机制。主要应用在 Web 服务中。有一点必须引起注意，由于该方式不同于 SSL或 TLS 将整个通信线路加密处理，所以内容仍有被篡改的风险。稍后我们会加以说明。
 ### 1.2 不验证通信方的身份就可能遭遇伪装
 
 HTTP 协议中的请求和响应不会对通信方进行确认。也就是说存在“服务器是否就是发送请求中 URI 真正指定的主机，返回的响应是否真的返回到实际提出请求的客户端”等类似问题
 
 `任何人都可发起请求`
-- 在 HTTP 协议通信时，由于不存在确认通信方的处理步骤，任何 人都可以发起请求。另外，服务器只要接收到请求，不管对方是谁都会返回一个响应（但也仅限于发送端的 IP 地址和端口号没有被 Web 服务器设定限制访问的前提下）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101210042.png)
+- 在 HTTP 协议通信时，由于不存在确认通信方的处理步骤，任何 人都可以发起请求。另外，服务器只要接收到请求，不管对方是谁都会返回一个响应（但也仅限于发送端的 IP 地址和端口号没有被 Web 服务器设定限制访问的前提下）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1950d21de9e3c31f86034ff1726313df.png)
 - HTTP 协议的实现本身非常简单，不论是谁发送过来的请求都会 返回响应，因此不确认通信方，会存在以下各种隐患。
 	- 无法确定请求发送至目标的 Web 服务器是否是按真实意图返回响应的那台服务器。有`可能是已伪装的 Web 服务器`。
 	- 无法确定响应返回到的客户端是否是按真实意图接收响 应的那个客户端。有`可能是已伪装的客户端`。
@@ -54,7 +54,7 @@ HTTP 协议中的请求和响应不会对通信方进行确认。也就是说存
 
 `查明对手的证书`
 - 虽然使用 HTTP 协议无法确定通信方，但如果使用 SSL则可以。 ==SSL不仅提供加密处理，而且还使用了一种被称为证书的手段， 可用于确定方==。
-- 证书由值得信任的第三方机构颁发，用以证明服务器和客户端是实际存在的。另外，伪造证书从技术角度来说是异常困难的一件事。所以只要能够确认通信方（服务器或客户端）持有的证书， 即可判断通信方的真实意图。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101210244.png)
+- 证书由值得信任的第三方机构颁发，用以证明服务器和客户端是实际存在的。另外，伪造证书从技术角度来说是异常困难的一件事。所以只要能够确认通信方（服务器或客户端）持有的证书， 即可判断通信方的真实意图。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fdbce27ad02544f792b83e7775b21687.png)
 - 通过使用证书，以证明通信方就是意料中的服务器。这对使用者个人来讲，也减少了个人信息泄露的危险性。
 - 另外，客户端持有证书即可完成个人身份的确认，也可用于对 Web 网站的认证环节。
 ### 1.3 无法证明报文完整性，可能已遭篡改
@@ -63,11 +63,11 @@ HTTP 协议中的请求和响应不会对通信方进行确认。也就是说存
 
 `接收到的内容可能有误`
 - 由于 HTTP 协议无法证明通信的报文完整性，因此，在请求或响 应送出之后直到对方接收之前的这段时间内，即使请求或响应的内容遭到篡改，也没有办法获悉。
-- 换句话说，没有任何办法确认，发出的请求 / 响应和接收到的请 求 / 响应是前后相同的。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101210338.png)
+- 换句话说，没有任何办法确认，发出的请求 / 响应和接收到的请 求 / 响应是前后相同的。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d27a5a1040a1b80519670a9dc4cbb442.png)
 - 比如，从某个 Web 网站上下载内容，是无法确定客户端下载的 文件和服务器上存放的文件是否前后一致的。文件内容在传输途 中可能已经被篡改为其他的内容。即使内容真的已改变，作为接收方的客户端也是觉察不到的。
-- 像这样，请求或响应在传输途中，遭攻击者拦截并篡改内容的攻 击称为`中间人攻击（Man-in-the-Middle attack，MITM）`。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101210411.png)
+- 像这样，请求或响应在传输途中，遭攻击者拦截并篡改内容的攻 击称为`中间人攻击（Man-in-the-Middle attack，MITM）`。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4ef5f9763742f6eb34cb3f433ea387ec.png)
 `如何防止篡改`
-- 虽然有使用 HTTP 协议确定报文完整性的方法，但事实上并不便 捷、可靠。其中常用的是 MD5 和 SHA-1 等散列值校验的方法， 以及用来确认文件的数字签名方法。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101210434.png)
+- 虽然有使用 HTTP 协议确定报文完整性的方法，但事实上并不便 捷、可靠。其中常用的是 MD5 和 SHA-1 等散列值校验的方法， 以及用来确认文件的数字签名方法。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d1cda28f55f2c8205e400dede0c24ea3.png)
 - 提供文件下载服务的 Web 网站也会提供相应的以 PGP（Pretty Good Privacy，完美隐私）创建的`数字签名`及 MD5 算法生成的`散列值`。PGP 是用来证明创建文件的数字签名，MD5 是由单向函数生成的散列值。不论使用哪一种方法，都需要操纵客户端的用户本人亲自检查验证下载的文件是否就是原来服务器上的文件。 浏览器无法自动帮用户检查。
 - 可惜的是，用这些方法也依然无法百分百保证确认结果正确。因 为 PGP 和 MD5 本身被改写的话，用户是没有办法意识到的。
 - 为了有效防止这些弊端，有必要使用 HTTPS。SSL提供认证和加 密处理及摘要功能。仅靠 HTTP 确保完整性是非常困难的，因此 通过和其他协议组合使用来实现这个目标。下节我们介绍 HTTPS 的相关内容。
@@ -80,15 +80,15 @@ HTTP 协议中的请求和响应不会对通信方进行确认。也就是说存
 
 另外，对于 HTTP 来说，服务器也好，客户端也好，都是没有办法确认通信方的。因为很有可能并不是和原本预想的通信方在实际通信。 并且还需要考虑到接收到的报文在通信途中已经遭到篡改这一可能 性。
 
-为了统一解决上述这些问题，需要在 HTTP 上再加入加密处理和认证 等机制。我们把添加了加密及认证机制的 HTTP 称为 HTTPS（HTTP Secure）。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101210655.png)
+为了统一解决上述这些问题，需要在 HTTP 上再加入加密处理和认证 等机制。我们把添加了加密及认证机制的 HTTP 称为 HTTPS（HTTP Secure）。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cfba1e8250531c7d3c21dcc7eaf9cb73.png)
 经常会在 Web 的登录页面和购物结算界面等使用 HTTPS 通信。使用 HTTPS 通信时，不再用 `http://，而是改用 https://`。另外，当浏览器访 问 HTTPS 通信有效的 Web 网站时，浏览器的地址栏内会出现一个带锁的标记。对 HTTPS 的显示方式会因浏览器的不同而有所改变。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101210741.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/451b941a714e3901927424ba1176d860.png)
 ### 2.2 HTTPS 是身披 SSL 外壳的 HTTP
 
 HTTPS 并非是应用层的一种新协议。只是 HTTP 通信接口部分用 SSL（Secure Socket Layer）和 TLS（Transport Layer Security）协议代替而已。
 
 通常，HTTP 直接和 TCP 通信。当使用 SSL时，则演变成先和 SSL通 信，再由 SSL和 TCP 通信了。简言之，所谓 HTTPS，其实就是身披 SSL协议这层外壳的 HTTP。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101210902.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c5b29884bf3889d396cb4de1cfbf4917.png)
 
 在采用 SSL后，HTTP 就拥有了 HTTPS 的`加密`、`证书`和`完整性保护`这些功能。
 
@@ -102,17 +102,17 @@ SSL是独立于 HTTP 的协议，所以不光是 HTTP 协议，其他运行在�
 加密和解密都会用到密钥。没有密钥就无法对密码解密，反过来说， 任何人只要持有密钥就能解密了。如果密钥被攻击者获得，那加密也 就失去了意义。
 
 `共享密钥加密的困境`
-- 加密和解密同用一个密钥的方式称为共享密钥加密（Common key crypto system），也被叫做对称密钥加密。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101211020.png)
-- 以共享密钥方式加密时必须将密钥也发给对方。可究竟怎样才能安全地转交？在互联网上转发密钥时，如果通信被监听那么密钥就可会落入攻击者之手，同时也就失去了加密的意义。另外还得设法安全地保管接收到的密钥。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101211044.png)
+- 加密和解密同用一个密钥的方式称为共享密钥加密（Common key crypto system），也被叫做对称密钥加密。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6addbfad587747f3fe13e91448ddccb3.png)
+- 以共享密钥方式加密时必须将密钥也发给对方。可究竟怎样才能安全地转交？在互联网上转发密钥时，如果通信被监听那么密钥就可会落入攻击者之手，同时也就失去了加密的意义。另外还得设法安全地保管接收到的密钥。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fb2799a4bc7a92511914c26bf8d36b95.png)
 `使用两把密钥的公开密钥加密`
 - 公开密钥加密方式很好地解决了共享密钥加密的困难。
 - 公开密钥加密使用一对非对称的密钥。一把叫做==私有密钥== （private key），另一把叫做==公开密钥==（public key）。顾名思 义，私有密钥不能让其他任何人知道，而公开密钥则可以随意发 布，任何人都可以获得。
 - 使用公开密钥加密方式，发送密文的一方使用对方的公开密钥进行加密处理，对方收到被加密的信息后，再使用自己的私有密钥进行解密。利用这种方式，不需要发送用来解密的私有密钥，也不必担心密钥被攻击者窃听而盗走。
-- 另外，要想根据密文和公开密钥，恢复到信息原文是异常困难的，因为解密过程就是在对离散对数进行求值，这并非轻而易举就能办到。退一步讲，如果能对一个非常大的整数做到快速地因式分解，那么密码破解还是存在希望的。但就目前的技术来看是不太现实的。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101211229.png)
+- 另外，要想根据密文和公开密钥，恢复到信息原文是异常困难的，因为解密过程就是在对离散对数进行求值，这并非轻而易举就能办到。退一步讲，如果能对一个非常大的整数做到快速地因式分解，那么密码破解还是存在希望的。但就目前的技术来看是不太现实的。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9e43f81f7df5e97a01133919b3ece80f.png)
 
 `HTTPS 采用混合加密机制`
 - HTTPS 采用共享密钥加密和公开密钥加密两者并用的混合加密机制。若密钥能够实现安全交换，那么有可能会考虑仅使用公开密钥加密来通信。但是公开密钥加密与共享密钥加密相比，其处理速度要慢。
-- 所以应充分利用两者各自的优势，将多种方法组合起来用于通信。在`交换密钥环节使用公开密钥加密方式`，之后的`建立通信交换报文阶段则使用共享密钥加密方式`。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101211323.png)
+- 所以应充分利用两者各自的优势，将多种方法组合起来用于通信。在`交换密钥环节使用公开密钥加密方式`，之后的`建立通信交换报文阶段则使用共享密钥加密方式`。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3efd6df2011a26055fa7362ee2555d23.png)
 ### 2.4 证明公开密钥正确性的证书
 
 遗憾的是，公开密钥加密方式还是存在一些问题的。那就是无法证明 公开密钥本身就是货真价实的公开密钥。比如，正准备和某台服务器 建立公开密钥加密方式下的通信时，如何证明收到的公开密钥就是原 本预想的那台服务器发行的公开密钥。或许在公开密钥传输途中，真 正的公开密钥已经被攻击者替换掉了。
@@ -126,7 +126,7 @@ SSL是独立于 HTTP 的协议，所以不光是 HTTP 协议，其他运行在�
 - 接到证书的客户端可使用数字证书认证机构的公开密钥，对那张证书上的数字签名进行验证，一旦验证通过，客户端便可明确两件事： 一，认证服务器的公开密钥的是真实有效的数字证书认证机构。二， 服务器的公开密钥是值得信赖的。 
 - 此处认证机关的公开密钥必须安全地转交给客户端。使用通信方式 时，如何安全转交是一件很困难的事，因此，多数浏览器开发商发布版本时，会事先在内部植入常用认证机关的公开密钥。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101211608.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3d9e2cceac2e9933e1b837afd11b72f2.png)
 
 `可证明组织真实性的 EV SSL 证书`
 - 证书的一个作用是用来==证明作为通信一方的服务器是否规范==，另外一个作用是可==确认对方服务器背后运营的企业是否真实存在==。 拥有该特性的证书就是 EV SSL证书（Extended Validation SSL Certificate）。 
@@ -159,9 +159,9 @@ SSL是独立于 HTTP 的协议，所以不光是 HTTP 协议，其他运行在�
 ### 2.5 HTTPS 的安全通信机制
 
 为了更好地理解 HTTPS，我们来观察一下 HTTPS 的通信步骤。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101212301.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6f92fbd627366bbbed8ee53963a20c78.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101213948.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7ca943ecb0e89bd7f8648b63d4c57b59.png)
 
 - 步骤 1： 客户端通过发送 Client Hello 报文开始 SSL通信。报文中包含==客户端支持的 SSL的指定版本==、==加密组件（Cipher Suite）列表==（所使用的加密算法及密钥长度等）。 
 
@@ -188,7 +188,7 @@ SSL是独立于 HTTP 的协议，所以不光是 HTTP 协议，其他运行在�
 在以上流程中，应用层发送数据时会附加一种叫做 MAC（Message Authentication Code）的报文摘要。MAC 能够查知报文是否遭到篡改，从而保护报文的完整性。 
 
 下面是对整个流程的图解。图中说明了从仅使用服务器端的公开密钥 证书（服务器证书）建立 HTTPS 通信的整个过程。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101212604.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0b234d0cdc16f57a8fa9f127de3f627e.png)
 
 ### 2.5.1 SSL 和 TLS
 
@@ -201,7 +201,7 @@ IETF 以 SSL3.0 为基准，后又制定了 TLS1.0、TLS1.1 和 TLS1.2。TSL是�
 由于 SSL1.0 协议在设计之初被发现出了问题，就没有实际投入 使用。SSL2.0 也被发现存在问题，所以很多浏览器直接废除了 该协议版本。
 ### 2.5.2 SSL 速度慢吗
 
-HTTPS 也存在一些问题，那就是当使用 SSL时，它的处理速度 会变慢。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101212827.png)
+HTTPS 也存在一些问题，那就是当使用 SSL时，它的处理速度 会变慢。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e92c48fde0052a0816896616ef3b071b.png)
 SSL的慢分两种。一种是指`通信慢`。另一种是指由于大量消耗 CPU 及内存等资源，导致`处理速度变慢`。 
 
 和使用 HTTP 相比，网络负载可能会变慢 2 到 100 倍。除去和 TCP 连接、发送 HTTP 请求 • 响应以外，还必须进行 SSL通信， 因此整体上处理通信量不可避免会增加。 
@@ -230,121 +230,121 @@ SSL的慢分两种。一种是指`通信慢`。另一种是指由于大量消耗
 
 1.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080901.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0a3c1343033691312369bb255e82859e.png)
 
 鲍勃有两把钥匙，一把是公钥，另一把是私钥。
 
 2.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080902.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/adae32dd7d25f392f28afdad12bfaac2.png)
 
 鲍勃把公钥送给他的朋友们----帕蒂、道格、苏珊----每人一把。
 
 3.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080903.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/59d13a2824992cfaf52c031df9e50294.png)
 
 苏珊要给鲍勃写一封保密的信。她写完后用鲍勃的公钥加密，就可以达到保密的效果。
 
 4.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080904.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/510c5194f1f6d3bc6a704999efd8272d.png)
 
 鲍勃收信后，用私钥解密，就看到了信件内容。这里要强调的是，只要鲍勃的私钥不泄露，这封信就是安全的，即使落在别人手里，也无法解密。
 
 5.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080905.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0245613083ac77767d44363b5c6b47c7.png)
 
 鲍勃给苏珊回信，决定采用"数字签名"。他写完后先用Hash函数，生成信件的摘要（digest）。
 
 6.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080906.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/49a3f2257dafcc4410d910f7a595593d.png)
 
 然后，鲍勃使用私钥，对这个摘要加密，生成"数字签名"（signature）。
 
 7.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080907.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/94fb9e16abf561e86648545596990904.png)
 
 鲍勃将这个签名，附在信件下面，一起发给苏珊。
 
 8.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080908.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/46f291275a190f6a8fde2c1e541c15a7.png)
 
 苏珊收信后，取下数字签名，用鲍勃的公钥解密，得到信件的摘要。由此证明，这封信确实是鲍勃发出的。
 
 9.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080909.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6c0350228160873a2c0fce55e59dad0c.png)
 
 苏珊再对信件本身使用Hash函数，将得到的结果，与上一步得到的摘要进行对比。如果两者一致，就证明这封信未被修改过。
 
 10.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080910.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cd1b6574f8112d3ba90b951819df4836.png)
 
 复杂的情况出现了。道格想欺骗苏珊，他偷偷使用了苏珊的电脑，用自己的公钥换走了鲍勃的公钥。此时，苏珊实际拥有的是道格的公钥，但是还以为这是鲍勃的公钥。因此，道格就可以冒充鲍勃，用自己的私钥做成"数字签名"，写信给苏珊，让苏珊用假的鲍勃公钥进行解密。
 
 11.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080911.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/974610e3cd453192126b521de2b6e101.png)
 
 后来，苏珊感觉不对劲，发现自己无法确定公钥是否真的属于鲍勃。她想到了一个办法，要求鲍勃去找"证书中心"（certificate authority，简称CA），为公钥做认证。证书中心用自己的私钥，对鲍勃的公钥和一些相关信息一起加密，生成"数字证书"（Digital Certificate）。
 
 12.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080912.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f29192a8bcceb8f17214b972473c4934.png)
 
 鲍勃拿到数字证书以后，就可以放心了。以后再给苏珊写信，只要在签名的同时，再附上数字证书就行了。
 
 13.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080913.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0bc0eb1463f263afe34745a9c23899c7.png)
 
 苏珊收信后，用CA的公钥解开数字证书，就可以拿到鲍勃真实的公钥了，然后就能证明"数字签名"是否真的是鲍勃签的。
 
 14.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080914.jpg)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5ae20367e4229e665df68cc91aa50606.jpeg)
 
 下面，我们看一个应用"数字证书"的实例：https协议。这个协议主要用于网页加密。
 
 15.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080915.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4cdd45cdebee1dbd8ec02525ed22affb.png)
 
 首先，客户端向服务器发出加密请求。
 
 16.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080916.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e1d39a0d34ebed4dd30fb85329f1e5c.png)
 
 服务器用自己的私钥加密网页以后，连同本身的数字证书，一起发送给客户端。
 
 17.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080917.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8474765707f783739a3118a27bfb9483.png)
 
 客户端（浏览器）的"证书管理器"，有"受信任的根证书颁发机构"列表。客户端会根据这张列表，查看解开数字证书的公钥是否在列表之内。
 
 18.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080918.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5bb52cc17d71512b6205349b19751bd1.png)
 
 如果数字证书记载的网址，与你正在浏览的网址不一致，就说明这张证书可能被冒用，浏览器会发出警告。
 
 19.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080919.jpg)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/52d49f4e0b961719af0fd35f97f2afc6.jpeg)
 
 如果这张数字证书不是由受信任的机构颁发的，浏览器会发出另一种警告。
 
 20.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/bg2011080920.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/63f0878f2f66e9c4688cd4b47ce6cace.png)
 
 如果数字证书是可靠的，客户端就可以使用证书中的服务器公钥，对信息进行加密，然后与服务器交换加密信息。
 
@@ -363,7 +363,7 @@ HTTP 由于是明文传输，所谓的明文，就是说客户端与服务端通
 - _冒充风险_，比如冒充淘宝网站，用户钱容易没。
 
 HTTP**S** 在 HTTP 与 TCP 层之间加入了 TLS 协议，来解决上述的风险。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101215952.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f24dbe347f7958f75d06c4a50e28cfa7.png)
 
 TLS 协议是如何解决 HTTP 的风险的呢？
 
@@ -372,7 +372,7 @@ TLS 协议是如何解决 HTTP 的风险的呢？
 - _身份证书_：证明淘宝是真的淘宝网；
 
 可见，有了 TLS 协议，能保证 HTTP 通信是安全的了，那么`在进行 HTTP 通信前，需要先进行 TLS 握手。TLS 的握手过程`，如下图：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220008.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2cd97504f2e9c5c1810c952f8241761c.png)
 
 上图简要概述了 TLS 的握手过程，其中每一个「框」都是一个记录（_record_），记录是 TLS 收发数据的基本单位，类似于 TCP 里的 segment。多个记录可以组合成一个 TCP 包发送，所以**通常经过「四个消息」就可以完成 TLS 握手，也就是需要 2个 RTT 的时延**，然后就可以在安全的通信环境里发送 HTTP 报文，实现 HTTPS 协议。
 
@@ -390,20 +390,20 @@ TLS 协议是如何解决 HTTP 的风险的呢？
 在 RSA 密钥协商算法中，客户端会生成随机密钥，并使用服务端的公钥加密后再传给服务端。根据非对称加密算法，公钥加密的消息仅能通过私钥解密，这样服务端解密后，双方就得到了相同的密钥，再用它加密应用消息。
 
 我用 Wireshark 工具抓了用 RSA 密钥交换的 TLS 握手过程，你可以从下面看到，一共经历了四次握手：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220221.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9dac1d61a52fdb09492ff2947820372c.png)
 
-对应 Wireshark 的抓包，我也画了一幅图，你可以从下图很清晰地看到该过程：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220235.png)
+对应 Wireshark 的抓包，我也画了一幅图，你可以从下图很清晰地看到该过程：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b2e43ccf91fcf88b0bf112af0732a65d.png)
 那么，接下来针对每一个 TLS 握手做进一步的介绍。
 #### 4.2.1 TLS第一次握手
 
-客户端首先会发一个「**Client Hello**」消息，字面意思我们也能理解到，这是跟服务器「打招呼」。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220412.png)消息里面有客户端使用的 TLS 版本号、支持的密码套件列表，以及生成的**随机数（_Client Random_）**，这个随机数会被服务端保留，它是生成对称加密密钥的材料之一
+客户端首先会发一个「**Client Hello**」消息，字面意思我们也能理解到，这是跟服务器「打招呼」。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/df51584921f073d62f819273bbaf88be.png)消息里面有客户端使用的 TLS 版本号、支持的密码套件列表，以及生成的**随机数（_Client Random_）**，这个随机数会被服务端保留，它是生成对称加密密钥的材料之一
 
 #### 4.2.2 TLS第二次握手
 
 当服务端收到客户端的「Client Hello」消息后，会确认 TLS 版本号是否支持，和从密码套件列表中选择一个密码套件，以及生成**随机数（_Server Random_）**。
 
 接着，返回「**Server Hello**」消息，消息里面有服务器确认的 TLS 版本号，也给出了随机数（Server Random），然后从客户端的密码套件列表选择了一个合适的密码套件。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220450.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5f2957905e74042a1bb6a8e0dd555ae4.png)
 
 可以看到，服务端选择的密码套件是 “Cipher Suite: TLS_RSA_WITH_AES_128_GCM_SHA256”。
 
@@ -418,10 +418,10 @@ TLS 协议是如何解决 HTTP 的风险的呢？
 那这个随机数有啥用呢？其实这两个随机数是后续作为生成「会话密钥」的条件，所谓的会话密钥就是数据传输时，所使用的对称加密密钥。
 
 然后，服务端为了证明自己的身份，会发送「**Server Certificate**」给客户端，这个消息里含有数字证书。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220559.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/53d1ca7236091618e798d79160cc4b1c.png)
 
 随后，服务端发了「**Server Hello Done**」消息，目的是告诉客户端，我已经把该给你的东西都给你了，本次打招呼完毕。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220608.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31f8a0f362ab50f1ad2282b0272e4086.png)
 #### 4.2.3 客户端验证证书
 
 在这里刹个车，客户端拿到了服务端的数字证书后，要怎么校验该数字证书是真实有效的呢？
@@ -448,7 +448,7 @@ TLS 协议是如何解决 HTTP 的风险的呢？
 
 如下图图所示，为数字证书签发和验证流程：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220932.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3d7654f8eff4965518209a0a0d7ac6f5.png)
 
 CA 签发证书的过程，如上图左边部分：
 
@@ -466,7 +466,7 @@ CA 签发证书的过程，如上图左边部分：
 
 但事实上，证书的验证过程中还存在一个证书信任链的问题，因为我们向 CA 申请的证书一般不是根证书签发的，而是由中间证书签发的，比如百度的证书，从下图你可以看到，证书的层级有三级：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220936.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6877c7b30aea5dfc1f6a837f9b7459f8.png)
 
 对于这种三级层级关系的证书的验证过程如下：
 
@@ -478,15 +478,15 @@ CA 签发证书的过程，如上图左边部分：
 
 总括来说，由于用户信任 GlobalSign，所以由 GlobalSign 所担保的 baidu.com 可以被信任，另外由于用户信任操作系统或浏览器的软件商，所以由软件商预载了根证书的 GlobalSign 都可被信任。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220941.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/08c9b201670b8475a4ee9609cf5d3943.png)
 
 操作系统里一般都会内置一些根证书，比如我的 MAC 电脑里内置的根证书有这么多：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220945.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b8fc25ddde85472ecc14edc0b0443b65.png)
 
 这样的一层层地验证就构成了一条信任链路，整个证书信任链验证流程如下图所示：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101220949.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9282e96a7aea49a4da341b13efe9ace6.png)
 
 最后一个问题，为什么需要证书链这么麻烦的流程？Root CA 为什么不直接颁发证书，而是要搞那么多中间层级呢？
 
@@ -498,7 +498,7 @@ CA 签发证书的过程，如上图左边部分：
 
 接着，客户端就会生成一个新的**随机数 (_pre-master_)**，用服务器的 RSA 公钥加密该随机数，通过「**Client Key Exchange**」消息传给服务端。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101221046.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bd9d94577a72b96c81853a25804625d5.png)
 
 服务端收到后，用 RSA 私钥解密，得到客户端发来的随机数 (pre-master)。
 
@@ -508,11 +508,11 @@ CA 签发证书的过程，如上图左边部分：
 
 生成完「会话密钥」后，然后客户端发一个「**Change Cipher Spec**」，告诉服务端开始使用加密方式发送消息。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101221051.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/40f9afb865f284ae5f9f67ca56781a86.png)
 
 然后，客户端再发一个「**Encrypted Handshake Message（Finishd）**」消息，把之前所有发送的数据做个**摘要**，再用会话密钥（master secret）加密一下，让服务器做个验证，验证加密通信「是否可用」和「之前握手信息是否有被中途篡改过」。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231101221058.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cb802145b12a63f77a1ce0aa063aa71a.png)
 
 可以发现，「Change Cipher Spec」之前传输的 TLS 握手数据都是明文，之后都是对称密钥加密的密文。
 

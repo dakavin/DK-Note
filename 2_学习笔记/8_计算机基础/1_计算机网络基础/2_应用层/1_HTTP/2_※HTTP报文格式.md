@@ -11,7 +11,7 @@ HTTP 协议在规范文档里详细定义了报文的格式，规定了组成部
 
 有了这个附加的 TCP 头，数据包才能够正确传输，到了目的地后把头部去掉，就可以拿到真正的数据。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231030233514.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/695a56efc3df9525a93b8d2672dda1e3.png)
 
 HTTP 协议也是与 TCP/UDP 类似，同样也需要在实际传输的数据前附加一些头数据，不过与 TCP/UDP 不同的是，它是一个“**纯文本**”的协议，所以头数据都是 ASCII 码的文本，可以很容易地用肉眼阅读，不用借助程序解析也能够看懂。
 
@@ -26,7 +26,7 @@ HTTP 协议规定报文必须有 header，但可以没有 body，而且在 heade
 
 所以，一个完整的 HTTP 报文就像是下图的这个样子，注意在 header 和 body 之间有一个“空行”。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231030233610.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/24e83cc9a2e60833d3aa117666d02413.png)
 
 说到这里，我不由得想起了一部老动画片《大头儿子和小头爸爸》，你看，HTTP 的报文结构像不像里面的“大头儿子”？
 
@@ -34,7 +34,7 @@ HTTP 协议规定报文必须有 header，但可以没有 body，而且在 heade
 
 看一下我们之前用 Wireshark 抓的包吧。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231030233703.png)在这个浏览器发出的请求报文里，第一行“GET / HTTP/1.1”就是请求行，而后面的“Host”“Connection”等等都属于 header，报文的最后是一个空白行结束，没有 body。
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae16ce56154c90d4234b58d9658362df.png)在这个浏览器发出的请求报文里，第一行“GET / HTTP/1.1”就是请求行，而后面的“Host”“Connection”等等都属于 header，报文的最后是一个空白行结束，没有 body。
 
 在很多时候，特别是浏览器发送 GET 请求的时候都是这样，HTTP 报文经常是只有 header 而没 body，相当于只发了一个超级“大头”过来，你可以想象的出来：每时每刻网络上都会有数不清的“大头儿子”在跑来跑去。
 
@@ -49,7 +49,7 @@ HTTP 协议规定报文必须有 header，但可以没有 body，而且在 heade
 2. `请求目标`：通常是一个 URI，标记了请求方法要操作的资源；
 3. `版本号`：表示报文使用的 HTTP 协议版本。
 
-这三个部分通常使用空格（space）来分隔，最后要用 CRLF 换行表示结束。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231030234157.png)
+这三个部分通常使用空格（space）来分隔，最后要用 CRLF 换行表示结束。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9eaf7881917e8b636e7e20f11d4febad.png)
 还是用 Wireshark 抓包的数据来举例：
 
 ```http
@@ -70,7 +70,7 @@ GET / HTTP/1.1
 2. `状态码`：一个三位数，用代码的形式表示处理的结果，比如 200 是成功，500 是服务器错误；
 3. `原因`：作为数字状态码补充，是更详细的解释文字，帮助人理解原因。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231030234320.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c536aa7daf7d8c9270d614bd448fd987.png)
 
 看一下上一讲里 Wireshark 抓包里的响应报文，状态行是：
 
@@ -92,7 +92,7 @@ HTTP/1.1 404 Not Found
 
 请求行或状态行再加上头部字段集合就构成了 HTTP 报文里完整的请求头或响应头，我画了两个示意图，你可以看一下。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231030234406.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fb7da2dad9793c91ac0456f23cd1ca8e.png)
 请求头和响应头的结构是基本一样的，`唯一的区别是起始行`，所以我把请求头和响应头里的字段放在一起介绍。
 
 头部字段是 key-value 的形式，key 和 value 之间用“:”分隔，最后用 CRLF 换行表示字段结束。比如在“Host: 127.0.0.1”这一行里 key 就是“Host”，value 就是“127.0.0.1”。
@@ -154,7 +154,7 @@ HTTP 协议规定了非常多的头部字段，实现各种各样的功能，但
 `Server`
 - **Server**字段是==响应字段==，只能出现在响应头里。它告诉客户端当前正在提供 Web 服务的软件名称和版本号，例如在我们的实验环境里它就是“Server: openresty/1.15.8.1”，即使用的是 OpenResty 1.15.8.1。
 - Server 字段也不是必须要出现的，因为这会把服务器的一部分信息暴露给外界，如果这个版本恰好存在 bug，那么黑客就有可能利用 bug 攻陷服务器。所以，有的网站响应头里要么没有这个字段，要么就给出一个完全无关的描述信息。
-- 比如 GitHub，它的 Server 字段里就看不出是使用了 Apache 还是 Nginx，只是显示为“GitHub.com”。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231030235125.png)
+- 比如 GitHub，它的 Server 字段里就看不出是使用了 Apache 还是 Nginx，只是显示为“GitHub.com”。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4dea05d2d011bddd6311587d777c6417.png)
 `Content-Length`
 - 实体字段里要说的一个是**Content-Length**，它表示报文里 body 的长度，也就是请求头或响应头空行后面数据的长度。服务器看到这个字段，就知道了后续有多少数据，可以直接接收。如果没有这个字段，那么 body 就是不定长的，需要使用 chunked 方式分段传输。
 
@@ -167,4 +167,4 @@ HTTP 协议规定了非常多的头部字段，实现各种各样的功能，但
 	- 无论0个，1个或多个空格，对于HTTP其在语义上是等价的，标准建议用1个空格，即易于阅读，也节省带宽。更高阶的解读则要参考ABNF的语法定义。  
 	- btw:如果包含多个空格，则会原样发出。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031002959.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/84af16a73b4087a389bc7174c7880b3f.png)

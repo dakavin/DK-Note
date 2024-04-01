@@ -48,7 +48,7 @@ List作为最基础的对象，很容易受到比较多的关注。
 ### 2.5 LINKEDLIST编码下，查询节点个数的时间复杂度是多少？
 
 分析：
-- 这个问题我们可以回顾一下LINKEDLIST的表头结构：![](assets/Pasted%20image%2020231015213737.png)
+- 这个问题我们可以回顾一下LINKEDLIST的表头结构：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5293e1b61b87c4f534811dc49797fce.png)
 - LINKEDLIST的表头结构中定义了链表所包含节点数量的字段len，所以LINKEDLIST编码下，查询节点个数的时间复杂度是O(1)
 
 回答：

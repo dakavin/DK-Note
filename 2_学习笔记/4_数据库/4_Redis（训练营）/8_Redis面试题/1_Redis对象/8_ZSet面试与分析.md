@@ -40,7 +40,7 @@ ZSet，也就是有序集合，是非常热门的考察内容。
 ### 2.5 ZSet查询节点总数的平均时间复杂度是多少？
 
 分析：
-- 我们可以查看相关的API底层源码：![](assets/Pasted%20image%2020231020221230.png)
+- 我们可以查看相关的API底层源码：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae79d0315296928255f9ecbd831a22bc.png)
 - 查询有序集合成员总数的API是`zsetLength`，而当编码模式是`REDIS_ENCODING_SKIPLIST`，源码中会直接返回跳表表头结构的length字段，平均时间复杂度是O(1)
 
 回答：
@@ -68,7 +68,7 @@ ZSet，也就是有序集合，是非常热门的考察内容。
 ### 2.8 ZSet为什么用跳表而不是红黑树？
 
 分析：
-- 这个问题可以分析一下Redis作者之前对为什么选择跳表的回复：![](assets/Pasted%20image%2020231020222240.png)
+- 这个问题可以分析一下Redis作者之前对为什么选择跳表的回复：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/070e70a758523a076e070a094f5040e5.png)
 1. 这是和B树相比，主要是说跳表的层高概率可以调整，内存是可以比B树少的，这个应该是应对内存质疑不是重点；
 2. ZRANGE这种范围查询查找，在ZSet中用的是最多的，跳表的缓存局部性不会至少比平衡树差
 3. 足够简单，这是最核心的

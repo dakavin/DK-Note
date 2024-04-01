@@ -26,8 +26,7 @@ Maven 是一款为 Java 项目构建管理、依赖管理的工具（`软件`）
     项目构建是指将源代码、配置文件、资源文件等转化为能够运行或部署的应用程序或库的过程！
 
     Maven 可以管理项目的编译、测试、打包、部署等构建过程。通过实现标准的构建生命周期，Maven 可以确保每一个构建过程都遵循同样的规则和最佳实践。同时，Maven 的插件机制也使得开发者可以对构建过程进行扩展和定制。主动触发构建，只需要简单的命令操作即可。
-
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221712293.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/277a50511692790504ac25a1a2016542.png)
 
 
 
@@ -47,13 +46,13 @@ Maven 是一款为 Java 项目构建管理、依赖管理的工具（`软件`）
 
     **软件安装：** 右键解压即可（绿色免安装）
 
-    **软件结构：**![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221723695.png)
+    **软件结构：**![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d4cf222503bfa90128a4a645160499be.png)
 
 
 
 - `步骤二：设置环境变量`
 
-    **环境变量：** 配置maven\_home 和 path!![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221742666.png)
+    **环境变量：** 配置maven\_home 和 path!![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/212e01f190bfae7e9bcc9cc016542d20.png)
 
 - `步骤三：命令测试`
 ```bash
@@ -89,7 +88,7 @@ mvn -v
             <mirrorOf>central</mirrorOf>
         </mirror>
         ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230925225729.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/24bd25c0748c63226180fc0b75355544.png)
 
 更换新地址
 
@@ -120,12 +119,12 @@ mvn -v
         依次点击
         file / settings / build / build tool / maven
         
-    2.  选中本地maven软件![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221808188.png)
+    2.  选中本地maven软件![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a21be0e728a08f8bcdda767ea90afe4b.png)
 
 
     3.  测试是否配置成功
 
-        **注意**：如果本地仓库地址不变化，只有一个原因，就是maven/conf/settings.xml配置文件编写错误！仔细检查即可！![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221813033.png)
+        **注意**：如果本地仓库地址不变化，只有一个原因，就是maven/conf/settings.xml配置文件编写错误！仔细检查即可！![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e31cde0b7a81e36e30d1a014bf2f018c.png)
 
 
 
@@ -165,7 +164,7 @@ mvn -v
 
 自己后期可以在项目中随意修改！
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221822608.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/84deaf0c84ac589924537e69706a8f69.png)
 
 
 
@@ -175,7 +174,7 @@ mvn -v
     1.  创建一个javasemaven工程
     2.  手动添加web项目结构文件
 
-        注意：结构和命名固定![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221826591.png)
+        注意：结构和命名固定![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/22192159a684e5012d51add16c471aca.png)
 
 
     3.  修改pom.xml文件打包方式
@@ -188,7 +187,7 @@ mvn -v
         <!-- 新增一列打包方式packaging -->
         <packaging>war</packaging>
         ```
-    4.  刷新和校验![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221833232.png)
+    4.  刷新和校验![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d09265163a5d23457053420246387925.png)
 
 
         项目的webapp文件夹出现小蓝点，代表成功！！
@@ -196,11 +195,11 @@ mvn -v
 - `方式二：插件方式创建`
 
     1.  安装插件JBLJavaToWeb
-        file / settings / plugins / marketplace ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221838608.png)
+        file / settings / plugins / marketplace ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4987f8e5868a37fc469373dd9d77834c.png)
 
 
     2.  创建一个javasemaven工程
-    3.  右键、使用插件快速补全web项目![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221843510.png)
+    3.  右键、使用插件快速补全web项目![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14482146a47d9ed3106d346ec89fcc14.png)
 
 
 
@@ -342,11 +341,11 @@ maven项目信息属性配置和读取：
 
 `依赖传递演示：`
 
-项目中，需要导入jackson相关的依赖，通过之前导入经验，jackson需要导入三个依赖，分别为：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221853994.png)
+项目中，需要导入jackson相关的依赖，通过之前导入经验，jackson需要导入三个依赖，分别为：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1144f15169d8521433195b86cf858056.png)
 
 
 
-通过查看网站介绍的依赖传递特性：data-bind中，依赖其他两个依赖![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221859620.png)
+通过查看网站介绍的依赖传递特性：data-bind中，依赖其他两个依赖![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6c77978c8317581abf512ccca91e6941.png)
 
 
 
@@ -363,7 +362,7 @@ maven项目信息属性配置和读取：
 
 `依赖冲突演示：`
 
-当直接引用或者间接引用出现了相同的jar包! 这时呢，一个项目就会出现相同的重复jar包，这就算作冲突！`依赖冲突避免出现重复依赖，并且终止依赖传递！`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221908849.png)
+当直接引用或者间接引用出现了相同的jar包! 这时呢，一个项目就会出现相同的重复jar包，这就算作冲突！`依赖冲突避免出现重复依赖，并且终止依赖传递！`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/59285d3596bb8f3b98cf666cf7b0c6d4.png)
 
 maven自动解决依赖冲突问题能力，会按照自己的原则，进行重复依赖选择。同时也提供了手动解决的冲突的方式，不过不推荐！
 
@@ -419,11 +418,11 @@ F 2.2  A 1.1  B 2.2（最短路径）
       <version>1.2.8</version>
     </dependency>
     ```
-    文件：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221916368.png)
+    文件：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/37ceac09c52c2c97d20e4119c7c04c74.png)
 
 
 
-    脚本使用：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221924020.png)
+    脚本使用：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a38e22aeef52d4be480c99a59bd9727b.png)
 
     ```xml
     使用记事本打开
@@ -437,7 +436,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
 
 项目构建是指将`源代码、依赖库和资源文件等转换成可执行或可部署的应用程序`的过程，在这个过程中包括编译源代码、链接依赖库、打包和部署等多个步骤。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221937909.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b46a3d9ba31441d3db1f7689897bbc3d.png)
 
 
 **主动触发场景：**
@@ -466,7 +465,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
 
 **可视化方式构建:**
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221943150.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d06ecaff3482c3eeddec874c67afe7be.png)
 
 
 **构建命令周期:**
@@ -521,7 +520,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
 
 1.  继承概念
 
-    Maven 继承是指在 Maven 的项目中，让一个项目从另一个项目中继承配置信息的机制。继承可以让我们在多个项目中共享同一配置信息，简化项目的管理和维护工作。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221949785.png)
+    Maven 继承是指在 Maven 的项目中，让一个项目从另一个项目中继承配置信息的机制。继承可以让我们在多个项目中共享同一配置信息，简化项目的管理和维护工作。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6d4ea9a6d6817f3af076ce2091bf72f9.png)
 
 2.  继承作用
 
@@ -535,7 +534,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
     需求：
     -   `多个模块要使用同一个框架，它们应该是同一个版本`，所以整个项目中使用的框架版本需要统一管理。
     -   使用框架时所需要的 jar 包组合（或者说依赖信息组合）需要经过长期摸索和反复调试，最终确定一个可用组合。这个耗费很大精力总结出来的方案不应该在新的项目中重新摸索。
-        通过在父工程中为整个项目维护依赖信息的组合既保证了整个项目使用规范、准确的 jar 包；又能够将以往的经验沉淀下来，节约时间和精力。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221955922.png)
+        通过在父工程中为整个项目维护依赖信息的组合既保证了整个项目使用规范、准确的 jar 包；又能够将以往的经验沉淀下来，节约时间和精力。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/17bbc4fe86f2c66162084c687b6d8e68.png)
 
 3.  `继承语法`
     -   父工程
@@ -658,7 +657,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
 
 4.  聚合演示
 
-    通过触发父工程构建命令、引发所有子模块构建！产生反应堆！![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922222005308.png)
+    通过触发父工程构建命令、引发所有子模块构建！产生反应堆！![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ea45091048da5e307b8842308ca7c256.png)
 
 
 
@@ -666,7 +665,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
 
 ### 5.1 项目需求和结构分析
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922222009500.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/243881431234a28aca91a82fffb96317.png)
 
 
 
@@ -696,7 +695,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
 ### 5.2项目搭建和统一构建
 
 1.  父模块搭建 (micro-shop)
-    1.  创建父工程![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922222014363.png)
+    1.  创建父工程![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/af0e7ab689910fe06c9af386aec7c685.png)
 
 
     2.  pom.xml配置
@@ -776,7 +775,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
         </project>
         ```
 2.  通用模块 (common-service)
-    1.  创建模块![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922222028601.png)
+    1.  创建模块![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1135893435197b18f69f9c17bc8cc210.png)
 
 
     2.  pom.xml配置
@@ -812,7 +811,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
         </project>
         ```
 3.  用户模块 (user-service)
-    1.  创建模块![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922222045620.png)
+    1.  创建模块![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1135893435197b18f69f9c17bc8cc210.png)
 
 
     2.  pom.xml配置
@@ -852,7 +851,7 @@ F 2.2  A 1.1  B 2.2（最短路径）
 
         ```
 4.  订单模块 (order-service)
-    1.  创建模块![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922222108682.png)
+    1.  创建模块![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1135893435197b18f69f9c17bc8cc210.png)
 
 ****
     2.  pom.xml

@@ -49,7 +49,7 @@ public class BookDaoImpl implements BookDao {
 ```
 
 - 代码的内容很简单，就是测试一下万次执行的耗时  
-当在App类中从容器中获取bookDao对象后，分别执行其`save`,`delete`,`update`和`select`方法后会有如下的打印结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211802660.png)
+当在App类中从容器中获取bookDao对象后，分别执行其`save`,`delete`,`update`和`select`方法后会有如下的打印结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8ba2defabc13303c7bc90d01d958946b.png)
 
 
 - `疑问`
@@ -59,7 +59,7 @@ public class BookDaoImpl implements BookDao {
 - 这个案例中其实就使用了Spring的AOP，在不惊动(改动)原有设计(代码)的前提下，想给谁添加额外功能就给谁添加。这个也就是Spring的理念：
 	- `无入侵式！无侵入式!`
 
-说了这么多，Spring到底是如何实现的呢?![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211804575.png)
+说了这么多，Spring到底是如何实现的呢?![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/635327f4734b3a66b75ec86cbef83b4c.png)
 
 
 1. 前面一直在强调，Spring的AOP是对一个类的方法在不进行任何修改的前提下实现增强。对于上面的案例中BookServiceImpl中有`save`,`update`,`delete`和`select`方法,这些方法我们给起了一个名字叫`连接点`
@@ -268,7 +268,7 @@ public class App {
 }
 ```
 
-- 控制台成功输出了当前毫秒值![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211815881.png)
+- 控制台成功输出了当前毫秒值![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/24b3bd768460ca3c4ce623644a595058.png)
 
 
 知识点1：`@EnableAspectJAutoProxy`
@@ -339,7 +339,7 @@ public class MyAdvice {
 
 - `流程三`：初始化bean，判定bean对应的类中的方法（连接点）是否匹配到任意切入点
     - 注意第一步在容器启动的时候，bean对象还没有被创建成功。
-    - 要被实例化bean对象的类中的方法和切入点进行匹配![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211820860.png)
+    - 要被实例化bean对象的类中的方法和切入点进行匹配![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/42cba4fb3bc728f2ff93e910f9bc112b.png)
     - 匹配失败，创建原始对象，如`UserDao`
     - 匹配失败说明不需要增强，直接调用原始对象的方法即可。
 
@@ -389,7 +389,7 @@ public class MyAdvice {
 ```
 
 - `步骤三：`运行程序  
-	输出结果如下，确实是目标对象本身，符合我们的预期![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211831648.png)
+	输出结果如下，确实是目标对象本身，符合我们的预期![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/905e5aa1ac40c44bdc3b6631402855b2.png)
 
 
 - `步骤四：`修改MyAdvice类，改为增强  
@@ -410,7 +410,7 @@ public class MyAdvice {
 }
 ```
 
-- `步骤五：`运行程序![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211835259.png)
+- `步骤五：`运行程序![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/377d2ba8775b27e94af252bb2da04dda.png)
 
 
 
@@ -619,7 +619,7 @@ execution(* com.blog.*.*Service.save*(..))
 - 返回后通知(了解)
 - 抛出异常后通知(了解)
 
-为了更好的理解这几种通知类型，我们来看一张图![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211844280.png)
+为了更好的理解这几种通知类型，我们来看一张图![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e407c4050918f42f3433a13b379458c9.png)
 
 
 1. 前置通知，追加功能到方法执行前,类似于在代码1或者代码2添加内容
@@ -723,7 +723,7 @@ public class MyAdvice {
 }
 ```
 
-- 运行程序，输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211858586.png)
+- 运行程序，输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/30e03ef2bead767d700f0ef7cabee6c6.png)
 
 
 - `后置通知`
@@ -747,7 +747,7 @@ public class MyAdvice {
 }
 ```
 
-- 运行程序，输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211901429.png)
+- 运行程序，输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c5a1bdab97b8be16fbd7ff338d80222a.png)
 
 
 - `环绕通知`：基本使用
@@ -767,7 +767,7 @@ public class MyAdvice {
 }
 ```
 
-- 运行程序，输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211904609.png)
+- 运行程序，输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fce365cec03a337b051fedf5dc31b4e2.png)
 
 
 运行结果中，通知的内容打印出来，但是原始方法的内容却没有被执行。
@@ -793,7 +793,7 @@ public class MyAdvice {
 }
 ```
 
-- 运行程序，输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211907366.png)
+- 运行程序，输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fe6622bc62f92faa57a048a46459a18e.png)
 
 
 - 注意事项
@@ -829,7 +829,7 @@ public class App {
 }
 ```
 
-- 运行程序，报错![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211910773.png)
+- 运行程序，报错![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9378dd38244760bedb101a2315e3f177.png)
 
 
 	- void就是返回Null
@@ -854,7 +854,7 @@ public class MyAdvice {
 }
 ```
 
-- 运行程序，结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211913624.png)
+- 运行程序，结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/573fb03039dbeb3795a53628d6cb68a4.png)
 
 
 - `说明`:
@@ -877,7 +877,7 @@ public class MyAdvice {
 }
 ```
 
-- 运行程序，结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211916515.png)
+- 运行程序，结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5a4841c5f6446005f6660d8acc56fb35.png)
 
 
 - `注意`：  
@@ -892,10 +892,10 @@ public int select() {
 }
 ```
 
-- 运行程序，输出如下，没有输出`afterReturning advice ...`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211920025.png)
+- 运行程序，输出如下，没有输出`afterReturning advice ...`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8e37b41d4461e040caa4da5e3587d12a.png)
 
 
-- 我们再换成后置输出，运行程序，结果如下，输出了`after advice ...`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211921976.png)
+- 我们再换成后置输出，运行程序，结果如下，输出了`after advice ...`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/acb6a0660010ffe8cc71bbf81cfdb5ce.png)
 
 
 - `异常后通知`
@@ -914,12 +914,12 @@ public class MyAdvice {
 }
 ```
 
-- 运行程序，输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211935109.png)
+- 运行程序，输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e91ef3d72d530d3f19dba986d159536a.png)
 
 
 学习完这5种通知类型，我们来思考下`环绕通知是如何实现其他通知类型的功能的?`
 
-因为环绕通知是可以控制原始方法执行的，所以我们把增强的代码写在调用原始方法的不同位置就可以实现不同的通知类型的功能，如![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211937370.png)
+因为环绕通知是可以控制原始方法执行的，所以我们把增强的代码写在调用原始方法的不同位置就可以实现不同的通知类型的功能，如![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d0bb6e7e9543c9b7c6694b2b8f4d3560.png)
 
 
 ### 2.4 通知类型总结
@@ -1337,7 +1337,7 @@ public class ProjectAdvice {
 ```
 
 - `步骤五：`运行单元测试类  
-	运行结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211953217.png)
+	运行结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4d04e14a0a4837df58a7033fc13f2e1b.png)
 
 
 - `步骤六：` 程序优化  
@@ -1361,7 +1361,7 @@ public void runSpeed(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 }
 ```
 
-再次运行程序，结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211959094.png)
+再次运行程序，结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d49f3c36555745d494f0f9681308f920.png)
 
 - `说明`
 	- 当前测试的接口执行效率仅仅是一个理论值，并不是一次完整的执行过程。  
@@ -1492,7 +1492,7 @@ public class MyAdvice {
 }
 ```
 
-运行App类，可以获取如下内容，说明参数9527已经被获取![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212006634.png)
+运行App类，可以获取如下内容，说明参数9527已经被获取![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fafab1c8af0267a622effd0039c66655.png)
 
 
 - **思考:方法的参数只有一个，为什么获取的是一个数组?**
@@ -1526,7 +1526,7 @@ public class App {
 }
 ```
 
-- 输出结果如下，两个参数都已经被获取到![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212010247.png)
+- 输出结果如下，两个参数都已经被获取到![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f7c9a0b66aa0b92b770e07c929169e6a.png)
 
 
 
@@ -1550,7 +1550,7 @@ public class MyAdvice {
 }
 ```
 
-- 运行App后查看运行结果，说明ProceedingJoinPoint也是可以通过getArgs()获取参数![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212013507.png)
+- 运行App后查看运行结果，说明ProceedingJoinPoint也是可以通过getArgs()获取参数![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/61a4949eff3704c1f924f3f5d85508de.png)
 `注意:`
 
 - `pjp.proceed()方法是有两个构造方法，分别是`:
@@ -1578,7 +1578,7 @@ public class MyAdvice {
 }
 ```
 
-- 运行程序，输出结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212018197.png)
+- 运行程序，输出结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/948d72ec30bd414cef9da577d5dde65c.png)
 
 
 - 有了这个特性后，我们就`可以在环绕通知中对原始方法的参数进行拦截过滤`，避免由于参数的问题导致程序无法正确运行，还可以根据参数来给予不同的权限，提高代码的健壮性。
@@ -1623,7 +1623,7 @@ public class MyAdvice {
 }
 ```
 
-运行程序，输出如下，成功获取了返回值![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212023506.png)
+运行程序，输出如下，成功获取了返回值![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/769bdd520eb3fefe700ce38286f3fe9d.png)
 
 
 
@@ -1698,7 +1698,7 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-- 运行程序，输出如下，成功输出了异常![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212028106.png)
+- 运行程序，输出如下，成功输出了异常![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1ef8c843001ac39fbb3fa0b26ffeea4b.png)
 
 
 - 至此，AOP通知如何获取数据就已经讲解完了，数据中包含`参数`、`返回值`、`异常(了解)`。
@@ -2296,7 +2296,7 @@ public class SpringConfig {
 
 这部分我们重点要理解两个概念，分别是`事务管理员`和`事务协调员`。
 
-当未开启Spring事务之前![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212046240.png)
+当未开启Spring事务之前![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b07b03c1ed52b8e8fc1a37d938cbd45b.png)
 
 
 - AccountDao的outMoney因为是修改操作，会开启一个事务T1
@@ -2306,7 +2306,7 @@ public class SpringConfig {
     - 如果在两个方法中间抛出异常，T1因为执行成功提交事务，T2因为抛异常不会被执行
     - 就会导致数据出现错误
 
-当开启Spring的事务管理后![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212048507.png)
+当开启Spring的事务管理后![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3645aa16de6686079f37219350d4f8c9.png)
 
 
 - transfer上添加了@Transactional注解，在该方法上就会有一个事务T
@@ -2479,7 +2479,7 @@ public class AccountServiceImpl implements AccountService {
 
 ### 3.3 事务传播行为
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212055113.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/794ef04d222965baaba26cb088745478.png)
 
 
 

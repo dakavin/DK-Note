@@ -35,10 +35,10 @@ Java 是面向对象的编程语言，对象就是面向对象程序设计的核
 ### 2.1 继承性
 
 如同生活中的子女继承父母拥有的所有财产，`程序中的继承性是指子类拥有父类的全部特征和行为，这是类之间的一种关系。` `Java 只支持单继承。  `
-  
-例如定义一个语文老师类和数学老师类，如果不采用继承方式，那么两个类中需要定义的属性和方法如下图所示。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231014121929.png)
-从图中能够看出，语文老师类和数学老师类中的许多属性和方法相同，这些相同的属性和方法可以提取出来放在一个父类中，这个父类用于被语文老师类和数学老师类继承。当然父类还可以继承别的类，如下图所示。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231014122003.png)
-总结上图的继承关系，可以用概括的树形关系来表示，如下图所示。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231014122036.png)
+
+例如定义一个语文老师类和数学老师类，如果不采用继承方式，那么两个类中需要定义的属性和方法如下图所示。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e28d314faa8aa0038594d9421ee8063c.png)
+从图中能够看出，语文老师类和数学老师类中的许多属性和方法相同，这些相同的属性和方法可以提取出来放在一个父类中，这个父类用于被语文老师类和数学老师类继承。当然父类还可以继承别的类，如下图所示。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/28f9ca3973b7dab496b338d63ce7bae6.png)
+总结上图的继承关系，可以用概括的树形关系来表示，如下图所示。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a166c4bad3a531a7d9fe5c85609ffe3b.png)
 从上图可以看出，学校主要人员是一个大的类别，老师和学生是学校主要人员的两个子类，而老师又可以分为语文老师和数学老师两个子类，学生也可以分为班长和组长两个子类。
 
 使用这种层次的分类方式，是为了将多个类的通用属性和方法提取出来，放在它们的父类中，然后只需要在子类中各自定义自己独有的属性和方法，并以继承的形式在父类中获取它们通用属性和方法即可。
@@ -59,6 +59,6 @@ ps：[C++](https://c.biancheng.net/cplus/) 支持多继承，多继承就是一
 
 面向对象的多态性，即“一个接口，多个方法”。多态性体现在父类定义的属性和方法被子类继承猴，可以具有不同的属性或表现方式。
 
-`多态性允许一个接口被多个同类使用`，弥补了单继承的不足。多态概念可以用树形关系来表示，如图所示![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240131215756360.png)
+`多态性允许一个接口被多个同类使用`，弥补了单继承的不足。多态概念可以用树形关系来表示，如图所示![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/65d78cd91c81160019c68a4e4ed6c056.png)
 可以看出，老师类中的许多属性和方法可以被语文老师类和数学老师类同时使用，这样也不易出错
 

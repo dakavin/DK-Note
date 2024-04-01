@@ -2,7 +2,7 @@
 TCP/IP是如何在媒介上进行传输的呢？本节将介绍使用TCP/IP时，从应用层到物理媒介为止数据处理的流程。
 ## 1、数据包首部
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231022205008.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f82bbe5ede0050ca5d1c9b9501b3f06d.png)
 
 每个分层中，都会对所发送的数据附加一个首部，在这个首部中包含了该层必要的信息，如发送的目标地址以及协议相关信息。通常，`为协议提供的信息为包首部`，所要发送的内容为数据。如上图所示，在下一层的角度看，从上一分层收到的包全部都被认为是本层的数据。
 
@@ -65,13 +65,13 @@ IP包生成后，参考路由控制表决定接收此IP包的路由或主机。�
 
 根据上述信息产生的以太网数据包将通过物理层传输给接收端。发送处理中的FCS（Frame Check Sequence）有硬件计算，添加到包的最后。设置FCS的目的是为了判断数据包是否由于噪声而被破坏。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231022211347.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f02e792f4a3ffb14f60aa19b642f7719.png)
 
 ## 3、经过数据链路的包
 
 `分组数据包`（以下简称包）经过以太网的数据链路时的大致流程如下图所示，不过请注意，该图对各个包首部做了简化。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231022211501.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/458972f850dce807073495793217857a.png)
 
 包流动时，从前往后依次被附加了以太网包首部、IP包首部、TCP包首部（或者UDP包首部）以及应用自己的包首部和数据。而包的最后则谁家了以太网包尾（包首部附加于包的前端，而包尾则追加到包的后端部分）。
 
@@ -127,7 +127,7 @@ SNS（Social Network Service），社交网络，是一种即时共享，即时�
 - 首先，由于移动电话、智能手机、平板电脑等在进行分组数据的通信，因此在它们转入电池开机的那一刻，已经由通信运营商设定了具体的IP地址。
 - 启动移动电话中的应用程序时，会连接指定的服务器，经过用户名、密码验证以后服务器上累积的信息就会发送到手机终端上，并由该终端显示具体内容
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231022213510.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2e07b39bed88f3a5eae47edc47ba49c1.png)
 
 类似地，通过SNS轻轻一点就能够运行各种工具、发送文本动画等，这都基于互联网的TCP/IP应用。因此，在排查这些应用的问题时，TCP/IP的知识是必不可少的。
 

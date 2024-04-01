@@ -20,13 +20,13 @@
 
 > Servlet (server applet) 是运行在服务端(tomcat)的Java小程序，是sun公司提供一套定义动态资源规范; 从代码层面上来讲Servlet就是一个接口
 
-- 用来接收、处理客户端请求、响应给浏览器的动态资源。在整个Web应用中，Servlet主要负责接收处理请求、协同调度功能以及响应数据。我们可以把Servlet称为Web应用中的**控制器**![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316221431.png)
+- 用来接收、处理客户端请求、响应给浏览器的动态资源。在整个Web应用中，Servlet主要负责接收处理请求、协同调度功能以及响应数据。我们可以把Servlet称为Web应用中的**控制器**![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b35034651b1c647025d1547841614008.png)
 - 不是所有的JAVA类都能用于处理客户端请求,`能处理客户端请求并做出响应的一套技术标准就是Servlet`
 + `Servlet是运行在服务端的`,所以 Servlet必须在WEB项目中开发且在Tomcat这样的服务容器中运行
 
 > 请求响应与HttpServletRequest和HttpServletResponse之间的对应关系
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316221538.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c6a6248415e89313b308373aaa07cc7.png)
 # 2、Servlet开发流程
 
 ## 2.1 目标
@@ -130,10 +130,10 @@ public class UserServlet  extends HttpServlet {
 
 > 启动项目,访问index.html ,提交表单测试
 
-+ 使用debug模式运行测试![|500](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316232558.png)
++ 使用debug模式运行测试![|500|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c66d72672e3a67de6a984e39266b58b3.png)
 > 映射关系图
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316232705.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31419a1e99089f2e74d7ed0325536341.png)
 # 3、Servlet注解方式配置
 
 ## 3.1 @WebServlet注解源码
@@ -374,7 +374,7 @@ public class ServletLifeCycle  extends HttpServlet {
 
 ## 5.1 Servlet接口
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317001254.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2743ab244130f6c9eef4fe301d312ed6.png)
 
 > 接口及方法说明
 
@@ -485,7 +485,7 @@ public class ServletLifeCycle  extends HttpServlet {
 
 ## 5.4 自定义 Servlet
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317001947.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d28bb0175dbb8d60a0841aa539937f8e.png)
 
 自定义Servlet中,必须要对处理请求的方法进行重写
 
@@ -499,7 +499,7 @@ public class ServletLifeCycle  extends HttpServlet {
 
 - 为Servlet提供初始配置参数的一种对象,`每个Servlet都有自己独立唯一的ServletConfig对象`
     
-- 容器会为每个Servlet实例化一个ServletConfig对象,并通过Servlet生命周期的init方法传入给Servlet作为属性![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317171510.png)
+- 容器会为每个Servlet实例化一个ServletConfig对象,并通过Servlet生命周期的init方法传入给Servlet作为属性![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c9f679b70e5e1917a7a6fbd82e2dcc73.png)
 > ServletConfig是一个接口,定义了如下API
 
 ```java 
@@ -564,7 +564,7 @@ public class ServletA extends HttpServlet {
     </servlet-mapping>
 ```
 
-- 也可以通过@WebServlet注解进行配置![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317172543.png)
+- 也可以通过@WebServlet注解进行配置![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4c36c07ab6c0a1b213a673043047fce8.png)
 
 ## 6.2 ServletContext的使用（重要）
 
@@ -573,7 +573,7 @@ public class ServletA extends HttpServlet {
 + ServletContext对象有称呼为上下文对象,或者叫应用域对象(后面统一讲解域对象)
 + 容器会为`每个app创建一个独立的唯一的ServletContext对象`
 + ServletContext对象`为所有的Servlet所共享`
-+ ServletContext可以为所有的Servlet提供初始配置参数![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317172843.png)
++ ServletContext可以为所有的Servlet提供初始配置参数![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/655fbb54ae905b459e6b088be04fc4ab.png)
 
 > ServletContext怎么用
 
@@ -636,7 +636,7 @@ String realPath = servletContext.getRealPath("资源在web目录中的路径");
 > 获取项目的上下文路径（即项目的访问路径）
 > 主要涉及：后端动态获取项目根路径
 
-![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317174202.png)
+![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/72550dd23ae7442c9e3b6af90b021734.png)
 [2.6.5 IDEA部署并运行项目的原理](5_XML和HTTP.md#2.6.5%20IDEA部署并运行项目的原理)
 
 ``` java
@@ -687,7 +687,7 @@ String contextPath = servletContext.getContextPath();
 | String getScheme();           | 获取请求协议                  |
 | String getProtocol();         | 获取请求协议及版本号              |
 | `String getMethod()`;         | 获取请求方式                  |
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317180215.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c6dd9106ebd95694551685e9ac76454a.png)
 
 + 获得`请求头`信息相关
 
@@ -722,7 +722,7 @@ String contextPath = servletContext.getContextPath();
 | `HttpSession getSession()`;                    | 获取Session对象        |
 | `void setCharacterEncoding(String encoding) `; | 设置请求体字符集           |
 - 注意：
-	- getContextPath() 和 getServletPath() 方法的区别![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317182047.png)
+	- getContextPath() 和 getServletPath() 方法的区别![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a550f17bab65966f825f8b4a08f402a3.png)
 	- 一般我们将ContextPath设置为 `/`
 # 8、HttpServletResponse
 
@@ -734,7 +734,7 @@ String contextPath = servletContext.getContextPath();
 + HttpServletResponse是Tomcat预先创建的,在Tomcat调用service方法时传入
 + HttpServletResponse代表对客户端的响应,该对象会被转换成响应的报文发送给客户端,通过该对象我们可以设置响应信息
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317200710.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c6a6248415e89313b308373aaa07cc7.png)
 ## 8.2 常见API
 
 > HttpServletRequest怎么用
@@ -806,7 +806,7 @@ String contextPath = servletContext.getContextPath();
 
 > 请求转发运行逻辑图
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317201914.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e17c6b992edd5f0e5541992ee932287.png)
 
 > 请求转发特点(背诵)
 
@@ -871,7 +871,7 @@ public class ServletB extends HttpServlet {
 
 > 响应重定向运行逻辑图
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317203629.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/963fb691b98620652db8b0421f219526.png)
 
 > 响应重定向特点(背诵)
 
@@ -967,16 +967,16 @@ public class ServletB extends HttpServlet {
   1. web目录下的视图资源 html css js img 等
   2. 前端工程化后,在后端项目中已经不存在了
 
-`非前后端分离的MVC`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317212235.png)
-`前后端分离的MVC`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317212304.png)
+`非前后端分离的MVC`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/46989d809dbe38c77769ee2ab42324be.png)
+`前后端分离的MVC`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/58a1254c2afd94b8e43fc6511ac6053f.png)
 # 12、补充
 
 ## 12.1 servlet-api导入问题
 
 - HttpServlet类是属于servlet-api.jar这个jar包的
 - 而这个jar包，本身就在Tomcat中的bin文件夹中
-- 所以使用的时候，在项目导入Tomcat即可，且是provided的（表示编码的时候需要，运行的时候不需要--Tomcat本身提供了）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316233408.png)
-- 如果我们，在WEB-INF文件夹下创建了lib目录，并导入了这个jar包，在运行文件的时候，就会把这个jar包导出，增加了项目的体积![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316233446.png)
+- 所以使用的时候，在项目导入Tomcat即可，且是provided的（表示编码的时候需要，运行的时候不需要--Tomcat本身提供了）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/afdac2af65f84523acbeda962c9ef0d8.png)
+- 如果我们，在WEB-INF文件夹下创建了lib目录，并导入了这个jar包，在运行文件的时候，就会把这个jar包导出，增加了项目的体积![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/75806cb211842df234a05da69f263595.png)
 
 ## 12.2 Content-Type响应头的问题
 
@@ -985,7 +985,7 @@ public class ServletB extends HttpServlet {
 - 返回给客户端一个MIME类型，告诉客户端应该按MIME类型进行处理响应数据
 - 在tomcat文件夹中，找到conf文件夹中的web.xml文件，即可找到MIME-TYPE与字符串对应的类型
 - MIME类型（处理静态资源）
-	- text/html：客户端按照html格式进行解析![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316234453.png)
-	- image/png：客户端按照png格式进行解析![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316234421.png)
+	- text/html：客户端按照html格式进行解析![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/348855b228fb794012871f19aba3360e.png)
+	- image/png：客户端按照png格式进行解析![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e13a6f4eefdf08d4732366b806bf4a16.png)
 - 像servlet这些，就不是静态资源，如果在代码中没有设置Content-Type，客户端不知道当作将响应当作什么来处理
-	- 设置Content-Type，让客户端当成html来解析![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240316235146.png)
+	- 设置Content-Type，让客户端当成html来解析![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0f45b13370a458d2ce5b4d606c319cb6.png)

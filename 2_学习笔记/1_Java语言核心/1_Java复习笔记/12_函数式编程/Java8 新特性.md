@@ -43,7 +43,7 @@
 
 Java 8 (又称为 JDK 8或JDK1.8) 是 Java 语言开发的一个主要版本。 Java 8 是oracle公司于2014年3月发布，可以看成是自Java 5 以来最具革命性的版本。Java 8为Java语言、编译器、类库、开发工具与JVM带来了大量新特性。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070017893.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dfef03ebf4ab57b4e90c3cc1ecf0ca08.png)
 
 
 - 速度更快
@@ -103,13 +103,13 @@ Lambda 是一个**匿名函数**，我们可以把 Lambda 表达式理解为是*
 
 - 从匿名类到 Lambda 的转换举例1
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070037279.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/750cbbf1cdb934350f6429c1cf7ed3b5.png)
 
 
 
 - 从匿名类到 Lambda 的转换举例2
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070050629.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f5a2afd3ae02e4a46fcaea8930c9b0a7.png)
 
 ### 1.5 语法
 
@@ -293,7 +293,7 @@ public void test7(){
 
 在语法格式三 Lambda 表达式中的参数类型都是由编译器推断得出的。Lambda 表达式中无需指定类型，程序依然可以编译，这是因为 javac 根据程序的上下文，在后台推断出了参数的类型。Lambda 表达式的类型依赖于上下文环境，是由编译器推断出来的。这就是所谓的“`类型推断`”。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070121664.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8ddaa11b5a1e7761ccd01aa935d561e0.png)
 
 举例：
 
@@ -319,7 +319,7 @@ public void test() {
 
 ### 2.2 如何理解函数式接口
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070129905.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/76b7f5e7c7e87366fc00e54981f995c5.png)
 
 - Java从诞生日起就是一直倡导“一切皆对象”，在Java里面面向对象(OOP)编程是一切。但是随着python、scala等语言的兴起和新技术的挑战，Java不得不做出调整以便支持更加广泛的技术要求，即Java不但可以支持OOP还可以支持OOF（面向函数编程）
   - Java8引入了Lambda表达式之后，Java也开始支持函数式编程。
@@ -335,15 +335,15 @@ public void test() {
 
 举例1：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070137125.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3e60dcdc2fdfacb3110aac6547b4fbb5.png)
 
 举例2：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070142448.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5741494073967d75da2d4eb93ff451f9.png)
 
 作为参数传递 Lambda 表达式：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070158143.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/869e728cf88cb1dab36bd9ee5ff8cfcd.png)
 
 
 > 作为参数传递 Lambda 表达式：为了将 Lambda 表达式作为参数传递，接收Lambda 表达式的参数类型必须是与该 Lambda 表达式兼容的函数式接口的类型。
@@ -1233,7 +1233,7 @@ Stream 和 Collection 集合的区别：**Collection 是一种静态的内存数
 **3- 终止操作(终端操作)**
 终止操作的方法返回值类型就不再是Stream了，因此一旦执行终止操作，就结束整个Stream操作了。一旦执行终止操作，就执行中间操作链，最终产生结果并结束Stream。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/image-20230922070540162.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7f1548341d6eeeca4b40336129c0f634.png)
 
 #### 4.4.1 创建Stream实例
 

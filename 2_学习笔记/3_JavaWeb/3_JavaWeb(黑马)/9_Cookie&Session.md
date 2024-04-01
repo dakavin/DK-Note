@@ -49,10 +49,10 @@
 
 ### 2.3 实现原理
 
-* 基于响应头set-cookie和请求头cookie实现![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074810072.png)
+* 基于响应头set-cookie和请求头cookie实现![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6cfbb28006295e593ee81fb1763d8e16.png)
 
 
-* 案例Demo1中设置Cookie（响应头中发送给浏览器），Demo2中获取Cookie（在请求头中发送Cookie）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074817411.png)
+* 案例Demo1中设置Cookie（响应头中发送给浏览器），Demo2中获取Cookie（在请求头中发送Cookie）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d9290a05ac2f0b92582d6bf2a00a25d7.png)
 
 
 
@@ -161,8 +161,8 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
 ### 3.2 原理
 
-* JSP本质上就是一个Servlet![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074827646.png)
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074837428.png)
+* JSP本质上就是一个Servlet![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d138e806b447c5735be3ec66c5455948.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7a62d947056d81d0dd8b2490ada93f23.png)
 
 
 
@@ -247,7 +247,7 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
 ### 4.3 原理
 
-- 服务器如何确保一次会话范围内，多次获取的Session对象是同一个？？？![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074847199.png)
+- 服务器如何确保一次会话范围内，多次获取的Session对象是同一个？？？![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bba0af38cdea99abb9db1c5ac90c5e17.png)
 
 
 * `Session的实现是依赖于Cookie的`
@@ -274,7 +274,7 @@ response.addCookie(c);
 	1. `服务器关闭`
 	2. `session对象调用invalidate() `
 	3. `session默认失效时间 30分钟`，
-	4. 在tomcat是默认配置的，路径为tomcat所在文件夹，然后conf文件夹，找到web.xml文件修改即可![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074854753.png)
+	4. 在tomcat是默认配置的，路径为tomcat所在文件夹，然后conf文件夹，找到web.xml文件修改即可![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/64aafdf6d60cb43cce7cccab0ed8796a.png)
 
 
 
@@ -321,7 +321,7 @@ response.addCookie(c);
 						- 跳转到主页success.jsp
 						- 显示：用户名，欢迎你！
 
-- ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074902173.png)
+- ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b55042006e834614dfdc5c5a6e023cc8.png)
 
 
 

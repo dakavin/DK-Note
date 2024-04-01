@@ -49,7 +49,7 @@ java语言中有8中基本数据类型，分为四大类型：
 
 - 变量：使用long关键字来声明long型变量 long i=897L;
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201164701137.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fe91828541d35e0f19e038f4ed0fee6e.png)
 
 ### 1.3 浮点类型
 
@@ -64,7 +64,7 @@ java语言中有8中基本数据类型，分为四大类型：
 
 - 变量：使用double关键字来声明double型变量 double th=8.9;
 
-  ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201164755784.png)
+  ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d0021d70885005995eaebe021853fd57.png)
 
 
 ### 1.4 字符类型

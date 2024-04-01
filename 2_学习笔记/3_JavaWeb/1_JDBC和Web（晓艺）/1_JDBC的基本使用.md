@@ -18,7 +18,7 @@
 	- 其实是Java官方定义的一套操作所有关系型数据库的接口。各个数据库厂商区实现这套接口，提供数据库驱动jar包（实现类）
 	- 我们可以使用这套接口（JDBC）编程，真正执行的代码是驱动jar包中的实现类
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922073757245.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dcf58bf8f60577b61e8dffe7cec44607.png)
 
 
 
@@ -113,7 +113,7 @@ PreparedStatement prepareStatement(String sql) 
 	- a、性能更好，PreparedStatement中参数使用?作为占位符，编译后会被缓存下来，下次调用相同的预编译语句时不需要重新编译，只需传入对应参数就行，参数使用?作为占位符。
 	
 	- b、可以解决SQL注入问题：preparedStatement不是将参数简单拼凑成sql，而是做了一些预处理，将参数转换为string，两端加单引号，将参数内的一些特殊字符（换行，单双引号，斜杠等）做转义处理。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922073806432.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4f597fe872829d83daf853b604a870e7.png)
 
 
 

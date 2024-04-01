@@ -2,7 +2,7 @@
 
 上面的快速入门就是发送同步消息，发送过后会有一个返回值，也就是mq服务器接收到消息后返回的一个确认，这种方式非常安全，但是性能上并没有这么高，而且在mq集群中，也是要等到所有的从机都复制了消息以后才会返回，所以针对重要的消息可以选择这种方式
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231351579.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f013dd07f0dac0bf43734c982a1df13f.png)
 
 - 同步消息的特点，`生产者发送消息后会等待消息发送成功的确认`
 	- 单mq服务器接到消息后会返回确认
@@ -182,7 +182,7 @@ rocketMq的broker的机制，导致了rocketMq会有这个问题
 
 因为一个broker中对应了四个queue
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231451810.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c95edfcd162eb8e7f3a1d58e6fc14c5c.png)
 
 顺序消费的原理解析，在默认的情况下消息发送会采取Round Robin轮询方式把消息发送到不同的queue(分区队列)；而消费消息的时候从多个queue上拉取消息，这种情况发送和消费是不能保证顺序。
 
@@ -361,9 +361,9 @@ public void testBatchConsumer() throws Exception{
 
 它可以被认为是一个`两阶段的提交消息实现`，以`确保分布式系统的最终一致性`。事务性消息确保本地事务的执行和消息的发送可以原子地执行。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231525358.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ec6e700dde38522c135c981330811ca3.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231531034.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f589be2de5f49a8805d90972dc9ab3a9.png)
 
 
 
@@ -480,7 +480,7 @@ public void testTransactionConsumer() throws Exception {
 
 ## 7.4 测试结果
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231554717.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/35f72ca649b73564c88536092e4bbe1f.png)
 # 八、发送带标签的消息，消息过滤
 
 Rocketmq提供消息过滤功能，通过tag或者key进行区分
@@ -565,7 +565,7 @@ public void testTagConsumer2() throws Exception {
 
 在rocketmq中的消息，`默认会有一个messageId当做消息的唯一标识`，我们`也可以给消息携带一个key`，`用作唯一标识或者业务标识`，包括在控制面板查询的时候也可以使用messageId或者key来进行查询
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231625954.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/21f7971766becda32adbcacf9ae01fe1.png)
 
 ## 9.1 带key消息生产者
 
@@ -614,5 +614,5 @@ public void testKeyConsumer() throws Exception {
 }
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231650966.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a8dc44f36af475bdca0d1574474ee606.png)
 

@@ -4,13 +4,13 @@
 ### 1.1 总体技术体系
 
 -   `单一架构`
-    一个项目，一个工程，导出为一个war包，在一个Tomcat上运行。也叫all in one。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213725544.png)
+    一个项目，一个工程，导出为一个war包，在一个Tomcat上运行。也叫all in one。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0d29b87869ffe88f930010d47bb8dfb1.png)
 
 
     单一架构，项目主要应用技术框架为：`Spring` , `SpringMVC` , `Mybatis`
 
 -   `分布式架构`
-    一个项目（对应 IDEA 中的一个 project），拆分成很多个模块，每个模块是一个 IDEA 中的一个 module。每一个工程都是运行在自己的 Tomcat 上。模块之间可以互相调用。每一个模块内部可以看成是一个单一架构的应用。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213727486.png)
+    一个项目（对应 IDEA 中的一个 project），拆分成很多个模块，每个模块是一个 IDEA 中的一个 module。每一个工程都是运行在自己的 Tomcat 上。模块之间可以互相调用。每一个模块内部可以看成是一个单一架构的应用。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fa9048c3bc59727e9f1cf8c931f41962.png)
 
 
     分布式架构，项目主要应用技术框架：`SpringBoot` (SSM), `SpringCloud` , `中间件等`
@@ -19,7 +19,7 @@
 
 框架( Framework )是一个集成了基本结构、规范、设计模式、编程语言和程序库等基础组件的软件系统，它可以用来构建更高级别的应用程序。框架的设计和实现旨在解决特定领域中的常见问题，`帮助开发人员更高效、更稳定地实现软件开发目标`。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213735906.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c4139da4a4dbe658400907972c00d9c7.png)
 
 
 
@@ -39,7 +39,7 @@
 
 站在文件结构的角度理解框架，可以将框架总结：**框架 = jar包+配置文件**
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213812921.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e7c31ed6859b153c099a1ad921074452.png)
 
 
 莎士比亚说,"一千个观众眼中有一千个哈姆雷特" 即仁者见仁,智者见智.说每个人都会对作品有不同的理解，每个人对待任何事物都有自己的看法，同样的技术解决同样的问题会产生不同流程和风格的解决方案，而采用一种框架其实就是限制用户必须使用其规定的方案来实现，可以降低程序员之间沟通以及日后维护的成本！
@@ -80,7 +80,7 @@ QQ = SpringFramework
 
 ### 2.2 SpringFramework主要功能模块
 
-SpringFramework框架结构图：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213823682.png)
+SpringFramework框架结构图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fa8026fabc65c03ebb186424fad275b4.png)
 
 
 
@@ -108,10 +108,10 @@ Spring 使创建 Java 企业应用程序变得容易。它提供了在企业环�
 
 #### 3.1.1 什么是组件?
 
-回顾常规的三层架构处理请求流程：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213828938.png)
+回顾常规的三层架构处理请求流程：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c61820bc90e2c7097ad8c921e3b1dc31.png)
 
 
-`整个项目就是由各种组件搭建而成的`：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213830842.png)
+`整个项目就是由各种组件搭建而成的`：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fbfc73e8e3ff4e57d9f3447295c13c77.png)
 
 
 #### 3.1.2 我们的期待
@@ -154,7 +154,7 @@ Spring具体的组件管理动作包含：
 #### 3.2.1 普通和复杂容器
 
 **普通容器**
-生活中的普通容器 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213851486.png)
+生活中的普通容器 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f0795047f504a159b54c97b9c3704a0b.png)
 
 
 > 普通容器只能用来存储，没有更多功能。
@@ -166,7 +166,7 @@ Spring具体的组件管理动作包含：
 	**复杂容器**
 生活中的复杂容器
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213902880.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/90d659d8e96042e03c749000ac4d87db.png)
 
 
 > 政府管理我们的一生，生老病死都和政府有关。
@@ -187,7 +187,7 @@ Spring具体的组件管理动作包含：
 
 #### 3.2.2 SpringIoC容器介绍
 
-Spring IoC 容器，负责实例化、配置和组装 bean（组件）。容器通过读取配置元数据来获取有关要实例化、配置和组装组件的指令。配置元数据以` XML`、`Java 注解`或 `Java 代码形式`表现。它允许表达组成应用程序的组件以及这些组件之间丰富的相互依赖关系。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213912264.png)
+Spring IoC 容器，负责实例化、配置和组装 bean（组件）。容器通过读取配置元数据来获取有关要实例化、配置和组装组件的指令。配置元数据以` XML`、`Java 注解`或 `Java 代码形式`表现。它允许表达组成应用程序的组件以及这些组件之间丰富的相互依赖关系。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/91508c6ae5ed25eee740cfc5629a2a76.png)
 
 
 上图显示了 Spring 容器工作原理的高级视图。应用程序类与配置元数据相结合，您拥有完全配置且可执行的系统或应用程序。
@@ -204,7 +204,7 @@ Spring IoC 容器，负责实例化、配置和组装 bean（组件）。容器�
 	简而言之， `BeanFactory` 提供了配置框架和基本功能，而 `ApplicationContext` 添加了更多特定于企业的功能。 `ApplicationContext` 是 `BeanFactory` 的完整超集！
 **ApplicationContext容器实现类**：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213921550.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3ae44c34d001602eb248fc2e65629aa0.png)
 
 
 | 类型名                                | 简介                                                            |
@@ -215,7 +215,7 @@ Spring IoC 容器，负责实例化、配置和组装 bean（组件）。容器�
 | ***WebApplicationContext***              | 专门为 Web 应用准备，基于 Web 环境创建 IOC 容器对象，并将对象引入存入 ServletContext 域中。 |
 #### 3.2.4 SpringIoC容器管理配置方式
 
-Spring IoC 容器使用多种形式的配置元数据。此配置元数据表示您作为应用程序开发人员如何告诉 Spring 容器实例化、配置和组装应用程序中的对象。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213929613.png)
+Spring IoC 容器使用多种形式的配置元数据。此配置元数据表示您作为应用程序开发人员如何告诉 Spring 容器实例化、配置和组装应用程序中的对象。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/91508c6ae5ed25eee740cfc5629a2a76.png)
 
 
 
@@ -312,7 +312,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
     
 2.  `思路`
 
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213939185.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/86a110e6a9ad3d503dfd9f9d396d390d.png)
 
 
 3.  `准备项目`
@@ -422,7 +422,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
         -   factory-bean属性：指定当前容器中工厂Bean 的名称。
         -   factory-method:  指定实例工厂方法名。注意，实例方法必须是非static的！
 
-7.  `图解IoC配置流程`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213956462.png)
+7.  `图解IoC配置流程`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9307a10c3e4aa8e88891d4dd4d4395da.png)
 #### 4.2.2 实验二： 组件（Bean）依赖注入配置（DI）
 
 1.  `目标`
@@ -432,7 +432,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
     主要涉及注入场景：基于构造函数的依赖注入和基于 Setter 的依赖注入。
 
 2.  `思路`
-   ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214007662.png)
+   ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/602b01e55a2635ad7e9dec1545565484.png)
 
 
 3.  `基于构造函数的依赖注入`（`单个构造参数`）
@@ -591,7 +591,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
 
     上面的实验只是讲解了如何在XML格式的配置文件编写IoC和DI配置！
 
-    如图：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214016726.png)
+    如图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/91508c6ae5ed25eee740cfc5629a2a76.png)
 
 
 
@@ -679,7 +679,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
         - 这意味着，`BeanDefinition`与`类`概念一样，SpringIoC容器可以可以根据`BeanDefinition`对象反射创建多个Bean对象实例。
         - 具体创建多少个Bean的实例对象，由Bean的作用域Scope属性指定！
 
-	2.  作用域可选值![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214023107.png)
+	2.  作用域可选值![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/396a7772070dbf647c7d14ca43146aec.png)
 
 
     3.  作用域配置
@@ -733,7 +733,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
         如果此 `FactoryBean` 返回单例，则返回 `true` ，否则返回 `false` 。此方法的默认实现返回 `true` （注意，lombok插件使用，可能影响效果）。
         
     -   `Class<?> getObjectType()`: 返回 `getObject()` 方法返回的对象类型，如果事先不知道类型，则返回 `null` 。
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214029097.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7d9f660b7167211c17c3e63b62beca78.png)
 
 
 2.  `FactoryBean使用场景`
@@ -821,7 +821,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
 
     搭建一个三层架构案例，模拟查询全部学生（学生表）信息，持久层使用JdbcTemplate和Druid技术，使用XML方式进行组件管理！
 
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214034454.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e24f5d09bc817b9c7a14ffb6a6135390.png)
 
 
 2.  数据库准备
@@ -1227,7 +1227,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
 
     举例：元旦联欢会要布置教室，蓝色的地方贴上元旦快乐四个字，红色的地方贴上拉花，黄色的地方贴上气球。
 
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214047788.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fff3969c25a6d2600fa10cbbb1966618.png)
 
 
 
@@ -1308,7 +1308,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
     1.  组件标记注解和区别
 
         Spring 提供了以下多个注解，这些注解可以直接标注在 Java 类上，将它们定义成 Spring Bean。
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214054245.png)  
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/443624052e46b3a5db4d472093c12f53.png)  
         通过查看源码我们得知，@Controller、@Service、@Repository这三个注解只是在@Component注解的基础上起了三个新的名字。
 
         对于Spring使用IOC容器管理这些组件来说没有区别，也就是语法层面没有区别。所以@Controller、@Service、@Repository这三个注解只是给开发人员看的，让我们能够便于分辨组件的作用。
@@ -1472,7 +1472,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
 
         具体创建多少个Bean的实例对象，由Bean的作用域Scope属性指定！
 
-	2.  作用域可选值![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214129054.png)
+	2.  作用域可选值![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/11efe06e9d6cd29a79d63ae347d5fe2a.png)
 
 
         
@@ -1614,7 +1614,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
             ```
     2.  工作流程
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214138916.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ebb0bb0670238bf1910015870b488027.png)
 
 
         -   首先根据所需要的组件类型到 IOC 容器中查找
@@ -1774,7 +1774,7 @@ public class CommonComponent {
 1.  需求分析
 
     搭建一个三层架构案例，模拟查询全部学生（学生表）信息，持久层使用JdbcTemplate和Druid技术，使用XML+注解方式进行组件管理！
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214147699.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b5a625c5e5513915914a39324e02e07a.png)
 
 
 1.  数据库准备
@@ -2052,7 +2052,7 @@ Spring 完全注解配置（Fully Annotation-based Configuration）是指通过 
 
 **两种方式思维转化**：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214155398.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8d48361bca8ca0627baaa07687caa48e.png)
 
 
 
@@ -2455,7 +2455,7 @@ public static void main(String[] args) {
 1.  需求分析
 
     搭建一个三层架构案例，模拟查询全部学生（学生表）信息，持久层使用JdbcTemplate和Druid技术，使用注解+配置类方式进行组件管理！
-   ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214210964.png)
+   ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce141379e37460748a14b064aec78bda.png)
 
 
 2.  数据库准备
@@ -2912,7 +2912,7 @@ public static void main(String[] args) {
 
     新需求： 需要在每个方法中，添加控制台输出，输出参数和输出计算后的返回值！
 
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214225393.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7f0cb43ae6de39056dae562dcf857106.png)
 
 
     ```java
@@ -2991,11 +2991,11 @@ public static void main(String[] args) {
 
     二十三种设计模式中的一种，属于结构型模式。它的作用就是通过提供一个代理类，让我们在调用目标方法的时候，不再是直接对目标方法进行调用，而是通过代理类间接调用。让不属于目标方法核心逻辑的代码从目标方法中剥离出来——解耦。调用目标方法时先调用代理对象的方法，减少对目标方法的调用和打扰，同时让附加功能能够集中在一起也有利于统一维护。
 
-    无代理场景：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214228968.png)
+    无代理场景：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4a7107b21913dfd91ab3a441bbced5af.png)
 
 
 
-    有代理场景：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214230578.png)
+    有代理场景：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/77d10947a1bd16c5c8b20cb6fec68175.png)
 
 
 
@@ -3048,7 +3048,7 @@ public static void main(String[] args) {
     动态代理技术分类
     -   JDK动态代理：JDK原生的实现方式，需要被代理的目标类必须**实现接口**！他会根据目标类的接口动态生成一个代理对象！代理对象和目标对象有相同的接口！（拜把子）
     -   cglib：通过继承被代理的目标类实现代理，所以不需要目标类实现接口！（认干爹）
-        JDK动态代理技术实现（了解）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214235280.png)
+        JDK动态代理技术实现（了解）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1d03ea9bb9c927d65750bcac856fd205.png)
 
 
 
@@ -3154,7 +3154,7 @@ public static void main(String[] args) {
 
     从每个方法中抽取出来的同一类非核心业务。在同一个项目中，我们可以使用多个横切关注点对相关方法进行多个不同方面的增强。
 
-    这个概念不是语法层面天然存在的，而是根据附加功能的逻辑上的需要：有十个附加功能，就有十个横切关注点。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214240057.png)
+    这个概念不是语法层面天然存在的，而是根据附加功能的逻辑上的需要：有十个附加功能，就有十个横切关注点。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/64876b20aa9aa52dbd206e36acd8f1d4.png)
 
 
 
@@ -3167,14 +3167,14 @@ public static void main(String[] args) {
     -   返回通知：在被代理的目标方法成功结束后执行（**寿终正寝**）
     -   异常通知：在被代理的目标方法异常结束后执行（**死于非命**）
     -   后置通知：在被代理的目标方法最终结束后执行（**盖棺定论**）
-    -   环绕通知：使用try...catch...finally结构围绕整个被代理的目标方法，包括上面四种通知对应的所有位置![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214241837.png)
+    -   环绕通知：使用try...catch...finally结构围绕整个被代理的目标方法，包括上面四种通知对应的所有位置![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7fb04fe4b1786175790bbfffb1827823.png)
 
 
     3-连接点 joinpoint
 
     这也是一个纯逻辑概念，不是语法定义的。
 
-    指那些被拦截到的点。在 Spring 中，可以被动态代理拦截目标类的方法![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214244133.png)
+    指那些被拦截到的点。在 Spring 中，可以被动态代理拦截目标类的方法![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2825496dd4c521e78ff93b34082c8396.png)
 
 
 
@@ -3186,7 +3186,7 @@ public static void main(String[] args) {
 
     5-切面 aspect
 
-    切入点和通知的结合。是一个类。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214246337.png)
+    切入点和通知的结合。是一个类。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ced83016f1570ae6ddd6730331329bb4.png)
 
 
 
@@ -3211,7 +3211,7 @@ public static void main(String[] args) {
 
 #### 5.5.1 Spring AOP底层技术组成
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214248666.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1b5401be5e033cd393f6e3a2a0f0c03b.png)
 
 
 
@@ -3400,7 +3400,7 @@ public static void main(String[] args) {
     需要获取方法签名、传入的实参等信息时，可以在通知方法声明JoinPoint类型的形参。
     -   要点1：JoinPoint 接口通过 getSignature() 方法获取目标方法的签名（方法声明时的完整信息）
     -   要点2：通过目标方法签名对象获取方法名
-    -   要点3：通过 JoinPoint 对象获取外界调用目标方法时传入的实参列表组成的数组![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214255005.png)
+    -   要点3：通过 JoinPoint 对象获取外界调用目标方法时传入的实参列表组成的数组![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b21e810f3c9ec7a8bfe98f9dc5f05c29.png)
 
 
     ```java
@@ -3478,13 +3478,13 @@ public static void main(String[] args) {
 1.  **切点表达式作用**
 
     AOP切点表达式（Pointcut Expression）是一种用于指定切点的语言，它可以通过定义匹配规则，来选择需要被切入的目标对象。
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214259510.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dcc7d03cd316a79c950bf2007f92350a.png)
 
 
 2.  **切点表达式语法**
 
     切点表达式总结
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214305669.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/77a50f560c8e82530b5f56294469597b.png)
 
 
 
@@ -3689,20 +3689,20 @@ public Object manageTransaction(
 -   @Order(较小的数)：优先级高
 -   @Order(较大的数)：优先级低
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214312022.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/04a2e03c2c3a070e1000c3ef23c82771.png)
 
 
 
 实际意义
 
 `实际开发时，如果有多个切面嵌套的情况，要慎重考虑`。例如：如果事务切面优先级高，那么在缓存中命中数据的情况下，事务切面的操作都浪费了。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214314036.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ecdc5970d0e1f646d51a08a0bed27a4.png)
 
 
 
 此时应该将缓存切面的优先级提高，在事务操作之前先检查缓存中是否存在目标数据。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214316863.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/015d67186cedc60c94dbd62b598e3d6e.png)
 
 
 
@@ -3734,13 +3734,13 @@ public class EmployeeService {
 
 没有接口：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214325599.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3a2916c0106b3664169acdf6ebf4c596.png)
 
 
 
 有接口：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214331285.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/519f273ff88bee5bb7fece281db2b570.png)
 
 
 
@@ -3756,7 +3756,7 @@ d.  如果没有接口,类进行接值
 
 #### 5.5.9 注解实现小结
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214342491.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f2cdd3ac4e6ab93b0e9f3fb6b7c2271f.png)
 
 
 
@@ -3872,29 +3872,29 @@ d.  如果没有接口,类进行接值
 		    -   应用了切面后，真正放在IOC容器中的是代理类的对象
 		    -   目标类并没有被放到IOC容器中，所以根据目标类的类型从IOC容器中是找不到的
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214353568.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/030dd650475cb3c80042ec171684c3f5.png)
 
 
 5.  情景五
     -   声明一个类
     -   创建一个切面类，对上面的类应用通知
         -   测试：根据类获取 bean，能获取到
-            ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214400517.png)
+            ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0018e1e556ceecc8e00c71a3ddd680a8.png)
 
 
         debug查看实际类型：
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214407480.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8b8e6f2627bcab0eefc8a83c813f247b.png)
 
 
 
 #### 5.7.2 使用总结
 
-对实现了接口的类应用切面![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214416931.png)
+对实现了接口的类应用切面![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7cdc0cdbbe9552e825a4c984a4a681bc.png)
 
 
 
-对没实现接口的类应用切面new![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214423183.png)
+对没实现接口的类应用切面new![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b0a966e9c142c014379e426db5f1ee7b.png)
 
 
 
@@ -3959,7 +3959,7 @@ try {
     -   spring-jdbc: 包含DataSource方式事务管理器实现类DataSourceTransactionManager
     -   spring-orm: 包含其他持久层框架的事务管理器实现类例如：Hibernate/Jpa等
 
-2.  Spring声明式事务对应事务管理器接口![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214429242.png)
+2.  Spring声明式事务对应事务管理器接口![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/639cbece8808e89c32ff60ffd02ade83.png)
 
 
 
@@ -4502,7 +4502,7 @@ try {
 #### 6.2.7 事务属性：事务传播行为
 
 1.  事务传播行为要研究的问题
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214447922.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0e644245b9e1ef88c501ca3b5e82c916.png)
     举例代码：
     ```java
     @Transactional
@@ -4528,7 +4528,7 @@ try {
 
     ```
     propagation 属性的可选值由 org.springframework.transaction.annotation.Propagation 枚举类提供：
-	 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214503470.png)
+	 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bad87ddca6c2ccac14d7a97a8dea3975.png)
 
 
     

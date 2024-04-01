@@ -98,7 +98,7 @@
 - 尾部插入/删除：只需要修改尾结点的指针即可完成插入/删除操作，因此时间复杂度为 O(1)。
 - 指定位置插入/删除：需要先移动到指定位置，再修改指定节点的指针完成插入/删除，因此需要移动平均 n/2 个元素，时间复杂度为 O(n)。
 
-这里简单列举一个例子：假如我们要删除节点 9 的话，需要先遍历链表找到该节点。然后，再执行相应节点指针指向的更改，具体的源码可以参考：[LinkedList 源码分析](/java/collection/linkedlist-source-code.html) ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314145228.png)
+这里简单列举一个例子：假如我们要删除节点 9 的话，需要先遍历链表找到该节点。然后，再执行相应节点指针指向的更改，具体的源码可以参考：[LinkedList 源码分析](/java/collection/linkedlist-source-code.html) ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cee37550d2403882ee9870193432d9a9.png)
 `回答思路：`
 1. 头部插入/删除，O(1)
 2. 尾部插入/删除，O(1)

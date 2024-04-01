@@ -7,7 +7,7 @@
 下载地址：[https://rocketmq.apache.org/dowloading/releases/](https://rocketmq.apache.org/dowloading/releases/)
 
 注意选择版本，这里我们选择4.9.2的版本，后面使用alibaba时对应
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230948243.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/09259352b350be5b7fb77d42762af0f5.png)
 
 
 下载地址：
@@ -24,7 +24,7 @@ mkdir rocketmq
 ```
 
 将下载后的压缩包上传到阿里云服务器或者虚拟机中去
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231003413.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1493887fc6fbe9f107ba81a742805ecb.png)
 
 ## 3.3 解压
 
@@ -38,7 +38,7 @@ yum install unzip
 ```
 
 目录分析
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231023964.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f54c239f0600ccf1a537ff9e9bd25ac.png)
 
 
 `Benchmark`：包含一些性能测试的脚本；
@@ -72,7 +72,7 @@ source /etc/profile
 vim runserver.sh
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231034548.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f6e2e9c7c21e6a27c8add8cbb4d16238.png)
 
 保存退出
 
@@ -80,7 +80,7 @@ vim runserver.sh
 
 进入bin目录下，修改runbroker.sh文件,修改67行
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231041391.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7af64156c1670e303c9aca5648bf524d.png)
 
 
 保存退出
@@ -120,7 +120,7 @@ brokerIP1=阿里云公网IP
 mkdir logs
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231108897.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/87c8e40e1188afb20eb01d56f88ca8ab.png)
 
 一次运行两条命令
 
@@ -137,7 +137,7 @@ nohup sh bin/mqbroker -c conf/broker.conf > ./logs/broker.log &
 查看启动结果
 `jps是查看java写的服务端的进程`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231122732.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/912685530a1346b8e19ab5854acb5848.png)
 
 ## 3.9 关闭
 
@@ -168,14 +168,14 @@ Rocketmq 控制台可以可视化MQ的消息发送！
 mvn clean package -Dmaven.test.skip=true
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231134508.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/75871340ce31539c78057fe0725febeb.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231138366.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a4c4501110dfd17e795c6e1d3dd58f10.png)
 
 
 
 将jar包上传到服务器上去
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231200241.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f9b4f8b446fddb8d866f2016f7efc84b.png)
 
 
 然后运行
@@ -198,7 +198,7 @@ jps -l
 
 运行访问端口是8001，如果从官网拉下来打包的话，默认端口是8080
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231226535.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7461cda316f590f6f3305249aa712d5d.png)
 
 
 - `注意：`
@@ -297,12 +297,12 @@ docker run -d --name rmqadmin -e "JAVA_OPTS=-Drocketmq.namesrv.addr=**你的外�
 
 ## 4.5 正常启动后的docker ps
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231238543.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6eb384657be265c74501f11d2f8370d2.png)
 
 ## 4.6 访问控制台
 
 http://你的服务器外网ip:9999/
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231247733.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0fcc59b75f3084a8170ada8fc6a174b3.png)
 
 

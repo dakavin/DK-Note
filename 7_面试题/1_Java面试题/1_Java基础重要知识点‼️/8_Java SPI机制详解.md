@@ -12,8 +12,6 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 很多框架都使用了 Java 的 SPI 机制，比如：Spring 框架、数据库加载驱动、日志接口、以及 Dubbo 的扩展实现等等。
 
-![](assets/Pasted%20image%2020240311114142.png)
-
 `回答思路：`
 	1. 顾名思义，SPI（Server Provider Interface）指的是服务提供者的接口，即专门给服务提供者（框架开发者）去使用的接口；
 	2. 将 服务接口 和 服务实现 分离，将 服务调用方 和 服务实现者 解耦，提高程序的扩展性、可维护性；
@@ -22,7 +20,9 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 **那 SPI 和 API 有啥区别？**
 
-说到 SPI 就不得不说一下 API 了，从广义上来说它们都属于接口，而且很容易混淆。下面先用一张图说明一下：![](assets/Pasted%20image%2020240311120318.png)
+说到 SPI 就不得不说一下 API 了，从广义上来说它们都属于接口，而且很容易混淆。下面先用一张图说明一下：
+
+
 一般模块之间都是通过接口进行通讯，那我们在服务调用方和服务实现方（也称服务提供者）之间引入一个“接口”。
 
 当实现方提供了接口和实现，我们可以通过调用实现方的接口从而拥有实现方给我们提供的能力，这就是 API ，这种接口和实现都是放在实现方的。
@@ -38,7 +38,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 # 2、实战演示
 
 SLF4J （Simple Logging Facade for Java）是 Java 的一个日志门面（接口），其具体实现有几种，比如：Logback、Log4j、Log4j2 等等，而且还可以切换，在切换日志具体实现的时候我们是不需要更改项目代码的，只需要在 Maven 依赖里面修改一些 pom 依赖就好了。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240311184646.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b6c2916b830fab011edc014ea6d557fe.png)
 
 这就是依赖 SPI 机制实现的，那我们接下来就实现一个简易版本的日志框架。
 ## 2.1  Service Provider Interface
@@ -211,18 +211,18 @@ public class Logback implements Logger {
 将 `service-provider-interface` 的 jar 导入项目中。
 
 新建 lib 目录，然后将 jar 包拷贝过来，再添加到项目中。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240311193930.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/49ce0d02a83f0cc0f1e688e77c954163.png)
 
 接下来就可以在项目中导入 jar 包里面的一些类和方法了，就像 JDK 工具类导包一样的。
 
 实现 `Logger` 接口，在 `src` 目录下新建 `META-INF/services` 文件夹，然后新建文件 `edu.jiangxuan.up.spi.Logger` （SPI 的全类名），文件里面的内容是：`edu.jiangxuan.up.spi.service.Logback` （Logback 的全类名，即 SPI 的实现类的包名 + 类名）。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240311194008.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/adf838bd9f4d558c04573857ce9e3770.png)
 ## 2.3 效果展示
 
 为了更直观的展示效果，我这里再新建一个专门用来测试的工程项目：`java-spi-test`
 
 然后先导入 `Logger` 的接口 jar 包，再导入具体的实现类的 jar 包。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240311194019.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fb97737c5a1d5a3233302f8c8f9475fc.png)
 
 新建 Main 方法测试：
 

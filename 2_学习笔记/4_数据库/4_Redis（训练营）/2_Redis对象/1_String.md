@@ -27,7 +27,7 @@ String就是字符串，它是Redis中最基本的数据对象，最大为512MB�
 
 >拓展：一般推荐使用UNLINK来删除KEY，因为DEL是同步删除，删除大KEY的时候容易阻塞主线程，而UNLINK是异步删除，不存在阻塞主线程的问题
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231015151600.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/070253752f9f515440c29370e13d6813.png)
 
 ### 3.1 写操作
 
@@ -120,7 +120,7 @@ MGET strniuniu strmart
 ### 4.1 三种编码方式
 
 String看起来简单，但实际有三种编码方式，如下图所示：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231015152623.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae0ec4ccfac13cdf051e2c228f429a3e.png)
 
 INT编码：这个很好理解，就是存一个整型，可以用long表示的整数就以这种编码存储；（`能存储8个字节的整数`）
 
@@ -152,10 +152,10 @@ EMBSTR和RAW都是由redisObject和SDS两个结构组成，他们的差异在于
 EMBSTR优点是redisObject和SDS两个结构可以一次性分配空间，缺点在于如果重新分配空间，整体都需要再分配，所以`EMBSTR设计为只读`，`任何写操作之后EMBSTR都会变成RAW`，理念是发生修改的字符串通常会认为是易变的。
 
 EMBSTR内存：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231015153940.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/52bd2bd55f963d1b1b845f217b1c8423.png)
 
 RAW内存：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231015153952.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/706ff3400584f9c12769119639bb51c5.png)
 
 随着我们的操作，编码可能会转换：
 
@@ -194,7 +194,7 @@ struct _attribute_ ((_packed_)) sdshdr8{
 ```
 
 从SDS的结构，我们很容易看出SDS是如何对症下药解决问题的：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231015155843.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3963c40772658e2ebb040ff15596bd83.png)
 
 1. 增加长度字段len，快速返回长度；
 2. 增加空余空间（alloc-len），为后续追加数据留余地；

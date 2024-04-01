@@ -21,7 +21,7 @@
 
 - ASynchronous JavaScript And XML	异步的JavaScript 和 XML
 
-- 异步和同步：客户端和服务器端相互通信的基础上![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075255253.png)
+- 异步和同步：客户端和服务器端相互通信的基础上![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/43bee03db4057000c71df77ddbac9ea5.png)
 
 
 	* 客户端必须等待服务器端的响应。`在等待的期间客户端不能做其他操作`。
@@ -37,7 +37,7 @@
 
 #### 1.2.1 原生的JS实现方式（了解）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075257367.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8fba93e22ba9174c09b2e9b959c72dcd.png)
 
 
 
@@ -79,16 +79,16 @@ $.ajax({
 
 #### 1.2.3 aixos原生方式
 
-- 第一步：导入axios的js文件![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075321283.png)
+- 第一步：导入axios的js文件![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8326f178d31b2c6eefc99c0b827ec438.png)
 
 
-- 第二步：使用axios发送请求，并获取响应结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075323096.png)
+- 第二步：使用axios发送请求，并获取响应结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6d9866eca9892f012bf86898e8935a4b.png)
 
 
 
-- `axios请求方式别名`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075324957.png)
+- `axios请求方式别名`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cfe041d17cfed81965bb73c0549e3960.png)
 	
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075326946.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d14ffc2123dd9a9a752ee4c9e26657da.png)
 
 ## 2 JSON
 
@@ -189,9 +189,9 @@ for (var i = 0; i < ps.length; i++) {
 				- List：数组
 				- Map：`对象格式一致`
 
-- `使用FastJson`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075358963.png)
+- `使用FastJson`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c3cc2386a3e72b6a993387823fa168e9.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075401571.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a2617c1ce6258aa287525c94e5b94fce.png)
 
 
 

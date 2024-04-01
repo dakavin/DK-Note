@@ -20,7 +20,7 @@ typedef struct dictht{
 } dictht;
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017222813.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6d5d783bfd0090119f1f5ba69e82031c.png)
 
 最外层是一个封装的dictht结构，其中字段含义如下：
 
@@ -51,17 +51,17 @@ typedef struct dict{
 
 可以看到dict结构里面，包含了2个dictht结构，也就是2个HASHTABLE结构。dictEntry是链表结构，也就是用拉链法解决Hash冲突，用的是头插法；
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017223718.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/334f4c7426f6b6b7a261e90575ad77f6.png)
 
 实际上平常使用的就是一个HASHTABLE，`在触发扩容之后，就会两个HASHTABLE同时使用`，详细过程是这样的：
 
 当先字典添加元素时，发现需要扩容就会进行Rehash。Rehash的流程大概分为三步：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017231524.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/36f0ccb7b159f5de5d64c20a1266bf5b.png)
 
-- 第一步：`为新Hash表ht[1]分配空间`。下表大小为第一个大于等于原表2倍used的2次方幂。举个例子，原表如果used=500，2倍就是1000，那第一个大于1000的2次方幂则为1024。此时字典同时持有ht[0]和ht[1]两个哈希表。`字典的偏移索引从静默状态-1，设置为0，表示Rehash工作正式开始`。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017224121.png)
-- 第二步：`迁移ht[0]数据到ht[1]`。在Rehash进行期间，每次对字典执行增删改查操作，程序会`顺带迁移当前rehashidx(索引)在ht[0]上的对应的数据`，`并更新偏移索引`。与此同时，部分情况周期函数也会进行迁移，详情看评论。这里有一个疑问，如果rehashinx刚好在一个已删除的空位置上，是直接返回，还是尝试往下找。我们直接看dictRehash函数的片段代码![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017225840.png)
-- 第三步：随着字典操作的不断执行，最终在某个时间点上，ht[0]的所有键值对都会被Rehash到ht[1]，此时再将ht[0]和ht[1]指针对象互换，同时把偏移索引的值设为-1，表示Rehash操作已完成。这个事情也是在Rehash函数做的，每次迁移完一个元素，会检查下是否完成了整个迁移![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017230106.png)
+- 第一步：`为新Hash表ht[1]分配空间`。下表大小为第一个大于等于原表2倍used的2次方幂。举个例子，原表如果used=500，2倍就是1000，那第一个大于1000的2次方幂则为1024。此时字典同时持有ht[0]和ht[1]两个哈希表。`字典的偏移索引从静默状态-1，设置为0，表示Rehash工作正式开始`。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a994b9d50cbfc7d6ab723d4e7e660c54.png)
+- 第二步：`迁移ht[0]数据到ht[1]`。在Rehash进行期间，每次对字典执行增删改查操作，程序会`顺带迁移当前rehashidx(索引)在ht[0]上的对应的数据`，`并更新偏移索引`。与此同时，部分情况周期函数也会进行迁移，详情看评论。这里有一个疑问，如果rehashinx刚好在一个已删除的空位置上，是直接返回，还是尝试往下找。我们直接看dictRehash函数的片段代码![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0fe8fd8878c84558693370e5e29e3af2.png)
+- 第三步：随着字典操作的不断执行，最终在某个时间点上，ht[0]的所有键值对都会被Rehash到ht[1]，此时再将ht[0]和ht[1]指针对象互换，同时把偏移索引的值设为-1，表示Rehash操作已完成。这个事情也是在Rehash函数做的，每次迁移完一个元素，会检查下是否完成了整个迁移![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1f385204e9f062e0e35b1779a68e850f.png)
 对于HASHTABLE的增删改查操作：
 - 查询：ht[0]先查，查到了就break，不然查ht[1]
 - 增加：向ht[1]增加

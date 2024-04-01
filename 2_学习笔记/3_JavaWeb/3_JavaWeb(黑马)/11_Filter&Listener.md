@@ -81,14 +81,14 @@ public class FilterDemo1 implements Filter {
 2. 过滤器执行流程
 	- 执行过滤器
 	- 执行放行后的资源
-	- 回来执行过滤器放行代码下边的代码![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075137684.png)
+	- 回来执行过滤器放行代码下边的代码![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/674246fe34d063ac567adf9554f78e84.png)
 
 
 
 3. 过滤器生命周期方法
 	- init:在服务器启动后，会创建Filter对象，然后调用init方法。只执行一次。用于加载资源
 	- doFilter:每一次请求被拦截资源时，会执行。执行多次
-	- destroy:在服务器关闭后，Filter对象被销毁。如果服务器是正常关闭，则会执行destroy方法。只执行一次。用于释放资源![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075140509.png)
+	- destroy:在服务器关闭后，Filter对象被销毁。如果服务器是正常关闭，则会执行destroy方法。只执行一次。用于释放资源![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eef566967fd324b6f609aceda01cf967.png)
 
 
 
@@ -98,7 +98,7 @@ public class FilterDemo1 implements Filter {
 		2. `拦截目录： /user/*`	访问/user下的所有资源时，过滤器都会被执行
 		3. `后缀名拦截： *.jsp`		访问所有后缀名为jsp资源时，过滤器都会被执行
 		4. `拦截所有资源：/*`		访问 所有资源时，过滤器都会被执行
-	* `拦截方式配置`：资源被访问的方式![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075143526.png)
+	* `拦截方式配置`：资源被访问的方式![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/40c473cfcd4766bca9759719d967c090.png)
 
 
 		* 注解配置：
@@ -126,7 +126,7 @@ public class FilterDemo1 implements Filter {
 
 ### 1.4 案例:登录验证
 
-- 逻辑分析![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075146530.png)
+- 逻辑分析![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3adf11a690e664a580f93bdb8e20b638.png)
 
 
 * 需求：
@@ -180,7 +180,7 @@ public class LoginFilter implements Filter {
 	3. 如果是敏感词汇，替换为 *** 
 
 
-* 分析：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075202545.png)
+* 分析：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4867c131689be5617de80f353a036983.png)
 
 
 	1. 对`request对象进行增强(AOP代理模式)`。增强获取参数相关方法

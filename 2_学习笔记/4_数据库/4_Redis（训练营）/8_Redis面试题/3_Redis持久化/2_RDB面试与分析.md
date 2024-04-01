@@ -37,7 +37,7 @@
 ## 4、RDB执行流程是怎么样的？
 
 分析：
-- 核心是![](assets/Pasted%20image%2020231024231958.png)
+- 核心是![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/20f2fc1fda93a00f4949880b79ae482e.png)
 - 熟悉源码的话，另一种思路也可以将细一点，但是不见得有用，同时如果说得不清晰，反而减分
 
 回答1（推荐，只讲核心，点到即止，有追问再说更多）：

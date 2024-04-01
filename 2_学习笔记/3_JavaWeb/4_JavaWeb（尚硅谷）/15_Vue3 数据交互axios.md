@@ -196,7 +196,7 @@
 - AJAX 不需要任何浏览器插件，但需要用户允许 JavaScript 在浏览器上执行。
 - XMLHttpRequest 只是实现 Ajax 的一种方式。
 
-**ajax工作原理：**![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321151524.png)
+**ajax工作原理：**![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2089e8c49dca533fadbc6bba5e8fac4f.png)
 原生**javascript方式进行ajax(了解):**
 ```js
 <script>
@@ -336,7 +336,7 @@ npm run dev
 
 ### 3.5 异步响应的数据结构
 
-+ `响应的数据是经过包装返回的！` 一个请求的响应包含以下信息![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240322203231.png)
++ `响应的数据是经过包装返回的！` 一个请求的响应包含以下信息![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/08fbfb32b33ed31f3e5a2ad1c574ad40.png)
 ```json
 {
   // `data` 由服务器提供的响应

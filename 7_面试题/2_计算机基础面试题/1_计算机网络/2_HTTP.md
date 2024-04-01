@@ -3,7 +3,7 @@
 
 `类似的问题：打开一个网页，整个过程会使用哪些协议？`
 
-先来看一张图（来源于《图解 HTTP》）：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319115411.png)
+先来看一张图（来源于《图解 HTTP》）：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6dc567cfc54546945f3b54985e130d04.png)
 上图有一个错误需要注意：是 OSPF 不是 OPSF。 OSPF（Open Shortest Path First，ospf）开放最短路径优先协议, 是由 Internet 工程任务组开发的路由选择协议
 
 总体来说分为以下几个步骤:

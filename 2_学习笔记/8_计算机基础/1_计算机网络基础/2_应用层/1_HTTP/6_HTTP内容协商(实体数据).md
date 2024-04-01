@@ -36,7 +36,7 @@ MIME 是一个很大的标准规范，但 HTTP 只“顺手牵羊”取了其中
 
 HTTP 协议为此定义了两个 Accept 请求头字段和两个 Content 实体头字段，用于客户端和服务器进行“**内容协商**”。也就是说，客户端用 Accept 头告诉服务器希望接收什么样的数据，而服务器用 Content 头告诉客户端实际发送了什么样的数据。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031021014.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/27d4ad646f69d862ed67ca4d1c9e9913.png)
 
 **Accept**字段标记的是客户端可理解的 MIME type，可以用“,”做分隔符列出多个类型，让服务器有更多的选择余地，例如下面的这个头：
 
@@ -109,7 +109,7 @@ Content-Type: text/html; charset=utf-8
 
 不过现在的浏览器都支持多种字符集，通常不会发送 Accept-Charset，而服务器也不会发送 Content-Language，因为使用的语言完全可以由字符集推断出来，所以`在请求头里一般只会有 Accept-Language 字段，响应头里只会有 Content-Type 字段`。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031021022.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0f6650b4f215e76495e3c55bd1c77172.png)
 
 ## 5、内容协商的质量值
 
@@ -150,7 +150,7 @@ http://www.chrono.com/15-1?name=a.xml
 
 在 Chrome 里打开开发者工具，就能够看到 Accept 和 Content 头：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031021028.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e3088047756a23baf40bc008cd14bddd.png)
 
 你也可以把任意的文件拷贝到 mime 目录下，比如压缩包、MP3、图片、视频等，再用 Chrome 访问，观察更多的 MIME type。
 
@@ -160,7 +160,7 @@ http://www.chrono.com/15-1?name=a.xml
 
 今天我们学习了 HTTP 里的数据类型和语言类型，在这里为今天的内容做个小结。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031021031.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/73c6d3cfb2f4b36e8c7524c2868804ec.png)
 
 1. 数据类型表示`实体数据的内容`是什么，使用的是 `MIME type`，相关的头字段是 Accept 和 Content-Type；
 2. 数据编码表示`实体数据的压缩方式`，相关的头字段是 Accept-Encoding 和 Content-Encoding；

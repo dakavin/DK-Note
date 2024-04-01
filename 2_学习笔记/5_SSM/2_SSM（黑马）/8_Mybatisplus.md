@@ -112,7 +112,7 @@ class MybatisplusApplicationTests {
 
 selectList() 方法的参数为 MP 内置的条件封装器 Wrapper，所以不填写就是无任何条件
 
-现在运行测试方法，看看控制台![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213127384.png)
+现在运行测试方法，看看控制台![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/36b3aa4b3995574da5aa679db3d76719.png)
 
 
 原理，慢慢往后看
@@ -185,7 +185,7 @@ void testInsert(){
 }
 ```
 
-随便写一个User的数据，运行程序，然后去数据库看看新增是否成功![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213149844.png)
+随便写一个User的数据，运行程序，然后去数据库看看新增是否成功![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c2b508629ca38119f114dfbc2980a53c.png)
 
 
 这个主键自增id看着有点奇怪，但现在你知道为什么要将id设为long类型了吧
@@ -251,7 +251,7 @@ void testSelectById(){
 }
 ```
 
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213153190.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3feb58c50ee830be4c77ba995d26183f.png)
 
 
 ## 6、查询全部
@@ -272,7 +272,7 @@ void testSelectAll() {
 }
 ```
 
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213156471.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8c0a9eef85147fba46f50bb14f5752bf.png)
 
 
 - 方法都测试完了，那你们有没有想过，这些方法都是谁提供的呢？
@@ -365,7 +365,7 @@ public class MybatisPlusConfig {
 ```
 
 - `步骤三：`运行测试程序  
-	运行程序，结果如下，符合我们的预期![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213201154.png)
+	运行程序，结果如下，符合我们的预期![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/48f0f5a5ef7d4d12e08f7dfb86cfc781.png)
 
 
 
@@ -400,7 +400,7 @@ void testQueryWrapper(){
 }
 ```
 
-运行测试方法，结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213205029.png)
+运行测试方法，结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e24f7d636af92257de4422a67580670e.png)
 
 
 这种方法有个弊端，那就是字段名是字符串类型，没有提示信息和自动补全，如果写错了，那就查不出来
@@ -599,7 +599,7 @@ select(…)方法用来设置查询的字段列，可以设置多个
 lqw.select(User::getName,User::getName);
 ```
 
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213213032.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3e73e7d15904985ce124435063e81fc6.png)
 
 
 如果使用的不是lambda，就需要手动指定字段
@@ -686,7 +686,7 @@ void testQueryWrapper() {
 }
 ```
 
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213217884.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4074e0a082dda50e524590723e955a0d.png)
 
 
 注意：
@@ -1043,7 +1043,7 @@ void testInsert(){
 ```
 
 查看结果，生成的ID就是一个Long类型的数据，生成ID时，使用的是雪花算法  
-雪花算法(SnowFlake),是Twitter官方给出的算法实现 是用Scala写的。其生成的结果是一个64bit大小整数![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213230276.png)
+雪花算法(SnowFlake),是Twitter官方给出的算法实现 是用Scala写的。其生成的结果是一个64bit大小整数![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/88f6c2e7948c5ab5f13d2911adb1adb6.png)
 
 
 1. 1bit,不用,因为二进制中最高位是符号位，1表示负数，0表示正数。生成的id一般都是用整数，所以最高位固定为0。
@@ -1161,17 +1161,17 @@ void testSelectByIds() {
 ```
 ## 3、逻辑删除
 
-逻辑删除是删除操作中比较重要的一部分，先来讲个案例![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213235314.png)
+逻辑删除是删除操作中比较重要的一部分，先来讲个案例![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0cca88731e73303e0e1b21ccaf0c59ab.png)
 
 
 - 这是一个员工和其所办理的合同表，一个员工可以办理多张合同表
 - 员工ID为1的张业绩，办理了三个合同，但是她现在想离职跳槽了，我们需要将员工表中的数据进行删除，执行DELETE操作
-- 如果表在设计的时候有主外键关系，那么同时也要将合同表中的张业绩的数据删掉![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213237081.png)
+- 如果表在设计的时候有主外键关系，那么同时也要将合同表中的张业绩的数据删掉![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6f0e638225b86054caa2772b52ed0fe2.png)
 
 
 - 后来公司要统计今年的总业绩，发现这数据咋对不上呢，业绩这么少，原因是张业绩办理的合同信息被删掉了
 - 如果只删除员工，却不删除员工对应的合同表数据，那么合同的员工编号对应的员工信息不存在，那么就会产生垃圾数据，出现无主合同，根本不知道有张业绩这个人的存在
-- 经过我们的分析之后，我们不应该将表中的数据删除掉，得留着，但是又得把离职的人和在职的人区分开，这样就解决了上述问题![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922213239939.png)
+- 经过我们的分析之后，我们不应该将表中的数据删除掉，得留着，但是又得把离职的人和在职的人区分开，这样就解决了上述问题![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/459fd2c45a95c5682eae8555319eafd8.png)
 
 
 - 区分的方式，就是在员工表中添加一列数据`deleted`，如果为0说明在职员工，如果离职则将其改完1，（0和1所代表的含义是可以自定义的）

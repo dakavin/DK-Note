@@ -20,7 +20,7 @@
 
 OSI 七层模型虽然失败了，但是却提供了很多不错的理论基础。为了更好地去了解网络分层，OSI 七层模型还是非常有必要学习的。
 
-最后再分享一个关于 OSI 七层模型非常不错的总结图片！![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319110336.png)
+最后再分享一个关于 OSI 七层模型非常不错的总结图片！![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/58f4330a71a94fbb2a1fbb698257394d.png)
 ## 2、TCP/IP 四层模型
 
 **TCP/IP 四层模型** 是目前被广泛采用的一种模型,我们可以将 TCP / IP 模型看作是 OSI 七层模型的精简版本，由以下 4 层组成：
@@ -37,11 +37,11 @@ OSI 七层模型虽然失败了，但是却提供了很多不错的理论基础�
 
 `应用层位于传输层之上，主要提供两个终端设备上的应用程序之间信息交换的服务，它定义了信息交换的格式，消息会交给下一层传输层来传输。 我`们把应用层交互的数据单元称为报文。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319110429.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bd00aafac189f585ce89c4b1231d5d85.png)
 
 应用层协议定义了网络通信规则，对于不同的网络应用需要不同的应用层协议。在互联网中应用层协议很多，如支持 Web 应用的 HTTP 协议，支持电子邮件的 SMTP 协议等等。
 
-**应用层常见协议**：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319110623.png)
+**应用层常见协议**：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d2880ee5a72eecd9532843bd594795a7.png)
 - **HTTP（Hypertext Transfer Protocol，超文本传输协议）**：基于 TCP 协议，是一种用于传输超文本和多媒体内容的协议，主要是为 Web 浏览器与 Web 服务器之间的通信而设计的。当我们使用浏览器浏览网页的时候，我们网页就是通过 HTTP 请求进行加载的。
 - **SMTP（Simple Mail Transfer Protocol，简单邮件发送协议）**：基于 TCP 协议，是一种用于发送电子邮件的协议。注意 ⚠️：SMTP 协议只负责邮件的发送，而不是接收。要从邮件服务器接收邮件，需要使用 POP3 或 IMAP 协议。
 - **POP3/IMAP（邮件接收协议）**：基于 TCP 协议，两者都是负责邮件接收的协议。IMAP 协议是比 POP3 更新的协议，它在功能和性能上都更加强大。IMAP 支持邮件搜索、标记、分类、归档等高级功能，而且可以在多个设备之间同步邮件状态。几乎所有现代电子邮件客户端和服务器都支持 IMAP。
@@ -59,7 +59,7 @@ OSI 七层模型虽然失败了，但是却提供了很多不错的理论基础�
 **传输层的主要任务就是负责向两台终端设备进程之间的通信提供通用的数据传输服务。** 应用进程利用该服务传送应用层报文。“通用的”是指并不针对某一个特定的网络应用，而是多种应用可以使用同一个运输层服务。
 
 **传输层常见协议**：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319112611.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9e5e89824da504bae07f1d5ebffafc79.png)
 
 - **TCP（Transmission Control Protocol，传输控制协议 ）**：提供 **面向连接** 的，**可靠** 的数据传输服务。
 - **UDP（User Datagram Protocol，用户数据协议）**：提供 **无连接** 的，**尽最大努力** 的数据传输服务（不保证数据传输的可靠性），简单高效
@@ -78,7 +78,7 @@ OSI 七层模型虽然失败了，但是却提供了很多不错的理论基础�
 
 互联网是由大量的异构（heterogeneous）网络通过路由器（router）相互连接起来的。互联网使用的网络层协议是无连接的网际协议（Internet Protocol）和许多路由选择协议，因此互联网的网络层也叫做 **网际层** 或 **IP 层**。
 
-**网络层常见协议**：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319112747.png)
+**网络层常见协议**：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8cc109302b9c8de8cc56657586fa536.png)
 - **IP（Internet Protocol，网际协议）**：TCP/IP 协议中最重要的协议之一，`主要作用是定义数据包的格式、对数据包进行路由和寻址，以便它们可以跨网络传播并到达正确的目的地`。目前 IP 协议主要分为两种，一种是过去的 IPv4，另一种是较新的 IPv6，目前这两种协议都在使用，但后者已经被提议来取代前者。
 
 - **ARP（Address Resolution Protocol，地址解析协议）**：`ARP 协议解决的是网络层地址和链路层地址之间的转换问题`。因为一个 IP 数据报在物理上传输的过程中，总是需要知道下一跳（物理上的下一个目的地）该去往何处，但 `IP 地址属于逻辑地址，而 MAC 地址才是物理地址`，ARP 协议解决了 IP 地址转 MAC 地址的一些问题。
@@ -100,7 +100,7 @@ OSI 七层模型虽然失败了，但是却提供了很多不错的理论基础�
 1. 数据链路层(data link layer)通常简称为链路层（ 两台主机之间的数据传输，总是在一段一段的链路上传送的）。数据链路层的作用是`将网络层交下来的 IP 数据报组装成帧，在两个相邻节点间的链路上传送帧。每一帧包括数据和必要的控制信息（如同步信息，地址信息，差错控制等）`![](../../../../../2_笔记/7_计算机基础/1_计算机网络基础/1_网络体系结构/assets/Pasted%20image%2020231018140201.png)
 2. 物理层的作用是`实现相邻计算机节点之间比特流的透明传送，尽可能屏蔽掉具体传输介质和物理设备的差异`![](../../../../../2_笔记/7_计算机基础/1_计算机网络基础/1_网络体系结构/assets/Pasted%20image%2020231018135758.png)
 
-网络接口层重要功能和协议如下图所示：![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319113448.png)
+网络接口层重要功能和协议如下图所示：![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b18d51ad7ec9b43c0cbe1b3ceb24129f.png)
 
 ### 2.5 总结
 

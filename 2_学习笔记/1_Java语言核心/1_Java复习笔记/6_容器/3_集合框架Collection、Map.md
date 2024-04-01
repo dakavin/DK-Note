@@ -36,13 +36,13 @@ Java集合就像一种容器，可以把多个对象（实际是对象的引用�
 
 Java的集合类主要有两个接口派生而出：Collection 和 Map，Collection和Map是Java集合框架的根接口。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226115115222.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/731d35063988ecb686280afa8cbd0cee.png)
 
 图中，`ArrayList、HashSet、LinkedList、TreeSet`是我们经常会有用到的已实现的集合类。
 
 Map实现类用于保存具有映射关系的数据。Map保存的每项数据都是key-value对，也就是有key和value两个值组成。Map里的key是不可重复的，key用户标识集合里的每项数据。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226115302729.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aa34bff4163aad8b143bb4541301b744.png)
 
 图中，`HashMap、TreeMap`是我们经常会用到的集合类。
 
@@ -56,7 +56,7 @@ Collection接口中定义了多种方法可供子类进行实现，以实现数�
 
 ### 4.2 接口中定义的方法
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226115446830.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7b218ff5210c2d422680eacb62bfdb29.png)
 
 可以看出Collection用法有：添加元素、删除元素、返回Collection集合的个数以及清空集合等。
 
@@ -66,7 +66,7 @@ Collection接口中定义了多种方法可供子类进行实现，以实现数�
 
 Iterator接口经常被称作迭代器，它是Collection接口的父接口。但Iterator主要用于遍历集合中的元素。
 
-Iterator接口中主要定义了2个方法：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226115740623.png)
+Iterator接口中主要定义了2个方法：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1103b2153c9ca88412b58ce360e2baf0.png)
 
 下面程序简单示范了通过Iterator对象逐个获取元素的逻辑
 ```java
@@ -108,7 +108,7 @@ public class IteratorExample1 {
 }
 ```
 
-输出结果如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226120624272.png)
+输出结果如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7505801827ff3149e869405efa0d244f.png)
 ## 5 Set集合
 
 ### 5.1 简介
@@ -153,7 +153,7 @@ Queue用户模拟队列这种数据结构，队列通常是指“先进先出FIF
 
 ### 7.2 接口中定义的方法
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226123429786.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/53d7c6acd3d736b3646fbaebb1032dfa.png)
 
 ## 8 Map集合
 
@@ -163,7 +163,7 @@ Map用户保存具有映射关系的数据，因此Map集合里保存着两组�
 
 如下图所描述，key和value之间存在单向一对一关系，即通过指定的key，总能找到唯一的、确定的value。从Map中取出数据时，只要给出指定的key，就可以取出对应的value。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226123719090.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1321ecd4d7db854877ee094deab14830.png)
 
 
 ### 8.2 与Set集合、List集合的关系
@@ -176,10 +176,10 @@ Map用户保存具有映射关系的数据，因此Map集合里保存着两组�
 
 ### 8.3 接口中定义的方法
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226124025240.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0829c8a212b4aeaa4bf28747ceb75860.png)
 
 Map中还包括了一个内部类Entry，该类封装了一个key-value对。Entrt包含如下三个方法：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226124108435.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9b7b0105ecf180eb7602ff38fdc32c21.png)
 
 Map集合最经典的用法就是成对地添加、删除键值对，然后就是判断该Map中是否包含指定的key，和指定的value，也可以通过Map提供的ketSet()方法获取所有key组成集合，然后使用foreach循环来遍历Map的所有key，根据key即可遍历所有的value。
 
@@ -214,7 +214,7 @@ public class MapTest {
 }
 ```
 
-输出结果：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226124930355.png)
+输出结果：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/74383e6879e910e48896db5959ab45d7.png)
 
 
 

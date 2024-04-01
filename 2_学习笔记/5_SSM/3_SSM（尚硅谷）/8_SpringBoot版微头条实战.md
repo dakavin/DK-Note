@@ -44,43 +44,43 @@
 
 > 头条首页信息搜索
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220731855.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f4921dde8cf908fc7297a66cb6b89121.png)
 
 
 
 > 登录功能
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220737265.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d1c2495d00e40255196dfeb922df7880.png)
 
 
 
 > 注册功能
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220742958.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2755aba5fa39e6ca4e7111178a01e1ec.png)
 
 
 
 > 展示功能
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220747657.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/87e515381099128bb74282dad116f7d2.png)
 
 
 
 > 发布头条功能
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220751251.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f7a00cc538c6b19ab7209f8bc44a5098.png)
 
 
 
 > 修改头条功能
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220757764.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a87baf1b5d73171467f767f07683491b.png)
 
 
 
 > 删除头条功能
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220803219.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/146cca729b7be7581d58d84ade546fbb.png)
 
 
 
@@ -89,13 +89,13 @@
 > 确保本地node，npm，vscode安装完毕！ 如果没有安装可以回看ssm整合实战！
 
 -   解压前端项目代码并存放到磁盘的合适位置
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220807894.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/861ab722c501b1c8911d7337ae7099ed.png)
 -   使用vscode打开工程
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220843114.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/35c2585ff884bf156b7f958f0a72ca32.png)
 
 
 -   进入项目后打开集成终端或者在src上右击选择在集成终端中打开
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220847153.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31c0c6e304e109ffefa916b2b6ecb2e6.png)
 
 
 -   通过 npm run dev启动前端项目
@@ -321,7 +321,7 @@ SET FOREIGN_KEY_CHECKS = 1;
           table-prefix: news_ # 设置表的前缀
     ```
 4.  druid兼容springboot3文件
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220903871.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/42554a5ef6c68d355b9cf17154eaabcf.png)
 
 
     文件名和内容
@@ -491,7 +491,7 @@ public final class MD5Util {
 ### 3. MybatisX逆向工程
 
 1.  逆向工程
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220930603.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/72b889acb5608e6b194bb04e0af8b985.png)
 
 2.  完善实体类注解
 
@@ -529,7 +529,7 @@ public class User implements Serializable {
     1.  `token介绍`
 
         令牌（Token）：在计算机领域，令牌是一种代表某种访问权限或身份认证信息的令牌。它可以是一串随机生成的字符或数字，用于验证用户的身份或授权用户对特定资源的访问。普通的令牌可能以各种形式出现，如访问令牌、身份令牌、刷新令牌等。
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220948962.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/33b2e15d1673a72fbaae7ee5835006df.png)
 
         简单理解 : `每个用户生成的唯一字符串标识,可以进行用户识别和校验`
 
@@ -542,7 +542,7 @@ public class User implements Serializable {
         Token是一项规范和标准(接口)
 
         JWT(JSON Web Token)是具体可以`生成,校验,解析`等动作Token的技术(实现类)
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220953192.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/06c827e75adb9b97ccd048983b6a8e4e.png)
     3.  jwt工作流程
         -   用户提供其凭据（通常是用户名和密码）进行身份验证。
         -   服务器对这些凭据进行验证，并在验证成功后创建一个JWT。
@@ -551,7 +551,7 @@ public class User implements Serializable {
 
 	4.  jwt数据组成和包含信息
         JWT由三部分组成: `header(头部).payload(载荷).signature(签名)`
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220958648.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b929dd3f2a6be6d5e93a4231b7586b20.png)
 
         我们需要理解的是, jwt可以携带很多信息! 一般情况,需要加入:`有效时间,签名秘钥,其他用户标识信息!`
 
@@ -669,7 +669,7 @@ public class SpringBootTest {
             ```
 -   **1.2  登录功能实现**
     1.  需求描述
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221009393.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f8bcba5f6099d67e33aac84ebc340da.png)
 
 
         用户在客户端输入用户名密码并向后端提交,后端根据用户名和密码判断登录是否成功,用户有误或者密码有误响应不同的提示信息！
@@ -1043,12 +1043,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
 - bug修复
 - 每次页面都显示第一页，原因new Page的时候没有传参
-- 修改如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221117376.png)
+- 修改如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0af89ce12ffd9a796f889b521b9f7d11.png)
 ### 4.2 首页模块开发
 
 -   **2.1 查询首页分类**
     1.  需求描述
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221124609.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cb26af53071b8cfface6721e71c8511c.png)
         进入新闻首页,查询所有分类并动态展示新闻类别栏位
     2.  接口描述
 
@@ -1117,7 +1117,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 -   **2.2 分页查询首页头条信息**
     1.  需求描述
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221131512.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/af8c779033fc1cbb1b418251c2784456.png)
         -   客户端向服务端发送查询关键字,新闻类别,页码数,页大小
         -   服务端根据条件搜索分页信息,返回含页码数,页大小,总页数,总记录数,当前页数据等信息,并根据时间降序,浏览量降序排序
     2.  接口描述
@@ -1275,7 +1275,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 -   **2.3 查询头条详情**
     1.  需求描述
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221140862.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/87ec88b0f315624fe087aa317e42bcd6.png)
 
 
         -   用户点击"查看全文"时,向服务端发送新闻id
@@ -1392,7 +1392,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
 -   \*\*3.1 登陆验证和保护 \*\*
     1.  需求描述
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221148257.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/84a6a5612804b2e2fedefa4b364c9157.png)
         -   客户端在进入发布页前、发布新闻前、进入修改页前、修改前、删除新闻前先向服务端发送请求携带token请求头
         -   后端接收token请求头后,校验用户登录是否过期并做响应
         -   前端根据响应信息提示用户进入登录页还是进入正常业务页面
@@ -1480,7 +1480,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 -   **3.2 头条发布实现**
     1.  需求描述
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221201263.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2a1ded7249e99f20ac2722a1debc1d31.png)
 
 
         -   用户在客户端输入发布的新闻信息完毕后
@@ -1561,7 +1561,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 -   **3.3 修改头条回显**
     1.  需求描述
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221207274.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9905c5a3588ebfb6356a27a489ee560f.png)
 
 
         -   前端先调用登录校验接口,校验登录是否过期
@@ -1682,7 +1682,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 -   **3.5 删除头条功能**
     1.  需求描述
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922221214049.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ad7321fa5cb8cdb067d9ab44c4d2c248.png)
 
 
         -   将要删除的新闻id发送给服务端

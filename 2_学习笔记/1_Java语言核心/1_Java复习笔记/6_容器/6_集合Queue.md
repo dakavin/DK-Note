@@ -14,7 +14,7 @@
 ## 1 前言
 
 Queue用于模拟队列这种数据结构，队列通常是指“先进先出”的容器，新元素插入到队列尾部，访问元素操作会返回队列头部的元素。通常，队列不允许随机访问队列中的元素
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227002105453.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/34b78987b34f464b91d780b7b472547e.png)
 
 这种结构就如同我们生活中的排队一样
 
@@ -70,14 +70,14 @@ public class PriorityQueueTest {
 }
 ```
 
-输出结果：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227003033232.png)
+输出结果：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1066cf12b497551ba4e73d81f273b15a.png)
 
 由此可以看出，默认情况下PriorityQueue采用自然排序。指定Comparator的情况下，PriorityQueue采用指定的排序方式。
 
 ### 2.2 PriorityQueue的方法
 
 PriorityQueue实现了Queue接口，下面列举PriorityQueue的方法
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227003128387.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b79041c5c00c101ac9d2fea7af84b5a5.png)
 
 
 ### 2.3 PriorityQueue的本质
@@ -150,15 +150,15 @@ Deque接口是Queue接口的子接口，它代表一个双端队列。LinkedList
 
 因此Deque接口增加了一些关于双端队列操作的方法。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227004823215.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b1f2a4e041237197be7cd8690696e0f7.png)
 
 从上面方法中可以看出，Deque不仅可以当成双端队列使用，而且可以被当成栈来使用，因为该类里还包含了pop(出栈)、push(入栈)两个方法
 
 ### 3.2 Deque与Queue、Stack的关系
 
-当Deque当作Queue队列使用时(FIFO)，添加元素是添加到队尾，删除时删除的是头部元素。从Queue接口继承的方法对应Deque的方法如图所示：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227005237502.png)
+当Deque当作Queue队列使用时(FIFO)，添加元素是添加到队尾，删除时删除的是头部元素。从Queue接口继承的方法对应Deque的方法如图所示：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dbe29e94e887d71baa6894c53ddce343.png)
 Deque 也能当Stack栈用（LIFO）。这时入栈、出栈元素都是在 双端队列的头部 进行。Deque 中和Stack对应的方法如图所示：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227005310864.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c266f27ea6824697887ac47462aa4110.png)
 
 **注意：** Stack过于古老，并且实现地非常不好，因此现在基本已经不用了，可以直接用Deque来代替Stack进行栈操作。
 
@@ -184,7 +184,7 @@ private static final int MIN_INITIAL_CAPACITY = 8;
 
 当向头部插入元素时，head下标减一然后插入元素。而tail表示的索引为当前末尾元素表示的索引值加一。若当向尾部插入元素时，直接向tail表示的位置插入，然后tail再减一。
 
-具体以下面图片为例解释![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227010037021.png)
+具体以下面图片为例解释![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5da3884a7c72167ec7efd6134cc20dcd.png)
 
 在上图中：左边图表示从头部插入了4个元素，尾部插入了2个。在初始的时候，head=0，tail=0,。当从头部插入元素5，head-1，由于数组是循环数组，则移动到数组的最后位置插入5,。当从头部插入元素34，head-1然后再对应位置插入。
 
@@ -214,7 +214,7 @@ public void addFirst(E e) {
 
 下面再说说扩容函数doubleCapacity()，其逻辑是申请一个更大的数组（原数组的两倍），然后将原数组复制过去。过程如下图所示：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227010705011.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/51443e4a18336abd425217a888bf7954.png)
 
 
 图中我们看到，复制分两次进行，第一次复制head右边的元素，第二次复制head左边的元素。

@@ -13,7 +13,7 @@ REST是一种软件架构风格，可以降低开发的复杂性，提高系统�
 
 # 一、SpringMVC概述
 
-学习SpringMVC我们先来回顾下现在Web程序是如何做的，我们现在的Web程序大都基于MVC三层架构来实现的。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212106277.png)
+学习SpringMVC我们先来回顾下现在Web程序是如何做的，我们现在的Web程序大都基于MVC三层架构来实现的。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29f89be0685c0de66ca2624a2a875465.png)
 - 如果所有的处理都交给`Servlet`来处理的话，所有的东西都耦合在一起，对后期的维护和扩展极其不利
     - 所以将后端服务器`Servlet`拆分成三层，分别是`web`、`service`和`dao`
         - `web`层主要由`servlet`来处理，负责页面请求和数据的收集以及响应结果给前端
@@ -27,7 +27,7 @@ REST是一种软件架构风格，可以降低开发的复杂性，提高系统�
     - `controller`根据需求组装成`Model`和`View`，`Model`和`View`组合起来生成页面，转发给前端浏览器
     - 这样做的好处就是`controller`可以处理多个请求，并对请求进行分发，执行不同的业务操作
 
-随着互联网的发展，上面的模式因为是同步调用，性能慢慢的跟不是需求，所以异步调用慢慢的走到了前台，是现在比较流行的一种处理方式。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212108894.png)
+随着互联网的发展，上面的模式因为是同步调用，性能慢慢的跟不是需求，所以异步调用慢慢的走到了前台，是现在比较流行的一种处理方式。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5b95e425f38f1052ad531f5a7af530d.png)
 
 
 - 因为是`异步调用，所以后端不需要返回View视图，将其去除`
@@ -299,7 +299,7 @@ controller、service和dao这些类都需要被容器管理成bean对象，那�
 - 方式二：Spring加载的bean设定扫描范围为精确扫描，具体到`service`包，`dao`包等
 - 方式三：不区分Spring与SpringMVC的环境，加载到同一个环境中(`了解即可`)
 
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212118964.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14d2d0a88ca3f6fdcb2e0370d7950ba6.png)
 
 
 ### 4.3 环境准备
@@ -492,17 +492,17 @@ public class ServletContainerInitConfig extends AbstractAnnotationConfigDispatch
 
 ## 1、创建WorkSpace工作空间
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212126433.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/518d7df77f3fae76983a234d905ac8ab.png)
 
 
 ## 2、发送请求
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212128935.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c71e0e5ae219a7f028104c50610e6f8.png)
 
 
 ## 3、保存当前请求
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212130509.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b9c3478fff038c8c21e46b4dfbb98309.png)
 
 
 
@@ -596,7 +596,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 }
 ```
 
-- 直接启动Tomcat服务器，会报错![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212137565.png)
+- 直接启动Tomcat服务器，会报错![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f827acf2e00669687f0aaa5121ff518b.png)
 
 从错误信息可以看出:
 
@@ -766,11 +766,11 @@ public class UserController {
 }
 ```
 
-- 控制台输出![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212146843.png)
+- 控制台输出![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2076e0a5d77e1f2e696850c3e5f96a08.png)
 
 
 
-- `POST发送参数`![[![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212148926.png)
+- `POST发送参数`![[![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/70666cc327f88685331b1341d63cfe24.png)
 
 
 - 接收参数，和GET一致，不用做任何修改
@@ -789,7 +789,7 @@ public class UserController {
 }
 ```
 
-- 控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212152163.png)
+- 控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/84b649334d840895a7d656ef0ea15545.png)
 
 
 - `POST请求中文乱码 ` 
@@ -820,7 +820,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 }
 ```
 
-- 重启Tomcat服务器，并发送post请求，使用中文，控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212156677.png)
+- 重启Tomcat服务器，并发送post请求，使用中文，控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/05974521cf3bd0358499b463e6681d29.png)
 
 
 ## 3、五种类型参数传递
@@ -1021,7 +1021,7 @@ public class SpringMvcConfig {
 }
 ```
 
-- `步骤三：`PostMan发送JSON数据![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212204908.png)
+- `步骤三：`PostMan发送JSON数据![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d75362a8c19544eaf25c9eafb7e74e2.png)
 
 
 - `步骤四：`后台接收参数，参数前添加`@RequestBody`  
@@ -1194,7 +1194,7 @@ public String dateParam(Date date1,
 }
 ```
 
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212216918.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fa1f916a439c7e740b057eabb6727941.png)
 
 
 
@@ -1242,7 +1242,7 @@ public interface Converter<S, T> {
 ```
 
 到了源码页面我们按Ctrl + H可以来看看`Converter`接口的层次结构  
-这里给我们提供了很多对应`Converter`接口的实现类，用来实现不同数据类型之间的转换![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212221743.png)
+这里给我们提供了很多对应`Converter`接口的实现类，用来实现不同数据类型之间的转换![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/49b88998bebaa69ff521f161b2648995.png)
 
 
 2.  `HttpMessageConverter`接口  
@@ -1416,7 +1416,7 @@ REST，表现形式状态转换，它是一种软件架构`风格`
     - `http://localhost/users` 修改用户信息 `PUT`（修改/更新）
     - `http://localhost/users/1` 删除用户信息 `DELETE`（删除）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212229159.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/78ce771547b2f34345178fb2020a5284.png)
 
 
 
@@ -1558,7 +1558,7 @@ public String save(@RequestBody User user) {
 }
 ```
 
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212236246.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6435a9592a13aad7d15b62c6a1fbb910.png)
 
 
 - `删除`  
@@ -1585,7 +1585,7 @@ public String delete(@PathVariable Integer id){
 ```
 
 发送`DELETE`请求访问`localhost:8080/users/9421`  
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212239463.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/10a385665e500115b4bca39d6e847bfd.png)
 
 
 疑问：如果方法形参的名称和路径`{}`中的值不一致，该怎么办?  
@@ -1615,7 +1615,7 @@ public String delete(@PathVariable("id") Integer userId,@PathVariable String nam
 ```
 
 发送`DELETE`请求访问`localhost:8080/users/9421/Tom`  
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212243083.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1c7e0d6054e7fb0ed57df7c5ea01cc0f.png)
 
 
 - `修改`  
@@ -1637,7 +1637,7 @@ public String update(@RequestBody User user){
 }
 ```
 
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212252357.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d58b92645c93f9cf144d36376d3fe718.png)
 
 
 
@@ -1666,7 +1666,7 @@ public String getAll(){
 ```
 
 发送`GET`请求访问`localhost:8080/users`  
-控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212257108.png)
+控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ee93ba157e8c2d915419022651e0a25.png)
 
 
 - 整体代码
@@ -1800,10 +1800,10 @@ public class UserController {
 
 ### 4.1 需求分析
 
-- 需求一：图片列表查询，从后台返回数据，将数据展示在页面上![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212308417.png)
+- 需求一：图片列表查询，从后台返回数据，将数据展示在页面上![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7769052f8f390d5096f608f1f899f2ca.png)
 
 
-- 需求二：新增图片，将新增图书的数据传递到后台，并在控制台打印![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212310129.png)
+- 需求二：新增图片，将新增图书的数据传递到后台，并在控制台打印![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/33a7a712f805432a49dbbf15dae2976d.png)
 
 
 - 说明：此次案例的重点是在SpringMVC中如何使用RESTful实现前后台交互，所以本案例并没有和数据库进行交互，所有数据使用`假数据`来完成开发。
@@ -1949,7 +1949,7 @@ public class BookController {
 }
 ```
 
-访问`localhost:8080/books`，发送POST请求与数据，控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212317641.png)
+访问`localhost:8080/books`，发送POST请求与数据，控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/017c08e29af9821f43b8b45fcd7fe837.png)
 
 
 - 测试查询  
@@ -1977,7 +1977,7 @@ public class BookController {
 ]
 ```
 
-- 控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212322208.png)
+- 控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f75bdb528dc947ad3af75bbc29105e70.png)
 
 
 ### 4.4 页面访问处理

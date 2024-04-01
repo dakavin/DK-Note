@@ -16,7 +16,7 @@
 ### 1.1 Ajax介绍
 
 我们`前端页面中的数据`，如下图所示的表格中的学生信息，`应该来自于后台`，那么我们的后台和前端是互不影响的2个程序，那么我们前端应该如何从后台获取数据呢？因为是2个程序，所以必须涉及到2个程序的交互，所以这就需要用到我们接下来学习的`Ajax技术`。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922184534762.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0f6cb843dde8e288babc59214fe27a7d.png)
 
 Ajax: 全称`Asynchronous JavaScript And XML`，异步的JavaScript和XML。其作用有如下2点：
 
@@ -29,19 +29,19 @@ Ajax: 全称`Asynchronous JavaScript And XML`，异步的JavaScript和XML。其�
 
 - `与服务器进行数据交互`
     
-    如下图所示前端资源被浏览器解析，但是前端页面上缺少数据，`前端可以通过Ajax技术，向后台服务器发起请求`，后台服务器接受到前端的请求`，从数据库中获取前端需要的资源，然后响应给前端`，前端在通过我们学习的vue技术，可以将数据展示到页面上，这样用户就能看到完整的页面了。此处可以对比JavaSE中的网络编程技术来理解。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922184544419.png)
+    如下图所示前端资源被浏览器解析，但是前端页面上缺少数据，`前端可以通过Ajax技术，向后台服务器发起请求`，后台服务器接受到前端的请求`，从数据库中获取前端需要的资源，然后响应给前端`，前端在通过我们学习的vue技术，可以将数据展示到页面上，这样用户就能看到完整的页面了。此处可以对比JavaSE中的网络编程技术来理解。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1478bd2c5b10db3902848da91ea311f7.png)
 
 - `异步交互`：可以在**不重新加载整个页面**的情况下，与服务器交换数据并**更新部分网页**的技术。
 
-  如下图所示，当我们再百度搜索java时，下面的`联想数据是通过Ajax请求从后台服务器得到的`，在整个过程中，我们的Ajax请求不会导致整个百度页面的重新加载，并且`只针对搜索栏这局部模块的数据进行了数据的更新`，不会对整个页面的其他地方进行数据的更新，这样就`大大提升了页面的加载速度，用户体验高`。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922184554247.png)
+  如下图所示，当我们再百度搜索java时，下面的`联想数据是通过Ajax请求从后台服务器得到的`，在整个过程中，我们的Ajax请求不会导致整个百度页面的重新加载，并且`只针对搜索栏这局部模块的数据进行了数据的更新`，不会对整个页面的其他地方进行数据的更新，这样就`大大提升了页面的加载速度，用户体验高`。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9c8182429cd46012b107552c0eaa8f90.png)
 ### 1.3 同步异步
 
 针对于上述Ajax的`局部刷新功能`是因为`Ajax请求是异步的`，与之对应的有同步请求。接下来我们介绍一下异步请求和同步请求的区别。
 
-- 同步请求发送过程如下图所示：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922184602913.png)
+- 同步请求发送过程如下图所示：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3eee530c76cba726b219ea41081ef642.png)
   浏览器页面在发送请求给服务器，`在服务器处理请求的过程中，浏览器页面不能做其他的操作`。只能等到服务器响应结束后才能，浏览器页面才能继续做其他的操作。 
 
-- 异步请求发送过程如下图所示：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922201412090.png)
+- 异步请求发送过程如下图所示：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c577c087270747d00d18b684c2ebcca0.png)
 
   浏览器页面发送请求给服务器，在`服务器处理请求的过程中，浏览器页面还可以做其他的操作`。
 
@@ -94,7 +94,7 @@ Ajax: 全称`Asynchronous JavaScript And XML`，异步的JavaScript和XML。其�
 
 
 最后我们通过浏览器打开页面，请求点击按钮，发送Ajax请求，最终显示结果如下图所示：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922201529901.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/199862e599fc5422f4a52ec17821161c.png)
 
 
 
@@ -154,7 +154,7 @@ axios()是用来发送异步请求的，小括号中`使用 js的JSON对象`传�
 	1. 首先在VS Code中创建js文件夹，与html同级，然后将**资料/axios-0.18.0.js** 文件拷贝到js目录下，然后创建名为02. Ajax-Axios.html的文件，
 	2. 然后在html中引入axios所依赖的js文件，并且提供2个按钮，绑定单击事件，分别用于点击时发送ajax请求
 	3. 然后分别使用Axios的方法，完整get请求和post请求的发送 
-	4. 浏览器打开，f12抓包，然后分别点击2个按钮，查看控制台效果如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922201546744.png)
+	4. 浏览器打开，f12抓包，然后分别点击2个按钮，查看控制台效果如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3f3d43853de6f2448763ef43b0430d21.png)
 
 `完整代码如下`：
 ```html
@@ -220,7 +220,7 @@ post请求代码如下：
  })
 ```
 
-浏览器打开，f12抓包，然后分别点击2个按钮，查看控制台效果如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922201731621.png)
+浏览器打开，f12抓包，然后分别点击2个按钮，查看控制台效果如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/071bc01c38dc03a5375c4f1c171e9a8e.png)
 ### 3.3 请求方法的别名
 
 Axios还针对不同的请求，提供了别名方式的api,具体如下：
@@ -248,7 +248,7 @@ axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(
 
 ### 3.4 案例
 
-- 需求：基于Vue及Axios完成数据的动态加载展示，如下图所示![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922201808049.png)
+- 需求：基于Vue及Axios完成数据的动态加载展示，如下图所示![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c1578d386bb116154ccd7bab0bff7100.png)
 - 分析：
     
     前端首先是`一张表格`，我们`缺少数据`，而`提供数据的地址`已经有了，所以意味这我们需要`使用Ajax请求获取后台的数据`。但是Ajax请求什么时候发送呢？页面的数据应该是页面加载完成，自动发送请求，展示数据，所以我们`需要借助vue的mounted钩子函数`。那么拿到数据了，我们该怎么将数据显示表格中呢？这里就得`借助v-for指令来遍历数据`，展示数据。

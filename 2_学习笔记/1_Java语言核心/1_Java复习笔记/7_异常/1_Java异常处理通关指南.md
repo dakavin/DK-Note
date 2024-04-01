@@ -82,7 +82,7 @@ Java中的异常由 Throwable 类及其子类来描述。Throwable类是Java异�
 Java 提供的系统异常有很多，我们还可以自定义异常，不过 Java 的异常分类中我们只需要记住几个关键的分类即可，不必所有异常类的行为全都得背一遍。
 
 下图是一个异常类族的层级图。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240227154604228.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aaea9d72ff704da05173e5fb6fdf7071.png)
 
 Throwable有两个直接子类，Error类和Exception类
 

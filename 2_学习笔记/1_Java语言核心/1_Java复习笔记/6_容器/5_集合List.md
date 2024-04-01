@@ -17,7 +17,7 @@
 - [4 ArrayList和LinkedList性能对比](#4%20ArrayList%E5%92%8CLinkedList%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94)
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226225105771.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cee64f4229be94cfaffc4893cf17b70b.png)
 ## 1 List集合
 
 ### 1.1 List集合判断元素相等的标准
@@ -162,10 +162,10 @@ public ArrayList(int initialCapacity) {
 
 Stack是Vector的子类，用户模拟“栈”这种数据结构，“栈”通常是指FILO的容器。最后“push”进栈的元素，将被最先“pop”出栈。如图所示：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226223928088.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b9f3d0d559a15d6dc16ae5c8ff191d2b.png)
 
 Stack类里提供了如下几个方法：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226223946060.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8b72da3d703e27e54dfd58895aeedeba.png)
 
 
 Stack与Vector一样，是线程安全的，但是性能较差，尽量少用Stack类。如果要实现栈”这种数据结构，可以考虑使用LinkedList(下面就会介绍)。
@@ -218,7 +218,7 @@ LinkedList的实现机制与ArrayList完全不同。ArrayList内部是以数组�
 
 ### 3.2 LinkedList方法
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226224356629.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b620305ab98e4a70c01a210d8c44b403.png)
 
 ### 3.3 LinkedList本质
 

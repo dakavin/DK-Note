@@ -28,7 +28,7 @@ URI 本质上是一个字符串，这个字符串的作用是**唯一地标记�
 
 下面的这张图显示了 URI 最常用的形式，由 scheme、host:port、path 和 query 四个部分组成，但有的部分可以视情况省略。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031005729.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/84af174b41292d5d7c24a49f814dbffa.png)
 
 ## 2、URI 的基本组成
 
@@ -79,7 +79,7 @@ file:///D:/http_study/www/
 
 运行 Chrome，用 F12 打开开发者工具，然后在地址栏里输入“[http://www.chrono.com/11-1](http://www.chrono.com/11-1)”，得到的结果如下图。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031011715.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/35c9e9b46d413d160040e8e9b70c3d71.png)
 
 在开发者工具里依次选“Network”“Doc”，就可以找到请求的 URI。然后在 Headers 页里看 Request Headers，用“view source”就可以看到浏览器发的原始请求头了。
 
@@ -111,7 +111,7 @@ http://www.chrono.com:8080/11-1?uid=1234&name=mario&referer=xxx
 
 Chrome 的开发者工具也能解码出 query 里的 KV 对，省得我们“人肉”分解。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031011725.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ca76599c3d889e2ac403a7c58a77b7fe.png)
 
 还可以再拿一个实际的 URI 来看一下，这个 URI 是某电商网站的一个商品查询 URI，比较复杂，但相信现在的你能够毫不费力地区分出里面的协议名、主机名、路径和查询参数。
 
@@ -127,7 +127,7 @@ https://search.jd.com/Search?keyword=openresty&enc=utf-8&qrst=1&rt=1&stop=1&vt=2
 
 不过必须要说的是，URI 还有一个“真正”的完整形态，如下图所示。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031011732.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/11300e5a8e5914ca252da88694efaf7c.png)
 
 这个“真正”形态比基本形态多了两部分。
 
@@ -163,7 +163,7 @@ http://www.chrono.com:8080/11-1? 夸父逐日
 http://www.chrono.com:8080/11-1?%E5%A4%B8%E7%88%B6%E9%80%90%E6%97%A5
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031011216.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/57af56f49d34b0b7b5a714fe5f3df6ae.png)
 
 ## 小结
 
@@ -187,4 +187,4 @@ http://www.chrono.com:8080/11-1?%E5%A4%B8%E7%88%B6%E9%80%90%E6%97%A5
 	- 一个是长期、稳定的，一个是短期、临时的。两者的作用域和时效性是不一样的
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031011741.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3f4497471f8586330a2ec6e9ddc17971.png)

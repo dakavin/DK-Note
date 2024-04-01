@@ -25,28 +25,28 @@
 
 - 新建一个module
 - 鼠标右键module --- add Framework Support
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005531162.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/987573c3cd7e35ae7108ad12cd4637c7.png)
 
 - 选择JavaEE下的Web Application --- next即可，`JavaEE不同，web的版本也不同`
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005536396.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dbe87f428777aceccf2e8dfd1387da9a.png)
 
 - 打开上方的run Configuration选项
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005543390.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/591c1ae9a1424192e443b56ebbeec267.png)
 
 - 添加一个新的tomcat服务器
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005545882.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2bdf19388f15fab4467fdcbe4e0cebb1.png)
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005550611.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/47ecdfc6444f7acb2aa5718a495f4178.png)
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005554498.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6d9b7138e263d6369fc41bd0ccd7f62d.png)
 
 - 解决tomcat控制台乱码问题
 - 不修改Tomcat配置文件logging.properties，而是在帮助的编辑自定义VM选项里加上
 - `-Dfile.encoding=UTF-8`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005604641.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/91a7f8d5f74ca4e9ccf8e65aa3cc0bf9.png)
 
 
 - 关于Tomcat localhost log 和 tomcat catalina log乱码问题
@@ -95,7 +95,7 @@ taskkill -f -pid PID
 
 则进入system32文件夹中打开cmd
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005613957.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14ad8481ef00cf7f2e21ef53ee213a10.png)
 
 
 ### 3.3 找不到1099端口号
@@ -108,7 +108,7 @@ taskkill -f -pid PID
 
 ## 4、解决乱码问题
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005621591.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8ca3a2b7b24feb56674d241ab014b484.png)
 
 ## 5、解决无法new Servlet问题
 
@@ -117,18 +117,18 @@ taskkill -f -pid PID
 - 选中对应的模块
 - 勾上sources root
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005629350.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bed44e2049e48ceb55e0eb933e7d20f1.png)
 
 
 - `修改模板`
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005641844.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/77a98e4aea45c482670c859208a3fa33.png)
 
 ## 6、解决无法读取jar包问题
 
 - 在WEB-INF文件夹中新建 classes 和 lib文件夹
-- 修改`.class文件`输出位置![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005649151.png)
-- 修改`lib文件`输出位置![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005654561.png)
-- 忘记修改lib文件输出位置，或者直接将jar导入module的情况下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005711567.png)
+- 修改`.class文件`输出位置![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f73b426dbad95211e7b497bebdcb2d8.png)
+- 修改`lib文件`输出位置![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/74526520920a64d0fdccd01c6c282d48.png)
+- 忘记修改lib文件输出位置，或者直接将jar导入module的情况下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e9e294a213f30883a53089a376ce287f.png)
 
 
 ## 7、解决Tomcat8版本，中文Cookie乱码问题
@@ -139,23 +139,23 @@ taskkill -f -pid PID
 
 ## 9、自定义Servlet模板
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005719757.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/78c467dad064b846904fd1119d5a3a37.png)
 
 ## 10、关于Filter在IDEA中执行了2次或3次问题处理
 
 ### **指定浏览器**
 
-1、把默认浏览器替换成指定浏览器![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005728776.png)
+1、把默认浏览器替换成指定浏览器![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a459d7b9e4c804b2ecc1847d018fc77b.png)
 
-2、然后指定IDEA中的默认浏览器选项Default Browsers:First listed![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005734741.png)
+2、然后指定IDEA中的默认浏览器选项Default Browsers:First listed![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7d265d85efb58379c9aac68f9f4cbaf0.png)
 
 3、运行Tomcat程序，然后会自动弹出Chrome网页，如果弹出的Chrome网页doFilter次数依然不变，那么可能是Chrome没选择正确，我选的是ChromeCoreLauncher.exe，另外还有一个是ChromeCore.exe。弹出网页之后手动输入http://localhost:8080/地址，最后返回Tomcat终端查看程序。
 `发现filter执行了2次`
 
 ### **不指定浏览器**
 
-1、去勾![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005740690.png)
+1、去勾![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f517744751ef29f1bfe3df666d0fabad.png)
 
 2、`此时filter执行1次`
 
- 不指定浏览器是因为服务器在启动访问index.jsp页面时实际上是向浏览器发送了俩次请求，一次是程序本身Tomcat向浏览器发送的请求，一次是浏览器自动发送的/favicon.ico请求。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005743504.png)
+ 不指定浏览器是因为服务器在启动访问index.jsp页面时实际上是向浏览器发送了俩次请求，一次是程序本身Tomcat向浏览器发送的请求，一次是浏览器自动发送的/favicon.ico请求。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7a2b02b20f1c94bde4c64a0e35e89859.png)

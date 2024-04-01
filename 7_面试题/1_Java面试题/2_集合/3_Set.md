@@ -154,7 +154,7 @@ Output：
 
 ## 4、HashSet的一个代码题
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317160039.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/052661a464ee2eac87bd3bc8154574e1.png)
 
 
 1. 第一个输出：正常输出set中的元素

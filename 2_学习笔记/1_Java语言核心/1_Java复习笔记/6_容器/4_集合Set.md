@@ -250,7 +250,7 @@ public class ComparableTest {
 
 其中Person实现Comparable接口，将Person对象按照年龄从小到大升序排列
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226220848607.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6dc4eab5909a4ae4efab4f03cc52d6ff.png)
 
 可以看到并没有发生变化，而且如果修改后进行元素删除操作可能会不成功，具体比较复杂。
 
@@ -273,7 +273,7 @@ EnumSet没有其他额外增加的方法，只是增加了一些创建EnumSet对
 
 ### 3.3 EnumSet创建对象的方法
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240226221123972.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7e135559beadbcbf2b8fdb884dc806f6.png)
 
 `补充：EnumSet也是非线程安全的`
 

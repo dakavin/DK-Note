@@ -50,11 +50,11 @@
 
 - 根据资料中提供的《tlias智能学习辅助系统》页面原型及需求，完成员工管理的需求开发。
 
-![image-20221210180155700](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210180155700.png) 
+![image-20221210180155700|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/19798e14e9d1d2aea10a8fcf1b004232.png) 
 
-![image-20221210180343288](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210180343288.png)
+![image-20221210180343288|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ad60b01b9bb92ebc623bf588148b763c.png)
 
-![image-20221210180515206](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210180515206.png)
+![image-20221210180515206|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/806277eb5db9b320c49b7990dd557a74.png)
 
 通过分析以上的页面原型和需求，我们确定了功能列表：
 
@@ -139,7 +139,7 @@ VALUES
 
 **创建一个新的springboot工程，选择引入对应的起步依赖（mybatis、mysql驱动、lombok）**
 
-![image-20221210182008131](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210182008131.png)
+![image-20221210182008131|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/57e79c2be381d00e1d4ca6c170a73e7d.png)
 
 
 
@@ -197,7 +197,7 @@ public interface EmpMapper {
 
 完成以上操作后，项目工程结构目录如下：
 
-![image-20221210182500817](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210182500817.png)
+![image-20221210182500817|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/421ed966754a2e8efdbd22b435865275.png)
 
 ### 1.3 删除
 
@@ -205,7 +205,7 @@ public interface EmpMapper {
 
 页面原型：
 
-![image-20221210183336095](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210183336095.png)
+![image-20221210183336095|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/040176a66f21c1ac71264af430fdc627.png)
 
 > 当我们点击后面的"删除"按钮时，前端页面会给服务端传递一个参数，也就是该行数据的ID。 我们接收到ID后，根据ID删除数据即可。
 
@@ -279,7 +279,7 @@ mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 
 开启日志之后，我们再次运行单元测试，可以看到在控制台中，输出了以下的SQL语句信息：
 
-![image-20220901164225644](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20220901164225644.png) 
+![image-20220901164225644|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c5283f22a5a73c0b6950fd8ab3e0287c.png) 
 
 > 但是我们发现输出的SQL语句：delete from emp where id = ?，`我们输入的参数16并没有在后面拼接，id的值是使用?进行占位。那这种SQL语句我们称为预编译SQL`。
 
@@ -292,7 +292,7 @@ mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 1. 性能更高
 2. 更安全(防止SQL注入)
 
-![image-20221210202222206](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210202222206.png)
+![image-20221210202222206|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/add9b6f5d488db41b3837da9128ca5a5.png)
 
 > 性能更高：预编译SQL，编译一次之后会将编译后的SQL语句缓存起来，后面再次执行这条语句时，不会再次编译。（只是输入的参数不同）
 >
@@ -307,13 +307,13 @@ SQL注入：是通过操作输入的数据来修改事先定义好的SQL语句�
 
 **测试1：使用资料中提供的程序，来验证SQL注入问题**
 
-![image-20221210205419634](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210205419634.png)
+![image-20221210205419634|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fc65e8779612cfd30a04d7fd89f812e6.png)
 
 第1步：进入到DOS
 
-![image-20221211124744203](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211124744203.png)
+![image-20221211124744203|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/54e2490c9385a62da3a723c5e59a6fa7.png)
 
-![image-20221211124840720](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211124840720.png)
+![image-20221211124840720|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/78e231064277bb3a1d5abb81dbaf3181.png)
 
 第2步：执行以下命令，启动程序
 
@@ -322,15 +322,15 @@ SQL注入：是通过操作输入的数据来修改事先定义好的SQL语句�
 java -jar sql_Injection_demo-0.0.1-SNAPSHOT.jar 
 ~~~
 
-![image-20221210211605231](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210211605231.png)
+![image-20221210211605231|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4794a2de7a8e3b3d48db29cb667170d7.png)
 
 第3步：打开浏览器输入`http://localhost:9090/login.html`
 
-![image-20221210212406527](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210212406527.png)
+![image-20221210212406527|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/88add35cd72d7a05938ac07f68e12c1f.png)
 
 发现竟然能够登录成功：
 
-![image-20221210212511915](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210212511915.png)
+![image-20221210212511915|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6c46a75641ac73f06909b4a2bd5a34bb.png)
 
 
 
@@ -338,9 +338,9 @@ java -jar sql_Injection_demo-0.0.1-SNAPSHOT.jar
 
 - 由于没有对用户输入内容进行充分检查，而SQL又是字符串拼接方式而成，在用户输入参数时，在参数中添加一些SQL关键字，达到改变SQL运行结果的目的，从而完成恶意攻击。
 
-![image-20221210213311518](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210213311518.png)
+![image-20221210213311518|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/402d10e7d2f2674f9c2a0787116c2b88.png)
 
-> ![image-20221210214431228](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210214431228.png)
+> ![image-20221210214431228|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0a623e6e1dad9fa52071bfcaff8aed82.png)
 >
 > 用户在页面提交数据的时候人为的添加一些特殊字符，使得sql语句的结构发生了变化，最终可以在没有用户名或者密码的情况下进行登录。
 
@@ -359,15 +359,15 @@ java -jar sql_prepared_demo-0.0.1-SNAPSHOT.jar
 
 第3步：打开浏览器输入`http://localhost:9090/login.html`
 
-![image-20221210212406527](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221210212406527.png)
+![image-20221210212406527|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/88add35cd72d7a05938ac07f68e12c1f.png)
 
 发现无法登录：
 
-![image-20221211125751981](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211125751981.png)
+![image-20221211125751981|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c31667a057a2b6e6e7ba329a06c2fc70.png)
 
 以上操作SQL语句的执行：
 
-![image-20221211130011973](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211130011973.png)
+![image-20221211130011973|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e19b5f9dfc69fcecedbf7505ceb3f56.png)
 
 > 把整个`' or '1'='1`作为一个完整的参数，赋值给第2个问号（`' or '1'='1`进行了转义，只当做字符串使用）
 
@@ -391,13 +391,13 @@ java -jar sql_prepared_demo-0.0.1-SNAPSHOT.jar
 
 功能：新增员工信息
 
-![image-20221211134239610](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211134239610.png)
+![image-20221211134239610|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a231f62269fcd703739e0cbad8a39dd2.png)
 
 #### 1.4.1 基本新增
 
 员工表结构：
 
-![image-20221211134746319](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211134746319.png)
+![image-20221211134746319|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/629c20b2deb886482ca0340f409b7681.png)
 
 SQL语句：
 
@@ -457,7 +457,7 @@ class SpringbootMybatisCrudApplicationTests {
 
 > 日志输出：
 >
-> ![image-20221211140222240](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211140222240.png)
+> ![image-20221211140222240|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/253406995d6951eeeb301e5680251eab.png)
 
 #### 1.4.2 主键返回！
 
@@ -465,11 +465,11 @@ class SpringbootMybatisCrudApplicationTests {
 
 > 如：添加套餐数据时，还需要维护套餐菜品关系表数据。
 >
-> ![image-20221211150353385](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221211150353385.png)
+> ![image-20221211150353385|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e510a6797ab904811bc184dbe65bdfda.png)
 >
 > 业务场景：在前面讲解到的苍穹外卖菜品与套餐模块的表结构，菜品与套餐是多对多的关系，一个套餐对应多个菜品。既然是多对多的关系，是不是有一张套餐菜品中间表来维护它们之间的关系。
 >
-> ![image-20221212093655389](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212093655389.png)
+> ![image-20221212093655389|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b8651f3ec7883a2a5abb8ebbee15e826.png)
 >
 > 在添加套餐的时候，我们需要在界面当中来录入套餐的基本信息，还需要来录入套餐与菜品的关联信息。这些信息录入完毕之后，我们一点保存，就需要将套餐的信息以及套餐与菜品的关联信息都需要保存到数据库当中。其实具体的过程包括两步，首先第一步先需要将套餐的基本信息保存了，接下来第二步再来保存套餐与菜品的关联信息。套餐与菜品的关联信息就是往中间表当中来插入数据，来维护它们之间的关系。而中间表当中有两个外键字段，一个是菜品的ID，就是当前菜品的ID，还有一个就是套餐的ID，而这个套餐的 ID 指的就是此次我所添加的套餐的ID，所以我们在第一步保存完套餐的基本信息之后，就需要将套餐的主键值返回来供第二步进行使用。这个时候就需要用到主键返回功能。
 
@@ -526,7 +526,7 @@ class SpringbootMybatisCrudApplicationTests {
 
 功能：修改员工信息
 
-![image-20221212095605863](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212095605863.png)
+![image-20221212095605863|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b853a4201749f9805efa0f73e1cd9fba.png)
 
 > 点击"编辑"按钮后，会查询所在行记录的员工信息，并把员工信息回显在修改员工的窗体上(下个知识点学习)
 >
@@ -593,7 +593,7 @@ class SpringbootMybatisCrudApplicationTests {
 
 在员工管理的页面中，当我们进行更新数据时，会点击 “编辑” 按钮，然后此时会发送一个请求到服务端，会根据Id查询该员工信息，并将员工数据回显在页面上。
 
-![image-20221212101331292](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212101331292.png) 
+![image-20221212101331292|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a895acf69bfab64c8e146f71c83e3537.png) 
 
 SQL语句：
 
@@ -629,7 +629,7 @@ class SpringbootMybatisCrudApplicationTests {
 
 > 执行结果：
 >
-> ![image-20221212103004961](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212103004961.png)
+> ![image-20221212103004961|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/04a630255727b8be38cdd47dbe3297bb.png)
 >
 > 而在测试的过程中，我们会发现有几个字段(deptId、createTime、updateTime)是没有数据值的
 
@@ -638,7 +638,7 @@ class SpringbootMybatisCrudApplicationTests {
 
 我们看到查询返回的结果中大部分字段是有值的，但是deptId，createTime，updateTime这几个字段是没有值的，而数据库中是有对应的字段值的，这是为什么呢？
 
-![image-20221212103124490](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212103124490.png)
+![image-20221212103124490|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c0a4ec7c0a174ca528ece134d8c14377.png)
 
 原因如下： 
 
@@ -667,7 +667,7 @@ public Emp getById(Integer id);
 
 > 再次执行测试类：
 >
-> ![image-20221212111027396](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212111027396.png)
+> ![image-20221212111027396|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/12e1f6f64418be23bab725d4a2cd568a.png)
 
 
 
@@ -736,7 +736,7 @@ mybatis.configuration.map-underscore-to-camel-case=true
 
 在员工管理的列表页面中，我们需要根据条件查询员工信息，查询条件包括：姓名、性别、入职时间。 
 
-![image-20221212113422924](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212113422924.png)
+![image-20221212113422924|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6fad8f9e1151bc51147f598ea69577a8.png)
 
 通过页面原型以及需求描述我们要实现的查询：
 
@@ -772,7 +772,7 @@ public interface EmpMapper {
 }
 ```
 
-> ![image-20221212115149151](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212115149151.png)
+> ![image-20221212115149151|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/758860817c526a380d34accd26dc5837.png)
 >
 > 以上方式注意事项：
 >
@@ -802,7 +802,7 @@ public interface EmpMapper {
 
 > 执行结果：生成的SQL都是预编译的SQL语句（性能高、安全）
 >
-> ![image-20221212120006242](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212120006242.png)
+> ![image-20221212120006242|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a4440f6deea5397a5a566d2003c1e4b5.png)
 
 
 #### 1.6.4 参数名说明
@@ -811,7 +811,7 @@ public interface EmpMapper {
 
 > 当方法中的形参名和SQL语句中的占位符参数名不相同时，就会出现以下问题：
 >
-> ![image-20221212150611796](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212150611796.png)
+> ![image-20221212150611796|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9b864bb3e4655a48725fcbc41e92ccdc.png)
 
 
 
@@ -819,21 +819,21 @@ public interface EmpMapper {
 
 - 在springBoot的2.x版本（保证参数名一致）
 
-![image-20221212151156273](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212151156273.png)
+![image-20221212151156273|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5290c97926460a92da8c1ae3c1e7e1f2.png)
 
 > springBoot的父工程对compiler编译插件进行了默认的参数parameters配置，使得在编译时，会在生成的字节码文件中保留原方法形参的名称，所以#{…}里面可以直接通过形参名获取对应的值
 >
-> ![image-20221212151411154](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212151411154.png)
+> ![image-20221212151411154|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3e0b716d80a78f33d8667fdeb9a30143.png)
 
 
 
 - 在springBoot的1.x版本/单独使用mybatis（使用@Param注解来指定SQL语句中的参数名）
 
-![image-20221212151628715](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212151628715.png)
+![image-20221212151628715|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2129c97a9fceb9a5975e5620450786e9.png)
 
 > 在编译时，生成的字节码文件当中，不会保留Mapper接口中方法的形参名称，而是使用var1、var2、...这样的形参名字，此时要获取参数值时，就要通过@Param注解来指定SQL语句中的参数名
 >
-> ![image-20221212151736274](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212151736274.png)
+> ![image-20221212151736274|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5db0b2e29e1c7f733878dc4e8492b6d8.png)
 
 ## 2 Mybatis的XML配置文件
 
@@ -856,7 +856,7 @@ Mybatis的开发有两种方式：
 
 3. XML映射文件中sql语句的id与Mapper接口中的方法名一致，并保持返回类型一致。
 
-![image-20221212153529732](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212153529732.png)
+![image-20221212153529732|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fa08cba9bcbc7cfb3e9748672ace019a.png)
 
 > \<select>标签：就是用于编写select查询语句的。
 >
@@ -868,11 +868,11 @@ Mybatis的开发有两种方式：
 第1步：创建XML映射文件
 - `切记包名要用 / 分隔`
 
-![image-20221212154908306](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212154908306.png)
+![image-20221212154908306|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1f7c425f8e68475c6b4408fa320f50ae.png)
 
-![image-20221212155304635](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212155304635.png)
+![image-20221212155304635|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/818dd955aecc74002c0411573d8fb7d2.png)
 
-![image-20221212155544404](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212155544404.png)
+![image-20221212155544404|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/002eb7a5a703b5c167917e46c149e4d0.png)
 
 
 
@@ -894,7 +894,7 @@ Mybatis的开发有两种方式：
 
 配置：XML映射文件的namespace属性为Mapper接口全限定名
 
-![image-20221212160316644](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212160316644.png)
+![image-20221212160316644|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ab13794272b3ed5e2ea4b507fad324ef.png)
 
 ~~~xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -910,7 +910,7 @@ Mybatis的开发有两种方式：
 
 配置：XML映射文件中sql语句的id与Mapper接口中的方法名一致，并保持返回类型一致
 
-![image-20221212163528787](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212163528787.png)
+![image-20221212163528787|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a9e3a7a547d45e9cb3c972fae846c51c.png)
 
 ~~~xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -938,7 +938,7 @@ public List<Emp> list(@Param("name") String name, @Param("gender")Short gender,
 
 > 运行测试类，执行结果：
 >
-> ![image-20221212163719534](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221212163719534.png)
+> ![image-20221212163719534|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/662a1b47b5048569359959e91bc7aa15.png)
 
 ### 2.3 MybatisX的使用！
 
@@ -946,11 +946,11 @@ MybatisX是一款基于IDEA的快速开发Mybatis的插件，为效率而生。
 
 MybatisX的安装：
 
-![image-20221213120923252](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213120923252.png)
+![image-20221213120923252|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ea5040d4f6d54fe4bf9d7e16c56a0a4d.png)
 
 可以通过MybatisX快速定位：
 
-![image-20221213121521406](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213121521406.png)
+![image-20221213121521406|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fb6dc20183e837287abc239c51e70b93.png)
 
 > MybatisX的使用在后续学习中会继续分享
 
@@ -960,7 +960,7 @@ MybatisX的安装：
 
 > 官方说明：https://mybatis.net.cn/getting-started.html
 >
-> ![image-20220901173948645](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20220901173948645.png) 
+> ![image-20220901173948645|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f9fa59300569a4b6569ae56f8dd3d0fc.png) 
 
 **结论：** 使用Mybatis的注解，主要是来完成一些简单的增删改查功能。如果需要实现复杂的SQL功能，建议使用XML来配置映射语句。
 
@@ -970,15 +970,15 @@ MybatisX的安装：
 
 在页面原型中，列表上方的条件是动态的，是可以不传递的，也可以只传递其中的1个或者2个或者全部。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20220901172933012.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ab6ac23be82e80b81bc0f435a79d5de.png)
 
-![image-20220901173203491](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20220901173203491.png)
+![image-20220901173203491|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/833fee0ee0b782c8960a8c18d2d627cc.png)
 
 而在我们刚才编写的SQL语句中，我们会看到，我们将三个条件直接写死了。 如果页面只传递了参数姓名name 字段，其他两个字段 性别 和 入职时间没有传递，那么这两个参数的值就是null。
 
 此时，执行的SQL语句为：
 
-![image-20220901173431554](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20220901173431554.png) 
+![image-20220901173431554|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6c22e18cc3a5ae5b3ab9e0398fa64fec.png) 
 
 这个查询结果是不正确的。正确的做法应该是：`传递了参数，再组装这个查询条件；如果没有传递参数，就不应该组装这个查询条件`。
 
@@ -997,7 +997,7 @@ select *  from emp where name like '%张%' and gender = 1 order by update_time d
 
 SQL语句会随着用户的输入或外部条件的变化而变化，我们称为：**动态SQL**。
 
-![image-20221213122623278](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213122623278.png)
+![image-20221213122623278|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2c53dbe94fafa4288e2e3ae556f128f2.png)
 
 在Mybatis中提供了很多实现动态SQL的标签，我们学习Mybatis中的动态SQL就是掌握这些动态SQL标签。
 
@@ -1065,7 +1065,7 @@ public void testList(){
 
 > 执行的SQL语句： 
 >
-> ![image-20221213140353285](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213140353285.png)
+> ![image-20221213140353285|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b4eae65c7dfccf561543b38f5d7c1566.png)
 
 
 下面呢，我们修改测试方法中的代码，再次进行测试，观察执行情况：
@@ -1083,9 +1083,9 @@ public void testList(){
 
 执行结果：
 
-![image-20221213141139015](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213141139015.png) 
+![image-20221213141139015|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/34b2856f312a50e80148996767ca1c6e.png) 
 
-![image-20221213141253355](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213141253355.png) 
+![image-20221213141253355|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b4be7fa3ff745e0b0e621f126237def5.png) 
 
 
 再次修改测试方法中的代码，再次进行测试：
@@ -1103,7 +1103,7 @@ public void testList(){
 
 执行的SQL语句：
 
-![image-20221213143854434](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213143854434.png)
+![image-20221213143854434|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fda2c6cb305d00cafdf8460a471df8a4.png)
 
 以上问题的解决方案：使用`<where>`标签代替SQL语句中的where关键字
 
@@ -1143,7 +1143,7 @@ public void testList(){
 
 > 执行的SQL语句：
 >
-> ![image-20221213141909455](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213141909455.png)
+> ![image-20221213141909455|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5122017261349a9bc04286f9c860ec68.png)
 
 #### 3.2.2 更新员工
 
@@ -1226,7 +1226,7 @@ public void testUpdate2(){
 
 > 执行的SQL语句：
 >
-> ![image-20221213152533851](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213152533851.png)
+> ![image-20221213152533851|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ca5f34e3b327bf33db0d4e76f0830e2f.png)
 
 
 
@@ -1247,7 +1247,7 @@ public void testUpdate2(){
 
 > 执行的SQL语句：
 >
-> ![image-20221213152850322](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213152850322.png)
+> ![image-20221213152850322|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/79a68bd847c0e31d3421bede4c635237.png)
 
 以上问题的解决方案：使用`<set>`标签代替SQL语句中的set关键字
 
@@ -1297,7 +1297,7 @@ public void testUpdate2(){
 
 > 再次执行测试方法，执行的SQL语句：
 >
-> ![image-20221213153329553](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213153329553.png)
+> ![image-20221213153329553|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8076d35903868eba0630d959e8de696.png)
 
 
 **小结**
@@ -1324,7 +1324,7 @@ public void testUpdate2(){
 
 案例：员工删除功能（既支持删除单条记录，又支持批量删除）
 
-![image-20220901181751004](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20220901181751004.png) 
+![image-20220901181751004|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/efb157b491c0685d58e8928dea9b05dc.png) 
 
 SQL语句：
 
@@ -1368,11 +1368,11 @@ XML映射文件：
 </mapper> 
 ~~~
 
-> ![image-20221213165710141](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213165710141.png)
+> ![image-20221213165710141|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/76a9515cff2becf13fd0130d196e4663.png)
 
 > 执行的SQL语句：
 >
-> ![image-20221213164957636](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213164957636.png)
+> ![image-20221213164957636|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f779f4112b493c3ee904547aa3b8eab.png)
 
 ### 3.4 动态SQL-sql&include
 
@@ -1380,9 +1380,9 @@ XML映射文件：
 
 - 在xml映射文件中配置的SQL，有时可能会存在很多重复的片段，此时就会存在很多冗余的代码
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20220901182204358.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/52de06d43d40d73fb5e6d1b68b460ea0.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20220901182249421.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8bf82efbde3ed134448d983431e97f54.png)
 
 我们可以对重复的代码片段进行抽取，将其通过`<sql>`标签封装到一个SQL片段，然后再通过`<include>`标签进行引用。
 
@@ -1390,7 +1390,7 @@ XML映射文件：
 
 - `<include>`：通过属性refid，指定包含的SQL片段
 
-![image-20221213171244796](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20221213171244796.png)
+![image-20221213171244796|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c0b220335c1b7a4ceca54007d7153fb3.png)
 
 SQL片段： 抽取重复的代码
 
@@ -1449,7 +1449,7 @@ SQL片段： 抽取重复的代码
     -   可以将mapperxml文件放在mapper接口所在的包！
     -   可以在sources下创建mapper接口包一致的文件夹结构存放mapperxml文件
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214839215.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99a3d30c6ef5243b0305655238f3a319.png)
 
 
 ### 4.2 插件和分页插件PageHelper
@@ -1566,18 +1566,18 @@ MyBatisX 是一个 MyBatis 的代码生成插件，可以通过简单的配置�
 
     在 IntelliJ IDEA 中打开插件市场，搜索 MyBatisX 并安装。
 2.  使用 IntelliJ IDEA连接数据库
-    -   连接数据库![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214905276.png)
+    -   连接数据库![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fddd7d66c7c5586aa9ff4b81a9f45452.png)
 
 
-    -   填写信息![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214912923.png)
+    -   填写信息![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5675681efa73e586fab2c311bdcbfd84.png)
 
 
-    -   展示库表![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214917012.png)
+    -   展示库表![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8ea0be52476aabc12312b2078d30b8c.png)
 
 
-    -   逆向工程使用![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214921795.png)![[image_KXYfK5CQd-.png]]
+    -   逆向工程使用![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f34ee2a18a610b8198c9105eca6dcc1.png)![[image_KXYfK5CQd-.png]]
 
-3.  查看生成结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214955291.png)
+3.  查看生成结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b87fd3db111fc94fa6a0b2972a5b8c61.png)
 
 
 4.  逆向工程案例使用

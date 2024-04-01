@@ -14,7 +14,7 @@
 3. 因为内部使用双向链表维护各个节点，所以遍历时的效率和元素个数成正比，相较于和容量成正比的 HashMap 来说，`迭代效率会高很多`。
 
 `LinkedHashMap` 逻辑结构如下图所示，它是在 `HashMap` 基础上在各个节点之间维护一条双向链表，使得原本散列在不同 bucket 上的节点、链表、红黑树有序关联起来。
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318155353.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/979339f7ad7170813f72002700b3dd53.png)
 # 2、LinkedHashMap 使用示例
 
 ## 2.1 插入顺序遍历
@@ -78,7 +78,7 @@ for (Map.Entry<Integer, String> entry : map.entrySet()) {
 可以看出，`LinkedHashMap` 的迭代顺序是和访问顺序一致的。
 ## 2.3 LRU缓存
 
-从上一个我们可以了解到通过 `LinkedHashMap` 我们可以封装一个简易版的 LRU（**L**east **R**ecently **U**sed，最近最少使用） 缓存，确保当存放的元素超过容器容量时，将最近最少访问的元素移除。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318155704.png)
+从上一个我们可以了解到通过 `LinkedHashMap` 我们可以封装一个简易版的 LRU（**L**east **R**ecently **U**sed，最近最少使用） 缓存，确保当存放的元素超过容器容量时，将最近最少访问的元素移除。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31eeb2430299f6837815f991394ad83f.png)
 具体实现思路如下：
 
 - 继承 `LinkedHashMap`;
@@ -141,7 +141,7 @@ four
 
 1. `LinkedHashMap` 的节点内部类 `Entry` 基于 `HashMap` 的基础上，增加 `before` 和 `after` 指针使节点具备双向链表的特性。
 2. `HashMap` 的树节点 `TreeNode` 继承了具备双向链表特性的 `LinkedHashMap` 的 `Entry`。
-![|500](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318160941.png)
+![|500|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d4e305a66d2fa26c937b3f27edd83ced.png)
 
 很多读者此时就会有这样一个疑问，为什么 `HashMap` 的树节点 `TreeNode` 要通过 `LinkedHashMap` 获取双向链表的特性呢?为什么不直接在 `Node` 上实现前驱和后继指针呢?
 
@@ -276,7 +276,7 @@ void afterNodeAccess(Node < K, V > e) { // move node to last
 6. 上述操作让前驱节点和后继节点完成关联，并将当前节点 p 独立出来，这一步则是将当前节点 p 追加到链表末端，如果链表末端为空，则说明当前链表只有一个节点 p，所以直接让 head 指向 p 即可。
 7. 上述操作已经将 p 成功到达链表末端，最后我们将 tail 指针即指向链表末端的指针指向 p 即可。
 
-可以结合这张图理解，展示了 key 为 13 的元素被移动到了链表尾部。![|500](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318163135.png)
+可以结合这张图理解，展示了 key 为 13 的元素被移动到了链表尾部。![|500|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/63b68b3dff48da456689cd654b2a43c2.png)
 看不太懂也没关系，知道这个方法的作用就够了，后续有时间再慢慢消化。
 
 ## 3.4 remove方法后置操作——afterNodeRemoval
@@ -340,7 +340,7 @@ void afterNodeRemoval(Node<K,V> e) { // unlink
 3. 尝试让前驱节点 b 指向后继节点 a，若 b 为空则说明当前节点 p 在链表首部，我们直接将 head 指向后继节点 a 即可。
 4. 尝试让后继节点 a 指向前驱节点 b，若 a 为空则说明当前节点 p 在链表末端，所以直接让 tail 指针指向前驱节点 a 即可。
 
-可以结合这张图理解，展示了 key 为 13 的元素被删除，也就是从链表中移除了这个元素。![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318163554.png)
+可以结合这张图理解，展示了 key 为 13 的元素被删除，也就是从链表中移除了这个元素。![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/63b68b3dff48da456689cd654b2a43c2.png)
 看不太懂也没关系，知道这个方法的作用就够了，后续有时间再慢慢消化。
 ## 3.5 put方法后置操作——afterNodeInsertion
 
@@ -383,8 +383,8 @@ protected boolean removeEldestEntry(Map.Entry < K, V > eldest) {
 }
 ```
 
-以下图为例，假设笔者最后新插入了一个不存在的节点 19,假设 `capacity` 为 4，所以 `removeEldestEntry` 返回 true，我们要将链表首节点移除。![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318164020.png)
-移除的步骤很简单，查看链表首节点是否存在，若存在则断开首节点和后继节点的关系，并让首节点指针指向下一节点，所以 head 指针指向了 12，节点 10 成为没有任何引用指向的空对象，等待 GC。![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318164045.png)
+以下图为例，假设笔者最后新插入了一个不存在的节点 19,假设 `capacity` 为 4，所以 `removeEldestEntry` 返回 true，我们要将链表首节点移除。![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/11d32e1bd03d0728c6176b699c4ff3fe.png)
+移除的步骤很简单，查看链表首节点是否存在，若存在则断开首节点和后继节点的关系，并让首节点指针指向下一节点，所以 head 指针指向了 12，节点 10 成为没有任何引用指向的空对象，等待 GC。![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/16085f28ff9f7e46b8af2c9ae378111d.png)
 ```java
 void afterNodeInsertion(boolean evict) { // possibly remove eldest
         LinkedHashMap.Entry<K,V> first;

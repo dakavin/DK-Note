@@ -7,7 +7,7 @@ HTTP 是“无状态”的，这既是优点也是缺点。优点是服务器没
 
 不知道你有没有看过克里斯托弗·诺兰导演的一部经典电影《记忆碎片》（Memento），里面的主角患有短期失忆症，记不住最近发生的事情。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031210847.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fff84921d1e7bf37033e854d3088f405.png)
 
 比如，电影里有个场景，某人刚跟主角说完话，大闹了一通，过了几分钟再回来，主角却是一脸茫然，完全不记得这个人是谁，刚才又做了什么，只能任人摆布。
 
@@ -25,7 +25,7 @@ Cookie总是保存在客户端中，按在客户端中的存储位置，可分�
 - 内存Cookie由浏览器维护，保存在内存中，浏览器关闭后就消失了，其存在时间是短暂的。
 - 硬盘Cookie保存在硬盘里，有一个过期时间，除非用户手工清理或到了过期时间，硬盘Cookie不会被删除，其存在时间是长期的。
 - 所以，按存在时间，可分为非持久Cookie和持久Cookie。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031212104.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a9599c864ee60acc7ab1175215dde8ee.png)
 
 ## 2、Cookie 的工作过程
 
@@ -43,7 +43,7 @@ Cookie总是保存在客户端中，按在客户端中的存储位置，可分�
 
 我画了一张图来描述这个过程，你看过就能理解了。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031211118.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d3dd9f38549cb4f3e0caeed138e6ba05.png)
 
 从这张图中我们也能够看到，`Cookie 是由浏览器负责存储的，而不是操作系统`。所以，它是“`浏览器绑定`”的，只能在本浏览器内生效。
 
@@ -53,11 +53,11 @@ Cookie总是保存在客户端中，按在客户端中的存储位置，可分�
 
 首次访问时服务器会设置两个 Cookie。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031211151.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/25e41024c3e42bfdf15f33a3534684fd.png)
 
 然后刷新这个页面，浏览器就会在请求头里自动送出 Cookie，服务器就能认出你了。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031211155.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7bd36677202199f1809a332870f341c5.png)
 
 如果换成 Firefox 等其他浏览器，因为 Cookie 是存在 Chrome 里的，所以服务器就又“蒙圈”了，不知道你是谁，就会给 Firefox 再贴上小纸条。
 
@@ -67,7 +67,7 @@ Cookie总是保存在客户端中，按在客户端中的存储位置，可分�
 
 下面这个截图是实验环境“/19-2”的响应头，我来对着这个实际案例讲一下都有哪些常见的 Cookie 属性。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031211545.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/03e65af776969c8f0945994add2fab8d.png)
 
 ### 3.1 Cookie 的生存周期
 
@@ -103,9 +103,9 @@ Expires 和 Max-Age 可以同时出现，两者的失效时间可以一致，也
 
 Chrome 开发者工具是查看 Cookie 的有力工具，在“Network-Cookies”里可以看到单个页面 Cookie 的各种属性，另一个“Application”面板里则能够方便地看到全站的所有 Cookie。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031211552.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9bba174f731537d168f64fdcf24620d2.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031211555.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a97cff8baa6c0aed74feac898cfd06f4.png)
 
 ## 4、Cookie 的应用
 
@@ -130,7 +130,7 @@ Cookie 的另一个常见用途是**广告跟踪**。
 ### 5.1 Session机制的概念
 
 如果说Cookie是客户端行为，那么Session就是服务端行为。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031212627.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fea9f29846d6cd61fac6b05f71e61b0f.png)
 
 Cookie机制在最初和服务端完成交互后，保持状态所需的信息都将存储在客户端，后续直接读取发送给服务端进行交互。
 
@@ -152,7 +152,7 @@ Session机制将用户的所有活动信息、上下文信息、登录信息等�
 
 session的实现主要两种方式：cookie与url重写，而cookie是首选方式，因为各种现代浏览器都默认开通cookie功能，但是每种浏览器也都有允许cookie失效的设置，因此对于Session机制来说还需要一个备胎。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031212902.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8db666e98c32ef0fb9175f6968351577.png)
 
 将会话标识号以参数形式附加在超链接的URL地址后面的技术称为URL重写。
 
@@ -163,7 +163,7 @@ session的实现主要两种方式：cookie与url重写，而cookie是首选方�
 
 ### 5.4 存在的问题
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031212931.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b1051bb7dfa7fe39efa18457f0750244.png)
 
 由于Session信息是存储在服务端的，因此如果用户量很大的场景，Session信息占用的空间就不容忽视。
 
@@ -171,7 +171,7 @@ session的实现主要两种方式：cookie与url重写，而cookie是首选方�
 
 这种情况下要么在B机器重复创建造成浪费，要么引入高可用的Session集群方案，引入Session代理实现信息共享，要么实现定制化哈希到集群A，这样做其实就有些复杂了。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031213006.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/02d7b5191f7fc1afb499a34028b55e08.png)
 
 <hr>
 
@@ -190,7 +190,7 @@ Token避免了Session机制带来的海量信息存储问题，也避免了Cooki
 
 ### 6.1 简单的交互流程
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031213036.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a521753628ac0a3c410ac241eff94740.png)
 
 - 客户端将用户的账号和密码提交给服务器
 - 服务器对其进行校验，通过则生成一个token值，将其保存在数据库，同时也返回给客户端，作为后续的请求交互身份令牌
@@ -212,7 +212,7 @@ Token避免了Session机制带来的海量信息存储问题，也避免了Cooki
     根据header中的加密算法和payload中的用户信息以及密钥key来生成，是服务端验证服务端的重要依据
     
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031213240.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/612e346bd9ceb8247461659cebd15e05.png)
 
 `header和payload的信息不做加密，只做一般的base64编码`，服务端收到token后剥离出header和payload获取算法、用户、过期时间等信息，然后根据自己的加密密钥来生成signature，并与客户端的sign进行一致性验证。
 
@@ -253,14 +253,14 @@ JSON Web Token（缩写 JWT）是目前最流行的跨域认证解决方案。
 
 ### 7.2 JWT 的原理
 
-JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给用户，就像下面这样。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031220925.png)
+JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给用户，就像下面这样。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/90b95d8edb17e100a76a42a9e5cfedfd.png)
 以后，用户与服务端通信的时候，都要发回这个 JSON 对象。服务器完全只靠这个对象认定用户身份。为了防止用户篡改数据，服务器在生成这个对象的时候，会加上签名（详见后文）。
 
 服务器就不保存任何 session 数据了，也就是说，服务器变成无状态了，从而比较容易实现扩展。
 
 ### 7.3 JWT 的数据结构
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031222140.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e783acbc4b3c72dbb979d03c38a1d551.png)
 
 右边的 JSON 结构是 JWT 令牌中携带的信息，左边的字符串呈现了 JWT 令牌的本体。它最常见的使用方式是附在名为 Authorization 的 Header 发送给服务端，前缀在[RFC 6750](https://tools.ietf.org/html/rfc6750)中被规定为 Bearer。
 
@@ -286,7 +286,7 @@ JWT 的三个部分依次如下。
 Header.Payload.Signature
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031221104.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5b42ceb9fbae329ef087c659988fee28.png)
 
 #### 7.3.1 Header
 
@@ -300,7 +300,7 @@ Header.Payload.Signature
 ```
 
 上面代码中
-- `alg`属性表示签名的算法（algorithm），默认是 HMAC SHA256算法（写成 HS256）,其他各种系统支持的签名算法可以参考https://jwt.io/网站所列。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031222711.png)
+- `alg`属性表示签名的算法（algorithm），默认是 HMAC SHA256算法（写成 HS256）,其他各种系统支持的签名算法可以参考https://jwt.io/网站所列。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/635e42a03ebb0e7f4c266140ec53e751.png)
 - `typ`属性表示这个令牌（token）的类型（type），JWT 令牌统一写为`JWT`。
 
 最后，将上面的 JSON 对象使用 Base64URL 算法（详见后文）转成字符串。
@@ -408,4 +408,4 @@ Cookie侧重于信息的存储，主要是客户端行为，Session和Token侧�
 2. Cookie 的好处已经很清楚了，你觉得它有什么缺点呢？
 
 
-![unpreview](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/f03db082760cfa8920b266ce44f52597.png)
+![unpreview|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/894bb7ca55f01e3cc70a4812011bec36.png)

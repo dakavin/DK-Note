@@ -11,7 +11,7 @@ HSAHTABLE是Set、Hash等数据对象的底层编码模式，有语言基础的T
 
 分析：
 - 这题考察的是Redis字典的表头结构，如果表头结构中存储键值对个数的字段，那么查找元素总数的平均时间复杂度就是O(1)，而如果没有这个字段，那字典就需要去遍历所有的键值对。
-- 下面是Redis字典的表头结构![](assets/Pasted%20image%2020231017232611.png)可以发现字典的表头结构中的used，就记录了当前键值对数量的字段
+- 下面是Redis字典的表头结构![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/46425755b9b09feef7e43e548b19bd4c.png)可以发现字典的表头结构中的used，就记录了当前键值对数量的字段
 
 回答：
 - HASHTABLE查找元素的平均时间复杂度是O(1)，因为HASHTABLE的表头结构中有储存键值对数量的字段used。
@@ -39,7 +39,7 @@ index=hash&sizemark
 ### 2.4 HASHTABLE怎么缩容？
 
 分析：
-- HASHTABLE的缩容也通过渐进式rehash操作来完成，可以参考下面代码。![](assets/Pasted%20image%2020231017233824.png)
+- HASHTABLE的缩容也通过渐进式rehash操作来完成，可以参考下面代码。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6509c157abfbb94a572072c9d21681cc.png)
 
 回答：
 - 首先，程序会为HASHTABLE的1号表分配空间，缩容前used如果小于最小值（4），那么空间就是4。如果大于最小值，就是大于原来used最近的2次幂，比如原来是6，那么空间就是8；

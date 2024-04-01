@@ -3,7 +3,7 @@ TCP/IP是当今计算机网络界使用最为广泛的协议。TCP/IP的知识�
 
 ## 1、TCP/IP与OSI参考模型
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021225224.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/994c9e36c6e742e45126e3affedc47a3.png)
 
 我们已经了解了OSI参考模型中各个分层的作用。TCP/IP诞生以来的各种协议其实也能对应到OSI参考模型当中。如果了解了这些协议分层属于OSI的那一层，就能对该协议的目的有所了解。
 
@@ -33,7 +33,7 @@ TCP/IP是当今计算机网络界使用最为广泛的协议。TCP/IP的知识�
 
 互联网层使用IP协议，它相当于OSI模型中的第3层网络层，IP协议基于IP地址转发分包数据。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021230231.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ef7037120972b1ce52bb11bd97f2ba87.png)
 
 TCP/IP分层中的互联网层和传输层的功能通常由操作系统提供。尤其是路由器，它必须得实现通过互联网层转发分组数据包的功能。
 
@@ -60,7 +60,7 @@ IP数据包在发送途中，一旦发送异常导致无法到达对端目标地
 
 TCP/IP的传输层有两个具有代表的协议。该层的功能本身与OSI参考模型中的传输层类似。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021234052.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a24344ea361e831cab06c0ffe8f1f12f.png)
 
 传输层最主要的功能就是能够让应用程序之间实现通信。计算机内部，通常同一时间运行着多个程序。为此，必须分清是哪些程序与那些程序在进行通信。识别这些应用程序的是端口号。
 
@@ -79,7 +79,7 @@ UDP常用于分组数据较少或多播、广播通信以及视频通信等多�
 
 TCP/IP的分层中，将OSI参考模型中的会话层、表示层和应用层的功能都`集中到了应用程序中实现`。这些功能有时有一个单一的程序实现，有时也可能由多个程序实现。因此，细看TCP/IP的应用程序功能会发现，它不仅实现OSI模型中应用层的内容，还要实现会话层与表示层的功能。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021234702.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7733326cd1aafab0a9ed1fc4011b020f.png)
 
 `TCP/IP应用的架构绝大多数属于客户端/服务端模型`。提供服务的程序叫服务端，接收服务的程序叫客户端。在这种通信模式中，提供服务的程序会预先被部署到主机上，等待接收任何时刻客户可能发送的请求。
 
@@ -87,7 +87,7 @@ TCP/IP的分层中，将OSI参考模型中的会话层、表示层和应用层�
 
 ### 6.1 WWW
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021234923.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f509fc841b4f2eb01c58a203be4fec32.png)
 
 WWW（中文叫万维网，是一种互联网上数据读取的规范。有时也叫做Web、WWW或W3）可以说是互联网能如此普及的一个重要原动力。用户在一种叫Web浏览器（通常可以简化称作浏览器。微软公司的Internet Explore以及Mozilla Foundation的Firefox等都属于浏览器。他们已被人们广泛使用）的软件上借助鼠标和键盘就可以轻轻松松地在网上自由地冲浪。也就是说轻按一些鼠标架设在远端服务器上的各种信息就会呈现到浏览器上。浏览器中既可以显示文字、图片、动画等信息，还能播放声音已经运行程序。
 
@@ -95,7 +95,7 @@ WWW（中文叫万维网，是一种互联网上数据读取的规范。有时�
 
 ### 6.2 电子邮件（E-Mail）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021235421.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b0367049c787087613ca73c158af7d3a.png)
 
 电子邮件其实就是指在网络上发送信件。有了电子邮件，不管距离多远的人，只要连着互联网就可以相互发送邮件。发送电子邮件时引导的协议叫做SMTP（Simple Mail Transfer Protocol）
 
@@ -105,7 +105,7 @@ WWW（中文叫万维网，是一种互联网上数据读取的规范。有时�
 
 ### 6.3 文件传输(FTP)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021235751.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0d1419718d63e6a1d49aea9ca54ded5a.png)
 
 文件传输是指将保存在其他计算机硬盘上的文件转移到本地的硬盘上，或将本地硬盘的文件传送到其他机器硬盘上的意思。
 
@@ -116,13 +116,13 @@ WWW（中文叫万维网，是一种互联网上数据读取的规范。有时�
 
 ### 6.4 远程登录（TELNET与SSH）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231022000138.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/61bd0563b4c535c012c94b90b544bed7.png)
 
 远程登录是指登录到远程的计算机上，使那台计算机上的程序得以运行的一种功能。TCP/IP网络中远程登录常用TELNET（TELetypewriter NETwork的缩写。有时也称作默认协议）和SSH（Secure SHell）两种协议。其实还有很多其他可以实现远程登录的协议，如BSD UNIX系中rlogin的r命令协议以及X Windows System中的X协议。
 
 ### 6.5 网络管理（SNMP）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231022000402.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b17e85b1edc731d824fe032bb8c4264c.png)
 
 在TCP/IP中进行网络管理，采用SNMP（Simple Network Management Protocol）协议。使用SNMP管理的主机、网桥、路由器等称作SNMP代理（Agent），而进行管理的那一段叫做管理器（Manager）。SNMP正是这个Manager与Agent所要用到的协议。
 

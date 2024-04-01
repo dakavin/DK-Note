@@ -35,6 +35,6 @@ systemctl start mysqld
 
 - 使用软件为EditPlus
 
-1. 选则文件---> FTP ---> FTP上传![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005755271.png)
-2. 选中设置![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005802361.png)
-3. 选中添加，并填入LInux服务器的相关信息![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005807841.png)
+1. 选则文件---> FTP ---> FTP上传![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4e0a9a0cbc32838b1d21d8f9c2b234d6.png)
+2. 选中设置![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9b63969a95c854d949b0264a5675fe20.png)
+3. 选中添加，并填入LInux服务器的相关信息![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce859f1dc0fe3c63d23be556d3cdac48.png)

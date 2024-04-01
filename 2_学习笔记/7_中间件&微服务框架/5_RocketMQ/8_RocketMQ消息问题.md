@@ -29,7 +29,7 @@
 # 二、如何确保消息不丢失？
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232226487.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31934096a6d101b747f2e9903e0c5bed.png)
 
 
 
@@ -47,7 +47,7 @@
 
 （1）、发送成功
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232228590.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1262481dcfd692d28e707959b0d18917.png)
 
 
 
@@ -55,7 +55,7 @@
 
 Producer程序向Broker发送消息时没有成功（比如网络抖动或broker宕机），此时`Producer会自动进行重试`，重试默认次数如下：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232232439.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/911c3efe5de1094dc955294359c24aae.png)
 
 
 
@@ -141,5 +141,5 @@ msgId status(0) time
 	- 我们还需要个dashboard配置mq服务的账户和密码
 
 
-3. `修改控制面板的配置文件` 放开52/53行 把49行改为true 上传到服务器的jar包平级目录下即可![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232309740.png)
+3. `修改控制面板的配置文件` 放开52/53行 把49行改为true 上传到服务器的jar包平级目录下即可![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/de11be8a66a40bf6cf8440989462b2ae.png)
 - 注意，因为是jar包，所以我们可以在window中解压后，修改完配置，将配置文件放在和jar包平级的目录下即可

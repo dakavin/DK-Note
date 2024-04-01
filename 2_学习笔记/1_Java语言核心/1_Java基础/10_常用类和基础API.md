@@ -51,7 +51,7 @@
 
 ## 1 本章专题与脉络
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015609244.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/75847d29a501e22ab0c9dd29079bb648.png)
 
 
 ## 2 字符串相关类之不可变字符序列：String
@@ -66,7 +66,7 @@
 
 - String对象的字符内容是存储在一个字符数组value[]中的。`"abc"` 等效于 `char[] data={'h','e','l','l','o'}`。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015622924.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/339c83735f7d98c1c7e0409b72c649b6.png)
 
 
   ```java
@@ -112,7 +112,7 @@ JDK6中，字符串常量池在方法区。JDK7开始，就移到堆空间，直
 
 举例内存结构分配：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015649713.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cd5e5273d2950e2fb56539826fa28e04.png)
 
 #### 2.2.2 练习类型1：拼接
 
@@ -125,12 +125,12 @@ System.out.println(s1 == s2);
 
 对应内存结构为：（以下内存结构以`JDK6为例`绘制）：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015656732.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c6c48febdcab8f28a816203b3cd616dc.png)
 
 
 进一步：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015707806.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d79b583a88ddd187117e4878e4e1e25d.png)
 
 
 ```java
@@ -145,14 +145,14 @@ System.out.println(p1.name == p2.name); //
 System.out.println(p1.name == "Tom"); //
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015721282.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5d351e44d29dc4257028474c2647d381.png)
 
 
 #### 2.2.3 练习类型2：new
 
 String str1 = “abc”; 与 String str2 = new String(“abc”);的区别？
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015745041.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8a021859b1eca9e6c54295bf8fb24707.png)
 
 str2 首先指向堆中的一个字符串对象，然后堆中字符串的value数组指向常量池中常量对象的value数组。
 
@@ -174,7 +174,7 @@ System.out.println(s1 == s4);//false
 System.out.println(s3 == s4);//false
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922015804092.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0e334af7590ad2e1e8b7bd6777e73013.png)
 
 
 练习：String str2 = new String("hello"); 在内存中创建了几个对象？
@@ -877,14 +877,14 @@ public void test1(){
   buffer.append("数学"); 
   ```
 
-  ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020007318.png)
+  ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/84ab1ffbba85665426ffd08f088decb1.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020021147.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/238c784da38b04901b5040ba071f1527.png)
 
 - 继承结构：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020032668.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b189ed2886212f468b6ac3dc646ff945.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020041751.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b605b0765f2534646a2d65b9dad7b38c.png)
 
 - StringBuilder 和 StringBuffer 非常类似，均代表可变的字符序列，而且提供相关功能的方法也一样。
 - 区分String、StringBuffer、StringBuilder
@@ -911,7 +911,7 @@ StringBuilder、StringBuffer的API是完全一致的，并且很多方法与Stri
 > - 当append和insert时，如果原来value数组长度不够，可扩容。
 >
 > - 如上(1)(2)(3)(4)(9)这些方法支持`方法链操作`。原理：
->	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020103193.png)
+>	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7049ba6e27ba5b8a5fea1b300cd38e25.png)
 
 **2、其它API**
 
@@ -1099,7 +1099,7 @@ public void test5(){
 - **解析：**
   - public Date parse(String source)：从给定字符串的开始解析文本，以生成一个日期。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020148709.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2e750a5eb7801356e08e3ef31a144e29.png)
 
 
 ```java
@@ -1133,10 +1133,10 @@ public void test2() throws ParseException{
 
   - 使用`Calendar.getInstance()`方法
 
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020203799.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b35544d18c6164541e85ba6e34b7d1a6.png)
   - 调用它的子类GregorianCalendar（公历）的构造器。
 
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020212035.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/32916470bac995a30531143aaa8acde9.png)
 
 - 一个Calendar的实例是系统时间的抽象表示，可以修改或获取 YEAR、MONTH、DAY_OF_WEEK、HOUR_OF_DAY 、MINUTE、SECOND等 `日历字段`对应的时间值。
   - public int get(int field)：返回给定日历字段的值
@@ -1146,7 +1146,7 @@ public void test2() throws ParseException{
   - public final void setTime(Date date)：使用指定的Date对象重置Calendar的时间
   
 - 常用字段
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020222575.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a6b192dd530fc0fa1a187086281c9eed.png)
 
 - 注意：
   - 获取月份时：一月是0，二月是1，以此类推，12月是11
@@ -1214,7 +1214,7 @@ public class TestCalendar {
 
 闰年计算公式：年份可以被4整除但不能被100整除，或者可以被400整除。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020237127.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cce487fd366882b795349d7e50029239.png)
 
 ## 5 JDK8：新的日期时间API
 
@@ -1334,7 +1334,7 @@ public class TestLocalDateTime {
 >
 > instant.atOffset(ZoneOffset.ofHours(8));
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020254910.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4a5bb1f3ecfa9f88003dcbc5602b748f.png)
 
 
 > 整个地球分为二十四时区，每个时区都有自己的本地时间。北京时区是东八区，领先UTC八个小时，在电子邮件信头的Date域记为+0800。如果在电子邮件的信头中有这么一行： 
@@ -2008,7 +2008,7 @@ System.out.println(Arrays.toString(all));
   - `String getProperty(String key)`：
     该方法的作用是获得系统中属性名为key的属性对应的值。系统中常见的属性名以及属性的作用如下表所示：
 
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/image-20230922020609603.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ec6da2deb1d1210448b683fe48c067ab.png)
 
 
 

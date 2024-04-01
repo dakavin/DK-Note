@@ -4,15 +4,15 @@
 
 > HTML 主要用于网页主体结构的搭建
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313140325.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5bbe661c1a24c7ea0fb3f1b3302470a9.png)
 
 > CSS 主要用于页面元素美化
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313140332.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bb8e0d50905180dd05c48a0c265943be.png)
 
 > JavaScript 主要用于页面元素的动态处理
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/js.gif)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7c136266ee41e13fdf43c61e8da45769.gif)
 
 ## 1.2 什么是HTML
 
@@ -73,13 +73,13 @@ href="网址" 就是属性，href是属性名，"网址"是属性值
 <!-- 注释内容 -->
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313141354.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b2f56c1d29b874045dc770788e2fe964.png)
 
 ## 1.6 HTML的入门程序
 
 > 第一步 准备一个纯文本文件,拓展名为html
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/new.gif)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b4c9c69db9c977b3909f3928e059fc53.gif)
 
 > 第二步  使用记事本打开网页,在网页内开发代码
 
@@ -98,7 +98,7 @@ href="网址" 就是属性，href是属性名，"网址"是属性值
 
 > 第三步 使用浏览器打开文件,查看显示的内容
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313141813.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d446be20d8c0b2843116730a94a40ef5.png)
 ## 1.7 HTML概念词汇解释
 
 > `标签`
@@ -149,7 +149,7 @@ http://www.w3school.com.cn
 </body>
 ```
 
-- 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313143808.png)
+- 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/11a1a05cf5d4decfb14774bc025ca20d.png)
 
 ## 2.2 段落标签
 
@@ -173,7 +173,7 @@ http://www.w3school.com.cn
 </body>
 ```
 
-- 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313143935.png)
+- 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d25ab15f7cd57cc8d320e9727219dd9d.png)
 ## 2.3 换行标签
 
 > 单纯实现换行的标签是br,如果想添加分隔线,可以使用hr标签
@@ -189,7 +189,7 @@ http://www.w3school.com.cn
 </body>
 ```
 
-- 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313144026.png)
+- 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5c0054a9b7b96993004cbc71e8fe21c6.png)
 ## 2.4 列表标签
 
 > `有序列表`  分条列项展示数据的标签, 其每一项前面的符号带有顺序特征
@@ -204,7 +204,7 @@ http://www.w3school.com.cn
     <li>大数据</li>
 </ol>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313144136.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d51eac96b4f029ae815f888d3717b526.png)
 
 > `无序列表` 分条列项展示数据的标签, 其每一项前面的符号不带有顺序特征
 
@@ -218,7 +218,7 @@ http://www.w3school.com.cn
     <li>数据库</li>
 </ul>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313144217.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/17d138c4933431cee90fb936c2ed1577.png)
 
 > `嵌套列表` 列表和列表之前可以签到,实现某一项内容详细展示
 
@@ -237,7 +237,7 @@ http://www.w3school.com.cn
     <li>大数据</li>
 </ol>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313144256.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e3467905ab691e6a643089c1b75b5c1.png)
 ## 2.5 超链接标签
 
 > 点击后带有链接跳转的标签 ,也叫作`a标签`
@@ -270,7 +270,7 @@ http://www.w3school.com.cn
    
 </body>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/chaolianjiex.gif)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5efa8a5dbc53be19fde1fd27f199f4f4.gif)
 ## 2.6 多媒体标签
 
 > `img(重点)` 图片标签,用于在页面上引入图片
@@ -287,7 +287,7 @@ alt
 -->
 <img src="img/logo.png"  title="尚硅谷" alt="尚硅谷logo" />
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313144541.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f0460a9023437b1c39df34e660981bdd.png)
 
 > `audio` 用于在页面上引入一段声音
 
@@ -305,7 +305,7 @@ alt
     --> 
    <audio src="img/music.mp3" autoplay="autoplay" controls="controls" loop="loop" />
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313144617.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d3d6c420c4b8e5d2d11b6e1dcc856971.png)
 
 > `video `用于在页面上引入一段视频
 
@@ -325,7 +325,7 @@ alt
    <video src="img/movie.mp4" autoplay="autoplay" controls="controls" loop="loop" width="400px" />
 </body>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313144646.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e77756f9bb5b9a060e3ee3563e752f3b.png)
 ## 2.7 表格标签！！！
 
 > `常规表格`
@@ -363,7 +363,7 @@ alt
         </tr>
     </table>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313145039.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3952fad5d6b79ae8109f956839ac5ae5.png)
 
 > `单元格跨行`
 
@@ -412,7 +412,7 @@ alt
         </tr>
     </table>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313145207.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4cfd3b3379777e24892b658532a5d63e.png)
 
 ## 2.8 表单标签！！！
 
@@ -441,7 +441,7 @@ alt
         <input type="reset"  value="重置" />
    </form>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313145418.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d8bc8189ac39c369486e18b5c1b8c20c.png)
 ## 2.9 常见表单标签项！！！
 
 > `单行文本框`
@@ -450,7 +450,7 @@ alt
 ``` html
 个性签名：<input type="text" name="signal"/><br/>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313145448.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/121dc53c6ea43d7024d4ff94bae32b62.png)
 
 > `密码框`
 
@@ -458,7 +458,7 @@ alt
 ``` html
 密码：<input type="password" name="secret"/><br/>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313145638.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6d80762d455ddbce48def2985724380e.png)
 
 > `单选框`
 
@@ -468,7 +468,7 @@ alt
 <input type="radio" name="sex" value="spring" />男
 <input type="radio" name="sex" value="summer" checked="checked" />女
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313145657.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b2f960367b792e59f6006778aa3fc2e5.png)
 
 说明
 + name属性相同的radio为一组，组内互斥
@@ -487,7 +487,7 @@ alt
 <input type="checkbox" name="team" value="China" checked="checked"/>中国
 <input type="checkbox" name="team" value="Italian"/>意大利
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313145821.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bb43a311e2ae7877a285b7187e4ab892.png)
 
 说明
 + 设置checked="checked"属性设置默认被选中的checkbox
@@ -504,7 +504,7 @@ alt
     <option value="skating">溜冰</option>
 </select>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313145905.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2ca9978b5bf7ad59430d9c2aec3ad3b0.png)
 
 说明
 + `下拉列表用到了两种标签`，其中select标签用来定义下拉列表，而option标签设置列表项。
@@ -520,7 +520,7 @@ alt
 <button type="reset">重置按钮</button>或<input type="reset" value="重置按钮"/>
 <button type="submit">提交按钮</button>或<input type="submit" value="提交按钮"/>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313150047.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a14b76ca74c3db3cd212f6dad6d81cc9.png)
 
 说明
 + 普通按钮: 点击后无效果，需要通过JavaScript绑定单击响应函数
@@ -543,7 +543,7 @@ alt
 ``` html
 自我介绍：<textarea name="desc"></textarea>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313150132.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/98bf8b8739cf334500cd6f5021107b78.png)
 
 说明
 + textarea没有value属性，如果要设置默认值需要写在开始和结束标签之间。
@@ -554,7 +554,7 @@ alt
 ``` html
 头像:<input type="file" name="file"/>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313150202.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0a6932d94d42770dd6c3442402aceeb5.png)
 
 说明
 + 不同浏览器显示的样式有微小差异
@@ -578,19 +578,19 @@ alt
         </div> 
     </div>
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313151521.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0fc14132f9f0f8fd5173be8fe9f719e5.png)
 
 ## 2.11 特殊字符
 
 对于有特殊含义的字符,需要通过转移字符来表示
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313151600.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cb2bff4b3e31de8973bb77fc8014089d.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313151612.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/147b25c2b6098e13508823c54b652422.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313151619.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6effb76861160720e700cddc914c6f12.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313151626.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/61b3d0df8701099d8a959c2e66c80279.png)
 
 + 代码
 ``` html
@@ -598,7 +598,7 @@ alt
     &lt;a href="http://www.atguigu.com"&gt;尚&nbsp;硅&nbsp;谷&lt;/a&gt; <br>
     &amp;amp;  
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313151653.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/be80e03498842e7be55d43fe713a4aaa.png)
 # 3、CSS的使用
 
 CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力 ,简单来说,美化页面
@@ -625,7 +625,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
     "/> 
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313151834.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/36d12c3aa2255c7bf3a16eb33b5b5dfb.png)
 + 缺点
 	+ html代码和css样式`代码交织`在一起,增加阅读难度和维护成本
 	+ css样式代码`仅对当前元素有效`,代码重复量高,复用度低
@@ -660,7 +660,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313151934.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b9d31bd9511a4ac39cc9e65f2df03cf9.png)
 + 说明
     - 内嵌式样式需要`在head标签中,通过一对style标签定义CSS样式`
     - CSS样式的作用范围控制`要依赖选择器`
@@ -670,7 +670,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 
 > 连接式/外部样式表
 
-+ 可以在项目单独创建css样式文件,专门用于存放CSS样式代码![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313152056.png)
++ 可以在项目单独创建css样式文件,专门用于存放CSS样式代码![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5d41c6afeafb23a2131f06f00374f452.png)
 + 在head标签中,`通过link标签引入外部CSS样式`即可
 
 ``` html
@@ -722,7 +722,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313152330.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae63cc78c564bdade397d38f3978bf9d.png)
 说明
 + 根据标签名确定样式的作用范围
 + 语法为  `元素名 {}`
@@ -759,7 +759,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313152416.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1f787110b93337b8b7a95214df34c9a7.png)
 + 说明
 	+ 根据元素id属性的值确定样式的作用范围
 	+ 语法为   `#id值 {}`
@@ -801,7 +801,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313152526.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/47dca67d2c4d2f4ef32bcb51a4739bc1.png)
 + 说明
 	+ 根据元素class属性的值确定样式的作用范围
 	+ 语法为 ` .class值 {}`
@@ -817,12 +817,12 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 
 > `浮动原理`
 
-+  当把框 1 向右浮动时，它脱离文档流并且向右移动，直到它的右边缘碰到包含框的右边缘![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313152747.png)
-+ 当框 1 向左浮动时，它脱离文档流并且向左移动，直到它的左边缘碰到包含框的左边缘。因为它不再处于文档流中，所以它不占据空间，实际上覆盖住了框 2，使框 2 从视图中消失。如果把所有三个框都向左移动，那么框 1 向左浮动直到碰到包含框，另外两个框向左浮动直到碰到前一个浮动框。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313152841.png)
-+ 如果包含框太窄，无法容纳水平排列的三个浮动元素，那么其它浮动块向下移动，直到有足够的空间。如果浮动元素的高度不同，那么当它们向下移动时可能被其它浮动元素“卡住”![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313152910.png)
++  当把框 1 向右浮动时，它脱离文档流并且向右移动，直到它的右边缘碰到包含框的右边缘![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c16af00515d0a4c851f4908ade0c96c6.png)
++ 当框 1 向左浮动时，它脱离文档流并且向左移动，直到它的左边缘碰到包含框的左边缘。因为它不再处于文档流中，所以它不占据空间，实际上覆盖住了框 2，使框 2 从视图中消失。如果把所有三个框都向左移动，那么框 1 向左浮动直到碰到包含框，另外两个框向左浮动直到碰到前一个浮动框。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c84c4fbe1fa9c52b42d25ff5e2ca0b98.png)
++ 如果包含框太窄，无法容纳水平排列的三个浮动元素，那么其它浮动块向下移动，直到有足够的空间。如果浮动元素的高度不同，那么当它们向下移动时可能被其它浮动元素“卡住”![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b839d3f4cae076e209bb1ec237d2f86a.png)
 
 > 浮动的样式名:float
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313152943.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2fec70958abb0c2359feb9933fd3f7e1.png)
 
 > 通过代码感受浮动的效果
 
@@ -864,7 +864,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153134.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2761f7d3659310930ea3687d2ad0189d.png)
 ## 3.4 CSS定位
 
 > position 属性指定了元素的定位类型。
@@ -873,7 +873,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 
 + 元素可以使用的顶部，底部，左侧和右侧属性定位。然而，这些属性无法工作，除非是先设定position属性。他们也有不同的工作方式，这取决于定位方法。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153250.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e286c6ccdcd7b506b47bfbd1bee6319e.png)
 
 > 静态定位
 
@@ -908,7 +908,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153416.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29c9d38d6cbdd5d47400ad29414b4dc6.png)
 > 绝对定位 
 
 + 说明
@@ -946,7 +946,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153452.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fc0261c0384af70a9881fb363677e825.png)
 > 相对定位
 
 + 说明
@@ -984,7 +984,7 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153520.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/56578edd386893081ae34c303515b0bb.png)
 > 固定定位
 
 + 说明
@@ -1022,17 +1022,17 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
 </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/fixeddingwei.gif)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5ba289004ea5c61a2ac3eff669d5deb.gif)
 ## 3.5 CSS盒子模型
 
 > 所有HTML元素可以看作盒子，在CSS中，"box model"这一术语是用来设计和布局时使用。
 
-+ CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距（margin），边框（border），填充（padding），和实际内容（content）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153616.png)
++ CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距（margin），边框（border），填充（padding），和实际内容（content）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c4805e2181a0b8b38272ce97c9c68200.png)
 - 说明：
 	+ Margin(外边距) - 清除边框外的区域，外边距是透明的。
 	+ Border(边框) - 围绕在内边距和内容外的边框。
 	+ Padding(内边距) - 清除内容周围的区域，内边距是透明的。
-	+ Content(内容) - 盒子的内容，显示文本和图像。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153651.png)
+	+ Content(内容) - 盒子的内容，显示文本和图像。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/13c751272e92a07618ff26b9f59f553a.png)
 + 代码
 ``` html
     <head>
@@ -1082,5 +1082,5 @@ CSS 层叠样式表(英文全称：(Cascading Style Sheets) 能够对网页中�
     </body>
 ```
 
-+ 效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153854.png)
-+ 在浏览器上,通过F12工具查看盒子模型状态![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313153922.png)
++ 效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4ee4238d776a31198545053f69eb0b65.png)
++ 在浏览器上,通过F12工具查看盒子模型状态![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2240cd25d82421982edc263f73563bb3.png)

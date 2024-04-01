@@ -9,7 +9,7 @@ Redis实现了一个AE库，它是"A simple Event drived programming library"的
 由于生产环境通常在linux上面，所以下面我们以常见的epoll为例，以下代码片段均来自redis 5.0.5
 ## 3、处理流程
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231022230427.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e97373bfcb2c2a45f6c4a10af148064c.png)
 
 在整个Redis的工作过程中，只需要理解main函数中调用的 `initServer` 和 `aeMain` 这两个函数就足够了，事件处理循环aeMain函数，我们在下一节讲解
 
@@ -40,13 +40,13 @@ Redis实现了一个AE库，它是"A simple Event drived programming library"的
 	- 这里解决了accept阻塞的问题
 
 main -> initServer中，使用listenToPort监听端口，创建监听套接字
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021210055.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5e00bc3d7daf5b439511d9f6f9e04a76.png)
 
 接下来，还是在`initServer函数`中，会调用`aeCreateFileEvent函数`绑定对应的接收处理函数acceptTTcpHandler，绑定之后等到客户端连接请求发回来，就可以关联到这个处理函数。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021210157.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/83cf639ca91c987bd87df251a5819b1b.png)
 
 `main函数调用initServer之后，就开始在aeMain函数中开始一个EvenLoop事件循环`，通过`epoll_wait()的方式等待连接达到`，此时暂时还没有建立的连接，所以没有读写事件的发生，另外计时器等事件也是注册在事件框架中，但这里我们主要还是关注I/O事件。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021210329.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/95b0459f2f033b26740e374b889d81dc.png)
 
 ### 3.3 连接到达处理
 
@@ -63,7 +63,7 @@ main -> initServer中，使用listenToPort监听端口，创建监听套接字
 acceptTcpHandler -> accpetCommonHandler -> createClient 
 
 createClient中关键片段：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021210651.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e2d3b4ece53a5ec338c261a9bc0d67df.png)
 
 可以看到，`这里关键信息是创建了一个客户端对象`，然后将客户端套接字设置为非阻塞，然后加入到事件循环里，这里的关联函数是readQueryFromClient，这里大家应该已经能理解，等这个客户端套接字的读请求过来，就会关联到readQueryFromClient来处理
 
@@ -82,28 +82,28 @@ createClient中关键片段：
 
 readQueryFromClient -> processInputBuffer -> processCommand，`processInputBuffer会解析命令`，`实际执行命令是在processCommand中`：
 
-第一步：使用lookupCommand，找到对应命令![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021210939.png)
+第一步：使用lookupCommand，找到对应命令![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/57b7f7bbef128aef37fa9e662a9eff96.png)
 第二步：做各项检查，比如检查，确认Redis可以执行本条命令，这里不做展开；
 
-第三步：正在执行命令，更改内存数据，下面是说如果客户端启动了事务，则将命令放入队里中，这里我们不过多关注。如果没有开启事务，则调用call方法更改内存。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021211050.png)
+第三步：正在执行命令，更改内存数据，下面是说如果客户端启动了事务，则将命令放入队里中，这里我们不过多关注。如果没有开启事务，则调用call方法更改内存。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14e1cb2d3428081fd78a4c795c0dd359.png)
 `call里面的事项关键是调用了proc方法，这个方法对应的就是命令执行函数`
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021211111.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/88e268f444499ba10e8fa8c82acaa56c.png)
 
 如果看完了这一系列操作，可能会比较奇怪，回包是在哪里进行的呢？实际上，执行完成之后，Redis会将结果放入client结构的输出缓冲区中，这个逻辑是在命令执行函数中，比如GET命令，它的proc其实就是
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021211210.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/50fd41232bdf1261de1b2d03e50a188a.png)
 
 getGenericCommand里面使用addReply将结果放入client的输出缓冲区。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021211242.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/35cc9c35ba9581096127288264cb1b1f.png)
 
 注意这里也没有直接send()到客户端，那么什么时候触发回包到客户端呢?
 
 ### 3.5 给客户端回包
 
 我们`回到上面aeMain主循环`的地方
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021211406.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6e3561326aa3272480118a81c61135c1.png)
 
 `在进入aeProcessEvents前会调用 eventLoop -> beforesleep(eventLoop)，beforeSleep中有handleClientsPendingWrites，就是专门做回包的。`
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021211512.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c3cc598ab17f3077beeebc97591f4809.png)
 
 其具体工作就是将client结构输出缓冲区的内容，发生给对应的客户端socket。
 
@@ -120,7 +120,7 @@ https://xiaolincoding.com/os/8_network_system/selete_poll_epoll.html#%E6%9C%80%E
 ### Linux内核下的epoll机制
 
 在 epoll 的系列函数里， epoll_create 用于创建一个 epoll 对象，epoll_ctl 用来给 epoll 对象添加或者删除一个 socket。epoll_wait 就是查看它当前管理的这些 socket 上有没有可读可写事件发生。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240323151823.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d0f44b0ee254685513c3dbe933a0089.png)
 
 当网卡上收到数据包后，Linux 内核进行一系列的处理后把数据放到 socket 的接收队列。然后会检查是否有 epoll 在管理它，如果是则在 epoll 的就绪队列中插入一个元素。epoll_wait 的操作就非常的简单了，就是到 epoll 的就绪队列上来查询有没有事件发生就行了。关于 epoll 这只“牧羊犬”的工作原理参见[深入揭秘 epoll 是如何实现 IO 多路复用的](https://mp.weixin.qq.com/s?__biz=MjM5Njg5NDgwNA==&mid=2247484905&idx=1&sn=a74ed5d7551c4fb80a8abe057405ea5e&scene=21#wechat_redirect) (Javaer 习惯把基于 epoll 的网络开发模型叫做 NIO)  
 

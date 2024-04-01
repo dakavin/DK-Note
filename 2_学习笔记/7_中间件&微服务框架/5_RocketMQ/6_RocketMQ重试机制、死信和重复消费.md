@@ -124,7 +124,7 @@ public void testDeadMsgConsumer() throws Exception {
 
 注意权限问题
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231704989.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/257a1f623d44913159bc6ee6bf4d8f02.png)
 
 ```java
 @Test  
@@ -149,9 +149,9 @@ public void testDeadMq() throws  Exception{
 
 ## 2.4 控制台显示
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231712992.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/49bad0ae5a56aa43f5e0aaa9c21bdaae.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231723729.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5f89754e0f5ef8463b0bbd546b4eb3e4.png)
 
 # 3. RocketMQ消息重复消费问题【重点】
 
@@ -200,10 +200,10 @@ CLUSTERING（负载均衡）模式下，如果`一个topic被多个consumerGroup
 	- 会触发重试机制
 	- 我们先要在catch中，将去重表中的这个key的记录删除
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231813808.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2bba331b7ce72d4b839302739fb50214.png)
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231805943.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9dbbe176fef458ced26f7dd731819a39.png)
 
 
 
@@ -370,7 +370,7 @@ public class MysqlType {
 
 在hutool的工具中我们可以直接使用，当然你自己使用redis的bitmap类型手写一个也是可以的 [https://hutool.cn/docs/#/bloomFilter/%E6%A6%82%E8%BF%B0](https://hutool.cn/docs/#/bloomFilter/%E6%A6%82%E8%BF%B0)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231902545.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e2a1fd84c01a344adb0fee94b225d8cc.png)
 
 ### 3.4.1 测试生产者
 

@@ -35,7 +35,7 @@ public String login(@RequestParam("userName") String userName,Sting password){
 ```
 ### 1.2 主要作用
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215002730.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4591e6aa314d39854265de222b6a4edd.png)
 
 
 
@@ -71,9 +71,9 @@ Spring MVC与许多其他Web框架一样，是围绕前端控制器模式设计�
 
 **SpringMVC处理请求流程：**
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215007498.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d4b936392f0e788cc682cb47524f58c3.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215016644.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/86c18bc21e7147d2eb46b2006bb37cb6.png)
 
 
 **SpringMVC涉及组件理解：**
@@ -87,7 +87,7 @@ Spring MVC与许多其他Web框架一样，是围绕前端控制器模式设计�
 ### 1.4 快速体验
 
 1.  `体验场景需求`
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215023105.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/682ff04ed387080f17bd29e874d535a5.png)
 
 
 2.  `配置分析`
@@ -231,24 +231,24 @@ Spring MVC与许多其他Web框架一样，是围绕前端控制器模式设计�
 7.  启动测试
 
     注意： tomcat应该是10+版本！方可支持 Jakarta EE API!
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215031227.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ddf4d627c0cb5206953cb65cc016bcea.png)
 
 
 
 - 补充：为什么创建一个MyWebAppInitializer类就可以完成Ioc容器的创建和处理路径呢？
-	1. 首先我们需要知道一个接口WebApplicationInitializer，其中存在一个onStartup方法，只要web项目一启动就会调用该方法![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215034996.png)
+	1. 首先我们需要知道一个接口WebApplicationInitializer，其中存在一个onStartup方法，只要web项目一启动就会调用该方法![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/71db863190daa5ed37cb14ea6df8d6a6.png)
 
 
-	2. 查看MyWebAppInitializer类所继承的类的继承情况，如下图：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215043892.png)
+	2. 查看MyWebAppInitializer类所继承的类的继承情况，如下图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9f52a276e58381aa4c84e9f4cbe43f76.png)
 
 
-	3. 发现，顶层接口是实现WebApplicationInitializer接口的![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215046952.png)
+	3. 发现，顶层接口是实现WebApplicationInitializer接口的![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e1673aa46aae1e044d5a1d243c37db79.png)
 
 
-	4. 其中，父类的onStartup方法，加载Spring配置类的过程如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215049708.png)
+	4. 其中，父类的onStartup方法，加载Spring配置类的过程如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ec66d243911310098d4f810c8d80b54b.png)
 
 
-	5. 加载处理路径，如下图：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215052476.png)
+	5. 加载处理路径，如下图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/808711f0ebbc95d082bf4f53789e7b74.png)
 
 
 
@@ -432,7 +432,7 @@ public class UserController {
 
 1.  **直接接值**
 
-    客户端请求![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215103431.png)
+    客户端请求![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/13f2fb76bf43a4cd4c565b091fa4d0df.png)
 
 
     handler接收参数
@@ -486,7 +486,7 @@ public Object paramForm(@RequestParam("name") String name,
     ```
     默认情况下，使用此批注的方法参数是必需的，但您可以通过将 `@RequestParam` 批注的 `required` 标志设置为 `false`！
 
-    如果没有没有设置非必须，也没有传递参数会出现：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215109270.png)
+    如果没有没有设置非必须，也没有传递参数会出现：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/045682266d0f7d358dd4fddd8ab8d250.png)
 
     将参数设置非必须，并且设置默认值：
     ```java
@@ -502,7 +502,7 @@ public Object paramForm(@RequestParam("name") String name,
 3.  **特殊场景接值**
     1.  一名多值
         多选框，提交的数据的时候一个key对应多个值，我们可以`直接使用集合进行接收，且集合的名称与get上的值一致！`
-        注意：必须加RequestParam注解![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215116456.png)
+        注意：必须加RequestParam注解![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/809d4faf187695dfde0fce79794afe5c.png)
 
 
         ```java
@@ -552,7 +552,7 @@ public Object paramForm(@RequestParam("name") String name,
         在上述代码中，将请求参数name和age映射到实体类属性上！要求属性名必须等于参数名！否则无法映射！
 
         使用postman传递参数测试：
-       ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215121918.png)
+       ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/df021f585ece050eec8bee743dfa9e5c.png)
 
 
 
@@ -617,11 +617,11 @@ public String getUser(@PathVariable Long id,
     在上述代码中，`@RequestBody` 注解将请求体中的 JSON 数据映射到 `Person` 类型的 `person` 参数上，并将其作为一个对象来传递给 `addPerson()` 方法进行处理。
 4.  完善配置
 
-    测试：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215215117.png)
+    测试：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/781ea58d67ab3353c38ad1f8a016a8ac.png)
     问题：
     org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/json;charset=UTF-8' is not supported]
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215226663.png)
-    原因：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215239829.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/af5da9a77e53d6184902b10f8b19fab5.png)
+    原因：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/85e9035f9bea97b86540f533264c6c4a.png)
     -   不支持json数据类型处理
     -   没有json类型处理的工具（jackson）
         解决：
@@ -659,14 +659,14 @@ public String getUser(@PathVariable Long id,
     让我们来查看下`<mvc:annotation-driven>`具体的动作！
     -   先查看`<mvc:annotation-driven>`标签最终对应解析的Java类
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215304369.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b1dbaaabd1ea541313b9db6b00ceb0b1.png)
 
 
     -   查看解析类中具体的动作即可
 
         打开源码：org.springframework.web.servlet.config.MvcNamespaceHandler
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215309247.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0d03b4b64c8d463cf2e7c0d63f01855b.png)
 
 
 
@@ -789,7 +789,7 @@ public void handle(
 | `java.util.Map`, `org.springframework.ui.Model`, `org.springframework.ui.ModelMap` | 共享域对象，并在视图呈现过程中向模板公开。                                          |
 | `Errors`, `BindingResult`                                                          | 验证和数据绑定中的错误信息获取对象！                                             |
 
-获取原生对象示例：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215317168.png)
+获取原生对象示例：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/433b24ae61d5bbf33623f8eb16fec233.png)
 
 
 
@@ -824,7 +824,7 @@ public String api(HttpSession session , HttpServletRequest request,
 
 共享域的作用是提供了方便实用的方式在同一 Web 应用程序的多个组件之间传递数据，并且可以将数据保存在不同的共享域中，根据需要进行选择和使用。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215323318.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4c6938550e3254bcebb1cad5dcd56963.png)
 
 
 
@@ -1006,13 +1006,13 @@ springmvc简化了参数接收和响应！
     在 Web 开发中，有两种主要的开发模式：前后端分离和混合开发。
 
     `前后端分离模式：[重点]`
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215338854.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14325ac8b253f9d3f76658e514c01790.png)
 
 
     指将前端的界面和后端的业务逻辑`通过接口分离开发`的一种方式。开发人员使用不同的技术栈和框架，前端开发人员主要负责页面的呈现和用户交互，后端开发人员主要负责业务逻辑和数据存储。前后端通信通过 API 接口完成，`数据格式一般使用 JSON 或 XML`。前后端分离模式可以提高开发效率，同时也有助于代码重用和维护。
 
     `混合开发模式：`
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215343116.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9a127c2824b2f52201b7da27e2c8f1c8.png)
     指将前端和后端的代码集成在同一个项目中，共享相同的技术栈和框架。这种模式在小型项目中比较常见，可以减少学习成本和部署难度。但是，在大型项目中，这种模式会导致代码耦合性很高，维护和升级难度较大。
 
     对于`混合开发`，我们就需要使用`动态页面技术，动态展示Java的共享域数据！！`
@@ -1095,7 +1095,7 @@ public class JspController {
         ```
 
 	3. 测试结果：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215349945.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/95d67190fae4e1a84daeb4d2c417ba6d.png)
 
 
 #### 3.2.2 转发和重定向
@@ -1221,7 +1221,7 @@ public class JsonController {
     }  
 }
     ```
-    返回结果：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215355057.png)
+    返回结果：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/979914a33024f5eaafef5a225a9a5c9f.png)
 
 
 2.  类上使用@ResponseBody
@@ -1274,14 +1274,14 @@ public @interface RestController {
     -   ……
 2.  **静态资源访问和问题解决**
     -   web应用加入静态资源
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215401947.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/687bed6a1ac574a5fef0411f145a82cc.png)
 
 
     -   手动构建确保编译
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215434871.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9f08c0870a5fc42c4c296f0a32dfb0b8.png)
 
 
-    -   访问静态资源![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215443528.png)
+    -   访问静态资源![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7260ee65cb4ac3b3eb8e62832d14f670.png)
     -   问题分析
         -   DispatcherServlet 的 url-pattern 配置的是“/”
         -   url-pattern 配置“/”表示整个 Web 应用范围内所有请求都由 SpringMVC 来处理
@@ -1312,7 +1312,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 	}
 }
         ```
-        再次测试访问图片：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215709024.png)
+        再次测试访问图片：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/52ed18e85a1fe62f6dfd93c5982131e4.png)
     -   新的问题：其他原本正常的handler请求访问不了了
         handler无法访问
         解决方案：
@@ -1328,12 +1328,12 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 	- 指导`设计路径`
 	- 指导`设计参数传递`
 	- 指导`选择请求方式`
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215724605.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9c3991efff3c2aee52f2520bda05f782.png)
 
 
 #### 4.1.1 RESTFul风格简介
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215729758.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8063ded75265986079caf066c6f8c18e.png)
 
 RESTful（Representational State Transfer）是一种`软件架构风格`，用于`设计网络应用程序和服务之间的通信`。它是一种基于标准 HTTP 方法的简单和轻量级的通信协议，广泛应用于现代的Web服务开发。
 
@@ -1341,7 +1341,7 @@ RESTful（Representational State Transfer）是一种`软件架构风格`，用�
 
 总而言之，RESTful 是一种基于 HTTP 和标准化的设计原则的软件架构风格，用于设计和实现可靠、可扩展和易于集成的 Web 服务和应用程序！
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215737492.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3db8c4ec87a1b6614189e3ef24011de0.png)
 
 
 学习RESTful设计原则可以帮助我们更好去设计HTTP协议的API接口！！
@@ -1653,7 +1653,7 @@ public class GlobalExceptionHandler {
 
 #### 5.2.1 拦截器概念
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215757435.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9993b3052ece184a0cb86262bf7c65b0.png)
 
 
 
@@ -1662,13 +1662,13 @@ public class GlobalExceptionHandler {
 -   生活中
 
     为了提高乘车效率，在乘客进入站台前统一检票
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215806784.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f3919c23ebdc5ee12cf6eb9e8a79780f.png)
 
 
 -   程序中
 
     在程序中，使用拦截器在请求到达具体 handler 方法前，统一执行检测
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215813008.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29e0be363f755bbb237ef806c59a8893.png)
 
 `拦截器 Springmvc VS 过滤器 javaWeb`：
 
@@ -1690,7 +1690,7 @@ public class GlobalExceptionHandler {
 选择：
 
 `功能需要如果用 SpringMVC 的拦截器能够实现，就不使用过滤器`。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215823880.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/852400cade3fe0506fceb937d9d15397.png)
 
 #### 5.2.2 拦截器使用
 
@@ -1733,7 +1733,7 @@ public class MyInterceptor implements HandlerInterceptor {
 }
     ```
     拦截器方法拦截位置：
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215832361.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0fce173fb183c114451bf4ffa82e88e9.png)
 
 2.  修改配置类添加拦截器
     ```java

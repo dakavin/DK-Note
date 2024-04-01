@@ -40,7 +40,7 @@ SpringBoot中已经默认对JDBC、Mybatis开启了事务，引入这些依赖�
 	(1) 在spring的bean的初始化过程中，通过判断bean的方法是否标有事务注解(@Transactional)来决定受否创建代理对象。如果一个类中任意方法含有事务注解，那么这个对象就会被代理。
 	(2) `核心思想就是Aop`，bean的方法就是切点，@Transactional注解对应的解释器会根据注解的信息解析出需要增强的逻辑，此处的切面逻辑类似于@Around，会在方法的前后执行一些事务相关操作（`设置隔离级别，传播行为，定义一些回滚或提交的条件等`）。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210450159.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/19281736a3f62183cc272c83217ddc41.png)
 
 
 `Connection和Sqlsession的关系`：
@@ -49,7 +49,7 @@ Connection： 连接数据源的物理链路,一般项目都会使用连接池�
 
 SqlSession： 一个与数据库的会话对象，基于数据库连接。SqlSession在执行sql语句时会根据调度策略，选取其中一个Connection。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210453452.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3e5255a5d996a874ecee01de1a6c3712.png)
 
 
 Mybatis源码中Sqlsession的提交最终会操作Connection对象提交事务。
@@ -60,7 +60,7 @@ Mybatis源码中Sqlsession的提交最终会操作Connection对象提交事务�
 
 每个方法的每个sql操作都会创建一个与数据库的会话，即Sqlsession对象，它是基于数据库连接Connection对象的会话对象。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210456385.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4554ae4fdc5258f777f119ef8d2eef31.png)
 
 
 开启Sqlsession的操作日志
@@ -71,22 +71,22 @@ logging.level.org.mybatis.spring.SqlSessionUtils=debug
 
 创建测试方法：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210459136.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/00044434daa26f4a9fdedc9ac2332f51.png)
 
 
 访问后查看日志。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210501910.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/166ec83dbadb25596bf470e830ff22a1.png)
 
 
 `使用事务时，事务方法内的所有sql操作共用一个Session对象，共同提交或回滚，包括方法内容调用的非事务方法内部的sql操作`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210505432.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9d6a142c98ae0e84f865aa39568b93e7.png)
 
 
 ### 1.4 @Transactional的属性
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210508379.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/26da3995274d313f817b16cdd670f067.png)
 
 ### 1.5 @Transactional的注意事项
 
@@ -94,13 +94,13 @@ logging.level.org.mybatis.spring.SqlSessionUtils=debug
 
 常见的RuntimeException：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210512258.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/26a797098b8d8c66d2769512fb245749.png)
 
 SQLException并不是RuntimeException的子类。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210517920.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/33fff49cf7385100e57ba402a566dcd3.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210520129.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0135a4d6b91018cbf3adb0ccc539ecaa.png)
 
 这里大家会有个疑问？
 
@@ -199,9 +199,9 @@ java.io.ObjectInputStream代表对象输入流，它的readObject()方法从一�
 
 序列化ID它决定着是否能够成功反序列化，在进行反序列化时，JVM会把传来的字节流中的serialVersionUID与本地实体类中的serialVersionUID进行比较如果相同则认为是一致的，便可以进行反序列化
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210530886.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6e4cd0761ca87b59bfaf192cf6087430.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210533408.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f76f4e76f0f5d48437ac10aa62d44f14.png)
 
 然后选中实体类名称 使用快捷键 Alt + Enter（回车）即可添加序列化id
 

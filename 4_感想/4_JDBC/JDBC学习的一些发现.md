@@ -11,17 +11,17 @@
 	- 右键该包，在mark directory as 中选择
 	- 或者在project structure中按下图进行选择
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010312241.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2a24e492eac744b8013c61fe6bc1b7b5.png)
 
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010313748.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6f40c8eceac79fb3e83a12b155fdb25f.png)
 
 
 
 2. 在测试所在类中alt + ins 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010315167.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/45dfa5bd56d58cac2ebf1d9b5105220f.png)
 
 
 
@@ -37,7 +37,7 @@ java.sql.Date.valueOf(localDate);
 ## 4. 导入jar包的操作
 
 1. 在项目下，新建一个名为lib文件夹
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010321481.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f66cf4204fe3db35e9245b09b2e94c5c.png)
 
 
 1. 将jar拷贝到该文件夹中，右键jar，点击add as library

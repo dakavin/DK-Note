@@ -205,7 +205,7 @@ String value = element.attributeValue("属性名");
 
 ### 2. HTTP协议的会话方式
 
->浏览器与服务器之间的通信过程要经历四个步骤![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1557672342250_1H8nt17MNz.png)
+>浏览器与服务器之间的通信过程要经历四个步骤![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6f92d50313bcc0c3a27ffa3623a5ca5a.png)
 
 -   浏览器与WEB服务器的连接过程是短暂的，每次连接只处理一个请求和响应。对每一个页面的访问，浏览器与WEB服务器都要建立一次单独的连接。
 -   浏览器到WEB服务器之间的所有通讯都是完全独立分开的请求和响应对。
@@ -214,13 +214,13 @@ String value = element.attributeValue("属性名");
 
 > 在HTTP1.0版本中，浏览器请求一个带有图片的网页，会由于下载图片而与服务器之间开启一个新的连接；但在HTTP1.1版本中，允许浏览器在拿到当前请求对应的全部资源后再断开连接，提高了效率。
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1557672415271_EgyN-GdbWY.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0b820ce8eb052e73b5611656591c1a78.png)
 
 ### 4. 浏览器通过F12根据抓取请求响应包
 
 > 几乎所有的PC端浏览器都支持了F12开发者工具,只不过不同的浏览器工具显示的窗口有差异
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681522138051.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/89d091517440569f02ba96edf0e761b5.png)
 
 ## 2.2 请求和响应报文
 
@@ -228,13 +228,13 @@ String value = element.attributeValue("属性名");
 
 > 主体上分为报文首部和报文主体,中间空行隔开
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681522962846.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/46f7b2a2e68b59863c6da9af943ed964.png)
 
 
 
 > 报文部首可以继续细分为  "行" 和 "头"
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681522998417.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6d5efcab328651d857a47c4c2707da6f.png)
 
 ### 2. 请求报文
 
@@ -253,7 +253,7 @@ String value = element.attributeValue("属性名");
 
 > 浏览器 f12 网络下查看请求数据包
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681524200024.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/79b28d9ece7baeb14c5c1983f0c30a4e.png)
 
 #### GET请求
 
@@ -313,7 +313,7 @@ Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
 5、地址栏参数不可见，相对安全
 6、post效率比get低
 
-+ POST请求要求将form标签的method的属性设置为post![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315204224.png)
++ POST请求要求将form标签的method的属性设置为post![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0cbcb2ec0829965aaf06df36e60124b6.png)
 
 > 查看post的请求行 请求头 请求体
 
@@ -359,7 +359,7 @@ username=admin&password=1232131
 - 响应首行（**响应行**）； 协议/版本 状态码 状态码描述
 - 响应头信息（**响应头**）；
 - 空行；
-- 响应体；![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681525347456.png)
+- 响应体；![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a8ee393dcdb8fb70f247f347fa2e38d7.png)
 
 ![1681525384347](file:///F:/00_Java%E5%AD%A6%E4%B9%A0%E5%BA%93/2_%E5%B0%9A%E7%A1%85%E8%B0%B7%E8%AF%BE%E7%A8%8B/%E5%B0%9A%E7%A1%85%E8%B0%B7%E5%85%A8%E6%96%B0JavaWeb%E9%87%8C%E7%A8%8B%E7%A2%91%E7%89%88/%E7%AC%94%E8%AE%B0/images/1681525384347.png?lastModify=1710416129)
 

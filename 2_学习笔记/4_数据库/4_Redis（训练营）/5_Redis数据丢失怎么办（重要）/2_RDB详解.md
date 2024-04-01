@@ -2,7 +2,7 @@
 
 我们先从实践入手，看一下怎么开启RDB持久化。
 
-- 首先，我们打开redis配置文件，window是`G:\Redis\Redis-x64-5.0.14.1\redis.windows.conf`，在其中搜索可以发现如下配置：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024224031.png)
+- 首先，我们打开redis配置文件，window是`G:\Redis\Redis-x64-5.0.14.1\redis.windows.conf`，在其中搜索可以发现如下配置：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c0f9930279d06c89dd98f305e6b483da.png)
 - 这里的配置语法是save interval num，表示没间隔interval秒，至少有num条写数据操作，写数据操作指的是增加、删除及更新，就会激活RDB持久化。
 - 上面有3条save配置，他们的意思分别是：
 	- 每900s，有1条写数据操作；
@@ -16,15 +16,15 @@
 
 下面的参数决定了文件会存到哪里
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024224508.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fcddedf211f2a40cdcf7529dbf81204e.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024224602.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/92b17dd52e14de748ac1aa68905f7de1.png)
 
 RDB文件最终会长这个样子，是二进制文件，没有可读性，但是要主要前面有个REDIS字符串作为标记，这个后面讲混合持久化也会用到。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024224827.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8f346aef2dfe69bd3f2fa96a96a8c688.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231026003435.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/45b06c3268744de7cac5d28dd131d231.png)
 
 ## 3、什么时候进行持久化
 
@@ -60,17 +60,17 @@ Redis服务会有对应输出
 	- 达到阈值之后，由周期函数触发持久化。
 
 4. `在程序正常关闭的时候执行`
-	- 在关闭时，Redis会启动一次阻塞式持久化，以记录更全的数据![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024225650.png)
+	- 在关闭时，Redis会启动一次阻塞式持久化，以记录更全的数据![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b1279ad998c3118f307765b183cea465.png)
 	- 所以正常关闭丢失的数据不会丢失，崩溃才会（如果考虑主从同步的话，主节点没崩溃，从节点崩溃就算主节点正常关闭，也可能丢失数据）
 		- 主节点挂了，从节点变成了主节点，就可能丢失数据
 ## 4、RDB具体做了什么
 
 我们这里聚焦达到RDB持久化策略时，是如何进行持久化的，我们先看一下Redis输出：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024225907.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/70e53dae698241441cccc1cac8ed745e.png)
 
 从输出能看出，RDB确实是通过子进程来进行的，具体做了什么呢？官网写得很清楚
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024225951.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/46239155d00814ec5ef7576f3400b0a2.png)
 
 从整体上，是做了一下事项：
 1. Fork出一个子进程来专门做RDB持久化
@@ -78,7 +78,7 @@ Redis服务会有对应输出
 3. 写完之后，替换旧的RDB文件
 
 整体流程如下：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024230138.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e2e2461bacc2442e8195453b6066dadd.png)
 
 下面还有一句：This method allows Redis to benefit from copy-onwrite semantics.
 
@@ -86,10 +86,10 @@ Redis服务会有对应输出
 - 执行RDB持久化过程中，Redis依然可以继续处理操作命令的，也就是数据是能被修改的，这就是通过写时复制技术实现的。
 
 具体而言：fork创建子进程之后，通过写时复制技术，`子进程和父进程是共享同一片内存数据的`，因为创建子进程的时候，会复制父进程的页表，但是`页表指向的物理内存还是同一个`。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024230439.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/047329619602fd453e4c1edecd678026.png)
 
 只有在发送修改内存数据的情况时，物理内存才会被复制一份
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024230556.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eec9c634de175d1dd2dc473f6b73336a.png)
 `因为主进程要copy出一块物理内存，用于自己的写操作，旧的共享物理内存交给子进程`
 
 就是这样，Redis使用bgsave对当前内存中的所有数据做快照，这个操作是由bgsave子进程在后台完成的，执行时不会阻塞父进程中的主线程，这就使得主线程同时可以修改数据。

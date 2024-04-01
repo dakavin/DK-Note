@@ -12,7 +12,7 @@ Redis是一种键值型的NoSql数据库，这里有两个关键字：
 
 其中**键值型**，是指Redis中存储的数据都是以key、value对的形式存储，而value的形式多种多样，可以是字符串、数值、甚至json：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232728112.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c4625f0b4b0ee18c938f78044dd39649.png)
 
 
 而NoSql则是相对于传统关系型数据库而言，有很大差异的一种数据库。
@@ -22,20 +22,20 @@ Redis是一种键值型的NoSql数据库，这里有两个关键字：
 ### 1.1.1.结构化与非结构化
 
 传统关系型数据库是结构化数据，每一张表都有严格的约束信息：字段名、字段数据类型、字段约束等等信息，`插入的数据必须遵守这些约束`：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232737545.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cea4a6660bd578746b98bc2ed9af1c2b.png)
 
 而NoSql则对数据库格式`没有严格约束，往往形式松散，自由`。
 
-可以是键值型：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232750638.png)
-也可以是文档型：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232756396.png)
+可以是键值型：![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bc632eff0631be87b2a8a81791ab57cd.png)
+也可以是文档型：![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f2046183a3d4ef61d57660696891b268.png)
 
 
-甚至可以是图格式：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232800319.png)
+甚至可以是图格式：![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ad6eaa35c3f71a5a412df7d349c06e29.png)
 
 
 ### 1.1.2.关联和非关联
 
-传统数据库的`表与表之间往往存在关联`，例如外键：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232804940.png)
+传统数据库的`表与表之间往往存在关联`，例如外键：![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6aa95097086a8af0b00fcf6778846388.png)
 
 而非关系型数据库`不存在关联关`系，要维护关系要么靠代码中的业务逻辑，要么靠数据之间的耦合：
 ```json
@@ -66,11 +66,11 @@ Redis是一种键值型的NoSql数据库，这里有两个关键字：
 
 而`不同的非关系数据库查询语法差异极大，五花八门各种各样`。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232814067.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f30e18cde359eb6efb9186e761135cd9.png)
 
 ### 1.1.4.事务
 
-传统关系型数据库能满足事务ACID的原则。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232821386.png)
+传统关系型数据库能满足事务ACID的原则。![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/06e329a574860b6aa798d81a00488339.png)
 
 
 而非关系型数据库往往不支持事务，或者不能严格保证ACID的特性，只能实现基本的一致性。
@@ -78,7 +78,7 @@ Redis是一种键值型的NoSql数据库，这里有两个关键字：
 
 除了上述四点以外，在存储方式、扩展性、查询性能上关系型与非关系型也都有着显著差异，总结如下：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232828553.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/df79845de3e46720a6fccfa66778653f.png)
 
 
 
@@ -122,10 +122,10 @@ yum install -y gcc tcl
 
 然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：
 
-`lline`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232840009.png)
+`lline`![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ab13b0ed2cff10ff6876ce7b126e6056.png)
 例如，我放到了/usr/local/src 目录：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232847390.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bf18e2d234f9bf29043812f485600318.png)
 
 解压缩：
 
@@ -135,7 +135,7 @@ tar -zxzf redis-6.2.6.tar.gz
 
 解压后：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232852676.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6e6a7e21952910037191e36cd96ad03b.png)
 
 进入redis目录：
 
@@ -174,7 +174,7 @@ redis-server
 ```
 
 如图：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232910126.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4f12e80299d07f9980511aa329c6337e.png)
 
 
 
@@ -184,7 +184,7 @@ redis-server
 
 如果要让Redis以`后台`方式启动，则必须修改Redis配置文件，就在我们之前解压的redis安装包下（`/usr/local/src/redis-6.2.6`），名字叫redis.conf：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232931004.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1844540aaf764e808c31be8d67917db6.png)
 
 我们先将这个配置文件备份一份：
 
@@ -317,7 +317,7 @@ redis-cli [options] [commonds]
 
 不指定commond时，会进入`redis-cli`的交互控制台：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232945829.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ca6b29f790669df67d8f4a84dd30202a.png)
 
 ### 1.4.2.图形化桌面客户端
 
@@ -331,34 +331,34 @@ GitHub上的大神编写了Redis的图形化桌面客户端，地址：https://g
 
 在课前资料中可以找到Redis的图形化桌面客户端：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233002519.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/864ef6368dacd3d39484d25f8400b36b.png)
 
 解压缩后，运行安装程序即可安装：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233009994.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0a84adb0f716a5871ffbdc9bf0581617.png)
 
 安装完成后，在安装目录下找到rdm.exe文件：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233015583.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/30b0954533d9aa3c2386c76a9edf7307.png)
 
 双击即可运行：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233022455.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a10d00b549cc027061365517b9026e56.png)
 
 ### 1.4.4.建立连接
 
 点击左上角的`连接到Redis服务器`按钮：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233028125.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e60c33584cd20b85ad151a46969d4671.png)
 
 在弹出的窗口中填写Redis服务信息：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233034873.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce19c234f03b7768159fdd570d3f9ce9.png)
 点击确定后，在左侧菜单会出现这个链接：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233045248.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/19dbd52fd4dfbd72089d418ee9e9af3b.png)
 
 点击即可建立连接了。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233057580.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4410a6f7dedfc0a5f5940a306dff8d6b.png)
 
 Redis默认有16个仓库，编号从0至15.  通过配置文件可以设置仓库数量，但是不超过16，并且不能自定义仓库名称。
 
@@ -373,17 +373,17 @@ select 0
 
 Redis是典型的key-value数据库，key一般是字符串，而value包含很多不同的数据类型：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233106216.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/498af2b2cd63b7e5ca3a2847842ca4e7.png)
 
 
 Redis为了方便我们学习，将操作不同数据类型的命令也做了分组，在官网（ [https://redis.io/commands ](https://redis.io/commands)）可以查看到不同的命令：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233110525.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/238c2a41c15eeb151020c26b217165e5.png)
 
 
 不同类型的命令称为一个group，我们也可以通过help命令来查看各种不同group的命令：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233144401.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b7b92c07bf1a1a83ccac2efec3d6cdd6.png)
 
 接下来，我们就学习常见的五种基本数据类型的相关命令。
 
@@ -422,7 +422,7 @@ String类型，也就是字符串类型，是`Redis中最简单的存储类型`�
 
 不管是哪种格式，`底层都是字节数组形式存储`，只不过是编码方式不同。字符串类型的最大空间不能超过512m.
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233154259.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9433a0f2b3cc77c99887676f48bab810.png)
 ### 2.2.1.String的常见命令
 
 String的常见命令有：
@@ -472,18 +472,18 @@ Redis的key允许有多个单词形成层级结构，`多个单词之间用':'�
 
 并且，在Redis的桌面客户端中，还会以相同前缀作为层级结构，让数据看起来层次分明，关系清晰：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233206342.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/04bfa888bdf3e2248292bdddff717430.png)
 ## 2.3.Hash类型
 
 Hash类型，也叫散列，其`value是一个无序字典`，类似于Java中的HashMap结构。
 
 String结构是将对象序列化为JSON字符串后存储，当需要修改对象某个字段时很不方便：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233215016.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fa4887bb8c66dd5a2359174d78af17f6.png)
 
 `Hash结构可以将对象中的每个字段独立存储，可以针对单个字段做CRUD：`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233219852.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5bc0cf37320ee26c625fc11913bb79c.png)
 
 Hash的常见命令有：
 
@@ -545,12 +545,12 @@ Set的常见命令有：
 - `SUNION key1 key2 ... `：求key1与key2的并集
 
 例如两个集合：s1和s2:
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233229658.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1a3dfd984a3816d147860554c59ac4b8.png)
 
 
 求交集：SINTER s1 s2
 
-求s1与s2的不同：SDIFF s1 s2![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233238856.png)
+求s1与s2的不同：SDIFF s1 s2![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4c36a01e9496ffdea388e64226a0bed8.png)
 练习：
 
 1. 将下列数据用Redis的Set集合来存储：
@@ -619,10 +619,10 @@ Jack 85, Lucy 89, Rose 82, Tom 95, Jerry 78, Amy 92, Miles 76
 
 在Redis官网中提供了各种语言的客户端，地址：https://redis.io/docs/clients/
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233409976.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/efa66fbf6467d4ac0e6996f8ad043d34.png)
 
 其中Java客户端也包含很多：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233418898.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1c9c5ef82fb534f3344c08d70fd52471.png)
 
 标记为`★`的就是推荐使用的java客户端，包括：
 
@@ -776,7 +776,7 @@ SpringData是Spring中数据操作的模块，包含对各种数据库的集成�
 
 SpringDataRedis中提供了RedisTemplate工具类，其中封装了各种对Redis的操作。并且将不同数据类型的操作API封装到了不同的类型中：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233452669.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d06cfc4b6d5ce503b9920ed9796637e0.png)
 ### 3.2.1.快速入门
 
 SpringBoot已经提供了对SpringDataRedis的支持，使用非常简单。
@@ -909,11 +909,11 @@ class RedisStringTests {
 
 RedisTemplate可以接收任意Object作为值写入Redis：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233505285.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dc4b931970a23a95ccdedfe08785be1c.png)
 
 只不过`写入前会把Object序列化为字节形式`，`默认是采用JDK序列化`，得到的结果是这样的：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233511337.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fcb4fe54e4d03105f2ffa5eeabfe697a.png)
 
 缺点：
 
@@ -951,7 +951,7 @@ public class RedisConfig {
 
 这里采用了JSON序列化来代替默认的JDK序列化方式。最终结果如图：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233529078.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ef4a2d402207894680b433d8dc625cdd.png)
 
 整体可读性有了很大提升，并且能将Java对象自动的序列化为JSON字符串，并且查询时能自动把JSON反序列化为Java对象。不过，`其中记录了序列化时对应的class名称`，目的是为了查询时实现自动反序列化。`这会带来额外的内存开销`。
 
@@ -959,14 +959,14 @@ public class RedisConfig {
 
 为了节省内存空间，我们可以不使用JSON序列化器来处理value，而是`统一使用String序列化器，要求只能存储String类型的key和value`。当需要存储Java对象时，`手动完成对象的序列化和反序列化`。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233535365.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a3ce5a6be90d1ebf100f429df030f392.png)
 
 因为存入和读取时的序列化及反序列化都是我们自己实现的，SpringDataRedis就不会将class信息写入Redis了。
 
 
 `这种用法比较普遍`，因此SpringDataRedis就提供了`RedisTemplate的子类：StringRedisTemplate`，它的key和value的序列化方式默认就是String方式。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922233540328.png)
+![|380|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/77363489cd5cab9b47e6ac2ef7322db0.png)
 
 省去了我们自定义RedisTemplate的序列化方式的步骤，而是直接使用：
 

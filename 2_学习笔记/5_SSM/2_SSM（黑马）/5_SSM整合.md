@@ -784,7 +784,7 @@ public Result getById(@PathVariable Integer id) {
 }
 ```
 
-重新启动服务器，使用`PostMan`发送请求，当传入的`id为1`时，会出现如下效果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212406761.png)
+重新启动服务器，使用`PostMan`发送请求，当传入的`id为1`时，会出现如下效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14005fd315cdf3b79264df920391927d.png)
 
 
 前端接收到这个信息后，和我们之前约定的格式不一致，怎么解决呢？  
@@ -851,7 +851,7 @@ public Result getById(@PathVariable Integer id) {
 ```
 
 - `步骤三：`使用`PostMan`发送`GET`请求访问`localhost:8080/books/1`  
-	控制台输出如下，说明异常已经被拦截，且执行了`doException()`方法![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212415689.png)
+	控制台输出如下，说明异常已经被拦截，且执行了`doException()`方法![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/89ac5fc2b427822503ef42e60ae920f7.png)
 
 
 但是现在没有返回数据给前端，为了统一返回结果，我们继续修改异常处理器类
@@ -1089,7 +1089,7 @@ public class ProjectExceptionAdvice {
 }
 ```
 
-那么对于异常我们就已经处理完成了，不管后台哪一层抛出异常，都会以我们与前端约定好的方式进行返回，前端只需要把信息获取到，根据返回的正确与否来展示不同的内容即可。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212426980.png)
+那么对于异常我们就已经处理完成了，不管后台哪一层抛出异常，都会以我们与前端约定好的方式进行返回，前端只需要把信息获取到，根据返回的正确与否来展示不同的内容即可。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ff84d487d09abfa0f6b0b033b6ab61c.png)
 
 
 # 四、前后台协议联调
@@ -2109,7 +2109,7 @@ deleteBook(row) {
 
 ## 1、拦截器概念
 
-在学习拦截器的概念之前，我们先看一张图![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212451864.png)
+在学习拦截器的概念之前，我们先看一张图![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bee1f4a99bc6e3bdd612f02592c856d2.png)
 
 
 1. 浏览器发送一个请求，会先到Tomcat服务器的web服务器
@@ -2135,7 +2135,7 @@ deleteBook(row) {
         - `归属不同：`Filter属于Servlet技术，而Interceptor属于SpringMVC技术
         - `拦截内容不同：`Filter对所有访问进行增强，Interceptor仅对SpringMVC的访问进行增强
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212454741.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e7738078e6e2558d7ebdcd040365cea0.png)
 
 
 ## 2、拦截器入门案例
@@ -2290,10 +2290,10 @@ public class SpringMvcConfig {
 
 - `步骤四：`运行程序测试
 
-	- 使用PostMan发送请求给`localhost:8080/books`，控制台输出如下，说明已经成功拦截![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212459954.png)
+	- 使用PostMan发送请求给`localhost:8080/books`，控制台输出如下，说明已经成功拦截![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/edf171d6547cb70110700e05ee447085.png)
 
 
-	- 使用PostMan发送请求给`localhost:8080/books/9527`，控制台输出如下，说明没有拦截，若想拦截，则继续修改拦截器的拦截规则![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212506427.png)
+	- 使用PostMan发送请求给`localhost:8080/books/9527`，控制台输出如下，说明没有拦截，若想拦截，则继续修改拦截器的拦截规则![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d37ec30d211c8df1c1005de0af04873c.png)
 
 
 - `步骤五：`修改拦截器拦截规则
@@ -2316,7 +2316,7 @@ public class SpringMvcSupport extends WebMvcConfigurationSupport {
 }
 ```
 
-- 此时我们再次使用PostMan发送请求给`localhost:8080/books/9527`，控制台输出如下，说明已经成功拦截![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212508594.png)
+- 此时我们再次使用PostMan发送请求给`localhost:8080/books/9527`，控制台输出如下，说明已经成功拦截![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8d5f8e2b26a4412e4c20d01bae406354.png)
 
 - 最后说一件事，就是拦截器中的`preHandler`方法，如果返回true，则代表放行，会执行原始`Controller`类中要请求的方法，如果返回`false`，则代表拦截，后面的就不会再执行了。
 
@@ -2343,7 +2343,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 }
 ```
 
-- 最后我们来看下拦截器的执行流程![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212513725.png)
+- 最后我们来看下拦截器的执行流程![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6765365f6154fff0faa170e06247eac5.png)
 
 
 - 当有拦截器后，请求会先进入`preHandle`方法，
@@ -2374,7 +2374,7 @@ public boolean preHandle(HttpServletRequest request, HttpServletResponse respons
 }
 ```
 
-控制台输出如下，成功输出了Content-Type`application/json`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212522731.png)
+控制台输出如下，成功输出了Content-Type`application/json`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eb6e20aafa6a93faa9271b8738faff7e.png)
 
 
 使用handler参数，可以获取方法的相关信息
@@ -2387,7 +2387,7 @@ public boolean preHandle(HttpServletRequest request, HttpServletResponse respons
 }
 ```
 
-控制台输出如下，成功输出了方法名`save`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212531857.png)
+控制台输出如下，成功输出了方法名`save`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d142edef142f81513ec8a21f93980803.png)
 
 
 ### 3.2 后置处理方法
@@ -2465,14 +2465,14 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 }
 ```
 
-重新启动服务器，使用PostMan发送请求，控制台输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212538513.png)
+重新启动服务器，使用PostMan发送请求，控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d9eebccc29bc10ba1d0df842f61edf23.png)
 
 
 - 当配置多个拦截器时，形成拦截器链
 - 拦截器链的运行顺序参照拦截器添加顺序为准
 - 当拦截器中出现对原始处理器的拦截，后面的拦截器均终止运行
 - 当拦截器运行中断，仅运行配置在前面的拦截器的afterCompletion操作
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212541292.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b7edd446b22d157e2214647dfd738fd2.png)
 
 
 - `preHandle：`与配置顺序相同，必定运行

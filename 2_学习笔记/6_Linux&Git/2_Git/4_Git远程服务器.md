@@ -5,7 +5,7 @@
 官网下载地址：[https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.38.1.tar.gz](https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.38.1.tar.gz)
 
 将下载后的压缩文件上传到Linux系统中
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923202657.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5630cd12da75973ae12405fe024838a5.png)
 ## 2、安装Git软件
 
 ### 2.1 解压Git
@@ -31,13 +31,13 @@ mv git-2.38.1/ git
 yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923203326.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fd69cb328e5e21fffb223e901579b446.png)
 
 ### 2.3 删除旧版Git
 
 安装编译源码所需依赖的时候，yum操作回自动安装旧版本的Git。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923203338.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/605398aaabe1f9e44a9c108a13cd969f.png)
 
 ```shell
 # 删除旧版本的Git
@@ -45,7 +45,7 @@ yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc pe
 yum -y remove git
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923203415.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dd6f2461a394e45c57c02d0feeb7057f.png)
 
 ### 2.4 编译、安装Git
 
@@ -63,7 +63,7 @@ make prefix=/usr/local/git all
 make prefix=/usr/local/git install
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923203544.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/033d06e44f1443d4d8d0f55f02eb735a.png)
 
 ### 2.5 配置环境变量
 
@@ -93,7 +93,7 @@ ln -s /usr/local/git/bin/git-receive-pack /usr/bin/git-receive-pack
 
 git --version
 ```
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923203917.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aa3eb05578b666f5d7914857bd2bf13d.png)
 ## 3、创建Git用户
 
 因为Git服务器需要安装在linux系统上，当使用远程客户端操作时，就需要提供相应的Git账号进行提交的，如果你的仓库文件的用户不是git的话，是root用户或者别的用户，那么你git push ,它是不允许的，因为你的git用户没有权限。你可以给这个文件创立git用户，或者修改文件夹的权限让所有用户都可以更改
@@ -150,13 +150,13 @@ user.email=18801@LAPTOP-J9IRK5BM
 ssh-keygen -t rsa
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923210038.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/47ca24e54178c7ebf6117aa5413dbab3.png)
 
 在用户根目录的.ssh文件夹内，id_rsa.pub就是我们要的公钥
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923205525.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4745e55b4bd682b2a1512997905b0a73.png)
 
 将文件中的内容复制到服务器端的.ssh/authorized_keys文件中
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923210119.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5ba0e3d7306641e2eb3099f9eb854855.png)
 ## 5、创建Git版本库
 
 ### 5.1 创建文件目录
@@ -213,7 +213,7 @@ git add client.txt
 git commit -m 'client'
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923205712.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5838b0231339e7003e4dc2e85c849fcf.png)
 
 ### 6.3 将本地仓库同步到远程仓库
 
@@ -227,7 +227,7 @@ git commit -m 'client'
 git push origin master
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923205725.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/666be6e77e53459ec24df424c4547c27.png)
 
 ### 6.4 查看远程仓库
 
@@ -249,4 +249,4 @@ git checkout master
 git log
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230923205735.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/feb585ecbc6a2d51b3a38f5f295049da.png)

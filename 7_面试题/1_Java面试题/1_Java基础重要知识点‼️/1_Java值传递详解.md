@@ -62,7 +62,7 @@ num2 = 20
 解析：
 
 在 `swap()` 方法中，`a`、`b` 的值进行交换，并不会影响到 `num1`、`num2`。因为，`a`、`b` 的值，只是从 `num1`、`num2` 的复制过来的。也就是说，a、b 相当于 `num1`、`num2` 的副本，副本的内容无论怎么修改，都不会影响到原件本身。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240312145711.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e90a0630245fb1c019725b306fe1240a.png)
 
 通过上面例子，我们已经知道了`一个方法不能修改一个基本数据类型的参数`，而对象引用作为参数就不一样，请看案例 2。
 ## 3.2 案例2：传递引用类型参数1
@@ -91,7 +91,7 @@ num2 = 20
 ```
 
 解析：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240312145751.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7425b530d367db9abe2f0090bbbf5368.png)
 
 看了这个案例很多人肯定觉得 Java 对引用类型的参数采用的是引用传递。
 
@@ -140,7 +140,7 @@ xiaoLi:小李
 怎么回事？？？两个引用类型的形参互换并没有影响实参啊！
 
 `swap` 方法的参数 `person1` 和 `person2` 只是拷贝的实参 `xiaoZhang` 和 `xiaoLi` 的地址。因此， `person1` 和 `person2` 的互换只是拷贝的两个地址的互换罢了，并不会影响到实参 `xiaoZhang` 和 `xiaoLi`
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240312150012.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7291e0bbf9bde8586d647bb5e59bf90e.png)
 # 4、引用传递是怎么样的？
 
 看到这里，相信你已经知道了 Java 中只有值传递，是没有引用传递的。  

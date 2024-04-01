@@ -37,7 +37,7 @@ public class MyServiceImpl implements MyService {
 }
 ```
 
-- 执行结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210732513.png)
+- 执行结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/917b2c498edef71b2db284dcaa1f32e8.png)
 
 如果异步就不用等方法执行完了。比如此处如果B方法是异步，那么A方法不用等B方法执行完就去执行C方法
 ### 1.2 SpringBoot异步方法  
@@ -280,7 +280,7 @@ public class MyScheduledTask {
 “#”字符：表示该月第几个周X。6#3表示该月第3个周五
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210751344.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4b44a1408613b85d0ca45230b77ecfa9.png)
 
 
 （1）`*`：表示`匹配该域的任意值`。假如在Minutes域使用*, 即表示每分钟都会触发事件。
@@ -371,7 +371,7 @@ public void testCron() throws InterruptedException {
 
 可以看出都是同一个线程
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210757989.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bed135c45d2aa33d9a6da0634a9d7b10.png)
 
 ### 2.3 引入线程池
 
@@ -483,7 +483,7 @@ public class RetryServiceImpl implements RetryService {
 }
 ```
 
-注意：重试方法不能被其他非重试方法调用![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210812463.png)
+注意：重试方法不能被其他非重试方法调用![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e564dd5a4695e1345685ca9b3bd4746.png)
 
 
 因为相当于，原始的RetryService对象调用这个方法，而`原始对象是没有被AOP增强过的，所以重试方法不会生效`

@@ -6,7 +6,7 @@ spring2.X版本在2023年11月24日停止维护了，因此创建spring项目时
 
 当然，停止维护只代表我们无法用idea主动创建spring2.X版本的项目了，不代表我们无法使用，该使用依然能使用，丝毫不受影响
 
-![](assets/Pasted%20image%2020240326010007.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bdd0e8d50d2d2d0384735227695aa873.png)
 
 ## 2、解决方案
 
@@ -18,7 +18,7 @@ spring2.X版本在2023年11月24日停止维护了，因此创建spring项目时
 
 目前阿里云还是支持创建Spring2.X版本的项目的
 
-![](assets/Pasted%20image%2020240326010030.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8a4cc013ea1c83aba97a8fb2d495a529.png)
 
 然后就可以愉快的创建项目了
 
@@ -28,7 +28,7 @@ spring2.X版本在2023年11月24日停止维护了，因此创建spring项目时
 
 打开阿里云官网 [https://start.aliyun.com](https://start.aliyun.com/ "https://start.aliyun.com")
 
-![](assets/Pasted%20image%2020240326010049.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/98d72c4fb4ac0ee0cf8c735c0074be18.png)
 
 创建过程很简单，此处不再展示，记得选择依赖，创建完毕后保存本地：
 
@@ -37,7 +37,7 @@ spring2.X版本在2023年11月24日停止维护了，因此创建spring项目时
 
 后续解压缩后直接用idea打开此项目即可
 
-![](assets/Pasted%20image%2020240326010101.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5d61eea74e2cbc2bc53ecfdeb49530e5.png)
 
 可以将此压缩包**保存**，每次新建项目时复制出一个新的项目文件，idea直接打开即可，压缩包可以当一个**永久的备份**，毕竟说不定哪天阿里云也创建不了spring2.X版本的项目了呢
 
@@ -45,17 +45,17 @@ spring2.X版本在2023年11月24日停止维护了，因此创建spring项目时
 
 #### 1. 修改pom.xml
 
-![|](assets/Pasted%20image%2020240326010235.png)
+![||380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e82f4264e24ce1d673acaee503e23737.png)
 
 修改完毕后启动一下项目看能否启动成功，若启动成功说明该修改的都修改好了，若报错，报错内容为JDK17/8不是国内源之类的问题，则继续修改，总共需要修改5个地方
 
 #### 2. 修改IDEA设置
 
-![](assets/Pasted%20image%2020240326010308.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8212dd953da7c086f1cfd379e708769b.png)
 
-![](assets/Pasted%20image%2020240326010314.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a7ff09bb0a6b4a1261f026b0b67c6d0e.png)
 
-Modules这里也修改成JDK8![](assets/Pasted%20image%2020240326010323.png)
-这里也要修改![](assets/Pasted%20image%2020240326010332.png)
+Modules这里也修改成JDK8![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/791018a53cacbefa8da8317d66f514a3.png)
+这里也要修改![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/750d790ff5d975f417c93a62716f0b11.png)
 
-设置这里也要进行修改![](assets/Pasted%20image%2020240326010352.png)
+设置这里也要进行修改![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/23c76bc984e6566c1bb747f003d9e69b.png)

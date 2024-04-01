@@ -45,18 +45,18 @@ InputStream is2 = JDBCUtils.class.getClassLoader().getResourceAsStream("JDBC.pro
 
 - 2.**System 系统类加载器**：从 CLASSPATH 系统变量指定的目录中加载类库。该加载器加载的类对 tomcat 本身和 web 应用都可见。
 
-`！！！但是，标准的 tomcat 启动脚本`（$CATALINA_HOME/bin/catalina.sh or %CATALINA_HOME%\bin\catalina.bat）`都会忽略系统变量 CLASSPATH 的值，而会使用如下的类库来创建 System 类加载器`：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010334596.png)
+`！！！但是，标准的 tomcat 启动脚本`（$CATALINA_HOME/bin/catalina.sh or %CATALINA_HOME%\bin\catalina.bat）`都会忽略系统变量 CLASSPATH 的值，而会使用如下的类库来创建 System 类加载器`：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3ecdbd96d797a1eb4de2096d59691cc8.png)
 
 
-- 3.**Common 通用类加载器**：通过该类加载器加载的类库可被 Tomcat 和所有应用共享。该类加载器的搜索位置是通过 $CATALINA_BASE/conf/catalina.properties 文件中的 common.loader 属性指定的，默认包括如下位置：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010336407.png)
+- 3.**Common 通用类加载器**：通过该类加载器加载的类库可被 Tomcat 和所有应用共享。该类加载器的搜索位置是通过 $CATALINA_BASE/conf/catalina.properties 文件中的 common.loader 属性指定的，默认包括如下位置：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/10a58289d8d55720abe7eec98ac89c42.png)
 
 
 - 4.**WebappX 应用类加载器**：每个 Web 应用创建一个自己的类加载器，加载自己项目下的数据： /WEB-INF/classes 和 /WEB-INF/lib 下的类和资源。`并且不使用双亲委派机制，先自己加载，加载不到才使用父类加载器`。
 
-- 本来顺序是1234，但是WebappX不使用委派机制而是先自己加载，加载不了才使用父类，所以**真实的顺序**是：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010338174.png)
+- 本来顺序是1234，但是WebappX不使用委派机制而是先自己加载，加载不了才使用父类，所以**真实的顺序**是：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cbab6a4b8cf54675367085a1ed5a52ed.png)
 
 
-- tomcat8支持委托：配置允许委派：<Loader delegate="true"/>，顺序变为：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010339963.png)
+- tomcat8支持委托：配置允许委派：<Loader delegate="true"/>，顺序变为：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9cd0971e3169fb58192947709b1c82ec.png)
 
 
 

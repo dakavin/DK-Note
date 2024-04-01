@@ -4,7 +4,7 @@
 
 官网： [http://rocketmq.apache.org/](http://rocketmq.apache.org/)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230649596.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29df6c916bc3d0e44f2070a0a9344756.png)
 
 RocketMQ是阿里巴巴2016年MQ中间件，使用Java语言开发，`RocketMQ 是一款开源的分布式消息系统`，基于高可用分布式集群技术，提供低延时的、高可靠的消息发布与订阅服务。同时，广泛应用于多个领域，包括异步通信解耦、企业解决方案、金融支付、电信、电子商务、快递物流、广告营销、社交、即时通信、移动应用、手游、视频、物联网、车联网等。
 
@@ -43,7 +43,7 @@ RocketMQ是阿里巴巴2016年MQ中间件，使用Java语言开发，`RocketMQ �
 
 - `大致流程`
 
-	- 发送者把消息发给消息服务器[MQ]，消息服务器把消息存放在若干`队列/主题`中，在合适的时候，消息服务器会把消息转发给接受者。在这个过程中，`发送和接受是异步的`,也就是发送无需等待，发送者和接受者的生命周期也没有必然关系。在发布pub/订阅sub模式下，也可以完成一对多的通信，可以让一个消息有多个接受者，例如：微信订阅号就是这样的![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230754300.png)
+	- 发送者把消息发给消息服务器[MQ]，消息服务器把消息存放在若干`队列/主题`中，在合适的时候，消息服务器会把消息转发给接受者。在这个过程中，`发送和接受是异步的`,也就是发送无需等待，发送者和接受者的生命周期也没有必然关系。在发布pub/订阅sub模式下，也可以完成一对多的通信，可以让一个消息有多个接受者，例如：微信订阅号就是这样的![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7491a41a3fb8963525809b3f4e9621c1.png)
 
 ## 2.2 特点
 
@@ -57,7 +57,7 @@ RocketMQ是阿里巴巴2016年MQ中间件，使用Java语言开发，`RocketMQ �
 
 也就是说，一个系统和另一个系统间进行通信的时候，假如系统A希望发送一个消息给系统B，让它去处理，但是系统A不关注系统B到底怎么处理或者有没有处理好，所以系统A把消息发送给MQ，然后就不管这条消息的“死活” 了，接着系统B从MQ里面消费出来处理即可。至于怎么处理，是否处理完毕，什么时候处理，都是系统B的事，与系统A无关。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230824175.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/942b488d24294e4ef2e24b344d0060b5.png)
 
 这样的一种通信方式，就是所谓的“异步”通信方式，对于系统A来说，只要把消息发给MQ,然后系统B就会异步处去进行处理了，系统A不能“同步”的等待系统B处理完。这样的好处是什么呢？解耦
 ### 2.2.2 应用系统的解耦
@@ -67,11 +67,11 @@ RocketMQ是阿里巴巴2016年MQ中间件，使用Java语言开发，`RocketMQ �
   `发送者和接收者不必同时在线`
 ### 2.2.3 现实中的业务
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230830235.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5ea4c845306885cdba991e607182af2f.png)
 
 # 三、各个MQ产品的比较
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230834794.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d29d6fb2980eba8a71e1c4de48f41efa.png)
 
 - 吞吐量：单位时间内，接收和处理消息的速度 如，10w条/秒 3M/s
 - 时效性：延迟
@@ -96,11 +96,11 @@ RocketMQ是阿里巴巴2016年MQ中间件，使用Java语言开发，`RocketMQ �
 
 `ConsumerGroup`：消费者组，多个消费者组可以同时消费一个主题的消息
 
-消息发送的流程是，Producer询问NameServer，NameServer分配一个broker 然后Consumer也要询问NameServer，得到一个具体的broker，然后消费消息![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230926430.png)
+消息发送的流程是，Producer询问NameServer，NameServer分配一个broker 然后Consumer也要询问NameServer，得到一个具体的broker，然后消费消息![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/90616caad9e0c7e168fc020ebc6edae9.png)
 
 - 读（高可用性）：负载均衡，生产者可以通过nameserver向不同的broker发送消息
 - 写（高可用性）：负载均衡，消费者可以通过nameserver向不同的broker获取消息，且不同的broker之间有主从集群
 - 单机版本，即只有一个broker
 # 五、 生产和消费理解【重点】
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922230939230.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5efa7ecd6e6e11c92fee071d3404ee7f.png)

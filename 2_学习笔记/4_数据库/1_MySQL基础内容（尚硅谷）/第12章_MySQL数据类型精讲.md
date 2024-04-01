@@ -115,7 +115,7 @@ int类型默认显示宽度为int(11)，无符号int类型默认显示宽度为i
 - <span style="background:#d4b106">FLOAT</span> 表示单精度浮点数；
 - <span style="background:#d4b106">DOUBLE</span> 表示双精度浮点数；
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922072657903.jpeg)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9bd803c12aae88165eaedf455a5f3981.jpeg)
 
 
 
@@ -295,7 +295,7 @@ TIME类型用来表示时间，不包含日期部分。在MySQL中，需要<span
 在实际的项目中，我们还经常遇到一种数据，就是字符串数据。
 
 MySQL中，文本字符串总体上分为<span style="background:#d4b106">CHAR</span> 、<span style="background:#d4b106">VARCHAR</span> 、<span style="background:#d4b106">TINYTEXT</span> 、<span style="background:#d4b106">TEXT</span> 、<span style="background:#d4b106">MEDIUMTEXT</span> 、<span style="background:#d4b106">LONGTEXT</span> 、<span style="background:#d4b106">ENUM</span> 、<span style="background:#d4b106">SET</span> 等类型。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922072716097.jpeg)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/19b78149189a5cf1f3c1a7fed2efdf56.jpeg)
 
 
 

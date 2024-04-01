@@ -8,7 +8,7 @@
 
 [MyBatis-Plus](https://github.com/baomidou/mybatis-plus "MyBatis-Plus") [ (opens new window)](https://github.com/baomidou/mybatis-plus " (opens new window)")（简称 MP）是一个 [MyBatis](https://www.mybatis.org/mybatis-3/ "MyBatis") [ (opens new window)](https://www.mybatis.org/mybatis-3/ " (opens new window)") 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220441395.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e3443eac56b721f84e2b1f65e218fc49.png)
 
 
 
@@ -445,7 +445,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
 }
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220505726.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b70ff913bb51edf94b580b16a6eacf77.png)
 
 
 
@@ -629,7 +629,7 @@ int delete(@Param(Constants.WRAPPER) Wrapper<T> wrapper);
 
 条件构造器类结构：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220541405.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/296cb0573df79fb8e2013458d4f3a012.png)
 
 
 
@@ -644,7 +644,7 @@ Wrapper ： 条件构造抽象类，最顶端父类
 
 #### 2.4.3 基于QueryWrapper 组装条件
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220559462.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d42625c9f8610c5fec1d659ef47b680e.png)
 
 
 组装查询条件：
@@ -729,7 +729,7 @@ public void test5(){
 ```
 
 `condition判断组织条件`:
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220608576.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fb9fff1b5e1018ac7199c4288a2d5f55.png)
 
 
 
@@ -1044,7 +1044,7 @@ public class User {
 - UUID：随机生成一个不重复的字符串
 
 全局配置修改主键策略:   
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220618825.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6bfb8b78f1fdbb885f8c831a0c6ea393.png)
 
 
 ```java
@@ -1181,7 +1181,7 @@ public void test2(){
     mapper.deleteById(5);  
 }
     ```
-    执行效果:![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220628685.png)
+    执行效果:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/49e6c3fee1482294554d49d15c39f5d4.png)
 
 
 5.  测试查询数据
@@ -1201,7 +1201,7 @@ public void test3(){
 
 **并发问题场景演示:**
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220633953.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dda74d61de4fa5dbc99d35b52914163a.png)
 
 
 
@@ -1319,15 +1319,15 @@ MyBatis-Plus为我们提供了强大的mapper和service模板，能够大大的�
 
 MyBatisX一款基于 IDEA 的快速开发插件，为效率而生。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220643790.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d8943803eb8139e76756879f3f007971.png)
 
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220648407.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5fde4bd470721851f8bf3e3c843633bf.png)
 
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220655069.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/52e2eae6472fecc9d28701caa132d6e0.png)
 
 
 

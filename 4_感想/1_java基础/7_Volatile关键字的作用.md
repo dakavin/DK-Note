@@ -40,7 +40,7 @@ public class VolatileTest {
 - 我们把flag 变量加上volatile ，重新运行程序，Thread1结束，说明Thread1读取到了flage修改后的值
 
 - 说到可见性，我们需要先了解一下Java内存模型，Java内存模型如下所示：
- ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010052706.png)
+ ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/223ef379435c5d3a227c5d2d26770eea.png)
  - 线程之间的共享变量存储在主内存中（Main Memory）中，每个线程都一个都有一个私有的本地内存（Local Memory），本地内存中存储了该线程以读/写共享变量的副本。
 
 - 所以当一个线程把主内存中的共享变量读取到自己的本地内存中，然后做了更新。在还没有把共享变量刷新的主内存的时候，另外一个线程是看不到的。
@@ -58,7 +58,7 @@ public class VolatileTest {
 # 二、顺序一致性
 
 在执行程序时，为了提高性能，编译器和处理器常常会对指令做重排序。重排序分为如下三种：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010126922.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d9f4341d4cf114d8daba63285580213a.png)
 
 
 1属于编译器重排序，2和3属于处理器重排序。这些重排序可能会导致多线程程序出现内存可见性问题。
@@ -70,10 +70,10 @@ JMM内存屏障插入策略如下：
 在每个volatile读操作后面插入一个LoadLoad，LoadStore屏障。
 
 Volatile写插入内存屏障后生成指令序列示意图：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010137969.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4ded60f722f2f4cf26eb14309c4502e9.png)
 
 Volatile读插入内存屏障后生成指令序列示意图：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010153347.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1280ceac820d7926645e2b59c8e28055.png)
 
 
 通过上面这些我们可以得出如下结论：编译器不会对volatile读与volatile读后面的任意内存操作重排序；编译器不会对volatile写与volatile写前面的任意内存操作重排序。
@@ -102,7 +102,7 @@ public class SafeDoubleCheckedLocking {
 	3. 设置instance指向内存空间。
 
 如果instane 不加volatile，上面的2，3可能会发生重排序。假设A，B两个线程同时获取，A线程获取到了锁，发生了指令重排序，先设置了instance指向内存空间。这个时候B线程也来获取，instance不为空，这样B拿到了没有初始化完成的单例对象（如下图
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010205946.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bafc0bc01338dedf6967a33881fcceaa.png)
 
 # 三、Volatile与Synchronized比较
 1. Volatile是轻量级的synchronized，因为它不会引起上下文的切换和调度，所以Volatile性能更好。

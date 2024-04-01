@@ -10,7 +10,7 @@
 5. HTTPS 与 HTTP
 6. HTTP/1.1、HTTP/2、HTTP/3 演变
 
-![](assets/Pasted%20image%2020231104135458.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fdaa8bcc7123b5ee53ef26d3d9407d99.png)
 
 ## 1、HTTP基本概念
 
@@ -23,7 +23,7 @@ HTTP 是超文本传输协议，也就是 `Hyper Text Transfer Protocol`
 HTTP的名字，超文本传输协议，可以拆成三个部分：
 - 超文本
 - 传输
-- 协议![](assets/Pasted%20image%2020231104140504.png)
+- 协议![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fe9031833b9f81a8398dc10bb07d6479.png)
 1. 协议：
 	- 在生活中，我们可以随处看见协议，例如：
 		- 刚毕业时会签一个三方协议

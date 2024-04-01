@@ -17,19 +17,19 @@
 - 第一步：创建项目、安装项目依赖，安装全局的vue-router
 - 第二步：创建其他vue组件
 	- 其中App.vue组件中的template标签
-		- `使用router-link标签`，来在页面显示一个链接其他vue组件的超链接![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321203515.png)
+		- `使用router-link标签`，来在页面显示一个链接其他vue组件的超链接![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/198fc38a09f9d0cd4067560e5d556ac3.png)
 		- `使用router-view标签`，表示变化的组件（由路由决定）
 - 第三步：准备路由配置，在src目录下创建router目录，然后创建router.js文件
 	- 编辑router.js文件
-		- 从vue-router中导入路由创建的相关方法：createRouter、createWebHashHistory![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321203816.png)
-		- 导入第二步创建的组件![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321203832.png)
-		- 创建路由对象![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321203850.png)
+		- 从vue-router中导入路由创建的相关方法：createRouter、createWebHashHistory![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7840a06b82ff01b5f701bfef0163c24d.png)
+		- 导入第二步创建的组件![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c434d29868b7aa5dd80c9d5cdbf2ef1a.png)
+		- 创建路由对象![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/53f488ae985769110f3001e95b84735f.png)
 		- 对外暴露对象 `export default router`
-- 第四步：main.js引入router的配置![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321203942.png)
+- 第四步：main.js引入router的配置![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b10b66a8244109b92cd95ee6de5f7525.png)
 
 ### 2.1 案例需求分析
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321150656.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29431adef19d54e3ad64ea3dbb54ee16.png)
 
 ### 2.2 创建项目和导入路由依赖
 
@@ -191,8 +191,8 @@ npm run dev
 - `一般在APP.vue组件中，我们只用一个<router-view>标签`
 
 - 如果需要使用多个`<router-view>`标签，需要在标签内添加name属性
-	- 如图所示![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321204347.png)
-	- 对应的route数组中的`component`也应该变为`components`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321204532.png)
+	- 如图所示![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c42d242f192e94815187a380d18cabc4.png)
+	- 对应的route数组中的`component`也应该变为`components`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3f9b205f59275821dfd2740b454eef02.png)
 ## 3、路由重定向
 
 > 重定向的作用：将一个路由重定向到另一个路由上

@@ -6,7 +6,7 @@
 **代理模式的主要作用是扩展目标对象的功能，比如说在目标对象的某个方法执行前后你可以增加一些自定义的操作。**
 
 举个例子：新娘找来了自己的姨妈来代替自己处理新郎的提问，新娘收到的提问都是经过姨妈处理过滤之后的。姨妈在这里就可以看作是代理你的代理对象，代理的行为（方法）是接收和回复新郎的提问。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313104510.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/38341ae6ed0f81af6a7f3418e9c7ce4b.png)
 
 代理模式有静态代理和动态代理两种实现方式，我们 先来看一下静态代理模式的实现。
 # 2、静态代理
@@ -211,7 +211,7 @@ public class DebugInvocationHandler implements InvocationHandler {
 `invoke()` 方法: 当我们的动态代理对象调用原生方法的时候，最终实际上调用到的是 `invoke()` 方法，然后 `invoke()` 方法代替我们去调用了被代理对象的原生方法。
 
 补充：
-- proxy代表什么意思：`proxy是真实对象的真实代理对象`，invoke方法可以返回调用代理对象方法的返回结果，也可以返回对象的真实代理对象（com.sun.proxy.$Proxy0）。![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317150724.png)
+- proxy代表什么意思：`proxy是真实对象的真实代理对象`，invoke方法可以返回调用代理对象方法的返回结果，也可以返回对象的真实代理对象（com.sun.proxy.$Proxy0）。![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99e765868bc4c9364746bceae06c49f8.png)
 
 - proxy参数怎么用及什么时候用：proxy参数是invoke方法的第一个参数，通常情况下我们都是返回真实对象方法的返回结果，但是我们也可以将proxy返回，proxy是真实对象的真实代理对象，我们可以通过这个返回对象对真实的对象做各种各样的操作。
 

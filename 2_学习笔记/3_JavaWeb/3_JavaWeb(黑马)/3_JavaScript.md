@@ -87,7 +87,7 @@
 	1. `number`：数字。 整数/小数/NaN(not a number 一个不是数字的数字类型)
 	2. `string`：字符串。 字符串  "abc" "a" 'abc' ，`使用单双引号都可以`
 	3. `boolean`: true和false
-	4. `null`：一个对象为空的占位符![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074126082.png)
+	4. `null`：一个对象为空的占位符![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/36818fe19d13ab9b9b95d6634c1b330e.png)
 
 
 	5. `undefined`：未定义。如果一个变量没有给初始化值，则会被默认赋值为undefined
@@ -131,7 +131,7 @@
 	- 点击File→Settings→Language & Frameworks→JavaScript
 	- 将JavaScript language version中的ECMAScript 6切换为ECMAScript 5.1即可
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074138431.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/27298010db50df289c37ab1b8e9ea936.png)
 
 
 
@@ -203,7 +203,7 @@
 5. for
 
 - `switch的case可以是任何类型的`
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074143494.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/23f3ce0e042d99956e43c083777d65e1.png)
 
 
 
@@ -285,7 +285,7 @@
 	- 方法名称(实际参数列表);
 
 - `arguments的使用`
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074147742.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5634a4bf996baa120541e04185b27ab.png)
 
 
 
@@ -312,7 +312,7 @@ var xxx = (...) => {....}
 	1. `JS中，数组元素的类型可变的`。
 	2. `JS中，数组长度可变的`。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074151146.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f01fce43ec451cb5fe26fcce1a6e9d0a.png)
 
 
 
@@ -343,7 +343,7 @@ var xxx = (...) => {....}
 3. 属性：
 	PI
 
-- 取0-100的随机整数 ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074154016.png)
+- 取0-100的随机整数 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/42fa412b74c8b2c0d48d4e05509cca73.png)
 
 
 
@@ -561,15 +561,15 @@ var user = {
 3. URL编码
    传智播客 =  %E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074204336.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b42d6f6ee977c35e2a4d971b7d5f73fe.png)
 
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074206622.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/960a3b76749061fd2ca83c14c099e6bc.png)
 
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074208796.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1eef4444ee30db69494d2cfe15990ce6.png)
 
 ## 4 DOM对象简单学习
 
@@ -676,7 +676,7 @@ var user = {
 * History：历史记录对象，**包含浏览器历史。**
 * Screen：显示器屏幕对象，包含用户屏幕的信息
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074219946.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bf3390daebcc483396f26d9187685562.png)
 
 
 
@@ -861,7 +861,7 @@ var user = {
 		1. removeAttribute()：删除属性，<font color="#d83931">两个字符串为实参（属性名，属性值）</font>
 		2. setAttribute()：设置属性，<font color="#d83931">一个字符串为实参（属性名）</font>
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074229626.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9e04b4ead7e7ab082d2ac61ce7564f9d.png)
 
 
 
@@ -875,7 +875,7 @@ var user = {
 	* 属性：
 		* parentNode 返回节点的父节点。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074233275.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9e8ff09e636eed6d0582d698e1425bfe.png)
 
 
 

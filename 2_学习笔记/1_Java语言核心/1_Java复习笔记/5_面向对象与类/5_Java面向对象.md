@@ -27,7 +27,7 @@
 
 参考：[https://www.cnblogs.com/xrq730/p/5533019.html](https://links.jianshu.com/go?to=https%3A%2F%2Fwww.cnblogs.com%2Fxrq730%2Fp%2F5533019.html)  
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240203181704616.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ed975c3635c867af338b3a2582b4952a.png)
 
 ## 2 权限控制
 

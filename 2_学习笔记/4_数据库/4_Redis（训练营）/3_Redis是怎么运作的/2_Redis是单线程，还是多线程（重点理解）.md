@@ -9,7 +9,7 @@ Reids是一个能高效处理请求的组件，一般而言，对这种组件，
 
 但是这种分支模块，都只是辅助，最核心的还是处理架构，这块Redis始终是单线程的。
 
-`Redis采用Reactor模型的网络模型，对于一个客户端请求，主线程负责一个完整的处理过程`：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021195936.png)
+`Redis采用Reactor模型的网络模型，对于一个客户端请求，主线程负责一个完整的处理过程`：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9d2018ff45769084125050ffd6f33b8a.png)
 ## 1、Redis为何选择单线程？
 
 Redis的核心处理模块选择用单线程来实现，这可能会让人很疑惑，毕竟多线程可以利用多核的优势，而Redis官方对于此的回答是：
@@ -26,7 +26,7 @@ Redis的核心处理模块选择用单线程来实现，这可能会让人很疑
 
 其次，Redis的数据结构，可以说是及其高效，在单线程模式下做了很多特性的优化，如果引入多线程，那么所有`2. 底层数据结构都要改造为线程安全`，这会是极其复杂的工作；
 
-而且，多线程模式也使得程序调试更加复杂和麻烦，会`3. 带来额外的开发成本和运营成本，也更容易犯错`，这是一张很形象的图：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021200815.png)
+而且，多线程模式也使得程序调试更加复杂和麻烦，会`3. 带来额外的开发成本和运营成本，也更容易犯错`，这是一张很形象的图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2131d68a22e5b7601743013776a87bec.png)
 所以，引入多线程，会带来很大的复杂度，对于追求简介的Redis而言，这是一个需要非常谨慎的事；
 
 事实上，Reids6.0之后为I/O处理引入了多线程来提高性能，核心处理逻辑还是保留单线程，但是即使这样，6.0之后的复杂性还是多了许多，更别说完全改成多线程处理了。

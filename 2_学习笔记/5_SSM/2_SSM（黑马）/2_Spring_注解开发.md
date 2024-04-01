@@ -124,7 +124,7 @@ public class App {
 }
 ```
 
-结果如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211552981.png)
+结果如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7c48cc9e35976d91e5f3ee3824029fa3.png)
 
 
 - **说明:**
@@ -186,7 +186,7 @@ public class AppForAnnotation {
 }
 ```
 
- 运行AppForAnnotation,可以看到两个对象依然被获取成功![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211559622.png)
+ 运行AppForAnnotation,可以看到两个对象依然被获取成功![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e73b368189e8351c11f4783055eda66e.png)
 
 
 至此，纯注解开发的方式就已经完成了，主要内容包括：
@@ -247,7 +247,7 @@ public class AppForAnnotation {
 }
 ```
 
-- 结果如下，说明默认情况下bean是单例![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211605987.png)
+- 结果如下，说明默认情况下bean是单例![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c3b8afcaff018cbf7d1fb9da7b705616.png)
 
 
 - 要想将BookDaoImpl变成非单例，只需要在其类上添加`@scope`注解
@@ -261,7 +261,7 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-- 再次运行程序，查看结果，输出的两个地址值不一致，说明已经成功变为非单例的了![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211608927.png)
+- 再次运行程序，查看结果，输出的两个地址值不一致，说明已经成功变为非单例的了![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ed847c78ca0a4b1a2d89158dd9db4c82.png)
 
 
 - 知识点：`@scope`
@@ -335,10 +335,10 @@ public class AppForAnnotation {
 }
 ```
 
-- 运行AppForAnnotation类查看打印结果，证明init和destroy方法都被执行了，且init确实是在构造方法后执行的。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211613579.png)
+- 运行AppForAnnotation类查看打印结果，证明init和destroy方法都被执行了，且init确实是在构造方法后执行的。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e6b683174f2ae73aef8b8b9a610fac04.png)
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211617175.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a0147b3b7434f81ad775b4f1d2817922.png)
 
 
 知识点`@PostConstruct`
@@ -578,7 +578,7 @@ public class BookDaoImpl implements BookDao {
 ```
 
 - `步骤四：`运行程序  
-	运行App类，查看运行结果，说明配置文件中的内容已经被加载![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211628101.png)
+	运行App类，查看运行结果，说明配置文件中的内容已经被加载![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99926c57b831441478c4a725e4691f05.png)
 
 
 **注意:**
@@ -728,7 +728,7 @@ public class App {
 }
 ```
 
-输出如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211637007.png)
+输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99fb5e6c38b7b56f7339f05942864337.png)
 
 
 - 至此使用`@Bean`来管理第三方bean的案例就已经完成。
@@ -784,7 +784,7 @@ public class JdbcConfig {
 ```
 
 - `步骤三：`运行程序  
-	仍然可以获取到bean对象并输出到控制台![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211641278.png)
+	仍然可以获取到bean对象并输出到控制台![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d10353ce948a5e6ee275cead52e43b7.png)
 
 
 这种方式虽然能够扫描到，但是不能很快的知晓都引入了哪些配置类(因为把包下的所有配置类都扫描了)，所有这种方式不推荐使用。
@@ -824,7 +824,7 @@ public class SpringConfig {
 - `@Import注解在配置类中只能写一次`
 
 - `步骤三：`运行程序  
-	依然能获取到bean对象并打印控制台![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211645874.png)
+	依然能获取到bean对象并打印控制台![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f4c66b40453d48284497f08b07f6cc3b.png)
 
 
 知识点1：`@Bean`
@@ -950,7 +950,7 @@ public class JdbcConfig {
 }
 ```
 
-输出结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211652313.png)
+输出结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a2747fb1db25e6c8c303b9e4be4adcde.png)
 
 
 ### 引用数据类型
@@ -984,14 +984,14 @@ public DataSource dataSource(BookDao bookDao) {
 ```
 
 - `步骤三：`运行程序  
-	结果如下，说明bookDao已经成功注入![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211656144.png)
+	结果如下，说明bookDao已经成功注入![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/92970e7738afc87beeb6d57d0e7e834f.png)
 
 
 # 十、注解开发总结
 
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211659159.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/65c11aa1951f6c2717c78bc4429bb0fb.png)
 
 
 
@@ -1227,7 +1227,7 @@ public class App {
 }
 ```
 
-- `步骤九：`运行程序，结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211706530.png)
+- `步骤九：`运行程序，结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0e99714bc3d51523ba508a45f3280193.png)
 
 
 ### 思路分析
@@ -1235,8 +1235,8 @@ public class App {
 Mybatis的基础环境我们已经准备好了，接下来就得分析下在上述的内容中，哪些对象可以交给Spring来管理?
 
 - Mybatis程序核心对象分析  
-	- 从图中可以获取到，`真正需要交给Spring管理的是SqlSessionFactory`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211709881.png)
-	- 整合Mybatis，就是`将Mybatis用到的内容交给Spring管理`，分析下配置文件![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211711885.png)
+	- 从图中可以获取到，`真正需要交给Spring管理的是SqlSessionFactory`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7f611d467cfd3d406477995a8bc3da17.png)
+	- 整合Mybatis，就是`将Mybatis用到的内容交给Spring管理`，分析下配置文件![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5c4d523c7ca5dc362200ad4867cd0155.png)
 
 
 说明:
@@ -1340,7 +1340,7 @@ public class MyBatisConfig {
 
 说明：
 
-- 使用SqlSessionFactoryBean封装SqlSessionFactory需要的环境信息![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211717497.png)
+- 使用SqlSessionFactoryBean封装SqlSessionFactory需要的环境信息![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0d2c2319ffa2d30c870f0e2a4567ae07.png)
 
 
 - SqlSessionFactoryBean是前面我们讲解FactoryBean的一个子类，在该类中将SqlSessionFactory的创建进行了封装，简化对象的创建，我们只需要将其需要的内容设置即可。
@@ -1368,7 +1368,7 @@ public class MyBatisConfig {
 </environments>
 ```
 
-- 使用MapperScannerConfigurer加载Dao接口，创建代理对象保存到IOC容器中![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211721180.png)
+- 使用MapperScannerConfigurer加载Dao接口，创建代理对象保存到IOC容器中![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/02136c42c2dcb1f1fdb2f900483c9b9a.png)
 
 
 
@@ -1395,14 +1395,14 @@ public class App {
 }
 ```
 
-- `步骤八：`运行程序![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240327205656.png)
+- `步骤八：`运行程序![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b5a2ab7c347503c3cea89bc456f26560.png)
 
 至此，Spring与Mybatis的整合就已经完成了，其中主要用到的两个类分别是:
 
-- `SqlSessionFactoryBean`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211733166.png)
+- `SqlSessionFactoryBean`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/db914a8832662050be9b234d2cd47a22.png)
 
 
-- `MapperScannerConfigurer`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211740465.png)
+- `MapperScannerConfigurer`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e86fee4869b1c7fafed176bc4cee9890.png)
 
 
 ## 2、整合Junit
@@ -1450,7 +1450,7 @@ public class AccountServiceTest {
 }
 ```
 
-如果出现如图错误，则是Junit版本太低，最少要按照课程使用4.12版本的junit![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240327210334.png)
+如果出现如图错误，则是Junit版本太低，最少要按照课程使用4.12版本的junit![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/03d5889261772e5217b9664f1c86da30.png)
 
 **注意:**
 

@@ -20,7 +20,7 @@ HTTP 协议里为什么要有“请求方法”这个东西呢？
 7. `OPTIONS`：列出可对资源实行的方法；
 8. `TRACE`：追踪请求 - 响应的传输路径。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031003232.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b38dce5d28a1f6962a348bf5fff4f005.png)
 
 看看这些方法，是不是有点像对文件或数据库的“增删改查”操作，只不过这些动作操作的目标不是本地资源，而是远程服务器上的资源，所以只能由客户端“请求”或者“指示”服务器来完成。
 
@@ -165,4 +165,4 @@ POST 和 PUT 的幂等性质就略费解一点。
 2. 你觉得 TRACE/OPTIONS/CONNECT 方法能够用 GET 或 POST 间接实现吗？
 	- 自然是可以的，HTTP的POST、GET请求十分的灵活，能组合达到TRACE/OPTIONS/CONNECT等的功能。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031005033.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ad57caf7ced7685b6a5bdd3d729374d4.png)

@@ -24,7 +24,7 @@ JavaScript的组成包含ECMAScript、DOM、BOM。
 
 ## 1.2 JS 组成部分
 
-![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314164902.png)
+![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8585c139e87404dea62726cb63d7ccb5.png)
 
 > `ECMA 及版本变化`
 
@@ -47,15 +47,15 @@ JavaScript的组成包含ECMAScript、DOM、BOM。
     + history对象          window对象的属性之一,代表浏览器的访问历史
     + screen对象           window对象的属性之一,代表屏幕
     + navigator对象      window对象的属性之一,代表浏览器软件本身
-    + document对象     window对象的属性之一,代表浏览器窗口目前解析的html文档![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314165002.png)
+    + document对象     window对象的属性之一,代表浏览器窗口目前解析的html文档![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f2dd58ce71c16f19db1b9ea5d0720449.png)
 
 > `DOM编程`
 
 + 简单来说:`DOM编程就是使用document对象的API完成对网页HTML文档进行动态修改,以实现网页数据和样式动态变化效果的编程`.
 + document对象代表整个html文档，可用来访问页面中的所有元素，是最复杂的一个dom对象，可以说是学习好dom编程的关键所在。
-+ 根据HTML代码结构特点,document对象本身是一种树形结构的文档对象。![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314165300.png)
-+ 上面的代码生成的树如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314165321.png)
-+ DOM编程其实就是用window对象的document属性的相关API完成对页面元素的控制的编程![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314165357.png)
++ 根据HTML代码结构特点,document对象本身是一种树形结构的文档对象。![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/de64ed85cd0a54d1ea58dbd907dac65d.png)
++ 上面的代码生成的树如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/20aca4c6693a2650505b5377df4507d8.png)
++ DOM编程其实就是用window对象的document属性的相关API完成对页面元素的控制的编程![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8b286179f142acd128c558a9e5681738.png)
 ## 1.3 JS 的引入方式
 
 > `内部脚本方式引入`
@@ -99,7 +99,7 @@ JavaScript的组成包含ECMAScript、DOM、BOM。
 </html>
 ```
 
-+ 效果![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/jingxi.gif)
++ 效果![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b809020e3fbe15c214a31462f2f61cea.gif)
 
 > `外部脚本方式引入`
 
@@ -108,7 +108,7 @@ JavaScript的组成包含ECMAScript、DOM、BOM。
   + 可以将脚本放在独立的js文件中,通过script标签引入外部脚本文件
   + 一对script标签要么用于定义内部脚本,要么用于引入外部js文件,不能混用
   + 一个html文档中,可以有多个script标签 
-+ 抽取脚本代码到独立的js文件中![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314170458.png)
++ 抽取脚本代码到独立的js文件中![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f92d2ad5ea0266b7f65a005489d3bab6.png)
 - 在html文件中,通过script标签引入外部脚本文件
 ```java
 <script src="js/button.js" type="text/javascript"></script>
@@ -227,7 +227,7 @@ if(0){
 }
 ```
 
-+ 结果![|70](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314193616.png)
++ 结果![|70|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/06257f7a9abb2fbcf07c8a51ad999cc3.png)
 > switch结构
 
 + 几乎和JAVA的语法一致
@@ -263,7 +263,7 @@ switch(month){
 }
 ```
 
-+ 效果![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/switchex.gif)
++ 效果![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/842ff817df260f46b51a60f7be9c304c.gif)
 ## 3.2 循环结构
 
 > `while结构`
@@ -286,7 +286,7 @@ while(i <= 9){
 }
 ```
 
-+ 效果![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681287264843.png)
++ 效果![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7cdaa6c3d3f561269c84e3d6d6c5a020.png)
 > `for循环`
 
 + 几乎和JAVA一致
@@ -303,7 +303,7 @@ for(  var i = 1;i <= 9; i++){
 }
 ```
 
-+ 效果![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681287264843.png)
++ 效果![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7cdaa6c3d3f561269c84e3d6d6c5a020.png)
 > `foreach循环`
 
 + 迭代数组时,和java不一样
@@ -321,7 +321,7 @@ for(var index in  cities){
 document.write("</ul>")
 ```
 
-+ 效果![|100](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681287540562.png)
++ 效果![|100|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5671d066f8c3b024168e584d1c90846f.png)
 ## 3.3 函数声明
 
 > `JS中的方法,多称为函数,函数的声明语法和JAVA中有较大区别`
@@ -357,7 +357,7 @@ var result = add(1,2);
 console.log(result);
 ```
 
-+ 调用测试![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681287984473.png)
++ 调用测试![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99b0b65e55820ac67572fa04a40d1d54.png)
 
 # 4、JS的对象和JSON
 
@@ -387,7 +387,7 @@ console.log(person.age)
 person.eat();
 ```
 
-+ 效果![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681288692792.png)
++ 效果![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/428ff462b6cdc2962486b43d05fd6406.png)
 > 语法2 通过 {}形式创建对象
 
 + 语法为  var person ={"属性名":"属性值","属性名","属性值","函数名":函数}
@@ -494,7 +494,7 @@ console.log(personStr)
 console.log(typeof personStr)
 ```
 
-+ 前后端传递数据![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681292306466.png)
++ 前后端传递数据![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cd41be5d6a08918bc0a4040850812fd2.png)
 ## 4.3 JS常见对象
 
 ### 4.3.1 数组
@@ -1044,7 +1044,7 @@ JS的事件驱动指的就是`行为触发代码运行`的这种特点
     
 - 通过removeItem可以将这些数据直接删除
     
-- 在F12开发者工具的应用程序栏,可以查看数据的状态![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1690348134594.png)
+- 在F12开发者工具的应用程序栏,可以查看数据的状态![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/46d09cf3ec5a50df38fe0cb4c4404cfe.png)
 
 # 7、DOM编程
 

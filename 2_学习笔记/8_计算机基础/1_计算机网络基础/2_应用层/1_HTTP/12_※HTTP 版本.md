@@ -194,7 +194,8 @@ QUIC 旨在为 HTTP 连接设计更低的延迟。类似于 HTTP/2，它是一�
 
 # 二、HTTP/2 牛逼在哪？
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133029.png)
+![Pasted image 20231104133029.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4c475b66b29a48f6864964992112c0eb.png)
+
 
 ## 1、HTTP/1.1 协议的性能问题
 
@@ -260,7 +261,8 @@ HTTP/2 没使用常见的 gzip 压缩方式来压缩头部，而是开发了 **
 
 HTTP/2 为高频出现在头部的字符串和字段建立了一张**静态表**，它是写入到 HTTP/2 框架里的，不会变化的，静态表里共有 `61` 组，如下图：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133213.png)
+![Pasted image 20231104133213.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f39b4b3bb8215d46d6b397b3ff82abbf.png)
+
 
 表中的 `Index` 表示索引（Key），`Header Value` 表示索引对应的 Value，`Header Name` 表示字段的名字，比如 Index 为 2 代表 GET，Index 为 8 代表状态码 200。
 
@@ -276,11 +278,13 @@ server: nghttpx\r\n
 
 我抓了个 HTTP/2 协议的网络包，你可以从下图看到，高亮部分就是 `server` 头部字段，只用了 8 个字节来表示 `server` 头部数据。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133238.png)
+![Pasted image 20231104133238.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6e32f8a16333a05c8f94590292888818.png)
+
 
 根据 RFC7541 规范，如果头部字段属于静态表范围，并且 Value 是变化，那么它的 HTTP/2 头部前 2 位固定为 `01`，所以整个头部格式如下图：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133256.png)
+![Pasted image 20231104133256.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/791446eef1e20fd090a1e75b554f6ab7.png)
+
 
 HTTP/2 头部由于基于**二进制编码**，就不需要冒号空格和末尾的\r\n作为分隔符，于是改用表示字符串长度（Value Length）来分割 Index 和 Value。
 
@@ -294,15 +298,17 @@ HTTP/2 头部由于基于**二进制编码**，就不需要冒号空格和末尾
 
 于是，在统计大量的 HTTP 头部后，HTTP/2 根据出现频率将 ASCII 码编码为了 Huffman 编码表，可以在 RFC7541 文档找到这张**静态 Huffman 表**，我就不把表的全部内容列出来了，我只列出字符串 `nghttpx` 中每个字符对应的 Huffman 编码，如下图：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133303.png)
+![Pasted image 20231104133303.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/53b52554e87896db06a16363500f3e4e.png)
+
 
 通过查表后，字符串 `nghttpx` 的 Huffman 编码在下图看到，共 6 个字节，每一个字符的 Huffman 编码，我用相同的颜色将他们对应起来了，最后的 7 位是补位的。
+![Pasted image 20231104133309.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1f4c3469fd21a4f118eae2984519bba7.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133309.png)
 
 最终，`server` 头部的二进制数据对应的静态头部格式如下：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133325.png)
+![Pasted image 20231104133325.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eb142e4f10470386c5c59389cec12891.png)
+
 
 ### 3.2 动态表编码
 
@@ -318,7 +324,8 @@ HTTP/2 头部由于基于**二进制编码**，就不需要冒号空格和末尾
 
 综上，HTTP/2 头部的编码通过「静态表、动态表、Huffman 编码」共同完成的。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133345.png)
+![Pasted image 20231104133345.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14de1d6c5c2ebefa398f4af81c6e5995.png)
+
 
 ---
 
@@ -328,21 +335,25 @@ HTTP/2 厉害的地方在于将 HTTP/1 的文本格式改成二进制格式传�
 
 你可以从下图看到，HTTP/1.1 的响应和 HTTP/2 的区别：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133400.png)
+![Pasted image 20231104133400.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/12a400fa1b16b1e4b32fbab60691d000.png)
+
 
 HTTP/2 把响应报文划分成了两类**帧（*Frame*）**，图中的 HEADERS（首部）和 DATA（消息负载） 是帧的类型，也就是说一条 HTTP 响应，划分成了两类帧来传输，并且采用二进制来编码。
 
 比如状态码 200 ，在 HTTP/1.1 是用 '2''0''0' 三个字符来表示（二进制：00110010 00110000 00110000），共用了 3 个字节，如下图
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133412.png)
+![Pasted image 20231104133412.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f782bd8fe88252012fcfdc408237aad5.png)
+
 
 在 HTTP/2 对于状态码 200 的二进制编码是 10001000，只用了 1 字节就能表示，相比于 HTTP/1.1 节省了 2 个字节，如下图：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133429.png)
+![Pasted image 20231104133429.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/175c46a9ab1567f378fca558f0285197.png)
+
 
 Header: :status: 200 OK 的编码内容为：1000 1000，那么表达的含义是什么呢？
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133436.png)
+![Pasted image 20231104133436.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0afb10ed58e4d9f0779938ba7a9c8d2f.png)
+
 
 1. 最前面的 1 标识该 Header 是静态表中已经存在的 KV。
 2. 我们再回顾一下之前的静态表内容，“:status: 200 OK”其静态表编码是 8，即 1000。
@@ -352,13 +363,14 @@ Header: :status: 200 OK 的编码内容为：1000 1000，那么表达的含义�
 HTTP/2 **二进制帧**的结构如下图：
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133443.png)
+![Pasted image 20231104133443.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e9fe4686b4de4f4a7a2b2ba876bbc454.png)
+
 
 帧头（Frame Header）很小，只有 9 个字节，帧开头的前 3 个字节表示帧数据（Frame Playload）的**长度**。
 
 帧长度后面的一个字节是表示**帧的类型**，HTTP/2 总共定义了 10 种类型的帧，一般分为**数据帧**和**控制帧**两类，如下表格：
+![Pasted image 20231104133451.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/217f65414e76949d4bd3266e765dfcb1.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133451.png)
 
 帧类型后面的一个字节是**标志位**，可以保存 8 个标志位，用于携带简单的控制信息，比如：
 
@@ -382,7 +394,8 @@ HTTP/2 **二进制帧**的结构如下图：
 
 为了理解 HTTP/2 的并发是怎样实现的，我们先来理解 HTTP/2 中的 Stream、Message、Frame 这 3 个概念。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133523.png)
+![Pasted image 20231104133523.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e8a00d916c2e9112aaa99258980a776e.png)
+
 
 你可以从上图中看到：
 
@@ -392,19 +405,22 @@ HTTP/2 **二进制帧**的结构如下图：
 
 因此，我们可以得出个结论：多个 Stream 跑在一条 TCP 连接，同一个 HTTP 请求与响应是跑在同一个 Stream 中，HTTP 消息可以由多个 Frame 构成， 一个 Frame 可以由多个 TCP 报文构成。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133534.png)
+![Pasted image 20231104133534.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5c25309d0f6dedceb0d2b528e47c4247.png)
+
 
 在 HTTP/2 连接上，**不同 Stream 的帧是可以乱序发送的（因此可以并发不同的 Stream ）**，因为每个帧的头部会携带 Stream ID 信息，所以接收端可以通过 Stream ID 有序组装成 HTTP 消息，而**同一 Stream 内部的帧必须是严格有序的**。
 
 比如下图，服务端**并行交错地**发送了两个响应： Stream 1 和 Stream 3，这两个 Stream 都是跑在一个 TCP 连接上，客户端收到后，会根据相同的 Stream ID 有序组装成 HTTP 消息。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133541.png)
+![Pasted image 20231104133541.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/59de279689b1413ccbcf54d0acb405e1.png)
+
 
 客户端和服务器**双方都可以建立 Stream**，因为服务端可以主动推送资源给客户端， 客户端建立的 Stream 必须是奇数号，而服务器建立的 Stream 必须是偶数号。
 
 比如下图，Stream 1 是客户端向服务端请求的资源，属于客户端建立的 Stream，所以该 Stream 的 ID 是奇数（数字 1）；Stream 2 和 4 都是服务端主动向客户端推送的资源，属于服务端建立的 Stream，所以这两个 Stream 的 ID 是偶数（数字 2 和 4）。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133547.png)
+![Pasted image 20231104133547.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7798e25775f660f9343cfef073d213dd.png)
+
 
 同一个连接中的 Stream ID 是不能复用的，只能顺序递增，所以当 Stream ID 耗尽时，需要发一个控制帧 `GOAWAY`，用来关闭 TCP 连接。
 
@@ -420,7 +436,8 @@ HTTP/1.1 不支持服务器主动推送资源给客户端，都是由客户端�
 
 比如，客户端通过 HTTP/1.1 请求从服务器那获取到了 HTML 文件，而 HTML 可能还需要依赖 CSS 来渲染页面，这时客户端还要再发起获取 CSS 文件的请求，需要两次消息往返，如下图左边部分：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133603.png)
+![Pasted image 20231104133603.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2be052951e47da174ec89d2aa22af8ce.png)
+
 
 如上图右边部分，在 HTTP/2 中，客户端在访问 HTML 时，服务器可以直接主动推送 CSS 文件，减少了消息传递的次数。
 
@@ -436,7 +453,8 @@ location /test.html {
 
 客户端发起的请求，必须使用的是奇数号 Stream，服务器主动的推送，使用的是偶数号 Stream。服务器在推送资源时，会通过 `PUSH_PROMISE` 帧传输 HTTP 头部，并通过帧中的 `Promised Stream ID` 字段告知客户端，接下来会在哪个偶数号 Stream 中发送包体。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133612.png)
+![Pasted image 20231104133612.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d70740bd382b6333a438cdd8fa199321.png)
+
 
 如上图，在 Stream 1 中通知客户端 CSS 资源即将到来，然后在 Stream 2 中发送 CSS 资源，注意 Stream 1 和 2 是可以**并发**的。
 
@@ -464,14 +482,16 @@ HTTP/2 通过 Stream 的并发能力，解决了 HTTP/1 队头阻塞的问题，
 
 有没有什么解决方案呢？既然是 TCP 协议自身的问题，那干脆放弃 TCP 协议，转而使用 UDP 协议作为传输层协议，这个大胆的决定，HTTP/3 协议做了！
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133628.png)
+![Pasted image 20231104133628.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f1073ce65d5327427c9741b168abfcf3.png)
+
 # 三、HTTP/3 强势来袭
 
 HTTP/3 现在（2022 年 5 月）还没正式推出，不过自 2017 年起，HTTP/3 已经更新到 34 个草案了，基本的特性已经确定下来了，对于包格式可能后续会有变化。
 
 所以，这次 HTTP/3 介绍不会涉及到包格式，只说它的特性。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133652.png)
+![Pasted image 20231104133652.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0a54e5db400c166351e84338444aaaa1.png)
+
 
 ## 1、美中不足的 HTTP/2
 
@@ -487,13 +507,15 @@ HTTP/2 多个请求是跑在一个 TCP 连接中的，那么当 TCP 丢包时，
 
 比如下图中，Stream 2 有一个 TCP 报文丢失了，那么即使收到了 Stream 3 和 Stream 4 的 TCP 报文，应用层也是无法读取读取的，相当于阻塞了 Stream 3 和 Stream 4 请求。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133709.png)
+![Pasted image 20231104133709.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/58b0ad1712185a9140914e67451724bd.png)
+
 
 因为 TCP 是字节流协议，TCP 层必须保证收到的字节数据是完整且有序的，如果序列号较低的 TCP 段在网络传输中丢失了，即使序列号较高的 TCP 段已经被接收了，应用层也无法从内核中读取到这部分数据，从 HTTP 视角看，就是请求被阻塞了。
 
 举个例子，如下图：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133714.png)
+![Pasted image 20231104133714.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/74c82cace37a7a4633b2b32b5dafa101.png)
+
 
 图中发送方发送了很多个 Packet，每个 Packet 都有自己的序号，你可以认为是 TCP 的序列号，其中 Packet 3 在网络中丢失了，即使 Packet 4-6 被接收方收到后，由于内核中的 TCP 数据不是连续的，于是接收方的应用层就无法从内核中读取到，只有等到 Packet 3 重传后，接收方的应用层才可以从内核中读取到数据，这就是 HTTP/2 的队头阻塞问题，是在 TCP 层面发生的。
 
@@ -501,7 +523,8 @@ HTTP/2 多个请求是跑在一个 TCP 连接中的，那么当 TCP 丢包时，
 
 发起 HTTP 请求时，需要经过 TCP 三次握手和 TLS 四次握手（TLS 1.2）的过程，因此共需要 3 个 RTT 的时延才能发出请求数据。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133728.png)
+![Pasted image 20231104133728.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7c57a6be2256022cee2617eb4f448f22.png)
+
 
 另外，TCP 由于具有「拥塞控制」的特性，所以刚建立连接的 TCP 会有个「慢启动」的过程，它会对 TCP 连接产生“减速”效果。
 
@@ -511,7 +534,8 @@ HTTP/2 多个请求是跑在一个 TCP 连接中的，那么当 TCP 丢包时，
 
 这些问题都是 TCP 协议固有的问题，无论应用层的 HTTP/2 在怎么设计都无法逃脱。要解决这个问题，就必须把**传输层协议替换成 UDP**，这个大胆的决定，HTTP/3 做了！
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133739.png)
+![Pasted image 20231104133739.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f1073ce65d5327427c9741b168abfcf3.png)
+
 
 ## 2、QUIC 协议的特点
 
@@ -539,7 +563,8 @@ QUIC 协议也有类似 HTTP/2 Stream 与多路复用的概念，也是可以在
 
 所以，QUIC 连接上的多个 Stream 之间并没有依赖，都是独立的，某个流发生丢包了，只会影响该流，其他流不受影响。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133754.png)
+![Pasted image 20231104133754.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ea210dba758c4ae57f6ac637d8ed10f5.png)
+
 
 ### 2.2 更快的连接建立
 
@@ -556,7 +581,8 @@ HTTP/3 在传输数据前虽然需要 QUIC 协议握手，这个握手过程只�
 
 在前面我们提到，基于 TCP 传输协议的 HTTP 协议，由于是通过四元组（源 IP、源端口、目的 IP、目的端口）确定一条 TCP 连接。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133837.png)
+![Pasted image 20231104133837.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d61014f3772aa1b3aa2171c951a880f5.png)
+
 
 那么当移动设备的网络从 4G 切换到 WiFi 时，意味着 IP 地址变化了，那么就必须要断开连接，然后重新建立连接，而建立连接的过程包含 TCP 三次握手和 TLS 四次握手的时延，以及 TCP 慢启动的减速过程，给用户的感觉就是网络突然卡顿了一下，因此连接的迁移成本是很高的。
 
@@ -568,7 +594,8 @@ HTTP/3 在传输数据前虽然需要 QUIC 协议握手，这个握手过程只�
 
 HTTP/3 同 HTTP/2 一样采用二进制帧的结构，不同的地方在于 HTTP/2 的二进制帧里需要定义 Stream，而 HTTP/3 自身不需要再定义 Stream，直接使用 QUIC 里的 Stream，于是 HTTP/3 的帧的结构也变简单了。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104133848.png)
+![Pasted image 20231104133848.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29922a9eecf20891e5f6998008962c15.png)
+
 
 从上图可以看到，HTTP/3 帧头只有两个字段：类型和长度。
 

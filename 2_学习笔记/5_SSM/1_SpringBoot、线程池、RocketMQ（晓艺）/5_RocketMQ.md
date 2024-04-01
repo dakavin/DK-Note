@@ -6,7 +6,7 @@
 
 - 因为消息的生产和消费都是异步的，而且只关心消息的发送和接收，没有业务逻辑的侵入,`轻松的实现系统间解耦`。别名为`消息中间件` ,通过利用高效可靠的消息传递机制进行平台无关的数据交流，并基于数据通信来进行分布式系统的集成。
 
-![](assets/image-20230922210820845.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ccc96bb1a51708d69d90a83b2a0d1930.png)
 
 
 ## 1.2 为什么要用MQ
@@ -15,7 +15,7 @@
 
 场景：双11是购物狂节,用户下单后,订单系统需要通知库存系统,传统的做法就是订单系统调用库存系统的接口.
 
-![](assets/image-20230922210825019.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c2114ca887281d2cdd9dc97d3fbae1fd.png)
 
 
 
@@ -24,7 +24,7 @@
 - 订单系统和库存系统高耦合. 
 - 引入消息队列 
 
-![](assets/image-20230922210826847.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/13614ddcc696a00589f114f8b5585653.png)
 
 
 
@@ -45,7 +45,7 @@
 
 2. 可以缓解短时间的高流量压垮应用(应用程序按自己的最大处理能力获取订单) 
 
-![](assets/image-20230922210829173.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/62ca7a52f2ddbb004b578c5008f7ddcc.png)
 
 
 
@@ -55,7 +55,7 @@
 
 `RocketMQ`是阿里开源的消息中间件，它是纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。
 
-![](assets/image-20230922210836407.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d0242000abfad108d5e7438b398de342.png)
 
 
 
@@ -75,9 +75,9 @@ RocketMQ是阿里巴巴开源MQ中间件，使用Java语言开发，在阿里内
 
 ## 2.2 各角色介绍
 
-![](assets/image-20230922210843606.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/381e700836643cafee598a05eb008686.png)
 
-![](assets/image-20230922210852438.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9f85323f243b1b52836dea0e29003bdb.png)
 
 
 
@@ -99,7 +99,7 @@ Topic：对消息进行分类；从而实现发消息给指定的消费者；还
 
 RocketMQ生产者`发送消息采取的是轮询制`，消息以轮询的方式发送至topic下的Message Queue中。`一个topic默认是4个消息队列`。
 
-![](assets/image-20230922210856445.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae9dee06312f64c16768068dc95855ab.png)
 
 
 
@@ -116,7 +116,7 @@ RocketMQ生产者`发送消息采取的是轮询制`，消息以轮询的方式�
 1）在集群消息模式下，每条消息`只需要投递到订阅这个topic的Consumer Group下的一个实例即可`。
 
 - 图例为：有6个消息队列，会将这6个消息队列，平均分摊到3个消费者中（3个消费者组成消费者集群）
-![](assets/image-20230922210859151.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f410a14ead2d0aea364f51cae77ccbbc.png)
 
 
 
@@ -125,7 +125,7 @@ RocketMQ生产者`发送消息采取的是轮询制`，消息以轮询的方式�
 就是在consumer分配queue的时候，`所有consumer都分到所有的queue`。
 
 - 图例为：有6个消息队列，3个消费者，每个消息队列都会发给每个消费者
-![](assets/image-20230922210901639.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3ef0d92293f10b40bb75d63f29812012.png)
 
 ## 2.6 Group
 
@@ -161,7 +161,7 @@ RocketMQ生产者`发送消息采取的是轮询制`，消息以轮询的方式�
 
 1、`复制软件到你电脑常用软件安装目录`     
 
-![](assets/image-20230922210910856.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/08a0c676b475ac945565c831c0b2cf3e.png)
 
 
 
@@ -174,13 +174,13 @@ RocketMQ生产者`发送消息采取的是轮询制`，消息以轮询的方式�
 
 计算机——右键属性——高级系统设置——环境变量——新建，变量名：ROCKETMQ_HOME，变量值为RocketMQ的解压目录。
 
-![](assets/image-20230922210914203.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9a55d688fe5da3ebc78bb843371af28c.png)
 
 
 
 并添加进path变量下，这样就可以在任意路径找到我们的启动命令
 
-![](assets/image-20230922210916661.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/66a6fdbf2eabb771f48b1967be74065e.png)
 
 
 
@@ -190,7 +190,7 @@ NameServer的主要功能是为整个MQ集群提供服务协调与治理，具�
 
 双击start mqnamesrv.cmd ，成功后会弹出提示框，
 
-![](assets/image-20230922210919675.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/166355dcaf89f5a572b8522454c30d82.png)
 
 
 
@@ -200,7 +200,7 @@ NameServer的主要功能是为整个MQ集群提供服务协调与治理，具�
 
 `start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true`
 
-成功后会弹出提示框 ![](assets/image-20230922210931440.png)
+成功后会弹出提示框 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/467438864424c3e93946ed2eec798a15.png)
 
 
 
@@ -208,7 +208,7 @@ autoCreateTopicEnable=true加了这个属性是为了省去在控制台手动创
 
 5、`在idea中运行rocketmq-console`
 
-![](assets/image-20230922210940968.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8bbd4789b3ae8bd1fa6d29afd6a1f1b2.png)
 
 
 
@@ -216,7 +216,7 @@ rocketmq-console这个应用运行时可能会报一些统计数据失败的错�
 
 ## 3.2 web管理界面介绍
 
-![](assets/image-20230922210944365.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e0dd709b263f94cd220bc23523327eab.png)
 
 
 
@@ -236,7 +236,7 @@ rocketmq-console这个应用运行时可能会报一些统计数据失败的错�
 
 自动配置模板类RocketMQTemplate
 
-![](assets/image-20230922210947242.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9a254ffc3975613fb26810653594557a.png)
 
 
 
@@ -348,7 +348,7 @@ public class Consumer1 implements RocketMQListener<String> {
 
 4. `consumeMode` 消费模式
 
-	默认值 ConsumeMode.CONCURRENTLY 并行处理![](assets/image-20230922210954523.png)
+	默认值 ConsumeMode.CONCURRENTLY 并行处理![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c2bd36124fd4bf9c94115e64c33fa8bb.png)
 
 
 
@@ -426,7 +426,7 @@ public class Consumer1 implements RocketMQListener<String> {
 ```
 ### 4.1.3 消息的可靠性投递
 
-![](assets/image-20230922211006844.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31934096a6d101b747f2e9903e0c5bed.png)
 
 
 
@@ -444,7 +444,7 @@ public class Consumer1 implements RocketMQListener<String> {
 
 （1）、发送成功
 
-![](assets/image-20230922211010827.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1262481dcfd692d28e707959b0d18917.png)
 
 
 
@@ -452,7 +452,7 @@ public class Consumer1 implements RocketMQListener<String> {
 
 Producer程序向Broker发送消息时没有成功（比如网络抖动或broker宕机），此时`Producer会自动进行重试`，重试默认次数如下：
 
-![](assets/image-20230922211017434.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/911c3efe5de1094dc955294359c24aae.png)
 
 
 
@@ -501,7 +501,7 @@ rocketMQTemplate.getProducer().setRetryTimesWhenSendAsyncFailed(xx);
 	如果多个queue参与，将消息按类别发送到不同的queue，`同一类别的消息发到同一个queue`
 
 
-![](assets/image-20230922211021680.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3e48b8383ec8dc1b298307b33028e839.png)
 
 
 两种情况下消费者都是一个queue只使用一个线程的方式来保证顺序消费。
@@ -548,7 +548,7 @@ public class Consumer2 implements RocketMQListener<String> {
 
 ### 4.3.1   发送延时消息
 
-![](assets/image-20230922211026570.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/71813d208baaedde1503db11a5902312.png)
 
 
 
@@ -594,7 +594,7 @@ public class Consumer3 implements RocketMQListener<String> {
 4）每个队列创建定时任务进行调度  
 5）恢复到期消息重新投递到真实的Topic路由的消息队列中
 
-![](assets/image-20230922211030375.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e268608485f8b1ddfc1dca27b06bf44e.png)
 
 
   
@@ -604,7 +604,7 @@ public class Consumer3 implements RocketMQListener<String> {
 
 ### 4.4.1 发送批量消息
 
-![](assets/image-20230922211033229.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1dbfd9b2b6bed6d1ad276e7b87225232.png)
 
 
 
@@ -666,12 +666,12 @@ public class Consumer4 implements RocketMQListener<String> {
 
 3、如果`本地事务执行结果未知`，那么会`触发回查机制`，可以定义回查的逻辑来决定是否转投消息到consumer queue，回查默认时间间隔是1分钟，默认回查15次，回查15次仍未成功然后会丢弃该消息。
 
-![](assets/image-20230922211038286.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5dc68e2faeb27c985c5455ce053c3011.png)
 
 ### 4.5.2 事务消息生产者
 
 
-![](assets/image-20230922211043097.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e3f9a2416d35818c6abbf687c09f2de8.png)
 
 
 
@@ -718,7 +718,7 @@ public class TransactionalListener implements RocketMQLocalTransactionListener {
 
 本地事务执行的结果：
 
-![](assets/image-20230922211047661.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8c5917892d6c26b7966da411b63838de.png)
 
 
 

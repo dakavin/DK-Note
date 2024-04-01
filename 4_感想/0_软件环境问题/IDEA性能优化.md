@@ -1,5 +1,5 @@
 ## 1、保存策略
 
-- 取消勾选![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923005523226.png)
+- 取消勾选![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2e1ff16de9efd75b3a508fa2cd109975.png)
 
 ]]

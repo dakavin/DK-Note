@@ -13,15 +13,15 @@ OSI标准失败的原因：
 3. OSI标准的制定周期太长
 4. OSI的层次划分不顾合理
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018134911.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/913ce4cc61a4ca171ddd28bbdbf1613e.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018135130.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5b04c5bced7a169e0b739bb61201b6e6.png)
 
 在TCP/IP协议体系中包含有大量的协议，IP协议和TCP协议是两个最重要的协议，所以使用TCP/IP协议代表整个协议大家族。
 
 在嵌入式系统开发领域，TCP/IP协议族常称为TCP/IP协议栈，这是因为TCP/IP协议体系的分层结构，与数据结构中的栈，在图形画法上是类似的。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018135433.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3561077ec1458a1c7ed1d8b759db8b80.png)
 
 原理体系结构，更加适合教学使用
 ## 2、分层的必要性
@@ -34,7 +34,7 @@ OSI标准失败的原因：
 
 ### 2.1 物理层
 
-- `最简单的情况`：两台计算机通过一条网线连接![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018135758.png)
+- `最简单的情况`：两台计算机通过一条网线连接![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/90fcce2e404305b475090ed277734aba.png)
 	- 采用怎么样的传输媒体（介质）--- 无线
 	- 采用怎么样的无接口 --- RJ45以太网接口
 	- 使用怎么样的信号来表示比特0和1 --- 方波信号的低高电平
@@ -42,7 +42,7 @@ OSI标准失败的原因：
 
 ### 2.2 数据链路层
 
-- `实际的计算机网络`，由多台主机构成，假设我们已经物理层之间的问题了![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018140201.png)
+- `实际的计算机网络`，由多台主机构成，假设我们已经物理层之间的问题了![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cf76693a915071fbcda2960f44dda2eb.png)
 	- 主机A给主机C发送数据，但是表示数据的信号，会通过主线传播到每一个主机，主机C如何知道数据是发送给自己的，并接收；其他主机如何知道数据不是发送给自己的，并拒绝接收
 		- 如何标识网络中的各个主机（主机编址问题，例如MAC地址）
 		- 如何从信号所表示的一连串比特流中区分出地址和数据
@@ -54,17 +54,17 @@ OSI标准失败的原因：
 
 ### 2.3 网络层
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018140857.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/226f1a0fddc5c49749d355e6be5f5ae8.png)
 
 在本例中又多个网络，很显然，我们面临着`如何标识个网络以及网络中各主机的问题`。
 
-- 如何标识各网络以及网络中的各主机（网络和主机共同编址的问题，例如IP地址）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018141110.png)
+- 如何标识各网络以及网络中的各主机（网络和主机共同编址的问题，例如IP地址）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ac4b010957d11b930342ca5b4d844ee0.png)
 - 路由器如何转发分组，如何进行路由选择
 
 `我们将这些问题归到网络层`
 ### 2.4 运输层
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018141218.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e142a3703dced02e5b8b8fb91c0fc306.png)
 
 - 如何解决进程之间基于网络的通信问题
 - 若出现传输错误（误码、丢包），如何处理
@@ -72,18 +72,18 @@ OSI标准失败的原因：
 
 完成上述各层问题的基础上，我们需要制定各种应用层协议，并按协议标准编写相应的应用程序，通过应用进程间的交互来完成特点的网络应用。
 
-- 通过应用进程间的交互来完成特点的网络应用![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018141504.png)
+- 通过应用进程间的交互来完成特点的网络应用![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/202e4a7bc9aff827d00e2886ef2d4de9.png)
 ### 2.6 总结
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018141613.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae0b7ce9b2936c71c4bc5e395197a391.png)
 
 ## 3、分层思想举例
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018142325.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4845409f78e7e5fec938950eecaafb25.png)
 
 我们使用N1服务器的主机上的浏览器，访问N2服务器上内容
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018142407.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0348d3229657fd013af7e4445fd6039b.png)
 
 N1上的主机流程：
 1. `应用层`按Http协议的规定，构建一个HTTP请求报文，交付给运输层
@@ -112,7 +112,7 @@ N1上的主机流程：
 实体：任何可发送或接收信息的`硬件`或`软件进程`
 对等实体：收发双方`相同层次中的实体`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018144159.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/37ebe69c783171fa0cb3d36c9a2d0dcb.png)
 
 ### 4.2 协议
 
@@ -122,7 +122,7 @@ N1上的主机流程：
 - 语义：定义收发双方索要完成的操作
 - 同步：定义收发双方的时序关系
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018144238.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a4994edcbd11acbe2028ccb0384e3493.png)
 
 ### 4.3 服务
 
@@ -134,7 +134,7 @@ N1上的主机流程：
 
 实体看得见相邻下层所提供的服务，但并不知道实现该服务的具体协议。也就是说，下面的协议对上面的实体是`透明`的，例如：手机为我们提供各种服务，但是我们不需要知道这些服务是如何实现的
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018144618.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/41c608daebec517bd0b47cbc65a3b186.png)
 
 `服务访问点`：在同一系统中`相邻两层的实体交换信息的逻辑接口`，用于区分不同的服务类型
 - 数据链路层的服务访问点为帧的“类型”字段
@@ -142,19 +142,19 @@ N1上的主机流程：
 - 运输层的服务访问点为”端口号“
 
 `服务原语`：上传使用下层所提供的服务必须通过与下层交换一些命令，这些命令称为服务原语
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018145123.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ba479ab6ce6d81bcbaa7422331fce4e0.png)
 
 `协议数据单元PDU`：==对等层次之间传送的数据==报称为该层的协议数据单元
 `服务数据单元SDU`：同一系统内，层与层之间交换的数据包成为服务数据单元
 多个SDU可以合成为一个PDU；一个SDU也可以划分为几个PDU
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018145345.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f438d0c898ecef9aa74ee1c066de0d78.png)
 
 ## 5、补充说明
 
 ### 5.1 通过对话理解分层
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021220448.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7ed91bd95d7e6bd48623798d53716aa1.png)
 
 表面上看A跟C是在用汉语直接对话，实际上A与C都是在通过电话机的听筒听取声音，都在对着麦克风说话。
 
@@ -164,7 +164,7 @@ N1上的主机流程：
 
 前面只是将协议简单地分为了两层进行了举例说明。然而，实际的分组通信协议会相当复杂。OSI参考模型将这样一个复杂的协议整理并分为了易于理解的7个分层。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021220949.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c0422ceadeedbcff48f571b9d5fdac3b.png)
 
 人们也时常能听到`OSI协议`这个词。
 `OSI协议`是为了让异构的计算机之间能够相互通信、又ISO和ITU-T推荐其标准化的一种网络体系结构。
@@ -175,7 +175,7 @@ OSI协议以OSI参考模型为基础界定了`每个阶层的协议`和`每个�
 
 ### 5.3 OSI参考模型各个分层的作用
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021221434.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c198716728f8a453ed5170b35a27cc0b.png)
 
 - 应用层
 	- 为应用程序提供服务并规定应用程序中通信相关的细节。包括文件传输、电子邮件、远程登录（虚拟终端）等协议。
@@ -201,6 +201,6 @@ OSI协议以OSI参考模型为基础界定了`每个阶层的协议`和`每个�
 
 ### 5.4 OSI参考模型通信实例
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021223209.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/759a2fb16d274a3e3eb0123df9105260.png)
 
 每个分层上，在处理由上一层传过来的数据时可以`附上当前分层的协议所必须的“首部”信息`。然后接收端对收到的数据`进行数据“首部”与“内容”的分离`，再转发给上一分层，并最终将发送端的数据`恢复为原状`；

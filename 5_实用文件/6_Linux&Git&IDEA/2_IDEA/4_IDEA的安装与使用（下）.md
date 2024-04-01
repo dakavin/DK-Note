@@ -8,21 +8,21 @@
 ### 8.2 查看快捷键
 
 #### 1、已知快捷键操作名，未知快捷键
-![](assets/image-20230922004904116.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d3c7234ec99f97294aefa8843c08ddec.png)
 
 
 #### 2、已知快捷键，不知道对应的操作名
-![](assets/image-20230922004910870.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/974b6d810eaf8268f1fd8816942abd57.png)
 
 
 ### 8.3 自定义快捷键
-![](assets/image-20230922004914057.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cac22a6419fa2371c1d77b2ec54fbe17.png)
 
 
 ### 8.4 使用其它平台快捷键
 
 苹果电脑或者是用惯Eclipse快捷的，可以选择其他快捷键插件。
-![](assets/image-20230922004917227.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aeb962eabdf2828d193fab2529eddbfb.png)
 
 
 ## 9. IDEA断点调试(Debug)
@@ -58,23 +58,23 @@ Debug(调试)程序步骤如下：
 #### 1、添加断点
 
 在源代码文件中，在想要设置断点的代码行的前面的标记行处，单击鼠标左键就可以设置断点，在相同位置再次单击即可取消断点。
-![](assets/image-20230922004923882.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8983b0ba0236790a59458d4950b69d88.png)
 
 
 #### 2、启动调试
 
-IDEA提供多种方式来启动程序(Launch)的调试，分别是通过菜单(Run –> Debug)、图标(“绿色臭虫”)等等![](assets/image-20230922004929913.png)
+IDEA提供多种方式来启动程序(Launch)的调试，分别是通过菜单(Run –> Debug)、图标(“绿色臭虫”)等等![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5a90443e2798b915754f4cc898e29138.png)
 #### 3、单步调试工具介绍
 
-![](assets/image-20230922004956652.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4e9e95a9a803f123244971c58247bfb5.png)
 
 
 或
 
-![](assets/image-20230922005001648.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c25674afe91a7aac361358914c782fd6.png)
 
 
-![](assets/image-20230922005017124.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c64029955c601756048ad491defb9180.png)
 
 ### 9.3 多种Debug情况介绍
 
@@ -126,7 +126,7 @@ public class Debug01 {
 - 断点设置在方法的签名上，默认当进入时，断点可以被唤醒。
 - 也可以设置在方法退出时，断点也被唤醒
 
-![](assets/image-20230922005047517.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/749a3b8c9d39c80208edd04779b4c336.png)
 
 
 - 在多态的场景下，在父类或接口的方法上打断点，会自动调入到子类或实现类的方法
@@ -198,7 +198,7 @@ class ConsumerImpl implements Consumer{
 
 - 在类的属性声明上打断点，默认对属性的修改操作进行监控
 
-![](assets/image-20230922005054778.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/07957835a0dbdf1fc9bdeed770ad63fc.png)
 
 
 ```java
@@ -307,7 +307,7 @@ public class Debug04 {
 
 针对上述代码，在满足arr[i] % 3 == 0的条件下，执行断点。
 
-![](assets/image-20230922005102151.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/217d41c82b88f3b4c535e32367febb38.png)
 
 
 #### 9.3.5 异常断点（暂略）
@@ -348,7 +348,7 @@ public class Debug05 {
 
 通过下图的方式，对指定的异常进行监控：
 
-![](assets/image-20230922005109509.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4e6acb82462127e4eb6b9ef7468610af.png)
 
 
 #### 9.3.6 线程调试（暂略）
@@ -386,7 +386,7 @@ public class Debug06 {
 
 ```
 
-![](assets/image-20230922005117314.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3cfc641a322a8bf5ae3c629e0dbc3856.png)
 
 
 #### 9.3.7 强制结束
@@ -422,7 +422,7 @@ public class Debug07 {
 
 ```
 
-![](assets/image-20230922005121977.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5ab3d18c9da2255023126d00dfc815b5.png)
 
 
 ### 9.4 自定义调试数据视图（暂略）
@@ -457,9 +457,9 @@ public class Debug08 {
 
 设置如下：
 
-![](assets/image-20230922005128467.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/91a6dfb4446bd888ca63b4c22e2a3d2d.png)
 
-![](assets/image-20230922005131820.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2c64bbcda25171ef2263add8384cf180.png)
 
 
 ### 9.5 常见问题
@@ -472,7 +472,7 @@ public class Debug08 {
 
 把Do not step into the classess中的`java.*`、`javax.*` 取消勾选即可。
 
-![](assets/image-20230922005137433.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5fb617e3102be42c14911e8833dcd1bc.png)
 
 
 
@@ -486,7 +486,7 @@ public class Debug08 {
 
 ### 推荐1：Alibaba Java Coding Guidelines
 
-![](assets/image-20230922005158033.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4c831ffae4f874778b969f98f11be81b.png)
 
 
 阿里巴巴Java编码规范检查插件，检测代码是否存在问题，以及是否符合规范。
@@ -495,7 +495,7 @@ public class Debug08 {
 
 ### 推荐2：jclasslib bytecode viewer
 
-![](assets/image-20230922005207981.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a48284b2f45ff18b28c3108854a3f498.png)
 
 可视化的字节码查看器。
 
@@ -506,7 +506,7 @@ public class Debug08 {
 3. 打开“view” 菜单，选择“Show Bytecode With jclasslib” 选项。
 4. 选择上述菜单项后 IDEA 中会弹出 jclasslib 工具窗口。
 5. 
-![](assets/image-20230922005214433.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7e85b4489f7c83e97dac1f7fc598e853.png)
 
 
 英文设置：
@@ -519,7 +519,7 @@ public class Debug08 {
 
 ### 推荐3：Translation
 
-![](assets/image-20230922005222760.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0ee425db452979e8cae5e31fc79def04.png)
 
 
 注册翻译服务（有道智云、百度翻译开放平台、阿里云机器翻译）帐号，开通翻译服务并获取其应用ID和密钥
@@ -531,54 +531,54 @@ public class Debug08 {
 
 ### 推荐4：GenerateAllSetter
 
-![](assets/image-20230922005240209.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/747911e62d3e98f675cace5797d99f99.png)
 
 
 
 实际开发中还有一个非常常见的场景： 我们创建一个对象后，想依次调用 Setter 函数对属性赋值，如果属性较多很容易遗漏或者重复。
 
-![](assets/image-20230922005250837.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/623cb66f0f32ce80e2596debc88c9e95.png)
 
 
 可以使用这 GenerateAllSetter 提供的功能，快速生成对象的所有 Setter 函数（可填充默认值），然后自己再跟进实际需求设置属性值。
 
 ### 插件5：Rainbow Brackets
 
-![](assets/image-20230922005256478.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4f0fe1d594d9cdc1061ef42964fe1373.png)
 
 
 
 给括号添加彩虹色，使开发者通过颜色区分括号嵌套层级，便于阅读
 
-![](assets/image-20230922005300697.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0973ed3a98627ae58490a9d386e72699.png)
 
 
 ### 推荐6：CodeGlance Pro
 
-![](assets/image-20230922005305936.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e6f8c05a8bd1dcfb44a5088927a62134.png)
 
 
 
 在编辑器右侧生成代码小地图，可以拖拽小地图光标快速定位代码，阅读行数很多的代码文件时非常实用。
 
-![](assets/image-20230922005311045.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a77cfe145d6a3a66f732b8bb75c7fb53.png)
 
 
 
 ### 推荐7：Statistic
 
-![](assets/image-20230922005317068.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f89499bd0ce79949f4cd226bb94a8326.png)
 
 
 
 代码统计工具。
-![](assets/image-20230922005324003.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c4b818a0498e39b08ff2732c3aacd3b.png)
 
-![](assets/image-20230922005326641.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b51b2d8b941d72f9d20bd3bb117cad60.png)
 
 ### 推荐8：Presentation Assistant
 
-![](assets/image-20230922005333884.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/35847651c1a56f39003f4eab20d809c9.png)
 
 
 
@@ -586,7 +586,7 @@ public class Debug08 {
 
 ### 推荐9：Key Promoter X
 
-![](assets/image-20230922005338222.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/adb231dceb50089ed62e33b75c220274.png)
 
 
 
@@ -594,33 +594,33 @@ public class Debug08 {
 
 ### 推荐10：JavaDoc
 
-![](assets/image-20230922005342674.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e0e759d8e0583b0bba550f08b317b070.png)
 
 
 
 按`alt+insert`，执行操作：
 
-![](assets/image-20230922005351881.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ded1abe240eb0359b39074e7fff03c9f.png)
 
 
 ### 推荐11： LeetCode Editor
 
- ![](assets/image-20230922005356536.png)
-![](assets/image-20230922005359793.png)
+ ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/927e21456063179c0f3528d440bead29.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/08b32b04923722f139f0756bf37c4cc1.png)
 
 
 在 IDEA 里刷力扣算法题
 
 ### 推荐12：GsonFormatPlus
 
-![](assets/image-20230922005406200.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7fc11c11fb649e168d9988edd3578e8e.png)
 
 
 根据 json 生成对象。
 
 使用：使用alt + s 或 alt + insert调取。
 
-![](assets/image-20230922005410636.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e59b2caf70447f122e7009a704543ebb.png)
 
 
 举例：
@@ -640,7 +640,7 @@ public class Debug08 {
 
 ### 插件13：Material Theme UI
 
-![](assets/image-20230922005419231.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3c0000610a3ee07c03989cf3a2976a20.png)
 
 
 
@@ -648,7 +648,7 @@ public class Debug08 {
 
 IDEA 支持各种主题插件，其中最出名的当属 Material Theme UI。
 
-![](assets/image-20230922005423411.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/da1fd4d9d1f59ef03b0636794e09c7ad.png)
 
 
 安装后，可以从该插件内置的各种风格个选择自己最喜欢的一种。

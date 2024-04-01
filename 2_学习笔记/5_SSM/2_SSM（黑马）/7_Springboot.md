@@ -162,10 +162,10 @@ public class BookController {
     知道了 `SpringBoot` 的开发步骤后，下面我们进行具体的操作
 
 - `步骤一：`创建新模块  
-    在IDEA下创建一个新模块，选择Spring Initializr，用来创建SpringBoot工程![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212844847.png)
+    在IDEA下创建一个新模块，选择Spring Initializr，用来创建SpringBoot工程![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c053ef124e66d6d6ef51379eecb4ab59.png)
 
 
-    选中 `Web`，然后勾选 `Spring Web`，由于我们需要开发一个 `web` 程序，使用到了 `SpringMVC` 技术，所以按照下图红框进行勾选![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212847126.png)
+    选中 `Web`，然后勾选 `Spring Web`，由于我们需要开发一个 `web` 程序，使用到了 `SpringMVC` 技术，所以按照下图红框进行勾选![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dced1d7db76bdad1a2e0960e36898304.png)
 
 
     最后点击创建，就大功告成了，经过以上步骤后就创建了如下结构的模块，它会帮我们自动生成一个 `Application` 类，而该类一会再启动服务器时会用到
@@ -195,7 +195,7 @@ public class BookController {
 ```
 
 - `步骤三：`启动服务器  
-	运行 `SpringBoot` 工程不需要使用本地的 `Tomcat` 和 插件，只运行项目 `com.blog` 包下的 `Application` 类，我们就可以在控制台看出如下信息![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212851039.png)
+	运行 `SpringBoot` 工程不需要使用本地的 `Tomcat` 和 插件，只运行项目 `com.blog` 包下的 `Application` 类，我们就可以在控制台看出如下信息![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0410db728d898447e5a55dd9f1b8b4ed.png)
 
 
 - `步骤四：`进行测试  
@@ -296,7 +296,7 @@ public class Application {
 
 首先进入SpringBoot官网 [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot) ，拉到页面最下方，会有一个`Quickstart your project`  
 
-然后点击`Spring Initializr`超链接，就会跳转到如下页面，构建工程的步骤与我们在IDEA中几乎没什么区别![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212858694.png)
+然后点击`Spring Initializr`超链接，就会跳转到如下页面，构建工程的步骤与我们在IDEA中几乎没什么区别![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0a792e4e059ace604b8d526e0ec5e611.png)
 
 
 点击`GENERATE`，就可以生成工程并下载到本地了，打开下载好的压缩包，可以看到工程的内容与IDEA生成的一模一样。  
@@ -327,7 +327,7 @@ public class Application {
 java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 ```
 
-执行上述命令就可以看到 `SpringBoot` 运行的日志信息，同时使用PostMan发送GET请求访问`localhost:8080/books/9527`，也可以正常输出`get id ==> 9527`![[![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212904144.png)
+执行上述命令就可以看到 `SpringBoot` 运行的日志信息，同时使用PostMan发送GET请求访问`localhost:8080/books/9527`，也可以正常输出`get id ==> 9527`![[![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/490372a80ba44217b129ab175698ed96.png)
 
 
 ## 2、SpringBoot概述
@@ -400,7 +400,7 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 </parent>
 ```
 
-再进入到该父工程中，在该工程中我们可以看到配置内容结构如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212913650.png)
+再进入到该父工程中，在该工程中我们可以看到配置内容结构如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e15e8372469c750893a0fd59c7620cae.png)
 
 
 - `properties` 标签中定义了各个技术软件依赖的版本，避免了我们在使用不同软件技术时考虑版本的兼容问题。
@@ -554,7 +554,7 @@ public class Springboot01QuickstartApplication {
 
 Jetty比Tomcat更轻量级，可拓展性更强（相对于Tomcat），谷歌应用引擎（GAE）已全面切换为Jetty
 
-接下来再次运行引导类，在日志信息中就可以看到使用的是jetty服务器![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212927035.png)
+接下来再次运行引导类，在日志信息中就可以看到使用的是jetty服务器![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/215fb80485454ba91216b092341c07f1.png)
 
 
 小结：通过切换服务器，我们不难发现在使用 `SpringBoot` 换技术时只需要导入该技术的`起步依赖`即可。
@@ -618,7 +618,7 @@ server:
   port: 82
 ```
 
-- 启动服务，在控制台可以看到绑定的端口号![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212951168.png)
+- 启动服务，在控制台可以看到绑定的端口号![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0881ae0c0789ee5ecce0a8a639659278.png)
 
 
 ### 1.2 三种配置文件的优先级

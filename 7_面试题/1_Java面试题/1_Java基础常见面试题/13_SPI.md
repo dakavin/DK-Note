@@ -6,7 +6,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 很多框架都使用了 Java 的 SPI 机制，比如：Spring 框架、数据库加载驱动、日志接口、以及 Dubbo 的扩展实现等等。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240311114142.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c0129b49bfecf62489cc0ca7046ce2fc.png)
 
 `回答思路：`
 	1. 顾名思义，SPI（Server Provider Interface）指的是服务提供者的接口，即专门给服务提供者（框架开发者）去使用的接口；
@@ -16,7 +16,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 
 **那 SPI 和 API 有啥区别？**
 
-说到 SPI 就不得不说一下 API 了，从广义上来说它们都属于接口，而且很容易混淆。下面先用一张图说明一下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240311120318.png)
+说到 SPI 就不得不说一下 API 了，从广义上来说它们都属于接口，而且很容易混淆。下面先用一张图说明一下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/96a2bc63b09c10d02c75d8c12cf71226.png)
 一般模块之间都是通过接口进行通讯，那我们在服务调用方和服务实现方（也称服务提供者）之间引入一个“接口”。
 
 当实现方提供了接口和实现，我们可以通过调用实现方的接口从而拥有实现方给我们提供的能力，这就是 API ，这种接口和实现都是放在实现方的。

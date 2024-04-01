@@ -13,7 +13,7 @@
 
 > `2 安装插件`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313142333.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7de0ee6dc2f6c5a10a4a91d4596fa052.png)
 
 - Auto Rename Tag 自动修改标签对插件
 - Chinese Language Pack 汉化包
@@ -28,14 +28,14 @@
 - Vue language Features Vue3语言特征插件
 
 > `3 准备工作空间 ` 
-+ `直接用vscode打开某个目录即可`直接将某个目录作为项目代码存放的根目录![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313142912.png)
++ `直接用vscode打开某个目录即可`直接将某个目录作为项目代码存放的根目录![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/002c12542fcb91dac679fd06cfa2f9a0.png)
 > `4 在工作空间下创建目录和文件`
-+ 点击带有"+"号的按钮即可创建文件或者目录![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313142942.png)
-+ 在html中,输入"  !  " 并回车即可快速出现html的基本结构![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/newhtml.gif)
++ 点击带有"+"号的按钮即可创建文件或者目录![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/540c2f5104eda1387210dd9b5f16535f.png)
++ 在html中,输入"  !  " 并回车即可快速出现html的基本结构![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/79a141daf200ba5a5738ff7286e67b4c.gif)
 > `5 通过live Server 小型服务器运行项目`
-+ 点击右下角Go Live , 或者在html编辑视图上右击 open with live Server  ,会自动启动小型服务器,并自动打开浏览器访问当前资源![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313143201.png)
++ 点击右下角Go Live , 或者在html编辑视图上右击 open with live Server  ,会自动启动小型服务器,并自动打开浏览器访问当前资源![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4a602d5f8cc4ba901b793a44b99ff104.png)
 + Live Server 可实现实时加载功能
-+ Live Server使用完毕后,要记得关闭![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240313143230.png)
++ Live Server使用完毕后,要记得关闭![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce9756238e3ca5e0866b923b583b2c84.png)
 > `6 其他常见设置`
 
 + 设置字体:    齿轮>search>搜索    "字体大小"

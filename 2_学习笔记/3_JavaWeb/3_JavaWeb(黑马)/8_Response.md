@@ -33,7 +33,7 @@
 	- 状态码都是3位数字 
 		- 1xx：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码
 		- 2xx：<font color="#00b050">成功。代表：200</font>
-		- 3xx：重定向。代表：<font color="#00b050">302(重定向</font>，即访问的A资源回应客户端，让其找C资源)，<font color="#00b050">304(访问缓存</font>，即客户端之前访问过的资源，存在了客户端本地，服务器通过304回应，让客户端访问本地缓存)![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074652550.png)
+		- 3xx：重定向。代表：<font color="#00b050">302(重定向</font>，即访问的A资源回应客户端，让其找C资源)，<font color="#00b050">304(访问缓存</font>，即客户端之前访问过的资源，存在了客户端本地，服务器通过304回应，让客户端访问本地缓存)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f74dc1ad50fde25da1086ebd3c3a7f3a.png)
 		- 4xx：客户端错误。<font color="#00b050">404（请求路径没有对应的资源）</font> <font color="#00b050">405（请求方式没有对应的doXxx方法）</font>
 		- 5xx：服务器端错误。代表：<font color="#00b050">500(服务器内部出现异常)</font>
 
@@ -52,7 +52,7 @@
 
 - 传输的数据
 
-- `响应的字符串格式`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074738997.png)
+- `响应的字符串格式`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b5e8285557f1412f8207b492a458b17b.png)
 ## 2 Response对象
 
 ### 2.1 设置响应行
@@ -98,7 +98,7 @@
 		- 规则：`判断定义的路径是给谁用的？`即请求从哪里发出
 			- 给客户端/浏览器使用，需要加虚拟目录，使用req.getContextPath()获取虚拟目录
 			- 给服务器使用，`不需要加虚拟目录，先记住转发，即可`
-- 案例如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074750098.png)
+- 案例如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8fc0373dc20b5e0c510e0af7f27d3298.png)
 
 
 - `建议，以后都使用绝对路径即可`

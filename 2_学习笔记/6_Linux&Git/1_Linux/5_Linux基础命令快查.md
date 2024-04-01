@@ -1,7 +1,7 @@
 
 ## Linux的目录结构
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923004621209.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6d14fc07bc9efa21c97f49a984192b11.png)
 
 - `/`，根目录是最顶级的目录了
 - Linux只有一个顶级目录：`/`
@@ -300,16 +300,16 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 ### 命令模式快捷键
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923003626714.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bcd23a061f00e028fd9eef603db68f3c.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923003629808.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1102ed7bf3dbb07baaf765fd8b308c50.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923003632774.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e4d3a6ed2fc47d1820c53efe15054a96.png)
 
 
 ### 底线命令快捷键
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923003636985.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7fbfccb2c7d77dd70fcc94e07d376b23.png)
 
 ## 命令的选项
 
@@ -327,13 +327,13 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 可以通过：`命令 --help`查看命令的帮助手册
 
-![image-20221027220005610](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220005.png)
+![image-20221027220005610|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5d629f8128eded9a141770ebcdef2e9b.png)
 
 ### 查看命令的详细手册
 
 可以通过：`man 命令`查看某命令的详细手册
 
-![image-20221027220009949](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220010.png)
+![image-20221027220009949|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b40259baf755ed61ff5fdb38d9348e92.png)
 
 
 # Linux常用操作
@@ -404,19 +404,19 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 - 按照2022-01-01的格式显示日期
 
-  ![image-20221027220514640](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220514.png)
+  ![image-20221027220514640|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e933b356f1c1f16e9dfac7ac97dd2f82.png)
 
 - 按照2022-01-01 10:00:00的格式显示日期
 
-  ![image-20221027220525625](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220525.png)
+  ![image-20221027220525625|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ff24da055e4a034c427b616b0447863.png)
 
 - -d选项日期计算
 
-  ![image-20221027220429831](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220429.png)
+  ![image-20221027220429831|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cb44efbfa29f8031b86af96d14e785a6.png)
 
   - 支持的时间标记为：
 
-    ![image-20221027220449312](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220449.png)
+    ![image-20221027220449312|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aa9126262fd95aea49295d4dc7b83f32.png)
 
 
 
@@ -426,7 +426,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 修改时区为中国时区
 
-![image-20221027220554654](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027220554.png)
+![image-20221027220554654|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a7747f733ee4f09d2d86546f645a5f2e.png)
 
 
 
@@ -519,13 +519,13 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 ## kill命令
 
-![image-20221027221303037](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221303.png)
+![image-20221027221303037|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d2d25e324c4dd86928b5ea5513d2ed0e.png)
 
 
 
 ## nmap命令
 
-![image-20221027221241123](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221241.png)
+![image-20221027221241123|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fef18b7c9c7558dd06e8f532d7d865ba.png)
 
 
 
@@ -543,19 +543,19 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 语法：`ping [-c num] 参数`
 
-![image-20221027221129782](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221129.png)
+![image-20221027221129782|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4e926b1b2410740ad1ef3436082055c1.png)
 
 
 
 ## wget命令
 
-![image-20221027221148964](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221149.png)
+![image-20221027221148964|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5705a860b7cb6b0c921d88bd5a836729.png)
 
 ## curl命令
 
-![image-20221027221201079](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221201.png)
+![image-20221027221201079|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce03a68d751236afc00aaea6d7375f3d.png)
 
-![image-20221027221210518](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221210.png)
+![image-20221027221210518|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/efec8ed10a2571123942d2be9aabe0d9.png)
 
 
 
@@ -569,13 +569,13 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 可用选项：
 
-![image-20221027221340729](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221340.png)
+![image-20221027221340729|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bf64dc7e4361c18f78bc537e74a6f8c5.png)
 
 
 
 交互式模式中，可用快捷键：
 
-![image-20221027221354137](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221354.png)
+![image-20221027221354137|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fb87d4ae21ffbd260135fc2abf3f9fe2.png)
 
 
 
@@ -583,7 +583,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 查看磁盘占用
 
-![image-20221027221413787](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221413.png)
+![image-20221027221413787|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1df68be65dccbcd01344582efb28bea9.png)
 
 
 
@@ -591,9 +591,9 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 查看CPU、磁盘的相关信息
 
-![image-20221027221439990](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221440.png)
+![image-20221027221439990|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cb42e37ee86f5380e55cb1f74eec6046.png)
 
-![image-20221027221514237](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221514.png)
+![image-20221027221514237|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/df72bdf7236ecd69769f21fa6de1bc0b.png)
 
 
 
@@ -601,7 +601,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 查看网络统计
 
-![image-20221027221545822](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221545.png)
+![image-20221027221545822|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7ba5844f7046026cfdb350eb049aa84a.png)
 
 
 
@@ -652,7 +652,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 `zip [-r] 参数1 参数2 参数N`
 
-![image-20221027221906247](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221906.png)
+![image-20221027221906247|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8f55010100e3554e4aa8427f615bfdd.png)
 
 
 
@@ -666,7 +666,7 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 `unzip [-d] 参数`
 
-![image-20221027221939899](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027221939.png)
+![image-20221027221939899|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2800b6d0cbf3df2e7fb8de67a3a81e97.png)
 
 
 ## su命令
@@ -675,13 +675,13 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 
 语法：`su [-] [用户]`
 
-![image-20221027222021619](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222021.png)
+![image-20221027222021619|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d7e62dd72f93e82f4a64db3860126359.png)
 
 
 
 ## sudo命令
 
-![image-20221027222035337](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222035.png)
+![image-20221027222035337|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1783597ae626cfd99b504bde958b5055.png)
 
 
 
@@ -705,7 +705,7 @@ itheima ALL=(ALL)       NOPASSWD: ALL
 
 - 权限，要设置的权限，比如755，表示：`rwxr-xr-x`
 
-  ![image-20221027222157276](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222157.png)
+  ![image-20221027222157276|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4574c1a29d8cee1add88e7ebc9c9e660.png)
 
 - 参数，被修改的文件、文件夹
 
@@ -721,19 +721,19 @@ itheima ALL=(ALL)       NOPASSWD: ALL
 
 语法：`chown [-R] [用户][:][用户组] 文件或文件夹`
 
-![image-20221027222326192](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222326.png)
+![image-20221027222326192|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a7817fb1d75437399f99757badbc0322.png)
 
 
 
 ## 用户组管理
 
-![image-20221027222354498](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222354.png)
+![image-20221027222354498|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/86acb960b5b9ae9bfa649a3ffb685e05.png)
 
 
 
 ## 用户管理
 
-![image-20221027222407618](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222407.png)
+![image-20221027222407618|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/95cc60e1a34831618c1cc05ace97ea88.png)
 
 
 
@@ -741,11 +741,11 @@ itheima ALL=(ALL)       NOPASSWD: ALL
 
 - `getenv group`，查看系统全部的用户组
 
-  ![image-20221027222446514](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222446.png)
+  ![image-20221027222446514|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/88209407fb897d07520fc9f7f507d926.png)
 
 - `getenv passwd`，查看系统全部的用户
 
-  ![image-20221027222512274](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/27/20221027222512.png)
+  ![image-20221027222512274|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/32ea3788f87c83dbc549bcf89e779727.png)
 
 
 

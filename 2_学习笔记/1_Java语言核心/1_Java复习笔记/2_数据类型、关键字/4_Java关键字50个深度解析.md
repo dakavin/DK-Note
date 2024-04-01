@@ -11,13 +11,13 @@ Java关键字列表如下，包含50个关键，所有字符都是小写
 
 [https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201214944775.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/58b05d090bf56c3b579239c66cc81129.png)
 
 ## 1 基本类型
 
-先介绍基本类型关键字如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201215014942.png)
+先介绍基本类型关键字如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0e49454878cf00003c4c1bb0f3f00bda.png)
 
-参考解析![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201215113965.png)
+参考解析![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/90d153782e056914d3d2caaeaa852a75.png)
 
 `注意`：Java浮点数默认是double， 整形默认是int，另外有一个常量池的缓存也需要注意，还有Integer.valueof()方法是Integer a = 10语句的默认赋值方法。
 
@@ -154,7 +154,7 @@ public class Test {
 
 ## 3 异常处理机制
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201215532744.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d164523c7d2b06a349433604ae1e50d2.png)
 
 [0_try catch finally原理](../8_异常/0_try%20catch%20finally原理.md)
 
@@ -362,7 +362,7 @@ public class TestException1 {
   
 ## 4 类或变量的权限控制
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201223833031.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/48dd768e0bc0ae2ac355b2b5a378bbb4.png)
 
 - `private 私有的  `
     Java语言的一个关键字，用在方法或变量的声中。它表示这个方法或变量只能被这个类的其它元素所访问。
@@ -379,7 +379,7 @@ public class TestException1 {
   
 ## 5 修饰字段变量的关键字
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201224033572.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14fdfa0f78ed9cf34909ba715eb960b4.png)
 
 - `final 最终、不可更改的`
     一个Java语言的关键字。你只能定义一个实体一次，以后不能改变它或继承它。更严格的讲：一个final修饰的类不能被子类化，一个final修饰的方法不能被重写，一个final修饰的变量不能改变其初始值。
@@ -397,7 +397,7 @@ public class TestException1 {
 
 **synchronized同步控制**  
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201224331661.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b76cd0e66cc3d1a13a977628f19f9c68.png)
 
 
   
@@ -409,8 +409,8 @@ public class TestException1 {
 2. synchronized修饰方法  
     当方法调用时，调用指令将会 检查方法的 ACC_SYNCHRONIZED 访问标志是否被设置，如果设置了，执行线程将先持有 monitor ， 然后再执行方法，最后再方法完成(无论是正常完成还是非正常完成)时释放monitor
     
-      ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201224411315.png)
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201224425188.png)
+      ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/10807784171437b8ab986dd8054a8f7c.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7949989d30d7f1c93845f980a617694a.png)
 
 
 
@@ -464,7 +464,7 @@ public class TestException1 {
     instance of 原理： [https://cloud.tencent.com/developer/article/1079376](https://cloud.tencent.com/developer/article/1079376)  
     　JavaSE 8 instanceof 的实现算法：[https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.instanceof](https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-6.html#jvms-6.5.instanceof)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240201224544690.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/84673681526b663d030af56f3c78f023.png)
 
 
 

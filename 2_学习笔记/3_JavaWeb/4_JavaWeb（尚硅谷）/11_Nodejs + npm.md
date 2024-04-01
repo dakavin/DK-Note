@@ -5,7 +5,7 @@
 - `像我们之前学习JS，都是在HTML文件中编写，然后通过浏览器解析HTML文件来运行JS代码的`
 - 除了浏览器外，我们还可以使用nodejs软件，运行js代码
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319211125.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3ed52ec0325404f2d6ce061ac3ee13bb.png)
 
 > Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，可以使 JavaScript 运行在服务器端。使用 Node.js，可以方便地开发服务器端应用程序，如 Web 应用、API、后端服务，还可以通过 Node.js 构建命令行工具等。相比于传统的服务器端语言（如 PHP、Java、Python 等），Node.js 具有以下特点：
 
@@ -16,11 +16,11 @@
 
 > `Node.js 的核心是其管理事件和异步 I/O 的能力`。Node.js 的异步 I/O 使其能够处理大量并发请求，并且能够避免在等待 I/O 资源时造成的阻塞。此外，Node.js 还拥有高性能网络库和文件系统库，可用于搭建 WebSocket 服务器、上传文件等。`在 Node.js 中，我们可以使用 JavaScript 来编写服务器端程序，这也使得前端开发人员可以利用自己已经熟悉的技能来开发服务器端程序，同时也让 JavaScript 成为一种全栈语言。`Node.js 受到了广泛的应用，包括了大型企业级应用、云计算、物联网、游戏开发等领域。常用的 Node.js 框架包括 Express、Koa、Egg.js 等，它们能够显著提高开发效率和代码质量。
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319212205.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/17cbfd49fb1a9df19d3676ba5051f799.png)
 ### 1.2 如何安装Nodejs
 
 1.  打开官网https://nodejs.org/en下载对应操作系统的 LTS 版本。
-2.  双击安装包进行安装，安装过程中遵循默认选项即可(或者参照https://www.runoob.com/nodejs/nodejs-install-setup.html )。安装完成后，可以在命令行终端输入 `node -v` 和 `npm -v` 查看 Node.js 和 npm 的版本号。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319213005.png)
+2.  双击安装包进行安装，安装过程中遵循默认选项即可(或者参照https://www.runoob.com/nodejs/nodejs-install-setup.html )。安装完成后，可以在命令行终端输入 `node -v` 和 `npm -v` 查看 Node.js 和 npm 的版本号。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8c67b8cfc2ec4487b87adb6e1164b413.png)
 3. `node.js版本差异比较大，不建议安装 v18之后的版本，本次使用v20.11.1`
 4. 定义一个app.js文件,cmd到该文件所在目录,然后在dos上通过`node app.js`命令即可运行
 ```js
@@ -36,17 +36,17 @@ main()
 
 ### 2.1 npm介绍
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319213600.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cad094fd728b6124886d31308135c71a.png)
 
 > NPM全称Node Package Manager，是Node.js包管理工具，是全球最大的模块生态系统，里面所有的模块都是开源免费的；也是Node.js的包管理工具，相当于后端的Maven 
 
-- `从功能上对比Maven，npm不能帮我们构建项目，结合vite才能构建项目`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319214137.png)
+- `从功能上对比Maven，npm不能帮我们构建项目，结合vite才能构建项目`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e02af38b0a5f7f6a97a36de0abb038a1.png)
 
 - npm软件
 	- 前端框架的下载工具
 	- 前端项目的管理工具
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319214549.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0fbf27215e22894281311d2df56e2a5d.png)
 ### 2.2 npm 安装和配置
 
 > 1.安装
@@ -76,7 +76,7 @@ npm config get registry
 npm config set registry https://registry.npmjs.org/
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319214926.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f39bfd91f14b34c1a20844613fe8be07.png)
 
 > 3.`配置全局依赖下载后存储位置`
 
@@ -98,7 +98,7 @@ npm config set prefix "E:\Nodejs\node_global"
 npm config get prefix
 ```
 
-![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240330153622.png)
+![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ee4ccbcce1ff7f3e5d5aa651788d35a.png)
 
 
 > 4.`配置全局缓存位置`
@@ -119,15 +119,15 @@ npm config set cache "E:\Nodejs\node_cache"
 npm config get cache
 ```
 
-![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240330153629.png)
+![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/107103179cd19ff2ae6f4851768410aa.png)
 
 > 4. `设置node_global全局变量`
 
-+ “此电脑”-->右键“属性”-->“高级系统设置”-->“高级”-->“环境变量”![image.png|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240330153723.png)
++ “此电脑”-->右键“属性”-->“高级系统设置”-->“高级”-->“环境变量”![image.png|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c11c4c72d901860e11f46640fdb00c08.png)
 
 - 在用户变量中的PATH中（`重要！！！`）：
 	
-	- 将我们创建的`node_global`文件夹添加即可![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240330155708.png)
+	- 将我们创建的`node_global`文件夹添加即可![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/45b63ff824ca9e51650964e697cf7bf5.png)
 
 > 5.`升级npm版本`
 
@@ -139,14 +139,14 @@ npm config get cache
 npm install -g npm@10.2.4
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319215625.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5988f613a6afa179299f65cd878df1f.png)
 
 ### 2.3 npm 常用命令
 
 > 1.`项目初始化`
 
 + `npm init`
-	+ 进入一个vscode创建好的项目中, 执行 npm init 命令后，npm 会引导您在命令行界面上回答一些问题,例如项目名称、版本号、作者、许可证等信息，并`最终生成一个package.json 文件。package.json信息会包含项目基本信息！类似maven的pom.xml`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319220315.png)
+	+ 进入一个vscode创建好的项目中, 执行 npm init 命令后，npm 会引导您在命令行界面上回答一些问题,例如项目名称、版本号、作者、许可证等信息，并`最终生成一个package.json 文件。package.json信息会包含项目基本信息！类似maven的pom.xml`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a44e5727ee2f42e44438eb4a4b9aee99.png)
 
 + `npm init -y`
 	+ 执行，-y yes的意思，所有信息使用当前文件夹的默认值！不用挨个填写！
@@ -156,7 +156,7 @@ npm install -g npm@10.2.4
 > 2.`安装依赖  (查看所有依赖地址  https://www.npmjs.com )`
 
 + `npm install` 包名 或者 `npm install 包名@版本号`
-	+ 安装包或者指定版本的依赖包(安装到当前项目中)![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319221210.png)
+	+ 安装包或者指定版本的依赖包(安装到当前项目中)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/51020d5017fb9161dd2fc95c25ba8fff.png)
 
 + `npm install -g 包名`
 	+ 安装全局依赖包(安装到d:/GlobalNodeModules)则可以在任何项目中使用它，而无需在每个项目中独立安装该包。
@@ -213,5 +213,5 @@ npm install -g npm@10.2.4
 + 总之，npm run 命令为您提供了一种在 package.json 文件中定义和管理一组指令的方法，可以在项目中快速且灵活地运行各种操作。
 
 - 补充：
-- 我们可以在vscode，进入文件的终端![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240319222439.png)
+- 我们可以在vscode，进入文件的终端![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5c5aa5b0a61e5438553034c5ad1f04f0.png)
 - 如果代码运行错误，可以先管理员运行vscode，然后再正常打开vscode即可

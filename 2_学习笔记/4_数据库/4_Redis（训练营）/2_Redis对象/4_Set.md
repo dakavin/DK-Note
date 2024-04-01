@@ -18,7 +18,7 @@ Redis的Set是一个不重复、无序的字符串集合，这里额外说明一
 
 删除：和其他对象一样，DEL可以删除一个SET对象
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017195615.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8a26c6065d25e41848ee9f7b551fda8.png)
 
 ### 3.1 写操作
 
@@ -34,7 +34,7 @@ SADD setniuniu aa bb cc
 ```
 
 当前setniuniu中的元素有：“aa”、“bb”、“cc”
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017200207.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d1023f2d2a2ee264a04ffcb13bfbeebf.png)
 
 为setniuniu添加元素：
 ```shell
@@ -42,7 +42,7 @@ SADD setniuniu 11 22 33
 (integer) 3
 ```
 
-当前setniuniu中的元素有：“aa”、“bb”、“cc”、“11”、“22”、“33”![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017200321.png)
+当前setniuniu中的元素有：“aa”、“bb”、“cc”、“11”、“22”、“33”![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2086b71ef91358eae0da1873878e7dec.png)
 #### 3.1.2 SREM
 
 语法：SREM key member [member ...]
@@ -53,14 +53,14 @@ SREM setniuniu 33
 (integer) 1
 ```
 
-删除完成之后，当前setniuniu中的元素有：“aa”、“bb”、“cc”、“11”、“33”![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017200435.png)
+删除完成之后，当前setniuniu中的元素有：“aa”、“bb”、“cc”、“11”、“33”![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fd11b13f966e1723e7ccc45c95ec1b13.png)
 ### 3.2 读操作
 
 我们按照以下状态来演示：
 setniuniu：[“aa”、“bb”、“cc”、“11”、“22”、“33”]
 setmart：[“aa”、“bb”、“ff”]
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017200528.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29a27c404890ef5cce195db1d7070261.png)
 
 #### 3.2.1 SISMEMBER
 
@@ -135,7 +135,7 @@ SMEMBERS setniuniu
 语法：SINTER key [key ...]
 功能：返回在第一个集合里，同时在后面所有集合都存在的元素。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017203618.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/462a80666c2753f28d059e8c744a6d12.png)
 
 ```shell
 127.0.0.1:6379> SINTER setniuniu setmart
@@ -174,15 +174,15 @@ SMEMBERS setniuniu
 
 ### 4.1 编码方式
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017203843.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5bb6c53c1673b4db6fa04cf079265915.png)
 
 Redis出于性能和内存的综合考虑，也支持两种编码方式，如果集群元素`都是整数`，且`元素数量不超过512个`，就可以用INTSET编码，结构如下图，可以看到INTSET排列比较紧凑，内存占用少，但是查询时需要二分查找（说明该编码下实际存储的是一个有序集合）。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017204020.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/53dbed0888cf1e8e6a161e4e0b739d46.png)
 
 如果不满足INTSET的条件，就需要用HASHTABLE，HASHTABLE结构如下图，可以看到其查询一个元素的性能很高，能O(1)时间就能找到一个元素是否存在。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017204159.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ac5a4d85ff18c65038f94aebf3c53923.png)
 ## 5、总结
 
 Set可以很方便的管理无序集合，还可以为多个集合求交集并集，底层编码模式有INTSET和HASHTABLE两种，INTSET对应少量整数集合下节约内存，HASHTABLE适用于需要快速定位某个元素的场景。

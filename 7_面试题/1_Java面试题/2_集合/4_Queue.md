@@ -76,7 +76,7 @@ public interface BlockingQueue<E> extends Queue<E> {
 ```
 
 `BlockingQueue` 常用于生产者-消费者模型中，生产者线程会向队列中添加数据，而消费者线程会从队列中取出数据进行处理。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314160047.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/33964079d20516021f1b3a0c3b15172a.png)
 
 `回答思路：`
 	1. 一种阻塞队列
@@ -84,7 +84,7 @@ public interface BlockingQueue<E> extends Queue<E> {
 	3. 队列元素已满的时候，生产者生成阻塞
 ## 5、BlockingQueue的实现类有那些？(了解)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240314160104.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0f118fac0137923473464291f3f12c91.png)
 
 Java 中常用的阻塞队列实现类有以下几种：
 

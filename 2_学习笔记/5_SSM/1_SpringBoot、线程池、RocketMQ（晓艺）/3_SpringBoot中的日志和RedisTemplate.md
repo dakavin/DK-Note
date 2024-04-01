@@ -3,7 +3,7 @@
 
 Springboot项目，`默认日志组件为logback`，且已经整合对应的logback包，因此不再需要额外的jar。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210705452.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/225ad0b9a88c087e13955e43ec147c25.png)
 
 
 - 从上图可以看到，日志输出内容元素具体如下：
@@ -34,7 +34,7 @@ TRACE < `DEBUG` < ***INFO*** < `WARN` < ***ERROR*** < FATAL。
 
 `Spring Boot中默认日志级别就是INFO`
 
-- 所以，一般会将sql的执行相关内容的日志，设置为debug级别![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210708618.png)
+- 所以，一般会将sql的执行相关内容的日志，设置为debug级别![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8278df3df0c269fba8421137b4c4d02.png)
 ```properties
 #日志级别 root表示所有包，也可以单独配置具体包  
 logging.level.root=info
@@ -57,7 +57,7 @@ logger.error(错误信息);
 
 ### 1.3   日志使用方式--@Slf4j注解
 
-1、添加lombok依赖以及idea安装lombok插件![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922210712927.png)
+1、添加lombok依赖以及idea安装lombok插件![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bed29da5f0c79e8f0c26983529acc55d.png)
 
 ```xml
 <dependency>  

@@ -6,7 +6,7 @@
 - 硬件：电脑，提供服务供其它客户电脑访问
     
 - 软件：电脑上安装的服务器软件，安装后能提供服务给网络中的其他计算机，将本地文件映射成一个虚拟的url地址供网络中的其他人访问。
-![|500](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681441674967.png)
+![|500|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3025acede124394ce544af4c0a97a548.png)
 
 > 常见的JavaWeb服务器：
 
@@ -54,10 +54,10 @@ Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目
 
 -   Tomcat官方网站：[http://tomcat.apache.org/](http://tomcat.apache.org/ "http://tomcat.apache.org/")
 -   安装版：需要安装，一般不考虑使用。
--   解压版: 直接解压缩使用，我们使用的版本。![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681442513261.png)
+-   解压版: 直接解压缩使用，我们使用的版本。![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/24c00799ef3e9a595bf521135e368552.png)
 > `安装`
 
-1. 正确安装JDK并配置JAVA_HOME和CATALINA_HOMR(以JDK17为例 [https://injdk.cn](https://injdk.cn/)中可以下载各种版本的JDK)![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315175651.png)
+1. 正确安装JDK并配置JAVA_HOME和CATALINA_HOMR(以JDK17为例 [https://injdk.cn](https://injdk.cn/)中可以下载各种版本的JDK)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3df2001b85825a53908a4967dc84db09.png)
 2. 解压tomcat到非中文无空格目录
 3. 点击bin/startup.bat启动
 4. 打开浏览器输入 [http://localhost:8080](http://localhost:8080/)访问测试
@@ -111,7 +111,7 @@ Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目
 
 ## 4、 Web项目的标准结构
 
-一个标准的可以用于发布的WEB项目标准结构如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681453620343.png)
+一个标准的可以用于发布的WEB项目标准结构如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/50e2e6506f63ee8e21e2b0fe8575247b.png)
 - `app 本应用根目录`
     - `static 非必要目录`,约定俗成的名字,一般在此处放静态资源 ( css js img)
         
@@ -125,7 +125,7 @@ Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目
             
     - `index.html 非必要文件`,index.html/index.htm/index.jsp为默认的欢迎页
 
-> url的组成部分和项目中资源的对应关系![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681456161723.png)
+> url的组成部分和项目中资源的对应关系![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e9d746b7144924759abc7342afa99bf4.png)
 ## 5、 Web项目部署的方式
 
 > 方式1 直接将编译好的项目放在webapps目录下 (已经演示)
@@ -134,7 +134,7 @@ Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目
 
 > 方式3 可以将项目放在非webapps的其他目录下,在tomcat中通过配置文件指向app的实际磁盘路径
 
-- 在磁盘的自定义目录上准备一个app![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681456447284.png)
+- 在磁盘的自定义目录上准备一个app![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/79bd7277a48ea6a9063d87a4e54577d4.png)
 - 在tomcat的conf下创建Catalina/localhost目录,并在该目录下准备一个app.xml文件
 ```xml
 <!-- 
@@ -150,127 +150,127 @@ Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目
 
 > 可以在创建项目前设置本地tomcat,也可以在打开某个项目的状态下找到settings
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681457611053%201.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7533e18fa3bed09cecc2a0cb021a50b5.png)
 
 > 找到 Build,Execution,Eeployment下的Application Servers ,找到+号
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681457711914.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/621a732249cca60636aca61a0e10a261.png)
 
 > 选择Tomcat Server
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681457800708.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6cecf693e925d13ef49a040cc8209b49.png)
 
 > 选择tomcat的安装目录
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681457879937.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7e1a645526687faf85931d346a0b68b0.png)
 
 > 点击ok
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681457921094.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5c17c67668e50d0ed4e5b66df4955704.png)
 
 > 关联完毕
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681458031957.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/511ada8bb943b83a391e494c40953c10.png)
 
 ### 2. IDEA创建web工程
 
 > 推荐先创建一个空项目,这样可以在一个空项目下同时存在多个modules,不用后续来回切换之前的项目,当然也可以忽略此步直接创建web项目
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315201638.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4fec5e3c71b7bbdc3c318f3207314a9c.png)
 
 > 检查项目的SDK,语法版本,以及项目编译后的输出目录
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315201651.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/33ec83eebb7262007dc618644e1d005e.png)
 
 > 先创建一个普通的JAVA项目
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315201707.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0cb610ba0083b429345e066ac517cb1d.png)
 
 > 检查各项信息是否填写有误
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315201715.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/10cb0c485e86e26c195bdab33d4be723.png)
 
 > 创建完毕后,为项目添加Tomcat依赖
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315201734.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b97d1109f608b9065fdb76f67c312444.png)
 
 > 选择modules,添加  framework support
 
-![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315201805.png)
+![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e2698454b65676bcdd3d5d8b14e0dc64.png)
 
 > 选择Web Application 注意Version,勾选  Create web.xml
 > 补充：Version与Tomcat的版本有关，主要是和Servlet版本相关，具体看[安装](#安装)
 
-![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315201817.png)
+![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b8d8bb1f5ef3b89c73471a57cd68a04c.png)
 
 > 删除index.jsp ,替换为 index.html
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315202019.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ac2987db806065801b1df07ea643e69b.png)
 
 > `处理配置文件`
 
 - 在工程下创建resources目录,专门用于存放配置文件(都放在src下也行,单独存放可以尽量避免文件集中存放造成的混乱)
-	- 标记目录为资源目录,不标记的话则该目录不参与编译![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681461443278.png)
-	- 标记完成后,显示效果如下![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681461513406.png)
+	- 标记目录为资源目录,不标记的话则该目录不参与编译![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cbb5ea292db0d3b49d702e7f98a991f6.png)
+	- 标记完成后,显示效果如下![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/347b878f65d419f61d8481e157293230.png)
 > 处理依赖jar包问题
 
 - 在WEB-INF下创建lib目录
     
 - 必须在WEB-INF下,且目录名必须叫lib!!!
     
-- 复制jar文件进入lib目录![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681461788411.png)
+- 复制jar文件进入lib目录![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/35694958a60fb2414f0200600469d2b2.png)
 - 将lib目录添加为当前项目的依赖,后续可以用maven统一解决
-- 补充：`lib文件夹没有jar包，是无法出现add as library选项的` ![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315202152.png)
+- 补充：`lib文件夹没有jar包，是无法出现add as library选项的` ![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b745c56d3299d20f5b26d3502cb60979.png)
 - 环境级别推荐选择module 级别,降低对其他项目的影响,name可以空着不写
 - 通过Project Structure，查看当前项目有那些环境依赖
-- 在此位置,可以通过-号解除依赖![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681462247973.png)
+- 在此位置,可以通过-号解除依赖![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/71f047daad457024c434e64baa1e1ece.png)
 ### 3. IDEA部署运行web项目
 
 > 检查idea是否识别modules为web项目并存在将项目构建成发布结构的配置
 
-+ 就是检查工程目录下,web目录有没有特殊的识别标记![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681462523901.png)
-+ 以及artifacts下,有没有对应 war_exploded,如果没有,就点击+号添加![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681462584524.png)
++ 就是检查工程目录下,web目录有没有特殊的识别标记![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cbcedcc80c0337a0d3646144bc4fa891.png)
++ 以及artifacts下,有没有对应 war_exploded,如果没有,就点击+号添加![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/957adb125411f2db84217e78b72957aa.png)
 > 点击向下箭头,出现 Edit Configurations选项
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681462645070.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/06b5c8834bf82f47d04bb87b27967ccb.png)
 
 > 出现运行配置界面
 
-![|300](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681462710108.png)
+![|300|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8df920740b3ed0be50bbb264604c9ca.png)
 
 
 
 > 点击+号,添加本地tomcat服务器
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681462754191.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eb281180e0b59b11a5cc7a786e871151.png)
 
 > 因为IDEA 只关联了一个Tomcat,红色部分就只有一个Tomcat可选
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681462798933.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/80b17111c3869dd6dac4147c5ca55c4f.png)
 
 > 选择Deployment,通过+添加要部署到Tomcat中的artifact
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681463011546.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cad25cc7c8f755e5981c0ba816de1d47.png)
 
 > applicationContext中是默认的项目上下文路径,也就是url中需要输入的路径,这里可以自己定义,可以和工程名称不一样,也可以不写,但是要保留/,我们这里暂时就用默认的
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681463049807.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/53ceeadbaac85b0d92d9e3ce1bf1368e.png)
 
 > 点击apply 应用后,回到Server部分. After Launch是配置启动成功后,是否默认自动打开浏览器并输入URL中的地址,HTTP port是Http连接器目前占用的端口号
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681463212587.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99e92f9344bb87a5e83e62adc81e2de5.png)
 
 > 点击OK后,启动项目,访问测试
 
 + 绿色箭头是正常运行模式
-+ "小虫子"是debug运行模式![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315202636.png)
++ "小虫子"是debug运行模式![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/658e1b24a23238c33d59f8bf7e6ffbe2.png)
 
-+ 点击后,查看日志状态是否有异常![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240315202643.png)
++ 点击后,查看日志状态是否有异常![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cac1069434310f57f4be01d659717db3.png)
 
-+ 浏览器自动打开并自动访问了index.html欢迎页![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681520068936.png)
++ 浏览器自动打开并自动访问了index.html欢迎页![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/86ec0b76585476fae2a0ea5a28d3f5a6.png)
 ### 4. 工程结构与发布的项目结构之间的目录对应关系
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681464081226.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b9a9410fcade6938cafa794695ad74e4.png)
 
 `注意：resources文件夹的内容，最后保存在classes文件夹中`
 
@@ -289,6 +289,6 @@ Tomcat是Apache 软件基金会（Apache Software Foundation）的Jakarta 项目
 - idea启动tomcat时,是让本地tomcat程序按照tomcat副本里的配置文件运行
     
 - idea的tomcat副本部署项目的模式是通过`conf/Catalina/localhost/*.xml`配置文件的形式实现项目部署的
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317174918.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e909a080453b17b9df91c7d9feac0646.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/1681521240438.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dc37c85cf65ef98c82c303d4bef7747e.png)

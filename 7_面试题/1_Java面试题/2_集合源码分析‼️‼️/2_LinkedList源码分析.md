@@ -3,7 +3,7 @@
 # 1、LinkedList简介
 
 `LinkedList` 是一个基于双向链表实现的集合类，经常被拿来和 `ArrayList` 做比较。关于 `LinkedList` 和`ArrayList`的详细对比，[8、ArrayList 和 LinkedList 的区别？](../2_集合/2_List.md#8、ArrayList%20和%20LinkedList%20的区别？)有详细介绍到。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318134424.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/43730acbb39cad941302ea45639c1c60.png)
 
 不过，我们在项目中一般是不会使用到 `LinkedList` 的，需要用到 `LinkedList` 的场景几乎都可以使用 `ArrayList` 来代替，并且，性能通常会更好！
 
@@ -35,7 +35,7 @@ public class LinkedList<E>
 - `Cloneable` ：表明它具有拷贝能力，可以进行深拷贝或浅拷贝操作。
 - `Serializable` : 表明它可以进行序列化操作，也就是可以将对象转换为字节流进行持久化存储或网络传输，非常方便。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318134754.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2684fb6a1fa4c7638de06b17b7c184ea.png)
 
 `LinkedList` 中的元素是通过 `Node` 定义的：
 
@@ -312,7 +312,7 @@ E unlink(Node<E> x) {
 4. 将待删除节点 x 的后继的前驱指向待删除节点的前驱 prev，断开 x 和 x.next 之间的链接；
 5. 将待删除节点 x 的元素置空，修改链表长度。
 
-`删除中间节点的图解`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318140327.png)
+`删除中间节点的图解`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cee37550d2403882ee9870193432d9a9.png)
 ## 2.5 遍历链表
 
 推荐使用`for-each` 循环来遍历 `LinkedList` 中的元素， `for-each` 循环最终会转换成迭代器形式。
@@ -476,4 +476,4 @@ list.clear();
 System.out.println("清空后的链表：" + list);
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240318140954.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9e8ff0e432c165915ee92190a58e4d69.png)

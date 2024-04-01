@@ -18,7 +18,7 @@ Java集合框架Collection是由一套设计优良的接口和类组成的，使
 
 下面的图是一张Java Collection的UML （来源：https://blog.csdn.net/u010887744/article/details/50575735）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218224048742.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d63c2d645acfc43e9edd01d6dcda60ea.png)
 
 我们常用的类有如下几个：Vector, ArrayList, LinkedList, HashSet,HashTable, HashMap
 
@@ -60,7 +60,7 @@ public synchronized void add(E obj){
 线程安全，Vectory里面的所有函数都添加了synchronized关键字，`Vectory是一个线程安全的Collection`
 
 **Vectory的遍历方式**
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218224914436.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c748b543d6ba0bf0e5424a077623a3b2.png)
 
 
 ### 2.2 ArrayList
@@ -91,7 +91,7 @@ public boolean add(E e){
 线程不安全，ArrayList里面的所有函数都没有同步
 
 **ArrayList的遍历方法**
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218225301342.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5b2f264d279cd75ed14ac5435e32337e.png)
 
 ### 2.3 LinkedList
 
@@ -138,7 +138,7 @@ public boolean add(E e) {
 线程不安全，和LinkedList所有函数都没有同步
 
 **LinkedList的遍历方法：**
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218225500437.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5b142b1b57178d7fbf58cf471d1aa13b.png)
 
 ## 3 Set
 
@@ -168,7 +168,7 @@ public boolean add(E e) {
 没有做线程安全，因为所有函数都没有同步
 
 **HashSet的遍历方法：**
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218225658345.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9d0235feac4b7fdc4c303aba8aa7730d.png)
 
 
 ## 4 Map
@@ -223,7 +223,7 @@ key允许为null(但只能有一条并且放在tbl[0]，如果再写入会将第
 非线程安全，因为所有函数都没有同步
 
 **HashMap的遍历方法：**
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218230025089.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/579fa667d6bd2dde8126a30bf3b993a2.png)
 
 
 
@@ -258,9 +258,9 @@ public synchronized V put(K key, V value){
 。。。。}
 
 **HashTable的遍历方法：**
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218230216616.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0f0fe324f0fe1f303f71b7215105a99d.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218230228843.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c73abec9568dc2671a2eb02c787ff1ce.png)
 
 
 从上面的遍历方式我们可以看出来，HashTable比HashMap多了Elements的遍历，所以HashTable和HashMap继承类是不一样的。
@@ -324,7 +324,7 @@ key和value都不能插入null
 不允许重复的key插入(如果重复key对应的value会被覆盖)，value可重复
 
 **ConcurrentHashMap的遍历方法：**
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20240218230422768.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/98d4909ab354ae0e6eac2011018b100e.png)
 
 
 

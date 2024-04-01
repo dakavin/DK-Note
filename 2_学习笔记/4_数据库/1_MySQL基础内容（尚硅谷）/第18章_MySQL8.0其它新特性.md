@@ -61,7 +61,7 @@ SELECT * FROM cte_name;
 12. `窗口函数` 
 - MySQL 8开始支持窗口函数。在之前的版本中已存在的大部分<font color="#d83931">聚合函数</font>在MySQL 8中也可以作为窗口函数来使用。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922073017848.jpeg)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/224bb5bb78eaa3d7274b6b2f2d2f1d1d.jpeg)
 
 
 
@@ -191,7 +191,7 @@ ORDER BY city,county;
 - MySQL官方网站窗口函数的网址为https://dev.mysql.com/doc/refman/8.0/en/window-function-descriptions.html#function_row-number
 
 - 窗口函数总体上可以分为序号函数、分布函数、前后函数、首尾函数和其他函数，如下表：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922073024331.jpeg)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e78d7b93039b6a6aa737a036c02e7da5.jpeg)
 
 
 

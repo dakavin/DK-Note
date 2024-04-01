@@ -27,9 +27,9 @@ npm uninstall yarn -g  //yarn卸载
 - 配置环境变量
 - 复制bin地址：`E:\Nodejs\GlobalNodeModules\node_modules\yarn\bin`
 
-![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240329220006.png)
+![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7272b1db18d34bd65c3cd9ca2efc3ecd.png)
 
-![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240329220011.png)
+![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ac92d3c8e24af904f069a25e60e987b4.png)
 
 - 直接在cmd中，打开`yarn.cmd`
 ```shell
@@ -68,4 +68,4 @@ yarn gitcracken patcher  //输入完成后，等待几十秒就好了
 - 注意：要在AppData/Local/gitkraken/app-9.x/目录下的gitkraken.exe启动
 - 可以创建快捷方式等
 
-- 展示一张图![image.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/20240329221924.png)
+- 展示一张图![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7e31bd35a97ece29349157248a403cf5.png)

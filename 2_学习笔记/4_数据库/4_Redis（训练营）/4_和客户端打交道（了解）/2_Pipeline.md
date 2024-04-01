@@ -3,11 +3,11 @@
 
 客户端发送请求，服务端接收并处理请求，最后返回回包。假设我们要做多次操作，那实际执行会是这样：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024202839.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e6e3b01584966641e439988238678338.png)
 
 可以看到，这种客户端服务器交互模式下，我们需要一条命令结束了，再执行另一个命令，也就是说，多客户端可以并发，但是单客户端是同步的，而`一次请求的时间，其实不光受Redis本身处理性能影响，很大程度还会受网络波动影响，在客户端大量发包场景，很可能会因为波动造成性能瓶颈
 `
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024203014.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/34ac045d0bd7b018de9d2c2774e1e5c5.png)
 
 所以，有没有一种技术，能够让客户端可以将多条命令一起传递给服务端呢？
 ## 2、Pipeline技术
@@ -16,7 +16,7 @@ Pipeline，即管道技术，顾名思义，是将请求打包在一起，通过
 
 Pipeline是很成熟的技术，在很多其他组件中也有出现，比如HTTP2.0，比如ETCD，以及很多POP3协议。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024203150.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e0f15e6109054fe337fa293b33fb75af.png)
 
 Pipeline的本质，是将请求在客户端打包，然后一次发送给服务端，服务端处理完成之后，会将结果存起来，等Pipeline中所有命令都完成了，再一起回包，这样可以节约很多网络交互时间。
 

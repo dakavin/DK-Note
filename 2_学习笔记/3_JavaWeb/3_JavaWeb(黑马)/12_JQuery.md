@@ -175,7 +175,7 @@
 		* 语法： $("A B ") 选择A元素内部的所有B元素		
 	2. `子选择器`
 		* 语法： $("A > B") 选择A元素内部的所有B子元素
-		* ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075217762.png)
+		* ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/644e3874973673ec13cbae98ba27fb42.png)
 
 
 3. 属性选择器
@@ -465,7 +465,7 @@
 2. fadeOut([speed],[easing],[fn])
 3. fadeToggle([speed,[easing],[fn]])
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075228491.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ceb0ba920e1803ce9c4695603d2f4de2.png)
 
 
 
@@ -490,7 +490,7 @@
 3.` for..of`: jquery 3.0 版本之后提供的方式
 	for(元素对象 of 容器对象)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075231416.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6747ee5e032e5d1d171bcfd11573dcde.png)
 
 
 
@@ -500,7 +500,7 @@
 	* `jq对象.事件方法(回调函数)`；
 	* 注：如果调用事件方法，不传递回调函数，则会触发浏览器默认行为。
 		* 表单对象.submit();//让表单提交
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075236659.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f1866fb9e91b377b51abe32fda78707.png)
 
 
 
@@ -508,7 +508,7 @@
 	* jq对象.on("事件名称",回调函数)
 	* jq对象.off("事件名称")
 		* 如果off方法不传递任何参数，则将组件上的所有事件全部解绑
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075240331.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d06313da7ccb4397fcfcc7f10db88808.png)
 
 
 
@@ -664,11 +664,11 @@
 
 1. $.fn.extend(object) 
 	* 增强通过Jquery获取的对象的功能  $("#id")
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075246719.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/50e1ac7c8e1e533935c3f8488dddfb12.png)
 
 
 
 2. $.extend(object)
 	* 增强JQeury对象自身的功能  $/jQuery
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075249707.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5196134ec31a7fa55e0993eaa0aecaec.png)
 

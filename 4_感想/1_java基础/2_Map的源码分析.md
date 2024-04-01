@@ -576,10 +576,10 @@ public class HashMap<K,V>{
 
 ## 6.2JDK8中的源码
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010006398.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c0cc7e0477469a12ad31977be400acca.png)
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230923010010226.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9e4389516be9ef88dfc19d187a6f1344.png)
 
 
 - 创建HashMap的实例后，底层并没有初始化table数组，当首次添加(key,value)时，进行判断，如果发现table尚未初始化，则对数组进行初始化  

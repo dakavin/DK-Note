@@ -29,7 +29,7 @@ http://nginx.org/en/download.html
 
 我们再来看看第一个请求返回的响应报文：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031024808.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/744dbe9827e3da1a75b5bd6f294e5f3b.png)
 
 这里出现了一个新的头字段“Location: /index.html”，它就是 301⁄302 重定向跳转的秘密所在。
 
@@ -61,7 +61,7 @@ http://www.chrono.com/18-1?dst=nginx.org           # 错误
 http://www.chrono.com/18-1?dst=http://nginx.org    # 正确
 ```
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031024926.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e419aa83f44aa86b0632fb1a75b26d0d.png)
 
 那么，如果 301⁄302 跳转时没有 Location 字段会怎么样呢？
 
@@ -137,7 +137,7 @@ http://www.chrono.com/12-1?code=302
 
 使用 Chrome 访问这个地址，会得到“该网页无法正常运作”的结果：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031025503.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/54fccef9e9b881cbfa114b04550892e0.png)
 
 ## 5、小结
 
@@ -155,4 +155,4 @@ http://www.chrono.com/12-1?code=302
 2. 你能结合自己的实际情况，再列出几个应当使用重定向的场景吗？
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031025513.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/40e045d1d734db5463786601f9b65759.png)

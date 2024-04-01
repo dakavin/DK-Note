@@ -21,7 +21,7 @@ Redis中每个hash可以存储`2^32-1`键值对（40多亿）。
 
 删除：DEL可以删除一个Hash对象
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017211726.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e7da5a79b123caa0e731008c77063546.png)
 
 ### 3.1 写操作
 
@@ -150,11 +150,11 @@ Hash底层有两种编码结构，一个是压缩列表，一个是HASHTABLE。�
 2. Hash对象元素个数少于512个。
 
 两个条件任何一条都不满足，编码结构就用HASHTABLE
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017213237.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f92ac6bda641f286920595beac0a93c7.png)
 
-ZIPLIST之前有讲解过，其实就是在数据量较小时间数据紧凑排列，对应到Hash，就是将field-value当做entry放入ZIPLIST，结构如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017213327.png)
+ZIPLIST之前有讲解过，其实就是在数据量较小时间数据紧凑排列，对应到Hash，就是将field-value当做entry放入ZIPLIST，结构如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3339a3f80e6d569e86cd0484f4221abc.png)
 HASHTABLE在之前无序集合Set中也有应用，和Set的区别在于，在Set中value始终为NULL，但是在HSet中，是有对应的值的。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231017213436.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f3efb18bee0101cc68e2c7e6ff8ef46f.png)
 ## 5、总结
 
 Hash是字典，可以存储多个field-value的映射关系，比如学生分数、任务配置等。

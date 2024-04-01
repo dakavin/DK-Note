@@ -104,7 +104,7 @@
 	* 获取用户的输入
 	* 调用模型
 	* 将数据交给视图进行展示
-- ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074914515.png)
+- ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6c6cfbf862b1c61efe703f36a4c5971f.png)
 
 
 
@@ -151,12 +151,12 @@
 			2. requestScope 	--> request
 			3. sessionScope 	--> session
 			4. applicationScope --> application（ServletContext）
-		* ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074921225.png)
+		* ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a3a2b825ef7b50056968b664d2b5d460.png)
 
 
 	2. `${键名}`：表示依次从最小的域中查找是否有该键对应的值，直到找到为止。
 	3. `获取对象、List集合、Map集合的值`
-		- 对象：${域名称.键名.属性名}，本质上会去调用对象的getter方法![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074929856.png)
+		- 对象：${域名称.键名.属性名}，本质上会去调用对象的getter方法![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f9e448eef548aadd448f6aa1b206bdc9.png)
 		- List集合：${域名称.键名[索引]}
 		- Map集合：
 			* ${域名称.键名.key名称}
@@ -200,7 +200,7 @@
 	2. 使用when标签做判断         			相当于case
 	3. 使用otherwise标签做其他情况的声明    	相当于default
 
-3. `foreach`:相当于java代码的`for语句`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074942329.png)
+3. `foreach`:相当于java代码的`for语句`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8404cb6c125ac7067823e19c616757c0.png)
 
 ### 4.5 练习
 
@@ -266,7 +266,7 @@
 1. 界面层(表示层)：用户看的得界面。用户可以通过界面上的组件和服务器进行交互
 2. 业务逻辑层：处理业务逻辑的。
 3. 数据访问层：操作数据存储文件。
-4. ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074950952.png)
+4. ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ffa6ab2bb470ca5bf9a0784d2e773d37.png)
 
 
 
@@ -316,7 +316,7 @@ create table user(   -- 创建表
 		- 删除用户信息
 			- 简单业务逻辑操作即可
 			- `注意删除保护机制`，`还有用户名应该怎么传值问题`
-			- ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074957921.png)
+			- ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d1c9b5706c7577fa69570275d01404da.png)
 
 
 		- 增加用户信息页面add.jsp
@@ -348,7 +348,7 @@ create table user(   -- 创建表
 2. `部署运维`
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075006184.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/96cf6afea0cd4b38935efaef17af6028.png)
 
 
 
@@ -374,21 +374,21 @@ create table user(   -- 创建表
 		- 然后跳转到修改联系人的页面，并显示原有数据
 	- 修改完成后，将数据存入数据库中！！
 	- 用户的id，在updata.jsp中使用`隐藏域`进行传递
-	- ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075013758.png)
+	- ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6ace66a66459d99b49d85d280134195a.png)
 
 
 ### 6.3 复杂功能分析
 1. 删除选中
-	- 逻辑分析![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075023882.png)
+	- 逻辑分析![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a3668dba2806b83dbcc2da54f7fa51d4.png)
 	- 难点主要在获取选中的用户的id信息
 		1. 可以在table标签外层嵌套一个提交表单，用于获取所有选中的用户id信息；
 		2. 将该表单的提交事件，绑定在删除选中的按钮处；
 		3. 当删除按钮点击时，就出发该表单的提交；
 	- 优化
-		- 添加全选功能![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075036640.png)
+		- 添加全选功能![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6991b79210fbcb935e9f9e730c061aec.png)
 
 
-		- 删除保护功能，没有选中就删除的bug处理![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075045171.png)
+		- 删除保护功能，没有选中就删除的bug处理![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e42ab06fe730ab4a77b09cf99554d890.png)
 
 
 
@@ -396,23 +396,23 @@ create table user(   -- 创建表
 
 
 2. `分页查询`
-	- 好处：减轻服务内存的开销，并提升用户的体验![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075051677.png)
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075109814.png)
+	- 好处：减轻服务内存的开销，并提升用户的体验![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0fea78bbf610335ded89e31f32299cef.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3080f23b31d1eb5ca7dabaee1673d5d8.png)
 
 
 	- 代码优化：
 		1. 默认访问页面的时候，设置为第1页；
 		2. 跳转页面都跳转到FindUserByPageServlet去
-		3. 页码处高亮![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075111612.png)
+		3. 页码处高亮![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bd082d947fd14096c008bf0883e3bd7e.png)
 
 
 		4. 页码功能上下页恢复
-		5. 会有-1页超出页面，通过前端改变图片，然后通过后端限制currentPage![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075113907.png)
+		5. 会有-1页超出页面，通过前端改变图片，然后通过后端限制currentPage![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3ca1793418b555ea6cdc5d610af041c6.png)
 
 
 
 4. 复杂条件查询
-	- ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075118131.png)
+	- ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f8bc210a924af8fa412a8eb4e4db1c96.png)
 
 
 	- 直接在FindUserByPageServlet中修改即可

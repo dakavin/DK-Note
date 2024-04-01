@@ -6,7 +6,7 @@
 
 MyBatis最初是Apache的一个开源项目iBatis, 2010年6月这个项目由Apache Software Foundation迁移到了Google Code。随着开发团队转投Google Code旗下， iBatis3.x正式更名为MyBatis。代码于2013年11月迁移到Github。
 
-MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。`MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录`。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214516375.png)
+MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。`MyBatis 可以通过简单的 XML 或注解来配置和映射原始类型、接口和 Java POJO（Plain Old Java Objects，普通老式 Java 对象）为数据库中的记录`。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/986017abc87189f94977a8e75faf1a58.png)
 
 
 
@@ -56,7 +56,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
     ```
 2.  项目搭建和准备
     1.  项目搭建
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214545281.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f25d2c14161c0846e48255a342dd8be5.png)
 
 
     2.  依赖导入
@@ -106,7 +106,7 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
 
     `一般编写SQL语句的文件命名：XxxMapper.xml  Xxx一般取表名！！`
 
-    Mybatis 中的 Mapper 接口相当于以前的 Dao。但是区别在于，Mapper 仅仅只是建接口即可，我们不需要提供实现类，具体的SQL写到对应的Mapper文件，该用法的思路如下图所示：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214551791.png)
+    Mybatis 中的 Mapper 接口相当于以前的 Dao。但是区别在于，Mapper 仅仅只是建接口即可，我们不需要提供实现类，具体的SQL写到对应的Mapper文件，该用法的思路如下图所示：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/907cd314a1187f72bc7a36214b3d5482.png)
 
 
     1.  定义mapper接口
@@ -241,7 +241,7 @@ public class MyBatisTest {
         -   代表浏览器和Web服务器之间的会话。
     -   SqlSession：不依赖Web服务器，属于持久化层。
         -   代表Java程序和数据库之间的会话。
-            ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214556662.png)
+            ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/195b69b5f3033cac949d728fe93e2735.png)
 
 
 ## 二、MyBatis基本使用
@@ -287,13 +287,13 @@ settings设置项：
 #### 2.1.2 #{}形式
 
 Mybatis会将SQL语句中的#{}转换为问号占位符。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214613176.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6d0b39ba7dc439f73e35b441e45598bf.png)
 
 
 #### 2.1.3 ${}形式
 
 \${}形式传参，底层Mybatis做的是字符串拼接操作。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214620442.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/38a7c2e29597b1697be4dff7322a16fd.png)
 
 
 
@@ -314,7 +314,7 @@ User findByColumn(@Param("column") String column,
 
 #### 2.2.1 Mybatis总体机制概括
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214625731.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7d6b49e2ec660dc9536384a19b335612.png)
 
 
 
@@ -368,7 +368,7 @@ SQL语句
 
 对应关系
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214633228.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bc3941f0a286d082167056bece4cd6e7.png)
 
 
 
@@ -378,7 +378,7 @@ Mybatis会根据#{}中传入的数据，加工成getXxx()方法，通过反射�
 
 #### 2.2.5 零散的简单类型数据
 
-零散的多个简单类型参数，如果没有特殊处理，那么Mybatis无法识别自定义名称：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214656095.png)
+零散的多个简单类型参数，如果没有特殊处理，那么Mybatis无法识别自定义名称：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/97a1bf058385b1d08016c725bda8790f.png)
 
 
 
@@ -397,7 +397,7 @@ SQL语句
 
 对应关系
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214702398.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9f0def9ed9d06f23cc74bceff0bee1e7.png)
 
 
 
@@ -542,10 +542,10 @@ public class Author {
 }
 ```
 
-下面是Mybatis为常见的 Java 类型内建的类型别名。它们都是不区分大小写的，注意，为了应对原始类型的命名重复，采取了特殊的命名风格。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214715413.png)
+下面是Mybatis为常见的 Java 类型内建的类型别名。它们都是不区分大小写的，注意，为了应对原始类型的命名重复，采取了特殊的命名风格。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ebb984b1f9f4c53c41248b05e6e6cbf5.png)
 
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214717776.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4c03ef3dcbf4bb1d66f7789533c2f7db.png)
 
 
 
@@ -746,8 +746,8 @@ public void testSelectAll() {
 2.  **非自增长类型主键**
 
     而对于不支持自增型主键的数据库（例如 Oracle）或者字符串类型主键，则可以使用 selectKey 子元素：selectKey 元素将会首先运行，id 会被设置，然后插入语句会被调用！
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214726363.png)
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214728755.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/48bf0a1852a4c361fbde5bf752420906.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f7f7f4dc89638ea4d7f222c17f6fdf13.png)
 
 
 
@@ -1372,7 +1372,7 @@ public class Order {
 
     </select>
     ```
-    对应关系可以参考下图：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Snipaste_2024-03-28_02-24-56.png)
+    对应关系可以参考下图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3f6a58891a99a77c0a7d713b193f2685.png)
     
 4.  Mybatis全局注册Mapper文件
     ```xml
@@ -1470,7 +1470,7 @@ public interface CustomerMapper {
     ```
     对应关系可以参考下图：
 
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214757958.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2a017af100c6b63a01fafb5c681a25f7.png)
 
 
 4.  Mybatis全局注册Mapper文件
@@ -1546,7 +1546,7 @@ public interface CustomerMapper {
 
 经常遇到很多按照很多查询条件进行查询的情况，比如智联招聘的职位搜索等。其中经常出现很多条件不取值的情况，在后台应该如何完成最终的SQL语句呢？
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214807122.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dc8503037d06fe2ec81b42ea37112435.png)
 
 
 
@@ -1678,8 +1678,8 @@ public interface CustomerMapper {
 
 **基本用法**
 
-用批量插入举例![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214814303.png)
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214818416.png)
+用批量插入举例![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0d22ae393984f417780aacf84d316909.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b2aeecfa4197300b4c9cd5600cfe8c97.png)
 
 
 ```xml
@@ -1773,8 +1773,8 @@ Parameter 'empList' not found. Available parameters are [arg0, collection, list]
     -   可以将mapperxml文件放在mapper接口所在的包！
     -   可以在sources下创建mapper接口包一致的文件夹结构存放mapperxml文件
 
-        ![image-20230922214828609.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214828609.png)
-        ![image-20230922214839215.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214839215.png)
+        ![image-20230922214828609.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e58a0ebbe49efb0549651d94ec5936eb.png)
+        ![image-20230922214839215.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99a3d30c6ef5243b0305655238f3a319.png)
 
 
 
@@ -1892,21 +1892,21 @@ MyBatisX 是一个 MyBatis 的代码生成插件，可以通过简单的配置�
 
     在 IntelliJ IDEA 中打开插件市场，搜索 MyBatisX 并安装。
 2.  使用 IntelliJ IDEA连接数据库
-    -   连接数据库![image-20230922214905276.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214905276.png)
+    -   连接数据库![image-20230922214905276.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fddd7d66c7c5586aa9ff4b81a9f45452.png)
 
 
 
-    -   填写信息![image-20230922214912923.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214912923.png)
+    -   填写信息![image-20230922214912923.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5675681efa73e586fab2c311bdcbfd84.png)
 
-    -   展示库表![image-20230922214917012.png](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214917012.png)
-
-
-
-    -   逆向工程使用![image-20230922214921795.png|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214921795.png)
-![image-20230922214928981.png|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214928981.png)
+    -   展示库表![image-20230922214917012.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8ea0be52476aabc12312b2078d30b8c.png)
 
 
-3.  查看生成结果![image-20230922214955291.png|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922214955291.png)
+
+    -   逆向工程使用![image-20230922214921795.png|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f34ee2a18a610b8198c9105eca6dcc1.png)
+![image-20230922214928981.png|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/04a8d46e1e3d294f3b3f3db3cc2978ec.png)
+
+
+3.  查看生成结果![image-20230922214955291.png|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b87fd3db111fc94fa6a0b2972a5b8c61.png)
 
 4.  逆向工程案例使用
 

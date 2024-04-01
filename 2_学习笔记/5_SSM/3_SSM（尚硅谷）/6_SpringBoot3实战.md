@@ -39,7 +39,7 @@ SpringBoot的主要目标是：
     5.  **启动项目**
 
 2.  创建项目
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220118239.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a11139ce2a90e3138521fcc5996c9702.png)
 
 
 3.  添加依赖
@@ -115,7 +115,7 @@ public class HelloController {
     ```
 
 6.  启动测试
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220125584.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4efd40745dc4542cadc21df8c2ac05c0.png)
 
 
 ### 1.4 入门总结
@@ -124,14 +124,14 @@ public class HelloController {
     -   每个boot项目都有一个父项目`spring-boot-starter-parent`
     -   parent的父项目是`spring-boot-dependencies`
     -   父项目 版本仲裁中心，`把所有常见的jar的依赖版本都声明好了`。
-    -   比如：`mysql-connector-j`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220143724.png)
+    -   比如：`mysql-connector-j`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f07b86e9080502d1d42c6f6f29c6d4f8.png)
 
 
 2.  启动器(Starter)是何方神圣？
 
     Spring Boot提供了一种叫做Starter的概念，它是`一组预定义的依赖项集合`，旨在简化Spring应用程序的配置和构建过程。Starter包含了一组相关的依赖项，以便在启动应用程序时自动引入所需的库、配置和功能。
 
-	例如：上例中的`spring-boot-starter-web`启动器，就预定义了web需要的srping-webmvc、servlet、jackson等资源![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220150540.png)
+	例如：上例中的`spring-boot-starter-web`启动器，就预定义了web需要的srping-webmvc、servlet、jackson等资源![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b21344b98a76ccf0f7bcdd6b56516fa3.png)
 
 
 
@@ -145,7 +145,7 @@ public class HelloController {
     d.  `快速启动和开发应用程序`：Spring Boot Starter使得从零开始构建一个完整的Spring Boot应用程序变得容易。它提供了主要领域（如Web开发、数据访问、安全性、消息传递等）的Starter，帮助开发者快速搭建一个具备特定功能的应用程序原型。
     
     e.  `模块化和可扩展性`：Spring Boot Starter的组织结构使得应用程序的不同模块可以进行分离和解耦。每个模块可以有自己的Starter和依赖项，使得应用程序的不同部分可以按需进行开发和扩展。
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220157878.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/85834ae64699bd0b043ad9c759956d09.png)
 
 
     Spring Boot提供了许多预定义的Starter，例如spring-boot-starter-web用于构建Web应用程序，spring-boot-starter-data-jpa用于使用JPA进行数据库访问，spring-boot-starter-security用于安全认证和授权等等。
@@ -186,7 +186,7 @@ SpringBoot工程下，进行统一的配置管理，你想设置的任何参数�
 
 配置文件应该放置在Spring Boot工程的`src/main/resources`目录下。这是因为`src/main/resources`目录是Spring Boot默认的类路径（classpath），配置文件会被自动加载并可供应用程序访问。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220206232.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f38b4fbeb1c78421a5f38445cb498726.png)
 
 
 
@@ -200,7 +200,7 @@ SpringBoot工程下，进行统一的配置管理，你想设置的任何参数�
 -   位置：resources文件夹下，必须命名application  后缀 .properties / .yaml /  .yml 。
 -   如果同时存在application.properties | application.yml(.yaml) , properties的优先级更高。
 -   配置基本都有默认值。
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220213225.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/27a06e2cfee0acbfaa26bb6c23ec9f48.png)
 
 
 
@@ -298,7 +298,7 @@ public class DataSourceProperties {
     }
     ```
     浏览器访问路径，控制台查看效果
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220221302.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/355dcff810bffc58c383dd2e41e14f0f.png)
 
 ### 2.3 YAML配置文件使用
 
@@ -438,7 +438,7 @@ settings:
     }
     ```
     浏览器访问路径，控制台查看效果
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220234134.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/355dcff810bffc58c383dd2e41e14f0f.png)
 
 
 - `@Value注解的局限性`
@@ -585,7 +585,7 @@ settings:
         active: dev
     ```
 4.  测试效果
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220302304.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dd6f2911c790fadd7e7ba440e3ce6054.png)
 
     **注意 :**
 
@@ -669,7 +669,7 @@ public class UserController {
 }
     ```
 6.  访问测试
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220309913.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/63afb877edbd3024e8d1364b8c620981.png)
 ### 3.2 web相关配置
 
 位置：application.yml
@@ -736,7 +736,7 @@ server:
     **· classpath:/public/**
 
     我们只要静态资源放在这些目录中任何一个，SpringMVC都会帮我们处理。 我们习惯会把静态资源放在classpath:/static/ 目录下。在resources目录下创建index.html文件
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220317466.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e53fbe6bae8296d0f0e6a20c0c85ed68.png)
 
     打开浏览器输入 : [http://localhost:8080/index.html](http://localhost:8080/index.html "http://localhost:8080/index.html")
 
@@ -756,7 +756,7 @@ spring:
 	  # 配置静态资源地址,如果设置,会覆盖默认值
 	  static-locations: classpath:/webapp
     ```
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220322787.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/41d6071600cfa41db737304e55ceac5f.png)
 
 
 
@@ -806,7 +806,7 @@ public class MvcConfig implements WebMvcConfigurer {
 }
     ```
 3.  拦截器效果测试
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220329814.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/694bb4ec48570cf9871144e8b2cfbeca.png)
 
 
 ## 四、SpringBoot3整合Druid数据源
@@ -964,7 +964,7 @@ public class UserController {
     ```java
     com.alibaba.druid.spring.boot3.autoconfigure.DruidDataSourceAutoConfigure
     ```
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220337562.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e4c6010efe6784963447a12550a9c870.png)
 ## 五、SpringBoot3整合Mybatis
 
 ### 5.1 MyBatis整合步骤
@@ -1170,7 +1170,7 @@ public class LogAdvice {
 
 ## 六、SpringBoot3项目打包和运行
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220400193.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/97f710e8f170f083bd08d1c156925366.png)
 
 
 ### 6.1 添加打包插件
@@ -1195,7 +1195,7 @@ public class LogAdvice {
 
 可以在编译的target文件中查看jar包
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220407189.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f9c3fe01bd20758c6245275dd69d4bf4.png)
 
 
 
@@ -1215,7 +1215,7 @@ public class LogAdvice {
 
 启动和测试：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220421309.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7a8601072d31ba851b0877a43d6700b3.png)
 
 
 

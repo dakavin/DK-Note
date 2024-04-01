@@ -10,7 +10,7 @@ ZSet就是有序集合，也叫Sorted Set，是一组按关联积分有序的字
 
 ## 3、常用操作
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018193607.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/30ac57ecd10a6fd0575a6da62ad1d263.png)
 ### 3.1 写操作
 
 #### 3.1.1 ZADD
@@ -29,7 +29,7 @@ ZSet就是有序集合，也叫Sorted Set，是一组按关联积分有序的字
 - LT：更新新的分值比当前分值小的成员，不存在则新增
 - GT：更新新的分值比当前分值大的成员，不存在则新增
 
-此时集合中的有序数据如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018193902.png)
+此时集合中的有序数据如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8af08b49de4ff6c9762ac5cd89d89de7.png)
 ZADD操作已存在的member就是更新它，所以不要被ZADD名字误导，其既有add也有update能力。
 
 注意这里虽然返回值是1，表示新增member只有user4一个，更新的user3不计入返回值，但是数据是更新成功的。
@@ -39,7 +39,7 @@ ZADD操作已存在的member就是更新它，所以不要被ZADD名字误导，
 // 此处为添加了多少个元素
 ```
 
-此时集合中的有序数据如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018194044.png)
+此时集合中的有序数据如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/07ca0aa674cbff441c0e08f340e740ba.png)
 
 #### 3.1.2 ZREM
 
@@ -51,11 +51,11 @@ ZADD操作已存在的member就是更新它，所以不要被ZADD名字误导，
 (integer) 1
 ```
 
-此时集合中的有序数据如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018194130.png)
+此时集合中的有序数据如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1969587c5f3f477a686c57fdc38241d5.png)
 
 ### 3.2 读操作
 
-读操作我们以以下状态来进行讲解。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018194152.png)
+读操作我们以以下状态来进行讲解。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6a2c29027e9a2bb6c977f043a3a5dfc3.png)
 #### 3.2.1 ZCARD
 
 语法：ZCARD key
@@ -132,10 +132,10 @@ ZADD操作已存在的member就是更新它，所以不要被ZADD名字误导，
 
 ZSet底层编码有两种，一种是ZIPLIST，一种是SKIPLIST+HASHTABLE
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018195313.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/092fd5e319821f37e6f7bd534138832e.png)
 
 ZIPLIST我们可以说很熟悉了，之前List、Hash中都有打过交道，同样在ZSet中ZIPLIST也是用于数据量比较小的时候，便于节约内存，结构如下：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018195710.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4af0a16d1af8a69cd7e6cd6c48f2ef66.png)
 
 如果满足如下规则，ZSet就用ZIPLIST编码：
 1. 列表对象保存的所有`字符串对象（不包括score）长度都小于64字节`；
@@ -145,11 +145,11 @@ ZIPLIST我们可以说很熟悉了，之前List、Hash中都有打过交道，�
 
 SKIPLIST是一种快速查找的多级链表结构，通过SKIPLIST可以快速定位数据所在。它的排名操作、范围查询性能都很高，在前面的章节，我们已经介绍过SKIPLIST，如果有遗忘，可以回头看看
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018200811.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/152f8468533b8c38ece0ec7ba63a231d.png)
 
 处理SKIPLIST，`Redis还使用了HASHTABLE来配合查询`，这样可以在O(1)时间复杂度查到成员的分数值
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231018200849.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d20b83f44f7a1ce63f056d2a7ecf6635.png)
 
 `补充：`
 

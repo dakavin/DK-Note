@@ -9,7 +9,7 @@
 
 > 各个字符集的兼容性
 
-![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204020.png)
+![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2905e0762e77a8ffee17fd227315ec0e.png)
 
 - 由上图得知,上述字符集都兼容了ASCII
     
@@ -18,8 +18,8 @@
 
 > 设置项目文件的字符集要使用一个支持中文的字符集
 
-+ 查看当前文件的字符集![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204104.png)
-+ 查看项目字符集 配置,将Global Encoding 全局字符集,Project Encoding 项目字符集, Properties Files 属性配置文件字符集设置为UTF-8![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204119.png)
++ 查看当前文件的字符集![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/391c5161fbc55afa6fe0108127cc92db.png)
++ 查看项目字符集 配置,将Global Encoding 全局字符集,Project Encoding 项目字符集, Properties Files 属性配置文件字符集设置为UTF-8![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a95023f7ec6612310a564bcb27d5d546.png)
 > 当前视图文件的字符集通过<meta charset="UTF-8"> 来告知浏览器通过什么字符集来解析当前文件
 
 ``` html
@@ -39,11 +39,11 @@
 
 > 在tomcat10.1.7这个版本中,修改 tomcat/conf/logging.properties中,所有的UTF-8为GBK即可
 
-+ 修改前![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204155.png)
-+ 修改后![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204208.png)
++ 修改前![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bab5d5f0a2bdac6915ef3de52371c8ef.png)
++ 修改后![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/992abb26749bfc3fe7972ad6fc1e9b92.png)
 > sout乱码问题,设置JVM加载.class文件时使用UTF-8字符集
 
-- 设置虚拟机加载.class文件的字符集和编译时使用的字符集一致![|](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204316.png)
+- 设置虚拟机加载.class文件的字符集和编译时使用的字符集一致![||380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/18b826c1d59ae2331b98c16bb977628b.png)
 ### 1.3 请求乱码
 
 #### 1. GET请求方式乱码分析
@@ -55,13 +55,13 @@
 
 > GET请求方式乱码演示
 
-+ 浏览器解析的文档的`<meta charset="GBK" /> `![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204658.png)
-+ GET方式提交时,会对数据进行URL编码处理 ,是`将GBK 转码为 "百分号码"`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204711.png)
-+ tomcat10.1.7 默认使用UTF-8对URI进行解析,造成前后端使用的字符集不一致,出现乱码![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204754.png)
++ 浏览器解析的文档的`<meta charset="GBK" /> `![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3a75786d284abb032f68e6d614abe5f9.png)
++ GET方式提交时,会对数据进行URL编码处理 ,是`将GBK 转码为 "百分号码"`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/36e59cd8cb284ffa9133b575686dd651.png)
++ tomcat10.1.7 默认使用UTF-8对URI进行解析,造成前后端使用的字符集不一致,出现乱码![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4f7a7ddd46f9196f7ce928d1f534fa5f.png)
 > GET请求方式乱码解决
 
-- 方式1 :设置GET方式提交的编码和Tomcat10.1.7的URI默认解析编码一致即可 (推荐)![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204815.png)
-- 方式2 : 设置Tomcat10.1.7的URI解析字符集和GET请求发送时所使用URL转码时的字符集一致即可,修改conf/server.xml中 Connecter 添加 URIEncoding="GBK" (不推荐)![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317204839.png)
+- 方式1 :设置GET方式提交的编码和Tomcat10.1.7的URI默认解析编码一致即可 (推荐)![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/04473298ad8bea31a3fb55a7af4b02b9.png)
+- 方式2 : 设置Tomcat10.1.7的URI解析字符集和GET请求发送时所使用URL转码时的字符集一致即可,修改conf/server.xml中 Connecter 添加 URIEncoding="GBK" (不推荐)![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/81bb22be6505bce323acb2a8840e7518.png)
 
 #### 2. POST请求方式乱码分析
 
@@ -76,16 +76,16 @@
 
 > POST方式乱码演示
 
-+ POST请求请求体受到了<meta charset="字符集"/> 的影响![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205004.png)
++ POST请求请求体受到了<meta charset="字符集"/> 的影响![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f5c5cfd34d6dd716bb6a04e8fe0e88e1.png)
 
-+ 请求体中,将GBK数据进行 URL编码![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205010.png)
++ 请求体中,将GBK数据进行 URL编码![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3245d4d68b47911e6d6971165508e350.png)
 
-+ 后端默认使用UTF-8解析请求体,出现字符集不一致,导致乱码![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205017.png)
++ 后端默认使用UTF-8解析请求体,出现字符集不一致,导致乱码![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9f58e0fd9373492ad55cad1f7fd0749d.png)
 > POST请求方式乱码解决
 
-+ 方式1 : 请求时,使用UTF-8字符集提交请求体 (推荐)![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205054.png)
++ 方式1 : 请求时,使用UTF-8字符集提交请求体 (推荐)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/db7af758f582c4a99aaa74ab04e230d4.png)
 
-+ 方式2 : 后端在获取参数前,设置解析请求体使用的字符集和请求发送时使用的字符集一致 (不推荐)![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205102.png)
++ 方式2 : 后端在获取参数前,设置解析请求体使用的字符集和请求发送时使用的字符集一致 (不推荐)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8a24f66eb47c43558b3507f4edd7bad7.png)
 
 ### 1.4 响应乱码
 
@@ -96,16 +96,16 @@
 
 > 响应乱码演示
 
-+ 服务端通过response对象向响应体添加数据![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205355.png)
-+ 浏览器接收数据解析乱码![|400](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205403.png)
++ 服务端通过response对象向响应体添加数据![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/af734d435069adbe8f35e4fcf3b2bc9a.png)
++ 浏览器接收数据解析乱码![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fd408bd785d53d46641c80fb50869687.png)
 > 响应乱码解决
 
 + 方式1 : 手动设定浏览器对本次响应体解析时使用的字符集(不推荐)
 	+ edge和 chrome浏览器没有提供直接的比较方便的入口,不方便
 
-+ 方式2: 后端通过设置响应体的字符集和浏览器解析响应体的默认字符集一致(不推荐)![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205440.png)
++ 方式2: 后端通过设置响应体的字符集和浏览器解析响应体的默认字符集一致(不推荐)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e00550829caa17d24190d5ececf426c.png)
 
-方式3: 通过设置content-type响应头,告诉浏览器以指定的字符集解析响应体(推荐)![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205450.png)
+方式3: 通过设置content-type响应头,告诉浏览器以指定的字符集解析响应体(推荐)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/30e0217800467cb83d3328e70176916c.png)
 ## 2、 路径问题
 
 > 相对路径和绝对路径
@@ -138,7 +138,7 @@
 
 ### 2.1 前端路径问题
 
-前端项目结构![|200](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240317205654.png)
+前端项目结构![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d2948b1ae1d4638075bd937938e3ac4.png)
 #### 1 相对路径
 
 > 相对路径情况1:`web/index.html中引入web/static/img/logo.png`

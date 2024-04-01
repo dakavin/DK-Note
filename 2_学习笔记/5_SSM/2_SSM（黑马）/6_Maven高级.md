@@ -25,7 +25,7 @@
     - `com.blog.dao`存放的是Dao接口，因为使用的是Mapper接口代理方式，所以没有实现类包
     - `com.blog.service`存的是Service接口，`com.blog.service.impl`存放的是Service实现类
 - 那我们现在就可以把这些包按照功能拆分成若干个子模块，方便模块之间的相互调用，接口供销
-- 这样的话，项目中的每一层都可以单独维护，也可以很方便的被别人使用。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212551101.png)
+- 这样的话，项目中的每一层都可以单独维护，也可以很方便的被别人使用。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8d69d34a207692f1323528019545d7eb.png)
 
 
 
@@ -35,7 +35,7 @@
 前面我们已经完成了SSM整合，接下来，我们就基于SSM整合的项目来实现对项目的拆分。
 ### 2.1 环境准备
 
-复制一份之前的ssm项目，重命名为`maven_01_ssm`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212558137.png)
+复制一份之前的ssm项目，重命名为`maven_01_ssm`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c74caba1bc99426dd36f6f427d54104.png)
 
 
 ### 2.2 抽取domain层
@@ -154,7 +154,7 @@
 ```
 ## 1、依赖传递与冲突问题
 
-首先我们要明白一点：依赖是具有传递性的![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212611002.png)
+首先我们要明白一点：依赖是具有传递性的![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e7a372822e22616315d6cb997f80398a.png)
 
 
 说明：A代表自己的项目；B，C，D，E，F，G代表的是项目所依赖的jar包；D1和D2、E1和E2代表是相同jar包的不同版本
@@ -259,7 +259,7 @@
 我们的项目已经从以前的单模块，变成了现在的多模块开发。项目一旦变成了多模块开发以后，就会引发一些问题，在这一节中我们主要会学习两个内容`聚合`和`继承`，用这两个知识来解决下分模块后的一些问题。
 ## 1、聚合
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212619169.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0ef5c220a4ab40c66e16a7d4b81b7e8c.png)
 
 
 
@@ -326,7 +326,7 @@
 ```
 
 - `步骤四：`使用聚合统一管理项目  
-	在maven面板上点击compile，会发现所有受管理的项目都会被执行编译，这就是聚合工程的作用![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212624276.png)
+	在maven面板上点击compile，会发现所有受管理的项目都会被执行编译，这就是聚合工程的作用![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d269fa90a5715b9feae6292125c2f06d.png)
 
 
 	说明：聚合工程管理的项目在进行运行的时候，会按照项目与项目之间的依赖关系来自动决定执行的顺序和配置的顺序无关。  
@@ -335,7 +335,7 @@
 那么聚合的知识我们就讲解完了，最后总结一句话就是，聚合工程主要是用来管理项目。
 ## 2、继承
 
-我们已经完成了使用聚合工程去管理项目，聚合工程进行某一个构建操作，其他被其管理的项目也会执行相同的构建操作。那么接下来，我们再来分析下，多模块开发存在的另外一个问题，`重复配置`的问题，我们先来看张图:![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212629916.png)
+我们已经完成了使用聚合工程去管理项目，聚合工程进行某一个构建操作，其他被其管理的项目也会执行相同的构建操作。那么接下来，我们再来分析下，多模块开发存在的另外一个问题，`重复配置`的问题，我们先来看张图:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/95c3d5a89d72caa0fd9c053546be0af3.png)
 
 
 - `spring-webmvc`、`spring-jdbc`在三个项目模块中都有出现，这样就出现了重复的内容
@@ -472,7 +472,7 @@
 - 那么现在我们就可以解决了刚才提到的第一个问题，将子项目中的公共jar包抽取到父工程中进行统一添加依赖，这样做的可以简化配置，并且当父工程中所依赖的jar包版本发生变化，所有子项目中对应的jar包版本也会跟着更新。
     
 - `步骤四：`优化子项目依赖版本问题  
-    如果把所有用到的jar包都管理在父项目的pom.xml，看上去更简单些，但是这样就会导致有很多项目引入了过多自己不需要的jar包。如上面看到的这张图:![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212635623.png)
+    如果把所有用到的jar包都管理在父项目的pom.xml，看上去更简单些，但是这样就会导致有很多项目引入了过多自己不需要的jar包。如上面看到的这张图:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/95c3d5a89d72caa0fd9c053546be0af3.png)
 
 
 	如果把所有的依赖都放在了父工程中进行统一维护，就会导致ssm_order项目中多引入了`spring-test`的jar包，如果这样的jar包过多的话，对于ssm_order来说也是一种”负担”。
@@ -861,7 +861,7 @@ jdbc.password=${jdbc.password}
 这一小节，主要会讲两个内容，分别是`多环境开发`和`跳过测试`
 ## 1、多环境开发
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212644461.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7d9a49449eb831a212049118af1d2ca9.png)
 
 
 
@@ -947,7 +947,7 @@ maven提供配置多种环境的设定，帮助开发者在使用过程中快速
 - `步骤五：`命令行实现环境切换  
     在命令后加上环境id`mvn install -P env_test`
 
-- `步骤六：`执行安装并查看env_test环境是否生效  ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212653572.png)
+- `步骤六：`执行安装并查看env_test环境是否生效  ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/64d87b922d70a3293f2ef20431ca50b3.png)
 
 
     查看到的结果为`jdbc:mysql://127.3.3.3:3306/ssm_db`
@@ -986,7 +986,7 @@ mvn 指令 -P 环境定义ID
 遇到上面这些情况的时候，我们就想`跳过测试执行下面的构建命令`，具体实现方式有很多：
 
 - `方式一：`IDEA工具实现跳过测试  
-    IDEA的maven面板上有一个按钮，点击之后可以跳过测试，不过此种方式会跳过所有的测试，如果我们想更精细的控制哪些跳过，哪些不跳过，那么就需要使用配置插件的方式来完成了![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212656689.png)
+    IDEA的maven面板上有一个按钮，点击之后可以跳过测试，不过此种方式会跳过所有的测试，如果我们想更精细的控制哪些跳过，哪些不跳过，那么就需要使用配置插件的方式来完成了![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1b5572465e9df48dfab2d65c35c8291b.png)
 
 
 
@@ -1026,7 +1026,7 @@ mvn 指令 -P 环境定义ID
 
 ## 1、私服简介
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212701054.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4237f51e23af7cb45201036ae5c0c515.png)
 
 
 
@@ -1052,29 +1052,29 @@ mvn 指令 -P 环境定义ID
     - 下载地址：[https://help.sonatype.com/repomanager3/download](https://help.sonatype.com/repomanager3/download)
 
 关于nexus的下载安装和初次登录，这里就不介绍了
-- 下载解压两个文件夹即可![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212709941.png)
+- 下载解压两个文件夹即可![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/409018df9f70fd16d05a01e2fb9e21ae.png)
 
 
-- 启动Nexus，进入nexus中的bin目录下，打开cmd![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212711636.png)
+- 启动Nexus，进入nexus中的bin目录下，打开cmd![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b486888722c240010e6d525eab47d75e.png)
 
 
-- 出现如下文字显示，即为启动成功，打开浏览器，输入如下地址![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212720596.png)
+- 出现如下文字显示，即为启动成功，打开浏览器，输入如下地址![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9467d87b9f97f80e6d3692dcff4c6962.png)
 
 
-- 点击登录按钮，根据提示输入账户和密码![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212722880.png)
+- 点击登录按钮，根据提示输入账户和密码![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/70a286f9e1c706305ad5500b86b725a3.png)
 
 
-- 修改密码为abc123，并允许匿名访问![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212725375.png)
+- 修改密码为abc123，并允许匿名访问![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ff722f626872ac72372cc02bc8837ab7.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212731212.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2a29bca735ad81a1fa65f39492450762.png)
 
 
-- 总结![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212738539.png)
+- 总结![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/953d9719ea9433fcd079b9741f6342f2.png)
 
 
 ## 2、私服仓库分类
 
-私服资源操作流程分析:![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212755794.png)
+私服资源操作流程分析:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3c92def1e0dd1c0d4ba1acf98775b846.png)
 
 
 1. 在没有私服的情况下，我们自己创建的服务都是安装在Maven的本地仓库中
@@ -1106,7 +1106,7 @@ mvn 指令 -P 环境定义ID
 |仓库组|group|为仓库编组简化下载操作|下载|
 ## 3、 本地仓库访问私服配置
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212801118.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/05b1cc42a26f2f43a12bea1d333aa7fd.png)
 
 
 - 我们通过IDEA将开发的模块上传到私服，中间是要经过本地Maven的
@@ -1118,11 +1118,11 @@ mvn 指令 -P 环境定义ID
 ---
 
 - `步骤一：`私服上配置仓库  
-    新建两个仓库，type选hosted，version policy 一个选release，一个选snapshot![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212808214.png)
+    新建两个仓库，type选hosted，version policy 一个选release，一个选snapshot![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8196aca3adb1a9b370faf1e6b635e392.png)
 
 
     
-- `步骤二：`配置本地Maven对私服的访问权限![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212814075.png)
+- `步骤二：`配置本地Maven对私服的访问权限![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/244ae9ae92f25444c2de9c320fc7db71.png)
 
 
 ```xml
@@ -1140,7 +1140,7 @@ mvn 指令 -P 环境定义ID
 ```
 
 - `步骤三：`配置私服的访问路径
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212822298.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/27439b0677e60c2089fc8d963dacda7e.png)
 
 
 ```xml
@@ -1181,7 +1181,7 @@ mvn 指令 -P 环境定义ID
 - 要发布的项目都需要配置`distributionManagement`标签，要么在自己的pom.xml中配置，要么在其父项目中配置，然后子项目中继承父项目即可。
 - 如果报401错误，尝试将maven的setting.xml文件复制到`C:\Users\username\.m2`目录下，然后在重新进行deploy
 
-发布成功，在私服中就能看到了![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922212833396.png)
+发布成功，在私服中就能看到了![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b92d135571842e20cd63613b0e17cdad.png)
 
 
 

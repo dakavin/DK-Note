@@ -16,7 +16,8 @@ StringBuilder、StringBuffer的API是完全一致的，并且很多方法与Stri
 > - 当append和insert时，如果原来value数组长度不够，可扩容。
 >
 > - 如上(1)(2)(3)(4)(9)这些方法支持`方法链操作`。原理：
->	![](assets/image-20230922020103193.png)
+>	![image-20230922020103193.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7049ba6e27ba5b8a5fea1b300cd38e25.png)
+
 
 ## 2、其它API
 

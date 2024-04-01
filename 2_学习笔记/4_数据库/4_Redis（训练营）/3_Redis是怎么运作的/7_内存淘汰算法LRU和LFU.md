@@ -10,7 +10,7 @@ LRU一直以来都是一个非常流行的资源淘汰算法，为了减少内�
 
 如果为所有数据维护一个顺序列表，实际就是做一个双向链表，但是如果Redis数据稍微多些，这个链表就是巨大的成本，对于Redis而言，内存是最宝贵的，所以Redis选择了近似LRU算法。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023203954.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/76b4c148163a6057bd78005d910cedf3.png)
 
 ## 3、Redis近似LRU算法
 
@@ -41,14 +41,14 @@ Redis3.0对近似LRU算法进行了一些优化。
 
 随后`每次随机选取的key只有活性比池子里活性最小的key还小时才会放入池中`，当`池子满`了，如果`有新的key需要分区，则将池中活性最大的key移除`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023205119.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bd5db29b067adea3d814bbea2aa5173c.png)
 
 通过池子存储，在池子里的数据会越来越接近真实的活性最低，所以其表现也非常接近真正的lRU，下面我们来看看LRU算法对比，从其中也能看出相同结论。
 
 ## 4、LRU算法对比
 
 这是Redis官方做测试之后的效果图：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023205303.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e1dcc8d3f1d5f8471aa426f222e60ed5.png)
 
 可以看到途中有三种不同颜色的点：
 1. 浅灰色是被淘汰的数据
@@ -66,7 +66,7 @@ LFU淘汰算法，即Least Frequently Used，最不频繁淘汰算法，顾名�
 ## 2、为什么4.0引入LFU
 
 LRU本身已经能解决大部分问题，但是脱离频率，只谈最近访问，在部分场景是得不到我们希望的结果，比如：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023211519.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d99a1112947ff60d14bcbab133d5735b.png)
 
 如上所示，key niuniu频率很高，key mart虽然是最近访问的，但是实际频率低（我们假设没有其他key的干扰），如果内存满了，会淘汰key niuniu
 
@@ -76,13 +76,13 @@ LRU本身已经能解决大部分问题，但是脱离频率，只谈最近访�
 ## 3、LFU
 
 我们复习下redisObject，其结构如下：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023211723.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d9447482ba197c96edb21c2e5f099d6f.png)
 
 如果使用LRU，那么redisObject中lru字段，就是用来存储最近访问时间的，这个字段长度是LRU_BITS，这个值一致都是24位。
 
 如果是LFU、因为LRU、LFU是不会同时开启，所以两者可以说是互斥，基于这种情况，加上节约内存的考虑，`Redis在LFU策略下复用lru字段，还是用它来表示LFU的信息，不过将24拆解，高16bit存储ldt（Last Decrement Time），低8bit存储logc（Logistic Counter）`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023211918.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8521ecaa6338cc0cf909ecc99e73eb24.png)
 
 如图所示，高的16位保存了上次访问时间戳，因为少了8位，所以LFU时间精度是1分钟，不然用秒的话2^16次方只能表示65536秒，后8位存储的是一个访问计数。
 
@@ -98,7 +98,7 @@ LRU本身已经能解决大部分问题，但是脱离频率，只谈最近访�
 
 为了进一步理解，我们来看看源码是怎么写的。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023212958.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/82063e25e76579845c57ef12e70be7a5.png)
 
 LFU_INIT_VAL初始值为5
 /#define LFU_INIT_VAL 5
@@ -108,7 +108,7 @@ LFU_INIT_VAL初始值为5
 
 ### 3.2 LFU数据更新（发生在某个Key被访问到）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023213219.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/11ce5a4c9d1bba6777e7b48f9fbc2d7d.png)
 
 #### 3.2.1 第一步，计算次数衰减
 
@@ -126,7 +126,7 @@ LFU_INIT_VAL初始值为5
 
 默认是10，需要1M流量才能达到最大值。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231023213608.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6013c8172524cb12ece0bca5ac3d667d.png)
 
 #### 3.2.3 第三步，更新
 

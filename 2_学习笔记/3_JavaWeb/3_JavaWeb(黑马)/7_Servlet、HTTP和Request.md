@@ -30,7 +30,7 @@
 	* Servlet就是一个接口，定义了Java类`被浏览器访问到(tomcat识别)的规则`。
 	* 将来我们自定义一个类，`实现Servlet接口，复写方法`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Servlet.bmp)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f95565501404d53f22a7364194f560fb.bmp)
 
 ### 1.2 快速入门
 
@@ -61,7 +61,7 @@
 3. 如果有，则在找到对应的`<servlet-class>`全类名
 4. tomcat会将字节码文件加载进内存，并且创建其对象
 5. 调用其方法
-6. 图解执行原理![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Servlet%E6%89%A7%E8%A1%8C%E5%8E%9F%E7%90%86.bmp)
+6. 图解执行原理![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e7ba740d3eae8330feb611baccb79fc8.bmp)
 
 - `结论`：
 	- `我们写的Servlet类的实现类，不需要创建对象，也不需要调用方法`
@@ -80,7 +80,7 @@
 					* `<load-on-startup>`的值为负数，默认情况
 				2. 在服务器启动时，创建
 					* `<load-on-startup>`的值为0或正整数
-					* 有些Servlet加载需要依赖于其他Servlet，这个时候，其他的Servlet可以使用这个方法![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074529675.png)
+					* 有些Servlet加载需要依赖于其他Servlet，这个时候，其他的Servlet可以使用这个方法![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/177b0d8567af8ce7bfac90acdb9ab5e4.png)
 
 
 
@@ -153,7 +153,7 @@ HttpServlet  -- 抽象类，继承GenericServlet
 	2. 复写doGet/doPost方法
 
 - `HttpServlet的原理`
-- `就是把service方法中判断请求方式给封装称为doGet/doPost方法`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074548068.png)
+- `就是把service方法中判断请求方式给封装称为doGet/doPost方法`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/17c42fab8bf7ee6ff931e5146a0ecaa8.png)
 ### 1.7 Servlet访问路径
 
 - `urlpartten:Servlet访问路径`
@@ -201,11 +201,11 @@ HttpServlet  -- 抽象类，继承GenericServlet
 	请求头名称: 请求头值
 	* 常见的请求头：
 		1. User-Agent：浏览器告诉服务器，我访问你使用的浏览器版本信息
-			* 可以在服务器端获取该头的信息，`解决浏览器的兼容性问题`![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074606519.png)
+			* 可以在服务器端获取该头的信息，`解决浏览器的兼容性问题`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f9089ff30228cb4f409f9d41f963ac7d.png)
 		2. Referer：http://localhost/login.html
 			* `告诉服务器，我(当前请求)从哪里来？`
 				* 作用：
-					- 防盗链+统计工作![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074615062.png)
+					- 防盗链+统计工作![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/de078889b07e7be2bb779ca5acff3eb2.png)
 
 1. `请求空行`
 	空行，就是用于`分割POST请求的请求头和请求体的`。
@@ -241,7 +241,7 @@ username=zhangsan
 
 1. `request和response对象是由服务器创建的`。我们来使用它们
 2. request对象是来`获取请求消息`，response对象是来`设置响应消息`
-3. 原理![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074623340.png)
+3. 原理![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aaad98175e8417ccb3047f54927a63f1.png)
 
 ### 3.2 request对象继承体系结构
 
@@ -475,7 +475,7 @@ public class FailServlet extends HttpServlet {
 
 
 - `案例文件结构`
-- ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922074640919.png)
+- ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c1264d45d148361a424a921588da1b99.png)
 
 
 

@@ -4,9 +4,9 @@
 
 - `步骤一：创建一个springboot项目`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231916973.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ea1a369c40fc47b65748a9c172024996.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231921910.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ea1a369c40fc47b65748a9c172024996.png)
 
 - `步骤二：另外添加项目需要的RocketMQ依赖`
 
@@ -63,23 +63,23 @@ public void testSimpleMsg() throws Exception {
 
 运行后查看控制台
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231935215.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eb3a082c27ef6b4331383f956437efab.png)
 
 - `步骤五：查看rocketMq的控制台`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231938761.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/47ef36cf40c3984d6ccc629537f38f12.png)
 
 查看消息细节
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231942613.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f813180afe74a0dfb22031eca9d3b6fc.png)
 
 ## 1.2 搭建rocketmq-consumer（消息消费者）
 
 - `步骤一：创建一个springboot项目`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231951146.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/55542a497c5aea419b51bb2e793c4d9e.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922231956031.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8c7b4f20d54f30688d61a01a879545ed.png)
 
 - `步骤二：另外添加项目需要的RocketMQ依赖`
 - 项目完整的pom.xml文件如下
@@ -140,7 +140,7 @@ public class SimpleMsgListener implements RocketMQListener<MessageExt> {
 
 查看控制台，发现我们已经监听到消息了
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232007782.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0d8831b175aed5dc498ca6654788bdb4.png)
 
 # 二、发送对象和集合消息
 
@@ -241,13 +241,13 @@ public class ObjMsgListener implements RocketMQListener<Order> {
 
 对象消息已经监听到了
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232019773.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/609c71502e6c49ed8f2c6aeef56e4a15.png)
 
 ## 2.2 发送集合消息
 
 和对象消息同理，创建一个Order的集合，发送出去，监听方注意修改泛型中的类型为Object即可，这里就不做重复演示了
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232028433.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ac35e6e898b77eab7fc1131d2487e323.png)
 
 # 三、发送不同消息模式
 
@@ -300,7 +300,7 @@ void testAsync() throws IOException {
 
 谁先发送打印在前面
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232038732.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2fef9b3449b699803dc3d93d3aa250df.png)
 
 ## 3.3 发送单向消息
 
@@ -425,11 +425,11 @@ public class SimpleMsgListener implements RocketMQListener<MessageExt> {
 
 查看控制台，消息按照我们的放入顺序进行消费了
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232113127.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b0cf5cd10c36ee41cabf18878dc7b61b.png)
 
 ## 3.6 发送事务消息
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020230924012931.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/58dbb098540209debded2bcb1c369c33.png)
 
 - `步骤一：修改rocketmq-producer添加一个单元测试
 `
@@ -517,13 +517,13 @@ public class TmMsgListener implements RocketMQLocalTransactionListener {
 
 我们从源码注释得知，`tag带在主题后面用：来携带`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232122806.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8b5d0fff19687ca82e4d91c405690986.png)
 
 我们往下去看源码，在
 
 org.apache.rocketmq.spring.support.RocketMQUtil 的getAndWrapMessage方法里面看到了具体细节，我们也知道了keys在消息头里面携带
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232128134.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/211567acf5413042174f382db8e18154.png)
 
 
 - `步骤一：修改rocketmq-producer添加一个单元测试`
@@ -573,7 +573,7 @@ public class TagMsgListener implements RocketMQListener<String> {
 
 - `步骤四：重启rocketmq-consumer查看控制台`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232137430.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1411e05ceabf815692d3ad485499f135.png)
 
 ## 4.2 Key过滤（可以在事务监听的类里面区分）
 
@@ -598,13 +598,13 @@ public void testKeyMsg() throws Exception {
 
 - `步骤二：断点发送这个消息，查看事务里面消息头`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232146012.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9cea60684db20157f1a11c77ff9aaf64.png)
 
 
 
 我们在mq的控制台也可以看到
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232149556.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29c869a9735190872ac00f851aa7c91c.png)
 
 
 
@@ -683,9 +683,9 @@ public void testMsgModel() throws Exception {
 
 - 步骤六：查看两个消费者的控制台，发现是负载均衡的模式
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232201114.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce1940a69582013d85bbf316294bc6ce.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922232206040.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/226362765a12e4246c17832d9df1ed98.png)
 
 
 

@@ -12,7 +12,7 @@
     
 - 官网[https://element-plus.gitee.io/zh-CN/](https://element-plus.gitee.io/zh-CN/)
     
-- 由于 Vue 3 不再支持 IE11，Element Plus 也不再支持 IE 浏览器。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020240321152104.png)
+- 由于 Vue 3 不再支持 IE11，Element Plus 也不再支持 IE 浏览器。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2122da4e4bf534cd6438e2599f8f0acb.png)
 ## 2、 入门案例
 
 >  1 准备vite项目

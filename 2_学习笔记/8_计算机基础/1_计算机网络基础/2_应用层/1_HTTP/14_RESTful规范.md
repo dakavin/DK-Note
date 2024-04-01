@@ -4,7 +4,8 @@
 
 今天，我将介绍RESTful API的设计细节，探讨如何设计一套合理、好用的API。我的主要参考了两篇文章（[1](http://codeplanet.io/principles-good-restful-api-design/)，[2](https://bourgeois.me/rest/)）。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_学习笔记/Pasted%20image%2020231104134751.png)
+![Pasted image 20231104134751.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/160d07f602d6752b877c78a9d680ce8c.png)
+
 
 ## 1、协议
 

@@ -5,7 +5,7 @@
 ## 2、Multi事务
 
 Redis原生有Multi命令，可以开启事务，我们看一下Redis这段官方说明：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231107151444.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eff993f935716738090d6744b2d65177.png)
 
 原生事务其实是由 `MULTI、EXEC、DISCARD、WATCH` 这四个命令配合完成的。
 ### 2.1 如何操作
@@ -40,7 +40,7 @@ null
 ```
 
 至于discard，很好理解，multi之后，exec之前，都可以放弃。状态流程图如下：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231107151852.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/65c06eb1a8282227a5e5c8219171a837.png)
 ### 2.2 Watch是干啥的
 
 watch用来提前观察数据，具体来说，它用于监视一个（或多个）key，如果在事务执行之前这个（或这些）key被其他命令所改动，那么事务将被打断。
@@ -49,7 +49,7 @@ watch用来提前观察数据，具体来说，它用于监视一个（或多个
 
 当redis使用exec命令执行事务的时候，首先会比较被watch的键值对有没有发生变化，如果产生变化回滚事务，没有变化执行事务中的命令，无论事务执行与否，最终都会取消执行事务之前的watch命令。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231107152252.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/84216bb6b63375afe5cd459d83304ca1.png)
 
 ### 2.3 原理
 
@@ -110,7 +110,7 @@ QUEUED
 multi可以说是Redis关于事务的过渡方案，无论是原子性、功能性、易用性都比较差，事实上，也很少会有团队在生产环境使用multi
 
 事实上，Redis在2.6版本之后，引入了Lua做事务，用官方的话来说Lua会更简单、更快。
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231107153115.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bde17e943c2f0fe0f72a50d9d1afa495.png)
 
 ## 3、Lua做事务
 
@@ -150,7 +150,7 @@ Lua执行一半失败了，会怎样？会回滚吗？还是会中断？
 
 看下面的例子，ka更新为a1了，kb没更新为b1。说明`没回滚，中断`
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231107163051.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c3229dbcebc648aeca1c507b711bf1f9.png)
 
 讲到这里，我们来对比下原生的Multi事务：
 - 可以编写if else这种选择逻辑

@@ -7,7 +7,7 @@
 
 我们先来复习一下状态行的结构，有三部分：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031012445.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c536aa7daf7d8c9270d614bd448fd987.png)
 
 开头的 Version 部分是 HTTP 协议的版本号，通常是 HTTP/1.1，用处不是很大。
 
@@ -41,7 +41,7 @@ RFC 标准把状态码分成了五类，用数字的`第一位表示分类`，�
 
 例如，在 Chrome 里访问“[http://www.chrono.com/12-1?code=405](http://www.chrono.com/12-1?code=405)”的结果如下图。
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231031013051.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8de129976a7ef3c7a4c5767d39a7cab4.png)
 
 接下来我就挑一些实际开发中比较有价值的状态码逐个详细介绍。
 
@@ -136,4 +136,4 @@ RFC 标准把状态码分成了五类，用数字的`第一位表示分类`，�
 2. 你在开发 HTTP 服务器，处理请求时发现报文里缺了一个必需的 query 参数，应该如何告知客户端错误原因呢？
 	- 可以自定义一个4xx状态码，并用reason或body告知错误原因
 
-![img](https://learn.lianglianglee.com/%e4%b8%93%e6%a0%8f/%e9%80%8f%e8%a7%86HTTP%e5%8d%8f%e8%ae%ae/assets/11d330fe6de5b9fe34464a6994162dad.png)
+![img|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/83ce03846f6a50ea0a99d420bd3fd631.png)

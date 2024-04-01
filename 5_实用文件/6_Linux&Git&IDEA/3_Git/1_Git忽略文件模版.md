@@ -142,6 +142,23 @@ log
 temp/
 ```
 
+- web项目的忽略文件/个人博客备份
+```
+.Ds_store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+.vscode/
+.idea/
+/.idea/
+.deploy_git*/
+.idea
+themes/butterfLy/.git
+```
+
 
 
 2）在.gitconfig 文件中引用忽略配置文件（此文件在 Windows 的家目录中）

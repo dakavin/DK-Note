@@ -17,7 +17,7 @@ Redis 通过监听一个 TCP 端口或者 Unix socket 的方式来接收来自 c
 ## 3、阻塞I/O
 
 在 socket 连接中，一个服务器进程和一个客户端进行通信时，当一个 client 端向服务端写数据时，如果 client 端没有发送数据，那么服务端的 read 将一直阻塞，直到客户端 write 发来数据。在一个客户和服务器通信时没什么问题，当多个客户 与 一个服务器通信时，就存在问题了。如下图，两个客服端同时连接一个服务端进行写数据的时序图
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021204901.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/11eccc093d5cbe40d6b7d7428aee0ddc.png)
 
 从上图可以看出一个服务器进程和多个客户端进程通信的问题：
 
@@ -36,7 +36,7 @@ Redis 通过监听一个 TCP 端口或者 Unix socket 的方式来接收来自 c
 
 这里==多路== 指的是多个网络连接客户端， ==复用== 指的是复用同一个线程(单进程)。I/O 多路复用其实是使用一个线程来检查多个 Socket 的就绪状态，在单个线程中通过记录跟踪每一个 socket（I/O流）的状态来管理处理多个 I/O 流。如下图是 Redis 的 I/O 多路复用模型：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231021205128.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a76ed8b7bf01e0911337f653e0a8269e.png)
 
 >Linux 系统中，把一切都看做是文件，当进程打开现有文件或创建新文件时，内核向进程返回一个文件描述符。可以理解文件描述符是一个索引，这样，要操作文件的时候，我们直接找到索引就可以对其进行操作了。我们将这个索引叫做文件描述符（file descriptor），简称fd。
 

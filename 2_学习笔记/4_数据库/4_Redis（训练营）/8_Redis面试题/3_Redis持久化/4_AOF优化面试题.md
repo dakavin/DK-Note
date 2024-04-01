@@ -21,7 +21,7 @@
 ## 3、启动加载AOF文件时，怎么判断它是否混合持久化？ （很简单，把它学了）
 
 分析：
-- 只需要支持判断条件即可，混合持久化文件里有REDIS这个标记![](assets/Pasted%20image%2020231026003457.png)
+- 只需要支持判断条件即可，混合持久化文件里有REDIS这个标记![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7a7a862ebbb24c21d272d5d2e5d74aa3.png)
 
 回答：
 - `混合持久化的AOF文件里开头有REDIS这个标记，加载时候通过这个标记来进行的判断`

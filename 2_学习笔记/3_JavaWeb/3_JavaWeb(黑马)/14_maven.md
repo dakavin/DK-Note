@@ -96,12 +96,12 @@
 
 - 前面我们通过 Web 阶段项目，要能够将项目运行起来，就必须将该项目所依赖的一些 jar 包添加到 工程中，否则项目就不能运行。试想如果具有相同架构的项目有十个，那么我们就需要将这一份 jar 包复制到十个不同的工程中。我们一起来看一个 CRM项目的工程大小。
 
-- 使用传统 Web 项目构建的 CRM 项目如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075458827.png)
+- 使用传统 Web 项目构建的 CRM 项目如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0b38863f6cc5d338c3e42945a4857e05.png)
 
 
 - 原因主要是因为上面的 WEB 程序要运行，我们必须将项目运行所需的 Jar 包复制到工程目录中，从 而导致了工程很大。
 
-- 同样的项目，如果我们使用 Maven 工程来构建，会发现总体上工程的大小会少很多。如下图:![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075501851.png)
+- 同样的项目，如果我们使用 Maven 工程来构建，会发现总体上工程的大小会少很多。如下图:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/631b8e15868d11a6c0f0693d2edf180f.png)
 
 
 - 小结：可以初步推断它里面一定没有 jar 包，继续思考，没有 jar 包的项目怎么可能运行呢？
@@ -113,7 +113,7 @@
 - Maven 的一个核心特性就是`依赖管理`。当我们涉及到多模块的项目（包含成百个模块或者子项目），管理依赖就变成 一项困难的任务。Maven 展示出了它对处理这种情形的高度控制。
 
 - 传统的 WEB 项目中，我们必须将工程所依赖的 jar 包复制到工程中，导致了工程的变得很大。那么 maven 工程是如何使得工程变得很少呢？
-- 分析如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075505325.png)
+- 分析如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d3091369252f5bc1032743917fc144e0.png)
 
 
 - 通过分析发现：maven 工程中不直接将 jar 包导入到工程中，而是通过`在 pom.xml 文件中添加所需 jar 包的坐标`，这样就很好的避免了 jar 直接引入进来，在需要用到 jar 包的时候，只要查找 pom.xml 文 件，再通过 pom.xml 文件中的坐标，到一个专门用于”存放 jar 包的仓库”(maven 仓库)中根据坐标从 而找到这些 jar 包，再把这些 jar 包拿去运行。
@@ -134,7 +134,7 @@
 - `一键构建`指的是整个构建过程，使用 maven 一个命令可以轻松完成整个工作。
 
 
-- Maven 规范化构建流程如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075508647.png)
+- Maven 规范化构建流程如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6394b46f615e4d254d3a90d107aee739.png)
 
 
 - 我们一起来看 Hello-Maven 工程的一键运行的过程。通过 tomcat:run 的这个命令，我们发现现在的 工程编译，测试，运行都变得非常简单。
@@ -145,16 +145,16 @@
 
 #### 2.1.1 Maven 软件的下载
 
-- 为了使用 Maven 管理工具，我们首先要到官网去下载它的安装软件。通过百度搜索“Maven“如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075510989.png)
+- 为了使用 Maven 管理工具，我们首先要到官网去下载它的安装软件。通过百度搜索“Maven“如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d12f35a1fa43e88796e62038b00403a0.png)
 
 
-- 点击 Download 链接，就可以直接进入到 Maven 软件的下载页面：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075529018.png)
+- 点击 Download 链接，就可以直接进入到 Maven 软件的下载页面：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f5524971498dfe2bfdb4d9937d1c7660.png)
 
 
 
 #### 2.1.2 Maven 软件的安装
 
-- Maven 下载后，将 Maven 解压到一个没有中文没有空格的路径下，比如 `E:\Maven\apache-maven-3.9.3` 下面。 解压后目录结构如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075531299.png)
+- Maven 下载后，将 Maven 解压到一个没有中文没有空格的路径下，比如 `E:\Maven\apache-maven-3.9.3` 下面。 解压后目录结构如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/caf2c4764b3fed65f02a2ebb58bb799e.png)
 
 
 - bin:存放了 maven 的命令，比如我们前面用到的 mvn tomcat:run 
@@ -171,18 +171,18 @@
 
 - 电脑上需安装 java 环境，安装 JDK1.7 + 版本 （将JAVA_HOME/bin 配置环境变量 path ），我们使 用的是 JDK8 相关版本
 
-- 配置 MAVEN_HOME ，变量值就是你的 maven 安装 的路径（bin 目录之前一级目录）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075534058.png)
-	![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075539686.png)
+- 配置 MAVEN_HOME ，变量值就是你的 maven 安装 的路径（bin 目录之前一级目录）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c657ac67d340f6056df6ff015c3a0b6b.png)
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c184c6393d9ab9f8d3d2896872a4ee4f.png)
 
 
 - 上面配置了我们的 Maven 软件，注意这个目录就是之前你解压 maven 的压缩文件包在的的目录，最 好不要有中文和空格。
 
-- 再次检查 JDK 的安装目录，如下图:![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075554599.png)
+- 再次检查 JDK 的安装目录，如下图:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/27fe0088b8ee9276ec5c0ed829fbe8bb.png)
 #### 2.1.5 Maven 软件版本测试
 
 - 通过 mvn -v命令检查 maven 是否安装成功，看到 maven 的版本为 3.5.2 及 java 版本为 1.8 即为安装 成功。
 
-- 找开 cmd 命令，输入 mvn –v命令，如下图：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075610488.png)
+- 找开 cmd 命令，输入 mvn –v命令，如下图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/65c38649e3e0d58b5d4d47dc69c43551.png)
 - 我们发现 maven 的版本，及 jdk 的版本符合要求，这样我们的 maven 软件安装就成功了。
 
 ### 2.2 Maven仓库
@@ -191,10 +191,10 @@
 
 - maven 的工作需要从仓库下载一些 jar 包，如下图所示，本地的项目 A、项目 B 等都会通过 maven 软件从远程仓库（可以理解为互联网上的仓库）下载 jar 包并存在本地仓库，本地仓库 就是本地文 件夹，当`第二次需要此 jar 包时则不再从远程仓库下载，因为本地仓库已经存在了`，可以将`本地仓库理解为缓存`，有了本地仓库就不用每次从远程仓库下载了。
 
-- 下图描述了 maven 中仓库的类型：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075626083.png)
+- 下图描述了 maven 中仓库的类型：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e244929282b6d6519977e14de9aff5a1.png)
 
 - `本地仓库` ：用来存储从远程仓库或中央仓库下载的插件和 jar 包，项目使用一些插件或 jar 包， 优先从本地仓库查找 默认本地仓库位置在`${user.dir}/.m2/repository，${user.dir}`表示 windows 用户目录。
-- ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075631093.png)
+- ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b40b70e8fafa7b89ee0e3738424e91b7.png)
 
 
 
@@ -204,36 +204,36 @@
 
 #### 2.2.2 Maven 本地仓库的配置
 
-- 本课程是在无网的状态下学习，需要配置老师提供的本地仓库，将 “repository.rar”解压至自己的 电脑上，我们解压在 `D:\repository` 目录下（可以放在没有中文及空格的目录下）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075642287.png)
+- 本课程是在无网的状态下学习，需要配置老师提供的本地仓库，将 “repository.rar”解压至自己的 电脑上，我们解压在 `D:\repository` 目录下（可以放在没有中文及空格的目录下）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6889ce531fcd2e53f945c7b2aeb95685.png)
 
 
-- 在 MAVE_HOME/conf/settings.xml 文件中配置本地仓库位置（maven 的安装目录下）：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075649985.png)
+- 在 MAVE_HOME/conf/settings.xml 文件中配置本地仓库位置（maven 的安装目录下）：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6b3b31bd75c9b9a6f69f5d97317f1078.png)
 
 
-- 打开 settings.xml文件，配置如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075657296.png)
+- 打开 settings.xml文件，配置如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c30616d52840128e50bb4f2006539189.png)
 
 #### 2.2.3 全局 setting 与用户 setting
 
 - `maven 仓库地址、私服等配置信息需要在 setting.xml 文件中配置`，分为全局配置和用户配置。
 - 在 maven 安装目录下的有 conf/setting.xml 文件，此 setting.xml 文件用于 maven 的所有 project 项目，它作为 maven 的全局配置。
 - 如需要个性配置则需要在用户配置中设置，用户配置的 setting.xml 文件默认的位置在：`${user.dir} /.m2/settings.xml 目录中,${user.dir} `指 windows 中的用户目录。
-- maven 会先找用户配置，如果找到则以用户配置文件为准，否则使用全局配置文件![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075722295.png)
+- maven 会先找用户配置，如果找到则以用户配置文件为准，否则使用全局配置文件![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2802acae0b0d48649774c310f080e130.png)
 
 
 
 ### 2.3 Maven工程的认识
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075800016.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99c33534a69373ce8cb79812a5f20c16.png)
 
 
 
 #### 2.3.1 Maven 工程的目录结构
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075731386.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0f19592c822a3597cc5124cd6c760156.png)
 
 
 
-- 作为一个 maven 工程，它的 `src 目录和 pom.xml 是必备的`。 进入 src 目录后，我们发现它里面的目录结构如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075734354.png)
+- 作为一个 maven 工程，它的 `src 目录和 pom.xml 是必备的`。 进入 src 目录后，我们发现它里面的目录结构如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a492fb12746a71bf0f49357b6b8da4f0.png)
 
 
 - src/main/java —— 存放项目的.java 文件 
@@ -246,16 +246,16 @@
 
 #### 2.3.2 Maven 工程的运行
 
-- 进入 maven 工程目录（当前目录有 pom.xml 文件），运行 tomcat:run 命令![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075740528.png)
+- 进入 maven 工程目录（当前目录有 pom.xml 文件），运行 tomcat:run 命令![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b3aeadaa29e298b1c0743688bf4db014.png)
 
 
-- 根据上边的提示信息，通过浏览器访问：http://localhost:8080/maven-helloworld/![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075743519.png)
+- 根据上边的提示信息，通过浏览器访问：http://localhost:8080/maven-helloworld/![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c5885964e3477dd763cf6503702d4d6e.png)
 
 
 
 #### 2.3.3 问题处理
 
-- 如果本地仓库配置错误会报下边的错误![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075746136.png)
+- 如果本地仓库配置错误会报下边的错误![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d269f35b582b798f72d2a2d7e14b5c75.png)
 
 - 分析：maven 工程运行先从本地仓库找 jar 包，本地仓库没有再从中央仓库找，上边提示 downloading… 表示 从中央仓库下载 jar，由于本地没有联网，报错。
 
@@ -272,12 +272,12 @@
 
 - `compile 是 maven 工程的编译命令`，作用是将 src/main/java 下的文件编译为 class 文件输出到 target 目录下。
 
-- cmd 进入命令状态，执行 mvn compile，如下图提示成功：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075811778.png)
-- 查看 `target 目录，class 文件已生成，编译完成`。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075813927.png)
+- cmd 进入命令状态，执行 mvn compile，如下图提示成功：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1b66763f3f6e42e929ff5adb143f9655.png)
+- 查看 `target 目录，class 文件已生成，编译完成`。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/83773970ab46ea7d69e4144f9bb16860.png)
 #### 3.1.2 test
 
 - `test 是 maven 工程的测试命令 mvn test`，会执行 src/test/java 下的单元测试类。
-- cmd 执行 mvn test 执行 src/test/java 下单元测试类，下图为测试结果，运行 1 个测试用例，全部成功![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075824606.png)
+- cmd 执行 mvn test 执行 src/test/java 下单元测试类，下图为测试结果，运行 1 个测试用例，全部成功![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e837b66ef0f68bb555c331c411584522.png)
 #### 3.1.3 clean
 
 - clean 是 maven 工程的清理命令，`执行 clean 会删除 target 目录及内容`
@@ -300,7 +300,7 @@
 
 - Maven从大量项目和构建工具中学习和反思，然后总结了一套高度完美的，易扩展的项目构建生命周期。这个生命周期包含了项目的清理，初始化，编译，测试，打包，集成测试，验证，部署和站点生成等几乎所有构建步骤。
 
-- Maven对项目构建的生命周期划分为3套（相互独立）：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075917715.png)
+- Maven对项目构建的生命周期划分为3套（相互独立）：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dceecb29af44d6cd783d061715ef6de1.png)
 
 - `clean：清理工作。`
     
@@ -308,7 +308,7 @@
     
 - `site：生成报告、发布站点等。`
 
-- 三套生命周期又包含哪些具体的阶段呢, 我们来看下面这幅图:![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922075922376.png)
+- 三套生命周期又包含哪些具体的阶段呢, 我们来看下面这幅图:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b83c3502ea1169c32fcd1d5688b2960d.png)
 
 
 - 我们看到这三套生命周期，里面有很多很多的阶段，这么多生命周期阶段，其实我们常用的并不多，主要关注以下几个：
@@ -320,7 +320,7 @@
 
 - Maven的生命周期是抽象的，这意味着生命周期本身不做任何实际工作。***在Maven的设计中，实际任务（如源代码编译）都交由插件来完成。**
 
-- IDEA工具为了方便程序员使用maven生命周期，在右侧的maven工具栏中，已给出快速访问通道![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080038605.png)
+- IDEA工具为了方便程序员使用maven生命周期，在右侧的maven工具栏中，已给出快速访问通道![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7f2106a16cc0a315521942319acf1db6.png)
 
 - 生命周期的顺序是：clean --> validate --> compile --> test --> package --> verify --> install --> site --> deploy
 
@@ -330,18 +330,18 @@
 
 ### 3.3 Maven的概念模型
 
-- Maven 包含了一个项目对象模型 (Project Object Model)，一组标准集合，一个项目生命周期(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段 (phase)中插件(plugin)目标(goal)的逻辑![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080053608.png)
+- Maven 包含了一个项目对象模型 (Project Object Model)，一组标准集合，一个项目生命周期(Project Lifecycle)，一个依赖管理系统(Dependency Management System)，和用来运行定义在生命周期阶段 (phase)中插件(plugin)目标(goal)的逻辑![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b315d27e75d3f2d4da4ca82c29c4861a.png)
 
 
 - 项目对象模型 (Project Object Model)
 	- 一个 maven 工程都有一个 pom.xml 文件，通过 pom.xml 文件定义项目的坐标、项目依赖、项目信息、 插件目标等。
 - 依赖管理系统(Dependency Management System)
 	- 通过 maven 的依赖管理对项目所依赖的 jar 包进行统一管理。
-	- 比如：项目依赖 junit4.9，通过在 pom.xml 中定义 junit4.9 的依赖即使用 junit4.9，如下所示是 junit4.9 的依赖定义：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080110408.png)
+	- 比如：项目依赖 junit4.9，通过在 pom.xml 中定义 junit4.9 的依赖即使用 junit4.9，如下所示是 junit4.9 的依赖定义：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99f3d66cdef7cab7e12f255e1abfa89a.png)
 
 
 - 一个项目生命周期(Project Lifecycle)
-	- 使用 maven 完成项目的构建，项目构建包括：清理、编译、测试、部署等过程，maven 将这些 过程规范为一个生命周期，如下所示是生命周期的各各阶段：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080113835.png)
+	- 使用 maven 完成项目的构建，项目构建包括：清理、编译、测试、部署等过程，maven 将这些 过程规范为一个生命周期，如下所示是生命周期的各各阶段：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a77ce2ebbae5d957d216cdfd1dcfc4f0.png)
 
 
 	- maven 通过执行一些简单命令即可实现上边生命周期的各各过程，比如执行 mvn compile 执行编译、 执行 mvn clean 执行清理。
@@ -363,7 +363,7 @@
 1、选择 IDEA中 File  =>  Settings  =>  Build,Execution,Deployment  =>  Build Tools  =>  Maven
 
 2、设置IDEA使用本地安装的Maven，并修改配置文件及本地仓库路径
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080131715.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8ab9abb1522afcde94651e0a405adbba.png)
 
 
 
@@ -374,7 +374,7 @@
 
 3、配置工程的编译版本为8
 
-- Maven默认使用的编译版本为5（版本过低）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080134827.png)
+- Maven默认使用的编译版本为5（版本过低）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c095b6044f4ab8137fb6e084e5987faa.png)
 
 
 - 上述配置的maven环境，只是针对于当前工程的，如果我们再创建一个project，又恢复成默认的配置了。 要解决这个问题， 我们就需要配置全局的maven环境。
@@ -383,17 +383,17 @@
 
 1、进入到IDEA欢迎页面
 
-- 选择 IDEA中 File => close project![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080138134.png)
+- 选择 IDEA中 File => close project![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7ceba3da272651003febb561cd92dd42.png)
 
 
 
-2、打开 All settings , 选择 Build,Execution,Deployment  =>  Build Tools  =>  Maven![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080141108.png)
+2、打开 All settings , 选择 Build,Execution,Deployment  =>  Build Tools  =>  Maven![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a19a5e08cb701abd691fa6fed0fe509e.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080149600.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2106f2ee2811d97b6b672c06483d82b4.png)
 
 
 
-3、配置工程的编译版本为8![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080155212.png)
+3、配置工程的编译版本为8![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3c1fe7996aa4eaa9dca69114750001cf.png)
 
 
 - 这里所设置的maven的环境信息，并未指定任何一个project，`此时设置的信息就属于全局配置信息`。 以后，我们再创建project，默认就是使用我们全局配置的信息。
@@ -402,54 +402,54 @@
 
 #### 4.2.1 创建Maven-Java项目（无骨架）
 
-- 在Project中新建一个Maven项目![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080158296.png)
+- 在Project中新建一个Maven项目![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/666a1774cad404669e9a632c64e812c7.png)
 
 
-- 此时test文件夹中缺少resource文件夹，需要补齐![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080201897.png)
-
-
-
-- 在pom.xml文件中补齐打包方式![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080205588.png)
+- 此时test文件夹中缺少resource文件夹，需要补齐![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0f7c3ebe90105f1a8792fd39dfe33a07.png)
 
 
 
-- 在Maven工程下，创建HelloWorld类![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080208695.png)
+- 在pom.xml文件中补齐打包方式![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6a96b12f878a3483cbc46b716386617e.png)
+
+
+
+- 在Maven工程下，创建HelloWorld类![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/015dcd8619c98bd7e56db1de616a4298.png)
 
 
 
 #### 4.2.2 创建Maven-Java项目（有骨架）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080211633.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8b84d401445c4ed8900d4b08ec55f28d.png)
 
 
 
-- 缺少resource文件夹，需要补齐![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080215633.png)
+- 缺少resource文件夹，需要补齐![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2119606f7c1e4180a17c6eb095bed0e2.png)
 
 
-- 自定义maven命令运行配置![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080218534.png)
+- 自定义maven命令运行配置![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c44f62c27389b20bfeb7d7b10adc6e8a.png)
 
 
 #### 4.2.3 创建Maven-Web项目（无骨架）
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080243742.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f4dc5e05ec04324d430c90cafa4e227e.png)
 
 
 
-- 补齐webapp目录![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080246448.png)
+- 补齐webapp目录![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/32f02163b678a1d8e60a608fc204e6c2.png)
 
 
-- 创建一个index.html页面，使用tomcat插件（`可以使用alt+ins快捷键`，快速创建plugins模版）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080248246.png)
+- 创建一个index.html页面，使用tomcat插件（`可以使用alt+ins快捷键`，快速创建plugins模版）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5a134c60e0ca77c7dc5712f28ebfd289.png)
 
 
-- 启动tomcat![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080249955.png)
+- 启动tomcat![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/73f886a0f2dce414531fdd8d4be5ed89.png)
 
 
-- 修改端口号和虚拟目录![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080252534.png)
+- 修改端口号和虚拟目录![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/59c430da4b4b5b0a3e260e08f03b3c67.png)
 
 
-- 创建一个servlet，需要导入jar包（即在pom文件中添加依赖）![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080253908.png)
+- 创建一个servlet，需要导入jar包（即在pom文件中添加依赖）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8650a030742285552f916d5b41acc13f.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080256815.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9c498225b368c00f79fae40a4252625f.png)
 
 #### 4.2.4 创建Maven-web项目（有骨架）
 
@@ -498,7 +498,7 @@
 	- `artifactId`：定义当前Maven项目名称（通常是模块名称，例如 order-service、goods-service）
 	- `version`：定义当前项目版本号
 
-- 如下图就是使用坐标表示一个项目：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080311322.png)
+- 如下图就是使用坐标表示一个项目：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ac43fe9465ba4fa2d629315712afbddc.png)
 
 
 **注意：**
@@ -509,21 +509,21 @@
 
 #### 4.5.1 使用Maven面板，快速导入项目
 
-- 打开IDEA，选择右侧Maven面板，点击 + 号，选中对应项目的pom.xml文件，双击即可![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080320899.png)
+- 打开IDEA，选择右侧Maven面板，点击 + 号，选中对应项目的pom.xml文件，双击即可![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/be004a5fd5af464e8c24733aacda8ada.png)
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080324447.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e8ee4b3414894b8b59440780074fc14e.png)
 
 
-- 说明：如果没有Maven面板，选择 View => Appearance => Tool Window Bars![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080326769.png)
+- 说明：如果没有Maven面板，选择 View => Appearance => Tool Window Bars![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/967f18a48eacba6d370b398c47c4ec2c.png)
 
 
 
 #### 4.5.2 使用idea导入模块项目
 
-- File => Project Structure => Modules => + => Import Module![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080329768.png)
+- File => Project Structure => Modules => + => Import Module![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6e5fd709c786dadf8a06bb421c896546.png)
 
 
-- 找到要导入工程的pom.xml![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080331809.png)
+- 找到要导入工程的pom.xml![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c7b3b063c62cfd333c97608ce3d5198f.png)
 
 
 
@@ -556,7 +556,7 @@
 ```
 
 4. 点击刷新按钮，引入最新加入的坐标
-	- 刷新依赖：保证每一次引入新的依赖，或者修改现有的依赖配置，都可以加入最新的坐标![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080335659.png)
+	- 刷新依赖：保证每一次引入新的依赖，或者修改现有的依赖配置，都可以加入最新的坐标![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/caaf8fc469b8a5a301c2e4a363bdd125.png)
 
 
 
@@ -583,7 +583,7 @@
 - 依赖传递可以分为：
 1. 直接依赖：在当前项目中通过依赖配置建立的依赖关系
 2. 间接依赖：被依赖的资源如果依赖其他资源，当前项目间接依赖其他资源
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080354089.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/34d2f705818b9980f403e89c1a449fb3.png)
 
 
 
@@ -617,14 +617,14 @@
 
 ### 5.3 依赖范围
 
-- 在项目中导入依赖的jar包后，默认情况下，可以在任何地方使用。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080404444.png)
+- 在项目中导入依赖的jar包后，默认情况下，可以在任何地方使用。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e772570c327d77182c92b2e2d84388a5.png)
 
 
 - 如果希望限制依赖的使用范围，可以通过`<scope>`标签设置其作用范围。
 	1. 主程序范围有效（main文件夹范围内）
 	2. 测试程序范围有效（test文件夹范围内）
 	3. 是否参与打包运行（package指令范围内）
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080408752.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b9e201f1191a0be1c5fac14765f1c337.png)
 
 
 
@@ -645,13 +645,13 @@
 
 - 有时候给idea配置完maven仓库信息后，在idea中依然搜索不到仓库中的jar包。这是因为仓库中的jar包索引尚未更新到idea中。这个时候我们就需要更新idea中maven的索引了，具体做法如下：
 
-- 打开设置----搜索maven----Repositories----选中本地仓库-----点击Update![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080419730.png)
+- 打开设置----搜索maven----Repositories----选中本地仓库-----点击Update![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b9e201f1191a0be1c5fac14765f1c337.png)
 
 
 
 ### 5.5 清理maven仓库
 
-- 初始情况下，我们的本地仓库是没有任何jar包的，此时会从私服去下载（如果没有配置，就直接从中央仓库去下载），可能由于网络的原因，jar包下载不完全，这些不完整的jar包都是以lastUpdated结尾。此时，maven不会再重新帮你下载，需要你删除这些以lastUpdated结尾的文件，然后maven才会再次自动下载这些jar包。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080429821.png)
+- 初始情况下，我们的本地仓库是没有任何jar包的，此时会从私服去下载（如果没有配置，就直接从中央仓库去下载），可能由于网络的原因，jar包下载不完全，这些不完整的jar包都是以lastUpdated结尾。此时，maven不会再重新帮你下载，需要你删除这些以lastUpdated结尾的文件，然后maven才会再次自动下载这些jar包。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8a69c959f30eb66238607fb68d8540a3.png)
 
 
 
@@ -681,22 +681,22 @@ pause
 
 ### 6.1 端口占用处理
 
-- 重新执行 tomcat:run 命令重启工程，重启之前需手动停止 tomcat，否则报下边的错误：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080453027.png)
+- 重新执行 tomcat:run 命令重启工程，重启之前需手动停止 tomcat，否则报下边的错误：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/291d736dd5e6f36f31212b9e0713ee64.png)
 
 
 
 ### 6.2 断点调试
 
-- 点击如图所示选项![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080456386.png)
+- 点击如图所示选项![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a9946e96a388e16c37b4dd11eb098925.png)
 
 
-- 在弹出框中点击如图加号按钮找到 maven 选项![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080458963.png)
+- 在弹出框中点击如图加号按钮找到 maven 选项![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/873ace46a1d15c0171920104a724e5dc.png)
 
 
-- 在弹出窗口中填写如下信息![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080501059.png)
+- 在弹出窗口中填写如下信息![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d6306b052e0ad7a22335d2bf781e6fd9.png)
 
 
-- 完成后先 Apply 再 OK 结束配置后，可以在主界面找到我们刚才配置的操作名称。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922080519842.png)
+- 完成后先 Apply 再 OK 结束配置后，可以在主界面找到我们刚才配置的操作名称。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/82fb6ec39b4fd1c4b7ce8cdf39a2e054.png)
 
 - 如上图红框选中的两个按钮，左侧是正常启动，右侧是 debug 启动。
 

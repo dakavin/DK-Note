@@ -18,29 +18,29 @@
 
 1. 首先，关机当前CentOS系统虚拟机（可以使用root用户执行`init 0`来快速关机）
 
-2. 新建文件夹![image-20221025104157628](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104157.png)
+2. 新建文件夹![image-20221025104157628|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b7137992fe7cca8d2f800184da94d28b.png)
 
    文件夹起名为：`虚拟机集群`
 
-3. 克隆![image-20221025104131303](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104131.png)
+3. 克隆![image-20221025104131303|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/61961c2ea65382951a892e1436a626a9.png)
 
-   ![image-20221025104312091](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104312.png)
+   ![image-20221025104312091|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5340b621dfdd01cb82d1e274081c2f1b.png)
 
-   ![image-20221025104329109](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104329.png)
+   ![image-20221025104329109|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c975da69610bf8b7fe445ba3b1d64ace.png)
 
-   ![image-20221025104345484](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104345.png)
+   ![image-20221025104345484|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d546c21ea4bfef789afdc2778cc61d3.png)
 
-   ![image-20221025104414576](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104414.png)
+   ![image-20221025104414576|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/57ddbe0400f1301ec738e76880d71cb3.png)
 
-   ![image-20221025104427160](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104427.png)
+   ![image-20221025104427160|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/77e8e91f20fc0526a2c8c8ca9999e4ed.png)
 
-   ![image-20221025104432927](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104432.png)
+   ![image-20221025104432927|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a3e50d7e959f51b4e8a4f06ccfe13df1.png)
 
-   ![image-20221025104446044](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104446.png)
+   ![image-20221025104446044|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/144fb6ff63fed2658d08fc5d68ca1a6d.png)
 
 4. 同样的操作克隆出：node2和node3
 
-   ![image-20221025104825204](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025104825.png)
+   ![image-20221025104825204|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2ad0f322fccea6fe2618be034753852f.png)
 
 5. 开启node1，修改主机名为node1，并修改固定ip为：192.168.88.131
 
@@ -502,7 +502,7 @@ Kafka多数都是运行在分布式（集群化）模式下，所以课程将以
    jps
    ```
 
-   ![image-20221025174522487](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025174522.png)
+   ![image-20221025174522487|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7331c3c3ca3fe71e62296736ae5a86e1.png)
 
 
 
@@ -580,7 +580,7 @@ Hadoop生态体系中总共会出现如下进程角色：
 2. node2:Datanode、NodeManager、QuorumPeerMain
 3. node3:Datanode、NodeManager、QuorumPeerMain
 
-![image-20221026202935745](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/26/20221026202935.png)
+![image-20221026202935745|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cd3874192a2a9d13af4f500655c825cf.png)
 
 
 

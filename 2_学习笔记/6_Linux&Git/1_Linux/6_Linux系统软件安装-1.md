@@ -107,7 +107,7 @@ Loading mirror speeds from cached hostfile
 
 打开 [http://dev.mysql.com/downloads/repo/yum/](https://link.zhihu.com/?target=http%3A//dev.mysql.com/downloads/repo/yum/)
 
-![](https://pic1.zhimg.com/80/v2-c7386b38916fc9958490b651a93d0860_720w.webp)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/16c4bc328f124cf2085f94f7e86af223.webp)
 
 根据你的系统版本，选择对应的安装包，例如我的是CentOS 7.5，这个系统的Linux内核是 Linux 7，所以我选择了红框内的地址，大家依次类推。
 
@@ -420,17 +420,17 @@ Tomcat的安装非常简单，主要分为2部分：
 
    下载`jdk-8u351-linux-x64.tar.gz`
 
-   ![image-20221017163440491](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/17/20221017163440.png)
+   ![image-20221017163440491|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f88ebc3937a69377c7ac59079730138e.png)
 
    ==在弹出的页面中输入Oracle的账户密码即可下载（如无账户，请自行注册，注册是免费的）==
 
 2. 登陆Linux系统，切换到root用户
 
-   ![](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/17/20221017163607.png)
+   ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/471e483abf0f0a8de8656d6e3558fde6.png)
 
 3. 通过FinalShell，上传下载好的JDK安装包
 
-   ![image-20221017163706026](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/17/20221017163706.png)
+   ![image-20221017163706026|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/000728915290105aa584e5dab2243211.png)
 
 4. 创建文件夹，用来部署JDK，将JDK和Tomcat都安装部署到：/export/server 内
 
@@ -579,7 +579,7 @@ Tomcat的安装非常简单，主要分为2部分：
    netstat -anp | grep 8080
    ```
 
-   ![image-20221017223814737](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/17/20221017223814.png)
+   ![image-20221017223814737|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f7affb2c0d60f83ce24fe6940e012077.png)
 
 10. 打开浏览器，输入：
 
@@ -587,7 +587,7 @@ Tomcat的安装非常简单，主要分为2部分：
 
     使用主机名（需配置好本地的主机名映射）或IP地址访问Tomcat的WEB页面
 
-    ![image-20221017223915498](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/17/20221017223915.png)
+    ![image-20221017223915498|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dbc5ed0b7544a24e31ea429e7f4e0642.png)
 
 至此，Tomcat安装配置完成。
 
@@ -689,7 +689,7 @@ Nginx同样需要配置额外的yum仓库，才可以使用yum安装
 
 至此，Nginx安装配置完成。
 
-![image-20221018143113053](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/18/20221018143113.png)
+![image-20221018143113053|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7369969cc160c31724b7a2806afe4676.png)
 
 
 # 五、RabbitMQ安装部署【简单】
@@ -835,7 +835,7 @@ RabbitMQ在企业开发中十分常见，课程为大家演示快速搭建Rabbit
 
    http://192.168.88.130:15672
 
-   ![image-20221018154823983](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/18/20221018154824.png)
+   ![image-20221018154823983|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4703ea9428ca04aa20a1449824ba35a2.png)
 
 至此，RabbitMQ已经安装完成了。
 
@@ -933,7 +933,7 @@ Elasticsearch简称es，在企业内同样是一款应用非常广泛的搜索�
 
    浏览器打开：http://ip:9200/?pretty
 
-   ![image-20221025085432335](https://image-set.oss-cn-zhangjiakou.aliyuncs.com/img-out/2022/10/25/20221025085432.png)
+   ![image-20221025085432335|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/de38741b36888b2bfa7dce4735456b13.png)
 
 
 

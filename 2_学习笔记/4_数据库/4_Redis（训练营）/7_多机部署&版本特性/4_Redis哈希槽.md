@@ -7,10 +7,10 @@
 - 一个Redis Cluster包含16384（2^14）个哈希槽，存储在Redis Clutser的`所有Key都可以通过Hash算法关联都某个槽`，而每个节点负责一部分槽，Key算出来再那个槽，就应该去负责这个槽的节点进行交互
 ## 2、Hash槽在Redis中的结构
 
-代码定义如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231116123345.png)
+代码定义如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a5629ec8c13ae4851b3bcf10ec30cc2a.png)
 slots数据表示某个节点的槽关系。可能我们在代码前，会想像节点是记录所负责的槽，新增就加一个元素，减少就减一个元素。
 
-但在Redis这里的实现，实际是用slots表示了整个hash槽空间，也就是表示了16384个槽，这个数据会记录每个槽的状态，如果是1，则表示自己负责的，可能有点抽象，直接上个图![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231116123535.png)
+但在Redis这里的实现，实际是用slots表示了整个hash槽空间，也就是表示了16384个槽，这个数据会记录每个槽的状态，如果是1，则表示自己负责的，可能有点抽象，直接上个图![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7b2bb793d247bb4b2b4b6a20c66d943c.png)
 通过这种位图的形式，就可以在O(1)的时间复杂度下，查询某个槽是否由该节点负责
 
 ## 3、储存槽的位置
@@ -21,10 +21,10 @@ slots数据表示某个节点的槽关系。可能我们在代码前，会想像
 
 这是怎么实现的呢？
 
-首先，在分配槽之后，节点会向集群中其他节点放送消息，告知它负责了那些槽![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231116123959.png)
+首先，在分配槽之后，节点会向集群中其他节点放送消息，告知它负责了那些槽![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1efefc331ca7601cf4ee671d640583a1.png)
 
-然后节点会维护一个clusterState结构，里面就记录了每个槽，是由那个节点负责的![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231116124005.png)
+然后节点会维护一个clusterState结构，里面就记录了每个槽，是由那个节点负责的![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/834e82d981ce18f5ba29fe38b7ff8fb6.png)
 比如slots[0]就表示0号槽指向了那个节点，也就是0号槽在那个节点上，如果没有挂靠在某个节点，就是NULL。
 
 所以这里slots[ClUSTER_SSLOTS]整体的结构就如下图
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231116124013.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ac113f81349342a8983bd86fb395dfeb.png)

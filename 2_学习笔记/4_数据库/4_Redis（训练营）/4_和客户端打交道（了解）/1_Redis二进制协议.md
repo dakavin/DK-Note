@@ -192,7 +192,7 @@ S: :48293\r\n
 RESP使用带前缀长度来传输多行数据，因此不需要像使用JSON那样扫描有效负载以查找特殊字符，也不需要引用需要发送到服务的有效负载。
 
 多行和多个多行长度可以使用代码进行处理，代码对每个字符执行单个操作，同时扫描CR字符，如以下C代码：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/Pasted%20image%2020231024202024.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5017c51cbe07d9a9a26ed2311ec1cf7f.png)
 
 在识别出第一个CR`（"\r\n"）`之后，可以跳过它和下面的LF，而不需要任何处理。
 

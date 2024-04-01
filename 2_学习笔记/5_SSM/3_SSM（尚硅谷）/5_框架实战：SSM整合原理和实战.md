@@ -37,7 +37,7 @@
 
 图解：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215909134.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dde818772b6575dc09e24612983d5d98.png)
 
 
 总结：
@@ -51,13 +51,13 @@
 
 情况1：两个无关联IoC容器之间的组件无法注入！
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215918805.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0d5f56577f92f2a4f75e281df885a46d.png)
 
 
 
 情况2：子IoC容器可以单向的注入父IoC容器的组件！
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215924241.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cb5b54e50a6cf1230538d608c2888647.png)
 
 
 
@@ -98,14 +98,14 @@ protected WebApplicationContext createWebApplicationContext(@Nullable Applicatio
 ```
 
 调用流程图解：
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215931779.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c9991eb954418a4e2c6d5774eb555ef.png)
 
 
 #### 1.2.4 第四问：具体多少配置类以及对应容器关系？
 
 配置类的数量不是固定的，但是至少要两个，为了方便编写，我们可以三层架构每层对应一个配置类，分别指定两个容器加载即可！
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215937275.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bb340d7b92816a123b0f665fd41377ee.png)
 
 
 
@@ -148,7 +148,7 @@ public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServl
 
 图解配置类和容器配置：
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922215942480.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d58d757017020bbc0e72178128bd6aea.png)
 
 
 
@@ -548,7 +548,7 @@ public class ServiceJavaConfig {
 
         但是从使用的角度来说，`业务类（service）需要注入mapper接口，所以mapper应该交给ioc容器管理！`
 
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220000065.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/160bf5e52287d0696bd71e84b872131c.png)
 
 
     -   总结
@@ -611,7 +611,7 @@ public class ServiceJavaConfig {
     1.  介绍
 
         依然保留mybatis的外部配置文件（xml）, 但是数据库连接信息交给Druid连接池配置！
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220008211.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/99da81dc4c5924864a9c1ddb94e38ebb.png)
 
 
         缺点：依然需要mybatis-config.xml文件，进行xml文件解析，效率偏低！
@@ -796,7 +796,7 @@ public class MapperJavaConfig {
 4.  **整合方式2（完全配置类 去掉mybatis-config.xml）**
     1.  介绍
         不在保留mybatis的外部配置文件（xml）, 所有配置信息（settings、插件、别名等）全部在声明SqlSessionFactoryBean的代码中指定！数据库信息依然使用DruidDataSource实例替代！
-        ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220016717.png)
+        ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ca515bd92b72fcd62d7ae9d23e674e56.png)
 
 
 
@@ -948,7 +948,7 @@ public interface EmployeeMapper {
 
 #### 3.1.1 案例功能预览
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220025477.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b20595112ac68e3f0a6e77211bb003a9.png)
 
 
 
@@ -1089,7 +1089,7 @@ npm install 依赖名 / npm install 依赖名@版本
 
 点击加载前端程序！
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220039946.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/180f265e568132b26a7c4c183c6670bb.png)
 
 
 
@@ -1382,18 +1382,18 @@ void update(Schedule schedule);
 ### 4.3 前后联调
 
 1.  后台项目根路径设计
-    ![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220051402.png)
+    ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/612a8e589a0f9432af918a19ff0afed2.png)
 
 
 2.  启动测试
 
-- 分析前端代码中的ScheduleApi.js，每个操作都绑定了对应的地址![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220059146.png)
+- 分析前端代码中的ScheduleApi.js，每个操作都绑定了对应的地址![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6abffbcdcf03c76f71a8d05704f69a70.png)
 
 
-- 再分析前端代码中的request.js文件，发现指向后台的地址![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220102872.png)
+- 再分析前端代码中的request.js文件，发现指向后台的地址![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6018b07dd0ac8fd69becc26bd4a1a945.png)
 
 
-- 但是，打开前端页面，发现报错![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220106559.png)
+- 但是，打开前端页面，发现报错![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/379f7f308b460df6b8cf7e2e598bdc4f.png)
 
 
 - 错误原因：跨域了，浏览器任务这是两个组织的资源，不应该访问
@@ -1402,5 +1402,5 @@ void update(Schedule schedule);
 		- 若是协议、ip和端口相同则同源，可以访问；
 		- 否则不同源，拒绝访问
 - 解决方式：
-	- 后台设置非同源访问即可![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922220108219.png)
+	- 后台设置非同源访问即可![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fdc501ce46fd73cb3a1aca3ace8e6f59.png)
 

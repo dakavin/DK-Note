@@ -148,7 +148,7 @@
     
     - `Spring已形成了完整的生态圈，也就是说我们可以完全使用Spring技术完成整个项目的构建、设计与开发`。
 
-    - `Spring有若干个项目，可以根据需要自行选择，把这些个项目组合起来，起了一个名称叫Spring全家桶`，如下图所示![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211104824.png)
+    - `Spring有若干个项目，可以根据需要自行选择，把这些个项目组合起来，起了一个名称叫Spring全家桶`，如下图所示![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f5f2dad0859043d2e357729a625f98a0.png)
 - **说明:**
 
 图中的图标都代表什么含义，可以进入 [https://spring.io/projects](https://spring.io/projects) 网站进行对比查看。  
@@ -164,7 +164,7 @@
 
 接下来我们介绍下Spring Framework这个技术是如何来的呢?
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211110515.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8d69cfdb46689e5a25af64a956d0de9a.png)
 
 
 
@@ -191,11 +191,11 @@
 
 - Spring Framework的发展也经历了很多版本的变更，每个版本都有相应的调整
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211113394.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5dc77ae52169d9e5b3d0c708158627b3.png)
 
 
 
-- Spring Framework的5版本目前没有最新的架构图，而最新的是4版本，所以接下来主要研究的是4的架构图![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211115216.png)
+- Spring Framework的5版本目前没有最新的架构图，而最新的是4版本，所以接下来主要研究的是4的架构图![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/956bfedecd3d2fdc46bc42867bb86a9e.png)
 
 
 1. `核心层`
@@ -220,7 +220,7 @@
     3. AOP的具体应用,事务管理
     4. IOC/DI的具体应用,整合Mybatis
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211119468.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d02c2e17858e23ccfe17967576e7472.png)
 
 
 ### 2.3 Spring核心概念
@@ -689,7 +689,7 @@ public class BookServiceImpl implements BookService {
     - name=”bookDao”中`bookDao`的作用是让Spring的IOC容器在获取到名称后，将首字母大写，前面加set找对应的`setBookDao()`方法进行对象注入
     - ref=”bookDao”中`bookDao`的作用是让Spring能在IOC容器中找到id为`bookDao`的Bean对象给`bookService`进行注入
 
-![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211136646.png)
+![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8af38d0df81e11cf335ddfd264b9ab4.png)
 
 
 
@@ -712,7 +712,7 @@ public class BookServiceImpl implements BookService {
 <bean id="" class=""/>
 ```
 
-- 其中，bean标签的功能、使用方式以及id和class属性的作用，我们通过一张图来描述下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211139131.png)
+- 其中，bean标签的功能、使用方式以及id和class属性的作用，我们通过一张图来描述下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a1fe7258b8e8c45091d7d4587c8d3a8f.png)
 
 #### 4.1.2 bean的name属性
 
@@ -850,7 +850,7 @@ public class BookDaoImpl implements BookDao {
 ```
 
 - 运行程序  
-	输出结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211149939.png)
+	输出结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae805c243e106482d925ca1eabe6002f.png)
 
 
 - 接下来我们将构造器私有化继续测试
@@ -866,7 +866,7 @@ public class BookDaoImpl implements BookDao {
 }
 ```
 
-- 运行程序，能执行成功，说明内部走的依然是构造函数，能访问到类中的私有构造方法，`显而易见Spring底层用的是反射`![![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211153979.png)
+- 运行程序，能执行成功，说明内部走的依然是构造函数，能访问到类中的私有构造方法，`显而易见Spring底层用的是反射`![![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4132247c513c7af71a1388f6c2daa538.png)
 
 
 - 我们在构造函数中添加一个参数试试
@@ -909,7 +909,7 @@ public class App {
 }
 ```
 
-- 运行后，可以查看到结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211157730.png)
+- 运行后，可以查看到结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c0b80c8b113d4409c7f2bd6ee2d0bc42.png)
 
 
 - 那我们如何将这种方式交给Spring来管理呢？
@@ -934,7 +934,7 @@ public class App {
 }
 ```
 
-3. 运行后，结果如下，与我们自己直接new对象没太大区别，而且还麻烦了，那这种方式的意义是什么呢？![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211201501.png)
+3. 运行后，结果如下，与我们自己直接new对象没太大区别，而且还麻烦了，那这种方式的意义是什么呢？![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/06fa1a7c1d915201922c22da321262d7.png)
 
 
 4. 解惑  
@@ -982,7 +982,7 @@ public class App {
 }
 ```
 
-- 运行结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211205658.png)
+- 运行结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/959a8d4e6b3d14644b6653dba22c6839.png)
 
 
 - 那么对于上面这种实例工厂的方式如何交给Spring管理呢?
@@ -1011,7 +1011,7 @@ public class App {
 }
 ```
 
-3. 运行后，可以查看到结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211210121.png)
+3. 运行后，可以查看到结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/21b5abccbe9c92b021e0c1f3e6e7144c.png)
 
 
 - 实例工厂实例化的方式就已经介绍完了，配置的过程还是比较复杂，要写两行配置，而且这两行还是高耦合的，所以Spring为了简化这种配置方式就提供了一种叫`FactoryBean`的方式来简化开发。
@@ -1039,7 +1039,7 @@ public class BookDaoFactoryBean implements FactoryBean<BookDao> {
 <bean id="bookDao" class="com.blog.factory.BookDaoFactoryBean"></bean>
 ```
 
-3. App运行类不用做任何修改，直接运行，结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211215350.png)
+3. App运行类不用做任何修改，直接运行，结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e518496c4499a5fb6f60369ed2399af8.png)
 
 
 - 这种方式在Spring去整合其他框架的时候会被用到，所以这种方式需要我们理解掌握。
@@ -1117,7 +1117,7 @@ public class BookDaoImpl implements BookDao {
 ```
 
 3. 运行程序
-	输出结果如下：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211220471.png)
+	输出结果如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/64f655f1b8fbf447366317898ff54e65.png)
 
 
 从结果中可以看出，init方法执行了，但是destroy方法却未执行，这是为什么呢?
@@ -1145,7 +1145,7 @@ public class App {
 }
 ```
 
-- 运行程序，输出如下，可以看到destory正常输出：![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211223337.png)
+- 运行程序，输出如下，可以看到destory正常输出：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c07a853afa85b204f2e0fd74b9734f46.png)
 
 
 #### 4.3.3 注册钩子关闭容器
@@ -1166,7 +1166,7 @@ public class App {
 
 >注意：registerShutdownHook在ApplicationContext中也没有
 
-- 运行后，查询打印结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211226596.png)
+- 运行后，查询打印结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d0faa303835aeed65d486e3dbe3e9a71.png)
 
 - 那两种方式介绍完后，close和registerShutdownHook选哪个?
 
@@ -1225,7 +1225,7 @@ public class BookServiceImpl implements BookService, InitializingBean, Disposabl
 </bean>
 ```
 
-- 重新运行App类，输出结果如下![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211232128.png)
+- 重新运行App类，输出结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4a5ab3f68bde7ba1c587189c07fdde17.png)
 
 
 
@@ -1244,7 +1244,7 @@ public void setBookDao(BookDao bookDao) {
 }
 ```
 
-- 重新运行，结果如下，`service init`在`set`之后，符合我们的预期![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211235040.png)
+- 重新运行，结果如下，`service init`在`set`之后，符合我们的预期![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7e579b608ec0391b222a905800bd2b48.png)
 
 
 >可能存在的疑问：明明我们没调用bookService，但为什么上面的输出结果中有service呢？  
@@ -1445,7 +1445,7 @@ public class BookServiceImpl implements BookService {
 </beans>
 ```
 
-- `步骤三：`运行程序，结果如下，userDao已经成功注入。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211244676.png)
+- `步骤三：`运行程序，结果如下，userDao已经成功注入。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f0e59d2cddbc07442a7316a5beff23a2.png)
 
 
 #### 5.1.3 注入简单数据类型
@@ -1505,7 +1505,7 @@ public class BookDaoImpl implements BookDao {
 ```
 >value:后面跟的是简单数据类型，对于参数类型，Spring在注入的时候会自动转换，但是不能写一个错误的类型，例如`connectionCount`是`int`类型，你却给他传一个`abc`，这样的话，spring在将`abc`转换成int类型的时候就会报错。
 
-- `步骤三：`运行程序，查看输出，两个简单数据类型也成功注入![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211255544.png)
+- `步骤三：`运行程序，查看输出，两个简单数据类型也成功注入![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7f3ebab79d852245c097d531fb8c0e1d.png)
 
 
 - 那么对于setter注入方式的基本使用就已经介绍完了
@@ -1631,7 +1631,7 @@ public class BookServiceImpl implements BookService{
 >	ref属性指向的是spring的IOC容器中其他bean对象。
 
 - `步骤三：`运行程序  
-	运行App类，查看结果，说明bookDao已经成功注入。![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211303890.png)
+	运行App类，查看结果，说明bookDao已经成功注入。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2db0a6b9e7ee146b341add7da4e5bf16.png)
 
 
 #### 5.2.3 构造器注入多个引用数据类型
@@ -1679,7 +1679,7 @@ public class BookServiceImpl implements BookService {
 ```
 
 - `步骤三：`运行程序  
-	结果中出现了userDao的输出，说明userDao成功注入![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211307699.png)
+	结果中出现了userDao的输出，说明userDao成功注入![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b36b2704b695f8fadd52548005a169c9.png)
 
 
 #### 5.2.4 构造器注入多个简单数据类型
@@ -1728,7 +1728,7 @@ public class BookDaoImpl implements BookDao {
 </beans>
 ```
 
-- `步骤三：`运行程序![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211312062.png)
+- `步骤三：`运行程序![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b53d7e588732215bcdb25d03217cbc64.png)
 
 
 
@@ -1774,17 +1774,17 @@ public class BookDaoImpl implements BookDao {
 这部分主要讲解的是Spring的依赖注入的实现方式:
 
 - setter注入
-	- 简单数据类型![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211315420.png)
+	- 简单数据类型![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/812830b3c6d99605e21958525e7ff02a.png)
 
 
-	- 引用数据类型![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211318012.png)
+	- 引用数据类型![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8c47a07540892fdd9071fd6d6c22c8ef.png)
 
 
 - 构造器注入
-	- 简单数据类型![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211323185.png)
+	- 简单数据类型![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/53f07de1086d54be18e7e5f051078c05.png)
 
 
-	- 引用数据类型![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211329695.png)
+	- 引用数据类型![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ecfdc627b91cd54460eb26f396c246bd.png)
 
 
 - 依赖注入的方式选择上
@@ -1892,7 +1892,7 @@ public class App {
 </beans>
 ```
 
-- 运行程序，结果如下，说明已经成功注入了![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211335757.png)
+- 运行程序，结果如下，说明已经成功注入了![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/72845eb3dfe31ccac535091da95819fd.png)
 
 
 >注意事项：
@@ -1933,7 +1933,7 @@ public class BookServiceImpl implements BookService{
 }
 ```
 
-- 运行程序，结果如下，说明已经成功注入了![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211339371.png)
+- 运行程序，结果如下，说明已经成功注入了![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4057c6a1dc14d869e7867f28dec9b8f2.png)
 
 
 - 疑惑：为什么刚刚修改的是setBookDao的方法名，而不是将bookDao属性修改为bookDao1呢？按照名称注入中的名称指的是什么?
@@ -2105,7 +2105,7 @@ public class App {
 </property>
 ```
 
-- 配置完成之后，运行查看结果![](https://image-for.oss-cn-guangzhou.aliyuncs.com/for-obsidian/Java_Study/2_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/1_Java%E8%AF%AD%E8%A8%80%E6%A0%B8%E5%BF%83/1_Java%E5%9F%BA%E7%A1%80/1_Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230922211346188.png)
+- 配置完成之后，运行查看结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/515b23a210fb34871ddcc88bd7e36b38.png)
 
 
 - 说明：
