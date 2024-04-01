@@ -1,13 +1,3 @@
-## 目录
-
-- [1 JSON介绍](#1%20JSON%E4%BB%8B%E7%BB%8D)
-	- [1.1 概念](#1.1%20%E6%A6%82%E5%BF%B5)
-	- [1.2 语法](#1.2%20%E8%AF%AD%E6%B3%95)
-	- [1.3 分类](#1.3%20%E5%88%86%E7%B1%BB)
-- [2 JSON和Java对象之间的转换](#2%20JSON%E5%92%8CJava%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2)
-	- [2.1 JDK方式——JSONObject、JSONArray](#2.1%20JDK%E6%96%B9%E5%BC%8F%E2%80%94%E2%80%94JSONObject%E3%80%81JSONArray)
-	- [2.2 Gson方式](#2.2%20Gson%E6%96%B9%E5%BC%8F)
-	- [2.3 fastjson方式](#2.3%20fastjson%E6%96%B9%E5%BC%8F)
 
 ## 1 JSON介绍
 

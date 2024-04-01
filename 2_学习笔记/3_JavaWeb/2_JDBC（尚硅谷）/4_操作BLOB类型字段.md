@@ -1,11 +1,4 @@
 
-## 目录
-
-- [1 MySQL BLOB类型](#1%20MySQL%20BLOB%E7%B1%BB%E5%9E%8B)
-- [2 向数据表中插入大数据类型](#2%20%E5%90%91%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E6%8F%92%E5%85%A5%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
-- [3 修改数据表中的Blob类型字段](#3%20%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E7%9A%84Blob%E7%B1%BB%E5%9E%8B%E5%AD%97%E6%AE%B5)
-- [4 从数据表中读取大数据类型](#4%20%E4%BB%8E%E6%95%B0%E6%8D%AE%E8%A1%A8%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)
-
 ## 1 MySQL BLOB类型
 
 - MySQL中，`BLOB是一个二进制大型对象`，是一个可以存储大量数据的容器，它能容纳不同大小的数据。

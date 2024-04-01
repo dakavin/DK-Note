@@ -1,10 +1,3 @@
-## 目录
-
-- [1 Filter：过滤器](#1%20Filter%EF%BC%9A%E8%BF%87%E6%BB%A4%E5%99%A8)
-- [2 Listener：监听器](#2%20Listener%EF%BC%9A%E7%9B%91%E5%90%AC%E5%99%A8)
-- [3 Filter、Listener和Servlet的关系](#3%20Filter%E3%80%81Listener%E5%92%8CServlet%E7%9A%84%E5%85%B3%E7%B3%BB)
-- [4 过滤器实战](#4%20%E8%BF%87%E6%BB%A4%E5%99%A8%E5%AE%9E%E6%88%98)
-- [5 常用Listener](#5%20%E5%B8%B8%E7%94%A8Listener)
 
 ## 1 Filter：过滤器
 

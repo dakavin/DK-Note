@@ -1,12 +1,3 @@
-## 目录
-
-- [1 前言](#1%20%E5%89%8D%E8%A8%80)
-- [2 while循环](#2%20while%E5%BE%AA%E7%8E%AF)
-- [3 do while循环](#3%20do%20while%E5%BE%AA%E7%8E%AF)
-- [4 for循环](#4%20for%E5%BE%AA%E7%8E%AF)
-- [5 双重for循环](#5%20%E5%8F%8C%E9%87%8Dfor%E5%BE%AA%E7%8E%AF)
-- [6 break语句的使用](#6%20break%E8%AF%AD%E5%8F%A5%E7%9A%84%E4%BD%BF%E7%94%A8)
-- [7 continue的使用](#7%20continue%E7%9A%84%E4%BD%BF%E7%94%A8)
 
 ## 1 前言
 

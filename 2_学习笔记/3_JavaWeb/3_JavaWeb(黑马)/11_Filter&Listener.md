@@ -1,15 +1,3 @@
-## 目录
-
-- [1 Filter：过滤器](#1%20Filter%EF%BC%9A%E8%BF%87%E6%BB%A4%E5%99%A8)
-	- [1.1 概念](#1.1%20%E6%A6%82%E5%BF%B5)
-	- [1.2 快速入门](#1.2%20%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8)
-	- [1.3 过滤器细节](#1.3%20%E8%BF%87%E6%BB%A4%E5%99%A8%E7%BB%86%E8%8A%82)
-	- [1.4 案例:登录验证](#1.4%20%E6%A1%88%E4%BE%8B:%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81)
-	- [1.5 案例：敏感词汇过滤](#1.5%20%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%95%8F%E6%84%9F%E8%AF%8D%E6%B1%87%E8%BF%87%E6%BB%A4)
-	- [1.6 增强对象的功能：](#1.6%20%E5%A2%9E%E5%BC%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%9A)
-- [2 Listener：监听器](#2%20Listener%EF%BC%9A%E7%9B%91%E5%90%AC%E5%99%A8)
-	- [2.1 概念](#2.1%20%E6%A6%82%E5%BF%B5)
-	- [2.2 ServletContextListener](#2.2%20ServletContextListener)
 
 ## 1 Filter：过滤器
 

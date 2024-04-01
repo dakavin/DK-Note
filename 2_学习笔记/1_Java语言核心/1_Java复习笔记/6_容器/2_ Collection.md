@@ -1,16 +1,3 @@
-## 目录
-
-- [1 前言](#1%20%E5%89%8D%E8%A8%80)
-- [2 List](#2%20List)
-	- [2.1 Vectory](#2.1%20Vectory)
-	- [2.2 ArrayList](#2.2%20ArrayList)
-	- [2.3 LinkedList](#2.3%20LinkedList)
-- [3 Set](#3%20Set)
-	- [3.1 HashSet](#3.1%20HashSet)
-- [4 Map](#4%20Map)
-	- [4.1 hashMap](#4.1%20hashMap)
-	- [4.2 HashTable](#4.2%20HashTable)
-	- [4.3 ConcurrentHashMap](#4.3%20ConcurrentHashMap)
 
 ## 1 前言
 

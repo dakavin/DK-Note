@@ -3,11 +3,6 @@
 
 建议先观看视频导读：https://www.bilibili.com/video/BV1Qf4y1K7ff/
 
-<h1>目录</h1>
-
-```table-of-contents
-```
-
 ## 1 路线特点
 
 1. 最新，完整一条龙的大厂 Java 学习路线，从入门到入土

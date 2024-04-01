@@ -1,15 +1,3 @@
-## 目录
-
-- [1 前言](#1%20%E5%89%8D%E8%A8%80)
-- [2 PriorityQueue](#2%20PriorityQueue)
-	- [2.1 PriorityQueue的排序方式](#2.1%20PriorityQueue%E7%9A%84%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F)
-	- [2.2 PriorityQueue的方法](#2.2%20PriorityQueue%E7%9A%84%E6%96%B9%E6%B3%95)
-	- [2.3 PriorityQueue的本质](#2.3%20PriorityQueue%E7%9A%84%E6%9C%AC%E8%B4%A8)
-- [3 Deque接口与ArrayDeque实现类](#3%20Deque%E6%8E%A5%E5%8F%A3%E4%B8%8EArrayDeque%E5%AE%9E%E7%8E%B0%E7%B1%BB)
-	- [3.1 Deque接口](#3.1%20Deque%E6%8E%A5%E5%8F%A3)
-	- [3.2 Deque与Queue、Stack的关系](#3.2%20Deque%E4%B8%8EQueue%E3%80%81Stack%E7%9A%84%E5%85%B3%E7%B3%BB)
-	- [3.3 ArrayDeque的本质](#3.3%20ArrayDeque%E7%9A%84%E6%9C%AC%E8%B4%A8)
-	- [3.4 ArrayDeque常用方法](#3.4%20ArrayDeque%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95)
 
 ## 1 前言
 

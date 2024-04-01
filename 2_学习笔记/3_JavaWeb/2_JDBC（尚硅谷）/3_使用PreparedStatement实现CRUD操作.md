@@ -1,20 +1,3 @@
-## 目录
-
-- [1 操作和访问数据库](#1%20%E6%93%8D%E4%BD%9C%E5%92%8C%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E5%BA%93)
-- [2 使用Statement操作数据表的弊端](#2%20%E4%BD%BF%E7%94%A8Statement%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%A1%A8%E7%9A%84%E5%BC%8A%E7%AB%AF)
-- [3 PreparedStatement的使用](#3%20PreparedStatement%E7%9A%84%E4%BD%BF%E7%94%A8)
-	- [3.1 PreparedStatement介绍](#3.1%20PreparedStatement%E4%BB%8B%E7%BB%8D)
-	- [3.2 PreparedStatement vs Statement](#3.2%20PreparedStatement%20vs%20Statement)
-	- [3.3 Java与SQL对应数据类型转换表](#3.3%20Java%E4%B8%8ESQL%E5%AF%B9%E5%BA%94%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E8%A1%A8)
-	- [3.4 使用PreparedStatement实现增、删、改操作](#3.4%20%E4%BD%BF%E7%94%A8PreparedStatement%E5%AE%9E%E7%8E%B0%E5%A2%9E%E3%80%81%E5%88%A0%E3%80%81%E6%94%B9%E6%93%8D%E4%BD%9C)
-	- [3.5 使用PreparedStatement实现查询操作](#3.5%20%E4%BD%BF%E7%94%A8PreparedStatement%E5%AE%9E%E7%8E%B0%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C)
-- [4 ResultSet与ResultSetMetaData](#4%20ResultSet%E4%B8%8EResultSetMetaData)
-	- [4.1 ResultSet](#4.1%20ResultSet)
-	- [4.2 ResultSetMetaData](#4.2%20ResultSetMetaData)
-- [5 资源的释放](#5%20%E8%B5%84%E6%BA%90%E7%9A%84%E9%87%8A%E6%94%BE)
-- [6 JDBC API小结](#6%20JDBC%20API%E5%B0%8F%E7%BB%93)
-- [7 使用PreparedStatement的好处](#7%20%E4%BD%BF%E7%94%A8PreparedStatement%E7%9A%84%E5%A5%BD%E5%A4%84)
-- [8 章节练习](#8%20%E7%AB%A0%E8%8A%82%E7%BB%83%E4%B9%A0)
 
 
 - CRUD是指 **Create（创建）、Retrieve（读取）、Update（更新）和Delete（删除）** 这四个操作，是指在数据库或系统中对数据进行基本操作的常用术语

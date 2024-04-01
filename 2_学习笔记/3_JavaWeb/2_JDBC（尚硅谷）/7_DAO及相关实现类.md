@@ -1,12 +1,3 @@
-## 目录
-
-- [1 概述](#1%20%E6%A6%82%E8%BF%B0)
-- [2 案例](#2%20%E6%A1%88%E4%BE%8B)
-	- [2.1 图片演示](#2.1%20%E5%9B%BE%E7%89%87%E6%BC%94%E7%A4%BA)
-	- [2.2 JavaBean](#2.2%20JavaBean)
-	- [2.3 BaseDAO.java](#2.3%20BaseDAO.java)
-	- [2.4 Book和User的接口](#2.4%20Book%E5%92%8CUser%E7%9A%84%E6%8E%A5%E5%8F%A3)
-	- [2.5 Book和User的实现类](#2.5%20Book%E5%92%8CUser%E7%9A%84%E5%AE%9E%E7%8E%B0%E7%B1%BB)
 
 ## 1 概述
 

@@ -1,20 +1,3 @@
-## 目录
-
-- [1 List集合](#1%20List%E9%9B%86%E5%90%88)
-	- [1.1 List集合判断元素相等的标准](#1.1%20List%E9%9B%86%E5%90%88%E5%88%A4%E6%96%AD%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89%E7%9A%84%E6%A0%87%E5%87%86)
-	- [1.2 ListIterator](#1.2%20ListIterator)
-- [2 ArrayList](#2%20ArrayList)
-	- [2.1 ArrayList简介](#2.1%20ArrayList%E7%AE%80%E4%BB%8B)
-	- [2.2 ArrayList的本质](#2.2%20ArrayList%E7%9A%84%E6%9C%AC%E8%B4%A8)
-	- [2.3 ArrayList 和 Vector的区别](#2.3%20ArrayList%20%E5%92%8C%20Vector%E7%9A%84%E5%8C%BA%E5%88%AB)
-	- [2.4 Stack](#2.4%20Stack)
-	- [2.5 ArrayList的遍历方式](#2.5%20ArrayList%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F)
-- [3 LinkedList](#3%20LinkedList)
-	- [3.1 LinkedList简介](#3.1%20LinkedList%E7%AE%80%E4%BB%8B)
-	- [3.2 LinkedList方法](#3.2%20LinkedList%E6%96%B9%E6%B3%95)
-	- [3.3 LinkedList本质](#3.3%20LinkedList%E6%9C%AC%E8%B4%A8)
-	- [3.4 LinkedList遍历方式](#3.4%20LinkedList%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F)
-- [4 ArrayList和LinkedList性能对比](#4%20ArrayList%E5%92%8CLinkedList%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94)
 
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cee64f4229be94cfaffc4893cf17b70b.png)

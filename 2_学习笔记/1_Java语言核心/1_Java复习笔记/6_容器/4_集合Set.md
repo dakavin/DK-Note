@@ -1,25 +1,3 @@
-## 目录
-
-- [1 HashSet类](#1%20HashSet%E7%B1%BB)
-	- [1.1 HashSet简介](#1.1%20HashSet%E7%AE%80%E4%BB%8B)
-	- [1.2 HashSet特点](#1.2%20HashSet%E7%89%B9%E7%82%B9)
-	- [1.3 equals()和hashCode()](#1.3%20equals()%E5%92%8ChashCode())
-		- [1.3.1 equals()](#1.3.1%20equals())
-		- [1.3.2 hashCode()](#1.3.2%20hashCode())
-	- [1.4 HashSet中判断集合元素相等](#1.4%20HashSet%E4%B8%AD%E5%88%A4%E6%96%AD%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89)
-	- [1.5 LinkedHashSet类](#1.5%20LinkedHashSet%E7%B1%BB)
-- [2 TreeSet类](#2%20TreeSet%E7%B1%BB)
-	- [2.1 TreeSet简介](#2.1%20TreeSet%E7%AE%80%E4%BB%8B)
-	- [2.2 TreeSet的方法](#2.2%20TreeSet%E7%9A%84%E6%96%B9%E6%B3%95)
-	- [2.3 TreeSet的排序方式](#2.3%20TreeSet%E7%9A%84%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F)
-		- [2.3.1 自然排序](#2.3.1%20%E8%87%AA%E7%84%B6%E6%8E%92%E5%BA%8F)
-		- [2.3.2 TreeSet中判断集合元素相等](#2.3.2%20TreeSet%E4%B8%AD%E5%88%A4%E6%96%AD%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E7%9B%B8%E7%AD%89)
-		- [2.3.3 定制排序](#2.3.3%20%E5%AE%9A%E5%88%B6%E6%8E%92%E5%BA%8F)
-- [3 EnumSet类](#3%20EnumSet%E7%B1%BB)
-	- [3.1 EnumSet简介](#3.1%20EnumSet%E7%AE%80%E4%BB%8B)
-	- [3.2 3.2EnumSet特点](#3.2%203.2EnumSet%E7%89%B9%E7%82%B9)
-	- [3.3 EnumSet创建对象的方法](#3.3%20EnumSet%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95)
-- [4 HashSet、TreeSet和EnumSet的性能对比](#4%20HashSet%E3%80%81TreeSet%E5%92%8CEnumSet%E7%9A%84%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94)
 
 上一篇文章介绍了Set集合的通用知识。Set集合中包含了三个比较重要的实现类：HashSet、TreeSet和EnumSet。本篇将重点介绍这三个类
 ## 1 HashSet类

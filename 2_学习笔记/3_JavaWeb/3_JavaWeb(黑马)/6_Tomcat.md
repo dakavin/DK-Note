@@ -1,10 +1,3 @@
-## 目录
-
-- [1 web相关概念回顾](#1%20web%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5%E5%9B%9E%E9%A1%BE)
-- [2 web服务器软件](#2%20web%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BD%AF%E4%BB%B6)
-- [3 IDEA与tomcat的相关配置](#3%20IDEA%E4%B8%8Etomcat%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE)
-	- [3.1 tomcat的安装与卸载](#3.1%20tomcat%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%B8%E8%BD%BD)
-	- [3.2 IDEA与tomcat的相关配置](#3.2%20IDEA%E4%B8%8Etomcat%E7%9A%84%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE)
 
 ## 1 web相关概念回顾
 

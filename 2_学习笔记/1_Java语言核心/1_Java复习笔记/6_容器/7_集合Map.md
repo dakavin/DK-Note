@@ -1,21 +1,3 @@
-## 目录
-
-- [1 HashMap](#1%20HashMap)
-- [2 HashMap和Hashtable的区别](#2%20HashMap%E5%92%8CHashtable%E7%9A%84%E5%8C%BA%E5%88%AB)
-- [3 HashMap判断key和value相等的标准](#3%20HashMap%E5%88%A4%E6%96%ADkey%E5%92%8Cvalue%E7%9B%B8%E7%AD%89%E7%9A%84%E6%A0%87%E5%87%86)
-	- [3.1 key判断相等的标准](#3.1%20key%E5%88%A4%E6%96%AD%E7%9B%B8%E7%AD%89%E7%9A%84%E6%A0%87%E5%87%86)
-	- [3.2 value判断相等的标准](#3.2%20value%E5%88%A4%E6%96%AD%E7%9B%B8%E7%AD%89%E7%9A%84%E6%A0%87%E5%87%86)
-- [4 HashMap的本质](#4%20HashMap%E7%9A%84%E6%9C%AC%E8%B4%A8)
-	- [4.1 HashMap的构造函数](#4.1%20HashMap%E7%9A%84%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0)
-	- [4.2 Node类型](#4.2%20Node%E7%B1%BB%E5%9E%8B)
-	- [4.3 HashMap遍历方式](#4.3%20HashMap%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F)
-	- [4.4 LinkedHashMap](#4.4%20LinkedHashMap)
-- [5 TreeMap](#5%20TreeMap)
-	- [5.1 TreeMap的排序方式](#5.1%20TreeMap%E7%9A%84%E6%8E%92%E5%BA%8F%E6%96%B9%E5%BC%8F)
-	- [5.2 TreeMap中判断两个元素key、value相等的标准](#5.2%20TreeMap%E4%B8%AD%E5%88%A4%E6%96%AD%E4%B8%A4%E4%B8%AA%E5%85%83%E7%B4%A0key%E3%80%81value%E7%9B%B8%E7%AD%89%E7%9A%84%E6%A0%87%E5%87%86)
-	- [5.3 TreeMap的本质](#5.3%20TreeMap%E7%9A%84%E6%9C%AC%E8%B4%A8)
-	- [5.4 TreeMap遍历方式](#5.4%20TreeMap%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F)
-- [6 Map实现类的性能分析及适用场景](#6%20Map%E5%AE%9E%E7%8E%B0%E7%B1%BB%E7%9A%84%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%8F%8A%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF)
 
 ## 1 HashMap
 
