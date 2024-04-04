@@ -1370,7 +1370,7 @@ public void runSpeed(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 前面我们介绍通知类型的时候总共讲了五种，那么对于这五种类型都会有参数，返回值和异常吗?  
 我们先来逐一分析下:
 
-- 获取切入点方法的参数，所`有的通知类型都可以获取参数`
+- 获取切入点方法的参数，`所有的通知类型都可以获取参数`
     - `JoinPoint`：适用于前置、后置、返回后、抛出异常后通知
     - `ProceedingJoinPoint`：适用于环绕通知
 - 获取切入点方法返回值，`前置和抛出异常后通知是没有返回值，后置通知可有可无`，所以不做研究
@@ -1597,7 +1597,7 @@ public class MyAdvice {
         Object[] args = pjp.getArgs();  
         System.out.println(Arrays.toString(args));  
         args[0] = 9421;  
-        Object res = pjp.proceed(args);  
+        Object res = pjp.proceed(args); 
         return res;  
     }  
 }
@@ -1706,7 +1706,6 @@ public class BookDaoImpl implements BookDao {
 
 需求：对百度网盘分享链接输入密码时尾部多输入的空格做兼容处理。  
 问题描述：
-
 - 当我们从别人发给我们的内容中复制提取码的时候，有时候会多复制到一些空格，直接粘贴到百度的提取码输入框
 - 但是百度那边记录的提取码是没有空格的
 - 这个时候如果不做处理，直接对比的话，就会引发提取码不一致，导致无法访问百度盘上的内容
@@ -1847,13 +1846,12 @@ execution(* com.itheima.service.*Service.*(..))
 ```
 
 - 切入点表达式描述通配符：
-    
     - 作用：用于快速描述，范围描述
     - `*`：匹配任意符号（常用）
     - `..` ：匹配多个连续的任意符号（常用）
     - `+`：匹配子类类型
+
 - 切入点表达式书写技巧
-    
     1. 按`标准规范`开发
     2. 查询操作的返回值建议使用`*`匹配
     3. 减少使用`..`的形式描述包，效率低
@@ -2383,13 +2381,13 @@ public class AccountServiceImpl implements AccountService {
 ```
 
 - rollbackForClassName等同于rollbackFor,只不过属性为异常的类全名字符串
-	- noRollbackForClassName等同于noRollbackFor，只不过属性为异常的类全名字符串
-        - isolation设置事务的隔离级别
-            - DEFAULT :默认隔离级别, 会采用数据库的隔离级别
-            - READ_UNCOMMITTED : 读未提交
-            - READ_COMMITTED : 读已提交
-            - REPEATABLE_READ : 重复读取
-            - SERIALIZABLE: 串行化
+- noRollbackForClassName等同于noRollbackFor，只不过属性为异常的类全名字符串
+- isolation设置事务的隔离级别
+	- DEFAULT :默认隔离级别, 会采用数据库的隔离级别
+	- READ_UNCOMMITTED : 读未提交
+	- READ_COMMITTED : 读已提交
+	- REPEATABLE_READ : 重复读取
+	- SERIALIZABLE: 串行化
 
 介绍完上述属性后，还有最后一个事务的传播行为，为了讲解该属性的设置，我们需要完成下面的案例。
 ### 3.2 转账业务追加日志案例

@@ -27,7 +27,7 @@ REST是一种软件架构风格，可以降低开发的复杂性，提高系统�
     - `controller`根据需求组装成`Model`和`View`，`Model`和`View`组合起来生成页面，转发给前端浏览器
     - 这样做的好处就是`controller`可以处理多个请求，并对请求进行分发，执行不同的业务操作
 
-随着互联网的发展，上面的模式因为是同步调用，性能慢慢的跟不是需求，所以异步调用慢慢的走到了前台，是现在比较流行的一种处理方式。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5b95e425f38f1052ad531f5a7af530d.png)
+随着互联网的发展，上面的模式因为是同步调用，性能慢，跟不上需求，所以异步调用慢慢的走到了前台，是现在比较流行的一种处理方式。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5b95e425f38f1052ad531f5a7af530d.png)
 
 
 - 因为是`异步调用，所以后端不需要返回View视图，将其去除`
@@ -37,7 +37,6 @@ REST是一种软件架构风格，可以降低开发的复杂性，提高系统�
     - 如何将请求和数据转发给业务层
     - 如何将响应数据转换成JSON发挥到前端
 - SpringMVC是一种基于Java实现MVC模型的轻量级Web框架
-    
     - 优点
         - 使用简单、开发快捷（相比较于Servlet）
         - 灵活性强
@@ -57,7 +56,7 @@ SpringMVC的制作过程和上述流程几乎是一致的，具体的实现流�
 
 1. 创建web工程(Maven结构)
 2. 设置tomcat服务器，加载web工程(tomcat插件)
-3. 导入坐标(SpringMVC+Servlet)
+3. 导入坐标 **(SpringMVC+Servlet)**
 4. 定义处理请求的功能类(UserController)
 5. 设置请求映射(配置映射关系)
 6. 将SpringMVC设定加载到Tomcat容器中
@@ -80,6 +79,16 @@ SpringMVC的制作过程和上述流程几乎是一致的，具体的实现流�
     <artifactId>spring-webmvc</artifactId>  
     <version>5.2.10.RELEASE</version>  
 </dependency>
+<!--注意加上Tomcat的插件-->
+<plugin>  
+  <groupId>org.apache.tomcat.maven</groupId>  
+  <artifactId>tomcat7-maven-plugin</artifactId>  
+  <version>2.2</version>  
+  <configuration>    
+	<port>8080</port>  
+    <path>/</path>  
+  </configuration>  
+</plugin>
 	```
 
 - `步骤三：`创建SpringMVC控制器类（等同于我们前面做的Servlet）
