@@ -1,7 +1,51 @@
+## 1 博客生成永久链接
 
-## 1 全局背景
+### 1.1 前言
 
-### 1.1 具体操作
+Hexo 文章链接默认的生成规则是：`:year/:month/:day/:title`，是按照年、月、日、标题来生成的。
+
+这样的话，生成的链接非常长长长长长，而且如果我们的 Markdown 使用中文标题，那就更惨了，URL 一转码，将是一场灾难。
+
+更难受的是如果我们修改了文章的日期或者标题，那么将导致链接改变，别人或者你分享出去的文章就会 404，这非常的蛋疼啊，所以就有了这种插件，不论你如何修改文章的日期、名称，只要不改变 footer-matter 中的 id 值，那么文章链接永远不会变。
+
+### 1.2 安装插件
+
+```shell
+npm install hexo-abbrlink --save
+```
+
+### 1.3 使用
+
+修改 `_config.yml` ：
+```yml
+## permalink: :year/:month/:day/:title/  
+permalink: posts/:abbrlink.html  ## 此处可以自己设置
+```
+
+增加以下配置：（还是在  `_config.yml` ）
+```yml
+## abbrlink config  
+abbrlink:  
+  alg: crc32      #support crc16(default) and crc32 进制  
+  rep: hex        #support dec(default) and hex  算法  
+  drafts: false   #(true)Process draft,(false)Do not process draft. false(default)   
+  ## Generate categories from directory-tree  
+  ## depth: the max_depth of directory-tree you want to generate, should > 0  
+  auto_category:  
+     enable: true  #true(default)  
+     depth:        #3(default)  
+     over_write: false   
+  auto_title: false #enable auto title, it can auto fill the title by path  
+  auto_date: false #enable auto date, it can auto fill the date by time today  
+  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
+```
+
+其他配置意义可查看插件文档哦，链接在顶部。
+
+记着要先 `hexo clean` 再 `hexo g` 哦～～～
+## 2 全局背景
+
+### 2.1 具体操作
 
 你可以选择在主题配置文件内更改背景图片的url
 ```yaml
@@ -16,7 +60,7 @@ background: url( )
 }
 ```
 
-### 1.2 引入
+### 2.2 引入
 
 1. 先在博客文件中创建css、js和img的文件夹，用于存放相关资源![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9cbe90164c8fa84375dacea4f4f926fa.png)
 2. 复制上面的css代码，然后在css文件夹创建一个css文件，粘贴代码
@@ -24,15 +68,15 @@ background: url( )
 4. **注意：** 主题配置文件中，此选项不能为空，随便选一个图片链接就可以了![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce0053ad0b416449fa26366fbb0033df.png)
 
 
-## 2 顶部磁吸分类
+## 3 顶部磁吸分类
 
-### 2.1 前言
+### 3.1 前言
 
 这个插件主要实现了以下功能： 
 1. 自定义 tags 或 categories 的排列和展示 
 2. 自定义 tags 或 categories 的展示图标，名称 
 3. 自定义排列的行数，默认 2 行
-### 2.2 安装
+### 3.2 安装
 
 ```shell
 npm i hexo-magnet --save  
@@ -41,7 +85,7 @@ npm i hexo-magnet --save
   
 cnpm i hexo-magnet --save
 ```
-### 2.3 配置
+### 3.3 配置
 
 在hexo的配置文件中，增加如下代码：
 ```yaml
@@ -98,8 +142,7 @@ magnet:
 也欢迎共享自己的配置和进行修改。
 
 **然后hexo一键三连即可**
-
-### 2.4 问题
+### 3.4 问题
 
 出现data_list is not iterable问题
 
@@ -209,4 +252,21 @@ hexo.extend.filter.register('after_generate',function() {
 
 },priority_magnet())
 ```
+
+## 4 创建个人图标库
+
+[Butterfly 安裝文檔(六) 進階教程 | Butterfly](https://butterfly.js.org/posts/4073eda/#%E6%B7%BB%E5%8A%A0%E9%8F%88%E6%8E%A5%E9%80%B2%E4%B8%BB%E9%A1%8C%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
+
+## 5 评论Twikoo部署
+
+[云函数部署 | Twikoo 文档](https://twikoo.js.org/backend.html#hugging-face-%E9%83%A8%E7%BD%B2)
+
+[进阶配置 | 安知鱼主题官方文档 (anheyu.com)](https://docs.anheyu.com/advanced/#%E8%AF%84%E8%AE%BA)
+
+## 6 个人css调整
+
+
+### 6.1 布置ai
+
+## 7 douban 及 douban-card的使用
 

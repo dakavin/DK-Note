@@ -21,7 +21,9 @@ npm -v
 ![e33ba19f7a9e3a8ab2ece224af8b35e1.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e33ba19f7a9e3a8ab2ece224af8b35e1.png)
 
 
-主要内容来自[Hexo官方文档](https://hexo.io/zh-cn/docs/)，附上实际安装过程中的一些插图，以便于完全不懂编程的伙伴也能开发出自己的网站，如果你懂编程那就更好啦。
+主要内容来自 [Hexo官方文档](https://hexo.io/zh-cn/docs/)，附上实际安装过程中的一些插图，以便于完全不懂编程的伙伴也能开发出自己的网站，如果你懂编程那就更好啦。
+
+也推荐参考这一份文档 [Easy Hexo 👨‍💻](https://easyhexo.com/)
 ### 2.1 安装Hexo
 
 在cmd中输入如下指令，在nodejs全局依赖中安装Hexo
@@ -316,7 +318,7 @@ tips：如果你使用的是Hexo等静态网页技术搭建的框架是可以不
 
 ## 5 Hexo主题
 
-博主刚开发个人博客的时候，使用的是Jerry大佬的butterfly主题，有需要的可以参考大佬的文档[Butterfly 安裝文檔(一) 快速開始 | Butterfly](https://butterfly.js.org/posts/21cfbf15/)
+博主开发个人博客主题，使用的是Jerry大佬的butterfly主题，有需要的可以参考大佬的文档[Butterfly 安裝文檔(一) 快速開始 | Butterfly](https://butterfly.js.org/posts/21cfbf15/)
 
 我们主要介绍安装主题的通用设置
 
