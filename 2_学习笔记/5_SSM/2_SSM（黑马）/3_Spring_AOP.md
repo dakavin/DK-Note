@@ -74,9 +74,9 @@ public class BookDaoImpl implements BookDao {
     - `在SpringAOP中，理解为方法的执行`
 - `切入点(Pointcut)`:匹配连接点的式子
     - 在SpringAOP中，一个切入点可以描述一个具体方法，也可也匹配多个方法
-        - 一个具体的方法:如com.blog.dao包下的BookDao接口中的无形参无返回值的save方法
-        - 匹配多个方法:所有的save方法/所有的get开头的方法/所有以Dao结尾的接口中的任意方法/所有带有一个参数的方法
-    - 连接点范围要比切入点范围大，是切入点的方法也一定是连接点，但是是连接点的方法就不一定要被增强，所以可能不是切入点。
+        - **一个具体的方法**:如com.blog.dao包下的BookDao接口中的无形参无返回值的save方法
+        - **匹配多个方法**:所有的save方法/所有的get开头的方法/所有以Dao结尾的接口中的任意方法/所有带有一个参数的方法
+    - **连接点范围要比切入点范围大**，是切入点的方法也一定是连接点，但是是连接点的方法就不一定要被增强，所以可能不是切入点。
 - `通知(Advice)`:在切入点处执行的操作，也就是共性功能
     - 在SpringAOP中，功能最终以方法的形式呈现
 - `通知类：定义通知的类`
@@ -273,19 +273,19 @@ public class App {
 
 知识点1：`@EnableAspectJAutoProxy`
 
-|名称|@EnableAspectJAutoProxy|
-|---|---|
-|类型|配置类注解|
-|位置|配置类定义上方|
-|作用|开启注解格式AOP功能|
+| 名称  | @EnableAspectJAutoProxy |
+| --- | ----------------------- |
+| 类型  | **配置类注解**               |
+| 位置  | 配置类定义上方                 |
+| 作用  | 开启注解格式AOP功能             |
 
 知识点2：`@Aspect`
 
-|名称|@Aspect|
-|---|---|
-|类型|类注解|
-|位置|切面类定义上方|
-|作用|设置当前类为AOP切面类|
+| 名称  | @Aspect      |
+| --- | ------------ |
+| 类型  | **类注解**      |
+| 位置  | 切面类定义上方      |
+| 作用  | 设置当前类为AOP切面类 |
 
 知识点3：`@Pointcut`
 
@@ -314,7 +314,7 @@ AOP的入门案例已经完成，对于刚才案例的执行过程，我们就�
     - 容器启动就需要去加载bean,哪些类需要被加载呢?
     - `需要被增强的类，如:BookServiceImpl`
     - `通知类，如:MyAdvice`
-    - 注意此时bean对象还没有创建成功
+    - **注意此时bean对象还没有创建成功**
 - `流程二`：读取所有切面配置中的切入点
 ```java
 @Component  
@@ -339,14 +339,14 @@ public class MyAdvice {
 
 - `流程三`：初始化bean，判定bean对应的类中的方法（连接点）是否匹配到任意切入点
     - 注意第一步在容器启动的时候，bean对象还没有被创建成功。
-    - 要被实例化bean对象的类中的方法和切入点进行匹配![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/42cba4fb3bc728f2ff93e910f9bc112b.png)
+    - 要被实例化bean对象的类中的连接点（方法）和切入点进行匹配![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/42cba4fb3bc728f2ff93e910f9bc112b.png)
     - 匹配失败，创建原始对象，如`UserDao`
     - 匹配失败说明不需要增强，直接调用原始对象的方法即可。
 
 - 匹配成功，创建原始对象（`目标对象`）的`代理`对象，如:`BookDao`
     - 匹配成功说明需要对其进行增强
     - 对哪个类做增强，这个类对应的对象就叫做目标对象
-    - 因为要对目标对象进行功能增强，而采用的技术是动态代理，所以会为其创建一个代理对象
+    - 因为要对目标对象进行功能增强，而采用的技术是动态代理，所以会为其创建一个代理对象（**此时的bean为它的代理对象**）
     - 最终运行的是代理对象的方法，在该方法中会对原始方法进行功能增强
 
 - `流程四`：获取bean执行方法
@@ -416,7 +416,7 @@ public class MyAdvice {
 
 至此对于刚才的结论，我们就得到了验证，这块我们需要注意的是:
 
-`不能直接打印对象`，从上面两次结果中可以看出，直接打印对象走的是对象的toString方法，不管是不是代理对象，打印的结果都是一样的，`原因是内部对toString方法进行了重写`。
+📝📝：`不能直接打印对象`，从上面两次结果中可以看出，直接打印对象走的是对象的toString方法，不管是不是代理对象，打印的结果都是一样的，`原因是内部对toString方法进行了重写`。
 ## 2、AOP核心概念
 
 在上面介绍AOP的工作流程中，我们提到了两个核心概念，分别是:
@@ -470,7 +470,8 @@ execution(void com.blog.dao.BookDao.update())
 ```java
 execution(void com.blog.dao.impl.BookDaoImpl.update())
 ```
-因为调用接口方法的时候最终运行的还是其实现类的方法，所以上面两种描述方式都是可以的。
+
+📝📝📝：因为调用接口方法的时候最终运行的还是其实现类的方法，所以上面两种描述方式都是可以的。
 
 对于切入点表达式的语法为:
 
@@ -497,13 +498,13 @@ execution(public User com.blog.service.UserService.findById(int))
 我们使用通配符描述切入点，`主要的目的就是简化之前的配置`，具体都有哪些通配符可以使用?
 
 - `*`:`单个`独立的任意符号，可以独立出现，也可以作为前缀或者后缀的匹配符出现  
-    匹配com.blog`包下的任意包`中的UserService类或接口中`所有find开头`的`带有一个参数`的方法
+    匹配com.blog包下的任意包中的UserService类或接口中所有find开头的带有一个参数的方法
 ```java
 execution（public * com.blog.*.UserService.find*(*))
 ```
 
 - `..`：`多个`连续的任意符号，可以独立出现，常用于`简化包名与参数的书写` 
-	匹配`com包下的任意包`中的UserService类或接口中`所有名称为findById的方法`
+	匹配com包下的任意包中的UserService类或接口中所有名称为findById的方法
 ```java
 execution（public User com..UserService.findById(..))
 ```
@@ -526,12 +527,12 @@ execution(void com.blog.dao.BookDao.update())
 execution(void com.blog.dao.impl.BookDaoImpl.update())
 ```
 
-- 返回值任意，能匹配到
+- **返回值任意**，能匹配到
 ```java
 execution(* com.blog.dao.impl.BookDaoImpl.update())
 ```
 
-- 返回值任意，但是update方法必须要有一个参数，无法匹配，要想匹配需要在update接口和实现类添加参数
+- 返回值任意，但是update方法必须要有一个参数，无法匹配，要想匹配需要在update接口和实现类添加一个参数
 ```java
 execution(* com.blog.dao.impl.BookDaoImpl.update(*))
 ```
@@ -591,7 +592,7 @@ execution(* com.blog.*.*Service.save*(..))
 - `返回值类型`对于增删改类使用精准类型加速匹配，对于查询类使用`*`通配快速描述
 - `包名`书写尽量不使用`..`匹配，效率过低，常用`*`做单个包描述匹配，或精准匹配
 - `接口名/类名`书写名称与模块相关的采用`*`匹配，例如UserService书写成`*Service`，绑定业务层接口名
-- 方法名书写以`动词`进行`精准匹配`，名词采用`*`匹配，例如`getById`书写成`getBy*`，`selectAll`书写成`selectAll`
+- 方法名书写以`动词`进行`精准匹配`，名词采用`*`匹配，例如`getById`书写成`getBy*`，`selectAll`书写成`select*`
 - 参数规则较为复杂，根据业务方法灵活调整
 - 通常`不使用异常`作为`匹配`规则
 
@@ -622,11 +623,11 @@ execution(* com.blog.*.*Service.save*(..))
 为了更好的理解这几种通知类型，我们来看一张图![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e407c4050918f42f3433a13b379458c9.png)
 
 
-1. 前置通知，追加功能到方法执行前,类似于在代码1或者代码2添加内容
-2. 后置通知,追加功能到方法执行后,不管方法执行的过程中有没有抛出异常都会执行，类似于在代码5添加内容
-3. 返回后通知,追加功能到方法执行后，只有方法正常执行结束后才进行,类似于在代码3添加内容，如果方法执行抛出异常，返回后通知将不会被添加
-4. 抛出异常后通知,追加功能到方法抛出异常后，只有方法执行出异常才进行,类似于在代码4添加内容，只有方法抛出异常后才会被添加
-5. 环绕通知,环绕通知功能比较强大，它可以追加功能到方法执行的前后，这也是比较常用的方式，它可以实现其他四种通知类型的功能，具体是如何实现的，需要我们往下学习。
+1. **前置通知**：追加功能到方法执行前,类似于在代码1或者代码2添加内容
+2. **后置通知**：追加功能到方法执行后,**不管方法执行的过程中有没有抛出异常都会执行**，类似于在代码5添加内容
+3. **返回后通知**：追加功能到方法执行后，只有方法正常执行结束后才进行,类似于在代码3添加内容，如果方法执行抛出异常，返回后通知的内容将不会被添加
+4. **抛出异常后通知**：追加功能到方法抛出异常后，只有方法执行出异常才进行,类似于在代码4添加内容，只有方法抛出异常后才会被添加
+5. **环绕通知**：环绕通知功能比较强大，它可以追加功能到方法执行的前后，这也是比较常用的方式，它可以实现其他四种通知类型的功能，具体是如何实现的，需要我们往下学习。
 ### 2.2 环境准备
 
 - 创建一个Maven项目
@@ -830,8 +831,6 @@ public class App {
 ```
 
 - 运行程序，报错![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9378dd38244760bedb101a2315e3f177.png)
-
-
 	- void就是返回Null
 	- 原始方法的返回值是BookDao下的select方法
 
@@ -860,6 +859,7 @@ public class MyAdvice {
 - `说明`:
 	- 为什么返回的是Object而不是int的主要原因是Object类型更通用。
 	- 在环绕通知中是可以对原始方法返回值就行修改的。例如上面的例子，可以改为`return res+666;`，最终的输出结果也会变为766
+	- 注意类型转换！
 
 - `返回后通知`
 ```java
@@ -920,8 +920,6 @@ public class MyAdvice {
 学习完这5种通知类型，我们来思考下`环绕通知是如何实现其他通知类型的功能的?`
 
 因为环绕通知是可以控制原始方法执行的，所以我们把增强的代码写在调用原始方法的不同位置就可以实现不同的通知类型的功能，如![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d0bb6e7e9543c9b7c6694b2b8f4d3560.png)
-
-
 ### 2.4 通知类型总结
 
 知识点1：`@After`
@@ -966,9 +964,9 @@ public class MyAdvice {
 
 环绕通知注意事项
 
-1. `环绕通知必须依赖形参ProceedingJoinPoint才能实现对原始方法的调用`，进而实现原始方法调用前后同时添加通知
+1. **环绕通知必须依赖形参ProceedingJoinPoint才能实现对原始方法的调用**，进而实现原始方法调用前后同时添加通知
 2. 通知中如果未使用ProceedingJoinPoint对原始方法进行调用将跳过原始方法的执行
-3. 对原始方法的调用可以不接收返回值，通知方法设置成void即可，`如果接收返回值，最好设定为Object类型`
+3. 对原始方法的调用可以不接收返回值，通知方法设置成void即可，**如果接收返回值，最好设定为Object类型**
 4. 原始方法的返回值如果是void类型，通知方法的返回值类型可以设置成void,也可以设置成Object
 5. 由于无法预知原始方法运行后是否会抛出异常，因此环绕通知方法必须要处理Throwable异常
 
@@ -1064,6 +1062,9 @@ INSERT INTO tbl_account(`name`,money) VALUES
 ('Jhon',3100);
 ```
 
+
+
+
 - 添加AccountService、AccountServiceImpl、AccountDao与Account类
 ```java
 public class Account {  
@@ -1115,10 +1116,6 @@ public class Account {
 }
 
 public interface AccountDao {  
-  
-    @Select("select * from tbl_account")  
-    void selectAll();  
-  
     @Insert("insert into tbl_account(`name`,money) values(#{name},#{money}) ")  
     void save(Account account);  
   
