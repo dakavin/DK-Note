@@ -80,6 +80,7 @@ SpringMVC的制作过程和上述流程几乎是一致的，具体的实现流�
     <version>5.2.10.RELEASE</version>  
 </dependency>
 <!--注意加上Tomcat的插件-->
+<!--而且SpringMVC的版本不能超过5,否则会报错-->
 <plugin>  
   <groupId>org.apache.tomcat.maven</groupId>  
   <artifactId>tomcat7-maven-plugin</artifactId>  
@@ -194,7 +195,7 @@ public class ServletContainerInitConfig extends AbstractDispatcherServletInitial
 这里将SpringMVC分为两个阶段来分析，分别是`启动服务器初始化过程`和`单次请求过程`
 #### 2.3.1 启动服务器初始化过程
 
-1. 服务器启动，执行ServletContainerInitConfig类，初始化web容器
+1. **服务器启动，执行ServletContainerInitConfig类，初始化web容器**
 	- 功能类似于web.xml
 	```java
 public class ServletContainerInitConfig extends AbstractDispatcherServletInitializer {  
@@ -215,8 +216,8 @@ public class ServletContainerInitConfig extends AbstractDispatcherServletInitial
 }
 	```
 
-2. 执行createServletApplicationContext方法，创建了WebApplicationContext对象
-	- 该方法加载SpringMVC的配置类SpringMvcConfig来`初始化SpringMVC的容器`
+2. **执行createServletApplicationContext方法，创建了WebApplicationContext对象**
+	- 该方法加载SpringMVC的配置类SpringMvcConfig来初始化SpringMVC的容
 	```java
 protected WebApplicationContext createServletApplicationContext() {  
     AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();  
@@ -225,7 +226,7 @@ protected WebApplicationContext createServletApplicationContext() {
 }
 	```
 
-3. 加载SpringMvcConfig配置类
+3. **加载SpringMvcConfig配置类**
 ```java
 @Configuration  
 @ComponentScan("com.blog.controller")  
@@ -426,7 +427,6 @@ public class SpringConfig {
 public class SpringConfig {  
 }
 ```
-
 - excludeFilters属性：设置扫描加载bean时，排除的过滤规则
 - type属性：设置排除规则，当前使用按照bean定义时的注解类型进行排除
     - ANNOTATION：按照注解排除
@@ -436,14 +436,12 @@ public class SpringConfig {
     - CUSTOM:按照自定义规则排除
 - classes属性：设置排除的具体注解类，当前设置排除`@Controller`定义的bean
 
-- 运行程序之前，我们还需要把`SpringMvcConfig`配置类上的`@ComponentScan`注解注释掉，否则不会报错，将正常输出
-
-- 出现问题的原因是
-    - Spring配置类扫描的包是`com.blog`
-    - SpringMVC的配置类，`SpringMvcConfig`上有一个`@Configuration`注解，也会被Spring扫描到
-    - SpringMvcConfig上又有一个`@ComponentScan`，把controller类又给扫描进来了
-    - 所以如果不把`@ComponentScan`注释掉，Spring配置类将Controller排除，但是因为扫描到SpringMVC的配置类，又将其加载回来，演示的效果就出不来
-    - 解决方案，也简单，把SpringMVC的配置类移出Spring配置类的扫描范围即可。
+- !!!运行程序之前，我们还需要把`SpringMvcConfig`配置类上的`@ComponentScan`注解注释掉，否则不会报错，将正常输出 , 出现问题的原因是
+	- Spring配置类扫描的包是`com.blog`
+	- SpringMVC的配置类，`SpringMvcConfig`上有一个`@Configuration`注解，也会被Spring扫描到
+	- SpringMvcConfig上又有一个`@ComponentScan`，把controller类又给扫描进来了
+	- 所以如果不把`@ComponentScan`注释掉，Spring配置类将Controller排除，但是因为扫描到SpringMVC的配置类，又将其加载回来，演示的效果就出不来
+	- 解决方案，也简单，把SpringMVC的配置类移出Spring配置类的扫描范围即可。
 
 运行程序，同样报错`NoSuchBeanDefinitionException`，目的达成
 
@@ -520,7 +518,6 @@ public class ServletContainerInitConfig extends AbstractAnnotationConfigDispatch
 前面我们已经完成了入门案例相关的知识学习，接来了我们就需要针对SpringMVC相关的知识点进行系统的学习。  
 SpringMVC是web层的框架，主要的作用是接收请求、接收数据、响应结果。  
 所以这部分是学习SpringMVC的重点内容，这里主要会讲解四部分内容:
-
 - 请求映射路径
 - 请求参数
 - 日期类型参数传递
@@ -691,18 +688,15 @@ public class BookController {
 ```
 
 注意:
-
 - 当类上和方法上都添加了`@RequestMapping`注解，前端发送请求的时候，要和两个注解的value值相加匹配才能访问到。
 - `@RequestMapping`注解value属性前面加不加`/`都可以
 ### 4.2 请求参数
 
 请求路径设置好后，只要确保页面发送请求地址和后台Controller类中配置的路径一致，就可以接收到前端的请求，接收到请求后，如何接收页面传递的参数?
 
-关于请求参数的传递与接收是和请求方式有关系的，目前比较常见的两种请求方式为：
-
+关于请求参数的传递与接收是**和请求方式有关系的**，目前比较常见的两种请求方式为：
 - `GET`
 - `POST`
-
 针对于不同的请求前端如何发送，后端如何接收?
 #### 4.2.1 环境准备
 
@@ -739,7 +733,7 @@ public class UserController {
 
 - `GET发送单个参数`
 - 启动Tomcat服务器，发送请求与参数：
-- http://localhost/commonParam?name=Jerry
+- http://localhost/user/commonParam?name=Jerry
 - 接收参数
 ```java
 @Controller  
@@ -979,6 +973,7 @@ public String listParam(List hobbies) {
 
 - 运行程序，报错`java.lang.IllegalArgumentException: Cannot generate variable name for non-typed Collection parameter type`
     - 错误原因：SpringMVC将List看做是一个POJO对象来处理，将其创建一个对象并准备把前端的数据封装到对象中，但是List是一个接口无法创建对象，所以报错。
+
 - 解决方案是：使用`@RequestParam`注解
 ```java
 @RequestMapping("/listParam")  
@@ -1156,7 +1151,9 @@ public String dateParam(Date date) {
 - `步骤二：`启动Tomcat服务器
 - `步骤三：`使用PostMan发送请求：`localhost:8080/user/dateParam?date=2077/12/21`
 
-- `步骤四：`查看控制台，输出如下![[Pasted image 20230831031358.png]]
+- `步骤四：`查看控制台，输出如下
+![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7e02a09e240c6cbf16a38e5953e2d2b3.png)
+
 - `步骤五：`更换日期格式  
 	为了能更好的看到程序运行的结果，我们在方法中多添加一个日期参数
 ```java
@@ -1226,11 +1223,9 @@ public String dateParam(Date date1,
 - 在数据的传递过程中存在很多类型的转换
 
 `问`:谁来做这个类型转换?
-
 - `答`:SpringMVC
 
 `问`:SpringMVC是如何实现类型转换的?
-
 - `答`:SpringMVC中提供了很多类型转换接口和实现类
 
 在框架中，有一些类型转换接口，其中有:
@@ -1253,7 +1248,6 @@ public interface Converter<S, T> {
 到了源码页面我们按Ctrl + H可以来看看`Converter`接口的层次结构  
 这里给我们提供了很多对应`Converter`接口的实现类，用来实现不同数据类型之间的转换![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/49b88998bebaa69ff521f161b2648995.png)
 
-
 2.  `HttpMessageConverter`接口  
     该接口是实现对象与JSON之间的转换工作  
     注意：需要在SpringMVC的配置类把`@EnableWebMvc`当做标配配置上去，不要省略
@@ -1269,7 +1263,7 @@ SpringMVC接收到请求和数据后，进行一些了的处理，当然这个�
     - 文本数据
     - json数据
 
-因为异步调用是目前常用的主流方式，所以我们需要更关注的就是如何返回JSON数据，对于其他只需要认识了解即可。
+因为异步调用是目前常用的主流方式，所以我们需要**更关注的就是如何返回JSON数据**，对于其他只需要认识了解即可。
 #### 4.6.1 环境准备
 
 在之前的环境上加点东西就可以了
@@ -1347,7 +1341,10 @@ public User toJsonPojo(){
 ```
 返回值为实体类对象，设置返回值为实体类类型，即可实现返回对应对象的json数据，需要依赖`@ResponseBody`注解和`@EnableWebMvc`注解
 
-- 访问`http://localhost:8080/toJsonPojo`，页面上成功出现JSON类型数据![[Pasted image 20230831093635.png]]
+- 访问`http://localhost:8080/toJsonPojo`，页面上成功出现JSON类型数据
+![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c1a869f2276ad503510194ca5ed037b2.png)
+
+
 - `HttpMessageConverter`接口帮我们实现了对象与JSON之间的转换工作，我们只需要在`SpringMvcConfig`配置类上加上`@EnableWebMvc`注解即可
 
 - 响应POJO集合对象
@@ -1371,7 +1368,8 @@ public List<User> toJsonList(){
 }
 ```
 
-- 访问`http://localhost:8080/toJsonList`，页面上成功出现JSON集合类型数据![[Pasted image 20230831093711.png]]
+- 访问`http://localhost:8080/toJsonList`，页面上成功出现JSON集合类型数据![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1d0c702d682e4f7c9452b67479530c92.png)
+
 知识点：`@ResponseBody`
 
 |名称|@ResponseBody|
@@ -1382,7 +1380,6 @@ public List<User> toJsonList(){
 |相关属性|pattern：指定日期时间格式字符串|
 
 说明:
-
 - 该注解可以写在类上或者方法上
 - 写在类上就是该类下的所有方法都有`@ReponseBody`功能
 - 当方法上有`@ReponseBody`注解后
@@ -1408,11 +1405,11 @@ REST，表现形式状态转换，它是一种软件架构`风格`
     - `http://localhost/user/1`
     - `http://localhost/user`
 
-传统方式一般是一个请求url对应一种操作，这样做不仅麻烦，而且也不安全，通过请求的`URL`地址，就大致能推测出该`URL`实现的是什么操作  
+传统方式一般是一个请求url对应一种操作，这样做不仅麻烦，而且也不安全，通过请求的`URL`地址，就大致能推测出该`URL`实现的是什么操作
+
 反观REST风格的描述，请求地址变简洁了，而且只看请求`URL`并不很容易能猜出来该`UR`L的具体功能
 
 所以`REST`的优点有：
-
 - 隐藏资源的访问行为，无法通过地址得知该资源是何种操作
 - 书写简化
 
@@ -1428,9 +1425,7 @@ REST，表现形式状态转换，它是一种软件架构`风格`
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/78ce771547b2f34345178fb2020a5284.png)
 
 
-
 搞清楚了什么是REST分各个后，后面会经常提到一个概念叫`RESTful`，那么什么是`RESTful`呢？
-
 - 根据REST风格对资源进行访问称为`RESTful`
 
 在我们后期的开发过程中，大多数都是遵循`REST`风格来访问我们的后台服务。
@@ -1573,7 +1568,7 @@ public String save(@RequestBody User user) {
 - `删除`  
 	将请求路径更改为`/users`，并设置当前请求方法为`DELETE`
 ```java
-@RequestMapping(value = "/delete",method = RequestMethod.DELETE)  
+@RequestMapping(value = "/users",method = RequestMethod.DELETE)  
 @ResponseBody  
 public String delete(Integer id){  
     System.out.println("user delete ..." + id);  

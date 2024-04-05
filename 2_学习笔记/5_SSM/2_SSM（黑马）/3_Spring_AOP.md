@@ -1471,7 +1471,7 @@ public class App {
 #### 4.4.2 获取参数
 
 - `非环绕通知获取方式`  
-	在方法上添加JoinPoint，通过JoinPoint来获取参数
+	在方法上添加JoinPoint，通过JoinPoint来获取方法参数
 ```java
 @Component  
 @Aspect  
