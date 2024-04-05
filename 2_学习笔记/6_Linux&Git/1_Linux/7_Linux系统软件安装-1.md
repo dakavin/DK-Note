@@ -396,62 +396,6 @@ systemctl restart mysqld
 但必须在阿里云或者腾讯云控制台 - 服务器 - 安全组，开放 3306端口。
 
 至此，MySQL就安装完成并可用了，请妥善保存好MySQL的root密码。
-#### 2.4.9 字符集相关设置
-
-在MysQL8.0版本之前，默认字符集为1atin1，utf8字符集指向的是utf8mb3。网站开发人员在数据库设计的时候往往会将编码修改为utf8字符集。如果遗忘修改默认的编码，就会出现乱码的问题。
-
-从MySQL8.0开始，数据库的默认编码将改为utf8mb4，从而避免上述乱码的问题。
-
-```mysql
-show variables like 'character%';
-```
-
-MySQL8.0的字符集
-![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6dc3eba5f4f812bb258a9eb091dea9cc.png)
-
-MySQL5.7的字符集(**server和database默认的字符集是latin1**)
-![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c06fae55be38def7d23663503f8d438.png)
-
-
-- `character_set_server`：服务器级别的字符集
-- `character_set_database`：当前数据库的字符集
-- character_set_client：服务器解码请求时使用的字符集
-- character_set_connection：服务器处理请求时会把请求字符串从character_set_client转为character_set_connection 
-- character_set_results：服务器向客户端返回数据时使用的字符集
-
-小结
-- 如果`创建或修改列`时没有显式的指定字符集和比较规则，则该列`默认用表的`字符集和比较规则
-- 如果`创建表时`没有显式的指定字符集和比较规则，则该表`默认用数据库的`字符集和比较规则
-- 如果`创建数据库时`没有显式的指定字符集和比较规则，则该数据库`默认用服务器的`字符集和比较规则
-
-**请求到响应过程中字符集的变化**
-
-```mermaid
-graph TB
-A(客户端) --> |"使用操作系统的字符集编码请求字符串"| B(从character_set_client转换为character_set_connection)
-B --> C(从character_set_connection转换为具体的列使用的字符集)
-C --> D(将查询结果从具体的列上使用的字符集转换为character_set_results)
-D --> |"使用操作系统的字符集解码响应的字符串"| A
-
-```
-
-#### 2.4.10 修改mysql5.7的字符集
-- 在window下, 我们修改的是my.ini文件;
-- 在linux下,我们修改的是my.cf文件
-```shell
-vim /etc/my.cf
-```
-- 在该文件的最后加上中文字符集配置
-```cf
-character_set_server=utf8
-```
-
-![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f4a0915ddf4520a3fc9b1bcce6c01e45.png)
-
-- 最后重启一下mysql服务
-```shell
-systemctl restart mysqld.service
-```
 
 ## 3 Tomcat
 
