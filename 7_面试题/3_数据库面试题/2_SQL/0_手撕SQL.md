@@ -1,7 +1,7 @@
 
-# 1、关于子查询的使用
+## 1 关于子查询的使用
 
-## 1.1 题1
+### 1.1 题1
 
 [185. 部门工资前三高的所有员工 - 力扣（LeetCode）](https://leetcode.cn/problems/department-top-three-salaries/description/)
 
@@ -11,7 +11,7 @@
 	- 与外查询同部门，且工资高于外查询的工资
 	- 这样获得的数量少于3个，即为工资为部门前三的员工
 
-## 1.2 题2
+### 1.2 题2
 
 student表结构：id，name，class_id（班级id），score（成绩）
 
@@ -30,13 +30,13 @@ ORDER BY class_id , SCORE DESC;
 ```
 
 
-# 2、关于多表连接使用
+## 2 关于多表连接使用
 
 具体查看笔记：
 - [3. SQL99语法实现多表查询](../../../../2_笔记/3_MySql、JDBC和Web/0_尚硅谷/0_MySQL基础内容/第06章_多表查询.md#3.%20SQL99语法实现多表查询)
 - [5. 7种SQL JOINS的实现](../../../../2_笔记/3_MySql、JDBC和Web/0_尚硅谷/0_MySQL基础内容/第06章_多表查询.md#5.%207种SQL%20JOINS的实现)
 
-## 2.1 题1
+### 2.1 题1
 
 对于AB两张表，且都存在一样的字段tid
 

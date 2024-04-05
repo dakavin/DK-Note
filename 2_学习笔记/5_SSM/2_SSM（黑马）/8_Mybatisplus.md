@@ -1,13 +1,13 @@
-# 本文摘要
+## 1 本文摘要
 
 - 基于MyBatisPlus完成标准Dao的增删改查功能
 - 掌握MyBatisPlus中的分页及条件查询构建
 - 掌握主键ID的生成策略
 - 了解MyBatisPlus的代码生成器
-# 一、MyBatisPlus入门案例与简介
+## 2 MyBatisPlus入门案例与简介
 
 由于我们之前有MyBatis开发的基础，所以我们现在直接来一个入门案例，来体现MyBatisPlus的强大之处
-## 1、入门案例
+### 2.1 入门案例
 
 - MyBatisPlus（简称MP）是基于MyBatis框架基础上开发的增强型工具，旨在简化开发，提高效率
 - 开发方式
@@ -116,7 +116,7 @@ selectList() 方法的参数为 MP 内置的条件封装器 Wrapper，所以不�
 
 
 原理，慢慢往后看
-## 2、MyBatis-Plus简介
+### 2.2 MyBatis-Plus简介
 
 MyBatisPlus的官网为:[https://mp.baomidou.com/](https://mp.baomidou.com/) ，没错就是个拼音，苞米豆，因为域名被抢注了，但是粉丝也捐赠了一个 [https://mybatis.plus](https://mybatis.plus/) 域名
 
@@ -138,7 +138,7 @@ MP的特性：
 - `分页插件支持多种数据库：`支持 MySQL、MariaDB、Oracle、DB2、H2、HSQL、SQLite、Postgre、SQLServer 等多种数据库
 - `内置性能分析插件：`可输出 SQL 语句以及其执行时间，建议开发测试时启用该功能，能快速揪出慢查询
 - `内置全局拦截插件：`提供全表 delete 、 update 操作智能分析阻断，也可自定义拦截规则，预防误操作
-## 3、小结
+### 2.3 小结
 
 SpringBoot集成MyBatisPlus非常的简单，只需要导入`MyBatisPlus`的坐标，然后令dao类继承`BaseMapper`，写上泛型，类上方加`@Mapper`注解
 
@@ -149,9 +149,9 @@ SpringBoot集成MyBatisPlus非常的简单，只需要导入`MyBatisPlus`的坐�
 - 那我要是表明和模型类的名不一样，那咋整？
     - 在模型类的上方加上`@TableName`注解
         - 例如数据表叫`tb_user`但数据类叫`User`，那么就在User类上加`@TableName("tb_user")`注解
-# 二、标准数据层开发
+## 3 标准数据层开发
 
-## 1、标准的CRUD使用
+### 3.1 标准的CRUD使用
 
 先来看看MP给我们提供了哪些方法
 
@@ -166,7 +166,7 @@ SpringBoot集成MyBatisPlus非常的简单，只需要导入`MyBatisPlus`的坐�
 |按条件查询|List\<T> getAll(Condition condition)|IPage\<T> selectPage(Wrapper\<T>queryWrapper)|
 
 我们就按照上表中的方法来演示
-## 2、新增
+### 3.2 新增
 
 ```java
 int insert(T t)
@@ -189,7 +189,7 @@ void testInsert(){
 
 
 这个主键自增id看着有点奇怪，但现在你知道为什么要将id设为long类型了吧
-## 3、删除
+### 3.3 删除
 
 ```java
 int deleteByIds(Serializable id)jl;
@@ -212,7 +212,7 @@ void testDelete(){
 ```
 
 删除完毕之后，刷新数据库，看看是否删除成功
-## 4、修改
+### 3.4 修改
 
 ```java
 int updateById(T t);
@@ -234,7 +234,7 @@ void testUpdate(){
 ```
 
 修改功能只修改指定的字段，未指定的字段保持原样
-## 5、根据ID查询
+### 3.5 根据ID查询
 
 ```java
 T selectById (Serializable id)
@@ -254,7 +254,7 @@ void testSelectById(){
 控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3feb58c50ee830be4c77ba995d26183f.png)
 
 
-## 6、查询全部
+### 3.6 查询全部
 
 ```java
 List<T> selectList(Wrapper<T> queryWrapper)
@@ -277,7 +277,7 @@ void testSelectAll() {
 
 - 方法都测试完了，那你们有没有想过，这些方法都是谁提供的呢？
     - 想都不用想，肯定是我们当初继承的`BaseMapper`，里面的方法还有很多，后面我们再慢慢学习
-## 7、Lombok
+### 3.7 Lombok
 
 - 代码写到这，我们发现之前的dao接口，都不用我们自己写了，只需要继承BaseMapper，用他提供的方法就好了
 - 但是现在我还想偷点懒，毕竟懒是第一生产力，之前我们手写模型类的时候，创建好对应的属性，然后用IDEA的Alt+Insert快捷键，快速生成get和set方法，toSring，各种构造器（有需要的话）等
@@ -325,7 +325,7 @@ public User(String name, String password) {
     this.password = password;  
 }
 ```
-## 8、分页功能
+### 3.8 分页功能
 
 基础的增删改查功能就完成了，现在我们来进行分页功能的学习
 ```java
@@ -369,7 +369,7 @@ public class MybatisPlusConfig {
 
 
 
-# 三、DQL编程控制
+## 4 DQL编程控制
 
 增删改查四个操作中，查询是非常重要的也是非常复杂的操作，这部分我们主要学习的内容有:
 
@@ -377,13 +377,13 @@ public class MybatisPlusConfig {
 - 查询投影
 - 查询条件设定
 - 字段映射与表名映射
-## 1、条件查询
+### 4.1 条件查询
 
-### 1.1 条件查询的类
+#### 4.1.1 条件查询的类
 
 - MP将复杂的SQL查询语句都做了封装，使用编程的方式来完成查询条件的组合
 - 之前我们在写CRUD时，都看到了一个Wrapper类，我们当初都是赋一个null值，但其实这个类就是用来查询的
-### 1.2 构建条件查询
+#### 4.1.2 构建条件查询
 
 - `QueryWrapper`  
 	小于用lt，大于用gt  
@@ -428,7 +428,7 @@ void testQueryWrapper(){
     System.out.println(userList);  
 }
 ```
-### 1.3 多条件查询
+#### 4.1.3 多条件查询
 
 上面三种都是单条件的查询，那我们现在想进行多条件的查询，该如何编写代码呢？  
 
@@ -475,7 +475,7 @@ void testQueryWrapper() {
     System.out.println(userList);  
 }
 ```
-### 1.4 null值的判定
+#### 4.1.4 null值的判定
 
 - 我们在做条件查询的时候，一般都会有很多条件供用户查询
 - 这些条件用户可以选择用，也可以选择不用
@@ -576,9 +576,9 @@ void testQueryWrapper() {
     }  
 }
 ```
-## 2、查询投影
+### 4.2 查询投影
 
-### 2.1 查询指定字段
+#### 4.2.1 查询指定字段
 
 目前我们在查询数据的时候，什么都没有做默认就是查询表中所有字段的内容，我们所说的查询投影即不查询所有字段，只查询出指定内容的数据。
 
@@ -613,7 +613,7 @@ void testQueryWrapper() {
     }  
 }
 ```
-### 2.2 聚合查询
+#### 4.2.2 聚合查询
 
 需求:聚合函数查询，完成count、max、min、avg、sum的使用
 
@@ -672,7 +672,7 @@ void testQueryWrapper() {
     }  
 }
 ```
-### 2.3 分组查询
+#### 4.2.3 分组查询
 
 ```java
 @Test  
@@ -692,7 +692,7 @@ void testQueryWrapper() {
 注意：
 - 聚合与分组查询，无法使用lambda表达式来完成
 - MP只是对MyBatis的增强，如果MP实现不了，我们可以直接在DAO接口中使用MyBatis的方式实现
-## 3、查询条件
+### 4.3 查询条件
 
 前面我们只使用了lt()和gt(),除了这两个方法外，MP还封装了很多条件对应的方法
 
@@ -703,7 +703,7 @@ void testQueryWrapper() {
 - 分组（group）
 - 排序（order）
 - ……
-### 3.1 等值查询
+#### 4.3.1 等值查询
 
 需求:根据用户名和密码查询用户信息
 ```java
@@ -723,7 +723,7 @@ SELECT * FROM tb_user WHERE name = 'seto' AND password = 'MUSICIAN';
 
 - selectList：查询结果为多个或者单个
 - selectOne:查询结果为单个
-### 3.2 范围查询
+#### 4.3.2 范围查询
 
 需求:对年龄进行范围查询，使用lt()、le()、gt()、ge()、between()进行范围查询
 ```java
@@ -743,7 +743,7 @@ void testQueryWrapper() {
 - lt():小于(<)
 - lte():小于等于(<=)
 - between():between ? and ?
-### 3.3 模糊查询
+#### 4.3.3 模糊查询
 
 需求:查询表中name属性的值以`J`开头的用户信息,使用like进行模糊查询
 ```java
@@ -774,7 +774,7 @@ void testQueryWrapper() {
     }  
 }
 ```
-### 3.4 排序查询
+#### 4.3.4 排序查询
 
 需求:查询所有数据，然后按照age降序
 ```java
@@ -796,7 +796,7 @@ void testQueryWrapper() {
 ```
 
 遇到想用的功能，先自己用一个试试，方法名和形参名都很见名知意，遇到不确定的用法，再去官方文档查阅资料
-## 4、映射匹配兼容性
+### 4.4 映射匹配兼容性
 
 在上面的案例中，我们做查询的时候，数据表中的字段名与模型类中的属性名一致，查询的时候没有问题，那么问题就来了
 
@@ -874,10 +874,10 @@ public class User {
 |位置|模型类定义上方|
 |作用|设置当前类对应于数据库表关系|
 |相关属性|value(默认)：设置数据库表名称|
-# 四、DML编程控制
+## 5 DML编程控制
 
 查询相关的操作我们已经介绍完了，紧接着我们需要对另外三个，增删改进行内容的讲解。挨个来说明下，首先是新增(insert)中的内容。
-## 1、id生成策略控制
+### 5.1 id生成策略控制
 
 前面我们在新增数据的时候，主键ID是一个很长的Long类型，我们现在想要主键按照数据表字段进行自增长，在解决这个问题之前，我们先来分析一下ID的生成策略
 
@@ -900,7 +900,7 @@ public class User {
 |位置|模型类中用于表示主键的属性定义上方|
 |作用|设置当前类中主键属性的生成策略|
 |相关属性|value(默认)：设置数据库表主键名称  <br>type:设置主键属性的生成策略，值查照IdType的枚举值|
-### 1.1 AUTO策略
+#### 5.1.1 AUTO策略
 
 - `步骤一：`设置生成策略为AUTO
 ```java
@@ -977,7 +977,7 @@ public enum IdType {
 - 比如订单表就有可能被存储在不同的服务器上
 - 如果用数据库表的自增主键，因为在两台服务器上所以会出现冲突
 - 这个时候就需要一个全局唯一ID,这个ID就是分布式ID。
-### 1.2 INPUT策略
+#### 5.1.2 INPUT策略
 
 `步骤一：`将ID生成策略改为INPUT
 ```java
@@ -1010,7 +1010,7 @@ void testInsert(){
 }
 ```
 查看数据库，ID确实是我们设置的值
-### 1.3 ASSIGN_ID策略
+#### 5.1.3 ASSIGN_ID策略
 
 `步骤一：`设置生成策略为`ASSIGN_ID`
 ```java
@@ -1050,7 +1050,7 @@ void testInsert(){
 2. 41bit-时间戳，用来记录时间戳，毫秒级
 3. 10bit-工作机器id，用来记录工作机器id,其中高位5bit是数据中心ID其取值范围0-31，低位5bit是工作节点ID其取值范围0-31，两个组合起来最多可以容纳1024个节点
 4. 序列号占用12bit，每个节点每毫秒0开始不断累加，最多可以累加到4095，一共可以产生4096个ID
-### 1.4 ASSIGN_UUID策略
+#### 5.1.4 ASSIGN_UUID策略
 
 - `步骤一：`设置生成策略为ASSIGN_UUID
 ```java
@@ -1082,7 +1082,7 @@ void testInsert(){
     userDao.insert(user);  
 }
 ```
-### 1.5 ID生成策略对比
+#### 5.1.5 ID生成策略对比
 
 介绍完了这些主键ID的生成策略，那么以后我们开发用哪个呢？
 
@@ -1091,7 +1091,7 @@ void testInsert(){
 - ASSIGN_UUID：可以在分布式的情况下使用，而且能够保证ID唯一，但是声称的主键是32位的字符串，长度过长占用空间，而且不能排序，查询性能也慢
 - ASSIGN_ID：可以在分布式的情况下使用，生成的是Long类型的数字，可以排序，性能也高，但是生成的策略与服务器时间有关，如果修改了系统时间，也有可能出现重复的主键
 - 综上所述，每一种主键的策略都有自己的优缺点，根据自己的项目业务需求的实际情况来使用，才是最明智的选择
-### 1.6 简化配置
+#### 5.1.6 简化配置
 
 - 模型类主键策略设置  
 
@@ -1129,7 +1129,7 @@ public class User {
     private String tel;  
 }
 ```
-## 2、多记录操作
+## 6 多记录操作
 
 这部分其实没有新内容，MP已经提供好了针对多记录的删除和查询，我们自己多看看API就好了
 
@@ -1159,7 +1159,7 @@ void testSelectByIds() {
     }  
 }
 ```
-## 3、逻辑删除
+## 7 逻辑删除
 
 逻辑删除是删除操作中比较重要的一部分，先来讲个案例![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0cca88731e73303e0e1b21ccaf0c59ab.png)
 
@@ -1271,9 +1271,9 @@ UPDATE tb_user SET deleted=1 WHERE id=? AND deleted=0
 |位置|模型类中用于表示删除字段的属性定义上方|
 |作用|标识该字段为进行逻辑删除的字段|
 |相关属性|value：逻辑未删除值  <br>delval:逻辑删除值|
-## 4、乐观锁
+## 8 乐观锁
 
-### 4.1 概念
+### 8.1 概念
 
 在学乐观锁之前，我们还是先由一个案例来引入
 
@@ -1284,7 +1284,7 @@ UPDATE tb_user SET deleted=1 WHERE id=? AND deleted=0
     - 我们接下来介绍的这种方式就是针对于小型企业的解决方案，因为数据库本身的性能就是个瓶颈，如果对其并发超过2000以上的就需要考虑其他解决方案了
 
 简单来说，乐观锁主要解决的问题是，当要更新一条记录的时候，希望这条记录没有被别人更新
-### 4.2 实现思路
+### 8.2 实现思路
 
 - 数据库表中添加`version`字段，比如默认值给个1
 - 第一个线程要修改数据之前，取出记录时，获取当前的version=1
@@ -1302,7 +1302,7 @@ UPDATE tb_user SET deleted=1 WHERE id=? AND deleted=0
         - 那么第二个线程再更新的时候，set version = 2 where version = 1，此时数据库表的version已经是2了，所以第二个线程修改失败
     - 假如第二个线程先执行更新，会将version改为2
         - 那么第一个线程再更新的时候，set version = 2 where version = 1，此时数据库表的version已经是2了，所以第一个线程修改失败
-### 4.3 实现步骤
+### 8.3 实现步骤
 
 - `步骤一：`数据库表添加列  
     加一列version，长度给个11，默认值设为1
@@ -1364,9 +1364,9 @@ void testUpdate() {
     userDao.updateById(userA);    
 }
 ```
-# 五、快速开发
+## 9 快速开发
 
-## 1、代码生成器原理分析
+### 9.1 代码生成器原理分析
 
 官方文档地址：[https://baomidou.com/pages/981406/](https://baomidou.com/pages/981406/)
 
@@ -1376,7 +1376,7 @@ void testUpdate() {
 - 模板: MyBatisPlus提供，可以自己提供，但是麻烦，不建议
 - 数据库相关配置:读取数据库获取表和字段信息
 - 开发者自定义配置:手工配置，比如ID生成策略
-## 2、代码生成器实现
+### 9.2 代码生成器实现
 
 - `步骤一：`创建一个Maven项目
 - `步骤二：`导入对应的jar包
@@ -1531,7 +1531,7 @@ public class CodeGenerator {
 	至此代码生成器就已经完成工作，我们能快速根据数据库表来创建对应的类，简化我们的代码开发。
 	
 	初期还是不建议直接使用代码生成器，还是多自己手写几遍比较好
-## 3、MP中Service的CRUD
+### 9.3 MP中Service的CRUD
 
 回顾我们之前业务层代码的编写，编写接口和对应的实现类:
 ```java

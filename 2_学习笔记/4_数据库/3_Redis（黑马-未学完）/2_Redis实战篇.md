@@ -1,6 +1,5 @@
-# 实战篇Redis
 
-## 开篇导读
+## 1 开篇导读
 
 亲爱的小伙伴们大家好，马上咱们就开始实战篇的内容了，相信通过本章的学习，小伙伴们就能理解各种redis的使用啦，接下来咱们来一起看看实战篇我们要学习一些什么样的内容
 
@@ -40,14 +39,14 @@
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6db5dc538e763dfff692bbe3bfe1ece5.png)
 
-## 1、短信登录
+## 2 短信登录
 
-### 1.1、导入黑马点评项目
+### 2.1 导入黑马点评项目
 
-#### 1.1.1 、导入SQL
+#### 2.1.1 导入SQL
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8a6a68305681f4a84cf79667e9481c2c.png)
-#### 1.1.2、有关当前模型
+#### 2.1.2 有关当前模型
 
 手机或者app端发起请求，请求我们的nginx服务器，nginx基于七层模型走的事HTTP协议，可以实现基于Lua直接绕开tomcat访问redis，也可以作为静态资源服务器，轻松扛下上万并发， 负载均衡到下游tomcat服务器，打散流量，我们都知道一台4核8G的tomcat，在优化和处理简单业务的加持下，大不了就处理1000左右的并发， 经过nginx的负载均衡分流后，利用集群支撑起整个项目，同时nginx在部署了前端项目后，更是可以做到动静分离，进一步降低tomcat服务的压力，这些功能都得靠nginx起作用，所以nginx是整个项目中重要的一环。
 
@@ -55,21 +54,21 @@
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/30ee4f433f4735844c64da75200b8028.png)
 
-#### 1.1.3、导入后端项目
+#### 2.1.3 导入后端项目
 
 在资料中提供了一个项目源码：
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/94c82df395b4780ce95fd974102b27fc.png)
 
-#### 1.1.4 导入前端工程
+#### 2.1.4 导入前端工程
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ec859dd60b6f1eae08afd59e6e00d7f7.png)
 
-#### 1.1.5 运行前端项目
+#### 2.1.5 运行前端项目
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a2f279a38b221ac1213cd60f0e21b4ba.png)
 
-### 1.2 、基于Session实现登录流程
+### 2.2 基于Session实现登录流程
 
 **发送验证码：**
 
@@ -87,7 +86,7 @@
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e4419ead5c66f210c3449354300b35c0.png)
 
-### 1.3 、实现发送短信验证码功能
+### 2.3 实现发送短信验证码功能
 
 **页面流程**
 
@@ -188,7 +187,7 @@ private User createUserWithPhone(String phone) {
 ```
 
 注意：`不需要返回登录凭证的原因，因为session的本质是cookie，每一个session都一个独立的id，所以可以区分出不同的用户`
-### 1.4、实现登录拦截功能
+### 2.4 实现登录拦截功能
 
 **温馨小贴士：tomcat的运行原理**
 
@@ -284,7 +283,7 @@ public class MvcConfig implements WebMvcConfigurer {
 }
 ```
 
-### 1.5、隐藏用户敏感信息
+### 2.5 隐藏用户敏感信息
 
 我们通过浏览器观察到此时用户的全部信息都在，这样极为不靠谱，所以我们应当在返回用户信息之前，将用户的敏感信息进行隐藏，`采用的核心思路就是书写一个UserDto对象，这个UserDto对象就没有敏感信息了`，我们在返回前，将有用户敏感信息的User对象转化成没有敏感信息的UserDto对象，那么就能够避免这个尴尬的问题了
 
@@ -322,7 +321,7 @@ public class UserHolder {
 }
 ```
 
-### 1.6、session共享问题
+### 2.6 session共享问题
 
 **session共享问题**：多台Tomcat并不共享session存储空间，当请求切换到不同tomcat服务时，导致数据丢失的问题。
 
@@ -340,15 +339,15 @@ public class UserHolder {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8c525bccc98512ddb216bd1173c52980.png)
 
-### 1.7 Redis代替session的业务流程
+### 2.7 Redis代替session的业务流程
 
-#### 1.7.1、设计key的结构
+#### 2.7.1 设计key的结构
 
 首先我们要思考一下利用redis来存储数据，那么到底`1. 使用哪种结构呢？`由于存入的数据比较简单，我们可以考虑使用String，或者是使用哈希，如下图，如果使用String，同学们注意他的value，用多占用一点空间，如果使用哈希，则他的value中只会存储他数据本身，如果不是特别在意内存，其实`2. 使用String就可以啦`。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/40534d97c2f1195151d7bfbd57a690b2.png)
 
-#### 1.7.2、设计key的具体细节
+#### 2.7.2 设计key的具体细节
 
 所以我们可以使用String结构，就是一个简单的key，value键值对的方式，但是关于key的处理，session他是每个用户都有自己的session，但是`1. redis的key是共享的，咱们就不能使用code了`
 
@@ -360,13 +359,13 @@ public class UserHolder {
 
 如果我们采用`2. phone：手机号`这个的数据来存储当然是可以的，但是如果把这样的敏感数据存储到redis中并且从页面中带过来毕竟不太合适，所以我们在`3. 后台生成一个随机串token`，然后让前端带来这个token就能完成我们的整体逻辑了
 
-#### 1.7.3、整体访问流程
+#### 2.7.3 整体访问流程
 
 当注册完成后，用户去登录会去校验用户提交的手机号和验证码，是否一致，如果一致，则根据手机号查询用户信息，不存在则新建，`最后将用户数据保存到redis，并且生成token作为redis的key`，当我们校验用户是否登录时，会去携带着token进行访问，从redis中取出token对应的value，判断是否存在这个数据，如果没有则拦截，如果存在则将其保存到threadLocal中，并且放行。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/341024599ec3c454aca9264e7971f08f.png)
 
-### 1.8 基于Redis实现短信登录
+### 2.8 基于Redis实现短信登录
 
 这里具体逻辑就不分析了，之前咱们已经重点分析过这个逻辑啦。
 
@@ -493,21 +492,21 @@ public class LoginInterceptor implements HandlerInterceptor {
 }
 ```
 
-### 1.9 解决状态登录刷新问题
+### 2.9 解决状态登录刷新问题
 
-#### 1.9.1 初始方案思路总结：
+#### 2.9.1 初始方案思路总结：
 
 在这个方案中，他确实可以使用对应路径的拦截，同时刷新登录token令牌的存活时间，但是现在这个拦截器他只是拦截需要被拦截的路径，`假设当前用户访问了一些不需要拦截的路径，那么这个拦截器就不会生效`，所以此时令牌刷新的动作实际上就不会执行，所以这个方案他是存在问题的
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4380eda97ac65f7cd036026e2d449c40.png)
 
-####  1.9.2 优化方案
+#### 2.9.2 优化方案
 
 既然之前的拦截器无法对不需要拦截的路径生效，那么我们可以添加一个拦截器，在第一个拦截器中拦截所有的路径，把第二个拦截器做的事情放入到第一个拦截器中，同时刷新令牌，因为第一个拦截器有了threadLocal的数据，所以此时第二个拦截器只需要判断拦截器中的user对象是否存在即可，完成整体刷新功能。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b75a0d9b7a0f5e35b7a2cf03b576e97b.png)
 
-#### 1.9.3 代码 
+#### 2.9.3 代码 
 
 **RefreshTokenInterceptor**
 - 注意：StrUtil.isBlank(token)的判断条件，直接返回true即可，不然所有请求都会被拦截
@@ -598,9 +597,9 @@ public class MvcConfig implements WebMvcConfigurer {
 }
 ```
 
-## 2、商户查询缓存
+## 3 商户查询缓存
 
-### 2.1 什么是缓存?
+### 3.1 什么是缓存?
 
 **前言**:**什么是缓存?**
 
@@ -630,7 +629,7 @@ Static final Map<K,V> map =  new HashMap();
 
 由于其被**Static**修饰,所以随着类的加载而被加载到**内存之中**,作为本地缓存,由于其又被**final**修饰,所以其引用(例3:map)和对象(例3:new HashMap())之间的关系是固定的,不能改变,因此不用担心赋值(=)导致缓存失效;
 
-####  2.1.1 为什么要使用缓存
+#### 3.1.1 为什么要使用缓存
 
 一句话:因为**速度快,好用**
 
@@ -642,7 +641,7 @@ Static final Map<K,V> map =  new HashMap();
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/821e1db1240ecef65ee112ecbe2709a4.png)
 
-#### 2.1.2 如何使用缓存
+#### 3.1.2 如何使用缓存
 
 实际开发中,会构筑多级缓存来使系统运行速度进一步提升,例如:本地缓存与redis中的缓存并发使用
 
@@ -656,7 +655,7 @@ Static final Map<K,V> map =  new HashMap();
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f2718b2e0a1083b3c7534b72d425629b.png)
 
-### 2.2 添加商户缓存
+### 3.2 添加商户缓存
 
 在我们查询商户信息时，我们是直接操作从数据库中去进行查询的，大致逻辑是这样，直接查询数据库那肯定慢咯，所以我们需要增加缓存
 
@@ -668,13 +667,13 @@ public Result queryShopById(@PathVariable("id") Long id) {
 }
 ```
 
-#### 2.2.1 、缓存模型和思路
+#### 3.2.1 缓存模型和思路
 
 标准的操作方式就是查询数据库之前先查询缓存，如果缓存数据存在，则直接从缓存中返回，如果缓存数据不存在，再查询数据库，然后将数据存入redis。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9a05eff8cf251dbc5a7bf47f93cd7530.png)
 
-#### 2.1.2 代码如下
+#### 3.2.2 代码如下
 
 代码思路：如果缓存有，则直接返回，如果缓存不存在，则查询数据库，然后存入redis。
 
@@ -710,7 +709,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
 }
 ```
 
-#### 2.1.3 给首页商品分类添加缓存
+#### 3.2.3 给首页商品分类添加缓存
 
 **ShopTypeController**
 ```java
@@ -757,7 +756,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 }
 ```
 
-### 2.3 缓存更新策略
+### 3.3 缓存更新策略
 
 缓存更新是redis为了节约内存而设计出来的一个东西，主要是因为内存数据宝贵，当我们向redis插入太多数据，此时就可能会导致缓存中的数据过多，所以redis会对部分数据进行更新，或者把他叫为淘汰更合适。
 
@@ -769,7 +768,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/929015bb4e0d4b96c1ff7da5b99d8caa.png)
 
-#### 2.3.1 、数据库缓存不一致解决方案：
+#### 3.3.1 数据库缓存不一致解决方案：
 
 由于我们的**缓存的数据源来自于数据库**,而数据库的**数据是会发生变化的**,因此,如果当数据库中**数据发生变化,而缓存却没有同步**,此时就会有**一致性问题存在**,其后果是:
 
@@ -785,7 +784,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8789c96c35d82c9a8d804530d3e5ebf7.png)
 
-#### 2.3.2 、数据库和缓存不一致采用什么方案
+#### 3.3.2 数据库和缓存不一致采用什么方案
 
 `综合考虑使用方案一`，但是方案一调用者如何处理呢？这里有几个问题
 
@@ -817,7 +816,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/731886b048f7a49cf1794ac663810d84.png)
 
-### 2.4 实现商铺和缓存与数据库双写一致
+### 3.4 实现商铺和缓存与数据库双写一致
 
 核心思路如下：
 
@@ -840,7 +839,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5b3d549e59c3b36ff988563af7e91426.png)
 
-### 2.5 缓存穿透解决思路
+### 3.5 缓存穿透解决思路
 
 `缓存穿透` ：缓存穿透是指客户端请求的数据在缓存中和数据库中都不存在，这样缓存永远不会生效，这些请求都会打到数据库。
 
@@ -866,7 +865,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 这种方式优点在于`节约内存空间，存在误判`，误判原因在于：布隆过滤器走的是哈希思想，只要哈希思想，就`可能存在哈希冲突`
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/580a09f174cd5d98f86b562b464c5de4.png)
-### 2.6 编码解决商品查询的缓存穿透
+### 3.6 编码解决商品查询的缓存穿透
 
 核心思路如下：
 
@@ -892,7 +891,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 * 做好数据的`基础格式校验`
 * `加强用户权限校验`
 * 做好`热点参数的限流`
-### 2.7 缓存雪崩解决思路
+### 3.7 缓存雪崩解决思路
 
 缓存雪崩是指在`同一时段` `大量的缓存key同时失效`或者`Redis服务宕机`，导致大量请求到达数据库，带来巨大压力。
 
@@ -907,7 +906,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4e975b8c25a57b23b8a217b5fc482efb.png)
 
-### 2.8 缓存击穿解决思路
+### 3.8 缓存击穿解决思路
 
 `缓存击穿问题`也叫`热点Key问题`，就是一个被`高并发访问`并且`缓存重建业务较复杂`的key突然失效了，无数的请求访问会在瞬间给数据库带来巨大的冲击。
 
@@ -948,7 +947,7 @@ public class ShopTypeServiceImpl extends ServiceImpl<ShopTypeMapper, ShopType> i
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/92ce6701398ecd7ec914bc1afbac44db.png)
 
-### 2.9 互斥锁解决缓存击穿问题
+### 3.9 互斥锁解决缓存击穿问题
 
 核心思路：相较于原来从缓存中查询不到数据后直接查询数据库而言，现在的方案是 进行查询之后，如果从缓存没有查询到数据，则进行互斥锁的获取，获取互斥锁后，判断是否获得到了锁，如果没有获得到，则休眠，过一会再进行尝试，直到获取到锁为止，才能进行查询
 
@@ -1036,7 +1035,7 @@ public Shop queryWithMutex(Long id){
 }
 ```
 
-###  3.0 、利用逻辑过期解决缓存击穿问题
+### 3.6 利用逻辑过期解决缓存击穿问题
 
 **需求：修改根据id查询商铺的业务，基于逻辑过期方式来解决缓存击穿问题**
 
@@ -1139,7 +1138,7 @@ public void saveShop2Redis(Long id,Long expireSeconds) throws InterruptedExcepti
 }
 ```
 
-### 3.1、封装Redis工具类
+### 3.7 封装Redis工具类
 
 基于StringRedisTemplate封装一个缓存工具类，满足下列需求：
 
@@ -1361,9 +1360,9 @@ private CacheClient cacheClient;
     }
 ```
 
-## 3、优惠卷秒杀
+## 4 优惠卷秒杀
 
-### 3.1 全局唯一ID
+### 4.1 全局唯一ID
 
 每个店铺都可以发布优惠券：
 
@@ -1394,7 +1393,7 @@ ID的组成部分：符号位：1bit，`永远为0`
 时间戳：31bit，以秒为单位，`可以使用69年`
 
 序列号：32bit，秒内的计数器，支持`每秒产生2^32个不同ID`
-### 3.2 Redis实现全局唯一Id
+### 4.2 Redis实现全局唯一Id
 
 ```java
 @Component
@@ -1472,7 +1471,7 @@ void testIdWorker() throws InterruptedException {
 ```
 
 - 总结![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/83229ca9e495cb0b02a3ff88524a2cd2.png)
-### 3.3 添加优惠卷
+### 4.3 添加优惠卷
 
 每个店铺都可以发布优惠券，分为平价券和特价券。平价券可以任意购买，而特价券需要秒杀抢购：
 
@@ -1529,7 +1528,7 @@ public void addSeckillVoucher(Voucher voucher) {
 }
 ```
 
-### 3.4 实现秒杀下单
+### 4.4 实现秒杀下单
 
 下单核心思路：当我们点击抢购时，会触发右侧的请求，我们只需要编写对应的controller即可
 
@@ -1598,7 +1597,7 @@ public Result seckillVoucher(Long voucherId) {
 }
 ```
 
-### 3.5 库存超卖问题分析
+### 4.5 库存超卖问题分析
 
 有关超卖问题分析：在我们原有代码中是这么写的
 
@@ -1654,7 +1653,7 @@ return var5;
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9140034f3473c6ed3a164604e55ad53a.png)
 
-### 3.6 乐观锁解决超卖问题
+### 4.6 乐观锁解决超卖问题
 
 **修改代码方案一**
 
@@ -1695,7 +1694,7 @@ Java8 提供的一个对AtomicLong改进后的一个类，LongAdder
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6c16173eb4d7acea8db91ec055f729e5.png)
 
-### 3.6 优惠券秒杀（一人一单）
+### 4.7 优惠券秒杀（一人一单）
 
 需求：修改秒杀业务，要求同一个优惠券，一个用户只能下一单
 
@@ -1864,7 +1863,7 @@ public  Result createVoucherOrder(Long voucherId) {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/40dd192f7b550af8c2d08b251da92909.png)
 
-### 3.7 集群环境下的并发问题
+### 4.8 集群环境下的并发问题
 
 通过加锁可以解决在单机情况下的一人一单安全问题，但是在集群模式下就不行了。
 
@@ -1884,9 +1883,9 @@ public  Result createVoucherOrder(Long voucherId) {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/143edc2f32493161f9d15c9452891546.png)
 
-## 4、分布式锁
+## 5 分布式锁
 
-### 4.1 基本原理和实现方式对比
+### 5.1 基本原理和实现方式对比
 
 分布式锁：满足`分布式系统或集群模式下多进程可见并且互斥的锁`。
 
@@ -1918,7 +1917,7 @@ public  Result createVoucherOrder(Long voucherId) {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/682594149e158dbe327bc21b0e54fffc.png)
 
-### 4.2 Redis分布式锁的实现核心思路
+### 5.2 Redis分布式锁的实现核心思路
 
 实现分布式锁时需要实现的两个基本方法：
 
@@ -1938,7 +1937,7 @@ public  Result createVoucherOrder(Long voucherId) {
 
  ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5526b6e7c833f4e5b5db4e520e40d2ea.png)
 
-### 4.3 实现分布式锁版本一
+### 5.3 实现分布式锁版本一
 
 * 加锁逻辑
 
@@ -2035,7 +2034,7 @@ public void unlock() {
     }
 ```
 
-### 4.4 Redis分布式锁误删情况说明
+### 5.4 Redis分布式锁误删情况说明
 
 逻辑说明：
 
@@ -2045,7 +2044,7 @@ public void unlock() {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eb710f2ad5a7640a406e2df4d24ed2bf.png)
 
-### 4.5 解决Redis分布式锁误删问题
+### 5.5 解决Redis分布式锁误删问题
 
 需求：修改之前的分布式锁实现，满足：在获取锁时`存入线程标示（可以用UUID表示）`
 在释放锁时先获取锁中的线程标示，判断是否与当前线程标示一致
@@ -2095,7 +2094,7 @@ public void unlock() {
 
 在我们修改完此处代码后，我们重启工程，然后启动两个线程，第一个线程持有锁后，手动释放锁，第二个线程 此时进入到锁内部，再放行第一个线程，此时第一个线程由于锁的value值并非是自己，所以不能释放锁，也就无法删除别人的锁，此时第二个线程能够正确释放锁，通过这个案例初步说明我们解决了锁误删的问题。
 
-### 4.6 分布式锁的原子性问题
+### 5.6 分布式锁的原子性问题
 
 更为极端的误删逻辑说明：
 
@@ -2103,7 +2102,7 @@ public void unlock() {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d8e20c6928adaee4250de8aadb2cfa1a.png)
 
-### 4.7 Lua脚本解决多条命令原子性问题
+### 5.7 Lua脚本解决多条命令原子性问题
 
 `Redis提供了Lua脚本功能，在一个脚本中编写多条Redis命令，确保多条命令执行时的原子性`。Lua是一种编程语言，它的基本语法大家可以参考网站：https://www.runoob.com/lua/lua-tutorial.html
 
@@ -2171,7 +2170,7 @@ end
 return 0
 ```
 
-### 4.8 利用Java代码调用Lua脚本改造分布式锁
+### 5.8 利用Java代码调用Lua脚本改造分布式锁
 
 lua脚本本身并不需要大家花费太多时间去研究，只需要知道如何调用，大致是什么意思即可，所以在笔记中并不会详细的去解释这些lua表达式的含义。
 
@@ -2223,9 +2222,9 @@ public void unlock() {
 
 但是`目前还剩下一个问题锁不住，什么是锁不住呢`，你想一想，如果当过期时间到了之后，我们可以给他续期一下，比如续个30s，就好像是网吧上网， 网费到了之后，然后说，来，网管，再给我来10块的，是不是后边的问题都不会发生了，那么续期问题怎么解决呢，可以依赖于我们接下来要学习redission啦
 
-## 5、分布式锁-redission
+## 6 分布式锁-redission
 
-### 5.1 分布式锁-redission功能介绍
+### 6.1 分布式锁-redission功能介绍
 
 基于setnx实现的分布式锁存在下面的问题：
 
@@ -2255,7 +2254,7 @@ Redission提供了分布式锁的多种多样的功能
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e8d10c2c10381bdcc98f31201afd8991.png)
 
-### 5.2 分布式锁-Redission快速入门
+### 6.2 分布式锁-Redission快速入门
 
 引入依赖：
 
@@ -2360,7 +2359,7 @@ public Result seckillVoucher(Long voucherId) {
  }
 ```
 
-### 5.3 分布式锁-redission可重入锁原理
+### 6.3 分布式锁-redission可重入锁原理
 
 不可重入锁的情况分析：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/063b4884934f2547db72802828a1cf03.png)
 
@@ -2383,7 +2382,7 @@ public Result seckillVoucher(Long voucherId) {
 	3. 进入源码分析![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/403e31438c0899e30b757f6949bed39a.png)
 	4. 发现获取锁的lua脚本的逻辑![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5edfa8cb9a62a826e43cabd982238800.png)
 	5. 点击unock方法，发现释放锁的lua脚本的逻辑![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/be6a5f153a6c225350089c05278998a9.png)
-### 5.4 分布式锁-redission锁重试和WatchDog机制
+### 6.4 分布式锁-redission锁重试和WatchDog机制
 
 **说明**：由于课程中已经说明了有关tryLock的源码解析以及其看门狗原理，所以笔者在这里给大家分析lock()方法的源码解析，希望大家在学习过程中，能够掌握更多的知识
 
@@ -2427,7 +2426,7 @@ ttlRemainingFuture.onComplete((ttlRemaining, e) 这句话相当于对以上抢�
 - `释放锁总结`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dbf1e668a6e2077ffee4d9cfee365968.png)
 
 
-### 5.5 分布式锁-redission锁的MutiLock原理
+### 6.5 分布式锁-redission锁的MutiLock原理
 
 为了提高redis的可用性，我们会搭建集群或者主从，现在以主从为例
 
@@ -2532,9 +2531,9 @@ class HmDianPingApplicationTests {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f3c1f0b23469cb9bf9695025d9dbe746.png)
 
 
-## 6、秒杀优化
+## 7 秒杀优化
 
-### 6.0 初步测试
+### 7.1 初步测试
 
 - 步骤一：mysql导入1000个用户
 - 步骤二：编写VoucherOrderControllerTest用于登录1000个用户，并将1千个用户的token保存到resource文件夹中的token.txt文件中
@@ -2624,7 +2623,7 @@ public class VoucherOrderControllerTest {
 - 开始测试，查看结果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1f4444ada2069c3ce90d5e34d292989f.png)
 
 	- 最大值和最小值，代表业务的完成时间，差距较大，随着并发量的不断扩大，完成时间会越来越久，所以平均值也比较大
-### 6.1 秒杀优化-异步秒杀思路
+### 7.2 秒杀优化-异步秒杀思路
 
 我们来回顾一下下单流程
 
@@ -2660,7 +2659,7 @@ public class VoucherOrderControllerTest {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f3f75dd058a65bc6a98524f38a3c078.png)
 
-### 6.2 秒杀优化-Redis完成秒杀资格判断
+### 7.3 秒杀优化-Redis完成秒杀资格判断
 
 需求：
 
@@ -2761,7 +2760,7 @@ public Result seckillVoucher(Long voucherId) {
 }
 ```
 
-### 6.3 秒杀优化-基于阻塞队列实现秒杀优化
+### 7.4 秒杀优化-基于阻塞队列实现秒杀优化
 
 VoucherOrderServiceImpl
 
@@ -2887,9 +2886,9 @@ public Result seckillVoucher(Long voucherId) {
   * 数据安全问题
 	  * 如果服务突然宕机了，那么内存中的所有订单信息就丢失了
 	  * 有一个线程从队列中取出数据，打算执行，如果出现异常，这个任务就没有执行，导致任务丢失
-## 7、Redis消息队列
+## 8 Redis消息队列
 
-### 7.1 Redis消息队列-认识消息队列
+### 8.1 Redis消息队列-认识消息队列
 
 什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：
 
@@ -2911,7 +2910,7 @@ public Result seckillVoucher(Long voucherId) {
 	- list结构：基于List结构模拟消息队里
 	- PubSub：基本的点对点消息模型
 	- Stream：比较完善的消息队列模型
-### 7.2 Redis消息队列-基于List实现消息队列
+### 8.2 Redis消息队列-基于List实现消息队列
 
 **基于List结构模拟消息队列**
 
@@ -2939,7 +2938,7 @@ public Result seckillVoucher(Long voucherId) {
 * 只支持单消费者
 	* 消息只能被一个消费者所取到
 
-### 7.3 Redis消息队列-基于PubSub的消息队列
+### 8.3 Redis消息队列-基于PubSub的消息队列
 
 PubSub（Publish Subscribe发布订阅）是Redis2.0版本引入的消息传递模型。顾名思义，消费者可以订阅一个或多个channel，生产者向对应channel发送消息后，`所有订阅者都能收到相关消息`
 
@@ -2959,7 +2958,7 @@ PubSub（Publish Subscribe发布订阅）是Redis2.0版本引入的消息传递�
 * 无法避免消息丢失
 	* 如果没有消费者订阅，因为不能持久化，会导致消息丢失
 * 消息堆积有上限，超出时数据丢失
-### 7.4 Redis消息队列-基于Stream的消息队列
+### 8.4 Redis消息队列-基于Stream的消息队列
 
 Stream 是 Redis 5.0 引入的一种`新数据类型`，`可以实现一个功能非常完善的消息队列。`
 
@@ -3001,7 +3000,7 @@ STREAM类型消息队列的XREAD命令特点：
 * 可以阻塞读取
 * 有消息漏读的风险
 	* 只能看到最新或第一个消息
-### 7.5 Redis消息队列-基于Stream的消息队列-消费者组
+### 8.5 Redis消息队列-基于Stream的消息队列-消费者组
 
 - 处理消息漏读的方式，使用消费者组
 
@@ -3081,7 +3080,7 @@ STREAM类型消息队列的XREADGROUP命令特点：
 	- 在多消息的情况下的，消息的有序性等等问题
 
 - 所以，如果是中小型企业，对队列的要求没有那么多，那么STREAM类型的消息队列就满足日常的需求了；
-### 7.6 基于Redis的Stream结构作为消息队列，实现异步秒杀下单
+### 8.6 基于Redis的Stream结构作为消息队列，实现异步秒杀下单
 
 需求：
 
@@ -3197,9 +3196,9 @@ private class VoucherOrderHandler implements Runnable {
 
 ```
 
-## 8、达人探店
+## 9 达人探店
 
-### 8.1、达人探店-发布探店笔记
+### 9.1 达人探店-发布探店笔记
 
 发布探店笔记
 
@@ -3264,7 +3263,7 @@ public class BlogController {
 }
 ```
 
-### 8.2 达人探店-查看探店笔记
+### 9.2 达人探店-查看探店笔记
 
 实现查看发布探店笔记的接口
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31f1e7d2a1c1d7f8de1f640b876c6307.png)
@@ -3289,7 +3288,7 @@ public Result queryBlogById(Long id) {
 }
 ```
 
-### 8.3 达人探店-点赞功能
+### 9.3 达人探店-点赞功能
 
 初始代码
 
@@ -3364,7 +3363,7 @@ private Boolean isLike;
         }
 ```
 
-### 8.4 达人探店-点赞排行榜
+### 9.4 达人探店-点赞排行榜
 
 在探店笔记的详情页面，应该把给该笔记点赞的人显示出来，比如最早点赞的TOP5，形成点赞排行榜：
 
@@ -3467,9 +3466,9 @@ public Result queryBlogLikes(Long id) {
 }
 ```
 
-## 9、好友关注
+## 10 好友关注
 
-### 9.1 好友关注-关注和取消关注
+### 10.1 好友关注-关注和取消关注
 
 针对用户的操作：可以对用户进行关注和取消关注功能。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8ba4a6a272022ddddafd315c817e09b4.png)
@@ -3541,7 +3540,7 @@ public Result isFollow(Long followUserId) {
     }
 ```
 
-### 9.2 好友关注-共同关注
+### 10.2 好友关注-共同关注
 
 想要去看共同关注的好友，需要首先进入到这个页面，这个页面会发起两个请求
 
@@ -3653,7 +3652,7 @@ public Result followCommons(Long id) {
 }
 ```
 
-### 9.3 好友关注-Feed流实现方案
+### 10.3 好友关注-Feed流实现方案
 
 当我们关注了用户后，这个用户发了动态，那么我们应该把这些数据推送给用户，这个需求，其实我们又把他叫做Feed流，关注推送也叫做Feed流，直译为投喂。为用户持续的提供“沉浸式”的体验，通过无限下拉刷新获取新的信息。
 
@@ -3716,7 +3715,7 @@ Timeline：不做内容筛选，简单的按照内容发布时间排序，常用
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6648620542e2b0ab910aedab4a7df4cb.png)
 
 
-### 9.4 好友关注-推送到粉丝收件箱
+### 10.4 好友关注-推送到粉丝收件箱
 
 需求：
 
@@ -3768,7 +3767,7 @@ public Result saveBlog(Blog blog) {
 }
 ```
 
-### 9.5好友关注-实现分页查询收邮箱
+### 10.5 好友关注-实现分页查询收邮箱
 
 需求：在个人主页的“关注”卡片中，查询并展示推送的Blog信息：
 
@@ -3860,9 +3859,9 @@ public Result queryBlogOfFollow(Long max, Integer offset) {
 }
 ```
 
-## 10、附近商户
+## 11 附近商户
 
-### 10.1、附近商户-GEO数据结构的基本用法
+### 11.1 附近商户-GEO数据结构的基本用法
 
 GEO就是Geolocation的简写形式，代表地理坐标。Redis在3.2版本中加入了对GEO的支持，允许存储地理坐标信息，帮助我们根据经纬度来检索数据。常见的命令有：
 
@@ -3874,7 +3873,7 @@ GEO就是Geolocation的简写形式，代表地理坐标。Redis在3.2版本中�
 * GEOSEARCH：在指定范围内搜索member，并按照与指定点之间的距离排序后返回。范围可以是圆形或矩形。6.2.新功能
 * GEOSEARCHSTORE：与GEOSEARCH功能一致，不过可以把结果存储到一个指定的key。 6.2.新功能
 
-### 10.2、 附近商户-导入店铺数据到GEO
+### 11.2 附近商户-导入店铺数据到GEO
 
 具体场景说明：
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ad55a5c6fdb4580e7ca85e278c73b062.png)
@@ -3922,7 +3921,7 @@ void loadShopData() {
 }
 ```
 
-### 10.3 附近商户-实现附近商户功能
+### 11.3 附近商户-实现附近商户功能
 
 SpringDataRedis的2.3.9版本并不支持Redis 6.2提供的GEOSEARCH命令，因此我们需要提示其版本，修改自己的POM
 
@@ -4032,9 +4031,9 @@ ShopServiceImpl
 
 
 
-## 11、用户签到
+## 12 用户签到
 
-#### 11.1、用户签到-BitMap功能演示
+### 12.1 用户签到-BitMap功能演示
 
 我们针对签到功能完全可以通过mysql来完成，比如说以下这张表
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3d5770ecab6f83512e64f683241d146d.png)
@@ -4066,7 +4065,7 @@ BitMap的操作命令有：
 * BITOP ：将多个BitMap的结果做位运算（与 、或、异或）
 * BITPOS ：查找bit数组中指定范围内第一个0或1出现的位置
 
-#### 11.2 、用户签到-实现签到功能
+### 12.2 用户签到-实现签到功能
 
 需求：实现签到接口，将当前用户当天签到信息保存到Redis中
 
@@ -4107,7 +4106,7 @@ public Result sign() {
 }
 ```
 
-#### 11.3 用户签到-签到统计
+### 12.3 用户签到-签到统计
 
 **问题1：** 什么叫做连续签到天数？
 从最后一次签到开始向前统计，直到遇到第一次未签到为止，计算总的签到次数，就是连续签到天数。
@@ -4189,7 +4188,7 @@ public Result signCount() {
 }
 ```
 
-#### 11.4 额外加餐-关于使用bitmap来解决缓存穿透的方案
+### 12.4 额外加餐-关于使用bitmap来解决缓存穿透的方案
 
 回顾**缓存穿透**：
 
@@ -4225,9 +4224,9 @@ id % bitmap.size  = 算出当前这个id对应应该落在bitmap的哪个索引�
 
 
 
-## 12、UV统计
+## 13 UV统计
 
-### 12.1 、UV统计-HyperLogLog
+### 13.1 UV统计-HyperLogLog
 
 首先我们搞懂两个概念：
 
@@ -4243,7 +4242,7 @@ Redis中的HLL是基于string结构实现的，单个HLL的内存**永远小于1
 
 ![[Pasted image 20230910010232.png]]
 
-### 12.2 UV统计-测试百万数据的统计
+### 13.2 UV统计-测试百万数据的统计
 
 测试思路：我们直接利用单元测试，向HyperLogLog中添加100万条数据，看看内存占用和统计效果如何
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/38a1b53ce2df984791053849723ee728.png)

@@ -1,6 +1,6 @@
-# 1. RocketMQ重试机制
+## 1 RocketMQ重试机制
 
-## 1.1 生产者重试
+### 1.1 生产者重试
 
 // 失败的情况重发3次
 
@@ -14,7 +14,7 @@
 - 一般生产者发送消息的重试我们一般不会去讨论
 - 因为发送消息到mq中，出现重试是因为与mq连接失败，但是一般不会连接失败
 
-## 1.2 消费者重试
+### 1.2 消费者重试
 
 在消费者放`return ConsumeConcurrentlyStatus.RECONSUME_LATER` 或者 `return null` 后就会执行重试
 
@@ -77,13 +77,13 @@ public void testConsumer() throws Exception {
 }
 ```
 
-# 2. RocketMQ死信消息
+## 2 RocketMQ死信消息
 
 当消费重试到达阈值以后，消息不会被投递给消费者了，而是进入了死信队列
 
 当一条消息初次消费失败，RocketMQ会自动进行消息重试，达到最大重试次数后，若消费依然失败，则表明消费者在正常情况下无法正确地消费该消息。此时，该消息不会立刻被丢弃，而是将其发送到该消费者对应的特殊队列中，这类消息称为死信消息（Dead-Letter Message），存储死信消息的特殊队列称为死信队列（Dead-Letter Queue），死信队列是死信Topic下分区数唯一的单独队列。如果产生了死信消息，那对应的ConsumerGroup的死信Topic名称为%DLQ%ConsumerGroupName，死信队列的消息将不会再被消费。可以利用RocketMQ Admin工具或者RocketMQ Dashboard上查询到对应死信消息的信息。我们也可以去监听死信队列，然后进行自己的业务上的逻辑
 
-## 2.1 消息生产者
+### 2.1 消息生产者
 
 ```java
 @Test  
@@ -97,7 +97,7 @@ public void testDeadMsgProducer() throws Exception {
 }
 ```
 
-## 2.2 消息消费者
+### 2.2 消息消费者
 
 ```java
 @Test  
@@ -120,7 +120,7 @@ public void testDeadMsgConsumer() throws Exception {
 }
 ```
 
-## 2.3 死信消费者
+### 2.3 死信消费者
 
 注意权限问题
 
@@ -147,15 +147,15 @@ public void testDeadMq() throws  Exception{
 }
 ```
 
-## 2.4 控制台显示
+### 2.4 控制台显示
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/49bad0ae5a56aa43f5e0aaa9c21bdaae.png)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5f89754e0f5ef8463b0bbd546b4eb3e4.png)
 
-# 3. RocketMQ消息重复消费问题【重点】
+## 3 RocketMQ消息重复消费问题【重点】
 
-## 3.1 为什么会出现重复消费问题呢？
+### 3.1 为什么会出现重复消费问题呢？
 
 BROADCASTING(广播)模式下，所有注册的消费者都会消费，`而这些消费者通常是集群部署的一个个微服务，这样就会多台机器重复消费`，当然这个是根据需要来选择。
 
@@ -172,7 +172,7 @@ CLUSTERING（负载均衡）模式下，如果`一个topic被多个consumerGroup
 
 - `解决方式`：那么如果在CLUSTERING（负载均衡）模式下，并且在同一个消费者组中，不希望一条消息被重复消费，改怎么办呢？我们可以想到`去重操作，找到消息唯一的标识，可以是msgId也可以是你自定义的唯一的key，这样就可以去重了`
 
-## 3.2 解决方案
+### 3.2 解决方案
 
 使用去重方案解决，例如`将消息的唯一标识存起来，然后每次消费之前先判断是否存在这个唯一标识`，如果存在则不消费，如果不存在则消费，并且消费以后将这个标记保存。
 
@@ -180,7 +180,7 @@ CLUSTERING（负载均衡）模式下，如果`一个topic被多个consumerGroup
 
 可以选择 `redis容器` 或 `mysql容器` 或 `布隆过滤`
 
-## 3.3 方案一：mysql
+### 3.3 方案一：mysql
 
 方案一：`mysql容器`
 - `我们可以抓住幂等性来控制消息的重复消费`
@@ -207,7 +207,7 @@ CLUSTERING（负载均衡）模式下，如果`一个topic被多个consumerGroup
 
 
 
-### 3.3.1 创建表
+#### 3.3.1 创建表
 
 - `设计key的唯一索引`
 
@@ -221,7 +221,7 @@ CREATE TABLE `order_oper_log` (
   UNIQUE KEY `order_sn` (`order_sn`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ```
-### 3.3.2 导入依赖
+#### 3.3.2 导入依赖
 
 ```xml
 <dependency>  
@@ -235,7 +235,7 @@ CREATE TABLE `order_oper_log` (
 </dependency>
 ```
 
-### 3.3.3 测试
+#### 3.3.3 测试
 
 - 测试的逻辑是 发送两条消息一样，key一样的消息
 - 因为，通过增加consumer来改变队列的消息发布，不好实现
@@ -362,7 +362,7 @@ public class MysqlType {
 因为，消息出现了异常，我们没有确认异常后的消息处理方式，所以触发了重试机制
 
 添加了上述一段话后
-## 3.4 方案二：布隆过滤
+### 3.4 方案二：布隆过滤
 
 我们还可以`选择布隆过滤器(BloomFilter)`
 
@@ -372,7 +372,7 @@ public class MysqlType {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e2a1fd84c01a344adb0fee94b225d8cc.png)
 
-### 3.4.1 测试生产者
+#### 3.4.1 测试生产者
 
 ```java
 @Test  
@@ -394,7 +394,7 @@ public void testRepeatProducer() throws Exception {
 }
 ```
 
-### 3.4.2 添加hutool的依赖
+#### 3.4.2 添加hutool的依赖
 
 ```xml
 <dependency>
@@ -404,7 +404,7 @@ public void testRepeatProducer() throws Exception {
 </dependency>
 ```
 
-### 3.4.3 测试消费者
+#### 3.4.3 测试消费者
 
 ```java
 /**  

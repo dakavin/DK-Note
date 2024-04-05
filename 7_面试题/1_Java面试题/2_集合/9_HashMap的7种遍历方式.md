@@ -35,7 +35,7 @@ HashMap **遍历从大的方向来说，可分为以下 4 类**：
 
 接下来我们来看每种遍历方式的具体实现代码。
 
-### 1.迭代器 EntrySet
+## 1 迭代器 EntrySet
 
 ```java
 public class HashMapTest {  
@@ -58,7 +58,7 @@ public class HashMapTest {
 }
 ```
 
-### 2.迭代器 KeySet
+## 2 迭代器 KeySet
 
 ```java
 public class HashMapTest {  
@@ -81,7 +81,7 @@ public class HashMapTest {
 }
 ```
 
-### 3.ForEach EntrySet
+## 3 ForEach EntrySet
 
 ```java
 public class HashMapTest {  
@@ -102,7 +102,7 @@ public class HashMapTest {
 }
 ```
 
-### 4.ForEach KeySet
+## 4 ForEach KeySet
 
 ```java
 public class HashMapTest {  
@@ -123,7 +123,7 @@ public class HashMapTest {
 }
 ```
 
-### 5.Lambda
+## 5 Lambda
 
 ```java
 public class HashMapTest {  
@@ -144,7 +144,7 @@ public class HashMapTest {
 }
 ```
 
-### 6.Streams API 单线程
+## 6 Streams API 单线程
 
 ```java
 public class HashMapTest {  
@@ -164,7 +164,7 @@ public class HashMapTest {
     }  
 }
 ```
-### 7.Streams API 多线程
+## 7 Streams API 多线程
 
 ```java
 public class HashMapTest {  
@@ -185,7 +185,7 @@ public class HashMapTest {
 }
 ```
 
-### 总结
+## 8 总结
 
  `entrySet` 的性能比 `keySet` 的性能高出了一倍之多，因此我们应该尽量使用 `entrySet`  来实现 Map 集合的遍历。
 

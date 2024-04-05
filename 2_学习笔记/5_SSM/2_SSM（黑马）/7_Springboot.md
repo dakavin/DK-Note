@@ -1,10 +1,11 @@
- # 本文摘要：
+ 
+## 1 本文摘要：
 
 - 掌握基于SpringBoot框架的程序开发步骤
 - 熟练使用SpringBoot配置信息修改服务器配置
 - 基于SpringBoot的完成SSM整合项目开发
 
-# 一、SpringBoot简介
+## 2 SpringBoot简介
 
 SpringBoot是由Pivotal团队提供的全新框架，其设计目的是用来`简化`Spring应用的`初始搭建`以及`开发过程`。  
 
@@ -149,9 +150,9 @@ public class BookController {
 ```
 
 从上面的 `SpringMVC` 程序开发可以看到，前三步都是在搭建环境，而且这三步基本都是固定的。`SpringBoot` 就是对这三步进行简化了。接下来我们通过一个入门案例来体现 `SpingBoot` 简化 `Spring` 开发。
-## 1、SpringBoot快速入门
+### 2.1 SpringBoot快速入门
 
-### 1.1 开发步骤
+#### 2.1.1 开发步骤
 
 `SpringBoot` 开发起来特别简单，分为如下几步：
 
@@ -269,7 +270,7 @@ public class Application {
 ```
 
 我们代码之所以能简化，就是因为指定的父工程和 `Spring Web` 依赖实现的。具体的我们后面在聊。
-### 1.2 对比
+#### 2.1.2 对比
 
 做完 `SpringBoot` 的入门案例后，接下来对比一下 `Spring` 程序和 `SpringBoot` 程序。
 
@@ -290,7 +291,7 @@ public class Application {
     `Spring/SpringMVC` 程序的配置类需要自己书写。而 `SpringBoot` 程序则不需要书写。
 
 <font color="#00b050">注意</font>：基于Idea的 `Spring Initializr` 快速构建 `SpringBoot` 工程时需要联网。
-### 1.3 官网构建工程
+#### 2.1.3 官网构建工程
 
 在入门案例中之所以能快速构建 `SpringBoot` 工程，是因为 `Idea` 使用了官网提供了快速构建 `SpringBoot` 工程的组件实现的。  
 
@@ -302,7 +303,7 @@ public class Application {
 点击`GENERATE`，就可以生成工程并下载到本地了，打开下载好的压缩包，可以看到工程的内容与IDEA生成的一模一样。  
 
 通过上面官网的操作，我们知道 `Idea` 中快速构建 `SpringBoot` 工程其实就是使用的官网的快速构建组件，那以后即使没有 `Idea` 也可以使用官网的方式构建 `SpringBoot` 工程。
-### 1.4 SpringBoot工程快速启动
+#### 2.1.4 SpringBoot工程快速启动
 
 - 问题引入  
     以后我们和前端开发人员协同开发，而前端开发人员需要测试前端程序就需要后端开启服务器，这就受制于后端开发人员。为了摆脱这个受制，前端开发人员尝试着在自己电脑上安装 `Tomcat` 和 `Idea` ，在自己电脑上启动后端程序，这显然不现实。  
@@ -330,7 +331,7 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 执行上述命令就可以看到 `SpringBoot` 运行的日志信息，同时使用PostMan发送GET请求访问`localhost:8080/books/9527`，也可以正常输出`get id ==> 9527`![[![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/490372a80ba44217b129ab175698ed96.png)
 
 
-## 2、SpringBoot概述
+### 2.2 SpringBoot概述
 
 `SpringBoot` 是由Pivotal团队提供的全新框架，其设计目的是用来`简化`Spring应用的`初始搭建`以及`开发过程`。
 
@@ -344,7 +345,7 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 - 辅助功能（内置服务器，…）。我们在启动 `SpringBoot` 程序时既没有使用本地的 `tomcat` 也没有使用 `tomcat` 插件，而是使用 `SpringBoot` 内置的服务器。
 
 接下来我们来说一下 `SpringBoot` 的起步依赖
-### 2.1 起步依赖
+#### 2.2.1 起步依赖
 
 我们使用 `Spring Initializr` 方式创建的 `Maven` 工程的的 `pom.xml` 配置文件中自动生成了很多包含 `starter` 的依赖
 
@@ -379,7 +380,7 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 ```
 
 这些依赖就是启动依赖，接下来我们探究一下它是如何实现的。
-#### 2.1.1 探索父工程
+##### 2.2.1.1 探索父工程
 
 从上面的文件中可以看到指定了一个父工程
 ```xml
@@ -462,7 +463,7 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 ```
 
 看完了父工程中 `pom.xml` 的配置后不难理解我们工程的的依赖为什么都没有配置 `version`。
-#### 2.1.2 探索依赖
+##### 2.2.1.2 探索依赖
 
 在我们创建的工程中的pom.xml中配置了如下依赖
 ```xml
@@ -499,7 +500,7 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 而依赖 `spring-boot-starter-tomcat` ，从名字基本能确认内部依赖了 `tomcat`，所以我们的工程才能正常启动。  
 
 结论：以后需要使用技术，只需要引入该技术对应的起步依赖即可
-#### 2.1.3 小结
+##### 2.2.1.3 小结
 
 - starter
     - `SpringBoot` 中常见项目名称，定义了当前项目使用的所有项目坐标，以达到减少依赖配置的目的
@@ -511,7 +512,7 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
         - A：artifactId
         - V：version
     - 如发生坐标错误，再指定version（要小心版本冲突）
-### 2.2 程序启动
+#### 2.2.2 程序启动
 
 创建的每一个 `SpringBoot` 程序时都包含一个类似于下面的类，我们将这个类称作引导类
 ```java
@@ -528,7 +529,7 @@ public class Springboot01QuickstartApplication {
 - `SpringBoot` 在创建项目时，采用jar的打包方式
 - `SpringBoot` 的引导类是项目的入口，运行 `main` 方法就可以启动项目  
     因为我们在 `pom.xml` 中配置了 `spring-boot-starter-web` 依赖，而该依赖通过前面的学习知道它依赖 `tomcat` ，所以运行 `main` 方法就可以使用 `tomcat` 启动咱们的工程。
-### 2.3 切换web服务器
+#### 2.2.3 切换web服务器
 
 现在我们启动工程使用的是 `tomcat` 服务器，那能不能不使用 `tomcat` 而使用 `jetty` 服务器。而要切换 `web` 服务器就需要将默认的 `tomcat` 服务器给排除掉，怎么排除呢？需要用到我们前面学的知识`排除依赖`，使用 `exclusion` 标签
 ```xml
@@ -558,9 +559,9 @@ Jetty比Tomcat更轻量级，可拓展性更强（相对于Tomcat），谷歌应
 
 
 小结：通过切换服务器，我们不难发现在使用 `SpringBoot` 换技术时只需要导入该技术的`起步依赖`即可。
-# 二、配置文件
+## 3 配置文件
 
-## 1、配置文件格式
+### 3.1 配置文件格式
 
 我们现在启动服务器默认的端口号是 `8080`，访问路径可以书写为  
 [http://localhost:8080/books/1](http://localhost:8080/books/1)
@@ -588,7 +589,7 @@ port: 82
 ```
 
 <font color="#00b050">注意</font>：`SpringBoot` 程序的配置文件名必须是 `application` ，只是后缀名不同而已。
-### 1.1 不同配置文件演示
+#### 3.1.1 不同配置文件演示
 
 `application.properties`配置文件
 
@@ -621,7 +622,7 @@ server:
 - 启动服务，在控制台可以看到绑定的端口号![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0881ae0c0789ee5ecce0a8a639659278.png)
 
 
-### 1.2 三种配置文件的优先级
+#### 3.1.2 三种配置文件的优先级
 
 在三种配合文件中分别配置不同的端口号，启动服务查看绑定的端口号。用这种方式就可以看到哪个配置文件的优先级更高一些
 
@@ -658,7 +659,7 @@ logging:
   level:  
     root: info
 ```
-## 2、yaml格式
+### 3.2 yaml格式
 
 上面讲了三种不同类型的配置文件，而 `properties` 类型的配合文件之前我们学习过，接下来我们重点学习 `yaml` 类型的配置文件。  
 
@@ -725,9 +726,9 @@ enterprise:
     - Python  
     - C#
 ```
-## 3、yaml配置文件数据读取
+### 3.3 yaml配置文件数据读取
 
-### 3.1 环境准备
+#### 3.3.1 环境准备
 
 - 修改`resource`目录下的`application.yml`配置文件
 ```yml
@@ -756,7 +757,7 @@ public class Enterprise {
     private String[] subject;   
 }
 ```
-### 3.2 读取配置文件
+#### 3.3.2 读取配置文件
 
 `方式一：`使用 @Value注解
 
@@ -861,12 +862,12 @@ public class BookController {
     <optional>true</optional>  
 </dependency>
 ```
-## 4、多环境配置
+### 3.4 多环境配置
 
 以后在工作中，对于开发环境、测试环境、生产环境的配置肯定都不相同，比如我们开发阶段会在自己的电脑上安装 `mysql` ，连接自己电脑上的 `mysql` 即可，但是项目开发完毕后要上线就需要该配置，将环境的配置改为线上环境的。  
 
 来回的修改配置会很麻烦，而 `SpringBoot` 给开发者提供了多环境的快捷配置，需要切换环境时只需要改一个配置即可。不同类型的配置文件多环境开发的配置都不相同，接下来对不同类型的配置文件进行说明
-### 4.1 yaml文件
+#### 3.4.1 yaml文件
 
 在 `application.yml` 中使用 `---` 来分割不同的配置，内容如下
 ```yml
@@ -930,7 +931,7 @@ spring:
     activate:  
       on-profile: dev # 给开发环境取的名
 ```
-### 4.2 properties文件
+#### 3.4.2 properties文件
 
 `properties` 类型的配置文件配置多环境需要`定义不同的配置文件`
 
@@ -953,7 +954,7 @@ server.port=82
 ```properties
 spring.profiles.active=pro
 ```
-### 4.3 命令行启动参数设置
+#### 3.4.3 命令行启动参数设置
 
 使用 `SpringBoot` 开发的程序以后都是打成 `jar` 包，通过 `java -jar xxx.jar` 的方式启动服务的。那么就存在一个问题，如何切换环境呢？因为配置文件打到的jar包中了。
 
@@ -975,7 +976,7 @@ java -jar xxx.jar -server.port=9421 --spring.profiles.active=pro
 那现在命令行配置的端口号是9421，配置文件中的端口号为82，那么结果将会是多少呢？  
 测试后就会发现命令行设置的端口号优先级高（也就是使用的是命令行设置的端口号），配置的优先级其实 `SpringBoot` 官网已经进行了说明，详情参见 [https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)  
 如果使用了多种方式配合同一个配置项，优先级高的生效。
-## 5、配置文件分类
+### 3.5 配置文件分类
 
 有这样的场景，我们开发完毕后需要测试人员进行测试，由于测试环境和开发环境的很多配置都不相同，所以测试人员在运行我们的工程时需要临时修改很多配置，如下
 ```shell
@@ -993,7 +994,7 @@ java –jar springboot.jar –-spring.profiles.active=test --server.port=85 --se
         说明：级别越高的优先级越高
 
 下面我们来验证这个优先级
-### 5.1 1级和2级
+#### 3.5.1 1级和2级
 
 1级就是resource目录下的`application.yml`，2级是在resource目录下新建一个config文件，在其中新建`application.yml`
 
@@ -1009,7 +1010,7 @@ server:
 ```
 
 启动引导类，控制台输出的为81端口![[Pasted image 20230903001543.png]]
-### 5.2 3级和4级
+#### 3.5.2 3级和4级
 
 先将工程打成一个jar包，进入到jar包的目录下，创建`application.yml` 配置文件，而在该配合文件中将端口号设置为 `82`  
 
@@ -1033,7 +1034,7 @@ java -jar springboot_06_config_file-0.0.1-SNAPSHOT.jar
 
 运行后日志信息如下，端口为83![[Pasted image 20230903001726.png]]
 通过这个结果可以得出一个结论 `config`下的配置文件优先于类路径下的配置文件。
-# 三、SpringBoot整合Junit
+## 4 SpringBoot整合Junit
 
 首先我们来回顾一下 `Spring` 整合 `junit`
 ```java
@@ -1058,7 +1059,7 @@ public class UserServiceTest {
 - 在测试类上添加 `SpringBootTest` 注解
 - 使用 `@Autowired` 注入要测试的资源
 - 定义测试方法进行测试
-## 1、环境准备
+### 4.1 环境准备
 
 - 创建一个新的SpringBoot工程
 - 在com.blog.service包下创建BookService接口
@@ -1078,7 +1079,7 @@ public class BookServiceImpl implements BookService {
     }  
 }
 ```
-## 2、编写测试类
+### 4.2 编写测试类
 
 在 `test/java` 下创建 `com.blog` 包，在该包下创建测试类，将 `BookService` 注入到该测试类中
 ```java
@@ -1105,9 +1106,9 @@ class Springboot02JunitApplicationTests {
 - 测试类所在包是 `com.blog`
 
 如果不满足这个要求的话，就需要在使用 `@SpringBootTest` 注解时，使用 `classes` 属性指定引导类的字节码对象。如 `@SpringBootTest(classes = XxxApplication.class)`
-# 四、SpringBoot整合MyBatis
+## 5 SpringBoot整合MyBatis
 
-## 1、回顾Spring整合MyBatis
+### 5.1 回顾Spring整合MyBatis
 
 之前Spring整合MyBatis时，需要定义很多配置类
 
@@ -1170,7 +1171,7 @@ public class MyBatisConfig {
     }  
 }
 ```
-## 2、SpringBoot整合MyBatis
+### 5.2 SpringBoot整合MyBatis
 
 - 创建一个新的模块  
     注意选择技术集的时候，要勾选`MyBatis Framework`和`MySQL Driver`
@@ -1295,14 +1296,14 @@ spring:
     password: PASSWORD.  
     type: com.alibaba.druid.pool.DruidDataSource
 ```
-# 五、案例
+## 6 案例
 
 `SpringBoot` 到这就已经学习完毕，接下来我们将学习 `SSM` 时做的三大框架整合的案例用 `SpringBoot` 来实现一下。先将之前做的SSM整合的代码拷贝过来，修改成SpringBoot的，之后再自己手动敲一遍SpringBoot的全流程，就当复盘了。
-## 1、创建工程
+### 6.1 创建工程
 
 创建一个新的SpringBoot工程，注意要勾选`Spring Web`，`MyBatis Framework`和`MySQL Driver`  
 由于我们工程中使用到了 `Druid` ，所以需要导入 `Druid` 的坐标
-## 2、代码拷贝
+### 6.2 代码拷贝
 
 将之前的ssm整合工程的代码拷贝过来，将`com.blog`包下的所有内容拷贝过来，放在对应的位置即可。  
 需要修改的内容如下：
@@ -1356,7 +1357,7 @@ public class BookServiceTest {
     }  
 }
 ```
-## 3、配置文件
+### 6.3 配置文件
 
 在application.yml配置文件中配置如下内容
 
@@ -1374,7 +1375,7 @@ spring:
     username: root  
     password: PASSWORD.
 ```
-## 4、静态资源
+### 6.4 静态资源
 
 在 `SpringBoot` 程序中是没有 `webapp` 目录的，那么在 `SpringBoot` 程序中静态资源需要放在什么位置呢？  
 
@@ -1390,9 +1391,9 @@ spring:
 这样当我们在浏览器输入localhost，然后直接按回车，就能直接跳转到增删改的页面了，如果以后我们需要频繁测试某一个页面，也可以将上述代码中的地址换为我们要测试的地址，这样就不用老手敲地址了
 
 那么至此，将之前的ssm整合，改为springboot的工作，就完成了
-# 六、复盘
+## 7 复盘
 
-## 1、流程分析
+### 7.1 流程分析
 
 1. 创建工程
     - 创建一个SpringBoot工程
@@ -1419,7 +1420,7 @@ spring:
             - 使用`@Autowired`自动装配
         - 响应结果
             - `@ResponseBody`
-## 2、整合配置
+### 7.2 整合配置
 
 分析完毕之后，那我们现在就开始来完成SpringBoot的整合
 
@@ -1446,7 +1447,7 @@ spring:
     username: root  
     password: YOURPASSWORD.
 ```
-## 3、功能模块开发
+### 7.3 功能模块开发
 
 - `步骤一：`创建数据库和表
 ```sql
@@ -1597,7 +1598,7 @@ public class BookController {
 
 - `步骤六：`使用PostMan进行测试  
     将增删改查全部测试完毕之后，就可以继续往下做了
-## 4、统一结果封装
+### 7.4 统一结果封装
 
 - 创建一个返回结果类  
 	我这里暂时只需要返回的结果，状态码和异常信息，如果还有别的需求，可以自行删改
@@ -1712,7 +1713,7 @@ public class BookController {
 
 - 如果不放心自己改的对不对，可以继续用PostMan再将每个方法测试一遍
 
-## 5、统一异常处理
+### 7.5 统一异常处理
 
 - 将异常进行分类  
 	这里只将其划分为了业务异常和系统异常  
@@ -1850,6 +1851,6 @@ public class BookServiceImpl implements BookService {
     }  
 }
 ```
-## 6、前端内容
+### 7.6 前端内容
 
 前端内容并没有变化，有空再回来重新写一遍页面吧

@@ -1,6 +1,6 @@
-# 一、集成SpringBoot
+## 1 集成SpringBoot
 
-## 1.1  搭建rocketmq-producer（消息生产者）
+### 1.1 搭建rocketmq-producer（消息生产者）
 
 - `步骤一：创建一个springboot项目`
 
@@ -73,7 +73,7 @@ public void testSimpleMsg() throws Exception {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f813180afe74a0dfb22031eca9d3b6fc.png)
 
-## 1.2 搭建rocketmq-consumer（消息消费者）
+### 1.2 搭建rocketmq-consumer（消息消费者）
 
 - `步骤一：创建一个springboot项目`
 
@@ -142,11 +142,11 @@ public class SimpleMsgListener implements RocketMQListener<MessageExt> {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0d8831b175aed5dc498ca6654788bdb4.png)
 
-# 二、发送对象和集合消息
+## 2 发送对象和集合消息
 
 我们接着在上面项目里面做
 
-## 2.1 发送对象消息
+### 2.1 发送对象消息
 
 `主要是监听的时候泛型中写对象的类型即可`
 
@@ -243,15 +243,15 @@ public class ObjMsgListener implements RocketMQListener<Order> {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/609c71502e6c49ed8f2c6aeef56e4a15.png)
 
-## 2.2 发送集合消息
+### 2.2 发送集合消息
 
 和对象消息同理，创建一个Order的集合，发送出去，监听方注意修改泛型中的类型为Object即可，这里就不做重复演示了
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ac35e6e898b77eab7fc1131d2487e323.png)
 
-# 三、发送不同消息模式
+## 3 发送不同消息模式
 
-## 3.1 发送同步消息
+### 3.1 发送同步消息
 
 理解为：消息由消费者发送到broker后，会得到一个确认，是具有可靠性的
 
@@ -267,7 +267,7 @@ public class ObjMsgListener implements RocketMQListener<Order> {
 
 这三种发送消息的方法，底层都是调用syncSend，发送的是同步消息
 
-## 3.2 发送异步消息
+### 3.2 发送异步消息
 
 `rocketMQTemplate.asyncSend()`
 
@@ -302,7 +302,7 @@ void testAsync() throws IOException {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2fef9b3449b699803dc3d93d3aa250df.png)
 
-## 3.3 发送单向消息
+### 3.3 发送单向消息
 
 这种方式主要用在不关心发送结果的场景，这种方式吞吐量很大，但是存在消息丢失的风险，例如日志信息的发送
 
@@ -317,7 +317,7 @@ void testOneway() {
 }
 ```
 
-## 3.4 发送延迟消息
+### 3.4 发送延迟消息
 
 - `步骤一：修改rocketmq-producer添加一个单元测试`
 
@@ -344,7 +344,7 @@ void testDelay() {
 
 private String messageDelayLevel = "1s 5s 10s 30s 1m 2m 3m 4m 5m 6m 7m 8m 9m 10m 20m 30m 1h 2h";
 
-## 3.5 发送顺序消息
+### 3.5 发送顺序消息
 
 - `步骤一：使用Order表中的一个唯一区分字段`
 
@@ -427,7 +427,7 @@ public class SimpleMsgListener implements RocketMQListener<MessageExt> {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b0cf5cd10c36ee41cabf18878dc7b61b.png)
 
-## 3.6 发送事务消息
+### 3.6 发送事务消息
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/58dbb098540209debded2bcb1c369c33.png)
 
@@ -511,9 +511,9 @@ public class TmMsgListener implements RocketMQLocalTransactionListener {
 
 6.  如果回查方法返回状态为COMMIT，则消费者可以直接监听到
 
-# 四、消息过滤
+## 4 消息过滤
 
-## 4.1 tag过滤（常在消费者端过滤）
+### 4.1 tag过滤（常在消费者端过滤）
 
 我们从源码注释得知，`tag带在主题后面用：来携带`
 
@@ -575,7 +575,7 @@ public class TagMsgListener implements RocketMQListener<String> {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1411e05ceabf815692d3ad485499f135.png)
 
-## 4.2 Key过滤（可以在事务监听的类里面区分）
+### 4.2 Key过滤（可以在事务监听的类里面区分）
 
 - `步骤一：修改rocketmq-producer添加一个单元测试`
 
@@ -608,7 +608,7 @@ public void testKeyMsg() throws Exception {
 
 
 
-# 五、消息消费两种模式
+## 5 消息消费两种模式
 
 `Rocketmq消息消费的模式分为两种：负载均衡模式和广播模式`
 

@@ -1,4 +1,4 @@
-## 一、SSM整合理解
+## 1 SSM整合理解
 
 ### 1.1 什么是SSM整合？
 
@@ -152,7 +152,7 @@ public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServl
 
 
 
-## 二、SSM整合配置实战
+## 2 SSM整合配置实战
 
 ### 2.1 依赖整合和添加
 
@@ -942,7 +942,7 @@ public interface EmployeeMapper {
     </mapper>
     ```
 
-## 三、《任务列表案例》前端程序搭建和运行
+## 3 《任务列表案例》前端程序搭建和运行
 
 ### 3.1 整合案例介绍和接口分析
 
@@ -952,7 +952,7 @@ public interface EmployeeMapper {
 
 
 
-#### 3.1.2接口分析
+#### 3.1.2 3.1.2接口分析
 
 1.  学习计划分页查询
     ```java
@@ -1100,9 +1100,9 @@ npm install //安装依赖
 npm run dev //运行测试
 ```
 
-## 四、《任务列表案例》后端程序实现和测试
+## 4 《任务列表案例》后端程序实现和测试
 
-### 4.1  准备工作
+### 4.1 准备工作
 
 1.  准备数据库脚本
     ```sql

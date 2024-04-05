@@ -1,5 +1,5 @@
 
-## 1、ArrayList 和 Array(数组)的区别？
+## 1 ArrayList 和 Array(数组)的区别？
 
 `ArrayList` 内部基于动态数组实现，比 `Array`（静态数组） 使用起来更加灵活：
 
@@ -48,13 +48,13 @@
 	2. `类型`：list可以通过泛型确定类型，而array是固定的；
 	3. `存储`：list只能存储引用类型，而array可以存储基本数据类型和引用类型；
 	4. `操作`：list有多种内置的api操作数据，而array只能根据下标进行操作；
-## 2、ArrayList 和 Vector的区别？（了解）
+## 2 ArrayList 和 Vector的区别？（了解）
 
 `回答思路：`
 - `ArrayList` 是 `List` 的主要实现类，底层使用 `Object[]`存储，适用于频繁的查找工作，线程不安全 。
 - `Vector` 是 `List` 的古老实现类，底层使用`Object[]` 存储，线程安全。
 
-## 3、Vector 和 Stack 的区别？（了解）
+## 3 Vector 和 Stack 的区别？（了解）
 
 `回答思路：`
 - `Vector` 和 `Stack` 两者都是线程安全的，都是使用 `synchronized` 关键字进行同步处理。
@@ -62,12 +62,12 @@
 
 随着 Java 并发编程的发展，`Vector` 和 `Stack` 已经被淘汰，推荐使用并发集合类（例如 `ConcurrentHashMap`、`CopyOnWriteArrayList` 等）或者手动实现线程安全的方法来提供安全的多线程操作支持。
 
-## 4、ArrayList 可以添加null值吗？
+## 4 ArrayList 可以添加null值吗？
 
 `回答思路：`
 	1. `ArrayList` 中可以存储任何类型的对象，包括 `null` 值。
 	2. 不过，不建议向`ArrayList` 中添加 `null` 值， `null` 值无意义，会让代码难以维护比如忘记做判空处理就会导致空指针异常。
-## 5、ArrayList 插入和删除元素的时间复杂度
+## 5 ArrayList 插入和删除元素的时间复杂度
 
 对于插入：
 
@@ -92,7 +92,7 @@
 		- 中间删除，O(n)
 	3. `底层是数组，联想数组的操作即可`
 
-## 6、LinkedList 插入和删除元素的时间复杂度
+## 6 LinkedList 插入和删除元素的时间复杂度
 
 - 头部插入/删除：只需要修改头结点的指针即可完成插入/删除操作，因此时间复杂度为 O(1)。
 - 尾部插入/删除：只需要修改尾结点的指针即可完成插入/删除操作，因此时间复杂度为 O(1)。
@@ -104,13 +104,13 @@
 2. 尾部插入/删除，O(1)
 3. 中间插入/删除，O(n)
 4. `底层是链表，联想链表的操作即可`
-## 7、LinkedList 为什么不能实现 RandomAccess接口？
+## 7 LinkedList 为什么不能实现 RandomAccess接口？
 
 `回答思路：`
 	1. `RandomAccess` 是一个标记接口，用来表明实现该接口的类支持随机访问（即可以通过索引快速访问元素）。
 	2. 由于 `LinkedList` 底层数据结构是链表，内存地址不连续，只能通过指针来定位，不支持随机快速访问，所以不能实现 `RandomAccess` 接口。
 
-## 8、ArrayList 和 LinkedList 的区别？
+## 8 ArrayList 和 LinkedList 的区别？
 
 - **是否保证线程安全：** `ArrayList` 和 `LinkedList` 都是不同步的，也就是不保证线程安全；
 - **底层数据结构：** `ArrayList` 底层使用的是 **`Object` 数组**；`LinkedList` 底层使用的是 **双向链表** 数据结构（JDK1.6 之前为循环链表，JDK1.7 取消了循环。注意双向链表和双向循环链表的区别，下面有介绍到！）
@@ -130,7 +130,7 @@
 	3. `插入和删除元素`：根据底层数据结构来分析
 	4. `快速随机访问`：ArrayList支持，而LinkedList不支持（主要是底层数据结构决定的）
 	5. `内存占用`：ArrayList底层数组预留了一定容量空间，而LinkedList每个元素都消耗比ArrayList更多的空间
-## 9、说一说ArrayList的扩容机制吧
+## 9 说一说ArrayList的扩容机制吧
 
 详细见文件[1_ArrayList源码分析](../2_集合源码分析‼️‼️/1_ArrayList源码分析.md)
 

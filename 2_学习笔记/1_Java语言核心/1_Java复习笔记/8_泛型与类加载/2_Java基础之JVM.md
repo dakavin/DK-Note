@@ -299,6 +299,6 @@ Java中的堆是JVM所管理的最大的一块内存空间，主要用于存放�
 	- 永久代是Hotspot虚拟机特有的概念，是方法区的一种实现，别的JVM都没有这个东西。在Java 8中，永久代被彻底移除，取而代之的是另一块与堆不相连的本地内存——元空间。
 	- 永久代或者“Perm Gen”包含了JVM需要的应用元数据，这些元数据描述了在应用里使用的类和方法。注意，永久代不是Java堆内存的一部分。永久代存放JVM运行时使用的类。永久代同样包含了Java SE库的类和方法。永久代的对象在full GC时进行垃圾收集。
 
-## 7 7、JVM的参考文献  
+## 7 JVM的参考文献  
 （1）优秀书本：《《深入理解JAVA虚拟机：JAVA高级特性与最佳实践》》  
 [https://blog.csdn.net/huyuyang6688/article/details/81490570](https://links.jianshu.com/go?to=https%3A%2F%2Fblog.csdn.net%2Fhuyuyang6688%2Farticle%2Fdetails%2F81490570)

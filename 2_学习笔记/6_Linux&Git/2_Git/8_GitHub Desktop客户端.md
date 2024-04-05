@@ -1,4 +1,4 @@
-## 1、下载 和 安装
+## 1 下载 和 安装
 
 ### 1.1 下载
 
@@ -26,7 +26,7 @@ Git官网提供对应得下载链接页面：
 如果觉得软件界面比较小，可以适当进行调整或全屏
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ecde0394779c33d130b90d3da0f0713e.png)
 
-## 2、创建本地仓库
+## 2 创建本地仓库
 
 ### 2.1 创建仓库
 
@@ -46,7 +46,7 @@ Git官网提供对应得下载链接页面：
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b8be4be285fdc46ac5e5d5dacf944c1a.png)
 
-## 3、文件操作
+## 3 文件操作
 
 ### 3.1 新增文件
 
@@ -75,7 +75,7 @@ Git官网提供对应得下载链接页面：
 如果存在多次得提交操作得话，可以查看提交得历史记录
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4020317346ceab7d67eea48615a9c0d7.png)
 
-## 4、分支操作
+## 4 分支操作
 
 ### 4.1 默认分支
 
@@ -105,7 +105,7 @@ Git官网提供对应得下载链接页面：
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8320a2c0f8cb67d8e7a9832aca0baa9.png)
 
-## 5、标签操作
+## 5 标签操作
 
 ### 5.1 创建标签
 
@@ -117,7 +117,7 @@ Git官网提供对应得下载链接页面：
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4ffeec8ed1c9fd10078979cb4c97c46a.png)
 
-## 6、远程仓库
+## 6 远程仓库
 
 ### 6.1 克隆仓库
 

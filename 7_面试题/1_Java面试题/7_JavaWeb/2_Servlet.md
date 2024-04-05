@@ -1,5 +1,5 @@
 
-### Servlet生命周期
+## 1 Servlet生命周期
 
 > Servlet生命周期?
 
@@ -21,7 +21,7 @@ Servlet生命周期可分为5个步骤
 
 - 简单总结：**只要访问Servlet，service()就会被调用。init()只有第一次访问Servlet的时候才会被调用。destroy()只有在Tomcat关闭的时候才会被调用。**
 
-### get方式和post方式有何区别
+## 2 get方式和post方式有何区别
 
 数据携带上:
 
@@ -46,7 +46,7 @@ Servlet生命周期可分为5个步骤
 
 GET方式比POST方式要快，详情可看:[https://www.cnblogs.com/strayling/p/3580048.html](https://link.segmentfault.com/?enc=GbEwmt1wbtm47qUiYirJoQ%3D%3D.I48aZv2n34ayOACBTdQUPHPkUd5ZcQ%2BtP93G1bSM54LAu3LO8UbNaAdFJsl3EghF9JU8E7cbvGUcS02tYSHHhg%3D%3D)
 
-### Servlet相关 API
+## 3 Servlet相关 API
 
 > doGet与doPost方法的两个参数是什么
 
@@ -71,7 +71,7 @@ GET方式比POST方式要快，详情可看:[https://www.cnblogs.com/strayling/p
 - request.getAttribute()可以获取Objcet对象
 - request.getParameter()只能获取字符串(这也是为什么它一般用于获取客户端提交的参数)
 
-### forward和redirect的区别
+## 4 forward和redirect的区别
 
 > forward和redirect的区别
 
@@ -114,13 +114,13 @@ GET方式比POST方式要快，详情可看:[https://www.cnblogs.com/strayling/p
 1. 转发: 访问 Servlet 处理业务逻辑，然后 forward 到 jsp 显示处理结果，浏览器里 URL 不变
 2. 重定向: 提交表单，处理成功后 redirect 到另一个 jsp，防止表单重复提交，浏览器里 URL 变了
 
-### tomcat容器是如何创建servlet类实例？用到了什么原理？
+## 5 tomcat容器是如何创建servlet类实例？用到了什么原理？
 
 1. 当容器启动时，会读取在webapps目录下所有的web应用中的web.xml文件，然后对 **xml文件进行解析，并读取servlet注册信息**。然后，将每个应用中注册的servlet类都进行加载，并通过 **反射的方式实例化**。（有时候也是在第一次请求时实例化）
 2. 在servlet注册时加上`<load-on-startup>1</load-on-startup>`如果为正数，则在一开始就实例化，如果不写或为负数，则第一次请求实例化。
 
 
-### 什么是cookie？Session和cookie有什么区别？
+## 6 什么是cookie？Session和cookie有什么区别？
 
 > 什么是cookie？
 
@@ -156,7 +156,7 @@ Cookie是由W3C组织提出，最早由netscape社区发展的一种机制
     - Cookie可以设置domain属性来实现跨域名
     - Session只在当前的域名内有效，不可夸域名
 
-### Servlet安全性问题
+## 7 Servlet安全性问题
 
 由于Servlet是单例的，当多个用户访问Servlet的时候，**服务器会为每个用户创建一个线程**。**当多个用户并发访问Servlet共享资源的时候就会出现线程安全问题**。
 

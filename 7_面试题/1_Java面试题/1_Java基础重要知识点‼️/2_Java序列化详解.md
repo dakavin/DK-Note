@@ -1,5 +1,5 @@
 
-# 1、什么是序列化和反序列化
+## 1 什么是序列化和反序列化
 
 如果我们需要持久化 Java 对象比如`将 Java 对象保存在文件中，或者在网络传输 Java 对象，这些场景都需要用到序列化`。
 
@@ -38,12 +38,12 @@
 如上图所示，OSI 七层协议模型中，表示层做的事情主要就是对应用层的用户数据进行处理转换为二进制流。反过来的话，就是将二进制流转换成应用层的用户数据。这不就对应的是序列化和反序列化么？
 
 因为，OSI 七层协议模型中的应用层、表示层和会话层对应的都是 TCP/IP 四层模型中的应用层，所以序列化协议属于 TCP/IP 协议应用层的一部分。
-# 2、常见的序列化协议有那些
+## 2 常见的序列化协议有那些
 
 JDK 自带的序列化方式一般不会用 ，因为序列化效率低并且存在安全问题。比较常用的序列化协议有 Hessian、Kryo、Protobuf、ProtoStuff，这些都是基于二进制的序列化协议。
 
 像 JSON 和 XML 这种属于文本类序列化方式。虽然可读性比较好，但是性能较差，一般不会选择。
-## 2.1 JDK自带的序列化方式
+### 2.1 JDK自带的序列化方式
 
 JDK 自带的序列化，只需实现 `java.io.Serializable`接口即可。
 
@@ -68,7 +68,7 @@ public class RpcRequest implements Serializable {
 
 序列化号 `serialVersionUID` 属于版本控制的作用。反序列化时，会检查 `serialVersionUID` 是否和当前类的 `serialVersionUID` 一致。如果 `serialVersionUID` 不一致则会抛出 `InvalidClassException` 异常。强烈推荐每个序列化类都手动指定其 `serialVersionUID`，如果不手动指定，那么编译器会动态生成默认的 `serialVersionUID`。
 
-### **serialVersionUID 不是被 static 变量修饰了吗？为什么还会被“序列化”？**
+#### **serialVersionUID 不是被 static 变量修饰了吗？为什么还会被“序列化”？**
 
 `static` 修饰的变量是静态变量，位于方法区，本身是不会被序列化的。但是，`serialVersionUID` 的序列化做了特殊处理，在序列化时，会将 `serialVersionUID` 序列化到二进制字节流中；在反序列化时，也会解析它并做一致性判断。
 
@@ -99,7 +99,7 @@ public class RpcRequest implements Serializable {
 - **不支持跨语言调用** : 如果调用的是其他语言开发的服务的时候就不支持了。
 - **性能差**：相比于其他序列化框架性能更低，主要原因是序列化之后的字节数组体积较大，导致传输成本加大。
 - **存在安全问题**：序列化和反序列化本身并不存在问题。但当输入的反序列化的数据可被用户控制，那么攻击者即可通过构造恶意输入，让反序列化产生非预期的对象，在此过程中执行构造的任意代码。相关阅读：[应用安全:JAVA 反序列化漏洞之殇 - Cryinopen in new window](https://cryin.github.io/blog/secure-development-java-deserialization-vulnerability/)、[Java 反序列化安全漏洞怎么回事? - Monicaopen in new window](https://www.zhihu.com/question/37562657/answer/1916596031)
-## 2.2 Kryo
+### 2.2 Kryo
 
 Kryo 是一个`高性能`的序列化/反序列化工具，由于其`变长存储特性`并`使用了字节码生成机制`，拥有`较高的运行速度`和`较小的字节码体积`。
 
@@ -160,7 +160,7 @@ public class KryoSerializer implements Serializer {
 
 GitHub 地址：[https://github.com/EsotericSoftware/kryoopen in new window](https://github.com/EsotericSoftware/kryo)
 
-## 2.3 Protobuf
+### 2.3 Protobuf
 
 Protobuf 出自于 Google，性能还比较优秀，也支持多种语言，同时还是跨平台的。就是在使用中过于繁琐，因为你需要自己定义 IDL 文件和生成对应的序列化代码。这样虽然不灵活，但是，另一方面导致 protobuf 没有序列化漏洞的风险。
 
@@ -181,20 +181,20 @@ message Person {
 ```
 
 GitHub 地址：[https://github.com/protocolbuffers/protobufopen in new window](https://github.com/protocolbuffers/protobuf)
-## 2.4 ProtoStuff
+### 2.4 ProtoStuff
 
 由于 Protobuf 的易用性，它的哥哥 Protostuff 诞生了。
 
 protostuff 基于 Google protobuf，但是提供了更多的功能和更简易的用法。虽然更加易用，但是不代表 ProtoStuff 性能更差。
 
 GitHub 地址：[https://github.com/protostuff/protostuffopen in new window](https://github.com/protostuff/protostuff)
-## 2.5 Hessian
+### 2.5 Hessian
 
 Hessian 是一个轻量级的，自定义描述的二进制 RPC 协议。Hessian 是一个比较老的序列化实现了，并且同样也是跨语言的。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/22f12b3f37367b94804d2c10032eff16.png)
 
 Dubbo2.x 默认启用的序列化方式是 Hessian2 ,但是，Dubbo 对 Hessian2 进行了修改，不过大体结构还是差不多。
-# 3、总结
+## 3 总结
 
 Kryo 是专门针对 Java 语言序列化方式并且性能非常好，如果你的应用是专门针对 Java 语言的话可以考虑使用，并且 Dubbo 官网的一篇文章中提到说推荐使用 Kryo 作为生产环境的序列化方式。(文章地址：[https://cn.dubbo.apache.org/zh-cn/docsv2.7/user/serialization/open in new window](https://cn.dubbo.apache.org/zh-cn/docsv2.7/user/serialization/)）。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b11da9022ecbb5ae3b0a1a3176c8ad5c.png)

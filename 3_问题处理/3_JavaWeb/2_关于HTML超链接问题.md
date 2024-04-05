@@ -1,4 +1,4 @@
-## 1、超链接概念
+## 1 超链接概念
 
 * `a`:定义一个超链接
 	* <font color="#d83931">属性</font>：
@@ -29,7 +29,7 @@
 <a href="http://www.itcast.cn"><img src="image/jiangwai_1.jpg"></a>
 ```
 
-## 2、href属性探讨
+## 2 href属性探讨
 
 - 跳转页面的情况
 	- 情况1：填写外部服务器地址

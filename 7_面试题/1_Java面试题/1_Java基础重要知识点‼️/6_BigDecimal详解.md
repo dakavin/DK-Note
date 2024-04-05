@@ -3,7 +3,7 @@
 浮点数的运算竟然还会有精度丢失的风险吗？确实会！
 
 关于浮点数的更多内容，建议看一下[计算机系统基础（四）浮点数open in new window](http://kaito-kidd.com/2018/08/08/computer-system-float-point/)这篇文章。
-## 1、BigDecimal介绍
+## 1 BigDecimal介绍
 
 `BigDecimal` 可以实现对浮点数的运算，不会造成精度丢失。
 
@@ -27,7 +27,7 @@ BigDecimal y = b.subtract(c);
 System.out.println(x.compareTo(y));// 0
 ```
 
-## 2、BigDecimal常见方法
+## 2 BigDecimal常见方法
 
 ### 2.1 创建
 
@@ -99,7 +99,7 @@ BigDecimal m = new BigDecimal("1.255433");
 BigDecimal n = m.setScale(3,RoundingMode.HALF_DOWN);
 System.out.println(n);// 1.255
 ```
-## 3、BigDecimal等值比较问题
+## 3 BigDecimal等值比较问题
 
 《阿里巴巴 Java 开发手册》中提到：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bf09b9c45d2d95a8076556b5db6471df.png)
 `BigDecimal` 使用 `equals()` 方法进行等值比较出现问题的代码示例：
@@ -122,7 +122,7 @@ BigDecimal a = new BigDecimal("1");
 BigDecimal b = new BigDecimal("1.0");
 System.out.println(a.compareTo(b));//0
 ```
-## 4、BigDecimal工具类分享
+## 4 BigDecimal工具类分享
 
 网上有一个使用人数比较多的 `BigDecimal` 工具类，提供了多个静态方法来简化 `BigDecimal` 的操作。
 
@@ -306,7 +306,7 @@ public class BigDecimalUtil {
 }
 ```
 
-## 5、总结
+## 5 总结
 
 浮点数没有办法用二进制精确表示，因此存在精度丢失的风险。
 

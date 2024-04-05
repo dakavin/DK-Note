@@ -5,7 +5,7 @@
 - 所以其可以按照插入顺序获取元素
 - 也可以设置，accessOrder为true，达到访问顺序获取元素
 - 同时可以设置一个简单的LRU缓存
-# 1、LinkedHashMap简介
+## 1 LinkedHashMap简介
 
 `LinkedHashMap` 是 Java 提供的一个集合类，它继承自 `HashMap`，并在 `HashMap` 基础上维护一条双向链表，使得具备如下特性:
 
@@ -15,9 +15,9 @@
 
 `LinkedHashMap` 逻辑结构如下图所示，它是在 `HashMap` 基础上在各个节点之间维护一条双向链表，使得原本散列在不同 bucket 上的节点、链表、红黑树有序关联起来。
 ![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/979339f7ad7170813f72002700b3dd53.png)
-# 2、LinkedHashMap 使用示例
+## 2 LinkedHashMap 使用示例
 
-## 2.1 插入顺序遍历
+### 2.1 插入顺序遍历
 
 如下所示，我们按照顺序往 `LinkedHashMap` 添加元素然后进行遍历。
 
@@ -43,7 +43,7 @@ e:23
 ```
 
 可以看出，`LinkedHashMap` 的迭代顺序是和插入顺序一致的,这一点是 `HashMap` 所不具备的。
-## 2.2 访问顺序遍历
+### 2.2 访问顺序遍历
 
 `LinkedHashMap` 定义了排序模式 `accessOrder`(boolean 类型，默认为 false)，访问顺序则为 true，插入顺序则为 false。
 
@@ -76,7 +76,7 @@ for (Map.Entry<Integer, String> entry : map.entrySet()) {
 ```
 
 可以看出，`LinkedHashMap` 的迭代顺序是和访问顺序一致的。
-## 2.3 LRU缓存
+### 2.3 LRU缓存
 
 从上一个我们可以了解到通过 `LinkedHashMap` 我们可以封装一个简易版的 LRU（**L**east **R**ecently **U**sed，最近最少使用） 缓存，确保当存放的元素超过容器容量时，将最近最少访问的元素移除。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31eeb2430299f6837815f991394ad83f.png)
 具体实现思路如下：
@@ -127,9 +127,9 @@ four
 ```
 
 从输出结果来看，由于缓存容量为 2 ，因此，添加第 3 个元素时，第 1 个元素会被删除。添加第 4 个元素时，第 2 个元素会被删除。
-# 3、源码解析
+## 3 源码解析
 
-## 3.1 Node 的设计
+### 3.1 Node 的设计
 
 在正式讨论 `LinkedHashMap` 前，我们先来聊聊 `LinkedHashMap` 节点 `Entry` 的设计,我们都知道 `HashMap` 的 bucket 上的因为冲突转为链表的节点会在符合以下两个条件时会将链表转为红黑树:
 - bucket容量达到树化的阈值（TREEIFY_THRESHOLD=8）
@@ -170,7 +170,7 @@ static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V> {
 
 对于这个问题,引用作者的一段注释，作者们认为在良好的 `hashCode` 算法时，`HashMap` 转红黑树的概率不大。就算转为红黑树变为树节点，也可能会因为移除或者扩容将 `TreeNode` 变为 `Node`，所以 `TreeNode` 的使用概率不算很大，对于这一点资源空间的浪费是可以接受的。
 
-## 3.2 构造方法
+### 3.2 构造方法
 
 `LinkedHashMap` 构造方法有 4 个实现也比较简单，直接调用父类即 `HashMap` 的构造方法完成初始化。
 
@@ -199,7 +199,7 @@ public LinkedHashMap(int initialCapacity,
 ```
 
 我们上面也提到了，默认情况下 `accessOrder` 为 false，如果我们要让 `LinkedHashMap` 实现键值对按照访问顺序排序(即将最近未访问的元素排在链表首部、最近访问的元素移动到链表尾部)，需要调用第 4 个构造方法将 `accessOrder` 设置为 true。
-## 3.3 get 方法
+### 3.3 get 方法
 
 `get` 方法是 `LinkedHashMap` 增删改查操作中唯一一个重写的方法， `accessOrder` 为 true 的情况下， 它会在元素查询完成之后，将当前访问的元素移到链表的末尾。
 
@@ -279,7 +279,7 @@ void afterNodeAccess(Node < K, V > e) { // move node to last
 可以结合这张图理解，展示了 key 为 13 的元素被移动到了链表尾部。![|500|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/63b68b3dff48da456689cd654b2a43c2.png)
 看不太懂也没关系，知道这个方法的作用就够了，后续有时间再慢慢消化。
 
-## 3.4 remove方法后置操作——afterNodeRemoval
+### 3.4 remove方法后置操作——afterNodeRemoval
 
 `LinkedHashMap` 并没有对 `remove` 方法进行重写，而是直接继承 `HashMap` 的 `remove` 方法，为了保证键值对移除后双向链表中的节点也会同步被移除，`LinkedHashMap` 重写了 `HashMap` 的空实现方法 `afterNodeRemoval`。
 ```java
@@ -342,7 +342,7 @@ void afterNodeRemoval(Node<K,V> e) { // unlink
 
 可以结合这张图理解，展示了 key 为 13 的元素被删除，也就是从链表中移除了这个元素。![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/63b68b3dff48da456689cd654b2a43c2.png)
 看不太懂也没关系，知道这个方法的作用就够了，后续有时间再慢慢消化。
-## 3.5 put方法后置操作——afterNodeInsertion
+### 3.5 put方法后置操作——afterNodeInsertion
 
 同样的 `LinkedHashMap` 并没有实现插入方法，而是直接继承 `HashMap` 的所有插入方法交由用户使用，但为了维护双向链表访问的有序性，它做了这样两件事:
 
@@ -403,7 +403,7 @@ void afterNodeInsertion(boolean evict) { // possibly remove eldest
 1. 判断 `eldest` 是否为 true，只有为 true 才能说明可能需要将最年长的键值对(即链表首部的元素)进行移除，具体是否具体要进行移除，还得确定链表是否为空`((first = head) != null)`，以及 `removeEldestEntry` 方法是否返回 true，只有这两个方法返回 true 才能确定当前链表不为空，且链表需要进行移除操作了。
 2. 获取链表第一个元素的 key。
 3. 调用 `HashMap` 的 `removeNode` 方法，该方法我们上文提到过，它会将节点从 `HashMap` 的 bucket 中移除，并且 `LinkedHashMap` 还重写了 `removeNode` 中的 `afterNodeRemoval` 方法，所以这一步将通过调用 `removeNode` 将元素从 `HashMap` 的 bucket 中移除，并和 `LinkedHashMap` 的双向链表断开，等待 gc 回收。
-# 4、LinkedHashMap 和 HashMap 性能比较
+## 4 LinkedHashMap 和 HashMap 性能比较
 
 `LinkedHashMap` 维护了一个双向链表来记录数据插入的顺序，因此在迭代遍历生成的迭代器的时候，是按照双向链表的路径进行遍历的。这一点相比于 `HashMap` 那种遍历整个 bucket 的方式来说，高效需多。
 
@@ -506,21 +506,21 @@ map get time: 143
 linkedHashMap get time: 67
 63208969074998
 ```
-# 5、LinkedHashMap 常见面试题
+## 5 LinkedHashMap 常见面试题
 
-## 5.1 什么是 LinkedHashMap？
+### 5.1 什么是 LinkedHashMap？
 
 `LinkedHashMap` 是 Java 集合框架中 `HashMap` 的一个子类，它继承了 `HashMap` 的所有属性和方法，并且在 `HashMap` 的基础重写了 `afterNodeRemoval`、`afterNodeInsertion`、`afterNodeAccess` 方法。使之拥有顺序插入和访问有序的特性。
-## 5.2 LinkedHashMap 如何按照插入顺序迭代元素？
+### 5.2 LinkedHashMap 如何按照插入顺序迭代元素？
 
 `LinkedHashMap` 按照插入顺序迭代元素是它的默认行为。`LinkedHashMap` 内部维护了一个双向链表，用于记录元素的插入顺序。因此，当使用迭代器迭代元素时，元素的顺序与它们最初插入的顺序相同。
-## 5.3 LinkedHashMap 如何按照访问顺序迭代元素？
+### 5.3 LinkedHashMap 如何按照访问顺序迭代元素？
 
 `LinkedHashMap` 可以通过构造函数中的 `accessOrder` 参数指定按照访问顺序迭代元素。当 `accessOrder` 为 true 时，每次访问一个元素时，该元素会被移动到链表的末尾，因此下次访问该元素时，它就会成为链表中的最后一个元素，从而实现按照访问顺序迭代元素。
-## 5.4 LinkedHashMap 如何实现LRU缓存？
+### 5.4 LinkedHashMap 如何实现LRU缓存？
 
 将 `accessOrder` 设置为 true 并重写 `removeEldestEntry` 方法当链表大小超过容量时返回 true，使得每次访问一个元素时，该元素会被移动到链表的末尾。一旦插入操作让 `removeEldestEntry` 返回 true 时，视为缓存已满，`LinkedHashMap` 就会将链表首元素移除，由此我们就能实现一个 LRU 缓存。
-## 5.5 LinkedHashMap 和 HashMap 的区别？
+### 5.5 LinkedHashMap 和 HashMap 的区别？
 
 `LinkedHashMap` 和 `HashMap` 都是 Java 集合框架中的 Map 接口的实现类。它们的最大区别在于迭代元素的顺序。`HashMap` 迭代元素的顺序是不确定的，而 `LinkedHashMap` 提供了按照插入顺序或访问顺序迭代元素的功能。此外，`LinkedHashMap` 内部维护了一个双向链表，用于记录元素的插入顺序或访问顺序，而 `HashMap` 则没有这个链表。因此，`LinkedHashMap` 的插入性能可能会比 `HashMap` 略低，但它提供了更多的功能并且迭代效率相较于 `HashMap` 更加高效。
 

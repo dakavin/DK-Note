@@ -1,6 +1,6 @@
 
 前置文章：[7.3.2 LinkedList源码分析](../../../../../2_笔记/1_Java基础/14_数据结构与集合源码/14_数据结构与集合源码.md#7.3.2%20LinkedList源码分析)
-# 1、LinkedList简介
+## 1 LinkedList简介
 
 `LinkedList` 是一个基于双向链表实现的集合类，经常被拿来和 `ArrayList` 做比较。关于 `LinkedList` 和`ArrayList`的详细对比，[8、ArrayList 和 LinkedList 的区别？](../2_集合/2_List.md#8、ArrayList%20和%20LinkedList%20的区别？)有详细介绍到。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/43730acbb39cad941302ea45639c1c60.png)
@@ -9,7 +9,7 @@
 
 另外，不要下意识地认为 `LinkedList` 作为链表就最适合元素增删的场景。我在上面也说了，`LinkedList` 仅仅在头尾插入或者删除元素的时候时间复杂度近似 O(1)，其他情况增删元素的平均时间复杂度都是 O(n)
 
-# 2、LinkedList 源码分析
+## 2 LinkedList 源码分析
 
 这里以 JDK1.8 为例，分析一下 `LinkedList` 的底层核心源码。
 
@@ -53,7 +53,7 @@ private static class Node<E> {
     }
 }
 ```
-## 2.1 初始化
+### 2.1 初始化
 
 `LinkedList` 中有一个无参构造函数和一个有参构造函数。
 
@@ -68,7 +68,7 @@ public LinkedList(Collection<? extends E> c) {
     addAll(c);
 }
 ```
-## 2.2 插入元素
+### 2.2 插入元素
 
 `LinkedList` 除了实现了 `List` 接口相关方法，还实现了 `Deque` 接口的很多方法，所以我们有很多种方式插入元素。
 
@@ -142,7 +142,7 @@ void linkBefore(E e, Node<E> succ) {
 }
 
 ```
-## 2.3 获取元素
+### 2.3 获取元素
 
 `LinkedList`获取元素相关的方法一共有 3 个：
 
@@ -201,7 +201,7 @@ Node<E> node(int index) {
 `get(int index)` 或 `remove(int index)` 等方法内部都调用了该方法来获取对应的节点。
 
 从这个方法的源码可以看出，该方法通过比较索引值与链表 size 的一半大小来确定从链表头还是尾开始遍历。如果索引值小于 size 的一半，就从链表头开始遍历，反之从链表尾开始遍历。这样可以在较短的时间内找到目标节点，充分利用了双向链表的特性来提高效率。
-## 2.4 删除元素
+### 2.4 删除元素
 
 `LinkedList`删除元素相关的方法一共有 5 个：
 
@@ -313,7 +313,7 @@ E unlink(Node<E> x) {
 5. 将待删除节点 x 的元素置空，修改链表长度。
 
 `删除中间节点的图解`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cee37550d2403882ee9870193432d9a9.png)
-## 2.5 遍历链表
+### 2.5 遍历链表
 
 推荐使用`for-each` 循环来遍历 `LinkedList` 中的元素， `for-each` 循环最终会转换成迭代器形式。
 
@@ -435,7 +435,7 @@ public void remove() {
 }
 ```
 
-# 3、常用方法测试
+## 3 常用方法测试
 
 ```java
 // 创建 LinkedList 对象

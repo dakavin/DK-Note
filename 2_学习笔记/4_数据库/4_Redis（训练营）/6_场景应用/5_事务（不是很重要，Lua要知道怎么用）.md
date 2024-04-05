@@ -1,8 +1,8 @@
 
-## 1、事务是什么
+## 1 事务是什么
 
 多个操作被看做一个整体，即事务，事务通常具备原子性。
-## 2、Multi事务
+## 2 Multi事务
 
 Redis原生有Multi命令，可以开启事务，我们看一下Redis这段官方说明：
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eff993f935716738090d6744b2d65177.png)
@@ -112,7 +112,7 @@ multi可以说是Redis关于事务的过渡方案，无论是原子性、功能�
 事实上，Redis在2.6版本之后，引入了Lua做事务，用官方的话来说Lua会更简单、更快。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bde17e943c2f0fe0f72a50d9d1afa495.png)
 
-## 3、Lua做事务
+## 3 Lua做事务
 
 ### 3.1 Lua是什么？
 

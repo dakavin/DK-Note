@@ -1,20 +1,20 @@
-# 一、Linux基础命令
-## 1、Linux的目录结构
+## 1 Linux基础命令
+### 1.1 inux的目录结构
 
-### 1.1 Linux和Windows的目录结构
+#### 1.1.1 Linux和Windows的目录结构
 - Linux的目录结构是一个树型结构
 - Windows 系统可以拥有多个盘符, 如 C盘、D盘、E盘![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b152dfe7942e8f1b8073545885eeba70.png)
 - Linux没有盘符这个概念, 只有一个根目录 /, 所有文件都在它下面![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a68e8049a776e878b77a6caa7eae3df2.png)
-### 1.2 Linux路径的描述方式
+#### 1.1.2 Linux路径的描述方式
 
 - 在Linux系统中，路径之间的层级关系，使用：`/` 来表示
 - •在Windows系统中，路径之间的层级关系，使用： `\` 来表示![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8735cf1c15f40b864eda5a8996ffd193.png)
-## 2、Linux命令入门
+### 1.2 Linux命令入门
 
 - 学习Linux，本质上是学习在命令行下熟练使用Linux各类命令
 	- 命令行：即Linux终端（Terminal），是一种命令提示符页面。以纯字符的形式操作系统，可以使用各种字符化命令对系统发出操作指令
 	- 命令：即Linux程序。一个命令就是一个Linux程序，命令没有图形化界面，可以在命令行（终端）上提供字符化的反馈![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bf98ce6132b0fbfd63041d38e1360c45.png)
-### 2.1 Linux命令基础
+#### 1.2.1 Linux命令基础
 
 - 无论是什么命令，用于什么用途，在Linux中，命令有其通用的格式
 - 格式：`command [-options] [parameter]`
@@ -23,7 +23,7 @@
 	- parameter：[可选，非必填]命令的参数，多数用于命令的指向目标
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/919b6eb7febc1ee8ec31c562e7e8cfe3.png)
-### 2.2 ls命令入门
+#### 1.2.2 ls命令入门
 
 - ls命令的作用是列出目录下的内容，语法细节如下：
 	- `ls [-a -l -h] [linux路径]`
@@ -36,7 +36,7 @@
 	- HOME目录：`每个Linux操作用户在Linux系统的个人账户目录`，路径在：`/home/用户名`
 		- 如图中的Linux用户是itheima，其HOME目录是：/home/itheima![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/41358838ddefd97e5ae6106a7e504ddd.png)
 		- Windows系统和Linux系统，均设有用户的HOME目录，如图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/73fbb690ad830ee757919b2a3074986c.png)
-### 2.3 ls命令的参数和选项 
+#### 1.2.3 ls命令的参数和选项 
 
 - 那么ls的选项和参数具体有什么作用呢？
 - 首先我们先来看`参数`。
@@ -53,9 +53,9 @@
 	- 除了选项本身可以组合以外，`选项和参数也可以一起使用`。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9d0b181c9bb1551420f167f2d031f321.png)
 	- `-h 选项` 表示以易于阅读的形式，列出文件大小，如K、M、G
 	- -h选项必须要搭配 -l 一起使用![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3ec4b58ea37a1a8daf7542a0d14661d3.png)
-## 3、目录切换相关命令(cd/pwd)
+### 1.3 目录切换相关命令(cd/pwd)
 
-### 3.1 cd切换工作目录
+#### 1.3.1 cd切换工作目录
 
 - 当Linux终端（命令行）打开的时候，会默认以用户的HOME目录作为当前的工作目录
 - 我们可以通过cd命令，更改当前所在的工作目录
@@ -70,16 +70,16 @@ cd ~      切换到用户主目录
 cd -       切换到上一个所在目录
 
 使用tab键来补全文件路径
-### 3.2 pwd展示当前工作目录
+#### 1.3.2 pwd展示当前工作目录
 
 - 通过ls来验证当前的工作目录，其实是不恰当的。
 - 我们可以通过pwd命令，来查看当前所在的工作目录。
 - pwd命令来自：Print Work Directory
 - 语法：`pwd
 - pwd命令，无选项，无参数，直接输入pwd即可![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b5ada68532e382606ac06e5fe6da3b29.png)
-## 4、相对、决定和特殊路径符
+### 1.4 相对、决定和特殊路径符
 
-### 4.1 相对和绝对路径的写法
+#### 1.4.1 相对和绝对路径的写法
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dd002967e3e74921a361eefe4f0a2e66.png)
 
@@ -94,7 +94,7 @@ cd -       切换到上一个所在目录
 
 - 相对路径：`以当前目录为起点`，描述路径的一种写法，路径描述`无需以/开头`
 
-### 4.2 几种特殊的路径表示符
+#### 1.4.2 几种特殊的路径表示符
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cd25a62a3f69e36a7ce677aff4e60d89.png)
 
@@ -109,7 +109,7 @@ cd -       切换到上一个所在目录
 	- `..  表示上一级目录`，比如：cd ..   即可切换到上一级目录，cd ../..  切换到上二级的目录
 	
 	- `~  表示HOME目录`，比如：cd ~    即可切换到HOME目录或cd ~/Desktop，`切换到HOME内的Desktop目录`
-## 5、创建目录命令
+### 1.5 创建目录命令
 
 - 通过mkdir命令可以创建新的目录（文件夹）
 - mkdir来自英文：Make Directory
@@ -122,14 +122,14 @@ cd -       切换到上一个所在目录
 - 会报错，因为上级目录itcast和good并不存在，所以无法创建666目录
 - 可以通过-p选项，将一整个链条都创建完成。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c3c8c27053e7d74f4b5faf42c735172b.png)
 - 注意：`创建文件夹需要修改权限`，请确保操作均在HOME目录内，不要在HOME外操作涉及到权限问题，HOME外无法成功
-## 6、文件操作命令
+### 1.6 文件操作命令
 
-### 6.1 使用touch创建文件
+#### 1.6.1 使用touch创建文件
 
 - 可以通过touch命令创建文件
 - 语法：`touch Linux路径`
 	- `touch命令无选项，参数必填`，表示要创建的文件路径，相对、绝对、特殊路径符均可以使用![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aa06be76d06ee8e465397c07fefb9d7c.png)
-### 6.2 使用cat、more查看文件内容
+#### 1.6.2 使用cat、more查看文件内容
 
 - 有了文件后，我们可以`通过cat命令查看文件的内容`
 - 不过，现在我们还未学习vi编辑器，无法向文件内编辑内容，所以，暂时，我们先通过图形化
@@ -159,7 +159,7 @@ cd -       切换到上一个所在目录
 	- tail -10 /etc/passwd    查看后10行数据
 	- tail -f catalina.log    `动态查看日志(*****)`
 	- `ctrl+c 结束查看`
-### 6.3 使用cp复制文件/文件夹
+#### 1.6.3 使用cp复制文件/文件夹
 
 - cp命令可以用于复制文件或文件夹，cp命令来自英文单词：copy
 - 语法：`cp [-r] 参数1 参数2`
@@ -169,7 +169,7 @@ cd -       切换到上一个所在目录
 - 复制文件![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d5b0126f505c44dd03eb1b214fa711f2.png)
 - 复制文件夹![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/eb188fb6bfc9d2a20e51eaecf4598ee2.png)
 - `复制文件夹，必须使用-r选项，否则不会生效`
-### 6.4 使用mv移动文件/文件夹
+#### 1.6.4 使用mv移动文件/文件夹
 
 - mv命令可以用于移动文件或文件夹，mv命令来自英文单词：move
 - 语法：`mv 参数1 参数2`
@@ -177,7 +177,7 @@ cd -       切换到上一个所在目录
 	- 参数2，Linux路径，表示`要移动去的地方，如果目标不存在，则进行改名，确保目标存在`
 - ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1b95c1670268368210233c3046515360.png)
 - 如下图，目标不存在，则有改名的效果![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5b5a50ff61a5a459614f297661b4f685.png)
-### 6.5 使用rm删除文件/文件夹
+#### 1.6.5 使用rm删除文件/文件夹
 
 - rm命令可用于删除文件、文件夹
 - rm命令来自英文单词：remove
@@ -207,15 +207,15 @@ cd -       切换到上一个所在目录
 
 - ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a15b8052d773c4add37bce746f37ae1d.png)
 
-## 7、 查找命令
-### 7.1 which命令
+### 1.7 查找命令
+#### 1.7.1 which命令
 
 - 我们在前面学习的Linux命令，其实它们的本体就是一个个的二进制可执行程序。
 - 和Windows系统中的.exe文件，是一个意思
 - 我们可以通过which命令，`查看所使用的一系列命令的程序文件`存放在哪里
 - 语法：`which 要查找的命令`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4dfda9644c41cd5447086566afff3d38.png)
 
-### 7.2 find命令 - 按文件名查找文件
+#### 1.7.2 find命令 - 按文件名查找文件
 
 - 在图形化中，我们可以方便的通过系统提供的搜索功能，搜索指定的文件。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ebcf76bdf99e3d76605c650f3a5ace7e.png)
 
@@ -246,9 +246,9 @@ cd -       切换到上一个所在目录
 	- 查找小于10KB的文件： find / -size -10k
 	- 查找大于100MB的文件：find / -size +100M
 	- 查找大于1GB的文件：find / -size +1G
-## 8、grep、wc和管道符
+### 1.8 grep、wc和管道符
 
-### 8.1 使用grep过滤文件内容
+#### 1.8.1 使用grep过滤文件内容
 
 - 可以通过grep命令，从文件中通过关键字过滤文件行。
 - 语法：`grep [-n] 关键字 文件路径`
@@ -267,7 +267,7 @@ cd -       切换到上一个所在目录
 	- 过滤code关键字，并显示行号![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5b5c260cb83bc2d284f7717c4ec0f5e1.png)
 
 
-### 8.2 使用wc统计内容数量
+#### 1.8.2 使用wc统计内容数量
 
 - 可以通过wc命令统计文件的行数、单词数量等
 - 语法：`wc [-c -m -l -w] 文件路径`
@@ -292,7 +292,7 @@ cd -       切换到上一个所在目录
 	- 统计单词数![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/475def581bf728a062d8ee3c5fa57a72.png)
 
 
-### 8.3 | 管道符的概念和应用
+#### 1.8.3 | 管道符的概念和应用
 
 - 管道符的含义是：将管道符`左边命令的结果，作为右边命令的输入`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e6e2d87ef0e4fe066545259293c6a88a.png)
 
@@ -310,9 +310,9 @@ cd -       切换到上一个所在目录
 	- cat itheima.txt | grep itcast | grep itheima，`可以嵌套使用哦`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2fb9c37de9b70c19e151ca5994e12575.png)
 		- cat itheima.txt的结果给 grep itcast 使用
 		- cat itheima.txt | grep itcast 的结果给 grep itheima使用
-## 9、echo和重定向符
+### 1.9 echo和重定向符
 
-### 9.1 使用echo命令输出内容
+#### 1.9.1 使用echo命令输出内容
 
 - 可以使用echo命令在命令行内输出指定内容
 - 语法：`echo 输出的内容`
@@ -323,7 +323,7 @@ cd -       切换到上一个所在目录
 	- `带有空格或\等特殊符号，建议使用双引号包围`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9906d52951c79ffebcfe6cafb88b7035.png)
 		- 因为不包围的话，空格后很容易被识别为参数2，尽管echo不受影响，但是要养成习惯哦
 
-### 9.2 反引号\`的使用
+#### 1.9.2 反引号\`的使用
 
 - 看一下如下命令：echo pwd![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8f3b964fee2305e11b53be6f7cab9f83.png)
 
@@ -333,7 +333,7 @@ cd -       切换到上一个所在目录
 - 被\`包围的内容，会被作为命令执行，而非普通字符![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/79820526556be4557464ed4b230bd8cb.png)
 
 
-### 9.3 tail命令跟踪文件更改
+#### 1.9.3 tail命令跟踪文件更改
 
 - 使用tail命令，可以查看文件尾部内容，跟踪文件的最新更改
 - 语法：`tail [-f -num] Linux路径`
@@ -348,7 +348,7 @@ cd -       切换到上一个所在目录
 
 
 
-### 9.4 重定向符号的使用
+#### 1.9.4 重定向符号的使用
 
 - 重定向符：>和>>
 	- >，将左侧命令的结果，`覆盖写入`到符号右侧指定的文件中
@@ -363,22 +363,22 @@ cd -       切换到上一个所在目录
 - echo “Hello itcast” >> itheima.txt，再次执行，使用>>追加新内容![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/430be7445bf56d53010e10ac95105456.png)
 
 
-## 10、系统管理命令
+### 1.10 系统管理命令
 
 - ps 正在运行的某个进程的状态
 	- ps –ef  查看所有进程
 	- ps –ef | grep ssh 查找某一进程
 	- kill 2868  杀掉2868编号的进程
 	- kill -9 2868  强制杀死进程
-# 二、Vi和Vim编辑器
+## 2 Vi和Vim编辑器
 
-## 1、 概念
+### 2.1 概念
 
 - vi或vim是visual interface的简称, 是Linux中最经典的文本编辑器
 - 同图形化界面中的 文本编辑器一样，`vi是命令行下对文本文件进行编辑的绝佳选择`
 - `vim 是 vi 的加强版本，兼容 vi 的所有指令，不仅能编辑文本，而且还具有 shell 程序编辑的功能`，可以不同颜色的字体来辨别语法的正确性，极大方便了程序的设计和编辑性
 
-## 2、三种工作模式
+### 2.2 三种工作模式
 
 - `三种工作模式`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2fd4d2dab42617f32e88447a1cc23d2a.png)
 
@@ -397,7 +397,7 @@ cd -       切换到上一个所在目录
 		- 如果文件路径表示的`文件不存在`，那么此命令会用于`编辑新文件`
 		- 如果文件路径表示的`文件存在`，那么此命令用于`编辑已有文件`
 
-## 3、vi编辑器的快速体验
+### 2.3 vi编辑器的快速体验
 
 - 执行顺序：进入文件（vim filename）--->命令模式---> 输入i/a/o--->输入模式--->esc键--->返回命令模式--->：--->进入底线命令模式--->回车键--->返回命令模式--->输入：wq--->退出编辑器
 
@@ -409,7 +409,7 @@ cd -       切换到上一个所在目录
 	5. 在命令模式内，按键盘 : ，进入底线命令模式
 	6. 在底线命令内输入：wq，保存文件并退出vi编辑器
 
-## 4、vim快捷键
+### 2.4 vim快捷键
 
 - 命令模式下的一些常见快捷键
 
@@ -425,7 +425,7 @@ cd -       切换到上一个所在目录
 	- 唯一大家需要记住的，就是：通过esc，可以退回到命令模式中即可
 	- 在命令模式内，输入: ，即可进入底线命令模式，支持如下命令![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7fbfccb2c7d77dd70fcc94e07d376b23.png)
 
-## 5、补充：关于命令选项的说明
+### 2.5 补充：关于命令选项的说明
 
 - 如果想要对命令的其它选项进行查阅，可以通过如下方式
 	- 任何命令都支持：--help 选项， 可以通过这个选项，查看命令的帮助。

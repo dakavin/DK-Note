@@ -1,4 +1,4 @@
-## 一、Mybatis简介
+## 1 Mybatis简介
 
 ### 1.1 简介
 
@@ -244,7 +244,7 @@ public class MyBatisTest {
             ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/195b69b5f3033cac949d728fe93e2735.png)
 
 
-## 二、MyBatis基本使用
+## 2 MyBatis基本使用
 
 ### 2.1 向SQL语句传参
 
@@ -1131,7 +1131,7 @@ select 元素允许你配置很多属性来配置每条语句的行为细节：
 | `keyProperty`      | （仅适用于 insert 和 update）指定能够唯一识别对象的属性，MyBatis 会使用 getGeneratedKeys 的返回值或 insert 语句的 selectKey 子元素设置它的值，默认值：未设置（`unset`）。如果生成列不止一个，可以用逗号分隔多个属性名称。 |
 | `keyColumn`        | （仅适用于 insert 和 update）设置生成键值在表中的列名，在某些数据库（像 PostgreSQL）中，当主键列不是表中的第一列的时候，是必须设置的。如果生成列不止一个，可以用逗号分隔多个属性名称。                                       |
 
-## 三、MyBatis多表映射
+## 3 MyBatis多表映射
 
 ### 3.1 多表映射概念
 
@@ -1325,10 +1325,8 @@ public class Order {
 ### 3.2 对一映射
 
 1.  需求说明
-
     根据ID查询订单，以及订单关联的用户的信息！
-    
-1.  OrderMapper接口
+2.  OrderMapper接口
     ```java
     public interface OrderMapper {
       Order selectOrderWithCustomer(Integer orderId);
@@ -1540,7 +1538,7 @@ public interface CustomerMapper {
 | 对一   | association标签/javaType属性/property属性 | Mapper配置文件中的resultMap标签内 |
 | 对多   | collection标签/ofType属性/property属性    | Mapper配置文件中的resultMap标签内 |
 
-## 四、MyBatis动态语句
+## 4 MyBatis动态语句
 
 ### 4.1 动态语句需求和简介
 
@@ -1746,7 +1744,7 @@ Parameter 'empList' not found. Available parameters are [arg0, collection, list]
 <include refid="mySelectSql"/>
 ```
 
-## 五、MyBatis高级扩展
+## 5 MyBatis高级扩展
 
 ### 5.1 Mapper批量映射优化
 
@@ -1940,7 +1938,7 @@ MyBatisX 是一个 MyBatis 的代码生成插件，可以通过简单的配置�
 
     ```
 
-## 六、MyBatis总结
+## 6 MyBatis总结
 
 | 核心点         | 掌握目标                                  |
 | ----------- | ------------------------------------- |

@@ -1,10 +1,10 @@
 
 引用大佬文章：[reCaptcha人机验证无法显示和CSP问题解决方案 – Azure Zeng Blog](https://blog.azurezeng.com/recaptcha-use-in-china/)
 
-## 问题
+## 1 问题
 
 Your reCAPTCHA response did not validate. Please try again
-## 科普
+## 2 科普
 
 reCaptcha是Google公司的验证码服务，方便快捷，改变了传统验证码需要输入n位失真字符的特点。reCaptcha在使用的时候是这样的：
 ![20201017201846476.gif|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4bf5c8127eb31a159394c912c0cd6767.gif)
@@ -14,9 +14,9 @@ reCaptcha是Google公司的验证码服务，方便快捷，改变了传统验�
 
 ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/045c851ede94f0504c8ff97b415ac087.png)
 
-## 解决办法
+## 3 解决办法
 
-### 插件安装
+### 3.1 插件安装
 
 由于基于 Chromium 的浏览器太多了，此处只提 Microsoft Edge (Chromium) / Chrome 的安装方法。
 
@@ -38,7 +38,7 @@ Chorme 通过本文提供的离线文件手动安装:
 ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a1af1b89f14a104b5abe5502782f3784.png)
 
 若出现这个对话框即代表可以正常安装。点击 “添加扩展程序” 即可。![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c2ffeabad0e76ed4d666ed016319048e.png)
-### 配置插件
+### 3.2 配置插件
 
 打开 Header Editor 插件的配置页面，选择 “导入和导出” 选项。`点击即可`
 ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d10f847fe7cca5c422e0ef7a542452b5.png)

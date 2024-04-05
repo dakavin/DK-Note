@@ -1,12 +1,12 @@
 
 在之前的操作中，所有的操作都是基于本地机器完成的。如果在公司中，一个项目是共用一个版本库的。那么所有的开发人员都应该对同一个版本库进行操作。因为Git软件本身就是用于Linux系统开发所设计的版本管理软件，所以项目中搭建的共享版本库也应该以linux系统为主。那么接下来，咱们就演示一下在CentsOS服务器中搭建Git服务器。
-## 1、下载Git软件（Linux版本）
+## 1 下载Git软件（Linux版本）
 
 官网下载地址：[https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.38.1.tar.gz](https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.38.1.tar.gz)
 
 将下载后的压缩文件上传到Linux系统中
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5630cd12da75973ae12405fe024838a5.png)
-## 2、安装Git软件
+## 2 安装Git软件
 
 ### 2.1 解压Git
 
@@ -94,7 +94,7 @@ ln -s /usr/local/git/bin/git-receive-pack /usr/bin/git-receive-pack
 git --version
 ```
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aa3eb05578b666f5d7914857bd2bf13d.png)
-## 3、创建Git用户
+## 3 创建Git用户
 
 因为Git服务器需要安装在linux系统上，当使用远程客户端操作时，就需要提供相应的Git账号进行提交的，如果你的仓库文件的用户不是git的话，是root用户或者别的用户，那么你git push ,它是不允许的，因为你的git用户没有权限。你可以给这个文件创立git用户，或者修改文件夹的权限让所有用户都可以更改
 
@@ -110,7 +110,7 @@ passwd git
 # 或者
 chmod -R 777 /usr/local/git
 ```
-## 4、SSH免密登录
+## 4 SSH免密登录
 
 `建议在windows上进行操作练习`
 
@@ -157,7 +157,7 @@ ssh-keygen -t rsa
 
 将文件中的内容复制到服务器端的.ssh/authorized_keys文件中
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5ba0e3d7306641e2eb3099f9eb854855.png)
-## 5、创建Git版本库
+## 5 创建Git版本库
 
 ### 5.1 创建文件目录
 
@@ -189,7 +189,7 @@ git init -bare test.git
 
 sudo chown -R git:git test.git
 ```
-## 6、远程访问Git版本库
+## 6 远程访问Git版本库
 
 ### 6.1 将远程仓库克隆到本地
 

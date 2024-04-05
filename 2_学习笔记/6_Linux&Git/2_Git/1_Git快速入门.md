@@ -1,19 +1,19 @@
 
-## 1、Git 概述
+## 1 Git 概述
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6fcd92b8ebf317686a8fbb3ec5531ad8.png)
 
 Git是一个免费的，开源的`分布式版本控制系统`，可以快速高效地处理从小型或大型的各种项目。Git易于学习，占用空间小，性能快得惊人。
-## 2、SCM概述
+## 2 SCM概述
 
 `SCM（Software Configuration Management`，软件配置管理）是一种标识、组织和控制修改的技术。它应用于整个软件生存周期。
 
 作为评价一个大中型软件开发过程是否正确，合理，有效的重要手段，CMM(Capability Maturity Model )能力成熟度模型提供了不同等级的标准流程，对软件开发过程（流程）进行了约束和建议, 而作为CMM 2级的一个关键域（Key Practice Area，KPA），SCM软件在整个软件的开发活动中占有很重要的位置。
 
 Git软件比Subversion、CVS、Perforce和ClearCase等SCM（Software Configuration Management软件配置管理）工具具有性价比更高的本地分支、方便的暂存区域和多个工作流等功能。
-## 3、Git安装
+## 3 Git安装
 
-#### 3.1 软件下载
+### 3.1 软件下载
 
 软件官网地址为：[https://git-scm.com/](https://git-scm.com)
 
@@ -24,7 +24,7 @@ Git软件比Subversion、CVS、Perforce和ClearCase等SCM（Software Configurati
 最早Git是在Linux上开发的，很长一段时间内，Git也只能在Linux和Unix系统上跑。不过，慢慢地有人把它移植到了Windows上。现在，Git可以在Linux、Unix、Mac和Windows这几大平台上正常运行了。由于开发机大多数情况都是windows，所以本教程选择相对简单的Windows系统软件版本进行下载，此处我们下载Windows系统的2.40.0版本软件
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/201d46193e4df6a3284d337e9f199f99.png)
-#### 3.2 软件安装
+### 3.2 软件安装
 
 查看 GNU 协议，可以直接点击下一步。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6fb2c193a417e6a6af01ed287e8e403d.png)
@@ -47,7 +47,7 @@ Git 的默认编辑器，建议使用默认的 Vim 编辑器，然后点击下�
 
 实验室功能，技术还不成熟，有已知的 bug，不要勾选，然后点击右下角的 Install 按钮，开始安装 Git。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b34d8693fb21f09a48f20fab62445de0.png)
 点击 Finsh 按钮，Git 安装成功![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c98a59f8c4adb377c15847e85533e3d3.png)
-#### 3.3 软件测试
+### 3.3 软件测试
 
 在Windows桌面空白处，点击鼠标右键，弹出右键菜单![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3266f3ac9f0cd50839fc9f2d72828294.png)
 Git软件安装后，会在右键菜单中增加两个菜单

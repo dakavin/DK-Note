@@ -1,5 +1,5 @@
 前置文章：[8.3 HashMap源码剖析](../../../../../2_笔记/1_Java基础/14_数据结构与集合源码/14_数据结构与集合源码.md#8.3%20HashMap源码剖析)
-# 1、HashMap简介
+## 1 HashMap简介
 
 HashMap 主要用来存放键值对，它基于哈希表的 Map 接口实现，是常用的 Java 集合之一，是非线程安全的。
 
@@ -10,9 +10,9 @@ HashMap 主要用来存放键值对，它基于哈希表的 Map 接口实现，�
 `JDK1.8 以后`：的 `HashMap` 在解决哈希冲突时有了较大的变化，当链表长度大于等于阈值（默认为 8）（将链表转换成红黑树前会判断，如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树）时，将链表转化为红黑树，以减少搜索时间。
 
 `HashMap` 默认的初始化大小为 16。之后每次扩充，容量变为原来的 2 倍。并且， `HashMap` 总是使用 2 的幂作为哈希表的大小。
-# 2、底层数据结构分析
+## 2 底层数据结构分析
 
-## 2.1 JDK1.8 之前
+### 2.1 JDK1.8 之前
 
 JDK1.8 之前 HashMap 底层是 **数组和链表** 结合在一起使用也就是 **链表散列**。
 
@@ -46,7 +46,7 @@ static int hash(int h) {
 ```
 
 所谓 **“拉链法”** 就是：将链表和数组相结合。也就是说创建一个链表数组，数组中每一格就是一个链表。若遇到哈希冲突，则将冲突的值加到链表中即可。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/81303cf17901bbbd5074f8abc85c9eb7.png)
-## 2.2 JDK1.8 之后
+### 2.2 JDK1.8 之后
 
 相比于之前的版本，JDK1.8 以后在解决哈希冲突时有了较大的变化。
 
@@ -165,9 +165,9 @@ static final class TreeNode<K,V> extends LinkedHashMap.Entry<K,V> {
                 r = p;
        }
 ```
-# 3、源码分析
+## 3 源码分析
 
-## 3.1 构造方法
+### 3.1 构造方法
 
 HashMap 中有四个构造方法，它们分别如下：
 ```java
@@ -239,7 +239,7 @@ final void putMapEntries(Map<? extends K, ? extends V> m, boolean evict) {
     }
 }
 ```
-## 3.2 put方法(核心)
+### 3.2 put方法(核心)
 
 HashMap 只提供了 put 用于添加元素，putVal 方法只是给 put 方法调用的一个方法，并没有提供给用户使用。
 
@@ -395,7 +395,7 @@ private V putForNullKey(V value) {
 }
 ```
 
-## 3.3 get方法
+### 3.3 get方法
 
 ```java
 public V get(Object key) {
@@ -434,7 +434,7 @@ final Node<K,V> getNode(int hash, Object key) {
 }
 
 ```
-## 3.4 resize方法(核心)
+### 3.4 resize方法(核心)
 
 进行扩容，会伴随着一次重新 hash 分配，并且会遍历 hash 表中所有的元素，是非常耗时的。在编写程序中，要尽量避免 resize。resize 方法实际上是将 `table 初始化` 和 `table 扩容` 进行了整合，底层的行为都是给 table 赋值一个新的数组。
 
@@ -559,7 +559,7 @@ final Node<K,V>[] resize() {
     return newTab;
 }
 ```
-# 4、HashMap常用方法测试
+## 4 HashMap常用方法测试
 
 ```java
 package map;

@@ -1,8 +1,3 @@
-
-<h1>目录</h1>
-
-```table-of-contents
-```
 ## 1 使用阿里云OSS
 
 1.前提是你得有一个[阿里云](https://www.aliyun.com/)账号，没有的直接注册就行，然后选择对象存储OSS，如果找不到直接在搜索栏搜索OSS，点击折扣套餐或者立即购买。
@@ -24,7 +19,7 @@
 先点击继续使用AccessKey，然后再点击创建AccessKey。![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3dc7b1e260a55ea76c8ce0c8976b68ef.png)
 创建完成后，复制AccessKey ID和AccessKey Secret。![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/baf063084883fd850debf59806124f1a.png)
 
-## 1 使用PicGo
+## 2 使用PicGo
 
 可以去[官方](https://github.com/Molunerfinn/PicGo/releases/tag/v2.3.0)下载，选择对应的版本，我的是windows64,选择如下图。
 
@@ -52,7 +47,7 @@
 
 然后点击确定，设置为默认图床![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d4dda5975e1114bc24c70a2a479e14cd.png)
 
-## 2 Obsidian设置
+## 3 Obsidian设置
 
 下载Image auto upload Plugin插件，安装即可
 ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d7fbc0c49aa5c4d7867adf6d2a4ad524.png)

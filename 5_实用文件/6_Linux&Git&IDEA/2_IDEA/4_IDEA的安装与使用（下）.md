@@ -1,33 +1,33 @@
 
-## 8. 快捷键的使用
+## 1 快捷键的使用
 
-### 8.1 常用快捷键
+### 1.1 常用快捷键
 
 见《`常用快捷键一览表.md`》
 
-### 8.2 查看快捷键
+### 1.2 查看快捷键
 
-#### 1、已知快捷键操作名，未知快捷键
+#### 1.2.1 1、已知快捷键操作名，未知快捷键
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d3c7234ec99f97294aefa8843c08ddec.png)
 
 
-#### 2、已知快捷键，不知道对应的操作名
+#### 1.2.2 2、已知快捷键，不知道对应的操作名
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/974b6d810eaf8268f1fd8816942abd57.png)
 
 
-### 8.3 自定义快捷键
+### 1.3 自定义快捷键
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cac22a6419fa2371c1d77b2ec54fbe17.png)
 
 
-### 8.4 使用其它平台快捷键
+### 1.4 使用其它平台快捷键
 
 苹果电脑或者是用惯Eclipse快捷的，可以选择其他快捷键插件。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aeb962eabdf2828d193fab2529eddbfb.png)
 
 
-## 9. IDEA断点调试(Debug)
+## 2 IDEA断点调试(Debug)
 
-### 9.1 为什么需要Debug
+### 2.1 为什么需要Debug
 
 编好的程序在执行过程中如果出现错误，该如何查找或定位错误呢？简单的代码直接就可以看出来，但如果代码比较复杂，就需要借助程序调试工具（Debug）来查找错误了。
 
@@ -43,7 +43,7 @@
         
 ```
 
-### 9.2 Debug的步骤
+### 2.2 Debug的步骤
 
 Debug(调试)程序步骤如下：
 
@@ -55,16 +55,16 @@ Debug(调试)程序步骤如下：
 
 4、观察变量和执行流程，找到并解决问题
 
-#### 1、添加断点
+#### 2.2.1 1、添加断点
 
 在源代码文件中，在想要设置断点的代码行的前面的标记行处，单击鼠标左键就可以设置断点，在相同位置再次单击即可取消断点。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8983b0ba0236790a59458d4950b69d88.png)
 
 
-#### 2、启动调试
+#### 2.2.2 2、启动调试
 
 IDEA提供多种方式来启动程序(Launch)的调试，分别是通过菜单(Run –> Debug)、图标(“绿色臭虫”)等等![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5a90443e2798b915754f4cc898e29138.png)
-#### 3、单步调试工具介绍
+#### 2.2.3 3、单步调试工具介绍
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4e9e95a9a803f123244971c58247bfb5.png)
 
@@ -76,9 +76,9 @@ IDEA提供多种方式来启动程序(Launch)的调试，分别是通过菜单(R
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c64029955c601756048ad491defb9180.png)
 
-### 9.3 多种Debug情况介绍
+### 2.3 多种Debug情况介绍
 
-#### 9.3.1 行断点
+#### 2.3.1 行断点
 
 - 断点打在代码所在的行上。执行到此行时，会停下来。
 
@@ -121,7 +121,7 @@ public class Debug01 {
 
 ```
 
-#### 9.3.2 方法断点
+#### 2.3.2 方法断点
 
 - 断点设置在方法的签名上，默认当进入时，断点可以被唤醒。
 - 也可以设置在方法退出时，断点也被唤醒
@@ -194,7 +194,7 @@ class ConsumerImpl implements Consumer{
 
 ```
 
-#### 9.3.3 字段断点
+#### 2.3.3 字段断点
 
 - 在类的属性声明上打断点，默认对属性的修改操作进行监控
 
@@ -279,7 +279,7 @@ class Person{
 
 ```
 
-#### 9.3.4 条件断点
+#### 2.3.4 条件断点
 
 ```java
 package com.atguigu.debug;
@@ -310,7 +310,7 @@ public class Debug04 {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/217d41c82b88f3b4c535e32367febb38.png)
 
 
-#### 9.3.5 异常断点（暂略）
+#### 2.3.5 异常断点（暂略）
 
 - 对异常进行跟踪。如果程序出现指定异常，程序就会执行断点，自动停住。
 
@@ -351,7 +351,7 @@ public class Debug05 {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4e6acb82462127e4eb6b9ef7468610af.png)
 
 
-#### 9.3.6 线程调试（暂略）
+#### 2.3.6 线程调试（暂略）
 
 ```java
 package com.atguigu.debug;
@@ -389,7 +389,7 @@ public class Debug06 {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3cfc641a322a8bf5ae3c629e0dbc3856.png)
 
 
-#### 9.3.7 强制结束
+#### 2.3.7 强制结束
 
 ```java
 package com.atguigu.debug;
@@ -425,7 +425,7 @@ public class Debug07 {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5ab3d18c9da2255023126d00dfc815b5.png)
 
 
-### 9.4 自定义调试数据视图（暂略）
+### 2.4 自定义调试数据视图（暂略）
 
 ```java
 package com.atguigu.debug;
@@ -462,7 +462,7 @@ public class Debug08 {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2c64bbcda25171ef2263add8384cf180.png)
 
 
-### 9.5 常见问题
+### 2.5 常见问题
 
 问题：使用Step Into时，会出现无法进入源码的情况。如何解决？
 
@@ -482,9 +482,9 @@ public class Debug08 {
 >
 > 简单来说，在可能发生错误的代码的前面加断点。如果不会判断，就在程序执行的起点处加断点。
 
-## 10. IDEA常用插件
+## 3 IDEA常用插件
 
-### 推荐1：Alibaba Java Coding Guidelines
+### 3.1 推荐1：Alibaba Java Coding Guidelines
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4c831ffae4f874778b969f98f11be81b.png)
 
@@ -493,7 +493,7 @@ public class Debug08 {
 
 使用：在类中，右键，选择编码规约扫描，在下方显示扫描规约和提示。根据提示规范代码，提高代码质量。
 
-### 推荐2：jclasslib bytecode viewer
+### 3.2 推荐2：jclasslib bytecode viewer
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a48284b2f45ff18b28c3108854a3f498.png)
 
@@ -517,7 +517,7 @@ public class Debug08 {
 -Duser.language=en
 ```
 
-### 推荐3：Translation
+### 3.3 推荐3：Translation
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0ee425db452979e8cae5e31fc79def04.png)
 
@@ -529,7 +529,7 @@ public class Debug08 {
 
 注：请注意保管好你的应用密钥，防止其泄露。
 
-### 推荐4：GenerateAllSetter
+### 3.4 推荐4：GenerateAllSetter
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/747911e62d3e98f675cace5797d99f99.png)
 
@@ -542,7 +542,7 @@ public class Debug08 {
 
 可以使用这 GenerateAllSetter 提供的功能，快速生成对象的所有 Setter 函数（可填充默认值），然后自己再跟进实际需求设置属性值。
 
-### 插件5：Rainbow Brackets
+### 3.5 插件5：Rainbow Brackets
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4f0fe1d594d9cdc1061ef42964fe1373.png)
 
@@ -553,7 +553,7 @@ public class Debug08 {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0973ed3a98627ae58490a9d386e72699.png)
 
 
-### 推荐6：CodeGlance Pro
+### 3.6 推荐6：CodeGlance Pro
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e6f8c05a8bd1dcfb44a5088927a62134.png)
 
@@ -565,7 +565,7 @@ public class Debug08 {
 
 
 
-### 推荐7：Statistic
+### 3.7 推荐7：Statistic
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f89499bd0ce79949f4cd226bb94a8326.png)
 
@@ -576,7 +576,7 @@ public class Debug08 {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b51b2d8b941d72f9d20bd3bb117cad60.png)
 
-### 推荐8：Presentation Assistant
+### 3.8 推荐8：Presentation Assistant
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/35847651c1a56f39003f4eab20d809c9.png)
 
@@ -584,7 +584,7 @@ public class Debug08 {
 
 显示快捷键操作的按键
 
-### 推荐9：Key Promoter X
+### 3.9 推荐9：Key Promoter X
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/adb231dceb50089ed62e33b75c220274.png)
 
@@ -592,7 +592,7 @@ public class Debug08 {
 
 快捷键提示插件。当你执行鼠标操作时，如果该操作可被快捷键代替，会给出提示，帮助你自然形成使用快捷键的习惯，告别死记硬背。
 
-### 推荐10：JavaDoc
+### 3.10 推荐10：JavaDoc
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e0e759d8e0583b0bba550f08b317b070.png)
 
@@ -603,7 +603,7 @@ public class Debug08 {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ded1abe240eb0359b39074e7fff03c9f.png)
 
 
-### 推荐11： LeetCode Editor
+### 3.11 推荐11： LeetCode Editor
 
  ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/927e21456063179c0f3528d440bead29.png)
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/08b32b04923722f139f0756bf37c4cc1.png)
@@ -611,7 +611,7 @@ public class Debug08 {
 
 在 IDEA 里刷力扣算法题
 
-### 推荐12：GsonFormatPlus
+### 3.12 推荐12：GsonFormatPlus
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7fc11c11fb649e168d9988edd3578e8e.png)
 
@@ -638,7 +638,7 @@ public class Debug08 {
 }
 ```
 
-### 插件13：Material Theme UI
+### 3.13 插件13：Material Theme UI
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3c0000610a3ee07c03989cf3a2976a20.png)
 

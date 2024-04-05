@@ -13,7 +13,7 @@ JDK1.8版本
 	- `System.arraycopy()`方法
 	- `Array.coptOf()`方法
 4. 注意集合的长度size和数组的长度length是不一样的！！！
-# 1、ArrayList简介
+## 1 ArrayList简介
 
 `ArrayList` 的底层是数组队列，相当于动态数组。与 Java 中的数组相比，它的容量能动态增长。在添加大量元素前，应用程序可以使用`ensureCapacity`操作来增加 `ArrayList` 实例的容量。这可以减少递增式再分配的数量。
 
@@ -33,7 +33,7 @@ public class ArrayList<E> extends AbstractList<E>
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e49dcd15e96a81327136939655db2b7d.png)
 
-# 2、ArrayList核心源码解读
+## 2 ArrayList核心源码解读
 
 这里以 JDK1.8 为例，分析一下 `ArrayList` 的底层源码。
 ```java
@@ -537,9 +537,9 @@ public class ArrayList<E> extends AbstractList<E>
 
 ```
 
-# 3、ArrayList扩容机制分析
+## 3 ArrayList扩容机制分析
 
-## 3.1 ArrayList构造函数
+### 3.1 ArrayList构造函数
 
 ArrayList 有三种方式来初始化，构造方法源码如下（JDK8）：
 ```java
@@ -594,11 +594,11 @@ public ArrayList(Collection<? extends E> c) {
 
 > 补充：JDK6 new 无参构造的 `ArrayList` 对象时，直接创建了长度是 10 的 `Object[]` 数组 `elementData` 。
 
-## 3.2 分析ArrayList扩容机制
+### 3.2 分析ArrayList扩容机制
 
 这里以无参构造函数创建的 `ArrayList` 为例分析。
 
-#### add 方法
+#### 3.2.1 add 方法
 
 ```java
 /**
@@ -655,7 +655,7 @@ private void ensureExplicitCapacity(int minCapacity) {
 
 直到添加第 11 个元素，`minCapacity`(为 11)比 `elementData.length`（为 10）要大。进入 `grow` 方法进行扩容。
 
-#### grow方法
+#### 3.2.2 grow方法
 
 ```java
 /**
@@ -703,7 +703,7 @@ private void grow(int minCapacity) {
 - Java 中的 `length()` 方法是针对字符串说的,如果想看这个字符串的长度则用到 `length()` 这个方法.
 - Java 中的 `size()` 方法是针对泛型集合说的,如果想看这个泛型有多少个元素,就调用此方法来查看!
 
-#### hugeCapacity() 方法
+#### 3.2.3 hugeCapacity() 方法
 
 从上面 `grow()` 方法源码我们知道：如果新容量大于 `MAX_ARRAY_SIZE`,进入(执行) `hugeCapacity()` 方法来比较 `minCapacity` 和 `MAX_ARRAY_SIZE`，如果 `minCapacity` 大于最大容量，则新容量则为`Integer.MAX_VALUE`，否则，新容量大小则为 `MAX_ARRAY_SIZE` 即为 `Integer.MAX_VALUE - 8`。
 ```java
@@ -719,11 +719,11 @@ private static int hugeCapacity(int minCapacity) {
         MAX_ARRAY_SIZE;
 }
 ```
-## 3.3 `System.arraycopy()` 和 `Arrays.copyOf()`方法
+### 3.3 System.arraycopy() 和 Arrays.copyOf() 方法
 
 阅读源码的话，我们就会发现 `ArrayList` 中大量调用了这两个方法。比如：我们上面讲的扩容操作以及`add(int index, E element)`、`toArray()` 等方法中都用到了该方法！
 
-#### `System.arraycopy()` 方法
+#### 3.3.1 System.arraycopy() 方法
 
 `本质：从源数组的index1取出n个数，然后放入目标数组的index2上`
 
@@ -794,7 +794,7 @@ public class ArraycopyTest {
 0 1 99 2 3 0 0 0 0 0
 ```
 
-#### `Arrays.copyOf()`方法
+#### 3.3.2 Arrays.copyOf() 方法
 源码：
 
 ```java
@@ -842,7 +842,7 @@ public class ArrayscopyOfTest {
 10
 ```
 
-#### 两者联系和区别
+#### 3.3.3 两者联系和区别
 
 **联系：**
 
@@ -851,7 +851,7 @@ public class ArrayscopyOfTest {
 **区别：**
 
 `arraycopy()` 需要目标数组，将原数组拷贝到你自己定义的数组里或者原数组，而且可以选择拷贝的起点和长度以及放入新数组中的位置 `copyOf()` 是系统自动在内部新建一个数组，并返回该数组。
-## 3.4 `ensureCapacity`方法
+### 3.4 ensureCapacity方法
 
 `ArrayList` 源码中有一个 `ensureCapacity` 方法不知道大家注意到没有，这个方法 `ArrayList` 内部没有被调用过，所以很显然是提供给用户调用的，那么这个方法有什么作用呢？
 

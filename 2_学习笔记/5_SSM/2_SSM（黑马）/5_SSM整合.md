@@ -1,7 +1,7 @@
-# 一、SSM整合
+## 1 SSM整合
 
 前面我们已经把`Mybatis`、`Spring`和`SpringMVC`三个框架进行了学习，那现在我们把这三个框架整合在一起，来完成我们的业务功能开发，具体如何来整合，我们一步步来学习。
-## 1、流程分析
+### 1.1 流程分析
 
 1. 创建工程
     - 创建一个Maven的web工程
@@ -51,7 +51,7 @@
             - `@Autowired`
         - 响应结果
             - `@ResponseBody`
-## 2、整合配置
+### 1.2 整合配置
 
 分析完毕之后，我们就一步步来完成我们的SSM整合
 
@@ -235,7 +235,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
     }  
 }
 ```
-## 3、功能模块开发
+### 1.3 功能模块开发
 
 - 需求：对表tbl_book进行新增、修改、删除、根据ID查询和查询所有
 
@@ -444,7 +444,7 @@ public class BookController {
     }  
 }
 ```
-## 4、单元测试
+### 1.4 单元测试
 
 - `步骤一：`新建测试类
 ```java
@@ -487,7 +487,7 @@ public class BookServiceTest {
     }  
 }
 ```
-## 5、PostMan测试
+### 1.5 PostMan测试
 
 - `新增`  
 	发送`POST`请求与数据，访问`localhost:8080/books`
@@ -532,9 +532,9 @@ public class BookServiceTest {
     发送`GET`请求，访问`localhost:8080/books`  
     PostMan中以JSON对象数组的形式显示了数据库中的所有数据
 
-# 二、统一结果封装
+## 2 统一结果封装
 
-## 1、表现层与前端数据传输协议定义
+### 2.1 表现层与前端数据传输协议定义
 
 SSM整合以及功能模块开发完成后，接下来我们在上述案例的基础上，分析一下有哪些问题需要我们解决。  
 
@@ -636,7 +636,7 @@ public class Result{
 ```
 
 - 注意：Result类名及类中的字段并不是固定的，可以根据需要自行增减提供若干个构造方法，方便操作。
-## 2、表现层与前端数据传输协议实现
+### 2.2 表现层与前端数据传输协议实现
 
 前面我们已经分析了如何封装返回结果数据，现在我们来具体实现一下
 
@@ -764,9 +764,9 @@ public class BookController {
 ```
 
 - `步骤四：`启动服务测试  
-# 三、统一异常处理
+## 3 统一异常处理
 
-## 1、问题描述
+### 3.1 问题描述
 
 在学习这部分知识之前，我们先来演示一个效果，修改`BookController`的`getById()`方法，手写一个异常
 
@@ -820,7 +820,7 @@ public class ProjectExceptionAdvice {
     }  
 }
 ```
-## 2、异常处理器的使用
+### 3.2 异常处理器的使用
 
 - `步骤一：`创建异常处理器类
 ```java
@@ -894,10 +894,10 @@ public class ProjectExceptionAdvice {
 |类型|方法注解|
 |位置|专用于异常处理的控制器方法上方|
 |作用|设置指定异常的处理方案，功能等同于控制器方法，  <br>出现异常后终止原始控制器执行,并转入当前方法执行|
-## 3、项目异常处理方案
+### 3.3 项目异常处理方案
 
 异常处理器我们已经能够使用了，那么我们如何在项目中来处理异常呢?
-### 3.1 异常分类
+#### 3.3.1 异常分类
 
 因为异常的种类有很多，如果每一个异常都对应一个`@ExceptionHandler`，那得写多少个方法来处理各自的异常，所以我们在处理异常之前，需要对异常进行一个分类:
 
@@ -914,7 +914,7 @@ public class ProjectExceptionAdvice {
         - 如：系统找不到指定文件
 
 将异常分类以后，针对不同类型的异常，要提供具体的解决方案
-### 3.2 异常解决方案
+#### 3.3.2 异常解决方案
 
 - `业务异常`（BusinessException）
     - 发送对应消息传递给用户，提醒规范操作
@@ -933,7 +933,7 @@ public class ProjectExceptionAdvice {
     - 发送特定消息给编程人员，提醒维护（纳入预期范围内）
         - 一般是程序没有考虑全，比如未做非空校验等
     - 记录日志
-### 3.3 具体实现
+#### 3.3.3 具体实现
 
 - 思路:
     1. 先通过自定义异常，完成BusinessException和SystemException的定义
@@ -1092,9 +1092,9 @@ public class ProjectExceptionAdvice {
 那么对于异常我们就已经处理完成了，不管后台哪一层抛出异常，都会以我们与前端约定好的方式进行返回，前端只需要把信息获取到，根据返回的正确与否来展示不同的内容即可。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ff84d487d09abfa0f6b0b033b6ab61c.png)
 
 
-# 四、前后台协议联调
+## 4 前后台协议联调
 
-## 1、环境准备
+### 4.1 环境准备
 
 - 导入提供好的前端页面，如果想自己写页面，也可以用element-ui，有空了考虑考虑
 - 由于添加了静态资源，SpringMVC会拦截，所以需要在对静态资源放行
@@ -1122,7 +1122,7 @@ public class SpringMvcConfig {
 ```
 
 现在我们打开浏览器，访问`http://localhost:8080/pages/books.html`，应该是可以正常看到页面的
-## 2、页面分析
+### 4.2 页面分析
 
 在完成增删改查操作之前，我们先来看看给我们提供的页面源码
 
@@ -1636,7 +1636,7 @@ methods: {
 </script>  
 </html>
 ```
-## 3、列表功能
+### 4.3 列表功能
 
 需求：页面加载完后发送异步请求到后台获取列表数据进行展示
 
@@ -1667,7 +1667,7 @@ created() {
 ```
 
 那么现在重启服务器，打开浏览器访问`http://localhost:8080/pages/books.html`，表格中可以正常显示数据了
-## 4、添加功能
+### 4.4 添加功能
 
 需求：完成图片的新增功能模块
 
@@ -1694,7 +1694,7 @@ saveBook () {
     });  
 }
 ```
-## 5、添加功能状态处理
+### 4.5 添加功能状态处理
 
 基础的新增功能已经完成，但是还有一些问题需要解决下:  
 
@@ -1792,7 +1792,7 @@ openSave() {
     this.resetForm();  
 }
 ```
-## 6、修改功能
+### 4.6 修改功能
 
 需求:完成图书信息的修改功能
 
@@ -1846,7 +1846,7 @@ handleEdit() {
     });  
 }
 ```
-## 7、删除功能
+### 4.7 删除功能
 
 需求:完成页面的删除功能。
 
@@ -2105,9 +2105,9 @@ deleteBook(row) {
 </html>
 ```
 
-# 五、拦截器
+## 5 拦截器
 
-## 1、拦截器概念
+### 5.1 拦截器概念
 
 在学习拦截器的概念之前，我们先看一张图![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bee1f4a99bc6e3bdd612f02592c856d2.png)
 
@@ -2138,9 +2138,9 @@ deleteBook(row) {
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e7738078e6e2558d7ebdcd040365cea0.png)
 
 
-## 2、拦截器入门案例
+### 5.2 拦截器入门案例
 
-### 2.1 环境准备
+#### 5.2.1 环境准备
 
 - 创建一个Web的Maven项目
 - 导入坐标
@@ -2233,7 +2233,7 @@ public class BookController {
 ```
 
 - 使用PostMan测试，没有问题的话就可以继续往下看了
-### 2.2 拦截器开发
+#### 5.2.2 拦截器开发
 
 - `步骤一：`创建拦截器类  
 	在`com.blog.controller.interceptor`下创建`ProjectInterceptor`类，实现`HandlerInterceptor`接口，并重写其中的三个方法
@@ -2349,9 +2349,9 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 - 当有拦截器后，请求会先进入`preHandle`方法，
     - 如果方法返回`true`，则放行继续执行后面的handle(Controller的方法)和后面的方法
     - 如果返回`false`，则直接跳过后面方法的执行。
-## 3、拦截器参数
+### 5.3 拦截器参数
 
-### 3.1 前置处理方法
+#### 5.3.1 前置处理方法
 
 原始方法之前运行preHandle
 ```java
@@ -2390,7 +2390,7 @@ public boolean preHandle(HttpServletRequest request, HttpServletResponse respons
 控制台输出如下，成功输出了方法名`save`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d142edef142f81513ec8a21f93980803.png)
 
 
-### 3.2 后置处理方法
+#### 5.3.2 后置处理方法
 
 原始方法运行后运行，如果原始方法被拦截，则不执行
 ```java
@@ -2403,7 +2403,7 @@ public void postHandle(HttpServletRequest request, HttpServletResponse response,
 前三个参数和上面的是一致的。  
 `modelAndView:`如果处理器执行完成具有返回结果，可以读取到对应数据与页面信息，并进行调整  
 因为我们现在都是返回json数据，所以该参数的使用率不高。
-### 3.3 完成处理方法
+#### 5.3.3 完成处理方法
 
 拦截器最后执行的方法，无论原始方法是否执行
 ```java
@@ -2417,10 +2417,10 @@ public void afterCompletion(HttpServletRequest request, HttpServletResponse resp
 `ex:`如果处理器执行过程中出现异常对象，可以针对异常情况进行单独处理  
 因为我们现在已经有全局异常处理器类，所以该参数的使用率也不高。  
 这三个方法中，最常用的是`preHandle`，在这个方法中可以通过返回值来决定是否要进行放行，我们可以把业务逻辑放在该方法中，如果满足业务则返回`true`放行，不满足则返回`false`拦截。
-## 4、拦截器链配置
+### 5.4 拦截器链配置
 
 目前，我们在项目中只添加了一个拦截器，如果有多个，该如何配置?配置多个后，执行顺序是什么?
-### 4.1 配置多个拦截器
+#### 5.4.1 配置多个拦截器
 
 - `步骤一：`创建拦截器类  
 	直接复制一份改个名，改个输出语句
@@ -2479,6 +2479,6 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 - `postHandle:`与配置顺序相反，可能不运行
 - `afterCompletion:`与配置顺序相反，可能不运行。
 
-# 六、完结
+## 6 完结
 
 - 至此SSM的学习就告一段落了，有空再回来复盘一遍，要继续学Maven高级、SpringBoot和MyBatis-Plus了

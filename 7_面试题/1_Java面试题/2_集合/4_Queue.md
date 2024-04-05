@@ -1,5 +1,5 @@
 
-## 1、Queue 与 Deque的区别？
+## 1 Queue 与 Deque的区别？
 
 `Queue` 是单端队列，只能从一端插入元素，另一端删除元素，实现上一般遵循 **先进先出（FIFO）** 规则。
 
@@ -31,7 +31,7 @@
 	1. Queue是`单端队列`，只能一段插入元素，另一端删除元素；
 	2. Deque是`双端队列`，两端都可以插入或删除元素，所以还可以模拟栈；
 
-## 2、ArrayDeque 和 LinkedList 的区别？
+## 2 ArrayDeque 和 LinkedList 的区别？
 
 `ArrayDeque` 和 `LinkedList` 都实现了 `Deque` 接口，两者都具有队列的功能，但两者有什么区别呢？
 
@@ -51,7 +51,7 @@
 	2. `null值`：ArrayDeque不支持，LinkedList支持；
 	3. `扩容`：ArrayDeque扩容均摊后O(1)，LinkedList扩容均摊性能相比更慢；
 	4. 此外，`ArrayDeque` 也可以用于实现栈
-## 3、说一说 PriortityQueue
+## 3 说一说 PriortityQueue
 
 `PriorityQueue` 是在 JDK1.5 中被引入的, 其与 `Queue` 的区别在于元素出队顺序是与优先级相关的，即总是优先级最高的元素先出队。
 
@@ -66,7 +66,7 @@
 `回答思路：`
 	1. `PriorityQueue` 是在 JDK1.5 中被引入的, 其与 `Queue` 的区别在于`元素出队顺序是与优先级相关的`，即总是优先级最高的元素先出队。
 
-## 4、什么是 BlockingQueue(了解)
+## 4 什么是 BlockingQueue(了解)
 
 `BlockingQueue` （阻塞队列）是一个接口，继承自 `Queue`。`BlockingQueue`阻塞的原因是其支持当队列没有元素时一直阻塞，直到有元素；还支持如果队列已满，一直等到队列可以放入新元素时再放入。
 
@@ -83,7 +83,7 @@ public interface BlockingQueue<E> extends Queue<E> {
 	1. 一种阻塞队列
 	2. 队列没有元素的时候，消费者消费阻塞
 	3. 队列元素已满的时候，生产者生成阻塞
-## 5、BlockingQueue的实现类有那些？(了解)
+## 5 BlockingQueue的实现类有那些？(了解)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0f118fac0137923473464291f3f12c91.png)
 
@@ -99,7 +99,7 @@ Java 中常用的阻塞队列实现类有以下几种：
 日常开发中，这些队列使用的其实都不多，了解即可。
 
 
-## 6、ArrayBlockingQueue 和 LinkedBlockingQueue 有什么区别？(了解)
+## 6 ArrayBlockingQueue 和 LinkedBlockingQueue 有什么区别？(了解)
 
 `ArrayBlockingQueue` 和 `LinkedBlockingQueue` 是 Java 并发包中常用的两种阻塞队列实现，它们都是线程安全的。不过，不过它们之间也存在下面这些区别：
 

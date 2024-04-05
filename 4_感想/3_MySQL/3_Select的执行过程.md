@@ -1,5 +1,5 @@
 
-### 查询的结构
+## 1 查询的结构
 
 - SQL99语法
 ```mysql
@@ -13,7 +13,7 @@ ORDER BY 按照ASC/DESC排序
 LIMIT分页
 ```
 
-### SELECT 执行顺序
+## 2 SELECT 执行顺序
 
 - <font color="#00b050">FROM ... JOIN</font> $\Longrightarrow$ <font color="#00b050">ON</font> $\Longrightarrow$ <font color="#00b050">WHERE</font> $\Longrightarrow$ <font color="#00b050">GROUP BY</font> $\Longrightarrow$ <font color="#00b050">HAVING</font> $\Longrightarrow$
 - <font color="#00b050">SELECT</font> $\Longrightarrow$ <font color="#00b050">DISTINCT</font> $\Longrightarrow$ 
@@ -32,6 +32,6 @@ LIMIT分页
 	- ORDER BY : 按某个字段进行升序或降序操作
 	- LIMIT ：对数据进行分页处理
 
-### 4.3 SQL的执行原理
+## 3 SQL的执行原理
 
 - 注意上述执行过程中，每个细分的过程<span style="background:#affad1">都会生成一个虚拟表</span>即可

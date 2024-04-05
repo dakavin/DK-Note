@@ -1,7 +1,7 @@
-# 一、了解Web及网络基础
+## 1 了解Web及网络基础
 
 本章概述了 Web 是建立在何种技术之上，以及 HTTP 协议是如何诞 生并发展的。我们从其背景着手，来深入了解这部分内容。
-## 1、使用HTTP协议访问Web
+### 1.1 使用HTTP协议访问Web
 
 你知道当我们在网页浏览器（Web browser）的地址栏中输入 URL 时，Web 页面是如何呈现的吗？
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dfab5c0a4a0aba62e63f57d38cb91a75.png)
@@ -10,11 +10,11 @@ Web 页面当然不能凭空显示出来。根据 Web 浏览器地址栏中指�
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/447d6f0234ca64d785f7831cd93b3c85.png)
 
 Web 使用一种名为 HTTP（HyperText Transfer Protocol，超文本传输协议 ）的协议`作为规范`，`完成从客户端到服务器端等一系列运作流程`。而协议是指规则的约定。可以说，Web 是建立在 HTTP 协议上通 信的。
-## 2、HTTP的诞生
+### 1.2 HTTP的诞生
 
 在深入学习 HTTP 之前，我们先来介绍一下 HTTP 诞生的背景。了解 背景的同时也能了解当初制定 HTTP 的初衷，这样有助于我们更好地 理解。 
 
-### 2.1 为知识共享而规划 Web 
+#### 1.2.1 为知识共享而规划 Web 
 
 1989 年 3 月，互联网还只属于少数人。在这一互联网的黎明期， HTTP 诞生了。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7a5266ede4c470788ca8783c8c9c2723.png)
@@ -27,7 +27,7 @@ CERN（欧洲核子研究组织）的蒂姆 • 伯纳斯 - 李（Tim BernersLee
 
 ==WWW 这一名称，是 Web 浏览器当年用来浏览超文本的客户端应用 程序时的名称。现在则用来表示这一系列的集合，也可简称为 Web==
 
-### 2.2 Web 成长时代 
+#### 1.2.2 Web 成长时代 
 
 1990 年 11 月，CERN 成功研发了世界上第一台 Web 服务器和 Web 浏览器。两年后的 1992 年 9 月，日本第一个网站的主页上线了。 
 
@@ -56,7 +56,7 @@ CERN（欧洲核子研究组织）的蒂姆 • 伯纳斯 - 李（Tim BernersLee
 
 Internet Explorer 浏览器的版本从 6 升到 7 前后花费了 5 年时间。之后 接连不断地发布了 8、9、10 版本。另外，Chrome、Opera、Safari 等浏览器也纷纷抢占市场份额。
 
-### 2.3 驻足不前的 HTTP 
+#### 1.2.3 驻足不前的 HTTP 
 
 `HTTP/0.9` 
 - HTTP 于 1990 年问世。那时的 HTTP 并没有作为正式的标准被建立。 现在的 HTTP 其实含有 HTTP1.0 之前版本的意思，因此被称为 HTTP/0.9。 
@@ -72,7 +72,7 @@ Internet Explorer 浏览器的版本从 6 升到 7 前后花费了 5 年时间�
 可见，作为 Web 文档传输协议的 HTTP，它的版本几乎没有更新。新 一代 HTTP/2.0 正在制订中，但要达到较高的使用覆盖率，仍需假以时日。 
 
 当年 HTTP 协议的出现`主要是为了解决文本传输的难题`。由于协议本身非常简单，于是在此基础上设想了很多应用方法并投入了实际使 用。现在 HTTP 协议已经超出了 Web 这个框架的局限，被运用到了 各种场景里。
-## 3、网络基础TCP/IP
+### 1.3 网络基础TCP/IP
 
 为了理解 HTTP，我们有必要事先了解一下 TCP/IP 协议族。 
 
@@ -80,7 +80,7 @@ Internet Explorer 浏览器的版本从 6 升到 7 前后花费了 5 年时间�
 
 接下来，我们仅介绍理解 HTTP 所需掌握的 TCP/IP 协议族的概要。 若想进一步学习有关 TCP/IP 的知识，请参考其他讲解 TCP/IP 的专业 书籍。
 
-### 3.1 TCP/IP 协议族 
+#### 1.3.1 TCP/IP 协议族 
 
 计算机与网络设备要相互通信，`双方就必须基于相同的方法`。比如， 如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通 信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之 间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为 协议（protocol）。
 
@@ -91,7 +91,7 @@ Internet Explorer 浏览器的版本从 6 升到 7 前后花费了 5 年时间�
 
 像这样把与互联网相关联的协议集合起来总称为 TCP/IP。也有说法 认为，TCP/IP 是指 TCP 和 IP 这两种协议。还有一种说法认为，TCP/ IP 是在 IP 协议的通信过程中，使用到的协议族的统称。
 
-## 3.2 TCP/IP 的分层管理 
+#### 1.3.2 TCP/IP 的分层管理 
 
 TCP/IP 协议族里重要的一点就是`分层`。TCP/IP 协议族按层次分别分 为以下 4 层：应用层、传输层、网络层和数据链路层。 
 
@@ -115,7 +115,7 @@ TCP/IP 协议族里重要的一点就是`分层`。TCP/IP 协议族按层次分�
 `链路层（又名数据链路层，网络接口层）` 
 - 用来处理连接网络的硬件部分。包括控制操作系统、硬件的设备驱 动、NIC（Network Interface Card，网络适配器，即网卡），及光纤等 物理可见部分（还包括连接器等一切传输媒介）。硬件上的范畴均在 链路层的作用范围之内。
 
-### 3.3 TCP/IP 通信传输流
+#### 1.3.3 TCP/IP 通信传输流
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a73bbf4e332d79345e3c4058766988a4.png)
 
@@ -134,11 +134,11 @@ TCP/IP 协议族里重要的一点就是`分层`。TCP/IP 协议族按层次分�
 发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该 层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层 时会把对应的首部消去。 
 
 这种把数据信息包装起来的做法称为封装（encapsulate）。
-## 4、与HTTP关系密切的协议：IP、TCP和DNS
+### 1.4 与HTTP关系密切的协议：IP、TCP和DNS
 
 下面我们分别针对在 TCP/IP 协议族中与 HTTP 密不可分的 3 个协议 （IP、TCP 和 DNS）进行说明。
 
-### 4.1 负责传输的 IP 协议
+#### 1.4.1 负责传输的 IP 协议
 
 按层次分，IP（Internet Protocol）网际协议位于网络层。Internet Protocol 这个名称可能听起来有点夸张，但事实正是如此，因为几乎 所有使用网络的系统都会用到 IP 协议。TCP/IP 协议族中的 IP 指的就 是网际协议，协议名称中占据了一半位置，其重要性可见一斑。可能 有人会把“IP”和“IP 地址”搞混，“IP”其实是一种协议的名称。
 
@@ -160,7 +160,7 @@ IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的�
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f754a099905593201efd37bc72cfec4.png)
 
-### 4.2 确保可靠性的 TCP 协议 
+#### 1.4.2 确保可靠性的 TCP 协议 
 
 按层次分，TCP 位于传输层，`提供可靠的字节流服务`。 
 
@@ -177,7 +177,7 @@ IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的�
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/488051d5f9cb64eed1e2095ce2ec156e.png)
 
 除了上述三次握手，TCP 协议还有其他各种手段来保证通信的可靠 性。
-## 5、负责域名解析的DNS服务
+### 1.5 负责域名解析的DNS服务
 
 DNS（Domain Name System）服务是和 HTTP 协议一样位于应用层的协议。它提供`域名到 IP 地址之间的解析服务`。 
 
@@ -191,19 +191,19 @@ DNS（Domain Name System）服务是和 HTTP 协议一样位于应用层的协�
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/67206299d59aa4c4a1ca73986da0f015.png)
 
-## 6、各种协议与HTTP协议的关系
+### 1.6 各种协议与HTTP协议的关系
 
 学习了和 HTTP 协议密不可分的 TCP/IP 协议族中的各种协议后，我 们再通过这张图来了解下 IP 协议、TCP 协议和 DNS 服务在使用 HTTP 协议的通信过程中各自发挥了哪些作用。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce14082f99b511df859b464ed5bf8ff6.png)
 
-## 7、URI和URL
+### 1.7 URI和URL
 
 与 URI（统一资源标识符）相比，我们更熟悉 URL（Uniform Resource Locator，统一资源定位符）。URL正是使用 Web 浏览器等访问 Web 页面时需要输入的网页地址。比如，下图的 http://hackr.jp/ 就是 URL。
 
 ![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/93e7b90cbdcfb4cb4db28c443a4bfd9b.png)
 
-### 7.1 统一资源标识符 URI
+#### 1.7.1 统一资源标识符 URI
 
 URI 是 Uniform Resource Identifier 的缩写。RFC2396 分别对这 3 个单 词进行了如下定义。 
 
@@ -222,7 +222,7 @@ URI 是 Uniform Resource Identifier 的缩写。RFC2396 分别对这 3 个单 �
 “RFC3986：统一资源标识符（URI）通用语法”中列举了几种 URI 例 子，如下所示。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e01f9c0f5764e7c1b50c51e8cfc48178.png)
 本书接下来的章节中会频繁出现 URI 这个术语，在充分理解的基础 上，也可用 URL替换 URI。
 
-### 7.2 URI 格式 
+#### 1.7.2 URI 格式 
 
 表示指定的 URI，要使用涵盖全部必要信息的绝对 URI、绝对 URL以及相对 URL。`相对 URL，是指从浏览器中基本 URI 处指定的 URL`， 形如 /image/logo.gif。 让我们先来了解一下绝对 URI 的格式。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0ffec25a3a3f20a2efdee3ed99a86fb9.png)
 使用 http: 或 https: 等协议方案名获取访问资源时要指定协议类型。不区分字母大小写，最后附一个冒号（:）。 
@@ -260,10 +260,10 @@ URI 是 Uniform Resource Identifier 的缩写。RFC2396 分别对这 3 个单 �
 >实际在互联网上，已经实现了 HTTP 协议的一些服务器端和客户端里就存在上述情况。说不定它们会与本书介绍的 HTTP 协议的实现情况不一样。 
 >
 >本书接下来要介绍的 HTTP 协议内容，除去部分例外，基本上都以 RFC 的标准为准。
-# 二、简单的HTTP协议
+## 2 简单的HTTP协议
 
 本章将针对 HTTP 协议结构进行讲解，主要使用HTTP/1.1版本。学完 这章，想必大家就能理解 HTTP 协议的基础了。
-## 1、HTTP协议用于客户端和服务器端之间的通信
+### 2.1 HTTP协议用于客户端和服务器端之间的通信
 
 HTTP 协议和 TCP/IP 协议族内的其他众多的协议相同，用于客户端和服务器之间的通信。 
 
@@ -274,7 +274,7 @@ HTTP 协议和 TCP/IP 协议族内的其他众多的协议相同，用于客户�
 在两台计算机之间使用 HTTP 协议通信时，在一条通信线路上`必定有 一端是客户端，另一端则是服务器端`。 
 
 有时候，按实际情况，两台计算机作为客户端和服务器端的角色`有可 能会互换`。但就仅从一条通信路线来说，服务器端和客户端的角色是确定的，而用 `HTTP 协议能够明确区分哪端是客户端，哪端是服务器端`。
-## 2、通过请求和响应的交换达成通信
+### 2.2 通过请求和响应的交换达成通信
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4ef1a1b5f981cf4a2ced0e8a8f06e172.png)
 
@@ -301,7 +301,7 @@ HTTP 协议规定，请求从客户端发出，最后服务器端响应该请求
 `响应报文`基本上由==协议版本==、==状态码==（表示请求成功或失败的数字代 码）、用以==解释状态码的原因短语==、==可选的响应首部字段==以及==实体主体==构成。稍后我们会对这些内容进行详细说明。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/37b1eaf3cd647ea225e838abaf681cbb.png)
 
-## 3、HTTP是不保存状态的协议
+### 2.3 HTTP是不保存状态的协议
 
 HTTP 是一种不保存状态，即无状态（stateless）协议。HTTP 协议自 身不对请求和响应之间的通信状态进行保存。也就是说在 HTTP 这个级别，协议对于发送过的请求或响应都不做持久化处理。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dc344fb1e7f5091d679e98b5e4a356ad.png)
@@ -311,7 +311,7 @@ HTTP 是一种不保存状态，即无状态（stateless）协议。HTTP 协议�
 可是，随着 Web 的不断发展，因无状态而导致业务处理变得棘手的 情况增多了。比如，用户登录到一家购物网站，即使他跳转到该站的其他页面后，也需要能继续保持登录状态。针对这个实例，网站为了 能够掌握是谁送出的请求，需要保存用户的状态。
 
 HTTP/1.1 虽然是无状态协议，但为了实现期望的保持状态功能，于 是引入了 Cookie 技术。有了 Cookie 再用 HTTP 协议通信，就可以管 理状态了。有关 Cookie 的详细内容稍后讲解。
-## 4、请求URI定位资源
+### 2.4 请求URI定位资源
 
 HTTP 协议使用 URI 定位互联网上的资源。正是因为 URI 的特定功 能，在互联网上任意位置的资源都能访问到。
 
@@ -322,7 +322,7 @@ HTTP 协议使用 URI 定位互联网上的资源。正是因为 URI 的特定�
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/42452f8c1aa73ba029dbde29fcfa8ac1.png)
 
 除此之外，如果不是访问特定资源而是对服务器本身发起请求，可以 用一个 * 来代替请求 URI。下面这个例子是查询 HTTP 服务器端支持的 HTTP 方法种类。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a6e07a2951a32aaf98762c7b8940218b.png)
-## 5、告知服务器意图的HTTP方法
+### 2.5 告知服务器意图的HTTP方法
 
 下面，我们介绍 HTTP/1.1 中可使用的方法。
 
@@ -356,20 +356,20 @@ HTTP 协议使用 URI 定位互联网上的资源。正是因为 URI 的特定�
 - CONNECT 方法要求在与代理服务器通信时建立隧道，实现用隧道协议进行 TCP 通信。主要使用 SSL（Secure Sockets Layer，安全套接层）和 TLS（Transport Layer Security，传输层安全）协议把通信内容 加密后经网络隧道传输。 
 - CONNECT 方法的格式如下所示。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ed2c0fe8d1af3c1dd4f1fc3b49726143.png)
 - 使用 CONNECT 方法的请求·响应的例子![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f50df0e057c397da1713411c658cdb7c.png)
-## 6、使用方法下达命令
+### 2.6 使用方法下达命令
 
 向请求 URI 指定的资源发送请求报文时，采用称为方法的命令。 方法的作用在于，可以指定请求的资源按期望产生某种行为。方法中 有 GET、POST 和 HEAD 等。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2f8f3ea567dd0eefcd9df88b85465123.png)
 下表列出了 HTTP/1.0 和 HTTP/1.1 支持的方法。另外，方法名区分大 小写，注意要用大写字母。 
 
 表 2-1：HTTP/1.0 和 HTTP/1.1 支持的方法![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6fabaeddbed568065dc57dbf95acda2d.png)
-## 7、持久连接节省通信量
+### 2.7 持久连接节省通信量
 
 HTTP 协议的初始版本中，每进行一次 HTTP 通信就要断开一次 TCP 连接。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8306bf88e91da44b566000bfafd4bc6.png)
 以当年的通信情况来说，因为都是些容量很小的文本传输，所以即使 这样也没有多大问题。可随着 HTTP 的普及，文档中包含大量图片的 情况多了起来。 
 
 比如，使用浏览器浏览一个包含多张图片的 HTML页面时，在发送 请求访问 HTML页面资源的同时，也会请求该 HTML页面里包含的 其他资源。因此，每次的请求都会造成无谓的 TCP 连接建立和断 开，增加通信量的开销。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6896587e2153a4075c481bbace427e7a.png)
 
-### 7.1 持久连接 
+#### 2.7.1 持久连接 
 
 为解决上述 TCP 连接的问题，HTTP/1.1 和一部分的 HTTP/1.0 想出了 `持久连接（HTTP Persistent Connections，也称为 HTTP keep-alive 或 HTTP connection reuse）`的方法。持久连接的特点是，只要任意一端 没有明确提出断开连接，则保持 TCP 连接状态。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9a929e406391e13dcd2c42002c26ebf9.png)
@@ -378,13 +378,13 @@ HTTP 协议的初始版本中，每进行一次 HTTP 通信就要断开一次 TC
 
 在 HTTP/1.1 中，所有的连接默认都是持久连接，但在 HTTP/1.0 内并未标准化。虽然有一部分服务器通过非标准的手段实现了持久连接， 但服务器端不一定能够支持持久连接。毫无疑问，除了服务器端，`客户端也需要支持持久连接`。
 
-## 7.2 管线化 
+#### 2.7.2 管线化 
 
 持久连接使得多数请求以管线化（pipelining）方式发送成为可能。从前发送请求后需等待并收到响应，才能发送下一个请求。管线化技术出现后，`不用等待响应亦可直接发送下一个请求`。
 
 这样就能够做到同时并行发送多个请求，而不需要一个接一个地等待 响应了。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/550b9c57d7ef230206fc52bde7865162.png)
 比如，当请求一个包含 10 张图片的 HTMLWeb 页面，与挨个连接相 比，用持久连接可以让请求更快结束。而管线化技术则比持久连接还 要快。请求数越多，时间差就越明显。
-## 8、使用Cookie的状态管理
+### 2.8 使用Cookie的状态管理
 
 HTTP 是无状态协议，它不对之前发生过的请求和响应的状态进行管 理。也就是说，无法根据之前的状态进行本次的请求处理。 
 
@@ -405,10 +405,10 @@ Cookie 会根据从服务器端发送的响应报文内的一个叫做 Set-Cooki
 上图展示了发生 Cookie 交互的情景，HTTP 请求报文和响应报文的内容如下。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c9992e889319952b27c196f7580ebacd.png)
 
-# 三、HTTP报文内的HTTP信息
+## 3 HTTP报文内的HTTP信息
 
 HTTP 通信过程包括从客户端发往服务器端的`请求`及从服务器端返回 客户端的`响应`。本章就让我们来了解一下请求和响应是怎样运作的。
-## 1、HTTP报文
+### 3.1 HTTP报文
 
 `用于 HTTP 协议交互的信息被称为 HTTP 报文`。请求端（客户端）的 HTTP 报文叫做`请求报文`，响应端（服务器端）的叫做`响应报文`。 HTTP 报文本身是由多行（用 CR+LF 作换行符）数据构成的字符串文 本。
 
@@ -416,7 +416,7 @@ HTTP 报文大致可分为`报文首部`和`报文主体`两块。两者由最�
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8feb4df0e2c25034a92ef9ac008cf632.png)
 
-## 2、请求报文及响应报文的结构
+### 3.2 请求报文及响应报文的结构
 
 我们来看一下请求报文和响应报文的结构。
 
@@ -439,11 +439,11 @@ HTTP 报文大致可分为`报文首部`和`报文主体`两块。两者由最�
 `其他 `
 - 可能包含 HTTP 的 RFC 里未定义的首部（Cookie 等）。
 
-## 3、编码提升传输速率
+### 3.3 编码提升传输速率
 
 HTTP 在传输数据时可以按照数据原貌直接传输，但也可以`在传输过 程中通过编码提升传输速率`。通过在传输时编码，能有效地处理大量 的访问请求。但是，编码的操作需要计算机来完成，因此会消耗更多 的 CPU 等资源。
 
-### 3.1 报文主体和实体主体的差异
+#### 3.3.1 报文主体和实体主体的差异
 
 `报文（message）`
 - 是 HTTP 通信中的基本单位，由 8 位组字节流（octet sequence， 其中 octet 为 8 个比特）组成，通过 HTTP 通信传输。 
@@ -457,7 +457,7 @@ HTTP 在传输数据时可以按照数据原貌直接传输，但也可以`在�
 
 报文和实体这两个术语在之后会经常出现，请事先理解两者的差异。
 
-### 3.2 压缩传输的内容编码
+#### 3.3.2 压缩传输的内容编码
 
 向待发送邮件内增加附件时，为了使邮件容量变小，我们会先用 ZIP 压缩文件之后再添加附件发送。`HTTP 协议中有一种被称为内容编码 的功能也能进行类似的操作`。 
 
@@ -470,7 +470,7 @@ HTTP 在传输数据时可以按照数据原貌直接传输，但也可以`在�
 - compress（UNIX 系统的标准压缩） 
 - deflate（zlib） 
 - identity（不进行编码）
-### 3.3 分割发送的分块传输编码
+#### 3.3.3 分割发送的分块传输编码
 
 在 HTTP 通信过程中，请求的编码实体资源尚未全部传输完成之前， 浏览器无法显示请求页面。在传输大容量数据时，通过把数据分割成多块，能够让浏览器逐步显示页面。 
 
@@ -484,7 +484,7 @@ HTTP 在传输数据时可以按照数据原貌直接传输，但也可以`在�
 
 HTTP/1.1 中存在一种称为传输编码（Transfer Coding）的机制，它可 以在通信时按某种编码方式传输，但只定义作用于分块传输编码中。
 
-## 4、发送多种数据的多部分对象集合
+### 3.4 发送多种数据的多部分对象集合
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/28bcf71d4238eecb0dbe2c9e9372b92e.png)
 
@@ -503,7 +503,7 @@ HTTP/1.1 中存在一种称为传输编码（Transfer Coding）的机制，它�
 
 多部分对象集合的每个部分类型中，都可以含有首部字段。另外，可 以在某个部分中嵌套使用多部分对象集合。有关多部分对象集合更详 细的解释，请参考 RFC2046。
 
-## 5、获取部分内容的范围请求
+### 3.5 获取部分内容的范围请求
 
 以前，用户不能使用现在这种高速的带宽访问互联网，当时，下载一 个尺寸稍大的图片或文件就已经很吃力了。如果下载过程中遇到网络 中断的情况，那就必须重头开始。为了解决上述问题，需要一种可恢 复的机制。所谓恢复是指能从之前下载中断处恢复下载。 
 
@@ -528,7 +528,7 @@ byte 范围的指定形式如下。
 
 如果服务器端无法响应范围请求，则会返回状态码 200 OK 和完整的 实体内容。
 
-## 6、内容协商返回最合适的内容
+### 3.6 内容协商返回最合适的内容
 
 同一个 Web 网站有可能存在着多份相同内容的页面。比如英语版和 中文版的 Web 页面，它们内容上虽相同，但使用的语言却不同。 
 
@@ -556,11 +556,11 @@ byte 范围的指定形式如下。
 透明协商（Transparent Negotiation） 
 - 是服务器驱动和客户端驱动的结合体，是由服务器端和客户端各自进 行内容协商的一种方法。
 
-# 四、返回结果的HTTP状态码
+## 4 返回结果的HTTP状态码
 
 HTTP 状态码负责表示客户端 HTTP 请求的返回结果、标记服务器端 的处理是否正常、通知出现的错误等工作。让我们通过本章的学习， 好好了解一下状态码的工作机制。
 
-## 1、状态码告知从服务器端返回的请求结果
+### 4.1 状态码告知从服务器端返回的请求结果
 
 状态码的职责是当客户端向服务器端发送请求时，`描述返回的请求结果`。借助状态码，用户可以知道服务器端是正常处理了请求，还是出 现了错误。
 
@@ -573,32 +573,32 @@ HTTP 状态码负责表示客户端 HTTP 请求的返回结果、标记服务器
 
 仅记录在 RFC2616 上的 HTTP 状态码就达 40 种，若再加上 WebDAV（Web-based Distributed Authoring and Versioning，基于万维网的分布式创作和版本控制）（RFC4918、5842） 和附加 HTTP 状态码 （RFC6585）等扩展，数量就达 60 余种。别看种类繁多，`实际上经常使用的大概只有 14 种`。接下来，我们就介绍一下这些具有代表性 的 14 个状态码。
 
-## 2、2XX 成功
+### 4.2 2XX 成功
 
 2XX 的响应结果表明请求被正常处理了。
 
-### 2.1 200 OK
+#### 4.2.1 200 OK
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0ce2fa69057072723b284957c8aba0fa.png)
 表示从客户端发来的请求在服务器端被正常处理了。 
 
 在响应报文内，随状态码一起返回的信息会因方法的不同而发生改 变。比如，使用 GET 方法时，对应请求资源的实体会作为响应返 回；而使用 HEAD 方法时，对应请求资源的实体首部不随报文主体 作为响应返回（即在响应中只返回首部，不会返回实体的主体部 分）。
 
-### 2.2 204 No Content
+#### 4.2.2 204 No Content
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9457b2e18311708b1f8358c2099157b9.png)
 
 该状态码代表服务器接收的请求已成功处理，但在返回的响应报文中 不含实体的主体部分。另外，也不允许返回任何实体的主体。比如， 当从浏览器发出请求处理后，返回 204 响应，那么浏览器显示的页面 不发生更新。 
 
 一般在只需要从客户端往服务器发送信息，而对客户端不需要发送新信息内容的情况下使用。
-### 2.3  206 Partial Content
+#### 4.2.3 206 Partial Content
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6089e3f7023c8895add1578e0e261063.png)
 该状态码表示客户端进行了范围请求，而服务器成功执行了这部分的 GET 请求。响应报文中包含由 Content-Range 指定范围的实体内容。
 
-## 3、3XX 重定向
+### 4.3 3XX 重定向
 
-### 3.1 301 Moved Permanently
+#### 4.3.1 301 Moved Permanently
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a6643115b183a1bddef3cc581c6e8fe7.png)
 
@@ -606,7 +606,7 @@ HTTP 状态码负责表示客户端 HTTP 请求的返回结果、标记服务器
 
 像下方给出的请求 URI，当指定资源路径的最后忘记添加斜杠“/”，就 会产生 301 状态码。
 http://example.com/sample
-### 3.2 302 Found
+#### 4.3.2 302 Found
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fb40a9fa94085463c6ec6be2adb8c1b6.png)
 
@@ -614,7 +614,7 @@ http://example.com/sample
 
 和 301 Moved Permanently 状态码相似，但 302 状态码代表的资源不是被永久移动，只是临时性质的。换句话说，已移动的资源对应的 URI 将来还有可能发生改变。比如，用户把 URI 保存成书签，但不会像 301 状态码出现时那样去更新书签，而是仍旧保留返回 302 状态码 的页面对应的 URI。
 
-### 3.3 303 See Other
+#### 4.3.3 303 See Other
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/79bae2c707bc5250c91a9748593392fd.png)
 
@@ -628,27 +628,27 @@ http://example.com/sample
 >
 >301、302 标准是禁止将 POST 方法改变成 GET 方法的，但实际使用时大家都会这么做。
 
-### 3.4 304 Not Modified
+#### 4.3.4 304 Not Modified
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9eff6669f7369ec8bbd9a2ec2be6b5b2.png)
 
 该状态码表示客户端发送附带条件的请求时，服务器端允许请求访问资源，但未满足条件的情况。304 状态码返回时，不包含任何响应 的主体部分。`304 虽然被划分在 3XX 类别中，但是和重定向没有关系`。
 
-### 3.5 307 Temporary Redirect 
+#### 4.3.5 307 Temporary Redirect 
 
 `临时重定向`。该状态码与 302 Found 有着相同的含义。尽管 302 标准 64 禁止 POST 变换成 GET，但实际使用时大家并不遵守。 `307 会遵照浏览器标准`，不会从 POST 变成 GET。但是，对于处理响应时的行为，每种浏览器有可能出现不同的情况。
 
-## 4、4XX 客户端错误
+### 4.4 4XX 客户端错误
 
 4XX 的响应结果表明客户端是发生错误的原因所在。
 
-### 4..1 400 Bad Request
+#### 4.4.1 4..1 400 Bad Request
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cf3be924dc4f3b0b4797c81d0417522c.png)
 
 该状态码表示请求报文中存在语法错误。当错误发生时，需修改请求 的内容后再次发送请求。另外，浏览器会像 200 OK 一样对待该状态 码。
 
-### 4.2 401 Unauthorized
+#### 4.4.2 401 Unauthorized
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f9681fec2eb59811ca0c4ab42034380a.png)
 
@@ -656,29 +656,29 @@ http://example.com/sample
 
 返回含有 401 的响应必须包含一个适用于被请求资源的 WWW-Authenticate 首部用以质询（challenge）用户信息。当浏览器初次接收 到 401 响应，会弹出认证用的对话窗口。
 
-### 4.3 403 Forbidden
+#### 4.4.3 403 Forbidden
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a4e7a289f6a4f4f824f9e958de920236.png)
 
 该状态码表明对请求资源的访问被服务器拒绝了。服务器端没有必要 给出拒绝的详细理由，但如果想作说明的话，可以在实体的主体部分对原因进行描述，这样就能让用户看到了。
 
 未获得文件系统的访问授权，访问权限出现某些问题（从未授权的发 送源 IP 地址试图访问）等列举的情况都可能是发生 403 的原因。
-### 4.4 404 Not Found
+#### 4.4.4 404 Not Found
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b7e338ce2e35ef6289cdffc67bc6e6dd.png)
 
 该状态码表明服务器上无法找到请求的资源。除此之外，也可以在服 务器端拒绝请求且不想说明理由时使用。
 
-## 5、 5XX 服务器错误
+### 4.5  5XX 服务器错误
 
 5XX 的响应结果表明服务器本身发生错误。
 
-### 5.1 500 Internal Server Error
+#### 4.5.1 500 Internal Server Error
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bd4f4f1bb4f5b7b02cc313f949b2b86a.png)
 
 该状态码表明服务器端在执行请求时发生了错误。也有可能是 Web 应用存在的 bug 或某些临时的故障。
-### 5.2 503 Service Unavailable
+#### 4.5.2 503 Service Unavailable
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6cbaa68800811a359627311a3c7c3e3a.png)
 
@@ -688,10 +688,10 @@ http://example.com/sample
 >
 >不少返回的状态码响应都是错误的，但是用户可能察觉不到这点。 比如 Web 应用程序内部发生错误，状态码依然返回 200 OK，这种 情况也经常遇到。
 
-# 五、与HTTP协作的Web服务器
+## 5 与HTTP协作的Web服务器
 
 一台 Web 服务器可搭建多个独立域名的 Web 网站，也可作为通信路 径上的中转服务器提升传输效率。
-## 1、用单台虚拟主机实现多个域名
+### 5.1 用单台虚拟主机实现多个域名
 
 HTTP/1.1 规范允许一台 HTTP 服务器搭建多个 Web 站点。比如，提供 Web 托管服务（Web Hosting Service）的供应商，`可以用一台服务器为多位客户服务`，`也可以每位客户持有的域名运行各自不同的网站`。这是因为利用了虚拟主机（Virtual Host，又称虚拟服务器）的功能。
 
@@ -708,7 +708,7 @@ HTTP/1.1 规范允许一台 HTTP 服务器搭建多个 Web 站点。比如，提
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/18a61836c8da41f584814581585dd50a.png)
 
 在相同的 IP 地址下，由于虚拟主机可以寄存多个不同主机名和域名 的 Web 网站，因此在发送 HTTP 请求时，必须在 Host 首部内完整指 定主机名或域名的 URI。
-## 2、通信数据转发程序：代理、网关、隧道
+### 5.2 通信数据转发程序：代理、网关、隧道
 
 HTTP 通信时，除客户端和服务器以外，还有一些`用于通信数据转发的应用程序，例如代理、网关和隧道`。它们可以`配合服务器工作`
 
@@ -723,7 +723,7 @@ HTTP 通信时，除客户端和服务器以外，还有一些`用于通信数�
 `隧道` 
 - `隧道是在相隔甚远的客户端和服务器两者之间进行中转`，并保持双方通信连接的应用程序。
 
-### 2.1 代理
+#### 5.2.1 代理
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7fe0a902091259342a33ecc2d60489d9.png)
 
@@ -746,14 +746,14 @@ HTTP 通信时，除客户端和服务器以外，还有一些`用于通信数�
 
 `透明代理` 
 - 转发请求或响应时，不对报文做任何加工的代理类型被称为透明代理 （Transparent Proxy）。反之，对报文内容进行加工的代理被称为非透明代理。
-### 2.2 网关
+#### 5.2.2 网关
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/28dcf15fbd2ef9fe53caee8d0785ca65.png)
 
 网关的工作机制和代理十分相似。而`网关能使通信线路上的服务器提 供非 HTTP 协议服务`。 
 
 `利用网关能提高通信的安全性`，因为可以在客户端与网关之间的通信线路上加密以确保连接的安全。比如，网关可以连接数据库，使用 SQL语句查询数据。另外，在 Web 购物网站上进行信用卡结算时， 网关可以和信用卡结算系统联动。
-### 2.3 隧道
+#### 5.2.3 隧道
 
 隧道可按要求建立起一条与其他服务器的通信线路，届时使用 SSL等 加密手段进行通信。隧道的目的是确保客户端能与服务器进行安全的 通信。 
 
@@ -761,7 +761,7 @@ HTTP 通信时，除客户端和服务器以外，还有一些`用于通信数�
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3181b7e7939a7784575edbcfa4133c81.png)
 
-## 3、保存资源的缓存
+### 5.3 3、保存资源的缓存
 
 缓存是指代理服务器或客户端本地磁盘内保存的资源副本。利用缓存 可减少对源服务器的访问，因此也就节省了通信流量和通信时间。 
 
@@ -771,7 +771,7 @@ HTTP 通信时，除客户端和服务器以外，还有一些`用于通信数�
 
 缓存服务器的优势在于利用缓存可避免多次从源服务器转发资源。因 此`客户端可就近从缓存服务器上获取资源`，而`源服务器也不必多次处理相同的请求了`。
 
-### 3.1 缓存的有效期限
+#### 5.3.1 缓存的有效期限
 
 即便缓存服务器内有缓存，也不能保证每次都会返回对同资源的请 求。因为这关系到被缓存资源的有效性问题。 
 
@@ -781,7 +781,7 @@ HTTP 通信时，除客户端和服务器以外，还有一些`用于通信数�
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/38ffb421380e235bb3a68b3408c8100a.png)
 
-### 3.2 客户端的缓存
+#### 5.3.2 客户端的缓存
 
 缓存不仅可以存在于缓存服务器内，还可以存在客户端浏览器中。以 Internet Explorer 程序为例，把客户端缓存称为临时网络文件 （Temporary Internet File）。 
 
@@ -804,20 +804,20 @@ HTTP 通信时，除客户端和服务器以外，还有一些`用于通信数�
 >
 >`Gopher 查找与互联网连接的计算机内信息的协议`。1991 年前后出现，由 于现在已经被 HTTP 协议替代，也已经不怎么使用了。
 
-# 六、HTTP首部
+## 6 六、HTTP首部
 
 HTTP 协议的请求和响应报文中`必定包含 HTTP 首部`，只是我们平时 在使用 Web 的过程中感受不到它。本章我们一起来学习 HTTP 首部的结构，以及首部中各字段的用法。
-## 1、HTTP报文首部
+### 6.1 1、HTTP报文首部
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/72d15b82d218c7fa4edf5e8263ab6afd.png)
 
 HTTP 协议的请求和响应报文中必定包含 HTTP 首部。首部内容为客户端和服务器分别处理请求和响应提供所需要的信息。对于客户端用户来说，这些信息中的大部分内容都无须亲自查看。 报文首部由几个字段构成。
 
-### 1.1 HTTP 请求报文 
+#### 6.1.1 HTTP 请求报文 
 
 在请求中，HTTP 报文由`方法`、`URI`、`HTTP 版本`、`HTTP 首部字段`等部分构成。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a49176cda2f5b756872fd4f97e7972bc.png)
 下面的示例是访问 http://hackr.jp 时，请求报文的首部信息。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6e8320160802ba8e0f417e1b13b3d392.png)
-### 1.2 HTTP 响应报文
+#### 6.1.2 HTTP 响应报文
 
 在响应中，HTTP 报文由 `HTTP 版本`、`状态码`（数字和原因短语）、 `HTTP 首部字段` 3 部分构成。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae387fb4b6ab38ad3dedbcb5565faff3.png)
@@ -827,14 +827,14 @@ HTTP 协议的请求和响应报文中必定包含 HTTP 首部。首部内容为
 
 因 HTTP 版本或扩展规范的变化，首部字段可支持的字段内容略有不 同。本书主要涉及 HTTP/1.1 及常用的首部字段。
 
-## 2、HTTP首部字段
+### 6.2 2、HTTP首部字段
 
-### 2.1 HTTP 首部字段传递重要信息
+#### 6.2.1 HTTP 首部字段传递重要信息
 
 HTTP 首部字段是构成 HTTP 报文的要素之一。在客户端与服务器之 间以 HTTP 协议进行通信的过程中，无论是请求还是响应都会使用首部字段，
 
 它能起到传递额外重要信息的作用。 使用首部字段是为了给浏览器和服务器提供报文主体大小、所使用的语言、认证信息等内容。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1c0d8be101e66763f5e5f7dc5524541e.png)
-### 2.2 HTTP 首部字段结构 HTTP 
+#### 6.2.2 HTTP 首部字段结构 HTTP 
 
 首部字段是由`首部字段名`和`字段值`构成的，中间用冒号“:” 分 隔。 
 - 首部字段名: 字段值 
@@ -851,7 +851,7 @@ HTTP 首部字段是构成 HTTP 报文的要素之一。在客户端与服务器
 >
 >当 HTTP 报文首部中出现了两个或两个以上具有相同首部字段名时 会怎么样？这种情况在规范内尚未明确，根据浏览器内部处理逻辑的不同，结果可能并不一致。有些浏览器会优先处理第一次出现的首部字段，而有些则会优先处理最后出现的首部字段。
 
-### 2.3 4 种 HTTP 首部字段类型
+#### 6.2.3 4 种 HTTP 首部字段类型
 
 HTTP 首部字段根据实际用途被分为以下 4 种类型。 
 
@@ -867,18 +867,18 @@ HTTP 首部字段根据实际用途被分为以下 4 种类型。
 `实体首部字段（Entity Header Fields） `
 - 针对请求报文和响应报文的实体部分使用的首部。补充了资源内容更 新时间等与实体有关的信息。
 
-### 2.4 HTTP/1.1 首部字段一览 
+#### 6.2.4 HTTP/1.1 首部字段一览 
 
 HTTP/1.1 规范定义了如下 47 种首部字段。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e2e8f304b67fc5e08356e5e08ab1f1e7.png)
-### 2.5 非 HTTP/1.1 首部字段 
+#### 6.2.5 非 HTTP/1.1 首部字段 
 
 在 HTTP 协议通信交互中使用到的首部字段，不限于 RFC2616 中定 义的 47 种首部字段。还有 Cookie、Set-Cookie 和 Content-Disposition 等在其他 RFC 中定义的首部字段，它们的使用频率也很高。 
 
 这些非正式的首部字段统一归纳在 RFC4229 HTTP Header Field Registrations 中。
 
-### 2.6 End-to-end 首部和 Hop-by-hop 首部
+#### 6.2.6 End-to-end 首部和 Hop-by-hop 首部
 
 HTTP 首部字段将定义成缓存代理和非缓存代理的行为，分成 2 种类型。 
 
@@ -896,11 +896,11 @@ HTTP 首部字段将定义成缓存代理和非缓存代理的行为，分成 2 
 - TE 
 - Transfer-Encoding 
 - Upgrade
-## 3、HTTP/1.1 通用首部字段
+### 6.3 3、HTTP/1.1 通用首部字段
 
 通用首部字段是指，请求报文和响应报文双方都会使用的首部。
 
-### 3.1 Cache-Control
+#### 6.3.1 Cache-Control
 
 通过指定首部字段 Cache-Control 的指令，就能操作缓存的工作机 制。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8596fb862640b02bbe7bba28ce965400.png)
@@ -911,7 +911,7 @@ HTTP 首部字段将定义成缓存代理和非缓存代理的行为，分成 2 
 Cache-Control 指令一览 可用的指令按请求和响应分类如下所示。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c88db90041c53b947e895fc83a0dd74e.png)
 
-#### 3.1.1 表示是否能缓存的指令
+##### 6.3.1.1 表示是否能缓存的指令
 
 `public 指令 `
 - Cache-Control: public 当指定使用 public 指令时，则明确表明其他用户也可利用缓存。 
@@ -931,7 +931,7 @@ Cache-Control 指令一览 可用的指令按请求和响应分类如下所示�
 
 - 由服务器返回的响应中，若报文首部字段 Cache-Control 中对 no-cache 字段名具体指定参数值，那么客户端在接收到这个被指定参数值的首部字段对应的响应报文后，就不能使用缓存。换言之，`无参数值的首部字段可以使用缓存。只能在响应指令中指定该参数`。
 
-#### 3.1.2 控制可执行缓存的对象的指令
+##### 6.3.1.2 控制可执行缓存的对象的指令
 
 `no-store 指令 `
 Cache-Control: no-store ==当使用 no-store 指令时，暗示请求（和对应的响应）或响应中包含 机密信息==。 
@@ -942,7 +942,7 @@ Cache-Control: no-store ==当使用 no-store 指令时，暗示请求（和对�
 
 因此，该指令规定缓存不能在本地存储请求或响应的任一部分。
 
-#### 3.1.3 指定缓存期限和认证的指令
+##### 6.3.1.3 指定缓存期限和认证的指令
 
 `s-maxage 指令 `
 - Cache-Control: s-maxage=604800（单位 ：秒）
@@ -984,13 +984,13 @@ Cache-Control: no-store ==当使用 no-store 指令时，暗示请求（和对�
 - 使用 no-transform 指令规定无论是在请求还是响应中，缓存都不能改 变实体主体的媒体类型。
 - 这样做可防止缓存或代理压缩图片等类似操作。
 
-#### 3.1.4 Cache-Control 扩展
+##### 6.3.1.4 Cache-Control 扩展
 
 `cache-extension token`
 - Cache-Control: private, community="UCI"
 - 通过 cache-extension 标记（token），可以扩展 Cache-Control 首部字 段内的指令。
 - 如上例，Cache-Control 首部字段本身没有 community 这个指令。借助 extension tokens 实现了该指令的添加。如果缓存服务器不能理解 community 这个新指令，就会直接忽略。因此，extension tokens 仅对 能理解它的缓存服务器来说是有意义的。
-### 3.2 Connection
+#### 6.3.2 Connection
 
 Connection 首部字段具备如下两个作用。
 - 控制不再转发给代理的首部字段
@@ -1003,7 +1003,7 @@ Connection 首部字段具备如下两个作用。
 - HTTP/1.1 版本的默认连接都是持久连接。为此，客户端会在持 久连接上连续发送请求。当服务器端想明确断开连接时，则指定 Connection 首部字段的值为 Close。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dcb511cf7eaadb699398e4a247f3d520.png)
 - HTTP/1.1 之前的 HTTP 版本的默认连接都是非持久连接。为 此，如果想在旧版本的 HTTP 协议上维持持续连接，则需要指定 Connection 首部字段的值为 Keep-Alive。
 - 如上图①所示，客户端发送请求给服务器时，服务器端会像上图 ②那样加上首部字段 Keep-Alive 及首部字段 Connection 后返回 响应。
-### 3.3 Date
+#### 6.3.3 Date
 
 首部字段 Date 表明创建 HTTP 报文的日期和时间。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1cb5831b8b20e266e4abbe76822855f7.png)
 HTTP/1.1 协议使用在 RFC1123 中规定的日期时间的格式，如下 示 例。
@@ -1014,7 +1014,7 @@ HTTP/1.1 协议使用在 RFC1123 中规定的日期时间的格式，如下 示 
 
 除此之外，还有一种格式。它与 C 标准库内的 asctime() 函数的输出 格式一致。
 - `Date: Tue Jul 03 04:40:59 2012`
-### 3.4 Pragma
+#### 6.3.4 Pragma
 
 Pragma 是 HTTP/1.1 之前版本的历史遗留字段，仅作为与 HTTP/1.0 的向后兼容而定义。 
 
@@ -1022,13 +1022,13 @@ Pragma 是 HTTP/1.1 之前版本的历史遗留字段，仅作为与 HTTP/1.0 �
 - Pragma: no-cache 
 - 该首部字段属于通用首部字段，但==只用在客户端发送的请求==中。客户端会要求所有的中间服务器不返回缓存的资源。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0728ddb735970cf34f7628041a2cd35d.png)
 - 所有的中间服务器如果都能以 HTTP/1.1 为基准，那直接采用 Cache-Control: no-cache 指定缓存的处理方式是最为理想的。但要整体掌握 全部中间服务器使用的 HTTP 协议版本却是不现实的。因此，发送的 请求会同时含有下面两个首部字段。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3545fbcf6584de280924dadc5144e6d8.png)
-### 3.5 Trailer
+#### 6.3.5 Trailer
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/91e814ab4612aafb0d47395b67d92a0f.png)
 
 首部字段 Trailer 会事先说明在报文主体后记录了哪些首部字段。该 首部字段可应用在 HTTP/1.1 版本分块传输编码时。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/976f663038acaa722ba06d91df26ad75.png)
 以上用例中，指定首部字段 Trailer 的值为 Expires，在报文主体之后 （分块长度 0 之后）出现了首部字段 Expires。
-### 3.6 Transfer-Encoding
+#### 6.3.6 Transfer-Encoding
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0ea634936393e8c50f0f28ce69af2513.png)
 
@@ -1037,14 +1037,14 @@ Pragma 是 HTTP/1.1 之前版本的历史遗留字段，仅作为与 HTTP/1.0 �
 HTTP/1.1 的传输编码方式仅对分块传输编码有效。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1ee32c5bea0a41947b41db5b1af807ba.png)
 以上用例中，正如在首部字段 Transfer-Encoding 中指定的那样，有效 使用分块传输编码，且分别被分成 3312 字节和 914 字节大小的分块 数据。
 
-### 3.7 Upgrade
+#### 6.3.7 Upgrade
 
 首部字段 Upgrade 用于检测 HTTP 协议及其他协议是否可使用更高的 版本进行通信，其参数值可以用来指定一个完全不同的通信协议。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5ba182a8c259b9571849881257cc7527.png)
 上图用例中，首部字段 Upgrade 指定的值为 TLS/1.0。请注意此处两 个字段首部字段的对应关系，Connection 的值被指定为 Upgrade。 Upgrade 首部字段产生作用的 Upgrade 对象仅限于客户端和邻接服务 器之间。因此，使用首部字段 Upgrade 时，还需要额外指定 Connection:Upgrade。
 
 对于附有首部字段 Upgrade 的请求，服务器可用 101 Switching Protocols 状态码作为响应返回。
 
-### 3.8 Via
+#### 6.3.8 Via
 
 使用首部字段 Via 是为了追踪客户端与服务器之间的请求和响应报文的`传输路径`。 
 
@@ -1058,7 +1058,7 @@ HTTP/1.1 的传输编码方式仅对分块传输编码有效。![|380](https://m
 
 Via 首部是为了追踪传输路径，所以经常会和 TRACE 方法一起使 用。比如，代理服务器接收到由 TRACE 方法发送过来的请求（其中 Max-Forwards: 0）时，代理服务器就不能再转发该请求了。这种情况 下，代理服务器会将自身的信息附加到 Via 首部后，返回该请求的响 应。
 
-### 3.9 Warning
+#### 6.3.9 Warning
 
 HTTP/1.1 的 Warning 首部是从 HTTP/1.0 的响应首部（Retry-After）演变过来的。该首部通常会告知用户一些与缓存相关的问题的警告。 
 - Warning: 113 gw.hackr.jp:8080 "Heuristic expiration" Tue, 03 Jul 2012 05:09:44 GMT 
@@ -1069,11 +1069,11 @@ Warning 首部的格式如下。最后的日期时间部分可省略。
 HTTP/1.1 中定义了 7 种警告。警告码对应的警告内容仅推荐参考。 另外，警告码具备扩展性，今后有可能追加新的警告码。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ae89b7165c1a4e099c152b93d705dcfd.png)
-## 4、请求首部字段
+### 6.4 4、请求首部字段
 
 请求首部字段是从客户端往服务器端发送请求报文中所使用的字段， 用于补充请求的附加信息、客户端信息、对响应内容相关的优先级等 内容。
 
-### 4.1 Accept
+#### 6.4.1 Accept
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f27d1901134814fdfd402ab805207017.png)
 
@@ -1091,7 +1091,7 @@ HTTP/1.1 中定义了 7 种警告。警告码对应的警告内容仅推荐参�
 若想要给显示的媒体类型增加优先级，则使用 q= 来额外表示权重值 ，用分号（;）进行分隔。权重值 q 的范围是 0~1（可精确到小数点 后 3 位），且 1 为最大值。不指定权重 q 值时，默认权重为 q=1.0。
 
 当服务器提供多种内容时，将会首先返回权重值最高的媒体类型。
-### 4.2 Accept-Charset
+#### 6.4.2 Accept-Charset
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ca48f2349db43428c56458146989997.png)
 
@@ -1099,7 +1099,7 @@ HTTP/1.1 中定义了 7 种警告。警告码对应的警告内容仅推荐参�
 
 该首部字段应用于内容协商机制的服务器驱动协商。
 
-### 4.3 Accept-Encoding
+#### 6.4.3 Accept-Encoding
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cc9726deebac8b55aba115823615b55b.png)
 
@@ -1113,21 +1113,21 @@ HTTP/1.1 中定义了 7 种警告。警告码对应的警告内容仅推荐参�
 - `identity` 不执行压缩或不会变化的默认编码格式 
 
 采用权重 q 值来表示相对优先级，这点与首部字段 Accept 相同。另 外，也可使用星号`（*）`作为通配符，指定任意的编码格式。
-### 4.4 Accept-Language
+#### 6.4.4 Accept-Language
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0e3911699ea11c8357460c84e6b7c40b.png)
 
 `首部字段 Accept-Language 用来告知服务器用户代理能够处理的自然语言集（指中文或英文等），以及自然语言集的相对优先级`。可一次 指定多种自然语言集。 
 
 和 Accept 首部字段一样，按权重值 q 来表示相对优先级。在上述图 例中，客户端在服务器有中文版资源的情况下，会请求其返回中文版 对应的响应，没有中文版时，则请求返回英文版响应。
-### 4.5 Authorization
+#### 6.4.5 Authorization
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b722b4a5779138294f2598a2dc1145e7.png)
 
 `首部字段 Authorization 是用来告知服务器，用户代理的认证信息（证书值）`。通常，想要通过服务器认证的用户代理会在接收到返回的 401 状态码响应后，把首部字段 Authorization 加入请求中。共用缓存在接收到含有 Authorization 首部字段的请求时的操作处理会略有差异。 
 
 有关 HTTP 访问认证及 Authorization 首部字段，稍后的章节还会详细 说明。另外，读者也可参阅 RFC2616。
-### 4.6 Expect
+#### 6.4.6 Expect
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9ff86c9ae3b6d8c3c40f7773d8467c4a.png)
 
@@ -1136,12 +1136,12 @@ HTTP/1.1 中定义了 7 种警告。警告码对应的警告内容仅推荐参�
 客户端可以利用该首部字段，写明所期望的扩展。虽然 HTTP/1.1 规 范只定义了 100-continue（状态码 100 Continue 之意）。 
 
 等待状态码 100 响应的客户端在发生请求时，需要指定 Expect:100- continue。
-### 4.7 From
+#### 6.4.7 From
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f82b2c1a45bdf35dd7978dd6e789758d.png)
 
 `首部字段 From 用来告知服务器使用用户代理的用户的电子邮件地址`。通常，其使用目的就是为了显示搜索引擎等用户代理的负责人的 电子邮件联系方式。使用代理时，应尽可能包含 From 首部字段（但 可能会因代理不同，将电子邮件地址记录在 User-Agent 首部字段 内）。
-### 4.8 Host
+#### 6.4.8 Host
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6099231a2e24a60dd2fc2626f5d26965.png)
 
@@ -1151,7 +1151,7 @@ HTTP/1.1 中定义了 7 种警告。警告码对应的警告内容仅推荐参�
 首部字段 Host 和以单台服务器分配多个域名的虚拟主机的工作机制 有很密切的关联，这是首部字段 Host 必须存在的意义。 
 
 请求被发送至服务器时，请求中的主机名会用 IP 地址直接替换解 决。但如果这时，相同的 IP 地址下部署运行着多个域名，那么服务 器就会无法理解究竟是哪个域名对应的请求。因此，就需要使用首部 字段 Host 来明确指出请求的主机名。若服务器未设定主机名，那直 接发送一个空值即可。如下所示。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b7eb5c50abb9ce9b73da8c692df57856.png)
-### 4.9 If-Match
+#### 6.4.9 If-Match
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ad9185ef897831e9b81ecc59c36821db.png)
 
@@ -1163,14 +1163,14 @@ HTTP/1.1 中定义了 7 种警告。警告码对应的警告内容仅推荐参�
 服务器会比对 If-Match 的字段值和资源的 ETag 值，仅当两者一致 时，才会执行请求。反之，则返回状态码 412 Precondition Failed 的响应。 
 
 还可以使用`星号（*）`指定 If-Match 的字段值。针对这种情况，服务 器将会忽略 ETag 的值，只要资源存在就处理请求。
-### 4.10 If-Modified-Since
+#### 6.4.10 If-Modified-Since
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/31db1be536354cd8b95d5447b4ad1df2.png)
 
 首部字段 If-Modified-Since，属附带条件之一，它会告知服务器若 If-Modified-Since 字段值早于资源的更新时间，则希望能处理该请求。 而在指定 If-Modified-Since 字段值的日期时间之后，如果请求的资源 都没有过更新，则返回状态码 304 Not Modified 的响应。 
 
 If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效性。 获取资源的更新日期时间，可通过确认首部字段 Last-Modified 来确定。
-### 4.11 If-None-Match
+#### 6.4.11 If-None-Match
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d292542b7e5f106f9d6e1d536e68a23.png)
 
@@ -1178,7 +1178,7 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 
 在 GET 或 HEAD 方法中使用首部字段 If-None-Match 可获取最新的资 源。因此，这与使用首部字段 If-Modified-Since 时有些类似。
 
-### 4.12 If-Range
+#### 6.4.12 If-Range
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e222f50ae2f10483612179c17799932e.png)
 
@@ -1187,13 +1187,13 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d01a50d9e4686116b782484de7285db1.png)
 
 下面我们思考一下不使用首部字段 If-Range 发送请求的情况。服务器 端的资源如果更新，那客户端持有资源中的一部分也会随之无效，当然，范围请求作为前提是无效的。这时，服务器会暂且以状态码 412 Precondition Failed 作为响应返回，其目的是催促客户端再次发送请求。这样一来，与使用首部字段 If-Range 比起来，就需要花费两倍的功夫。
-### 4.13 If-Unmodified-Since
+#### 6.4.13 If-Unmodified-Since
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bb2157b4d4b8cc06704e956820e580e3.png)
 
 首部字段 If-Unmodified-Since 和首部字段 If-Modified-Since 的作用相反。它的作用的是告知服务器，指定的请求资源只有在字段值内指定的日期时间之后，未发生更新的情况下，才能处理请求。如果在指定日期时间后发生了更新，则以状态码 412 Precondition Failed 作为响应 返回。
 
-### 4.14 Max-Forwards
+#### 6.4.14 Max-Forwards
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7889be675b5bf5dad5221cbd291062e5.png)
 
@@ -1206,21 +1206,21 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bb07d83721ae3002b07a7dd492d4c170.png)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/608c143c7bff727da9e523fdbd5e65c6.png)
-### 4.15 Proxy-Authorization
+#### 6.4.15 Proxy-Authorization
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0a234a32cfe82184018a58997abde71b.png)
 
 接收到从代理服务器发来的认证质询时，客户端会发送包含首部字段 Proxy-Authorization 的请求，以告知服务器认证所需要的信息。 
 
 这个行为是与客户端和服务器之间的 HTTP 访问认证相类似的，不同之处在于，认证行为发生在客户端与代理之间。客户端与服务器之间 的认证，使用首部字段 Authorization 可起到相同作用。有关 HTTP 访问认证，后面的章节会作详尽阐述。
-### 4.16 Range
+#### 6.4.16 Range
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7cfd4d2d6c999e41952679b6c86687ec.png)
 
 对于只需获取部分资源的范围请求，包含首部字段 Range 即可告知服务器资源的指定范围。上面的示例表示请求获取从第 5001 字节至第 10000 字节的资源。 
 
 接收到附带 Range 首部字段请求的服务器，会在处理请求之后返回状态码为 206 Partial Content 的响应。无法处理该范围请求时，则会返回状态码 200 OK 的响应及全部资源。
-### 4.17 Referer
+#### 6.4.17 Referer
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/68fbb600bc56e26c32a2f690c5a423da.png)
 
@@ -1229,14 +1229,14 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 因为原始资源的 URI 中的查询字符串可能含有 ID 和密码等保密信 息，要是写进 Referer 转发给其他服务器，则有可能导致保密信息的泄露。 
 
 另外，Referer 的正确的拼写应该是 Referrer，但不知为何，大家一直沿用这个错误的拼写。
-### 4.18 TE
+#### 6.4.18 TE
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/570c20aa025b9b74a502a2c66ee7922c.png)
 
 首部字段 TE 会告知服务器客户端能够处理响应的传输编码方式及相 对优先级。它和首部字段 Accept-Encoding 的功能很相像，但是用于传输编码。 
 
 首部字段 TE 除指定传输编码之外，还可以指定伴随 trailer 字段的分块传输编码的方式。应用后者时，只需把 trailers 赋值给该字段值。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/54f8bc8f976fc4bd1742f353b6c0632a.png)
-### 4.19 User-Agent
+#### 6.4.19 User-Agent
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/981e973acc4f8cebeb3d0e3550ef7807.png)
 
@@ -1244,25 +1244,25 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 
 由网络爬虫发起请求时，有可能会在字段内添加爬虫作者的电子邮件 地址。此外，如果请求经过代理，那么中间也很可能被添加上代理服 务器的名称。
 
-## 5、响应首部字段
+### 6.5 5、响应首部字段
 
 响应首部字段是由服务器端向客户端返回响应报文中所使用的字段， 用于补充响应的附加信息、服务器信息，以及对客户端的附加要求等 信息。
 
-### 5.1 Accept-Ranges
+#### 6.5.1 Accept-Ranges
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dad708c312b2aa297108459fc4789ae7.png)
 
 首部字段 Accept-Ranges 是用来告知客户端服务器`是否能处理范围请求`，以指定获取服务器端某个部分的资源。 
 
 可指定的字段值有两种，可处理范围请求时指定其为 bytes，反之则 指定其为 none。
-### 5.2 Age
+#### 6.5.2 Age
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cdb59fe20c51c826cf58aeeecc2e7743.png)
 
 首部字段 Age 能告知客户端，源服务器在多久前创建了响应。字段值的单位为秒。 
 
 若创建该响应的服务器是缓存服务器，Age 值是指缓存后的响应再次发起认证到认证完成的时间值。代理创建响应时必须加上首部字段 Age。
-### 5.3 ETag
+#### 6.5.3 ETag
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/283ed17eccf862774aaee0d6932df88d.png)
 
@@ -1277,7 +1277,7 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 `强 ETag 值和弱 Tag 值`
 - 强 ETag 值，不论实体发生多么细微的变化都会改变其值。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f18f741aee998ce5fa1f6ea2ee8ddea8.png)
 - 弱 ETag 值只用于提示资源是否相同。只有资源发生了根本改变，产 生差异时才会改变 ETag 值。这时，会在字段值最开始处附加 W/。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8e9ff31cdae902e9a10e3e4d0f77b303.png)
-### 5.4 Location
+#### 6.5.4 Location
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/78b744a573977b7bd1b7e20855143998.png)
 
@@ -1287,28 +1287,28 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 
 几乎所有的浏览器在接收到包含首部字段 Location 的响应后，都会强制性地尝试对已提示的重定向资源的访问。
 
-### 5.5 Proxy-Authenticate
+#### 6.5.5 Proxy-Authenticate
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7df2b848e66a8a1a294611535e042714.png)
 
 首部字段 Proxy-Authenticate 会把由`代理服务器所要求的认证信息发送给客户端`。 
 
 它与客户端和服务器之间的 HTTP 访问认证的行为相似，不同之处在于其认证行为是在客户端与代理之间进行的。而客户端与服务器之间 进行认证时，首部字段 WWW-Authorization 有着相同的作用。有关 HTTP 访问认证，后面的章节会再进行详尽阐述。
-### 5.6 Retry-After
+#### 6.5.6 Retry-After
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1c71272cfdc44a640c3fe21523e34966.png)
 
 首部字段 Retry-After 告知客户端应该在多久之后再次发送请求。主要 配合状态码 503 Service Unavailable 响应，或 3xx Redirect 响应一起使用。 
 
 字段值可以指定为具体的日期时间（Wed, 04 Jul 2012 06：34：24 GMT 等格式），也可以是创建响应后的秒数。
-### 5.7 Server
+#### 6.5.7 Server
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2109b1efbddaa3947af883d4aeb2e41b.png)
 
 首部字段 Server 告知客户端当前服务器上安装的 HTTP 服务器应用程 序的信息。不单单会标出服务器上的软件应用名称，还有可能包括版 本号和安装时启用的可选项。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3e99fbbff8509419f5aec4cac2cf4d87.png)
-### 5.8 Vary
+#### 6.5.8 Vary
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a4c554f35aafd8a30f9c96e98198af1f.png)
 
@@ -1318,7 +1318,7 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 首部字段 Vary 可对缓存进行控制。源服务器会向代理服务器传达关 于本地缓存使用方法的命令。 
 
 从代理服务器接收到源服务器返回包含 Vary 指定项的响应之后，若 再要进行缓存，仅对请求中含有相同 Vary 指定首部字段的请求返回 缓存。即使对相同资源发起请求，但由于 Vary 指定的首部字段不相 同，因此必须要从源服务器重新获取资源。
-### 5.9 WWW-Authenticate
+#### 6.5.9 WWW-Authenticate
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/534965e2dd753474eac445f188db8020.png)
 
@@ -1326,17 +1326,17 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 
 上述示例中，realm 字段的字符串是为了辨别请求 URI 指定资源所受到的保护策略。有关该首部，请参阅本章之后的内容。
 
-## 6、实体首部字段
+### 6.6 6、实体首部字段
 
 实体首部字段是包含在请求报文和响应报文中的实体部分所使用的首 部，用于补充内容的更新时间等与实体相关的信息。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/444f656b8817e83f06e30693ae61ff0c.png)
-### 6.1 Allow
+#### 6.6.1 Allow
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b69a1267d53737411a8aaa2be4d203e7.png)
 
 首部字段 Allow 用于通知客户端能够支持 Request-URI 指定资源的所 有 HTTP 方法。当服务器接收到不支持的 HTTP 方法时，会以状态码 405 Method Not Allowed 作为响应返回。与此同时，还会把所有能支 持的 HTTP 方法写入首部字段 Allow 后返回。
-### 6.2 Content-Encoding
+#### 6.6.2 Content-Encoding
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6b3a0c661498ddb83616b0d80406e94a.png)
 
@@ -1344,24 +1344,24 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e42391efaae38cea5d6afd75ac1ebd0d.png)
 
 主要采用以下 4 种内容编码的方式。（各方式的说明请参考 6.4.3 节 Accept-Encoding 首部字段）。
-### 6.3 Content-Language
+#### 6.6.3 Content-Language
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e6415baa26b00fd605a99bda206af110.png)
 
 首部字段 Content-Language 会告知客户端，实体主体使用的自然语言 （指中文或英文等语言）。
-### 6.4 Content-Length
+#### 6.6.4 Content-Length
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b7bf0cf2f0cdb7c0a455b154e299d0cd.png)
 
 首部字段 Content-Length 表明了实体主体部分的大小（单位是字 节）。对实体主体进行内容编码传输时，不能再使用 Content-Length 首部字段。由于实体主体大小的计算方法略微复杂，所以在此不再展 开。读者若想一探究竟，可参考 RFC2616 的 4.4。
-### 6.5 Content-Location
+#### 6.6.5 Content-Location
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/035af624081a18e4acc8195965ca0ac0.png)
 
 首部字段 Content-Location 给出与报文主体部分相对应的 URI。和首部字段 Location 不同，Content-Location 表示的是报文主体返回资源对应的 URI。 
 
 比如，对于使用首部字段 Accept-Language 的服务器驱动型请求，当 返回的页面内容与实际请求的对象不同时，首部字段 Content-Location 内会写明 URI。（访问 http://www.hackr.jp/ 返回的对象却是 http://www.hackr.jp/index-ja.html 等类似情况）
-### 6.6 Content-MD5
+#### 6.6.6 Content-MD5
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/586f61fcd7253377f6f62d7f6db363d6.png)
 
@@ -1370,19 +1370,19 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 对报文主体执行 MD5 算法获得的 128 位二进制数，再通过 Base64 编 码后将结果写入 Content-MD5 字段值。由于 HTTP 首部无法记录二进制值，所以要通过 Base64 编码处理。为确保报文的有效性，作为接收方的客户端会对报文主体再执行一次相同的 MD5 算法。计算出的值与字段值作比较后，即可判断出报文主体的准确性。 
 
 采用这种方法，对内容上的偶发性改变是无从查证的，也无法检测出 恶意篡改。其中一个原因在于，内容如果能够被篡改，那么同时意味 着 Content-MD5 也可重新计算然后被篡改。所以处在接收阶段的客户 端是无法意识到报文主体以及首部字段 Content-MD5 是已经被篡改过的。
-### 6.7 Content-Range
+#### 6.6.7 Content-Range
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e28d0e37b2a9f3acb842e3656ba97217.png)
 
 针对范围请求，返回响应时使用的首部字段 Content-Range，能告知客 户端作为响应返回的实体的哪个部分符合范围请求。字段值以字节为 单位，表示当前发送部分及整个实体大小。
-### 6.8 Content-Type
+#### 6.6.8 Content-Type
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ecceaa2512715574ede9305c5d04eee5.png)
 
 首部字段 Content-Type 说明了实体主体内对象的媒体类型。和首部字 段 Accept 一样，字段值用 type/subtype 形式赋值。 
 
 参数 charset 使用 iso-8859-1 或 euc-jp 等字符集进行赋值。
-### 6.9 Expires
+#### 6.6.9 Expires
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/71f488cab35c29a3319790bda7359977.png)
 
@@ -1391,12 +1391,12 @@ If-Modified-Since 用于确认代理或客户端拥有的本地资源的有效�
 源服务器不希望缓存服务器对资源缓存时，最好在 Expires 字段内写入与首部字段 Date 相同的时间值。 
 
 但是，当首部字段 Cache-Control 有指定 max-age 指令时，比起首部字段 Expires，会优先处理 max-age 指令。
-### 6.10 Last-Modified
+#### 6.6.10 Last-Modified
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9753dc8603b1d9f00c3c7cc2ef392d31.png)
 
 首部字段 Last-Modified 指明资源最终修改的时间。一般来说，这个值就是 Request-URI 指定资源被修改的时间。但类似使用 CGI 脚本进 行动态数据处理时，该值有可能会变成数据最终修改时的时间。
-## 7、为Cookie服务的首部字段
+### 6.7 7、为Cookie服务的首部字段
 
 管理服务器与客户端之间状态的 Cookie，虽然没有被编入标准化 HTTP/1.1 的 RFC2616 中，但在 Web 网站方面得到了广泛的应用。 
 
@@ -1422,7 +1422,7 @@ Cookie 的工作机制是用户识别及状态管理。Web 网站为了管理用
 本节接下来就对目前使用最为广泛普及的标准进行说明。 下面的表格内列举了与 Cookie 有关的首部字段。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0811f8182526270ba7902fba1033a64d.png)
 
-### 7.1 Set-Cookie
+#### 6.7.1 Set-Cookie
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2bdc1d5c7bf48b7b4d6bc0544f0016a5.png)
 
@@ -1455,13 +1455,13 @@ Cookie 的工作机制是用户识别及状态管理。Web 网站为了管理用
 - 发送指定 HttpOnly 属性的 Cookie 的方法如下所示。 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5e98a7d17190c1e9d76e8eed1c64d7d8.png)
 - 通过上述设置，通常从 Web 页面内还可以对 Cookie 进行读取操作。 但使用 JavaScript 的 document.cookie 就无法读取附加 HttpOnly 属性后 的 Cookie 的内容了。因此，也就无法在 XSS 中利用 JavaScript 劫持 Cookie 了。 
 - 虽然是独立的扩展功能，但 Internet Explorer 6 SP1 以上版本等当下的主流浏览器都已经支持该扩展了。另外顺带一提，该扩展并非是为了防止 XSS 而开发的。
-### 7.2 Cookie
+#### 6.7.2 Cookie
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/abd8cfa4f0e5dd219ece673b062dbc94.png)
 
 首部字段 Cookie 会告知服务器，当客户端想获得 HTTP 状态管理支 持时，就会在请求中包含从服务器接收到的 Cookie。接收到多个 Cookie 时，同样可以以多个 Cookie 形式发送。
 
-## 8、其他首部字段
+### 6.8 8、其他首部字段
 
 HTTP 首部字段是可以自行扩展的。所以在 Web 服务器和浏览器的应 用上，会出现各种非标准的首部字段。 
 
@@ -1471,7 +1471,7 @@ HTTP 首部字段是可以自行扩展的。所以在 Web 服务器和浏览器�
 - DNT 
 - P3P
 
-### 8.1 X-Frame-Options 
+#### 6.8.1 X-Frame-Options 
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ba62145bb823315c737a7b6d7040deb5.png)
 
@@ -1486,7 +1486,7 @@ HTTP 首部字段是可以自行扩展的。所以在 Web 服务器和浏览器�
 能在所有的 Web 服务器端预先设定好 X-Frame-Options 字段值是最理想的状态。 
 
 对 apache2.conf 的配置实例![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7ad0f9c7df80d9b68682e399ba4b74f9.png)
-### 8.2 X-XSS-Protection 
+#### 6.8.2 X-XSS-Protection 
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/15497a530dc0267d928610ad4635faa1.png)
 
@@ -1495,7 +1495,7 @@ HTTP 首部字段是可以自行扩展的。所以在 Web 服务器和浏览器�
 首部字段 X-XSS-Protection 可指定的字段值如下。 
 - 0 ：将 XSS 过滤设置成无效状态 
 - 1 ：将 XSS 过滤设置成有效状态
-### 8.3 DNT 
+#### 6.8.3 DNT 
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ffba972809a024448d9ee0b94333925c.png)
 
@@ -1506,7 +1506,7 @@ HTTP 首部字段是可以自行扩展的。所以在 Web 服务器和浏览器�
 - 1 ：拒绝被追踪 
 
 由于首部字段 DNT 的功能具备有效性，所以 Web 服务器需要对 DNT 做对应的支持。
-### 8.4 P3P
+#### 6.8.4 P3P
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/47254803df048f20c18a3ec7eb89aa77.png)
 

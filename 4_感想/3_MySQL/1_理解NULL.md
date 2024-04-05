@@ -1,3 +1,4 @@
+
 - 理解 = 、<>、 <=>、 IS NULL、 IS NOT NULL
 ```mysql
 SELECT 10 = 10		# 1

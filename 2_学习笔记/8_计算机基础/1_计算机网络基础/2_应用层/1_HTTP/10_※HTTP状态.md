@@ -3,7 +3,7 @@ HTTP 是“无状态”的，这既是优点也是缺点。优点是服务器没
 
 好在 HTTP 协议是可扩展的，后来发明的 Cookie 技术、Session和Token技术，给 HTTP 增加了“记忆能力”。
 
-## 1、什么是 Cookie？
+## 1 什么是 Cookie？
 
 不知道你有没有看过克里斯托弗·诺兰导演的一部经典电影《记忆碎片》（Memento），里面的主角患有短期失忆症，记不住最近发生的事情。
 
@@ -27,7 +27,7 @@ Cookie总是保存在客户端中，按在客户端中的存储位置，可分�
 - 所以，按存在时间，可分为非持久Cookie和持久Cookie。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a9599c864ee60acc7ab1175215dde8ee.png)
 
-## 2、Cookie 的工作过程
+## 2 Cookie 的工作过程
 
 那么，Cookie 这张小纸条是怎么传递的呢？
 
@@ -61,7 +61,7 @@ Cookie总是保存在客户端中，按在客户端中的存储位置，可分�
 
 如果换成 Firefox 等其他浏览器，因为 Cookie 是存在 Chrome 里的，所以服务器就又“蒙圈”了，不知道你是谁，就会给 Firefox 再贴上小纸条。
 
-## 3、Cookie 的属性
+## 3 Cookie 的属性
 
 说到这里，你应该知道了，`Cookie 就是服务器委托浏览器存储在客户端里的一些数据，而这些数据通常都会记录用户的关键识别信息`。所以，就需要在“key=value”外再用一些手段来保护，防止外泄或窃取，这些手段就是 Cookie 的属性。
 
@@ -81,7 +81,7 @@ Expires 和 Max-Age 可以同时出现，两者的失效时间可以一致，也
 
 比如在这个例子里，Expires 标记的过期时间是“GMT 2019 年 6 月 7 号 8 点 19 分”，而 Max-Age 则只有 10 秒，如果现在是 6 月 6 号零点，那么 Cookie 的实际有效期就是“6 月 6 号零点过 10 秒”。
 
-### 3.2  Cookie 的作用域
+### 3.2 Cookie 的作用域
 
 其次，我们需要**设置 Cookie 的作用域**，让浏览器仅发送给特定的服务器和 URI，避免被其他网站盗用。
 
@@ -107,7 +107,7 @@ Chrome 开发者工具是查看 Cookie 的有力工具，在“Network-Cookies�
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a97cff8baa6c0aed74feac898cfd06f4.png)
 
-## 4、Cookie 的应用
+## 4 Cookie 的应用
 
 现在回到我们最开始的话题，有了 Cookie，服务器就有了“记忆能力”，能够保存“状态”，那么应该如何使用 Cookie 呢？
 
@@ -125,7 +125,7 @@ Cookie 的另一个常见用途是**广告跟踪**。
 
 为了防止滥用 Cookie 搜集用户隐私，互联网组织相继提出了 DNT（Do Not Track）和 P3P（Platform for Privacy Preferences Project），但实际作用不大。
 
-## 5、Session
+## 5 Session
 
 ### 5.1 Session机制的概念
 
@@ -182,7 +182,7 @@ session的实现主要两种方式：cookie与url重写，而cookie是首选方�
 - `牺牲集群的分区容忍性（Partition Tolerance）`，让普通的服务节点中不再保留状态，将上下文集中放在一个所有服务节点都能访问到的数据节点中进行存储。此时的矛盾是数据节点就成为了单点，一旦数据节点损坏或出现网络分区，整个集群都不再能提供服务。
 
 通过前面章节的内容，我们已经知道`只要在分布式系统中共享信息，CAP 就不可兼得，所以分布式环境中的状态管理一定会受到 CAP 的局限，无论怎样都不可能完美`。但如果只是解决分布式下的认证授权问题，并顺带解决少量状态的问题，就不一定只能依靠共享信息去实现。这句话的言外之意是提醒读者，接下来的 JWT 令牌与 Cookie-Session 并不是完全对等的解决方案，它只用来处理认证授权问题，充其量能携带少量非敏感的信息，只是 Cookie-Session 在认证授权问题上的替代品，而不能说 JWT 要比 Cookie-Session 更加先进，更不可能全面取代 Cookie-Session 机制。
-## 6、Token
+## 6 Token
 
 Token是令牌的意思，由服务端生成并发放给客户端，具有时效性的一种验证身份的手段。
 
@@ -225,7 +225,7 @@ Token避免了Session机制带来的海量信息存储问题，也避免了Cooki
 - Token机制的安全性依赖于服务端加密算法和密钥的安全性
 - Token机制也不是万金油
 
-## 7、JWT
+## 7 JWT
 
 JSON Web Token（缩写 JWT）是目前最流行的跨域认证解决方案。
 
@@ -386,7 +386,7 @@ Authorization: Bearer <token>
 
 （6）为了减少盗用，JWT 不应该使用 HTTP 协议明码传输，要使用 HTTPS 协议传输。
 
-## 8、小结
+## 8 小结
 
 今天我们学习了 HTTP 里的 Cookie 知识。虽然现在已经出现了多种 Local Web Storage 技术，能够比 Cookie 存储更多的数据，但 Cookie 仍然是最通用、兼容性最强的客户端数据存储手段。
 
@@ -402,7 +402,7 @@ Cookie侧重于信息的存储，主要是客户端行为，Session和Token侧�
 
 `注意`：因为 Cookie 并不属于 HTTP 标准（RFC6265，而不是 RFC2616/7230），所以语法上与其他字段不太一致，使用的分隔符是“;”，与 Accept 等字段的“,”不同，小心不要弄错了。
 
-## 课下作业
+## 9 课下作业
 
 1. 如果 Cookie 的 Max-Age 属性设置为 0，会有什么效果呢？
 2. Cookie 的好处已经很清楚了，你觉得它有什么缺点呢？

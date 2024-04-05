@@ -1,5 +1,5 @@
 
-### Tomcat的缺省端口是多少，怎么修改
+## 1 Tomcat的缺省端口是多少，怎么修改
 
 > Tomcat的缺省端口是多少，怎么修改
 
@@ -20,7 +20,7 @@
 
 到tomcat主目录下的conf/server.xml文件中修改**,把8080端口改成是8088或者是其他的
 
-### Tomcat 有哪几种Connector 运行模式(优化)？
+## 2 Tomcat 有哪几种Connector 运行模式(优化)？
 
 > tomcat 有哪几种Connector 运行模式(优化)？
 
@@ -64,13 +64,15 @@ apr模式启动起来是比较复杂的，详情可参考:[http://blog.csdn.net/
 
 对于bio,nio,nio.2的理解可参考:[http://blog.csdn.net/itismelzp/article/details/50886009](https://link.segmentfault.com/?enc=LT9EEwtkKRH8l2TTk61%2FvA%3D%3D.VhCic3LBXVu05VzcoKJan7Fz7lGeQ21dXuMVyVzlS86MrkpWhxPWsasqLDpH4SM%2BW4QHiaXyx9bSTK2E90AQuw%3D%3D)
 
-### Tomcat有几种部署方式
+## 3 Tomcat有几种部署方式
+
+### 3.1 部署方式1：
 
 1. 直接把Web项目放在webapps下，Tomcat会自动将其部署
 2. 在server.xml文件上配置`<Context>`节点，设置相关的属性即可
 3. 通过Catalina来进行配置:进入到confCatalinalocalhost文件下，创建一个xml文件，该文件的名字就是站点的名字。编写XML的方式来进行设置。
 
-#### 部署方式第二点：
+### 3.2 部署方式2：
 
 - 在其他盘符下创建一个web站点目录，并创建WEB-INF目录和一个html文件。
 
@@ -83,7 +85,7 @@ apr模式启动起来是比较复杂的，详情可参考:[http://blog.csdn.net/
 
 - 访问配置好的web站点
 
-#### 部署方式第三点：
+### 3.3 部署方式3：
 
 - 进入到confCatalinalocalhost文件下，创建一个xml文件，**该文件的名字就是站点的名字。**
 - xml文件的代码如下，**docBase是你web站点的绝对路径**

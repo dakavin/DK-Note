@@ -10,7 +10,7 @@
 这里的分支感觉上就是树上的分叉一样，会按照不同的路线生长下去。有可能以后不再相交，当然，也可能以后会不断地纠缠下去，都是有可能的。
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6336eca1c44d6fc3656a4216e310309a.png)
-## 1、Git分支
+## 1 Git分支
 
 ### 1.1 主干分支
 
@@ -82,7 +82,7 @@ Git branch -d b2
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e06ca90de06fa5bb69a81de98e4670f1.png)
 
-## 2、Git合并
+## 2 Git合并
 
 无论我们创建多少个分支，都是因为我们需要在不同的工作环境中进行工作，但是，最后都应该将所有的分支合在一起。形成一个整体。作为项目的最终结果。
 
@@ -133,7 +133,7 @@ git merge new_branch
 
 此时再次查看文件，就会发现branch.txt文件已经可以看到了。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dfd1e73f4b060e4b3dcb1b2501064a5d.png)
-## 3、Git冲突
+## 3 Git冲突
 
 在多分支并行处理时，每一个分支可能是基于不同版本的主干分支创建的。如果每隔分支都独立运行而不进行合并，就没有问题，但是如果在后续操作过程中进行合并的话，就有可能产生冲突。比如B1, B2的两个分支都是基于master分支创建出来的。B1分支如果和B2分支修改了同一份文件的话，那么在合并时，以哪一个文件为准呢，这就是所谓的冲突。
 

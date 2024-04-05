@@ -1,4 +1,4 @@
-## 1、HashMap 和 Hashtable 的区别？
+## 1 HashMap 和 Hashtable 的区别？
 
 - **线程是否安全：** `HashMap` 是非线程安全的，`Hashtable` 是线程安全的,因为 `Hashtable` 内部的方法基本都经过`synchronized` 修饰。（如果你要保证线程安全的话就使用 `ConcurrentHashMap` 吧！）；
 - **效率：** 因为线程安全的问题，`HashMap` 要比 `Hashtable` 效率高一点。另外，`Hashtable` 基本被淘汰，不要在代码中使用它；
@@ -48,7 +48,7 @@ static final int tableSizeFor(int cap) {
 		- 容量：HashMap（默认16，指定为不大于n的2次幂）；Hashtable（默认11）
 		- 扩容：HashMap（原来的2倍），Hashtable（原来的2倍加1）
 	4. `底层数据结构`：HashMap为数组+链表+红黑树，Hashtable为字典结构
-## 2、HashMap 和 HashSet 的区别？
+## 2 HashMap 和 HashSet 的区别？
 
 如果你看过 `HashSet` 源码的话就应该知道：`HashSet` 底层就是基于 `HashMap` 实现的。（`HashSet` 的源码非常非常少，因为除了 `clone()`、`writeObject()`、`readObject()`是 `HashSet` 自己不得不实现之外，其他方法都是直接调用 `HashMap` 中的方法。
 
@@ -62,7 +62,7 @@ static final int tableSizeFor(int cap) {
 `回答思路：`
 	1. HashSet底层是基于HashMap实现的，只是用了HashMap的Key，Value都为null；
 	2. 实现的接口、存储内容、添加元素的方法不同
-## 3、HashMap 和TreeMap 的区别？
+## 3 HashMap 和TreeMap 的区别？
 
 `TreeMap` 和`HashMap` 都继承自`AbstractMap` ，但是需要注意的是`TreeMap`它还实现了`NavigableMap`接口和`SortedMap` 接口。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/832073dbdd6a665ce6e415fa0421c526.png)
 实现 `NavigableMap` 接口让 `TreeMap` 有了对集合内元素的`搜索的能力`。
@@ -129,15 +129,15 @@ TreeMap<Person, String> treeMap = new TreeMap<>((person1, person2) -> {
 `回答思路：`
 	1. TreeMap和HashMap都继承了`AbstractMap`，但是TreeMap还实现了`NavigableMap`接口和`SortedMap`接口
 	2. 所以TreeMap还具有`元素搜索`和`元素排序`的能力
-## 4、HashSet 如何检查重复？
+## 4 HashSet 如何检查重复？
 
 `回答思路:`
 	1. 当把对象插入HashSet的时候，会调用对象的hashCode方法计算出哈希值，用于确定集合中的索引位置
 	2. 当索引处有元素时，会调用对象的equals方法判断对象(`判断的是key！！！`)是否相等
 	3. 当对象相等，则添加失败，完成检查；
-## 5、HashMap的底层实现
+## 5 HashMap的底层实现
 
-#### JDK1.8 之前
+### 5.1 JDK1.8 之前
 
 JDK1.8 之前 `HashMap` 底层是 **数组和链表** 结合在一起使用也就是 **链表散列**。HashMap 通过 key 的 `hashcode` 经过扰动函数处理过后得到 hash 值，然后通过 `(n - 1) & hash` 判断当前元素存放的位置（这里的 n 指的是数组的长度），如果当前位置存在元素的话，就判断该元素与要存入的元素的 hash 值以及 key 是否相同，如果相同的话，直接覆盖，不相同就通过拉链法解决冲突。
 
@@ -175,7 +175,7 @@ static int hash(int h) {
 所谓 **“拉链法”** 就是：将链表和数组相结合。也就是说创建一个链表数组，数组中每一格就是一个链表。若遇到哈希冲突，则将冲突的值加到链表中即可。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/81303cf17901bbbd5074f8abc85c9eb7.png)
 
-#### JDK1.8 之后
+### 5.2 JDK1.8 之后
 
 相比于之前的版本， JDK1.8 之后在解决哈希冲突时有了较大的变化，当链表长度大于阈值（默认为 8）（将链表转换成红黑树前会判断，如果当前数组的长度小于 64，那么会选择先进行数组扩容，而不是转换为红黑树）时，将链表转化为红黑树，以减少搜索时间。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/147dfa0f996caead25d3f1c213afaf97.png)
@@ -243,7 +243,7 @@ final void treeifyBin(Node<K,V>[] tab, int hash) {
 	2. 数组的每一个元素是一个单向链表
 	3. 当链表的长度大于阈值（默认为8）时，且数组长度大于64，链表会转换为红黑数
 	4. 当红黑树的元素小于6时，红黑树会退化为单向链表
-## 6、HashMap 的长度为什么是2的幂次方？
+## 6 HashMap 的长度为什么是2的幂次方？
 
 为了能让 HashMap 存取高效，尽量较少碰撞，也就是要尽量把数据分配均匀。我们上面也讲到了过了，Hash 值的范围值-2147483648 到 2147483647，前后加起来大概 40 亿的映射空间，只要哈希函数映射得比较均匀松散，一般应用是很难出现碰撞的。但问题是一个 40 亿长度的数组，内存是放不下的。所以这个散列值是不能直接拿来用的。用之前还要先做对数组的长度取模运算，得到的余数才能用来要存放的位置也就是对应的数组下标。这个数组下标的计算方法是“ `(n - 1) & hash`”。（n 代表数组长度）。这也就解释了 HashMap 的长度为什么是 2 的幂次方。
 
@@ -258,7 +258,7 @@ final void treeifyBin(Node<K,V>[] tab, int hash) {
 	3. 取余运算（n%length） 可以优化为 且运算（hash&(length-1)）
 	4. 但是且运算要求length必须是2的幂次方
 	5. 所以HashMap的长度是2的幂次方
-## 7、HashMap 多线程操作导致死循环问题
+## 7 HashMap 多线程操作导致死循环问题
 
 JDK1.7 及之前版本的 `HashMap` 在多线程环境下扩容操作可能存在死循环问题，这是由于当一个桶位中有多个元素需要进行扩容时，多个线程同时对链表进行操作，头插法可能会导致链表中的节点指向错误的位置，从而形成一个环形链表，进而使得查询元素的操作陷入死循环无法结束。
 
@@ -270,7 +270,7 @@ JDK1.7 及之前版本的 `HashMap` 在多线程环境下扩容操作可能存�
 	1. JDK1.7版本：链表插入元素的时候是头插法，在多线程情况下，添加元素且出现扩容（rehash），容易出现节点指向错误的位置，形成环形链表，从而在查询元素的时候陷入死循环；
 	2. JDK1.8版本：采用了尾插法，避免了循环链表，但是不建议多线程情况下使用HashMap，容易出现数据覆盖(丢失)问题
 	3. 建议使用ConcurrentHashMap
-## 8、HashMap 为什么线程不安全？
+## 8 HashMap 为什么线程不安全？
 
 JDK1.7 及之前版本，在多线程环境下，`HashMap` 扩容时会造成死循环和数据丢失的问题。
 
@@ -327,7 +327,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 	1. 并发的情况下容易出现死循环和数据丢失的问题；
 	2. 死循环：JDK1.7 链表头插法+扩容导致的
 	3. 数据丢失：数据覆盖、size错误
-## 9、HashMap 常见的遍历方式？
+## 9 HashMap 常见的遍历方式？
 
 [HashMap 的 7 种遍历方式与性能分析！](https://mp.weixin.qq.com/s/zQBN3UvJDhRTKP6SzcZFKw)
 
@@ -352,17 +352,17 @@ HashMap **遍历从大的方向来说，可分为以下 4 类**：
 7. 使用 Streams API 多线程的方式进行遍历。
 
 具体见：[9_HashMap的7种遍历方式](9_HashMap的7种遍历方式.md)
-## 10、ConcurrentHashMap 和 Hashtable 的区别？
+## 10 ConcurrentHashMap 和 Hashtable 的区别？
 
 
-## 11、ConcurrentHashMap 线程安全的具体实现方式/底层具体实现
+## 11 ConcurrentHashMap 线程安全的具体实现方式/底层具体实现
 
 
-## 12、JDK 1.7 和 1.8 的ConcurrentHashMap 实现有什么不同？
+## 12 JDK 1.7 和 1.8 的ConcurrentHashMap 实现有什么不同？
 
 
-## 13、ConcurrentHashMap 为什么key和value不能为null？
+## 13 ConcurrentHashMap 为什么key和value不能为null？
 
 
-## 14、如何保证 ConcurrentHashMap 复合操作的原子性呢？
+## 14 如何保证 ConcurrentHashMap 复合操作的原子性呢？
 

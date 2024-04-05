@@ -1,8 +1,8 @@
-# 一、RocketMQ安装
+## 1 RocketMQ安装
 
 了解了mq的基本概念和角色以后，我们开始安装rocketmq，建议在linux上
 
-## 3.1 下载RocketMQ
+### 1.1 下载RocketMQ
 
 下载地址：[https://rocketmq.apache.org/dowloading/releases/](https://rocketmq.apache.org/dowloading/releases/)
 
@@ -16,7 +16,7 @@
 
 
 - `注意安装RocketMQ主要有JAVA_HOME的环境变量`
-## 3.2 上传服务器
+### 1.2 上传服务器
 
 在root目录下创建文件夹
 ```shell
@@ -26,7 +26,7 @@ mkdir rocketmq
 将下载后的压缩包上传到阿里云服务器或者虚拟机中去
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1493887fc6fbe9f107ba81a742805ecb.png)
 
-## 3.3 解压
+### 1.3 解压
 
 ```shell
 unzip rocketmq-all-4.9.2-bin-release.zip
@@ -47,7 +47,7 @@ yum install unzip
 `Lib`：第三方依赖；
 `LICENSE`：授权信息;
 `NOTICE`：版本公告；
-## 3.4 配置环境变量
+### 1.4 配置环境变量
 
 ```shell
 vim /etc/profile
@@ -63,7 +63,7 @@ export NAMESRV_ADDR=阿里云公网IP:9876
 ```shell
 source /etc/profile
 ```
-## 3.5 修改nameServer的运行脚本
+### 1.5 修改nameServer的运行脚本
 
 进入bin目录下，修改runserver.sh文件,将71行和76行的Xms和Xmx等改小一点
 因为初识需要是4g，大于虚拟机的硬盘和内存大小了
@@ -76,7 +76,7 @@ vim runserver.sh
 
 保存退出
 
-## 3.6 修改broker的运行脚本
+### 1.6 修改broker的运行脚本
 
 进入bin目录下，修改runbroker.sh文件,修改67行
 
@@ -85,7 +85,7 @@ vim runserver.sh
 
 保存退出
 
-## 3.7 修改broker的配置文件
+### 1.7 修改broker的配置文件
 
 进入conf目录下，修改broker.conf文件
 ```shell
@@ -112,7 +112,7 @@ brokerIP1=阿里云公网IP
 
 `brokerIP1`：broker也需要一个公网ip，如果不指定，那么是阿里云的内网地址，我们再本地无法连接使用，`如果是本地不能写localhost，而是写本地的ip地址(公网地址)`
 
-## 3.8 启动
+### 1.8 启动
 
 首先在安装目录下创建一个logs文件夹，用于存放日志
 
@@ -139,7 +139,7 @@ nohup sh bin/mqbroker -c conf/broker.conf > ./logs/broker.log &
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/912685530a1346b8e19ab5854acb5848.png)
 
-## 3.9 关闭
+### 1.9 关闭
 
 关闭namesrv服务器
 ```shell
@@ -151,7 +151,7 @@ sh bin/mqshutdown namesrv
 sh bin/mqshutdown broker
 ```
 
-## 3.10 RocketMQ控制台的安装
+### 1.10 RocketMQ控制台的安装
 
 Rocketmq 控制台可以可视化MQ的消息发送！
 
@@ -205,9 +205,9 @@ jps -l
 	- 需要放行本机的额10100-11000之间的端口号
 	- 需要检查内存是否足够，使用free -m 查看剩余内容够不够20%
 
-# 二、 RocketMQ安装之docker
+## 2  RocketMQ安装之docker
 
-## 4.1 下载RockerMQ需要的镜像
+### 2.1 下载RockerMQ需要的镜像
 
 ```shell
 docker pull rocketmqinc/rocketmq
@@ -215,35 +215,35 @@ docker pull rocketmqinc/rocketmq
 docker pull styletang/rocketmq-console-ng
 ```
 
-## 4.2 启动NameServer服务
+### 2.2 启动NameServer服务
 
-### 4.2.1 创建NameServer数据存储路径
+#### 2.2.1 创建NameServer数据存储路径
 
 ```java
 mkdir -p /home/rocketmq/data/namesrv/logs /home/rocketmq/data/namesrv/store
 ```
 
-### 4.2.2 启动NameServer容器
+#### 2.2.2 启动NameServer容器
 
 ```shell
 docker run -d --name rmqnamesrv -p 9876:9876 -v /home/rocketmq/data/namesrv/logs:/root/logs -v /home/rocketmq/data/namesrv/store:/root/store -e "MAX_POSSIBLE_HEAP=100000000" rocketmqinc/rocketmq sh mqnamesrv
 ```
 
-## 4.3 启动Broker服务
+### 2.3 启动Broker服务
 
-### 4.3.1 创建Broker数据存储路径
+#### 2.3.1 创建Broker数据存储路径
 
 ```shell
 mkdir -p /home/rocketmq/data/broker/logs /home/rocketmq/data/broker/store
 ```
 
-### 4.3.2 创建conf配置文件目录
+#### 2.3.2 创建conf配置文件目录
 
 ```shell
 mkdir /home/rocketmq/conf
 ```
 
-### 4.3.3 在配置文件目录下创建broker.conf配置文件
+#### 2.3.3 在配置文件目录下创建broker.conf配置文件
 
 ```shell
 # 所属集群名称，如果节点较多可以配置多个
@@ -279,13 +279,13 @@ flushDiskType = ASYNC_FLUSH
 brokerIP1 = 你服务器外网ip
 ```
 
-### 4.3.4 启动Broker容器
+#### 2.3.4 启动Broker容器
 
 ```shell
 docker run -d  --name rmqbroker --link rmqnamesrv:namesrv -p 10911:10911 -p 10909:10909 -v  /home/rocketmq/data/broker/logs:/root/logs -v /home/rocketmq/data/broker/store:/root/store -v /home/rocketmq/conf/broker.conf:/opt/rocketmq-4.4.0/conf/broker.conf --privileged=true -e "NAMESRV_ADDR=namesrv:9876" -e "MAX_POSSIBLE_HEAP=200000000" rocketmqinc/rocketmq sh mqbroker -c /opt/rocketmq-4.4.0/conf/broker.conf
 ```
 
-## 4.4 启动控制台
+### 2.4 启动控制台
 
 ```shell
 docker run -d --name rmqadmin -e "JAVA_OPTS=-Drocketmq.namesrv.addr=**你的外网地址**:9876 \
@@ -295,11 +295,11 @@ docker run -d --name rmqadmin -e "JAVA_OPTS=-Drocketmq.namesrv.addr=**你的外�
 -Duser.timezone='Asia/Shanghai'" -v /etc/localtime:/etc/localtime -p 9999:8080 styletang/rocketmq-console-ng
 ```
 
-## 4.5 正常启动后的docker ps
+### 2.5 正常启动后的docker ps
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6eb384657be265c74501f11d2f8370d2.png)
 
-## 4.6 访问控制台
+### 2.6 访问控制台
 
 http://你的服务器外网ip:9999/
 

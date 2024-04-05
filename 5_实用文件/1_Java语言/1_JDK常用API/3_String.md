@@ -1,7 +1,7 @@
 
 `String` 类包括的方法可用于检查序列的单个字符、比较字符串、搜索字符串、提取子字符串、创建字符串副本并将所有字符全部转换为大写或小写。
 
-## 1、构造器
+## 1 构造器
 
 * `public String() ` ：初始化新创建的 String对象，以使其表示空字符序列。
 * ` String(String original)`： 初始化一个新创建的 `String` 对象，使其表示一个与参数相同的字符序列；换句话说，新创建的字符串是该参数字符串的副本。
@@ -47,7 +47,7 @@ public static void main(String[] args) {
 }
 ```
 
-## 2、与其他结构间的转换
+## 2 与其他结构间的转换
 
 **字符串 --> 基本数据类型、包装类：**
 
@@ -164,7 +164,7 @@ public void test01(){
     }
 ```
 
-## 3、查找
+## 3 查找
 
 （11）boolean contains(xx)：是否包含xx 
 （12）int indexOf(xx)：从前往后找当前字符串中xx，即如果有返回第一次出现的下标，要是没有返回-1 
@@ -182,7 +182,7 @@ public void test01(){
     }
 ```
 
-## 4、字符串截取
+## 4 字符串截取
 
 （16）String substring(int beginIndex) ：返回一个新的字符串，它是此字符串的从beginIndex开始截取到最后的一个子字符串。 
 （17）String substring(int beginIndex, int endIndex) ：返回一个新字符串，它是此字符串从beginIndex开始截取到endIndex(不包含)的一个子字符串。
@@ -207,7 +207,7 @@ public void test02(){
 }
 ```
 
-## 5、和字符/字符数组相关
+## 5 和字符/字符数组相关
 
 （18）char charAt(index)：返回[index]位置的字符 
 （19）char[] toCharArray()： 将此字符串转换为一个新的字符数组返回 
@@ -248,7 +248,7 @@ public void test02(){
 
 ```
  
-## 6、开头与结尾
+## 6 开头与结尾
 
 （24）boolean startsWith(xx)：测试此字符串是否以指定的前缀开始 
 （25）boolean startsWith(String prefix, int toffset)：测试此字符串从指定索引开始的子字符串是否以指定前缀开始 
@@ -274,7 +274,7 @@ public void test02(){
     }
 ```
 
-## 7、替换
+## 7 替换
 
 （27）String replace(char oldChar, char newChar)：返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的。 不支持正则。 
 （28）String replace(CharSequence target, CharSequence replacement)：使用指定的字面值替换序列替换此字符串所有匹配字面值目标序列的子字符串。 
@@ -297,7 +297,7 @@ public void test1(){
 }
 ```
 
-## 8、常见算法题目
+## 8 常见算法题目
 
 **题目1：** 模拟一个trim方法，去除字符串两端的空格。
 

@@ -1,4 +1,4 @@
-## 一、SpringBoot3介绍
+## 1 SpringBoot3介绍
 
 ### 1.1 SpringBoot3简介
 
@@ -178,7 +178,7 @@ public class HelloController {
 
         总的来说，@SpringBootApplication注解的主要作用是`简化Spring Boot应用程序的配置和启动过程`。它自动配置应用程序、扫描并加载组件，并将配置和启动类合二为一，简化了开发者的工作量，提高了开发效率。
 
-## 二、SpringBoot3配置文件
+## 2 SpringBoot3配置文件
 
 ### 2.1 统一配置管理概述
 
@@ -593,7 +593,7 @@ settings:
 
     如果设置了spring.profiles.active，和application`无重叠属性，application设置依然生效！`
 
-## 三、SpringBoot3整合SpringMVC
+## 3 SpringBoot3整合SpringMVC
 
 ### 3.1 实现过程
 
@@ -809,7 +809,7 @@ public class MvcConfig implements WebMvcConfigurer {
     ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/694bb4ec48570cf9871144e8b2cfbeca.png)
 
 
-## 四、SpringBoot3整合Druid数据源
+## 4 SpringBoot3整合Druid数据源
 
 1.  创建程序
 2.  引入依赖
@@ -965,7 +965,7 @@ public class UserController {
     com.alibaba.druid.spring.boot3.autoconfigure.DruidDataSourceAutoConfigure
     ```
     ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e4c6010efe6784963447a12550a9c870.png)
-## 五、SpringBoot3整合Mybatis
+## 5 SpringBoot3整合Mybatis
 
 ### 5.1 MyBatis整合步骤
 
@@ -1168,7 +1168,7 @@ public class LogAdvice {
 }
 ```
 
-## 六、SpringBoot3项目打包和运行
+## 6 SpringBoot3项目打包和运行
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/97f710e8f170f083bd08d1c156925366.png)
 

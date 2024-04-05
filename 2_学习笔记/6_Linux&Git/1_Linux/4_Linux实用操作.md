@@ -1,6 +1,5 @@
-# 六、Linux其他知识
 
-## 1、各类小技巧
+## 1 各类小技巧
 
 - `ctrl + c 强制停止`
 	- Linux某些程序的运行，如果想要强制停止它，可以使用快捷键ctrl + c![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e0920442f62fe94f3f2a2253c61b36f.png)
@@ -41,7 +40,7 @@
 - `清屏`
 	- 通过快捷键ctrl + l，可以清空终端内容
 	- 或通过命令clear得到同样效果
-## 2、软件安装
+## 2 软件安装
 
 - `Linux系统的应用商店`
 - 操作系统安装软件有许多种方式，一般分为：
@@ -75,7 +74,7 @@
 - 通过前面学习的WSL环境，我们可以得到Ubuntu运行环境
 - 语法：`apt [-y] [install remove search] 软件名称`
 - 用法和yum一致，同样需要root权限
-## 3、systemctl
+## 3 systemctl
 
 - Linux系统很多软件（内置或第三方）均支持使用systemctl命令控制：启动、停止、开机自启
 - 能够被systemctl管理的软件，一般也称之为：服务
@@ -96,7 +95,7 @@
 	- 可以通过httpd服务名，配合systemctl进行控制
 
 - `部分软件安装后没有自动集成到systemctl中，我们可以手动添加`
-## 4、软连接
+## 4 软连接
 
 - `ln命令创建软连接`
 - 在系统中创建软链接，可以将文件、文件夹链接到其它位置
@@ -110,7 +109,7 @@
 	- ln -s /etc/yum ~/yum![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/417b71e682fa21bba98713838bfd082c.png)
 
 
-## 5、日期、时区
+## 5 日期、时区
 
 - `date命令`
 - 通过date命令可以在命令行中查看系统的时间
@@ -170,9 +169,9 @@
 - 通过阿里云提供的服务网址配合ntpdate（安装ntp后会附带这个命令）命令自动校准![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e14d340c0317bbbfd525a48404a16552.png)
 
 
-## 6、IP地址、主机名
+## 6 IP地址、主机名
 
-### 5.1 IP地址
+### 6.1 IP地址
 
 - `IP地址`
 - 每一台联网的电脑都会有一个地址，用于和其它计算机进行通讯
@@ -234,7 +233,7 @@
 
 - 之后使用finalshell的时候，就可以`不用写linux的ip地址，直接写主机名称即可`
 
-### 5.2 虚拟机配置固定IP
+### 6.2 虚拟机配置固定IP
 
 - `为什么需要固定IP`
 - 当前我们虚拟机的Linux操作系统，其IP地址是通过DHCP服务获取的
@@ -258,9 +257,9 @@
 
 	- 执行：systemctl restart network 重启网卡，执行ifconfig即可看到ip地址固定为192.168.88.130了
 
-## 7、 网络传输
+## 7 网络传输
 
-### 6.1 下载和网络请求
+### 7.1 下载和网络请求
 
 - `ping命令`
 - 可以通过ping命令，`检查指定的网络服务器是否是可联通状态`
@@ -299,7 +298,7 @@
 	- 向python.itheima.com发起网络请求：curl python.itheima.com
 	- 通过curl下载hadoop-3.3.0安装包：`curl -O http://archive.apache.org/dist/hadoop/common/hadoop-3.3.0/hadoop-3.3.0.tar.gz`
 
-### 6.2 端口
+### 7.2 端口
 
 - 端口，是`设备与外界通讯交流的出入口`。端口可以分为：物理端口和虚拟端口两类
 - `物理端口`：又可称之为接口，是可见的端口，如USB接口，RJ45网口，HDMI端口等
@@ -337,7 +336,7 @@
 
 - 可以看到，当前系统12345端口，无人使用哦。
 
-## 8、进程管理
+## 8 进程管理
 
 - `进程`
 - 程序运行在操作系统中，是被操作系统所管理的。
@@ -386,7 +385,7 @@
 	- 选项：-9，表示强制关闭进程。不使用此选项会向进程发送信号要求其关闭，但是否关闭看进程自身的处理机制![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b8232b111220a6680d4fa7839f1fb998.png)
 
 
-## 9、主机状态
+## 9 主机状态
 
 - `查看系统资源占用`
 - 可以通过top命令查看CPU、内存使用情况，类似Windows的任务管理器
@@ -459,7 +458,7 @@
 		- rxcmp/s 每秒钟接受的压缩数据包
 		- txcmp/s 每秒钟发送的压缩包
 		- rxmcst/s 每秒钟接收的多播数据包
-## 10、环境变量
+## 10 环境变量
 
 - 在讲解which命令的时候，我们知道使用的一系列命令其实本质上就是一个个的可执行程序
 - 比如，cd命令的本体就是：/usr/bin/cd 这个程序文件
@@ -508,7 +507,7 @@
 	- 在/etc/profile文件中修改`PATH的值`
 	- 临时修改PATH：export PATH=$PATH:/home/itheima/myenv，再次执行mkhaha，无论在哪里都能执行了
 	- 或将`export PATH=$PATH:/home/itheima/myenv`，填入用户环境变量文件或系统环境变量文件中去
-## 11、上传、下载
+## 11 上传、下载
 
 - 我们可以通过FinalShell工具，方便的和虚拟机进行数据交换
 - 在FinalShell软件的下方窗体中，提供了Linux的文件系统视图，可以方便的
@@ -522,7 +521,7 @@
 	- 文件会自动下载到桌面的：fsdownload文件夹中。
 - `注意：rz、sz命令需要终端软件支持才可正常运行`，FinalShell、SecureCRT、XShell等常用终端软件均支持此操作
 
-## 12、压缩、解压
+## 12 压缩、解压
 
 - `压缩格式`
 - 市面上有非常多的压缩格式

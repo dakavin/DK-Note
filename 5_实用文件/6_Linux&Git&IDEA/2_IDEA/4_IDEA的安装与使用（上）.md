@@ -1,9 +1,9 @@
 
 推荐参考网站： 
 [IDEA Tab 页设置多行显示（图文讲解） - 犬小哈教程 (quanxiaoha.com)](https://www.quanxiaoha.com/idea/idea-enable-tabs-in-one-row.html)
-## 2. 卸载与安装
+## 1 卸载与安装
 
-### 2.1 卸载过程
+### 1.1 卸载过程
 
 这里以卸载2022.1.2版本为例说明。在【控制面板】找到【卸载程序】
 
@@ -30,7 +30,7 @@
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/993b76aca1ad24862d2f23c1c1048f52.png)
 
-### 2.2 安装前的准备
+### 1.2 安装前的准备
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d725cdf4d99e99c0c8bc47fa88ab141a.png)
 
@@ -41,7 +41,7 @@
 
 从安装上来看，IntelliJ IDEA 对硬件的要求`似乎不是很高`。可是在实际开发中并不是这样的，因为 IntelliJ IDEA 执行时会有大量的缓存、索引文件，所以如果你正在使用 Eclipse / MyEclipse，想通过 IntelliJ IDEA 来解决计算机的卡、慢等问题，这基本上是不可能的，本质上你应该对自己的硬件设备进行升级。
 
-### 2.3 安装过程
+### 1.3 安装过程
 
 1、下载完安装包，双击直接安装
 
@@ -87,7 +87,7 @@
 
 重启以后，单击登录
 
-### 2.4 注册
+### 1.4 注册
 
 首先，需要通过用户协议：
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/daf1acdea965c43f47d16c14c5c53491.png)
@@ -114,7 +114,7 @@
 - 选择3：（推荐）
   - 可以自行搜索注册方式即可。
 
-### 2.5 闪退问题
+### 1.5 闪退问题
 
 问题描述：2022.1启动不了，双击桌面图标，没有响应。
 
@@ -139,9 +139,9 @@
 
 原因：之前使用过的比如2021.2.2版本，pojie了。新版IEDA太智能了，把现有的启运参数也都复制过去了。又因为最新的IDEA，不兼容pojie程序-javaagent:D:\develop_tools\IDEA\IntelliJ IDEA 2021.2.2\bin\jetbrains-agent.jar了，所以报错了，所以JVM结束了，所以没有启动画面，凉凉了。
 
-## 3. HelloWorld的实现
+## 2 HelloWorld的实现
 
-### 3.1 新建Project - Class
+### 2.1 新建Project - Class
 
 选择"New Project"：
 
@@ -161,7 +161,7 @@
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1d78ce8d618c5cebe754e01ed8e1768d.png)
 
-### 3.2 编写代码
+### 2.2 编写代码
 
 ```java
 public class HelloWorld {
@@ -171,14 +171,14 @@ public class HelloWorld {
 }
 ```
 
-### 3.3 运行
+### 2.3 运行
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/236787b5d6c2f7687d1b020813766045.png)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a1c62f07f641babc3d171837d2b9b5dc.png)
-## 4. JDK相关设置
+## 3 JDK相关设置
 
-### 4.1 项目的JDK设置
+### 3.1 项目的JDK设置
 
 `File-->Project Structure...-->Platform Settings -->SDKs`
 
@@ -190,16 +190,16 @@ public class HelloWorld {
 - 注1：SDKs全称是Software Development Kit ，这里一定是选择JDK的安装根目录，不是JRE的目录。
 - 注2：这里还可以从本地添加多个JDK。使用“+”即可实现。
 
-### 4.2 out目录和编译版本
+### 3.2 out目录和编译版本
 
 `File-->Project Structure...-->Project Settings -->Project`
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8ea9f019371ec24796590b54a5bd5324.png)
 
 
-## 5. 详细设置
+## 4 详细设置
 
-### 5.1 如何打开详细配置界面
+### 4.1 如何打开详细配置界面
 
 1、显示工具栏
 
@@ -213,9 +213,9 @@ public class HelloWorld {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e180670418425676902d92e1acf2530a.png)
 
-### 5.2 系统设置
+### 4.2 系统设置
 
-#### 1、默认启动项目配置
+#### 4.2.1 1、默认启动项目配置
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b1a7dc4dea452286256b7b7964bb8474.png)
 
@@ -226,7 +226,7 @@ public class HelloWorld {
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/94d1ffeb72337355d96982b7c4e9005f.png)
 
-#### 2、取消自动更新
+#### 4.2.2 2、取消自动更新
 
 Settings-->Appearance & Behavior->System Settings -> Updates
 
@@ -235,17 +235,17 @@ Settings-->Appearance & Behavior->System Settings -> Updates
 
 默认都打√了，建议检查IDE更新的√去掉，检查插件更新的√选上。
 
-### 5.3 设置整体主题
+### 4.3 设置整体主题
 
-#### 1、选择主题
+#### 4.3.1 1、选择主题
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e70de0639aec97357b95d54b66f57524.png)
 
-#### 2、设置菜单和窗口字体和大小
+#### 4.3.2 2、设置菜单和窗口字体和大小
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/45267433f8a1fbb616c22cdedf1333e2.png)
 
-#### 3、设置IDEA背景图
+#### 4.3.3 3、设置IDEA背景图
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cc76ad1256b4f2d115b961e3ce3f0873.png)
 
@@ -253,13 +253,13 @@ Settings-->Appearance & Behavior->System Settings -> Updates
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1a0dede45bebe9fa4fee81ab5057d200.png)
 
-### 5.4 设置编辑器主题样式
+### 4.4 设置编辑器主题样式
 
-#### 1、编辑器主题
+#### 4.4.1 1、编辑器主题
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/38bb65084c68b38b66e2306805af2b8d.png)
 
-#### 2、字体大小
+#### 4.4.2 2、字体大小
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c2cdd3dc0899d3d53a83864ed5569776.png)
 
@@ -272,7 +272,7 @@ Settings-->Appearance & Behavior->System Settings -> Updates
 > 温馨提示：如果选择某个font字体，中文乱码，可以在fallback font（备选字体）中选择一个支持中文的字体。
 >
 
-#### 3、注释的字体颜色
+#### 4.4.3 3、注释的字体颜色
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e09ade8e58bbb92ae5a9eb4118d0beb6.png)
 
@@ -280,20 +280,20 @@ Settings-->Appearance & Behavior->System Settings -> Updates
 - Doc Comment –> Text：修改文档注释的字体颜色
 - Line comment：修改单行注释的字体颜色
 
-### 5.5 显示行号与方法分隔符
+### 4.5 显示行号与方法分隔符
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/33b2a10dfe6df9ffec3e92b4b21618fc.png)
 
 
 
-### 5.6 代码智能提示功能
+### 4.6 代码智能提示功能
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dd49f38e96c0d320bd555de56055da94.png)
 
 
 
 IntelliJ IDEA 的代码提示和补充功能有一个特性：`区分大小写`。 如果想不区分大小写的话，就把这个对勾去掉。`建议去掉勾选`。
-### 5.7 自动导包配置
+### 4.7 自动导包配置
 
 * 默认需要自己手动导包，Alt+Enter快捷键
 
@@ -309,7 +309,7 @@ IntelliJ IDEA 的代码提示和补充功能有一个特性：`区分大小写`�
 
 
 
-### 5.8 设置项目文件编码（一定要改）
+### 4.8 设置项目文件编码（一定要改）
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f8a857f053e0944e8adee0d5bbc777f9.png)
 
@@ -317,13 +317,13 @@ IntelliJ IDEA 的代码提示和补充功能有一个特性：`区分大小写`�
 
 说明： Transparent native-to-ascii conversion主要用于转换ascii，显式原生内容。一般都要勾选。
 
-### 5.9 设置控制台的字符编码
+### 4.9 设置控制台的字符编码
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7ae22c62254ba763ad29c2a0f6cf9b37.png)
 
 
 
-### 5.10 修改类头的文档注释信息
+### 4.10 修改类头的文档注释信息
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce38aa4695041f5a674ed69e075c42e6.png)
 
@@ -363,7 +363,7 @@ ${MONTH_NAME_FULL} - full name of a month. Example: January, February, etc.
 
 ```
 
-### 5.11 设置自动编译
+### 4.11 设置自动编译
 
 `Settings-->Build,Execution,Deployment-->Compiler`
 
@@ -371,7 +371,7 @@ ${MONTH_NAME_FULL} - full name of a month. Example: January, February, etc.
 
 
 
-### 5.12 设置为省电模式 (可忽略)
+### 4.12 设置为省电模式 (可忽略)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/27ffb619c28ac6e38905c2bc0fbb3868.png)
 
@@ -379,7 +379,7 @@ ${MONTH_NAME_FULL} - full name of a month. Example: January, February, etc.
 
 IntelliJ IDEA 有一种叫做`省电模式`的状态，开启这种模式之后 IntelliJ IDEA 会`关掉代码检查`和`代码提示`等功能。所以一般也可认为这是一种`阅读模式`，如果你在开发过程中遇到突然代码文件不能进行检查和提示，可以来看看这里是否有开启该功能。
 
-### 5.13 取消双击shift搜索
+### 4.13 取消双击shift搜索
 
 因为我们按shift切换中英文输入方式，经常被按到，总是弹出搜索框，太麻烦了。可以取消它。
 
@@ -409,9 +409,9 @@ IntelliJ IDEA 有一种叫做`省电模式`的状态，开启这种模式之后 
 
 
 
-## 6. 工程与模块管理
+## 5 工程与模块管理
 
-### 6.1 IDEA项目结构
+### 5.1 IDEA项目结构
 
 **层级关系：**
 
@@ -431,7 +431,7 @@ project(工程) - module(模块) - package(包) - class(类)
 
 > 这些结构的划分，是为了方便管理功能代码。
 
-### 6.2 Project和Module的概念
+### 5.2 Project和Module的概念
 
 在 IntelliJ IDEA 中，提出了Project和Module这两个概念。
 
@@ -445,7 +445,7 @@ project(工程) - module(模块) - package(包) - class(类)
 - 当为多Module项目的时候，多个模块处于同一个Project之中，此时彼此之间具有`互相依赖`的关联关系。
 - 当然多个模块没有建立依赖关系的话，也可以作为单独一个“小项目”运行。
 
-### 6.3 Module和Package
+### 5.3 Module和Package
 
 在一个module下，可以声明多个包（package），一般命名规范如下：
 
@@ -457,7 +457,7 @@ project(工程) - module(模块) - package(包) - class(类)
   那么我们的package包名应该写成：com.atguigu.子名字。
 ```
 
-### 6.4 创建Module
+### 5.4 创建Module
 
 建议创建“Empty空工程”，然后创建多模块，每一个模块可以独立运行，相当于一个小项目。JavaSE阶段不涉及到模块之间的依赖。后期再学习模块之间的依赖。
 
@@ -481,7 +481,7 @@ project(工程) - module(模块) - package(包) - class(类)
 
 
 
-### 6.5 删除模块
+### 5.5 删除模块
 
 （1）移除模块
 
@@ -495,7 +495,7 @@ project(工程) - module(模块) - package(包) - class(类)
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a02b6e5bcf11ad00ee2e311d5a43dbf0.png)
 
 
-### 6.6 导入老师的模块
+### 5.6 导入老师的模块
 
 （1）将老师的模块`teacher_chapter04`整个的复制到自己IDEA项目的路径下
 
@@ -528,16 +528,16 @@ project(工程) - module(模块) - package(包) - class(类)
 
 最后点击OK即可了。
 
-### 6.7 同时打开两个IDEA项目工程
+### 5.7 同时打开两个IDEA项目工程
 
-#### 1、两个IDEA项目工程效果
+#### 5.7.1 1、两个IDEA项目工程效果
 
 有些同学想要把上课练习代码和作业代码分开两个IDEA项目工程。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c04e77e88cc06d482f0719c0ec353dad.png)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/64c6cd8449b7fa0b73996f05ed922cdf.png)
 
-#### 2、新建一个IDEA项目
+#### 5.7.2 2、新建一个IDEA项目
 
 注意：第一次需要新建，之后直接打开项目工程即可
 
@@ -547,7 +547,7 @@ project(工程) - module(模块) - package(包) - class(类)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5082319f867c1d2a5ed483fb547e6a5b.png)
 
-#### 3、打开两个IDEA项目
+#### 5.7.3 3、打开两个IDEA项目
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e665cc931e70ec7e1d92f8edcc9305b0.png)
 
@@ -555,7 +555,7 @@ project(工程) - module(模块) - package(包) - class(类)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b7d6e2f2859aac3559b67a0ce7823447.png)
 
-### 6.8 导入前几章非IDEA工程代码
+### 5.8 导入前几章非IDEA工程代码
 
 **1、创建chapter01、chapter02、chapter03等章节的module**
 
@@ -584,20 +584,20 @@ project(工程) - module(模块) - package(包) - class(类)
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fd19e3f0f2d8e70bb12c618d53f2b94d.png)
 
 
-## 7. 代码模板的使用
+## 6 代码模板的使用
 
-### 7.1 查看Postfix Completion模板(后缀补全)
+### 6.1 查看Postfix Completion模板(后缀补全)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/383b6479afda0c11a7ea3c8105ff3735.png)
 
 
-### 7.2 查看Live Templates模板(实时模板)
+### 6.2 查看Live Templates模板(实时模板)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d496066ea22bedbe1578f5518a163eed.png)
 
-### 7.3 常用代码模板
+### 6.3 常用代码模板
 
-#### 1、非空判断
+#### 6.3.1 1、非空判断
 
 * 变量.null：if(变量 == null)
 * 变量.nn：if(变量 != null) 
@@ -605,14 +605,14 @@ project(工程) - module(模块) - package(包) - class(类)
 * ifn：if(xx  == null)
 * inn：if(xx  != null)
 
-#### 2、遍历数组和集合
+#### 6.3.2 2、遍历数组和集合
 
 * 数组或集合变量.fori：for循环
 * 数组或集合变量.for：增强for循环
 * 数组或集合变量.forr：反向for循环
 * 数组或集合变量.iter：增强for循环遍历数组或集合
 
-#### 3、输出语句
+#### 6.3.3 3、输出语句
 
 - sout：相当于System.out.println
 - soutm：打印当前方法的名称
@@ -621,7 +621,7 @@ project(工程) - module(模块) - package(包) - class(类)
 - 变量.sout：打印当前变量值
 - 变量.soutv：打印当前变量名及变量值
 
-#### 4、对象操作
+#### 6.3.4 4、对象操作
 
 - 创建对象
   - Xxx.new  .var ：创建Xxx类的对象，并赋给相应的变量
@@ -630,21 +630,21 @@ project(工程) - module(模块) - package(包) - class(类)
   - 对象.cast：将对象进行强转
   - 对象.castvar：将对象强转后，并赋给一个变量
 
-#### 5、静态常量声明
+#### 6.3.5 5、静态常量声明
 
 * psf：public static final
 * psfi：public static final int
 * psfs：public static final String
 * prsf：private static final
 
-### 7.4 自定义代码模板
+### 6.4 自定义代码模板
 
-#### 7.4.1 自定义后缀补全模板
+#### 6.4.1 自定义后缀补全模板
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9c2c5e7ecdaef872ad89d8ae548829eb.png)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2597aafe387b397f09f7c293fc9af899.png)
-#### 7.4.2 自定义Live Templates
+#### 6.4.2 自定义Live Templates
 
 例如：定义sop代表System.out.print();语句
 

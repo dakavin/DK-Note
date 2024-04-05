@@ -1,5 +1,5 @@
 
-## 1、String、StringBuffer、StringBuilder的区别？
+## 1 String、StringBuffer、StringBuilder的区别？
 
 **可变性**
 
@@ -43,7 +43,7 @@ abstract class AbstractStringBuilder implements Appendable, CharSequence {
 	2. 线程安全：String(常量)和Buffer(同步锁)线程安全，Builder线程不安全；
 	3. 性能：String每次都会生成新对象；Builder和Buffer都是对象本身修改，Builder性能较高
 
-## 2、String为什么是不可变的？
+## 2 String为什么是不可变的？
 
 `String` 类中使用 `final` 关键字和`private`关键字修饰字符数组来保存字符串的
 
@@ -70,7 +70,7 @@ JDK 官方就说了绝大部分字符串对象只包含 Latin-1 可表示的字�
 	2. String类是final修饰的（不可被继承，加了一层保险）
 	3. String在java9后改为byte数组，可以节省空间
 
-## 3、字符串拼接用 + 还是 StringBuilder？
+## 3 字符串拼接用 + 还是 StringBuilder？
 
 Java 语言本身并不支持运算符重载，“+”和“+=”是专门为 String 类重载过的运算符，也是 Java 中仅有的两个重载过的运算符。
 
@@ -121,13 +121,13 @@ System.out.println(s);
 	1. 字符串使用+拼接，底层使用的还是StringBuilder的append方法
 	2. 不过使用+拼接，多导致创建多个StringBuilder对象
 	3. 这个问题在JDK9之后优化了，采用动态方法
-## 4、String#equals() 和 Object#equals() 有何区别？
+## 4 String#equals() 和 Object#equals() 有何区别？
 
 `回答思路：`
 	1. String的equals()方法是重写过的，比较的是String字符串值是否相等；
 	2. Object的equals()方法是比较对象的内存地址值；
 
-## 5、字符串常量池了解吗？
+## 5 字符串常量池了解吗？
 
 `回答思路：`
 	1. **字符串常量池** 是 JVM 为了`提升性能和减少内存消耗`针对字符串（String 类）专门开辟的一块区域，`主要目的是为了避免字符串的重复创建`。
@@ -151,7 +151,7 @@ System.out.println(s3==s4);// false
 
 更多关于字符串常量池的介绍可以看一下 [Java 内存区域详解open in new window](https://javaguide.cn/java/jvm/memory-area.html) 这篇文章。
 
-## 6、String s1 = new String("abc")；这句话创建了几个字符串对象？
+## 6 String s1 = new String("abc")；这句话创建了几个字符串对象？
 
 会创建 1 或 2 个字符串对象。
 
@@ -189,7 +189,7 @@ String s2 = new String("abc");
 	2. `字符串常量池没有该字符对象`，则先在堆中创建一个String的引用对象，然后再在字符串常量池中创建该字符对象；
 	3. `字符串常量池有该字符对象`，直接在堆中创建一个String的引用对象
 
-## 7、String#intern 方法有什么作用？
+## 7 String#intern 方法有什么作用？
 
 `String.intern()` 是一个 native（本地）方法，其作用是将指定的字符串对象的引用保存在字符串常量池中，可以简单分为两种情况：
 
@@ -220,7 +220,7 @@ System.out.println(s1 == s4); //true
 `回答思路：`
 	本质就是将字符串直接在字符串常量池中，创建一个字符对象（有就返回该引用，没有就直接创建并返回该引用）
 	
-## 8、String类型的变量和常量做 + 运算时发生了什么？
+## 8 String类型的变量和常量做 + 运算时发生了什么？
 
 `回答思路：`
 	常量  + 常量 ：结果在常量池

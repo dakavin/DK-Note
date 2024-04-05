@@ -1,13 +1,13 @@
 [为什么单线程的 Redis 如何做到每秒数万 QPS ？ (qq.com)](https://mp.weixin.qq.com/s/oeOfsgF-9IOoT5eQt5ieyw)
-## 1、概述
+## 1 概述
 
 上一节，我们整体介绍了Redis的处理过程，为了加深理解，本节我们通过源码的形式，进行深入分析，大家注意一下，面试时候一般不会直接讨论源码的，但是通过学习源码，可以帮助我们更好的理解，如果基础比较薄弱，也可以先跳过本节，不影响后续学习，等二刷的时候再看看
-## 2、Redis的AE库
+## 2 Redis的AE库
 
 Redis实现了一个AE库，它是"A simple Event drived programming library"的简写，翻译过来就是`一个简单的事件驱动库`，它会根据系统的内核版本自动选择select、epoll、kqueue等不同多路复用的方式。
 
 由于生产环境通常在linux上面，所以下面我们以常见的epoll为例，以下代码片段均来自redis 5.0.5
-## 3、处理流程
+## 3 处理流程
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e97373bfcb2c2a45f6c4a10af148064c.png)
 
@@ -24,15 +24,15 @@ Redis实现了一个AE库，它是"A simple Event drived programming library"的
 - 若发现其它 socket 上有命令请求到达，则读取和处理命令，把命令结果写到缓存中，加入写任务队列
 - 每一次进入 epoll_wait 前都调用 beforesleep 来将写任务队列中的数据实际进行发送
 - 如若有首次未发送完毕的，当写事件发生时继续发送
-### 3.0 创建epoll对象
+### 3.1 创建epoll对象
 
 - 调用aeCreateEventLoop方法，创建epoll对象
 
-### 3.1 绑定监听服务 端口
+### 3.2 绑定监听服务 端口
 
 - 调用 listenToPort函数，内部循环调用anetTcpServer函数
 - 在anetTcpServer函数中，一直执行到bind和listen系统调用
-### 3.2 监听端口，注册事件
+### 3.3 监听端口，注册事件
 
 - 如果在上述的listenToPort函数，监听到了服务端口，产生监听套接字
 - 调用acCreateFileEvent函数，为该监听套接字绑定接收处理函数acceptTcpHandler
@@ -48,7 +48,7 @@ main -> initServer中，使用listenToPort监听端口，创建监听套接字
 `main函数调用initServer之后，就开始在aeMain函数中开始一个EvenLoop事件循环`，通过`epoll_wait()的方式等待连接达到`，此时暂时还没有建立的连接，所以没有读写事件的发生，另外计时器等事件也是注册在事件框架中，但这里我们主要还是关注I/O事件。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/95b0459f2f033b26740e374b889d81dc.png)
 
-### 3.3 连接到达处理
+### 3.4 连接到达处理
 
 - `此时进入的是aeMain函数，处理用户请求`
 
@@ -67,7 +67,7 @@ createClient中关键片段：
 
 可以看到，`这里关键信息是创建了一个客户端对象`，然后将客户端套接字设置为非阻塞，然后加入到事件循环里，这里的关联函数是readQueryFromClient，这里大家应该已经能理解，等这个客户端套接字的读请求过来，就会关联到readQueryFromClient来处理
 
-### 3.4 客户端数据处理
+### 3.5 客户端数据处理
 
 - epoll_wait发现已连接(客户端)套接字中传来数据
 - 回调该已连接套接字绑定的readQueryFromClient处理函数
@@ -97,7 +97,7 @@ getGenericCommand里面使用addReply将结果放入client的输出缓冲区。
 
 注意这里也没有直接send()到客户端，那么什么时候触发回包到客户端呢?
 
-### 3.5 给客户端回包
+### 3.6 给客户端回包
 
 我们`回到上面aeMain主循环`的地方
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6e3561326aa3272480118a81c61135c1.png)
@@ -107,17 +107,17 @@ getGenericCommand里面使用addReply将结果放入client的输出缓冲区。
 
 其具体工作就是将client结构输出缓冲区的内容，发生给对应的客户端socket。
 
-## 4、总结
+## 4 总结
 
 本次我们分析了Redis AE库，走读了Redis完整的处理逻辑，相信通过本节课，大家对于Redis的处理流程有了一个更深入的理解。
 
 处理模块算是告一段落，下面我们会关注另一个问题，Redis作为一个基于内存处理的组件，如果内存满了怎么办？
 
-## 5、补充：
+## 5 补充：
 
 https://xiaolincoding.com/os/8_network_system/selete_poll_epoll.html#%E6%9C%80%E5%9F%BA%E6%9C%AC%E7%9A%84-socket-%E6%A8%A1%E5%9E%8B
 
-### Linux内核下的epoll机制
+### 5.1 Linux内核下的epoll机制
 
 在 epoll 的系列函数里， epoll_create 用于创建一个 epoll 对象，epoll_ctl 用来给 epoll 对象添加或者删除一个 socket。epoll_wait 就是查看它当前管理的这些 socket 上有没有可读可写事件发生。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d0f44b0ee254685513c3dbe933a0089.png)

@@ -1,7 +1,7 @@
 
 StringBuilder、StringBuffer的API是完全一致的，并且很多方法与String相同。
 
-## 1、常用API
+## 1 常用API
 
 （1）StringBuffer append(xx)：提供了很多的append()方法，用于进行字符串追加的方式拼接
 （2）StringBuffer delete(int start, int end)：删除`[start,end)`之间字符
@@ -19,7 +19,7 @@ StringBuilder、StringBuffer的API是完全一致的，并且很多方法与Stri
 >	![image-20230922020103193.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7049ba6e27ba5b8a5fea1b300cd38e25.png)
 
 
-## 2、其它API
+## 2 其它API
 
 （1）int indexOf(String str)：在当前字符序列中查询str的第一次出现下标
 （2）int indexOf(String str, int fromIndex)：在当前字符序列[fromIndex,最后]中查询str的第一次出现下标

@@ -1,15 +1,15 @@
 
-## 1、是什么？
+## 1 是什么？
 
 Redis Hash是一个field、value都为string的hash表，存储在Redis内存中。
 
 Redis中每个hash可以存储`2^32-1`键值对（40多亿）。
 
-## 2、适用场景
+## 2 适用场景
 
 适用于O(1)时间字典查找某个field对应数据的场景，比如任务信息的配置，就可以任务类型为field，任务配置参数为value。
 
-## 3、常用操作
+## 3 常用操作
 
 我们还是从创建、查询、更新、删除这几个基本操作来了解Hash。
 
@@ -141,7 +141,7 @@ f4、f5原来不存在，设置为指定value
 2) 1) "f2"
    2) "v2"
 ```
-## 4、原理
+## 4 原理
 
 ### 4.1 编码格式
 
@@ -155,7 +155,7 @@ Hash底层有两种编码结构，一个是压缩列表，一个是HASHTABLE。�
 ZIPLIST之前有讲解过，其实就是在数据量较小时间数据紧凑排列，对应到Hash，就是将field-value当做entry放入ZIPLIST，结构如下：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3339a3f80e6d569e86cd0484f4221abc.png)
 HASHTABLE在之前无序集合Set中也有应用，和Set的区别在于，在Set中value始终为NULL，但是在HSet中，是有对应的值的。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f3efb18bee0101cc68e2c7e6ff8ef46f.png)
-## 5、总结
+## 5 总结
 
 Hash是字典，可以存储多个field-value的映射关系，比如学生分数、任务配置等。
 

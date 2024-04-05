@@ -1,4 +1,4 @@
-## 一、SpringMVC简介和体验
+## 1 SpringMVC简介和体验
 
 ### 1.1 介绍
 
@@ -250,9 +250,7 @@ Spring MVC与许多其他Web框架一样，是围绕前端控制器模式设计�
 
 	5. 加载处理路径，如下图：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/808711f0ebbc95d082bf4f53789e7b74.png)
 
-
-
-## 二、SpringMVC接收数据
+## 2 SpringMVC接收数据
 
 ### 2.1 访问路径设置
 
@@ -964,7 +962,7 @@ public String attrApplication() {
 6. 共享域获取
 	- 记住原生api即可
 
-## 三、SpringMVC响应数据
+## 3 SpringMVC响应数据
 
 ### 3.1 handler方法分析
 
@@ -1320,7 +1318,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 @EnableWebMvc  //json数据处理,必须使用此注解,因为他会加入json处理器
         ```
 
-## 四、RESTFul风格设计和实战
+## 4 RESTFul风格设计和实战
 
 ### 4.1 RESTFul风格概述
 
@@ -1559,7 +1557,7 @@ public class UserController {
 }
 ```
 
-## 五、SpringMVC其他扩展
+## 5 SpringMVC其他扩展
 
 ### 5.1 全局异常处理机制
 
@@ -1935,7 +1933,7 @@ public class UserController {
         @NotBlank 注解是 Hibernate Validator 附加的注解，对于字符串类型的属性进行校验，校验时会检查该属性是否为 Null 或 “” 或者只包含空格，如果是的话就会校验失败。需要注意的是，@NotBlank 注解只能用于字符串类型的校验。
         总之，这三种注解都是用于校验字段值是否为空的注解，但是其校验规则和用法有所不同。在进行数据校验时，需要根据具体情况选择合适的注解进行校验。
 
-## 六、SpringMVC总结
+## 6 SpringMVC总结
 
 | 核心点         | 掌握目标                     |
 | ----------- | ------------------------ |

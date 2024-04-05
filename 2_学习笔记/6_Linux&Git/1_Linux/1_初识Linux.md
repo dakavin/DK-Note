@@ -1,6 +1,6 @@
-# 一、操作系统概述
+## 1 操作系统概述
 
-## 1、硬件和软件
+### 1.1 硬件和软件
 
 我们所熟知的计算机是由：硬件和软件所组成。
 
@@ -13,7 +13,7 @@
 而操作系统，就是软件的一类。
 
 一个完整的计算机：操作系统 + 硬件
-## 2、操作系统
+### 1.2 操作系统
 
 操作系统是计算机软件的一种，它主要负责：
 
@@ -31,7 +31,7 @@
 	- ......
 
 - `用户使用操作系统，操作系统安排硬件干活`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f9789519d54dbfc7183c64f13a960549.png)
-## 3、常见操作系统
+### 1.3 常见操作系统
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/904d6fd36aea6e68b112442d616c8aca.png)
 
@@ -43,9 +43,9 @@
 - 不管是PC操作系统，还是移动操作系统
 
 - 其功能都是：调度硬件进行工作，充当用户和硬件之间的桥梁
-# 二、初识Linux
+## 2 初识Linux
 
-## 1、Linux的诞生
+### 2.1 Linux的诞生
 
 Linux创始人: 林纳斯 托瓦兹![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bc54b2de886d22f3f823d9b908e91a66.png)
 
@@ -53,7 +53,7 @@ Linux 诞生于1991年，作者上大学期间
 
 因为创始人在上大学期间经常需要浏览新闻和处理邮件，发现现有的操作系统不好用, 于是他决心自己写一个保护模式下的操作系统，这就是Linux的原型， 当时他21岁，后来经过全世界网友的支持, 现在能够兼容多种硬件，成为最为流行的服务器操作系统之一。
 
-## 2、Linux内核
+### 2.2 Linux内核
 
 - Linux系统的组成如下：
 	- Linux系统内核
@@ -70,7 +70,7 @@ Linux 诞生于1991年，作者上大学期间
 - Linux内核是免费开源的，任何人都可以下载内核源码并查看且修改
 
 - 可以通过：https://www.kernel.org   去下载Linux内核![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e72d3d6385c404de73506ba4c13234b.png)
-## 3、Linux发行版
+### 2.3 Linux发行版
 
 - 内核是免费、开源的，这也就代表了：
 	- 任何人都可以获得并修改内核，并且自行集成系统级程序
@@ -85,9 +85,9 @@ Linux 诞生于1991年，作者上大学期间
 	- 辅助讲解Ubuntu系统的相关知识
 
 - 注意：不轮是任何的发行版，基础命令都是相同的，只有部分操作不同（如软件安装）
-# 三、虚拟机介绍
+## 3 虚拟机介绍
 
-## 1、虚拟机
+### 3.1 虚拟机
 
 学习Linux系统，就需要有一个可用的Linux系统。
 如何获得？将自己的电脑重装系统为Linux？
@@ -99,14 +99,14 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 - 借助虚拟化技术，我们可以在系统中，通过软件：模拟计算机硬件，并给虚拟硬件安装真实的操作系统。
 
 - 这样，就可以在电脑中，虚拟出一个完整的电脑，以供我们学习Linux系统。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4e852f00f067f37cd01d5da776bc1148.png)
-# 四、VMware WorkStation安装
+## 4 VMware WorkStation安装
 
-## 1、虚拟化软件
+### 4.1 虚拟化软件
 
 - 通过虚拟化技术，可以虚拟出计算机的硬件，那么如何虚拟呢？
 - 我们可以通过提供虚拟化的软件来获得虚拟机。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bb8990b5e2204d016bd3d7b3996e4073.png)
 
-## 2、VMware WorkStation
+### 4.2 VMware WorkStation
 
 课程选用VMware WorkStation软件来提供虚拟机。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/18dc7bd997e4ad34c3c68f52c0bc63e9.png)
 
@@ -116,15 +116,15 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 
 - 软件安装完成后，验证一下网络适配器是否正常配置![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f5ec46c3e720712b346e8288ebff732b.png)
 - 或者通过快捷键：win + r , 输入ncpa.cpl回车即可打开
-# 五、在VMware上安装Linux
+## 5 在VMware上安装Linux
 
-## 1、下载CentOS操作系统
+### 5.1 下载CentOS操作系统
 
 - 首先，我们需要下载操作系统的安装文件，本次使用CentOS7.6版本进行学习：https://vault.centos.org/7.6.1810/isos/x86_64/   (最后的/不要漏掉）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aa5a3071435af2f389feb664ef365e41.png)
 
 - 或者直接使用如下链接下载：https://vault.centos.org/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso
 
-## 2、在VMware中安装CentOS操作系统
+### 5.2 在VMware中安装CentOS操作系统
 
 - 打开VMware软件![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cc8e4776b55e566c7be036dcf123b7f9.png)
 
@@ -140,9 +140,9 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 
 - 点击完成后，即开启了CentOS系统的安装，耐心等待安装完成即可，后续都是自动化的。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7d03da48c9d37a525803d922ce90750f.png)
 
-# 六、远程连接Linux
+## 6 远程连接Linux
 
-## 1、图形化、命令行
+### 6.1 图形化、命令行
 
 - 对于操作系统的使用，有2种使用形式：
 	- 图形化页面使用操作系统
@@ -153,19 +153,19 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 	- 图形化：使用操作系统提供的图形化页面，以获得`图形化反馈`的形式去使用操作系统。
 	- 命令行：使用操作系统提供的各类命令，以获得`字符反馈`的形式去使用操作系统。
 
-## 2、Windows系统的图形化和命令行
+### 6.2 Windows系统的图形化和命令行
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8f22d86401b33a7b92766a594896c626.png)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9f2b96cf1edd405fc5eca53b7bb16c48.png)
 
-## 3、Linux系统的图形化和命令行
+### 6.3 Linux系统的图形化和命令行
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8afd65eb6df51ab56685fe69b96ab78b.png)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/95cde38acf2d4a29600a63331cc3e4af.png)
 
-## 4、使用命令行学习Linux系统
+### 6.4 使用命令行学习Linux系统
 
 - 尽管图形化是大多数人使用计算机的第一选择，但是在Linux操作系统上，这个选择被反转了。
 
@@ -181,7 +181,7 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 	
 	- 其余`都会以命令行`的形式去讲解Linux操作系统的使用
 
-## 5、FinalShell
+### 6.5 FinalShell
 
 - 既然决定使用命令行去学习Linux操作系统，那么就必须丰富一下工具的使用。
 
@@ -201,10 +201,10 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 
 下载完成后双击打开安装。
 
-## 6、Windows系统安装FinalShell
+### 6.6 Windows系统安装FinalShell
 
 按照提示一直下一步即可安装完成。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d40d19911f4663839b3819b52adec24d.png)
-## 7、连接到Linux系统
+### 6.7 连接到Linux系统
 
 - 首先，先查询到Linux系统的IP地址![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1aec29da4b548521925199e4af89ed88.png)
 - 打开Finshell软件，配置到Linux系统的连接![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7d1d0dc96a6fe535d3419b90e0adaa27.png)
@@ -213,12 +213,12 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 - 双击刚刚配置好的连接![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f104236c749d2f87a51dca623a94989a.png)
 - 点击接受并保存![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fafca9d22c56eaf27a937132c43bbad7.png)
 - 如图连接成功![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e3ad4bf50eb2daeae2baca0e45cfb908.png)
-# 七、拓展：WSL
+## 7 拓展：WSL
 
 - `WSL（Windows Subsystem for LInux）`
 - 基于WSL我们可以得到Ubuntu发行版环境，可以拓展除CentOS发行版之外的额外体验和知识
 
-## 1、为什么要用WSL
+### 7.1 为什么要用WSL
 
 - WSL作为Windows10系统带来的全新特性，正在逐步颠覆开发人员既有的选择
 	- 传统方式获取Linux操作系统环境，是安装完整的虚拟机，如VMware
@@ -230,14 +230,14 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 	- 开发人员都在用，大家都用的，我们也要学习
 	- 实在是太方便了，简单、好用、轻量化、省内存
 
-## 2、什么是WSL
+### 7.2 什么是WSL
 
 - WSL：Windows Subsystem for Linux，是用于Windows系统之上的Linux子系统。
 
 - 作用很简单，可以在Windows系统中获得Linux系统环境，并完全直连计算机硬件，无需通过虚拟机虚拟硬件。
 
 - 简而言之：Windows10的WSL功能，可以无需单独虚拟一套硬件设备，就可以直接使用主机的物理硬件，构建Linux操作系统，并不会影响Windows系统本身的运行![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3346b402c6979fa5dd0163a7a297e673.png)
-## 3、WSL部署
+### 7.3 WSL部署
 
 - WSL是Windows10自带功能，需要开启，无需下载![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/40033a0e8f092fc85a6ebcc18ed6e125.png)
 - 点击确定后会进行部署，最后重启即可。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7f3c148f94e030847fd13c3aff5d65ce.png)
@@ -246,23 +246,23 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 - 输入用户名用以创建一个用户：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce3e7531cfc9a2e168dedd75177149b9.png)
 - 输入两次密码确认（注意，输入密码没有反馈，不用理会，正常输入即可）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/68719b038fbf1ca751d56958c99b753b.png)
 - 至此，得到了一个可用的Ubuntu操作系统环境![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8d2d278a780bd05add84568b3330de5b.png)
-## 4、安装Windows Terminal软件
+### 7.4 安装Windows Terminal软件
 
 - Ubuntu自带的终端窗口软件不太好用，我们可以使用微软推出的：Windows Terminal软件
 
 - 在应用商店中搜索terminal关键字，找到Windows Terminal软件下载并安装![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1bbd12bc5be4f215ce6c469d4cbc1528.png)
 - 再次打开Windows Terminal软件，即默认使用Ubuntu系统了（WSL）![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6fb05890d3abe2e6fe864032763f4a79.png)
 
-# 八、拓展：虚拟机快照
+## 8 拓展：虚拟机快照
 
-## 1、虚拟机快照
+### 8.1 虚拟机快照
 
 - 在学习阶段我们无法避免的可能损坏Linux操作系统。
 - 如果损坏的话，重新安装一个Linux操作系统就会十分麻烦。
 
 - VMware虚拟机（Workstation和Funsion）支持为虚拟机制作快照。
 - 通过快照将当前虚拟机的状态保存下来，在以后可以通过快照恢复虚拟机到保存的状态。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0cd8d18224462cecc892d5df1490639f.png)
-## 2、在VMware中制作并还原快照
+### 8.2 在VMware中制作并还原快照
 
 - 建议虚拟机关机后再进行制作快照
 

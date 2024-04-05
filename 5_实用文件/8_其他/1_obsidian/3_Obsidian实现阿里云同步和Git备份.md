@@ -1,9 +1,4 @@
 
-<h1>目录</h1>
-
-```table-of-contents
-```
-
 ## 1 阿里云OSS实现同步
 ### 1.1 Obsidian软件安装Remotely Save插件
 

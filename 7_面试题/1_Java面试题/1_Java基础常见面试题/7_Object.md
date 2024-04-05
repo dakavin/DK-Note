@@ -1,5 +1,5 @@
 
-## 1、Object的常见方法有那些?
+## 1 Object的常见方法有那些?
 
 Object 类是一个特殊的类，是所有类的父类。它主要提供了以下 11 个方法：
 ```java
@@ -56,7 +56,7 @@ protected void finalize() throws Throwable { }
 	集合：hashCode
 	其他：clone、toString
 
-## 2、== 和 equals() 的区别
+## 2 == 和 equals() 的区别
 
 **`==`** 对于基本类型和引用类型的作用效果是不同的：
 
@@ -129,7 +129,7 @@ public boolean equals(Object anObject) {
 		- 对象没有重写equals：就是==
 		- 对象重写了equals：安装重写的规则进行比较
 		- 特殊的是String是重写了equals的，比较的是对象的值
-## 3、hashCode有什么用？
+## 3 hashCode有什么用？
 
 `hashCode()` 的作用是获取哈希码（`int` 整数），也称为散列码。这个哈希码的作用是确定该对象在哈希表中的索引位置。
 
@@ -147,7 +147,7 @@ hashCode() 方法
 `回答思路：`
 	1. 可以获取对象的哈希值，用于确定对象在哈希表中的索引
 	2. 类似于HashMap、HashSet就用到了这个方法
-## 4、为什么要有hashCode？
+## 4 为什么要有hashCode？
 
 我们以“`HashSet` 如何检查重复”为例子来说明为什么要有 `hashCode`？
 
@@ -184,7 +184,7 @@ hashCode() 方法
 	1.  使用hashCode方法可以快速判断对象所在的索引；
 	2. 然后再使用equals方法最终判断对象是否相等；
 	3. 所以 `hashCode` 帮助我们大大缩小了查找成本；
-## 5、为什么重写equals()时必须重写hashCode()方法？
+## 5 为什么重写equals()时必须重写hashCode()方法？
 
 因为两个相等的对象的 `hashCode` 值必须是相等。也就是说如果 `equals` 方法判断两个对象是相等的，那这两个对象的 `hashCode` 值也要相等。
 

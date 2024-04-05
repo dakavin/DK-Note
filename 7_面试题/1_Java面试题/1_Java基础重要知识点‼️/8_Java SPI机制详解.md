@@ -2,9 +2,9 @@
 
 为了实现在模块装配的时候不用在程序里面动态指明，这就需要一种服务发现机制。Java SPI 就是提供了这样一个机制：**为某个接口寻找服务实现的机制。这有点类似 IoC 的思想，将装配的控制权移交到了程序之外。**
 
-# 1、SPI介绍
+## 1 SPI介绍
 
-## 1.1 何为SPI
+### 1.1 何为SPI
 
 SPI 即 Service Provider Interface ，字面意思就是：“服务提供者的接口”，我的理解是：专门提供给服务提供者或者扩展框架功能的开发者去使用的一个接口。
 
@@ -16,7 +16,7 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 	1. 顾名思义，SPI（Server Provider Interface）指的是服务提供者的接口，即专门给服务提供者（框架开发者）去使用的接口；
 	2. 将 服务接口 和 服务实现 分离，将 服务调用方 和 服务实现者 解耦，提高程序的扩展性、可维护性；
 	3. 例如：Spring框架，JDBC、日志接口以及Dubbo的扩展
-## 1.2 SPI和API有什么区别
+### 1.2 SPI和API有什么区别
 
 **那 SPI 和 API 有啥区别？**
 
@@ -35,13 +35,13 @@ SPI 将服务接口和具体的服务实现分离开来，将服务调用方和�
 	1. API：接口靠近实现方，我们调用实现方的接口来处理业务；
 	2. SPI：接口靠近调用方，调用方确定接口的规则，然后不同的厂商根据规则对该接口进行实现；
 	3. 总结：API即现成的接口实现类，可以直接用；SPI是定义好规则的接口，需要按照规则来编码实现类；
-# 2、实战演示
+## 2 实战演示
 
 SLF4J （Simple Logging Facade for Java）是 Java 的一个日志门面（接口），其具体实现有几种，比如：Logback、Log4j、Log4j2 等等，而且还可以切换，在切换日志具体实现的时候我们是不需要更改项目代码的，只需要在 Maven 依赖里面修改一些 pom 依赖就好了。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b6c2916b830fab011edc014ea6d557fe.png)
 
 这就是依赖 SPI 机制实现的，那我们接下来就实现一个简易版本的日志框架。
-## 2.1  Service Provider Interface
+### 2.1 Service Provider Interface
 
 新建一个 Java 项目 `service-provider-interface` 目录结构如下：（注意直接新建 Java 项目就好了，不用新建 Maven 项目，Maven 项目会涉及到一些编译配置，如果有私服的话，直接 deploy 会比较方便，但是没有的话，在过程中可能会遇到一些奇怪的问题。）
 
@@ -155,7 +155,7 @@ public class Main {
 - 可以将所有模块进行打包，JAR包的入口函数可以选择，也可以不选，打出的JAR包含依赖JAR
 - Build->Build Artifacts
 - 选择需要打包的项目或模块，单击Build进行打包，打包完成后一般会在项目的classes文件夹下找到刚打好的JAR
-## 2.2 Service Provider
+### 2.2 Service Provider
 
 接下来新建一个项目用来实现 `Logger` 接口
 
@@ -217,7 +217,7 @@ public class Logback implements Logger {
 
 实现 `Logger` 接口，在 `src` 目录下新建 `META-INF/services` 文件夹，然后新建文件 `edu.jiangxuan.up.spi.Logger` （SPI 的全类名），文件里面的内容是：`edu.jiangxuan.up.spi.service.Logback` （Logback 的全类名，即 SPI 的实现类的包名 + 类名）。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/adf838bd9f4d558c04573857ce9e3770.png)
-## 2.3 效果展示
+### 2.3 效果展示
 
 为了更直观的展示效果，我这里再新建一个专门用来测试的工程项目：`java-spi-test`
 
@@ -258,9 +258,9 @@ public class TestJavaSPI {
 
 那么接下来我们具体来说说 Java SPI 工作的重点原理—— **ServiceLoader** 。
 
-# 3、ServiceLoader
+## 3 ServiceLoader
 
-## 3.1 ServiceLoader 具体实现
+### 3.1 ServiceLoader 具体实现
 
 想要使用 Java 的 SPI 机制是需要依赖 `ServiceLoader` 来实现的，那么我们接下来看看 `ServiceLoader` 具体是怎么做的：
 
@@ -425,7 +425,7 @@ private S nextService() {
 ```
 
 可能很多人看这个会觉得有点复杂，没关系，我这边实现了一个简单的 `ServiceLoader` 的小模型，流程和原理都是保持一致的，可以先从自己实现一个简易版本的开始学：
-## 3.2 自己实现一个ServiceLoader
+### 3.2 自己实现一个ServiceLoader
 
 先贴代码：
 ```java
@@ -520,7 +520,7 @@ public class MyServiceLoader<S> {
 4. 根据获取到的全类名，先判断跟 spi 接口是否为同一类型，如果是的，那么就通过反射的机制构造对应的实例对象，
 5. 将构造出来的实例对象添加到 `Providers` 的列表中。
 
-# 4、总结
+## 4 总结
 
 其实不难发现，SPI 机制的具体实现本质上还是通过反射完成的。即：**我们按照规定将要暴露对外使用的具体实现类在 `META-INF/services/` 文件下声明。**
 

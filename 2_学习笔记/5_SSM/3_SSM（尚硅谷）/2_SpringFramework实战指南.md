@@ -1,5 +1,5 @@
 
-## 一、技术体系结构
+## 1 技术体系结构
 
 ### 1.1 总体技术体系
 
@@ -48,7 +48,7 @@
 
 总之，框架已经对基础的代码进行了封装并提供相应的API，开发者在使用框架是直接调用封装好的API可以省去很多代码编写，从而提高工作效率和开发速度。
 
-## 二、SpringFramework介绍
+## 2 SpringFramework介绍
 
 ### 2.1 Spring 和 SpringFramework概念
 
@@ -102,7 +102,7 @@ SpringFramework框架结构图：![|380](https://my-obsidian-image.oss-cn-guangz
 
 Spring 使创建 Java 企业应用程序变得容易。它提供了在企业环境中采用 Java 语言所需的一切，支持 Groovy 和 Kotlin 作为 JVM 上的替代语言，并且可以根据应用程序的需求灵活地创建多种架构。`从Spring Framework 6.0.6开始，Spring 需要 Java 17+`。
 
-## 三、Spring IoC容器和核心概念
+## 3 Spring IoC容器和核心概念
 
 ### 3.1 组件和组件管理概念
 
@@ -122,7 +122,7 @@ Spring 使创建 Java 企业应用程序变得容易。它提供了在企业环�
 -   有人替我们管理事务
 -   有人协助我们整合其他框架
 -   ......
-####  3.1.3 Spring充当组件管理角色（IoC）
+#### 3.1.3 Spring充当组件管理角色（IoC）
 
 那么谁帮我们完成我们的期待，帮我们管理组件呢？
 
@@ -142,7 +142,7 @@ Spring具体的组件管理动作包含：
 -   `组件一定是对象`
 -   `对象不一定是组件`
 	综上所述，Spring 充当一个组件容器，创建、管理、存储组件，减少了我们的编码压力，让我们更加专注进行业务编写！
-####  3.1.4 组件交给Spring管理优势!
+#### 3.1.4 组件交给Spring管理优势!
 
 1.  `降低了组件之间的耦合性`：Spring IoC容器通过依赖注入机制，将组件之间的依赖关系削弱，减少了程序组件之间的耦合性，使得组件更加松散地耦合。
 2.  `提高了代码的可重用性和可维护性`：将组件的实例化过程、依赖关系的管理等功能交给Spring IoC容器处理，使得组件代码更加模块化、可重用、更易于维护。
@@ -236,7 +236,7 @@ Spring框架提供了多种配置方式：XML配置方式、注解方式和Java�
 -   `DI (Dependency Injection) 依赖注入`
     DI 是指在组件之间传递依赖关系的过程中，将依赖关系在容器内部进行处理，这样就不必在应用程序代码中硬编码对象之间的依赖关系，实现了对象之间的解耦合。在 Spring 中，DI 是通过 XML 配置文件或注解的方式实现的。它提供了三种形式的依赖注入：构造函数注入、Setter 方法注入和接口注入。
 
-## 四、Spring IoC实践和应用
+## 4 Spring IoC实践和应用
 
 ### 4.1 Spring IoC / DI 实现步骤
 
@@ -2807,7 +2807,7 @@ public static void main(String[] args) {
     }
     ```
 
-## 五、Spring AOP面向切面编程
+## 5 Spring AOP面向切面编程
 
 ### 5.1 场景设定和问题复现
 
@@ -3747,29 +3747,20 @@ public class EmployeeService {
 使用总结：
 
 a.  如果目标类有接口,选择使用jdk动态代理
-
 b.  如果目标类没有接口,选择cglib动态代理
-
 c.  如果有接口,接口接值
-
 d.  如果没有接口,类进行接值
 
 #### 5.5.9 注解实现小结
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f2cdd3ac4e6ab93b0e9f3fb6b7c2271f.png)
 
-
-
 ### 5.6 Spring AOP基于XML方式实现(了解)
 
 1.  准备工作
-
     加入依赖
-
     和基于注解的 AOP 时一样。
-
     准备代码
-
     把测试基于注解功能时的Java类复制到新module中，去除所有注解。
 2.  配置Spring配置文件
     ```xml
@@ -3892,15 +3883,13 @@ d.  如果没有接口,类进行接值
 
 对实现了接口的类应用切面![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7cdc0cdbbe9552e825a4c984a4a681bc.png)
 
-
-
 对没实现接口的类应用切面new![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b0a966e9c142c014379e426db5f1ee7b.png)
 
 
 
 **如果使用AOP技术，目标类有接口，必须使用接口类型接收IoC容器中代理组件！**
 
-## 六、Spring 声明式事务
+## 6 Spring 声明式事务
 
 ### 6.1 声明式事务概念
 
@@ -4624,7 +4613,7 @@ try {
     6.  `Propagation.MANDATORY`：必须在一个已有的事务中执行，否则抛出异常。
     7.  P`ropagation.NEVER`：必须在没有事务的情况下执行，否则抛出异常。
 
-## 七、Spring核心掌握总结
+## 7 Spring核心掌握总结
 
 | 核心点             | 掌握目标                        |
 | --------------- | --------------------------- |

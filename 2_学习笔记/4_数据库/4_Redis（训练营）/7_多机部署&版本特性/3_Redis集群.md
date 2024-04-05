@@ -1,5 +1,5 @@
 
-## 1、集群是什么
+## 1 集群是什么
 
 Redis性能很强大，单机能做到写几万，读十万的tps，非常的高，可以说大多数创建都完全能cover。
 
@@ -8,12 +8,12 @@ Redis性能很强大，单机能做到写几万，读十万的tps，非常的高
 比如秒杀，双十一的时候，特别是2018年附近，一到0点，瞬间请求应该是千万级的。这时候，一个Redis就有点孤掌难鸣，怎么办呢，多个Reids合作解决。
 
 `集群就是多个Redis一起对外提供服务，对外看起来就像一个单机服务的解决方案。`
-## 2、Redis集群怎么分片
+## 2 Redis集群怎么分片
 
 `Redis使用的哈希槽（Hash Slot）的方式来分片`，可以理解为主动配置，划分不同的范围给每个节点。
 
 为了方便理解，我们先看看怎么部署一个集群。
-## 3、部署集群
+## 3 部署集群
 
 ### 3.1 启动3个Redis服务
 
@@ -36,11 +36,11 @@ Redis性能很强大，单机能做到写几万，读十万的tps，非常的高
 我们这里还需要做一步，为cluster中每个节点，划分职责，也就是`给他们分配负责的数据区间`，这里Redis视同的是一个叫Hash槽的概念，即将数据分为了多个槽，每个节点负责一些槽，这个Hash槽，我们下一节会重点介绍，这里初步理解即可。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/974439ea94854bdc063ee4b589eaaadc.png)
 这三条命令的过程用这张图比较形象：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/833aa9188a8349af14b2e8ba27f72c91.png)
 这时候再查看，就能看到每个节点负责那些槽了：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a487cbb2392055f49469e20e158134ec.png)
-## 4、操作集群
+## 4 操作集群
 
 操作key，若key不在对应的槽(slot)，则让你MOVED![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0cc9341e60fdc6e0f01215fcb8f16a9c.png)
 到这一步，我们的集群就算初步可以使用了。
-## 5、添加节点
+## 5 添加节点
 
 第一步，还是起一个Redis服务，这里还在之前的机器上起，prot 7003
 
@@ -49,10 +49,10 @@ Redis性能很强大，单机能做到写几万，读十万的tps，非常的高
 第三步，分配一些槽给这个新节点，命令为`redis-cli --cluster reshard 127.0.0.1:7000`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f2301ab2caa5cbe3f363d22d5021b9a5.png)
 于是从7000和7001，分别拿了50个slots给7003，这里分配的就是节点各自按编号最小的50个左右slot，比如7000，就是0-50![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/17d137dd10d8ab7837741352cda1a179.png)
 完成之后![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/17e354af7a49903120f3b708988ba05a.png)
-## 6、总结
+## 6 总结
 
 本节我们聚焦于集群是什么，解决什么问题，以及如何搭建一个集群，通过本节，希望大家对集群有个直观的理解，下一节，我们将介绍集群的分片模式
-## 7、面试题
+## 7 面试题
 
 1. 集群是什么？
 2. 怎么访问Redis集群

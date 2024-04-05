@@ -22,7 +22,7 @@
 
 - HashMap的底层实现（①new HashMap；②put（key，value））  
 
-# 2  HashMap中元素的特点（熟悉！！！）  
+## 2  HashMap中元素的特点（熟悉！！！）  
 
 - 所有的key彼此之间是不可重复的、无序的。所以key就构成了一个Set集合。---> key所在的类要求重写hashCode()和equals()方法  
 
@@ -32,7 +32,7 @@
 
 - 所有的entry彼此之间是不可重复的、无序的。所以entry就构成了一个Set集合。  
 
-# 3 Map中的常用方法  
+## 3 Map中的常用方法  
 
 小结:（记住！！！）  
 
@@ -110,7 +110,7 @@
 
 ```
 
-# 4 TreeMap的使用（了解）  
+## 4 TreeMap的使用（了解）  
 
 - 底层使用红黑树结构  
 
@@ -120,7 +120,7 @@
 
 - 要求！！！ 添加到key中的元素必须是一个类型的对象  
 
-# 5 Hashtable与Properties的使用（重点的，在io中比较重要）  
+## 5 Hashtable与Properties的使用（重点的，在io中比较重要）  
 
 - Properties是Hashtable的子类，其key和value都是String类型的，常用来处理属性文件。
 
@@ -176,11 +176,11 @@
 
   ```
 
-# 6 HashMap源码分析！！！ 
+## 6 HashMap源码分析！！！ 
 
 **链表法就是将相同hash值的对象组织成一个链表放在hash值对应的槽位；开放地址法是通过一个探测算法，当某个槽位已经被占据的情况下继续查找下一个可以使用的槽位。很显然我们使用的不是开放地址法。**
 
-## 6.1 JDK7中的源码
+### 6.1 JDK7中的源码
 
 - `添加/修改的过程`：  
 
@@ -574,7 +574,7 @@ public class HashMap<K,V>{
 
 ```
 
-## 6.2JDK8中的源码
+### 6.2 6.2JDK8中的源码
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c0cc7e0477469a12ad31977be400acca.png)
 
@@ -596,7 +596,7 @@ public class HashMap<K,V>{
 
 - 什么时候使用红黑树变为单向链表：当使用红黑树的`索引i位置上的元素的个数低于6`的时候，就会将红黑树退化为单向链表
 
-### 6.2.1 属性
+#### 6.2.1 属性
 
 ```java
 
@@ -626,7 +626,7 @@ final float loadFactor; //加载因子，影响扩容的频率
 
 ```
 
-### 6.2.2 构造器
+#### 6.2.2 构造器
 
 ```java
 
@@ -638,7 +638,7 @@ public HashMap() {
 
 ```
 
-### 6.2.3 put()方法
+#### 6.2.3 put()方法
 
 ```java
 
@@ -1066,9 +1066,9 @@ do...while，把table[index]链表的Node结点变为TreeNode类型的结点
 
 ```
 
-#  7 LinkedHashMap源码剖析
+## 7 LinkedHashMap源码剖析
 
-## 7.1 源码
+### 7.1 源码
 
 内部定义的Entry如下：
 
@@ -1122,7 +1122,7 @@ TreeNode<K,V> newTreeNode(int hash, K key, V value, Node<K,V> next) {
 
 ```
 
-# 8. Set接口分析
+## 8 Set接口分析
 
 **Set集合与Map集合的关系**
 

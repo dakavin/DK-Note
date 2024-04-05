@@ -1,5 +1,5 @@
 
-## 1、 乱码问题
+## 1 乱码问题
 
 > 码问题产生的根本原因是什么
 
@@ -14,7 +14,7 @@
 - 由上图得知,上述字符集都兼容了ASCII
     
 - ASCII中有什么? 英文字母和一些通常使用的符号,所以这些东西无论使用什么字符集都不会乱码
-### 1. 1 HTML乱码
+### 1.1 HTML乱码
 
 > 设置项目文件的字符集要使用一个支持中文的字符集
 
@@ -46,7 +46,7 @@
 - 设置虚拟机加载.class文件的字符集和编译时使用的字符集一致![||380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/18b826c1d59ae2331b98c16bb977628b.png)
 ### 1.3 请求乱码
 
-#### 1. GET请求方式乱码分析
+#### 1.3.1 GET请求方式乱码分析
 
 + GET方式提交参数的方式是将参数放到URL后面,如果使用的不是UTF-8,那么会对参数进行URL编码处理
 + HTML中的 `<meta charset='字符集'/>` 影响了GET方式提交参数的URL编码
@@ -63,7 +63,7 @@
 - 方式1 :设置GET方式提交的编码和Tomcat10.1.7的URI默认解析编码一致即可 (推荐)![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/04473298ad8bea31a3fb55a7af4b02b9.png)
 - 方式2 : 设置Tomcat10.1.7的URI解析字符集和GET请求发送时所使用URL转码时的字符集一致即可,修改conf/server.xml中 Connecter 添加 URIEncoding="GBK" (不推荐)![|400|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/81bb22be6505bce323acb2a8840e7518.png)
 
-#### 2. POST请求方式乱码分析
+#### 1.3.2 POST请求方式乱码分析
 
 + POST请求将参数放在请求体中进行发送
 + 请求体使用的字符集受到了`<meta charset="字符集"/>` 的影响
@@ -106,7 +106,7 @@
 + 方式2: 后端通过设置响应体的字符集和浏览器解析响应体的默认字符集一致(不推荐)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e00550829caa17d24190d5ececf426c.png)
 
 方式3: 通过设置content-type响应头,告诉浏览器以指定的字符集解析响应体(推荐)![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/30e0217800467cb83d3328e70176916c.png)
-## 2、 路径问题
+## 2 路径问题
 
 > 相对路径和绝对路径
 
@@ -139,7 +139,7 @@
 ### 2.1 前端路径问题
 
 前端项目结构![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2d2948b1ae1d4638075bd937938e3ac4.png)
-#### 1 相对路径
+#### 2.1.1 相对路径
 
 > 相对路径情况1:`web/index.html中引入web/static/img/logo.png`
 
@@ -181,7 +181,7 @@ public class View1Servlet extends HttpServlet {
 + view1.html中定义的了    : `<img src="static/img/logo.png"/>`
 + 寻找方式就是在当前资源所在路径(http://localhost:8080/web03_war_exploded/)后拼接src属性值(static/img/logo.png),正好是目标资源正常获取的url(http://localhost:8080/web03_war_exploded/static/img/logo.png)
 
-#### 2. 绝对路径
+#### 2.1.2 绝对路径
 
 > 绝对路径情况1:`web/index.html中引入web/static/img/logo.png`
 
@@ -234,7 +234,7 @@ public class View1Servlet extends HttpServlet {
 + view1.html中定义的了    : `<img src="/web03_war_exploded/static/img/logo.png"/>`
 + 寻找方式就是在基准路径(http://localhost:8080)后面拼接src属性值(/static/img/logo.png),得到的正是目标资源访问的正确路径
 
-#### 3. base标签的使用
+#### 2.1.3 base标签的使用
 
 > base标签定义页面相对路径公共前缀
 
@@ -259,7 +259,7 @@ public class View1Servlet extends HttpServlet {
 </html>
 ```
 
-#### 4. 缺省项目上下文路径
+#### 2.1.4 缺省项目上下文路径
 
 > 项目上下文路径变化问题
 
@@ -285,7 +285,7 @@ public class ServletA extends HttpServlet {
 
 ```
 
-#### 1. 相对路径写法
+#### 2.2.1 相对路径写法
 
 ``` java
 @WebServlet("/x/y/z/servletA")
@@ -298,7 +298,7 @@ public class ServletA extends HttpServlet {
 }
 ```
 
-#### 2. 绝对路径写法
+#### 2.2.2 绝对路径写法
 
   ``` java
   //绝对路径中,要写项目上下文路径
@@ -325,7 +325,7 @@ public class ServletB extends HttpServlet {
 }
 ```
 
-#### 1. 相对路径写法
+#### 2.3.1 相对路径写法
 
   ``` java
   @WebServlet("/x/y/servletB")
@@ -340,7 +340,7 @@ public class ServletB extends HttpServlet {
   
   ```
 
-#### 2. 绝对路径写法
+#### 2.3.2 绝对路径写法
 
   ```java
   @WebServlet("/x/y/servletB")
@@ -353,7 +353,7 @@ public class ServletB extends HttpServlet {
   }
   ```
 
-#### 3. 目标资源内相对路径处理
+#### 2.3.3 目标资源内相对路径处理
 
 + 此时需要注意,请求转发是服务器行为,浏览器不知道,地址栏不变化,相当于我们访问test.html的路径为http://localhost:8080/web03_war_exploded/x/y/servletB
 

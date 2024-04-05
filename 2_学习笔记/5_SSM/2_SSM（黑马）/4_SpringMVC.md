@@ -11,7 +11,7 @@ REST是一种软件架构风格，可以降低开发的复杂性，提高系统�
 3. 能根据实际业务建立前后端开发通信协议，并进行实现
 4. 基于SSM整合技术开发任意业务模块功能
 
-# 一、SpringMVC概述
+## 1 SpringMVC概述
 
 学习SpringMVC我们先来回顾下现在Web程序是如何做的，我们现在的Web程序大都基于MVC三层架构来实现的。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/29f89be0685c0de66ca2624a2a875465.png)
 - 如果所有的处理都交给`Servlet`来处理的话，所有的东西都耦合在一起，对后期的维护和扩展极其不利
@@ -42,7 +42,7 @@ REST是一种软件架构风格，可以降低开发的复杂性，提高系统�
         - 灵活性强
 
 这里说的优点，我们通过下面的讲解与联系慢慢体会
-# 二、SpringMVC入门案例
+## 2 SpringMVC入门案例
 
 因为SpringMVC是一个Web框架，将来是要替换Servlet,所以先来回顾下以前Servlet是如何进行开发的?
 
@@ -60,7 +60,7 @@ SpringMVC的制作过程和上述流程几乎是一致的，具体的实现流�
 4. 定义处理请求的功能类(UserController)
 5. 设置请求映射(配置映射关系)
 6. 将SpringMVC设定加载到Tomcat容器中
-## 1、案例制作
+### 2.1 案例制作
 
 - `步骤一：`创建Maven项目
 - `步骤二：`导入所需坐标(SpringMVC+Servlet)  
@@ -179,7 +179,7 @@ public class ServletContainerInitConfig extends AbstractDispatcherServletInitial
 |位置|SpringMVC控制器类或方法定义上方|
 |作用|设置当前控制器方法响应内容为当前返回值，无需解析|
 
-## 2、入门案例小结
+### 2.2 入门案例小结
 
 - 一次性工作
     - 创建工程，设置服务器，加载工程
@@ -189,10 +189,10 @@ public class ServletContainerInitConfig extends AbstractDispatcherServletInitial
 - 多次工作
     - 定义处理请求的控制器类
     - 定义处理请求的控制器方法，并配置映射路径（@RequestMapping）与返回json数据（@ResponseBody）
-## 3、工作流程解析
+### 2.3 工作流程解析
 
 这里将SpringMVC分为两个阶段来分析，分别是`启动服务器初始化过程`和`单次请求过程`
-### 3.1 启动服务器初始化过程
+#### 2.3.1 启动服务器初始化过程
 
 1. 服务器启动，执行ServletContainerInitConfig类，初始化web容器
 	- 功能类似于web.xml
@@ -258,7 +258,7 @@ protected String[] getServletMappings() {
     return new String[]{"/"};  
 }
 	```
-### 3.2 单次请求过程
+#### 2.3.2 单次请求过程
 
 1. 发送请求`http://localhost:8080/save`
 2. web容器发现该请求满足SpringMVC拦截规则，将请求交给SpringMVC处理
@@ -268,9 +268,9 @@ protected String[] getServletMappings() {
 5. 执行`save()`
 6. 检测到有`@ResponseBody`直接将`save()`方法的返回值作为响应体返回给请求方
 
-## 4、Bean加载控制
+### 2.4 Bean加载控制
 
-### 4.1 问题分析
+#### 2.4.1 问题分析
 
 入门案例的内容已经做完了，在入门案例中我们创建过一个`SpringMvcConfig`的配置类，在之前学习Spring的时候也创建过一个配置类`SpringConfig`。这两个配置类都需要加载资源，那么它们分别都需要加载哪些内容?
 
@@ -296,7 +296,7 @@ controller、service和dao这些类都需要被容器管理成bean对象，那�
     - 功能bean(`DataSource`,`SqlSessionFactoryBean`,`MapperScannerConfigurer`等)
 
 分析清楚谁该管哪些bean以后，接下来要解决的问题是如何让`Spring`和`SpringMVC`分开加载各自的内容。
-### 4.2 思路分析
+#### 2.4.2 思路分析
 
 对于上面的问题，解决方案也比较简单
 
@@ -311,7 +311,7 @@ controller、service和dao这些类都需要被容器管理成bean对象，那�
 	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/14d2d0a88ca3f6fdcb2e0370d7950ba6.png)
 
 
-### 4.3 环境准备
+#### 2.4.3 环境准备
 
 在入门案例的基础上追加一些类来完成环境准备
 
@@ -400,7 +400,7 @@ public class App {
 }
 ```
 
-### 4.4 设置bean加载控制
+#### 2.4.4 设置bean加载控制
 
 - 运行App运行类，如果Spring配置类扫描到了UserController类，则会正常输出，否则将报错  
 	当前配置环境下，将正常输出
@@ -497,25 +497,25 @@ public class ServletContainerInitConfig extends AbstractAnnotationConfigDispatch
 |位置|类定义上方|
 |作用|设置spring配置类扫描路径，用于加载使用注解格式定义的bean|
 |相关属性|excludeFilters:排除扫描路径中加载的bean,需要指定类别(type)和具体项(classes)  <br>includeFilters:加载指定的bean，需要指定类别(type)和具体项(classes)|
-# 三、PostMan工具的使用
+## 3 PostMan工具的使用
 
-## 1、创建WorkSpace工作空间
+### 3.1 创建WorkSpace工作空间
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/518d7df77f3fae76983a234d905ac8ab.png)
 
 
-## 2、发送请求
+### 3.2 发送请求
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c71e0e5ae219a7f028104c50610e6f8.png)
 
 
-## 3、保存当前请求
+### 3.3 保存当前请求
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b9c3478fff038c8c21e46b4dfbb98309.png)
 
 
 
-# 四、请求与响应
+## 4 请求与响应
 
 前面我们已经完成了入门案例相关的知识学习，接来了我们就需要针对SpringMVC相关的知识点进行系统的学习。  
 SpringMVC是web层的框架，主要的作用是接收请求、接收数据、响应结果。  
@@ -525,9 +525,9 @@ SpringMVC是web层的框架，主要的作用是接收请求、接收数据、�
 - 请求参数
 - 日期类型参数传递
 - 响应JSON数据
-## 1、设置请求映射路径
+### 4.1 设置请求映射路径
 
-### 1.1 环境准备
+#### 4.1.1 环境准备
 
 - 创建一个Maven项目
 - 导入坐标  
@@ -612,7 +612,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 - `UserController`有一个save方法，访问路径为`http://localhost/save`
 - `BookController`也有一个save方法，访问路径为`http://localhost/save`
 - 当访问`http://localhost/save`的时候，到底是访问`UserController`还是`BookController`?
-### 1.2 问题分析
+#### 4.1.2 问题分析
 
 团队多人开发，每人设置不同的请求路径，冲突问题该如何解决?
 
@@ -621,7 +621,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
     - 对于User模块的save,将其访问路径设置`http://localhost/user/save`
 
 这样在同一个模块中出现命名冲突的情况就比较少了。
-### 1.3 设置映射路径
+#### 4.1.3 设置映射路径
 
 - 修改Controller
 ```java
@@ -694,7 +694,7 @@ public class BookController {
 
 - 当类上和方法上都添加了`@RequestMapping`注解，前端发送请求的时候，要和两个注解的value值相加匹配才能访问到。
 - `@RequestMapping`注解value属性前面加不加`/`都可以
-## 2、请求参数
+### 4.2 请求参数
 
 请求路径设置好后，只要确保页面发送请求地址和后台Controller类中配置的路径一致，就可以接收到前端的请求，接收到请求后，如何接收页面传递的参数?
 
@@ -704,7 +704,7 @@ public class BookController {
 - `POST`
 
 针对于不同的请求前端如何发送，后端如何接收?
-### 2.1 环境准备
+#### 4.2.1 环境准备
 
 - 继续使用上面的环境即可，编写两个模型类`User`类和`Address`类
 ```java
@@ -735,7 +735,7 @@ public class UserController {
     }  
 }
 ```
-### 2.2 参数传递
+#### 4.2.2 参数传递
 
 - `GET发送单个参数`
 - 启动Tomcat服务器，发送请求与参数：
@@ -832,7 +832,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 - 重启Tomcat服务器，并发送post请求，使用中文，控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/05974521cf3bd0358499b463e6681d29.png)
 
 
-## 3、五种类型参数传递
+### 4.3 五种类型参数传递
 
 前面我们已经能够使用GET或POST来发送请求和数据，所携带的数据都是比较简单的数据，接下来在这个基础上，我们来研究一些比较复杂的参数传递，常见的参数种类有
 
@@ -843,7 +843,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 - 集合类型参数
 
 下面我们就来挨个学习这五种类型参数如何发送，后台如何接收
-### 3.1 普通类型
+#### 4.3.1 普通类型
 
 普通参数：url地址传参，地址参数名与形参变量名相同，定义形参即可接收参数。
 
@@ -883,7 +883,7 @@ public class UserController {
     }  
 }
 ```
-### 3.2 POJO数据类型
+#### 4.3.2 POJO数据类型
 
 简单数据类型一般处理的是参数个数比较少的请求，如果参数比较多，那么后台接收参数的时候就比较复杂，这个时候我们可以考虑使用POJO数据类型。
 
@@ -919,7 +919,7 @@ public String pojoParam(User user){
 - 注意:
     - POJO参数接收，前端GET和POST发送请求数据的方式不变。
     - 请求参数key的名称要和POJO中属性的名称一致，否则无法封装。
-### 3.3 嵌套POJO类型
+#### 4.3.3 嵌套POJO类型
 
 - 环境准备  
 	我们先将之前写的Address类，嵌套在User类中
@@ -946,7 +946,7 @@ public String pojoParam(User user){
 ```
 
 - `注意：请求参数key的名称要和POJO中属性的名称一致，否则无法封装`
-### 3.4 数组类型
+#### 4.3.4 数组类型
 
 举个简单的例子，如果前端需要获取用户的爱好，爱好绝大多数情况下都是多选，如何发送请求数据和接收数据呢?
 
@@ -962,7 +962,7 @@ public String arrayParam(String[] hobbies){
     return "{'module':'array param'}";  
 }
 ```
-### 3.5 集合类型
+#### 4.3.5 集合类型
 
 数组能接收多个值，那么集合是否也可以实现这个功能呢?
 
@@ -997,7 +997,7 @@ public String listParam(@RequestParam List hobbies) {
 |位置|SpringMVC控制器方法形参定义前面|
 |作用|绑定请求参数与处理器方法形参间的关系|
 |相关参数|required：是否为必传参数  <br>defaultValue：参数默认值|
-## 4、JSON数据参数参数
+### 4.4 JSON数据参数参数
 
 现在比较流行的开发方式为异步调用。前后台以异步方式进行交换，传输的数据使用的是JSON，所以前端如果发送的是JSON数据，后端该如何接收?
 
@@ -1008,7 +1008,7 @@ public String listParam(@RequestParam List hobbies) {
 - json对象数组（`[{key1:value1,…},{key2:value2,…}]`）
 
 下面我们就来学习以上三种数据类型，前端如何发送，后端如何接收
-### 4.1 JSON普通数组
+#### 4.4.1 JSON普通数组
 
 - `步骤一：`导入坐标
 ```xml
@@ -1043,7 +1043,7 @@ public String jsonArrayParam(@RequestBody List<String> hobbies) {
     return "{'module':'json array param'}";  
 }
 ```
-### 4.2 JSON对象
+#### 4.4.2 JSON对象
 
 - 请求和数据的发送:
 ```json
@@ -1066,7 +1066,7 @@ public String jsonPojoParam(@RequestBody User user) {
     return "{'module':'json pojo param'}";  
 }
 ```
-### 4.3 JSON对象数组
+#### 4.4.3 JSON对象数组
 
 - 发送请求和数据
 ```json
@@ -1099,7 +1099,7 @@ public String jsonPojoListParam(@RequestBody List<User> users) {
     return "{'module':'json pojo list param'}";  
 }
 ```
-### 4.4 小结
+#### 4.4.4 小结
 
 SpringMVC接收JSON数据的实现步骤为:
 
@@ -1132,7 +1132,7 @@ SpringMVC接收JSON数据的实现步骤为:
 - 应用
     - 后期开发中，发送json格式数据为主，`@RequestBody`应用较广
     - 如果发送非json格式数据，选用`@RequestParam`接收请求参数
-## 5、日期类型参数传递
+### 4.5 日期类型参数传递
 
 日期类型比较特殊，因为对于日期的格式有N多中输入方式，比如
 
@@ -1215,7 +1215,7 @@ public String dateParam(Date date1,
 |位置|SpringMVC控制器方法形参前面|
 |作用|设定日期时间型数据格式|
 |相关属性|pattern：指定日期时间格式字符串|
-### 5.1 内部实现原理
+#### 4.5.1 内部实现原理
 
 我们首先先来思考一个问题:
 
@@ -1257,7 +1257,7 @@ public interface Converter<S, T> {
 2.  `HttpMessageConverter`接口  
     该接口是实现对象与JSON之间的转换工作  
     注意：需要在SpringMVC的配置类把`@EnableWebMvc`当做标配配置上去，不要省略
-## 6、响应
+### 4.6 响应
 
 SpringMVC接收到请求和数据后，进行一些了的处理，当然这个处理可以是转发给Service，Service层再调用Dao层完成的，不管怎样，处理完以后，都需要将结果告知给用户。
 
@@ -1270,7 +1270,7 @@ SpringMVC接收到请求和数据后，进行一些了的处理，当然这个�
     - json数据
 
 因为异步调用是目前常用的主流方式，所以我们需要更关注的就是如何返回JSON数据，对于其他只需要认识了解即可。
-### 6.1 环境准备
+#### 4.6.1 环境准备
 
 在之前的环境上加点东西就可以了
 
@@ -1294,7 +1294,7 @@ public class UserController {
   
 }
 ```
-### 6.2 响应页面（了解）
+#### 4.6.2 响应页面（了解）
 
 - `步骤一：`设置返回页面
 ```java
@@ -1314,7 +1314,7 @@ public class UserController {
 - `步骤二：`启动程序测试  
     打开浏览器，访问`http://localhost:8080/toJumpPage`  
     将跳转到`page.jsp`页面，并展示`page.jsp`页面的内容
-### 6.3 返回文本数据（了解）
+#### 4.6.3 返回文本数据（了解）
 
 `步骤一：`设置返回文本内容
 ```java
@@ -1331,7 +1331,7 @@ public String toText(){
 - `步骤二：`启动程序测试  
     浏览器访问`http://localhost:8080/toText`  
     页面上出现`response text`文本数据
-### 6.4 响应JSON数据
+#### 4.6.4 响应JSON数据
 
 - 响应POJO对象
 ```java
@@ -1394,9 +1394,9 @@ public List<User> toJsonList(){
 - 对象转Json数据(POJO -> json)
 - 集合转Json数据(Collection -> json)
 
-# 五、RESTFul风格
+## 5 RESTFul风格
 
-## 1、REST简介
+### 5.1 REST简介
 
 REST，表现形式状态转换，它是一种软件架构`风格`  
 当我们想表示一个网络资源时，可以使用两种方式：
@@ -1434,9 +1434,9 @@ REST，表现形式状态转换，它是一种软件架构`风格`
 - 根据REST风格对资源进行访问称为`RESTful`
 
 在我们后期的开发过程中，大多数都是遵循`REST`风格来访问我们的后台服务。
-## 2、RESTful入门案例
+### 5.2 RESTful入门案例
 
-### 2.1 环境准备
+#### 5.2.1 环境准备
 
 - 新建一个web的maven项目
 - 导入坐标
@@ -1536,7 +1536,7 @@ public class UserController {
     }  
 }
 ```
-### 2.2 思路分析
+#### 5.2.2 思路分析
 
 需求:将之前的增删改查替换成`RESTful`的开发方式。
 
@@ -1545,7 +1545,7 @@ public class UserController {
     - 修改后: 增删改查：`/users`
 2. 根据`GET`查询、`POST`新增、`PUT`修改、`DELETE`删除对方法的请求方式进行限定
 3. 发送请求的过程中如何设置请求参数?
-### 2.3 修改RESTful风格
+#### 5.2.3 修改RESTful风格
 
 - `新增`  
 	将请求路径更改为`/users`，并设置当前请求方法为`POST`
@@ -1721,7 +1721,7 @@ public class UserController {
 ```
 
 从整体代码来看，有些臃肿，好多代码都是重复的，下一小节我们就会来解决这个问题
-### 2.4 小结
+#### 5.2.4 小结
 
 RESTful入门案例，我们需要记住的内容如下:
 
@@ -1756,7 +1756,7 @@ public String delete(@PathVariable Integer id){
     - 后期开发中，发送请求参数超过1个时，以JSON格式为主，`@RequestBody`应用较广
     - 如果发送非JSON格式数据，选用`@RequestParam`接收请求参数
     - 采用`RESTful`进行开发，当参数数量较少时，例如1个，可以采用`@PathVariable`接收请求路径变量，通常用于传递id值
-## 3、RESTful快速开发
+### 5.3 RESTful快速开发
 
 做完了上面的`RESTful`的开发，就感觉好麻烦，主要体现在以下三部分
 
@@ -1805,9 +1805,9 @@ public class UserController {
     }  
 }
 ```
-## 4、RESTful案例
+### 5.4 RESTful案例
 
-### 4.1 需求分析
+#### 5.4.1 需求分析
 
 - 需求一：图片列表查询，从后台返回数据，将数据展示在页面上![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7769052f8f390d5096f608f1f899f2ca.png)
 
@@ -1827,7 +1827,7 @@ public class UserController {
 	6. 将前端页面拷贝到项目中
 	7. 页面发送ajax请求
 	8. 完成页面数据的展示
-### 4.2 环境准备
+#### 5.4.2 环境准备
 
 - 创建一个web的maven项目
     
@@ -1905,7 +1905,7 @@ public class Book {
 public class BookController {  
 }
 ```
-### 4.3 后台接口开发
+#### 5.4.3 后台接口开发
 
 - 编写Controller类，并使用RESTful配置
 ```java
@@ -1989,7 +1989,7 @@ public class BookController {
 - 控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f75bdb528dc947ad3af75bbc29105e70.png)
 
 
-### 4.4 页面访问处理
+#### 5.4.4 页面访问处理
 
 - `步骤一：`导入提供好的静态页面
 - `步骤二：`访问pages目录下的books.html

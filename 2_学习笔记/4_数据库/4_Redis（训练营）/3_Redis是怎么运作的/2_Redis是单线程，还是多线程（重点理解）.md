@@ -10,7 +10,7 @@ Reids是一个能高效处理请求的组件，一般而言，对这种组件，
 但是这种分支模块，都只是辅助，最核心的还是处理架构，这块Redis始终是单线程的。
 
 `Redis采用Reactor模型的网络模型，对于一个客户端请求，主线程负责一个完整的处理过程`：![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9d2018ff45769084125050ffd6f33b8a.png)
-## 1、Redis为何选择单线程？
+## 1 Redis为何选择单线程？
 
 Redis的核心处理模块选择用单线程来实现，这可能会让人很疑惑，毕竟多线程可以利用多核的优势，而Redis官方对于此的回答是：
 >For instance, using pipelining Redis running on an average Linux system can deliver even 1 million requests per second, so if your application mainly users O(N) or O(logn) commands, it is hardly going to use too much CPU.
@@ -43,7 +43,7 @@ Redis的核心处理模块选择用单线程来实现，这可能会让人很疑
 
 所以综合来看，多线程其实会带来非常多的成本，如果将处理模块改为多线程，即使在性能上，可能也很难有一个很高的预期，毕竟Redis单线程的处理，已经够快了。
 
-## 2、总结
+## 2 总结
 
 我们上面看到，多线程会引入额外的复杂度和成本，而Redis是追求简洁高效的存储组件。
 

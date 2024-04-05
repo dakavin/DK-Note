@@ -1,7 +1,7 @@
 
 实际的开发中，代码都是采用IDE进行开发，所以我们这里介绍一下IDEA软件是如何集成GitHub远程仓库进行代码版本控制的。这里采用的IDEA版本为2022.2.1,其他版本的IDEA软件会略有差别
 
-## 0、配置全局忽略文件
+## 1 配置全局忽略文件
 
 问题 1:为什么要忽略他们？
 
@@ -158,10 +158,10 @@ temp/
 
 `注意：这里要使用“正斜线（/）”，不要使用“反斜线（\）”`
 
-## 1、配置Git软件
+## 2 配置Git软件
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b7d47dc18eb80388467ed2499f8db7ed.png)
-## 2、配置GitHub账号
+## 3 配置GitHub账号
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/410d5827c324d9ec0442030ca3074d4e.png)
 
@@ -176,27 +176,27 @@ temp/
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1166f68bf58480dc6241df6ec46aa21f.png)
 
-## 3、创建项目
+## 4 创建项目
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2e309be7f843ae6e6e44a632445f0f3d.png)
 
-## 4、添加项目代码
+## 5 添加项目代码
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e978d4b3bcf792999a083e74d2773a6c.png)
 
-## 5、创建本地版本库
+## 6 创建本地版本库
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a34d953428307960a2b891020aaba93a.png)
 
-## 6、提交本地版本库
+## 7 提交本地版本库
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c4f5fe3072638b9d3330dbcc28218d3.png)
 
-## 7、创建新的远程版本库
+## 8 创建新的远程版本库
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/83e8ff0d9abd6307cd5c972cdec10023.png)
 
-## 8、推送到远程版本库
+## 9 推送到远程版本库
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce72be2f6c5eeef3657601de8de4fae5.png)
 
@@ -204,22 +204,22 @@ temp/
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/388eb51465595cb04683e15ba81e6041.png)
 
-## 9、查看历史版本
+## 10 查看历史版本
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/07b2d0adaabaa669ace510a832a7be93.png)
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2e3076e6b0f53b8835238945bd834218.png)
 
-## 10、分支操作
+## 11 分支操作
 
-### 10.1 创建分支
+### 11.1 创建分支
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c892ec2f6b04961d741b665fea09b15.png)
 
-### 10.2 将分支推送到远程仓库
+### 11.2 将分支推送到远程仓库
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0a66e5b3202c1402ffff381341ccc1e6.png)
 
-### 10.3 查看远程仓库
+### 11.3 查看远程仓库
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/151e7355d0f01ebbfd60b2ad48cefe04.png)

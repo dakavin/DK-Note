@@ -1,5 +1,5 @@
 
-## 1、Comparable 和 Comparator 的区别？
+## 1 Comparable 和 Comparator 的区别？
 
 `Comparable` 接口和 `Comparator` 接口都是 Java 中用于排序的接口，它们在实现类对象之间比较大小、排序等方面发挥了重要作用：
 
@@ -8,7 +8,7 @@
 
 一般我们需要对一个集合使用自定义排序时，我们就要重写`compareTo()`方法或`compare()`方法，当我们需要对某一个集合实现两种排序方式，比如一个 `song` 对象中的歌名和歌手名分别采用一种排序方法的话，我们可以重写`compareTo()`方法和使用自制的`Comparator`方法或者以两个 `Comparator` 来实现歌名排序和歌星名排序，第二种代表我们只能使用两个参数版的 `Collections.sort()`.
 
-#### Comparator 定制排序
+### 1.1 Comparator 定制排序
 ```java
 ArrayList<Integer> arrayList = new ArrayList<Integer>();
 arrayList.add(-1);
@@ -54,7 +54,7 @@ Collections.sort(arrayList):
 [7, 4, 3, 3, -1, -5, -7, -9]
 ```
 
-#### 重写 compareTo 方法实现按年龄来排序
+### 1.2 重写 compareTo 方法实现按年龄来排序
 
 ```java
 // person对象没有实现Comparable接口，所以必须实现，这样才不会出错，才可以使treemap中的数据按顺序排列
@@ -133,12 +133,12 @@ Output：
 	3. `Comparator`来源于`java.util` 包，有一个`compare(Object obj1, Object obj2)`方法用来排序
 	4. 一般TreeSet、TreeMap集合中的数据，需要实现上述的接口
 	5. 在Collections工具类中，sort()方法也需要一个Comparator的实现类
-## 2、无序性和不可重复性的含义是什么？
+## 2 无序性和不可重复性的含义是什么？
 
 `回答思路：`
 	1. 无序性不等于随机性 ，无序性是指存储的数据在底层数组中并非按照数组索引的顺序添加 ，而是`根据数据的哈希值决定`的。
 	2. 不可重复性是指添加的元素按照 `equals()` 判断时 ，返回 false，需要同时重写 `equals()` 方法和 `hashCode()` 方法
-## 3、比较HashSet、LinkedHashSet和TreeSet
+## 3 比较HashSet、LinkedHashSet和TreeSet
 
 `回答思路：`
 	1. 都是Set接口的实现类，元素唯一，线程都不安全
@@ -152,7 +152,7 @@ Output：
 		- TreeSet用于支持对元素排序
 
 
-## 4、HashSet的一个代码题
+## 4 HashSet的一个代码题
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/052661a464ee2eac87bd3bc8154574e1.png)
 

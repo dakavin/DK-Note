@@ -1,4 +1,4 @@
-# 一、this和super的区别
+## 1 this和super的区别
 
 - this表示当前对象
 	1. this.属性 ：区分成员变量和局部变量
@@ -13,7 +13,7 @@
 		- 任何一个子类的构造方法第一行都是默认super()，一般没写会隐式调用
 	4. 所以<span style="background:#d4b106">super()和this()只能选一个，选了this()后就不会隐式调用super()</span>
 
-# 二、衍生
+## 2 衍生
 
 - this和super是连接的桥梁，而很多时候他们都是隐式调用的，所以他两深藏功与名、默默无闻
 

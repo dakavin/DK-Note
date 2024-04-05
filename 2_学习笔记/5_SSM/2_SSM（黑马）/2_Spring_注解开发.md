@@ -1,5 +1,5 @@
 
-# 八、IOC/DI注解开发
+## 1 IOC/DI注解开发
 
 Spring的IOC/DI对应的`配置开发`已经讲解完成，但是使用起来相对来说还是比较复杂的，复杂的地方在`配置文件`。  
 Spring到底是如何简化代码开发的呢?  
@@ -12,7 +12,7 @@ Spring到底是如何简化代码开发的呢?
 关于注解开发，这里会讲解两块内容`注解开发定义bean`和`纯注解开发`。  
 注解开发定义bean用的是2.5版提供的注解，纯注解开发用的是3.0版提供的注解。
 
-## 1、环境准备
+### 1.1 环境准备
 
 - 创建一个Maven项目
 - pom.xml添加Spring的依赖
@@ -50,7 +50,7 @@ public class App {
     }  
 }
 ```
-## 2、注解开发定义bean
+### 1.2 注解开发定义bean
 
 - `步骤一：`删除原有的XML配置  
 	将配置文件中的bean标签删除掉
@@ -139,14 +139,14 @@ BookService bookService = (BookService) context.getBean("bookServiceImpl");
 通过查看源码会发现：这三个注解和@Component注解的作用是一样的，为什么要衍生出这三个呢?  
 
 这是方便我们后期在编写类的时候能很好的区分出这个类是属于`表现层`、`业务层`还是`数据层`的类。
-## 3、纯注解开发模式
+### 1.3 纯注解开发模式
 
 上面已经可以使用注解来配置bean,但是依然有用到配置文件，在配置文件中对包进行了扫描，Spring在3.0版已经支持纯注解开发，使用Java类替代配置文件，开启了Spring快速开发赛道，那么具体如何实现?
-### 思路分析
+#### 1.3.1 思路分析
 
 实现思路为：
 - 将配置文件applicationContext.xml删掉，用类来替换
-### 实现步骤
+#### 1.3.2 实现步骤
 
 - `步骤一：`创建配置类  
 	创建一个配置类SpringConfig
@@ -220,7 +220,7 @@ AnnotationConfigApplicationContext context = new AnnotationConfigApplicationCont
 |位置|类定义上方|
 |作用|设置spring配置类扫描路径，用于加载使用注解格式定义的bean|
 |属性|value（默认）：扫描路径，此路径可以逐层向下扫描|
-### 小结
+#### 1.3.3 小结
 
 这部分要重点掌握的是使用注解完成Spring的bean管理，需要掌握的内容为:
 
@@ -229,10 +229,10 @@ AnnotationConfigApplicationContext context = new AnnotationConfigApplicationCont
 - `@Configuration`标识该类为配置类，使用类替换`applicationContext.xml`文件
 - `ClassPathXmlApplicationContext`是加载XML配置文件
 - `AnnotationConfigApplicationContext`是加载配置类
-## 4、注解开发bean的作用范围和生命周期
+### 1.4 注解开发bean的作用范围和生命周期
 
 使用注解已经完成了bean的管理，接下来按照前面所学习的内容，将通过配置实现的内容都换成对应的注解实现，包含两部分内容:`bean作用范围(scope)`和`bean生命周期(init和destroy)`。
-### bean的作用范围
+#### 1.4.1 bean的作用范围
 
 - 修改`AppForAnnotation`类，并运行查看结果
 ```java
@@ -272,7 +272,7 @@ public class BookDaoImpl implements BookDao {
 | 位置  | 类定义上方                                                       |
 | 作用  | 设置该类创建对象的作用范围，可用于设置创建出的bean是否为单例对象                          |
 | 属性  | value（默认）：定义bean作用范围，`默认值singleton（单例）`，`可选值prototype（非单例）` |
-### bean的生命周期
+#### 1.4.2 bean的生命周期
 
 - 在BookDaoImpl中添加两个方法，`init`和`destroy`，方法名可以任意，再添加一个构造方法
 ```java
@@ -358,7 +358,7 @@ public class AppForAnnotation {
 |位置|方法上|
 |作用|设置该方法为销毁方法|
 |属性|无|
-### 小结
+#### 1.4.3 小结
 
 配置文件中的bean标签中的  
 
@@ -370,10 +370,10 @@ public class AppForAnnotation {
 
 `destroy-method`对应`@PreDestroy`
 
-## 5、注解开发依赖注入
+### 1.5 注解开发依赖注入
 
 - Spring为了使用注解简化开发，并没有提供`构造函数注入`、`setter注入`对应的注解，只提供了自动装配的注解实现。
-### 环境准备
+#### 1.5.1 环境准备
 
 - 创建一个Maven项目
 - pom.xml添加Spring的依赖
@@ -419,7 +419,7 @@ public class App {
 }
 ```
 - 环境准备好后，直接运行App类会有问题，因为还没有提供配置注入BookDao的，所以bookDao对象为Null,调用其save方法就会报`控指针异常`。
-### 注解实现按照类型注入
+#### 1.5.2 注解实现按照类型注入
 
 对于这个问题使用注解该如何解决?
 
@@ -500,7 +500,7 @@ public class BookDaoImpl2 implements BookDao {
 ```
 
 还是不行的，因为按照类型会找到多个bean对象，此时会按照`bookDao`名称去找，因为IOC容器只有名称叫`bookDao1`和`bookDao2`，所以找不到，会报`NoUniqueBeanDefinitionException`
-### 注解实现只能找名称注入
+#### 1.5.3 注解实现只能找名称注入
 
 当根据类型在容器中找到多个bean,注入参数的属性名又和容器中bean的名称不一致，这个时候该如何解决，就需要使用到`@Qualifier`来`指定注入哪个名称的bean对象`。`@Qualifier`注解后的值就是需要注入的bean的名称。
 ```java
@@ -518,7 +518,7 @@ public class BookServiceImpl implements BookService {
 ```
 
 `注意:@Qualifier不能独立使用，必须和@Autowired一起使用`
-### 简单数据类型注入
+#### 1.5.4 简单数据类型注入
 
 - 引用类型看完，简单类型注入就比较容易懂了。简单类型注入的是基本数据类型或者字符串类型，下面在`BookDaoImpl`类中添加一个`name`属性，用其进行简单类型注入
 ```java
@@ -546,7 +546,7 @@ public class BookDaoImpl implements BookDao {
 注意数据格式要匹配，如将”abc”注入给int值，这样程序就会报错。
 
 介绍完后，会有一种感觉就是这个注解好像没什么用，跟直接赋值是一个效果，还没有直接赋值简单，所以这个注解存在的意义是什么?继续往下看
-### 注解读取properties配置文件
+#### 1.5.5 注解读取properties配置文件
 
 `@Value`一般会被用在从properties配置文件中读取内容进行使用，具体如何实现?
 
@@ -633,12 +633,12 @@ public class BookDaoImpl implements BookDao {
 |位置|类定义上方|
 |作用|加载properties文件中的属性值|
 |属性|value（默认）：设置加载的properties文件对应的文件名或文件名组成的数组|
-# 九、IOC/DI注解开发管理第三方bean
+## 2 IOC/DI注解开发管理第三方bean
 
 前面定义bean的时候都是在自己开发的类上面写个注解就完成了，但如果是第三方的类，这些类都是在jar包中，我们没有办法在类上面添加注解，这个时候该怎么办?
 
 遇到上述问题，我们就需要有一种更加灵活的方式来定义bean,这种方式不能在原始代码上面书写注解，一样能定义bean,这就用到了一个全新的注解`@Bean`。
-## 1、环境准备
+### 2.1 环境准备
 
 - 创建一个Maven项目
 - pom.xml添加Spring的依赖
@@ -671,7 +671,7 @@ public class App {
 }
 ```
 
-## 2、注解开发管理第三方bean
+### 2.2 注解开发管理第三方bean
 
 在上述环境中完成对`Druid`数据源的管理，具体的实现步骤为
 
@@ -733,7 +733,7 @@ public class App {
 
 - 至此使用`@Bean`来管理第三方bean的案例就已经完成。
 - 如果有多个bean要被Spring管理，直接在配置类中多写几个方法，方法上添加@Bean注解即可。
-## 3、引入外部配置类
+### 2.3 引入外部配置类
 
 如果把所有的第三方bean都配置到Spring的配置类`SpringConfig`中，虽然可以，但是不利于代码阅读和分类管理，所有我们就想能不能按照类别将这些bean配置到不同的配置类中?
 
@@ -755,7 +755,7 @@ public class JdbcConfig {
 那现在又有了一个新问题，这个配置类如何能被Spring配置类加载到，并创建DataSource对象在IOC容器中?
 
 针对这个问题，有两个解决方案，接着往下看
-### 使用包扫描引入(不推荐)
+#### 2.3.1 使用包扫描引入(不推荐)
 
 - `步骤一：`在Spring的配置类上添加包扫描  
 	注意要将JdbcConfig类放在包扫描的地址下
@@ -788,7 +788,7 @@ public class JdbcConfig {
 
 
 这种方式虽然能够扫描到，但是不能很快的知晓都引入了哪些配置类(因为把包下的所有配置类都扫描了)，所有这种方式不推荐使用。
-### 使用@Import引入
+#### 2.3.2 使用@Import引入
 
 方案一实现起来有点小复杂，Spring早就想到了这一点，于是又给我们提供了第二种方案。  
 
@@ -845,12 +845,12 @@ public class SpringConfig {
 |作用|导入配置类|
 |属性|value（默认）：定义导入的配置类类名，  <br>当配置类有多个时使用数组格式一次性导入多个配置类|
 
-## 4、注解开发实现为第三方bean注入资源
+### 2.4 注解开发实现为第三方bean注入资源
 
 在使用@Bean创建bean对象的时候，如果方法在创建的过程中需要其他资源该怎么办?
 
 这些资源会有两大类，分别是`简单数据类型` 和`引用数据类型`。
-### 简单数据类型
+#### 2.4.1 简单数据类型
 
 对于下面代码关于数据库的四要素不应该写死在代码中，应该是从properties配置文件中读取。如何来优化下面的代码?
 ```java
@@ -953,7 +953,7 @@ public class JdbcConfig {
 输出结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a2747fb1db25e6c8c303b9e4be4adcde.png)
 
 
-### 引用数据类型
+#### 2.4.2 引用数据类型
 
 假设在构建DataSource对象的时候，需要用到BookDao对象，该如何把BookDao对象注入进方法内让其使用呢?
 
@@ -987,7 +987,7 @@ public DataSource dataSource(BookDao bookDao) {
 	结果如下，说明bookDao已经成功注入![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/92970e7738afc87beeb6d57d0e7e834f.png)
 
 
-# 十、注解开发总结
+## 3 注解开发总结
 
 
 
@@ -1000,10 +1000,10 @@ public DataSource dataSource(BookDao bookDao) {
 - ConponentScan
 - Atuowired
 - Bean
-# 十一、Spring整合
-## 1、整合MyBatis
+## 4 Spring整合
+### 4.1 整合MyBatis
 
-### 环境准备
+#### 4.1.1 环境准备
 
 - 在准备环境的同时，我们也来回顾一下MyBatis开发的相关内容
 
@@ -1230,7 +1230,7 @@ public class App {
 - `步骤九：`运行程序，结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0e99714bc3d51523ba508a45f3280193.png)
 
 
-### 思路分析
+#### 4.1.2 思路分析
 
 Mybatis的基础环境我们已经准备好了，接下来就得分析下在上述的内容中，哪些对象可以交给Spring来管理?
 
@@ -1246,7 +1246,7 @@ Mybatis的基础环境我们已经准备好了，接下来就得分析下在上�
 - 第三部分主要用于做连接池，Spring之前我们已经整合了Druid连接池，这块也需要交给Spring
 - 前面三部分一起都是为了创建SqlSession对象用的，那么用Spring管理SqlSession对象吗?回忆下SqlSession是由SqlSessionFactory创建出来的，所以只需要将SqlSessionFactory交给Spring管理即可。
 - 第四部分是Mapper接口和映射文件[如果使用注解就没有该映射文件]，这个是在获取到SqlSession以后执行具体操作的时候用，所以它和SqlSessionFactory创建的时机都不在同一个时间，可能需要单独管理。
-### 整合步骤
+#### 4.1.3 整合步骤
 
 前面我们已经分析了Spring与Mybatis的整合，大体需要做两件事，
 
@@ -1405,9 +1405,9 @@ public class App {
 - `MapperScannerConfigurer`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e86fee4869b1c7fafed176bc4cee9890.png)
 
 
-## 2、整合Junit
+### 4.2 整合Junit
 
-### 依赖是junit的整合方式
+#### 4.2.1 依赖是junit的整合方式
 
 - `步骤一：`引入依赖
 ```xml
@@ -1476,7 +1476,7 @@ public class AccountServiceTest {
 |位置|测试类定义上方|
 |作用|设置JUnit加载的Spring核心配置|
 |属性|classes：核心配置类，可以使用数组的格式设定加载多个配置类  <br>locations:配置文件，可以使用数组的格式设定加载多个配置文件名称|
-### 依赖是junit-jupiter-api的整合方式
+#### 4.2.2 依赖是junit-jupiter-api的整合方式
 
 1.  整合测试环境作用
 
