@@ -4,7 +4,6 @@
 - 掌握基于SpringBoot框架的程序开发步骤
 - 熟练使用SpringBoot配置信息修改服务器配置
 - 基于SpringBoot的完成SSM整合项目开发
-
 ## 2 SpringBoot简介
 
 SpringBoot是由Pivotal团队提供的全新框架，其设计目的是用来`简化`Spring应用的`初始搭建`以及`开发过程`。  
@@ -155,7 +154,6 @@ public class BookController {
 #### 2.1.1 开发步骤
 
 `SpringBoot` 开发起来特别简单，分为如下几步：
-
 - 创建新模块，选择Spring初始化，并配置模块相关基础信息
 - 选择当前模块需要使用的技术集
 - 开发控制器类
@@ -217,8 +215,10 @@ public class Application {
     }  
 }
 ```
-
 - 这个类中的东西很简单，就在类上添加了一个 `@SpringBootApplication` 注解，而在主方法中就一行代码。我们在启动服务器时就是执行的该类中的主方法。
+
+---
+
 - 再看看 `pom.xml` 配置文件中的内容
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>  
@@ -329,11 +329,9 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 ```
 
 执行上述命令就可以看到 `SpringBoot` 运行的日志信息，同时使用PostMan发送GET请求访问`localhost:8080/books/9527`，也可以正常输出`get id ==> 9527`![[![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/490372a80ba44217b129ab175698ed96.png)
-
-
 ### 2.2 SpringBoot概述
 
-`SpringBoot` 是由Pivotal团队提供的全新框架，其设计目的是用来`简化`Spring应用的`初始搭建`以及`开发过程`。
+`SpringBoot` 是由Pivotal团队提供的全新框架，其设计目的是用来`简化`Spring应用的`初始搭建`以及`开发过程`
 
 原始 `Spring` 环境搭建和开发存在以下问题
 
@@ -461,7 +459,6 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
   
 ···
 ```
-
 看完了父工程中 `pom.xml` 的配置后不难理解我们工程的的依赖为什么都没有配置 `version`。
 ##### 2.2.1.2 探索依赖
 
@@ -499,7 +496,7 @@ java -jar springboot_01_quickstart-0.0.1-SNAPSHOT.jar
 
 而依赖 `spring-boot-starter-tomcat` ，从名字基本能确认内部依赖了 `tomcat`，所以我们的工程才能正常启动。  
 
-结论：以后需要使用技术，只需要引入该技术对应的起步依赖即可
+结论：**以后需要使用技术，只需要引入该技术对应的起步依赖即可**
 ##### 2.2.1.3 小结
 
 - starter
@@ -525,7 +522,6 @@ public class Springboot01QuickstartApplication {
 ```
 
 <font color="#00b050">注意</font>：
-
 - `SpringBoot` 在创建项目时，采用jar的打包方式
 - `SpringBoot` 的引导类是项目的入口，运行 `main` 方法就可以启动项目  
     因为我们在 `pom.xml` 中配置了 `spring-boot-starter-web` 依赖，而该依赖通过前面的学习知道它依赖 `tomcat` ，所以运行 `main` 方法就可以使用 `tomcat` 启动咱们的工程。
@@ -556,8 +552,6 @@ public class Springboot01QuickstartApplication {
 Jetty比Tomcat更轻量级，可拓展性更强（相对于Tomcat），谷歌应用引擎（GAE）已全面切换为Jetty
 
 接下来再次运行引导类，在日志信息中就可以看到使用的是jetty服务器![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/215fb80485454ba91216b092341c07f1.png)
-
-
 小结：通过切换服务器，我们不难发现在使用 `SpringBoot` 换技术时只需要导入该技术的`起步依赖`即可。
 ## 3 配置文件
 
@@ -579,13 +573,13 @@ server.port=80
 - `application.yml`
 ```yaml
 server:  
-port: 81
+	port: 81
 ```
 
 - `application.yaml`
 ```yaml
 server:  
-port: 82
+	port: 82
 ```
 
 <font color="#00b050">注意</font>：`SpringBoot` 程序的配置文件名必须是 `application` ，只是后缀名不同而已。
@@ -600,8 +594,11 @@ port: 82
 server.port=80
 ```
 
-- 启动服务，会在控制台打印出日志信息，从日志信息中可以看到绑定的端口号已经修改了![[Pasted image 20230903000118.png]]
-- `application.yml`配置文件
+- 启动服务，会在控制台打印出日志信息，从日志信息中可以看到绑定的端口号已经修改了
+  ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/94a340e801860c5b3e13bc0fb35d33db.png)
+---
+
+`application.yml`配置文件
 - 删除 `application.properties` 配置文件中的内容。在 `resources` 下创建一个名为 `application.yml` 的配置文件，在该文件中书写端口号的配置项，格式如下：
 ```yml
 server:  
@@ -609,8 +606,10 @@ server:
 ```
 
 <font color="#00b050">注意</font>： 在`:`后，数据前一定要加空格。
+- 启动服务，可以在控制台看到绑定的端口号是 `81`
 
-- 启动服务，可以在控制台看到绑定的端口号是 `81`![[Pasted image 20230903000211.png]]
+--- 
+
 - `application.yaml`配置文件
 - 删除 `application.yml` 配置文件和 `application.properties` 配置文件内容，然后在 `resources` 下创建名为 `application.yaml` 的配置文件，配置内容和后缀名为 `yml` 的配置文件中的内容相同，只是使用了不同的后缀名而已
 - `application.yaml` 配置文件内容如下：
@@ -620,7 +619,6 @@ server:
 ```
 
 - 启动服务，在控制台可以看到绑定的端口号![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0881ae0c0789ee5ecce0a8a639659278.png)
-
 
 #### 3.1.2 三种配置文件的优先级
 
@@ -650,7 +648,6 @@ port: 82
 - 从上述的验证结果可以确定三种配置文件的优先级是：`application.properties` > `application.yml` > `application.yaml`
 
 注意：
-
 - `SpringBoot` 核心配置文件名为 `application`
 - `SpringBoot` 内置属性过多，且所有属性集中在一起修改，在使用时，通过代码补全+关键字修改属性
 - 例如要设置日志的级别时，可以在配置文件中书写 `logging`，就会提示出来。配置内容如下
@@ -690,14 +687,12 @@ enterprise:
 ```
 
 - 通过对比，我们得出yaml的优点有：
-    
     - 容易阅读
         - `yaml` 类型的配置文件比 `xml` 类型的配置文件更容易阅读，结构更加清晰
     - 容易与脚本语言交互（暂时还体会不到，后面会了解）
     - 以数据为核心，重数据轻格式
         - `yaml` 更注重数据，而 `xml` 更注重格式
 - YAML 文件扩展名：
-    
     - `.yml` (主流)
     - `.yaml`
 
@@ -783,9 +778,10 @@ public class BookController {
     }  
 }
 ```
+- 使用PostMan发送请求，控制台输出如下，成功获取到了数据
+  ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6415f5d3dce50a6455d41dfad1ac2ead.png)
 
-- 使用PostMan发送请求，控制台输出如下，成功获取到了数据![[Pasted image 20230903000713.png]]
-- `方式二：`使用`Environment`对象
+`方式二：`使用`Environment`对象
 
 - 上面方式读取到的数据特别零散，`SpringBoot` 还可以使用 `@Autowired` 注解注入 `Environment` 对象的方式读取数据。这种方式 `SpringBoot` 会将配置文件中所有的数据封装到 `Environment` 对象中，如果需要使用哪个数据只需要通过调用 `Environment` 对象的 `getProperty(String name)` 方法获取。具体代码如下
 ```java
@@ -804,11 +800,11 @@ public class BookController {
     }  
 }
 ```
-
-- 使用PostMan发送请求，控制台输出如下，成功获取到了数据![[Pasted image 20230903000801.png]]
+- 使用PostMan发送请求，控制台输出如下，成功获取到了数据
 - <font color="#00b050">注意</font>：这种方式在开发中很少用，因为框架内含大量数据
 
-- `方式三：`使用自定义对象
+
+`方式三：`使用自定义对象
 
 - `SpringBoot` 还提供了将配置文件中的数据封装到我们自定义的实体类对象中的方式。具体操作如下：
     - 将实体类 `bean` 的创建交给 `Spring` 管理。
@@ -830,7 +826,7 @@ public class Enterprise {
 }
 ```
 
-- BooKController内容如下
+- BookController内容如下
 ```java
 @RestController  
 @RequestMapping("/books")  
@@ -848,8 +844,9 @@ public class BookController {
     }  
 }
 ```
+- 使用PostMan发送请求，控制台输出如下，成功获取到了数据
+  ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ab1c7e9c55e57f229c59f049da9e94e3.png)
 
-- 使用PostMan发送请求，控制台输出如下，成功获取到了数据![[Pasted image 20230903000923.png]]
 可能遇到的问题：
 - 在Enterprise实体类上遇到`Spring Boot Configuration Annotation Processor not configured`警告提示
 
@@ -903,6 +900,8 @@ spring:
 spring:  
   profiles:  
     active: dev  
+
+# 以三个-来区分不同环境的配置文件
 ---  
 # 开发环境  
 spring:  
@@ -931,6 +930,8 @@ spring:
     activate:  
       on-profile: dev # 给开发环境取的名
 ```
+
+
 #### 3.4.2 properties文件
 
 `properties` 类型的配置文件配置多环境需要`定义不同的配置文件`
@@ -990,8 +991,7 @@ java –jar springboot.jar –-spring.profiles.active=test --server.port=85 --se
     - 2级：classpath：config/application.yml
     - 3级：file ：application.yml
     - 4级：file ：config/application.yml
-        
-        说明：级别越高的优先级越高
+        说明：级别越高的优先级越高，file指打包后的jar包所在的文件夹
 
 下面我们来验证这个优先级
 #### 3.5.1 1级和2级
@@ -1009,7 +1009,7 @@ server:
   port: 81
 ```
 
-启动引导类，控制台输出的为81端口![[Pasted image 20230903001543.png]]
+启动引导类，控制台输出的为81端口
 #### 3.5.2 3级和4级
 
 先将工程打成一个jar包，进入到jar包的目录下，创建`application.yml` 配置文件，而在该配合文件中将端口号设置为 `82`  
@@ -1032,7 +1032,8 @@ server:
 java -jar springboot_06_config_file-0.0.1-SNAPSHOT.jar
 ```
 
-运行后日志信息如下，端口为83![[Pasted image 20230903001726.png]]
+运行后日志信息如下，端口为83
+
 通过这个结果可以得出一个结论 `config`下的配置文件优先于类路径下的配置文件。
 ## 4 SpringBoot整合Junit
 
@@ -1101,7 +1102,6 @@ class Springboot02JunitApplicationTests {
 <font color="#00b050">注意</font>：这里的引导类所在包必须是测试类所在包及其子包。
 
 例如：
-
 - 引导类所在包是 `com.blog`
 - 测试类所在包是 `com.blog`
 

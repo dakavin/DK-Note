@@ -787,8 +787,8 @@ public Result getById(@PathVariable Integer id) {
 
 
 前端接收到这个信息后，和我们之前约定的格式不一致，怎么解决呢？  
-在解决问题之前，我们先来看一下异常的种类，以及出现异常的原因：
 
+在解决问题之前，我们先来看一下异常的种类，以及出现异常的原因：
 - 框架内部抛出的异常：因`使用不合规`导致
 - 数据层抛出的异常：因使用`外部服务器故障`导致（例如：服务器访问超时）
 - 业务层抛出的异常：因`业务逻辑书写错误`导致（例如：遍历业务书写操作，导致索引越界异常等）
@@ -798,7 +798,6 @@ public Result getById(@PathVariable Integer id) {
 了解完上面这些出现`异常的位置`，我们发现，在我们开发的`任何一个位置`都可能会出现异常，而且这些异常是`不能避免的`，所以我们就需要对这些异常来`进行处理`。
 
 `思考`
-
 1. 各个层级均出现异常，那么异常处理代码要写在哪一层？
     - 所有的异常均抛出到表现层进行处理
 2. 异常的种类很多，表现层如何将所有的异常都处理到呢？
@@ -810,15 +809,16 @@ public Result getById(@PathVariable Integer id) {
 
 - 异常处理器：
     - 集中的、统一的处理项目中出现的异常
-```java
-@RestControllerAdvice  
-public class ProjectExceptionAdvice {  
-    @ExceptionHandler(Exception.class)  
-    public Result doException(Exception ex) {  
-        return new Result(666, null);  
-    }  
-}
-```
+		```java
+		@RestControllerAdvice  
+		public class ProjectExceptionAdvice {  
+		    @ExceptionHandler(Exception.class)  
+		    public Result doException(Exception ex) {  
+		        return new Result(666, null);  
+		    }  
+		}
+		```
+	- **注意：在Spring配置类中，需要扫描到这个类！！！否则不生效**
 ### 3.2 异常处理器的使用
 
 - `步骤一：`创建异常处理器类
@@ -934,7 +934,7 @@ public class ProjectExceptionAdvice {
     - 记录日志
 #### 3.3.3 具体实现
 
-- 思路:
+- `思路:`
     1. 先通过自定义异常，完成BusinessException和SystemException的定义
     2. 将其他异常包装成自定义异常类型
     3. 在异常处理器类中对不同的异常进行处理
@@ -965,7 +965,7 @@ public class SystemException extends RuntimeException {
         this.code = code;  
     }  
   
-    public SystemException(Integer code, String message, Throwable cause) {  
+    public SystemException(Integer code, String message, Throwable cause){  
         super(message, cause);  
         this.code = code;  
     }  
@@ -2123,13 +2123,13 @@ deleteBook(row) {
     - 这个就是拦截器要做的事
 
 - 拦截器（Interceptor）是一种动态拦截方法调用的机制，在SpringMVC中动态拦截控制器方法的执行
-    
     - `作用：`
         - 在指定的方法调用前后执行预先设定的代码
         - 阻止原始方法的执行
     - `总结：`拦截器就是用来作增强
+
 - 但是这个拦截器貌似跟我们之前学的过滤器很像啊，不管是从作用上来看还是从执行顺序上来看
-    
+
     - 那么拦截器和过滤器之间的区别是什么呢？
         - `归属不同：`Filter属于Servlet技术，而Interceptor属于SpringMVC技术
         - `拦截内容不同：`Filter对所有访问进行增强，Interceptor仅对SpringMVC的访问进行增强
@@ -2343,8 +2343,6 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 ```
 
 - 最后我们来看下拦截器的执行流程![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6765365f6154fff0faa170e06247eac5.png)
-
-
 - 当有拦截器后，请求会先进入`preHandle`方法，
     - 如果方法返回`true`，则放行继续执行后面的handle(Controller的方法)和后面的方法
     - 如果返回`false`，则直接跳过后面方法的执行。
@@ -2364,7 +2362,7 @@ public boolean preHandle(HttpServletRequest request, HttpServletResponse respons
 - `response:`响应对象
 - `handler:`被调用的处理器对象，本质上是一个方法对象，对反射中的Method对象进行了再包装
 
-使用request对象可以获取请求数据中的内容，如获取请求头的`Content-Type`
+**使用request对象可以获取请求数据中的内容**，如获取请求头的`Content-Type`
 ```java
 public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {  
     String name = request.getHeader("Content-Type");  
@@ -2387,8 +2385,6 @@ public boolean preHandle(HttpServletRequest request, HttpServletResponse respons
 ```
 
 控制台输出如下，成功输出了方法名`save`![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d142edef142f81513ec8a21f93980803.png)
-
-
 #### 5.3.2 后置处理方法
 
 原始方法运行后运行，如果原始方法被拦截，则不执行

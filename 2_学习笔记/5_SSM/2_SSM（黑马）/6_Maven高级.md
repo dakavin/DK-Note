@@ -9,14 +9,14 @@
 
 ### 2.1 分模块开发设计
 
-1. 按照功能拆分
+1. **按照功能拆分**
     - 我们之前的项目都是在一个模块中，比如上篇文章的SSM整合，虽然这样做，功能也都实现了，但是也存在一些问题，我们拿银行的项目举例，来聊聊这件事
         - 网络没有那么发达的时候，我们需要到银行柜台或者取款机进行业务操作
         - 随着互联网的发展，我们有了电脑之后，就可以在网页上登录银行网站使用U盾进行业务操作
         - 再来就是随着智能手机的普及，我们只需要用手机登录App就可以进行业务操作
     - 上面三个场景出现的时间轴是不同的，如果非要把三个场景的模块代码放到同一个项目，那么当其中某一个模块代码出现问题，就会导致整个项目都无法正常启动，从而导致银行的多个业务都无法正常办理，所以我们会`按照功能`将项目进行拆分
 
-2. 按照模块拆分
+2. **按照模块拆分**
     - 比如电商项目中，有订单和商品两个模块，订单中需要包含商品的详细信息，所以需要商品的模型类，商品模块也会用到商品的模型类，这个时候如果两个模块中都写模型类，就会出现重复代码，后期维护的成本就比较高。我们就想能不能把它们公共的部分抽取成一个独立的模块，其他模块想要使用就可以像`导入第三方依赖的坐标`一样来使用我们自己抽取的模块，这样就解决了代码重复的问题，这种拆分方式就是我们所说的`按照模块`拆分
 
 - 之前的项目包结构如下
@@ -26,8 +26,6 @@
     - `com.blog.service`存的是Service接口，`com.blog.service.impl`存放的是Service实现类
 - 那我们现在就可以把这些包按照功能拆分成若干个子模块，方便模块之间的相互调用，接口供销
 - 这样的话，项目中的每一层都可以单独维护，也可以很方便的被别人使用。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8d69d34a207692f1323528019545d7eb.png)
-
-
 
 那么关于分模块开发的意义，我们就讲完了，说了这么多好处，那么该如何实现呢?
 ### 2.2 分模块开发实现
@@ -49,23 +47,27 @@
     - 要想解决上述问题，我们需要在`maven_01_ssm`中添加`maven_02_pojo`的依赖。
 - `步骤四：`
     - 在`maven_01_ssm`项目的pom.xml添加`maven_02_pojo`的依赖
-```xml
-<dependency>  
-    <groupId>com.blog</groupId>  
-    <artifactId>maven_02_pojo</artifactId>  
-    <version>1.0-SNAPSHOT</version>  
-</dependency>
-```
-- 因为添加了依赖，所以在`maven_01_ssm`中就已经能找到Book类，所以刚才的爆红提示就会消失。
+	```xml
+	<dependency>  
+	    <groupId>com.blog</groupId>  
+	    <artifactId>maven_02_pojo</artifactId>  
+	    <version>1.0-SNAPSHOT</version>  
+	</dependency>
+	```
+	- 因为添加了依赖，所以在`maven_01_ssm`中就已经能找到Book类，所以刚才的爆红提示就会消失。
 
-- `步骤五：`编译`maven_01_ssm`项目(控制台会报错)![[Pasted image 20230831214409.png]]
+- `步骤五：`编译`maven_01_ssm`项目(控制台会报错)
+  ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/65285283f634b36faa11e7612435d5f1.png)
+
 - 意思就是找不到`maven_02_pojo`这个jar包
 	- 为啥找不到呢？
 		- 原因是Maven会从本地仓库找对应的jar包，但是本地仓库又不存在该jar包所以会报错。
 		- 在IDEA中是有`maven_02_pojo`这个项目，所以我们只需要将`maven_02_pojo`项目安装到本地仓库即可。
 
 - `步骤六：`将项目安装本地仓库
-    - 将需要被依赖的项目`maven_02_pojo`，使用maven的`install`命令，把其安装到Maven的本地仓库中
+    - 将需要被依赖的项目`maven_02_pojo`，使用maven的`install`命令，**把其安装到Maven的本地仓库中**
+      ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8c44ecc9e9faa2bce11db43935d1faad.png)
+
     - 之后再次执行`maven_01_ssm`的`compile`的命令后，就已经能够成功编译。
 #### 2.2.3 抽取dao层
 
@@ -73,45 +75,44 @@
     - 创建一个名为`maven_03_dao`的maven项目
 - `步骤二：`项目中创建`dao`包
     - 在`maven_03_dao`项目中创建`com.blog.dao`包，并将`maven_01_ssm`中BookDao类拷贝到该包中
-    - 在`maven_03_dao`中会有如下几个问题需要解决下
-        - 项目`maven_03_dao`的BookDao接口中Book类找不到报错
-            - 解决方案在`maven_03_dao`项目的pom.xml中添加`maven_02_pojo`项目
-```xml
-<dependency>  
-    <groupId>com.blog</groupId>  
-    <artifactId>maven_02_pojo</artifactId>  
-    <version>1.0-SNAPSHOT</version>  
-</dependency>
-```
+    - 在`maven_03_dao`中会有如下几个问题需要解决下：
+        - 问题一：项目`maven_03_dao`的BookDao接口中Book类找不到报错
+		- 解决方案在`maven_03_dao`项目的pom.xml中添加`maven_02_pojo`项目
+		```xml
+		<dependency>  
+				<groupId>com.blog</groupId>  
+				<artifactId>maven_02_pojo</artifactId>  
+				<version>1.0-SNAPSHOT</version>  
+		</dependency>
+		```
 
-- 项目`maven_03_dao`的BookDao接口中，Mybatis的增删改查注解报错
-
-- 解决方案在`maven_03_dao`项目的pom.xml中添加`mybatis`的相关依赖
-```xml
-<dependency>  
-    <groupId>org.mybatis</groupId>  
-    <artifactId>mybatis</artifactId>  
-    <version>3.5.6</version>  
-</dependency>  
-  
-<dependency>  
-    <groupId>mysql</groupId>  
-    <artifactId>mysql-connector-java</artifactId>  
-    <version>5.1.46</version>  
-</dependency>
-```
+		- 问题二：项目`maven_03_dao`的BookDao接口中，Mybatis的增删改查注解报错
+		- 解决方案在`maven_03_dao`项目的pom.xml中添加`mybatis`的相关依赖
+		```xml
+		<dependency>  
+		    <groupId>org.mybatis</groupId>  
+		    <artifactId>mybatis</artifactId>  
+		    <version>3.5.6</version>  
+		</dependency>  
+		  
+		<dependency>  
+		    <groupId>mysql</groupId>  
+		    <artifactId>mysql-connector-java</artifactId>  
+		    <version>5.1.46</version>  
+		</dependency>
+		```
 
 - 最后记得使用maven的`install`命令，把其安装到Maven的本地仓库中
 
 - `步骤三：`删除原项目中的`dao`包
 	- 删除Dao包以后，因为`maven_01_ssm`中的BookServiceImpl类中有使用到Dao的内容，所以需要在`maven_01_ssm`的pom.xml添加`maven_03_dao`的依赖
-```xml
-<dependency>  
-    <groupId>com.blog</groupId>  
-    <artifactId>maven_03_dao</artifactId>  
-    <version>1.0-SNAPSHOT</version>  
-</dependency>
-```
+	```xml
+	<dependency>  
+	    <groupId>com.blog</groupId>  
+	    <artifactId>maven_03_dao</artifactId>  
+	    <version>1.0-SNAPSHOT</version>  
+	</dependency>
+	```
 
 - `步骤四：`运行测试
     - 启动Tomcat服务器，访问`http://localhost:8080/pages/books.html`
@@ -119,7 +120,6 @@
 #### 2.2.4 小结
 
 对于项目的拆分，大致会有如下几个步骤
-
 1. 创建Maven模块
 2. 书写模块代码
     - 分模块开发需要先针对模块功能进行设计，再进行编码。不会先将工程开发完毕，然后进行拆分。拆分方式可以按照功能拆也可以按照模块拆。
@@ -127,15 +127,14 @@
     - 由于maven指令只能安装到自己电脑的仓库里，那么团队内部开发需要发布模块功能，需要到团队内部可共享的仓库中(私服)，私服我们后面会讲解。
 ## 3 依赖管理
 
-我们现在已经能把项目拆分成一个个独立的模块，当在其他项目中想要使用独立出来的这些模块，只需要在其pom.xml使用`<dependency>`标签来进行jar包的引入即可。  
-`<dependency>`其实就是依赖，关于依赖管理里面都涉及哪些内容，我们就一个个来学习下:
+我们现在已经能把项目拆分成一个个独立的模块，当在其他项目中想要使用独立出来的这些模块，只需要在其pom.xml使用`<dependency>`标签来进行jar包的引入即可
 
-- 依赖传递
-- 可选依赖
-- 排除依赖
+`<dependency>`其实就是依赖，关于依赖管理里面都涉及哪些内容，我们就一个个来学习下:
+- **依赖传递**
+- **可选依赖**
+- **排除依赖**
 
 我们先来说说什么是依赖:
-
 - 依赖指当前项目运行所需的jar一个项目可以设置多个依赖。
 - 格式为:
 ```xml
@@ -155,7 +154,6 @@
 ### 3.1 依赖传递与冲突问题
 
 首先我们要明白一点：依赖是具有传递性的![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e7a372822e22616315d6cb997f80398a.png)
-
 
 说明：A代表自己的项目；B，C，D，E，F，G代表的是项目所依赖的jar包；D1和D2、E1和E2代表是相同jar包的不同版本
 
@@ -189,20 +187,19 @@
 
 - 调换位置，刷新maven面板，我们会发现，maven的dependencies面板上总是显示使用的是后加载的jar包  
     于是我们得出一个结论：
-- `特殊优先：当同级配置了相同资源的不同版本，后配置的覆盖先配置的`。
+	- `情况一：`**特殊优先**：当同级配置了相同资源的不同版本，后配置的覆盖先配置的。
     
-- `情况二:`路径优先：当依赖中出现相同的资源时，层级越深，优先级越低，层级越浅，优先级越高
-    
+- `情况二:`**路径优先**：当依赖中出现相同的资源时，层级越深，优先级越低，层级越浅，优先级越高
     - A通过B间接依赖到E1
     - A通过C间接依赖到E2
     - A就会间接依赖到E1和E2，Maven会按照层级来选择，E1是2度，E2是3度，所以最终会选择E1
-- `情况三:`声明优先：当资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的
-    
+
+- `情况三:`**声明优先**：当资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的    
     - A通过B间接依赖到D1
     - A通过C间接依赖到D2
     - D1和D2都是两度，这个时候就不能按照层级来选择，需要按照声明来，谁先声明用谁，也就是说B在C之前声明，这个时候使用的是D1，反之则为D2
 
-但是对于上面的结果，我们也不用刻意去记，一切以maven的dependencies面板上显示的为准
+**但是对于上面的结果，我们也不用刻意去记，一切以maven的dependencies面板上显示的为准**
 ### 3.2 可选依赖和排除依赖
 
 依赖传递介绍完以后，我们来思考一个问题，假如
@@ -210,13 +207,12 @@
 - `maven_01_ssm` 依赖了 `maven_03_dao`
 - `maven_03_dao` 依赖了 `maven_02_pojo`
 - 因为现在有依赖传递，所以`maven_01_ssm`能够使用到`maven_02_pojo`的内容
+
 - 如果说现在不想让`maven_01_ssm`依赖到`maven_02_pojo`，有哪些解决方案?
-    
     说明：在真实使用的过程中，`maven_01_ssm`中是需要用到`maven_02_pojo`的，我们这里只是用这个例子描述我们的需求。因为有时候，`maven_03_dao`出于某些因素的考虑，就是不想让别人使用自己所依赖的`maven_02_pojo`。
     
 
 - `方案一：`可选依赖
-    
     - 可选依赖指对外隐藏当前所依赖的资源—-`不透明`
     - 在`maven_03_dao`的pom.xml，在引入`maven_02_pojo`的时候，添加`optional`
 ```xml
@@ -230,8 +226,7 @@
 ```
 
 - `方案二：`排除依赖
-
-	- 排除依赖指主动断开依赖的资源，被排除的资源无需指定版本—-`不需要`
+	- 排除依赖指主动断开依赖的资源，被排除的资源无需指定版本—`不需要`
 	- 前面我们已经通过可选依赖实现了阻断`maven_02_pojo`的依赖传递，对于排除依赖，则指的是已经有依赖的事实，也就是说`maven_01_ssm`项目中已经通过依赖传递用到了`maven_02_pojo`，此时我们需要做的是将其进行排除，所以接下来需要修改`maven_01_ssm`的pom.xml
 ```xml
 <dependency>  
@@ -261,15 +256,12 @@
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0ef5c220a4ab40c66e16a7d4b81b7e8c.png)
 
-
-
 - 分模块开发后，需要将这四个项目都安装到本地仓库，目前我们只能通过项目Maven面板的install来安装，并且需要安装四个，如果我们的项目足够多，那一个个install也挺麻烦的
 - 如果四个项目都已经安装成功，当ssm_pojo发生变化后，我们就得将ssm_pojo重新安装到maven仓库，但是为了确保我们对ssm_pojo的修改不会影响到其他模块（比如我们将pojo类中的一个属性删除，如果其他模块调用了这个属性，那必然报错），我们需要对所有模块重新编译，看看有没有问题。然后还需要将所有模块再install一遍
 
 项目少的话还好，但是如果项目多的话，一个个操作项目就容易出现漏掉或重复操作的问题，所以我们就像能不能抽取一个项目，把所有的项目管理起来，以后再想操作这些项目，做需要操作我们抽取的这个项目，这样就省事儿多了
 
 这就要用到我们接下来讲的`聚合`了
-
 - 所谓聚合：将多个模块组织成一个整体，同时进行项目构建的过程称为聚合
 - 聚合工程：通常是一个不具有业务功能的`空`工程
 - 作用：使用聚合工程可以将多个工程编组，通过对聚合工程的构建，实现对所包含的所有模块进行同步构建
@@ -326,9 +318,8 @@
 ```
 
 - `步骤四：`使用聚合统一管理项目  
-	在maven面板上点击compile，会发现所有受管理的项目都会被执行编译，这就是聚合工程的作用![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d269fa90a5715b9feae6292125c2f06d.png)
-
-
+	在maven面板上点击compile，会发现所有受管理的项目都会被执行编译，这就是聚合工程的作用
+	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d269fa90a5715b9feae6292125c2f06d.png)
 	说明：聚合工程管理的项目在进行运行的时候，会按照项目与项目之间的依赖关系来自动决定执行的顺序和配置的顺序无关。  
 	虽然我们配置的顺序是`123`，但是执行的时候按照依赖关系编译是`231`
 
@@ -473,11 +464,8 @@
     
 - `步骤四：`优化子项目依赖版本问题  
     如果把所有用到的jar包都管理在父项目的pom.xml，看上去更简单些，但是这样就会导致有很多项目引入了过多自己不需要的jar包。如上面看到的这张图:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/95c3d5a89d72caa0fd9c053546be0af3.png)
-
-
 	如果把所有的依赖都放在了父工程中进行统一维护，就会导致ssm_order项目中多引入了`spring-test`的jar包，如果这样的jar包过多的话，对于ssm_order来说也是一种”负担”。
     
-
 那针对于这种部分项目有的jar包，我们该如何管理优化呢?
 
 1. 在父工程中的pom.xml中定义依赖管理
@@ -523,7 +511,6 @@
 这个时候，maven_01_ssm和maven_03_dao这两个项目中的junit版本就会跟随着父项目中的标签`dependencyManagement`中junit的版本发生变化而变化。不需要junit的项目就不需要添加对应的依赖即可（maven_02_pojo中就没添加）
 
 至此继承就已经学习完了，总结来说，继承可以帮助做两件事
-
 - 将所有项目公共的jar包依赖提取到父工程的pom.xml中，子项目就可以不用重复编写，简化开发
 - 将所有项目的jar包配置到父工程的`dependencyManagement`标签下，实现版本管理，方便维护
     - `dependencyManagement`标签不真正引入jar包，只是管理jar包的版本
@@ -532,84 +519,78 @@
 
 最后总结一句话就是，`父工程主要是用来快速配置依赖jar包和管理项目中所使用的资源`。
 
-- `小结`
+`小结`
 - 继承的实现步骤:
-- 创建Maven模块，设置打包类型为pom
-```xml
-<packaging>pom</packaging>
-```
-- 在父工程的pom文件中配置依赖关系(子工程将沿用父工程中的依赖关系),一般只抽取子项目中公有的jar包
-```xml
-<dependencies>  
-    <dependency>  
-        <groupId>org.springframework</groupId>  
-        <artifactId>spring-webmvc</artifactId>  
-        <version>5.2.10.RELEASE</version>  
-    </dependency>  
-    ...  
-</dependencies>
-```
-- 在父工程中配置子工程中可选的依赖关系
-```xml
-<dependencyManagement>  
-    <dependencies>  
-        <dependency>  
-            <groupId>com.alibaba</groupId>  
-            <artifactId>druid</artifactId>  
-            <version>1.1.16</version>  
-        </dependency>  
-    </dependencies>  
-    ...  
-</dependencyManagement>
-```
-- 在子工程中配置当前工程所继承的父工程
-```xml
-<!--定义该工程的父工程-->  
-<parent>  
-    <groupId>com.blog</groupId>  
-    <artifactId>maven_01_parent</artifactId>  
-    <version>1.0-RELEASE</version>  
-    <!--填写父工程的pom文件,可以不写-->  
-    <relativePath>../maven_01_parent/pom.xml</relativePath>  
-</parent>
-```
-- 在子工程中配置使用父工程中可选依赖的坐标
-```xml
-<dependencies>  
-    <dependency>  
-        <groupId>com.alibaba</groupId>  
-        <artifactId>druid</artifactId>  
-    </dependency>  
-</dependencies>
-```
+	- 创建Maven模块，设置打包类型为pom
+	```xml
+	<packaging>pom</packaging>
+	```
+	- 在父工程的pom文件中配置依赖关系(子工程将沿用父工程中的依赖关系),一般只抽取子项目中公有的jar包
+	```xml
+	<dependencies>  
+	    <dependency>  
+	        <groupId>org.springframework</groupId>  
+	        <artifactId>spring-webmvc</artifactId>  
+	        <version>5.2.10.RELEASE</version>  
+	    </dependency>  
+	    ...  
+	</dependencies>
+	```
+	- 在父工程中配置子工程中可选的依赖关系
+	```xml
+	<dependencyManagement>  
+	    <dependencies>  
+	        <dependency>  
+	            <groupId>com.alibaba</groupId>  
+	            <artifactId>druid</artifactId>  
+	            <version>1.1.16</version>  
+	        </dependency>  
+	    </dependencies>  
+	    ...  
+	</dependencyManagement>
+	```
+	- 在子工程中配置当前工程所继承的父工程
+	```xml
+	<!--定义该工程的父工程-->  
+	<parent>  
+	    <groupId>com.blog</groupId>  
+	    <artifactId>maven_01_parent</artifactId>  
+	    <version>1.0-RELEASE</version>  
+	    <!--填写父工程的pom文件,可以不写-->  
+	    <relativePath>../maven_01_parent/pom.xml</relativePath>  
+	</parent>
+	```
+	- 在子工程中配置使用父工程中可选依赖的坐标
+	```xml
+	<dependencies>  
+	    <dependency>  
+	        <groupId>com.alibaba</groupId>  
+	        <artifactId>druid</artifactId>  
+	    </dependency>  
+	</dependencies>
+	```
 
 注意事项:
-
 1. 子工程中使用父工程中的可选依赖时，仅需要提供群组id和项目id，无需提供版本，版本由父工程统一提供，避免版本冲突
 2. 子工程中还可以定义父工程中没有定义的依赖关系,只不过不能被父工程进行版本统一管理。
 ### 4.3 区别
 
 聚合与继承分别的作用:
-
 - `聚合用于快速构建项目，对项目进行管理`
 - `继承用于快速配置和管理子项目中所使用jar包的版本`
 
 聚合和继承的相同点:
-
 - 聚合与继承的pom.xml文件打包方式均为pom，可以将两种关系制作到同一个pom文件中
 - 聚合与继承均属于设计型模块，并无实际的模块内容
 
 聚合和继承的不同点:
-
 - 聚合是在当前模块中配置关系，聚合可以感知到参与聚合的模块有哪些
 - 继承是在子模块中配置关系，父模块无法感知哪些子模块继承了自己
 ## 5 属性
 
 在这一小节，我们将学习两个内容，分别是
-
 - 属性
 - 版本管理
-
 属性中会继续解决分模块开发项目存在的问题，版本管理主要是认识下当前主流的版本定义方式。
 ### 5.1 属性
 
@@ -643,7 +624,9 @@
 ```
 
 如果我们现在想更新Spring的版本，就会发现我们依然需要更新多个jar包的版本，这样的话还是有可能出现漏改导致程序出问题，而且改起来也是比较麻烦。  
+
 问题清楚后，我们需要解决的话，就可以参考咱们java基础所学习的变量，声明一个变量，在其他地方使用该变量，当变量的值发生变化后，所有使用变量的地方也会跟着变化  
+
 例如
 ```java
 String spring_version = "5.2.10.RELEASE";
@@ -697,7 +680,9 @@ String spring_version = "5.2.10.RELEASE";
 此时，我们只需要更新父工程中properties标签中所维护的jar包版本，所有子项目中的版本也就跟着更新。当然除了将spring相关版本进行维护，我们可以将其他的jar包版本也进行抽取，这样就可以对项目中所有jar包的版本进行统一维护
 
 说明：使用`properties`标签来定义属性，在`properties`标签内自定义标签名当做属性名，自定义标签内的值即为属性值  
+
 例如：`<spring.version>5.2.10.RELEASE</spring.version>`，属性名为`spring.version`，属性值为`5.2.10.RELEASE`  
+
 在其他地方引用变量时用`${变量名}`
 ### 5.2 配置文件加载属性
 
@@ -710,8 +695,9 @@ Maven中的属性我们已经介绍过了，现在也已经能够通过Maven来�
 <properties>  
     <spring.version>5.2.10.RELEASE</spring.version>  
     <mybatis.version>3.5.6</mybatis.version>  
+    
     <jdbc.driver>com.mysql.jdbc.Driver</jdbc.driver>  
-    <jdbc.url>jdbc:mysql://localhost:13306/ssm_db?useSSL=false</jdbc.url>  
+    <jdbc.url>jdbc:mysql://localhost:13306/ssm_db?useSSL=false</jdbc.url> 
     <jdbc.username>root</jdbc.username>  
     <jdbc.password>PASSWORD</jdbc.password>  
 </properties>
@@ -813,20 +799,19 @@ jdbc.password=${jdbc.password}
 上面我们所使用的都是Maven的自定义属性，除了`${project.basedir}`,它属于Maven的内置系统属性。
 
 在Maven中的属性分为:
-
 - 自定义属性（常用）
 - 内置属性
 - Setting属性
 - Java系统属性
 - 环境变量属性
 
-|属性分类|引用格式|示例|
-|---|---|---|
-|自定义属性|${自定义属性名}|${spring.vension}|
-|内置属性|${内置属性名}|${basedir}、${version}|
-|setting属性|${setting.属性名}|${settings.localRepository}|
-|ava系统属性|${系统属性分类.系统属性名}|${user.home}|
-|环境变量属性|${env.环境变量属性名}|${env.JAVA_HOME}|
+| 属性分类      | 引用格式            | 示例                            |
+| --------- | --------------- | ----------------------------- |
+| 自定义属性     | ${自定义属性名}       | ${spring.vension}             |
+| 内置属性      | ${内置属性名}        | **${basedir}**、**${version}** |
+| setting属性 | ${setting.属性名}  | ${settings.localRepository}   |
+| ava系统属性   | ${系统属性分类.系统属性名} | ${user.home}                  |
+| 环境变量属性    | ${env.环境变量属性名}  | ${env.JAVA_HOME}              |
 ### 5.3 版本管理
 
 关于这个版本管理解决的问题是，在Maven创建项目和引用别人项目的时候，我们都看到过如下内容:
@@ -863,12 +848,10 @@ jdbc.password=${jdbc.password}
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7d9a49449eb831a212049118af1d2ca9.png)
 
-
-
 - 我们平常都是在自己的开发环境进行开发
 - 当开发完成后，需要把开发的功能部署到测试环境供测试人员进行测试使用
 - 等测试人员测试通过后，我们会将项目部署到生成环境上线使用。
-- 这个时候就有一个问题是，不同环境的配置是不相同的，如不可能让三个环境都用一个数据库，所以就会有三个数据库的url配置，
+- 这个时候就有一个问题是，**不同环境的配置是不相同的，如不可能让三个环境都用一个数据库，所以就会有三个数据库的url配置**
 - 我们在项目中如何配置?
 - 要想实现不同环境之间的配置切换又该如何来实现呢?
 
@@ -948,8 +931,6 @@ maven提供配置多种环境的设定，帮助开发者在使用过程中快速
     在命令后加上环境id`mvn install -P env_test`
 
 - `步骤六：`执行安装并查看env_test环境是否生效  ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/64d87b922d70a3293f2ef20431ca50b3.png)
-
-
     查看到的结果为`jdbc:mysql://127.3.3.3:3306/ssm_db`
 
 所以总结来说，对于多环境切换只需要两步即可:
@@ -988,8 +969,6 @@ mvn 指令 -P 环境定义ID
 - `方式一：`IDEA工具实现跳过测试  
     IDEA的maven面板上有一个按钮，点击之后可以跳过测试，不过此种方式会跳过所有的测试，如果我们想更精细的控制哪些跳过，哪些不跳过，那么就需要使用配置插件的方式来完成了![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1b5572465e9df48dfab2d65c35c8291b.png)
 
-
-
 - `方式二：`配置插件实现跳过测试  
     在父工程中的pom.xml中添加测试插件配置
 ```xml
@@ -1018,7 +997,6 @@ mvn 指令 -P 环境定义ID
     使用Maven的命令行，`mvn 指令 -D skipTests`
 
 注意事项:
-
 - 执行的项目构建指令必须包含测试生命周期，否则无效果。例如执行compile生命周期，不经过test生命周期。
 - 该命令可以不借助IDEA，直接使用cmd命令行进行跳过测试，需要注意的是cmd要在pom.xml所在目录下进行执行。
 
@@ -1042,7 +1020,6 @@ mvn 指令 -P 环境定义ID
 - `远程仓库:`Maven开发团队维护的用于存储Maven资源的服务器
 
 所以说:
-
 - `私服是一台独立的服务器，用于解决团队内部的资源共享与资源同步问题`
 
 搭建Maven私服的方式有很多，我们来介绍其中一种使用量比较大的实现方式:
@@ -1075,8 +1052,6 @@ mvn 指令 -P 环境定义ID
 ### 7.2 私服仓库分类
 
 私服资源操作流程分析:![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3c92def1e0dd1c0d4ba1acf98775b846.png)
-
-
 1. 在没有私服的情况下，我们自己创建的服务都是安装在Maven的本地仓库中
 2. 私服中也有仓库，我们要把自己的资源上传到私服，最终也是放在私服的仓库中
 3. 其他人要想使用你所上传的资源，就需要从私服的仓库中获取
@@ -1120,11 +1095,7 @@ mvn 指令 -P 环境定义ID
 - `步骤一：`私服上配置仓库  
     新建两个仓库，type选hosted，version policy 一个选release，一个选snapshot![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8196aca3adb1a9b370faf1e6b635e392.png)
 
-
-    
 - `步骤二：`配置本地Maven对私服的访问权限![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/244ae9ae92f25444c2de9c320fc7db71.png)
-
-
 ```xml
 <server>  
     <!--id就是刚刚创建的仓库名-->  
@@ -1177,13 +1148,10 @@ mvn 指令 -P 环境定义ID
     maven面板中运行`deploy`，或者执行maven命令`mvn deploy`
 
 注意:
-
 - 要发布的项目都需要配置`distributionManagement`标签，要么在自己的pom.xml中配置，要么在其父项目中配置，然后子项目中继承父项目即可。
 - 如果报401错误，尝试将maven的setting.xml文件复制到`C:\Users\username\.m2`目录下，然后在重新进行deploy
 
 发布成功，在私服中就能看到了![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b92d135571842e20cd63613b0e17cdad.png)
-
-
 
 现在发布是在blog-snapshot仓库中，如果`想发布到blog-release仓库中就需要将项目pom.xml中的version修改成RELEASE即可`。
 ```xml
