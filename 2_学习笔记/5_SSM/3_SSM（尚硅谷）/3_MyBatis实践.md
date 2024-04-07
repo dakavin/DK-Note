@@ -57,8 +57,6 @@ MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过�
 2.  项目搭建和准备
     1.  项目搭建
         ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f25d2c14161c0846e48255a342dd8be5.png)
-
-
     2.  依赖导入
         pom.xml
         ```xml
@@ -276,7 +274,6 @@ settings设置项：
 | ------- | ------------------------------- | --------------------------------------------------------------------------------------------------------- | --- |
 
 日志配置：
-
 ```xml
 <settings>
   <!-- SLF4J 选择slf4j输出！ -->
@@ -295,9 +292,9 @@ Mybatis会将SQL语句中的#{}转换为问号占位符。
 \${}形式传参，底层Mybatis做的是字符串拼接操作。
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/38a7c2e29597b1697be4dff7322a16fd.png)
 
+通常不会采用`${}`的方式传值。
 
-
-通常不会采用\${}的方式传值。一个特定的适用场景是：通过Java程序动态生成数据库表，表名部分需要Java程序通过参数传入；而JDBC对于表名部分是不能使用问号占位符的，此时只能使用
+一个特定的适用场景是：通过Java程序动态生成数据库表，表名部分需要Java程序通过参数传入；而JDBC对于表名部分是不能使用问号占位符的，此时可以使用
 
 结论：`实际开发中，能用#{}实现的，肯定不用${}。`
 
@@ -350,7 +347,7 @@ SQL语句
 
 > 单个简单类型参数，在#{}中可以随意命名，但是没有必要。通常还是使用和接口方法参数同名。
 
-#### 2.2.4 实体类类型参数
+#### 2.2.4 📕实体类类型参数
 
 Mapper接口中抽象方法的声明
 
@@ -398,8 +395,6 @@ SQL语句
 对应关系
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/9f0def9ed9d06f23cc74bceff0bee1e7.png)
-
-
 
 #### 2.2.6 Map类型参数
 
@@ -464,7 +459,6 @@ public void clear() {
 #### 2.3.1 输出概述
 
 数据输出总体上有两种形式：
-
 -   增删改操作返回的受影响行数：直接使用 int 或 long 类型接收即可
 -   查询操作的查询结果
 
@@ -516,7 +510,7 @@ resultType = "全限定符 ｜ 别名 ｜ 如果是返回集合类型，写范�
 
 [https://mybatis.org/mybatis-3/zh/configuration.html#typeAliases](https://mybatis.org/mybatis-3/zh/configuration.html#typeAliases "https://mybatis.org/mybatis-3/zh/configuration.html#typeAliases")
 
-类型别名可为 Java 类型设置一个缩写名字。 它仅用于 XML 配置，意在降低冗余的全限定类名书写。例如：
+类型别名可为 Java 类型设置一个缩写名字。 它==仅用于 XML 配置==，意在降低冗余的全限定类名书写。例如：
 
 ```xml
 <typeAliases>
@@ -524,17 +518,15 @@ resultType = "全限定符 ｜ 别名 ｜ 如果是返回集合类型，写范�
   <typeAlias alias="Blog" type="domain.blog.Blog"/>
 </typeAliases>
 ```
-
 当这样配置时，`Blog` 可以用在任何使用 `domain.blog.Blog` 的地方。
 
-也可以指定一个包名，MyBatis 会在包名下面搜索需要的 Java Bean，比如：
 
+也可以指定一个包名，MyBatis 会在包名下面搜索需要的 Java Bean，比如：
 ```xml
 <typeAliases> <package name="domain.blog"/> </typeAliases>
 ```
 
 每一个在包 `domain.blog` 中的 Java Bean，在没有注解的情况下，会使用 Bean 的首字母小写的非限定类名来作为它的别名。 比如 `domain.blog.Author` 的别名为 `author`；若有注解，则别名为其注解值。见下面的例子：
-
 ```java
 @Alias("author")
 public class Author {
@@ -543,10 +535,7 @@ public class Author {
 ```
 
 下面是Mybatis为常见的 Java 类型内建的类型别名。它们都是不区分大小写的，注意，为了应对原始类型的命名重复，采取了特殊的命名风格。![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ebb984b1f9f4c53c41248b05e6e6cbf5.png)
-
-
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4c03ef3dcbf4bb1d66f7789533c2f7db.png)
-
 
 
 | 别名                         | 映射的类型      |
@@ -631,13 +620,11 @@ SQL语句
 适用于SQL查询返回的各个字段综合起来并不和任何一个现有的实体类对应，`没法封装到实体类对象中`。能够封装成实体类类型的，就不使用Map类型。
 
 Mapper接口的抽象方法
-
 ```java
 Map<String,Object> selectEmpNameAndMaxSalary();
 ```
 
 SQL语句
-
 ```xml
 <!-- Map<String,Object> selectEmpNameAndMaxSalary(); -->
 <!-- 返回工资最高的员工的姓名和他的工资 -->
@@ -681,13 +668,11 @@ public void testQueryEmpNameAndSalary() {
 查询结果返回多个实体类对象，希望把多个实体类对象放在List集合中返回。`此时不需要任何特殊处理，在resultType属性中还是设置实体类类型即可`。
 
 Mapper接口中抽象方法
-
 ```java
 List<Employee> selectAll();
 ```
 
 SQL语句
-
 ```xml
 <!-- List<Employee> selectAll(); -->
 <select id="selectAll" resultType="com.atguigu.mybatis.entity.Employee">
@@ -697,7 +682,6 @@ SQL语句
 ```
 
 junit测试
-
 ```java
 @Test
 public void testSelectAll() {
@@ -740,11 +724,9 @@ public void testSelectAll() {
     }
     ```
     注意
-
     Mybatis是将自增主键的值设置到实体类对象中，而不是以Mapper接口方法返回值的形式返回。
 
 2.  **非自增长类型主键**
-
     而对于不支持自增型主键的数据库（例如 Oracle）或者字符串类型主键，则可以使用 selectKey 子元素：selectKey 元素将会首先运行，id 会被设置，然后插入语句会被调用！
     ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/48bf0a1852a4c361fbde5bf752420906.png)
 	![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f7f7f4dc89638ea4d7f222c17f6fdf13.png)
@@ -1215,33 +1197,27 @@ select 元素允许你配置很多属性来配置每条语句的行为细节：
     ```
     你现在可能看不懂，接下来我们要学习将多表查询结果使用ResultMap标签映射到实体类对象上！
 
-    **我们的学习目标：**
-
-    `多表查询语句使用`
-
-    `多表结果承接实体类设计`
-
-    `使用ResultMap完成多表结果映射`
+  **我们的学习目标：**
+- `多表查询语句使用`
+- `多表结果承接实体类设计`
+- `使用ResultMap完成多表结果映射`
 
 2.  **实体类设计方案**
-
-    多表关系回顾：（双向查看）
+- 多表关系回顾：（双向查看）
     -   一对一
-
         夫妻关系，人和身份证号
     -   一对多| 多对一
-
         用户和用户的订单，锁和钥匙
     -   多对多
         老师和学生，部门和员工
-        
+  
         实体类设计关系(查询)：（`单向查看`）
     -   对一 ： 夫妻一方对应另一方，订单对应用户都是对一关系
 
         实体类设计：对一关系下，类中只要包含单个对方对象类型属性即可！
 
-        例如：
-        ```java
+例如：
+```java
 public class Customer {
   private Integer customerId;
   private String customerName;
@@ -1252,75 +1228,73 @@ public class Order {
   private String orderName;
   private Customer customer;// 体现的是对一的关系
 }  
-        ```
-    -   对多: 用户对应的订单，讲师对应的学生或者学生对应的讲师都是对多关系：
+```
 
-        实体类设计：对多关系下，类中只要包含对方类型集合属性即可！
-        ```java
+-   对多: 用户对应的订单，讲师对应的学生或者学生对应的讲师都是对多关系：
+	实体类设计：对多关系下，类中只要包含对方类型集合属性即可！
+```java
 public class Customer {
-  private Integer customerId;
-  private String customerName;
-  private List<Order> orderList;// 体现的是对多的关系
+private Integer customerId;
+private String customerName;
+private List<Order> orderList;// 体现的是对多的关系
 }
 
 public class Order {
-  private Integer orderId;
-  private String orderName;
-  private Customer customer;// 体现的是对一的关系
+private Integer orderId;
+private String orderName;
+private Customer customer;// 体现的是对一的关系
 }
 //查询客户和客户对应的订单集合  不要管!
-        ```
-    多表结果实体类设计小技巧：
+```
+多表结果实体类设计小技巧：
+- `对一，属性中包含对方对象`
+- `对多，属性中包含对方对象集合`
 
-    `对一，属性中包含对方对象`
+只有真实发生多表查询时，才需要设计和修改实体类，否则不提前设计和修改实体类！
 
-    `对多，属性中包含对方对象集合`
+无论多少张表联查，实体类设计都是两两考虑!
 
-    只有真实发生多表查询时，才需要设计和修改实体类，否则不提前设计和修改实体类！
-
-    无论多少张表联查，实体类设计都是两两考虑!
-
-    在查询映射的时候，只需要关注本次查询相关的属性！例如：查询订单和对应的客户，就不要关注客户中的订单集合！
+在查询映射的时候，只需要关注本次查询相关的属性！例如：查询订单和对应的客户，就不要关注客户中的订单集合！
 
 3.  **多表映射案例准备**
 
-    数据库：
-    ```sql
-    CREATE TABLE `t_customer` (`customer_id` INT NOT NULL AUTO_INCREMENT, `customer_name` CHAR(100), PRIMARY KEY (`customer_id`) );
+数据库：
+```sql
+CREATE TABLE `t_customer` (`customer_id` INT NOT NULL AUTO_INCREMENT, `customer_name` CHAR(100), PRIMARY KEY (`customer_id`) );
 
-    CREATE TABLE `t_order` ( `order_id` INT NOT NULL AUTO_INCREMENT, `order_name` CHAR(100), `customer_id` INT, PRIMARY KEY (`order_id`) ); 
+CREATE TABLE `t_order` ( `order_id` INT NOT NULL AUTO_INCREMENT, `order_name` CHAR(100), `customer_id` INT, PRIMARY KEY (`order_id`) ); 
 
-    INSERT INTO `t_customer` (`customer_name`) VALUES ('c01');
+INSERT INTO `t_customer` (`customer_name`) VALUES ('c01');
 
-    INSERT INTO `t_order` (`order_name`, `customer_id`) VALUES ('o1', '1');
-    INSERT INTO `t_order` (`order_name`, `customer_id`) VALUES ('o2', '1');
-    INSERT INTO `t_order` (`order_name`, `customer_id`) VALUES ('o3', '1'); 
-    ```
-    实际开发时，`一般在开发过程中，不给数据库表设置外键约束`。
-    原因是避免调试不方便。
-    一般是功能开发完成，再加外键约束检查是否有bug。
+INSERT INTO `t_order` (`order_name`, `customer_id`) VALUES ('o1', '1');
+INSERT INTO `t_order` (`order_name`, `customer_id`) VALUES ('o2', '1');
+INSERT INTO `t_order` (`order_name`, `customer_id`) VALUES ('o3', '1'); 
+```
 
-    实体类设计：
+实际开发时，`一般在开发过程中，不给数据库表设置外键约束`。
+原因是避免调试不方便。
+一般是功能开发完成，再加外键约束检查是否有bug。
 
-    稍后会进行订单关联客户查询，也会进行客户关联订单查询，所以在这先练习设计
-    ```java
-    @Data
-    public class Customer {
+实体类设计：
+稍后会进行订单关联客户查询，也会进行客户关联订单查询，所以在这先练习设计
+```java
+@Data
+public class Customer {
 
-      private Integer customerId;
-      private String customerName;
-      private List<Order> orderList;// 体现的是对多的关系
-      
-    }  
+private Integer customerId;
+private String customerName;
+private List<Order> orderList;// 体现的是对多的关系
 
-    @Data
-    public class Order {
-      private Integer orderId;
-      private String orderName;
-      private Customer customer;// 体现的是对一的关系
-    }  
+}  
 
-    ```
+@Data
+public class Order {
+private Integer orderId;
+private String orderName;
+private Customer customer;// 体现的是对一的关系
+}  
+
+```
 
 ### 3.2 对一映射
 
@@ -1511,14 +1485,12 @@ public interface CustomerMapper {
 我们可以`将autoMappingBehavior设置为full`,进`行多表resultMap映射的时候`，可以省略符合列和属性命名映射规则（列名=属性名，或者开启驼峰映射也可以自定映射）的result标签！
 
 修改mybati-sconfig.xml:
-
 ```xml
 <!--开启resultMap自动映射 -->
 <setting name="autoMappingBehavior" value="FULL"/>
 ```
 
 修改teacherMapper.xml
-
 ```xml
 <resultMap id="teacherMap" type="teacher">
     <id property="tId" column="t_id" />
@@ -1938,7 +1910,92 @@ MyBatisX 是一个 MyBatis 的代码生成插件，可以通过简单的配置�
 
     ```
 
-## 6 MyBatis总结
+
+## 6 MyBatis缓存
+
+### 6.1 简介
+
+- **什么是缓存【Cache】：**
+    - 存在内存中的临时数据！
+    - 将用户经常查询的数据放在缓存（内存）中，用户去查询数据就不用了从磁盘上（关系型数据库数据文件）查询，从缓存中查询，从而提高查询效率，解决了高并发系统的性能问题
+  
+- **为什么使用缓存？**
+    - 减少和数据库的交互次数，较少系统开销，提高系统效率
+
+- **什么样的数据能使用缓存？**
+    - 经常查询而且不经常改变的数据
+### 6.2 Mybatis缓存
+
+- MyBatis包含一个非常强大的查询缓存特性，它可以非常方便地定制和配置缓存。缓存可以极大的提升查询效率。
+    
+- MyBatis系统中默认定义了两级缓存：**一级缓存**和**二级缓存**
+    - 默认情况下，只有一级缓存开启。(SqlSession级别的缓存，也称为本地缓存)
+    - 二级缓存需要手动开启和配置，他是基于namespace级别的缓存。
+    - 为了提高扩展性，MyBatis定义了缓存接口Cache。我们可以通过实现Cache接口来自定义二级缓存
+
+### 6.3 一级缓存
+
+- 一级缓存也叫本地缓存：
+- 与数据库同一次会话期间查询到的数据会放在本地缓存中。
+- 以后如果需要获取相同的数据，直接从缓存中拿，没必须再去查询数据库；
+
+**缓存失效的情况：**
+1. 查询不同的东西
+2. 增删改操作，可能会改变原来的数据，所以必定会刷新缓存！
+3. 查询不同的Mapper.xml
+4. 手动清理缓存！
+
+==**`一级缓存默认是开启的，只在一次SqlSession中有效，也就是拿到连接到关闭连接这个区间(相当于一个用户不断查询相同的数据，比如不断刷新)`**==
+
+一级缓存就是一个map！
+### 6.4 二级缓存
+
+- 二级缓存也叫全局缓存，==一级缓存作用域太低了，所以诞生了二级缓存==
+- 基于namespace级别的缓存，一个名称空间，对应一个二级缓存：
+- 工作机制
+    - 一个会话查询一条数据，这个数据就会被放在当前会话的一级缓存中
+    - 如果当前会话关闭了，这个会话对应的一级缓存就没了；但是我们想要的是，会话关闭了，一级缓存中的数据被保存到二级缓存中
+    - 新的会话查询信息，就可以从二级缓存中获取内容
+    - 不同的mapper查出的数据会放在自己对应的缓存(map)中
+
+开启全局缓存
+```xml
+<!--        开启全局缓存-->
+<setting name="cacheEnabled" value="true"/>
+```
+
+mapper文件添加二级缓存
+```xml
+<!--    在当前Mapper.xml中使用二级缓存-->
+<cache  eviction="FIFO"
+	flushInterval="60000"
+	size="512"
+	readOnly="true"/>
+<!--    没有参数也可以用-->
+<cache/>
+```
+
+小结：
+- 只要开启了二级缓存，在同一个Mapper下就有效
+- 所有的数据都会先放在一级缓存中
+- 只有当会话提交，或者关闭的时候才会提交到二级缓存中
+### 6.5 缓存原理
+
+缓存顺序：
+1. 先看二级缓存中有没有
+2. 再看一级缓存中有没有
+3. 查询数据库
+
+**注：一二级缓存都没有，查询数据库，查询后将数据放入一级缓存**
+
+![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e0091e47809f0bb8226dbd086ba27972.png)
+
+### 6.6 自定义缓存—ehcache
+
+有需要，自行了解
+
+后面我们主要使用Redis做旁路缓存
+## 7 MyBatis总结
 
 | 核心点         | 掌握目标                                  |
 | ----------- | ------------------------------------- |

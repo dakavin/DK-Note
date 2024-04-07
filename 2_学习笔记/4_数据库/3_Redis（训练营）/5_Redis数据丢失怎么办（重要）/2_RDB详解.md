@@ -53,7 +53,7 @@ Redis服务会有对应输出
 [2016] 24 Oct 22:52:11.678 # fork operation complete
 [2016] 24 Oct 22:52:11.684 * Background saving terminated with success
 ```
-和save不同，会创建一个子进程来生成RDB文件，这样可以避免主线程的阻塞。
+和save不同，会创建（fork）一个==子进程==来生成RDB文件，这样可以避免主线程的阻塞。
 
 3. `达到持久化配置阈值`
 	- 上面有提到，Redis可以配置持久化策略，达到策略就会触发持久化，这里的持久化使用的方式是bgsave，从这可以看到Redis比较推荐的方式也是后台持久化，尽可能减少对主线程的影响

@@ -13,7 +13,7 @@
 - 开发方式
     - 基于MyBatis使用MyBatisPlus
     - 基于Spring使用MyBatisPlus
-    - 基于SpringBoot使用MyBatisPlus(重点)
+    - ==基于SpringBoot使用MyBatisPlus(重点)==
 
 由于我们刚刚才学完SpringBoot，所以我们现在直接使用SpringBoot来构建项目，官网的快速开始也是直接用的SpringBoot
 
@@ -32,9 +32,9 @@ insert into user values(2,'Jerry','jerry',4,'16688886666');
 insert into user values(3,'Jock','123456',41,'18812345678');  
 insert into user values(4,'略略略','nigger',15,'4006184000');
 ```
-
 - `步骤二：`创建SpringBoot工程  
     只需要勾选MySQL，不用勾选MyBatis了
+
 - `步骤三：`补全依赖  
     导入德鲁伊和MyBatisPlus的坐标
 ```xml
@@ -87,7 +87,6 @@ public class User {
 public interface UserDao extends BaseMapper<User>{  
 }
 ```
-
 只需要在类上方加一个`@Mapper`注解，同时继承`BaseMapper<>`，泛型写创建的模型类的类型  
 
 - `步骤七：`赶快来测试！！  
@@ -143,7 +142,6 @@ MP的特性：
 SpringBoot集成MyBatisPlus非常的简单，只需要导入`MyBatisPlus`的坐标，然后令dao类继承`BaseMapper`，写上泛型，类上方加`@Mapper`注解
 
 可能存在的疑问：
-
 - 我甚至都没写在哪个表里查，为什么能自动识别是在我刚刚创建的表里查？
     - 注意我们创建的表，和对应的模型类，是同一个名，默认情况是在同名的表中查找
 - 那我要是表明和模型类的名不一样，那咋整？
@@ -186,13 +184,11 @@ void testInsert(){
 ```
 
 随便写一个User的数据，运行程序，然后去数据库看看新增是否成功![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c2b508629ca38119f114dfbc2980a53c.png)
-
-
 这个主键自增id看着有点奇怪，但现在你知道为什么要将id设为long类型了吧
 ### 3.3 删除
 
 ```java
-int deleteByIds(Serializable id)jl;
+int deleteByIds(Serializable id);
 ```
 
 - 参数类型为什么是一个序列化类`Serializable`
@@ -232,8 +228,7 @@ void testUpdate(){
     userDao.updateById(user);  
 }
 ```
-
-修改功能只修改指定的字段，未指定的字段保持原样
+==修改功能只修改指定的字段，未指定的字段保持原样==
 ### 3.5 根据ID查询
 
 ```java
@@ -273,8 +268,6 @@ void testSelectAll() {
 ```
 
 控制台输出如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/8c0a9eef85147fba46f50bb14f5752bf.png)
-
-
 - 方法都测试完了，那你们有没有想过，这些方法都是谁提供的呢？
     - 想都不用想，肯定是我们当初继承的`BaseMapper`，里面的方法还有很多，后面我们再慢慢学习
 ### 3.7 Lombok
@@ -354,6 +347,8 @@ void testSelectPage() {
 
 - `步骤二：`设置分页拦截器
 ```java
+//注意要被扫描到
+@Configuration
 public class MybatisPlusConfig {  
     @Bean  
     public MybatisPlusInterceptor mybatisPlusInterceptor(){  
@@ -366,8 +361,6 @@ public class MybatisPlusConfig {
 
 - `步骤三：`运行测试程序  
 	运行程序，结果如下，符合我们的预期![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/48f0f5a5ef7d4d12e08f7dfb86cfc781.png)
-
-
 
 ## 4 DQL编程控制
 
@@ -401,9 +394,7 @@ void testQueryWrapper(){
 ```
 
 运行测试方法，结果如下![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e24f7d636af92257de4422a67580670e.png)
-
-
-这种方法有个弊端，那就是字段名是字符串类型，没有提示信息和自动补全，如果写错了，那就查不出来
+这种方法有个弊端，那就是==字段名是字符串类型，没有提示信息和自动补全==，如果写错了，那就查不出来
 
 - `QueryWrapper`的基础上，使用`lambda`
 ```java
@@ -416,6 +407,8 @@ void testQueryWrapper(){
 }
 ```
 `ser::getAget`,为lambda表达式中的，`类名::方法名`
+![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b933a6a63feb3913540fc8f791b553fb.png)
+
 
 - `LambdaQueryWrapper`  
 	方式二解决了方式一的弊端，但是要多些一个lambda()，那方式三就来解决方式二的弊端，使用LambdaQueryWrapper，就可以不写lambda()
@@ -460,7 +453,7 @@ void testQueryWrapper() {
 - 可能存在的疑问
     - MP怎么就知道你这俩条件是AND的关系呢，那我要是想用OR的关系，该咋整
 - 解答
-    - 默认就是AND的关系，如果需要OR关系，用or()链接就可以了
+    - ==默认就是AND的关系，如果需要OR关系，用or()链接就可以了==
 ```java
 lqw.gt(User::getAge, 10).or().lt(User::getAge, 30);
 ```
@@ -552,8 +545,8 @@ void testQueryWrapper() {
     }  
 }
 ```
-
 - 上面的写法可以完成条件为非空的判断，但是问题很明显，如果条件多的话，每个条件都需要判断，代码量就比较大，来看MP给我们提供的简化方式
+
 - lt还有一个重载的方法，当condition为true时，添加条件，为false时，不添加条件
 ```java
 public Children lt(boolean condition, R column, Object val) {  
@@ -573,7 +566,7 @@ void testQueryWrapper() {
        .lt(null != uq.getAge2(), User::getAge, uq.getAge2());  
     for (User user : userDao.selectList(lqw)) {  
         System.out.println(user);  
-    }  
+    } 
 }
 ```
 ### 4.2 查询投影
@@ -690,7 +683,7 @@ void testQueryWrapper() {
 
 
 注意：
-- 聚合与分组查询，无法使用lambda表达式来完成
+- ==聚合与分组查询，无法使用lambda表达式来完成==
 - MP只是对MyBatis的增强，如果MP实现不了，我们可以直接在DAO接口中使用MyBatis的方式实现
 ### 4.3 查询条件
 
@@ -720,7 +713,6 @@ void testQueryWrapper() {
 ```sql
 SELECT * FROM tb_user WHERE name = 'seto' AND password = 'MUSICIAN';
 ```
-
 - selectList：查询结果为多个或者单个
 - selectOne:查询结果为单个
 #### 4.3.2 范围查询
@@ -794,7 +786,6 @@ void testQueryWrapper() {
     }  
 }
 ```
-
 遇到想用的功能，先自己用一个试试，方法名和形参名都很见名知意，遇到不确定的用法，再去官方文档查阅资料
 ### 4.4 映射匹配兼容性
 
@@ -882,14 +873,12 @@ public class User {
 前面我们在新增数据的时候，主键ID是一个很长的Long类型，我们现在想要主键按照数据表字段进行自增长，在解决这个问题之前，我们先来分析一下ID的生成策略
 
 - 不同的表，应用不同的id生成策略
-    
     - 日志：自增（1 2 3 4）
     - 购物订单：特殊规则（线下购物发票，下次可以留意一下）
     - 外卖订单：关联地区日期等信息（这个我熟，举个例子10 04 20220921 13 14，例如10表示北京市，04表示朝阳区，20220921表示日期等）
     - 关系表：可以省略ID
     - ……
 - 不同的业务采用的ID生成方式应该是不一样的，那么在MP中都提供了哪些主键生成策略，以及我们该如何进行选择?
-    
     - 在这里我们又需要用到MP的一个注解叫`@TableId`
 
 知识点：`@TableId`
@@ -917,7 +906,6 @@ public class User {
     private Integer online;  
 }
 ```
-
 - `步骤二：`设置自动增量为5，将4之后的数据都删掉，防止影响我们的结果
 - `步骤三：`运行新增方法
 ```java
@@ -968,11 +956,10 @@ public enum IdType {
 - INPUT:用户手工输入id
 - ASSIGN_ID:雪花算法生成id(可兼容数值型与字符串型)
 - ASSIGN_UUID:以UUID生成算法作为id生成策略
-- 其他的几个策略均已过时，都将被ASSIGN_ID和ASSIGN_UUID代替掉。
+- 其他的几个策略均已过时，都将被`ASSIGN_ID`和`ASSIGN_UUID`代替掉。
 
 拓展:  
 分布式ID是什么?
-
 - 当数据量足够大的时候，一台数据库服务器存储不下，这个时候就需要多台数据库服务器进行存储
 - 比如订单表就有可能被存储在不同的服务器上
 - 如果用数据库表的自增主键，因为在两台服务器上所以会出现冲突
@@ -1049,7 +1036,7 @@ void testInsert(){
 1. 1bit,不用,因为二进制中最高位是符号位，1表示负数，0表示正数。生成的id一般都是用整数，所以最高位固定为0。
 2. 41bit-时间戳，用来记录时间戳，毫秒级
 3. 10bit-工作机器id，用来记录工作机器id,其中高位5bit是数据中心ID其取值范围0-31，低位5bit是工作节点ID其取值范围0-31，两个组合起来最多可以容纳1024个节点
-4. 序列号占用12bit，每个节点每毫秒0开始不断累加，最多可以累加到4095，一共可以产生4096个ID
+4. 序列号占用12bit，每个节点每毫秒，从0开始不断累加，最多可以累加到4095，一共可以产生4096个ID
 #### 5.1.4 ASSIGN_UUID策略
 
 - `步骤一：`设置生成策略为ASSIGN_UUID
@@ -1094,7 +1081,6 @@ void testInsert(){
 #### 5.1.6 简化配置
 
 - 模型类主键策略设置  
-
 	如果要在项目中的每一个模型类上都需要使用相同的生成策略，比如你有Book表，User表，Student表，Score表等好多个表，如果你每一个表的主键生成策略都是ASSIGN_ID，那我们就可以用yml配置文件来简化开发，不用在每一个表的id上都加上`@TableId(type = IdType.ASSIGN_ID)`
 
 ```yml
@@ -1105,7 +1091,6 @@ mybatis-plus:
 ```
 
 - 数据库表与模型类的映射关系  
-
 	MP会默认将模型类的类名名首字母小写作为表名使用，假如数据库表的名称都以`tb_`开头，那么我们就需要将所有的模型类上添加`@TableName("tb_TABLENAME")`，这样做很繁琐，有没有更简单的方式呢？
 
 - 我们可以在配置文件中设置表的前缀
@@ -1162,8 +1147,6 @@ void testSelectByIds() {
 ## 7 逻辑删除
 
 逻辑删除是删除操作中比较重要的一部分，先来讲个案例![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0cca88731e73303e0e1b21ccaf0c59ab.png)
-
-
 - 这是一个员工和其所办理的合同表，一个员工可以办理多张合同表
 - 员工ID为1的张业绩，办理了三个合同，但是她现在想离职跳槽了，我们需要将员工表中的数据进行删除，执行DELETE操作
 - 如果表在设计的时候有主外键关系，那么同时也要将合同表中的张业绩的数据删掉![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6f0e638225b86054caa2772b52ed0fe2.png)
@@ -1172,17 +1155,13 @@ void testSelectByIds() {
 - 后来公司要统计今年的总业绩，发现这数据咋对不上呢，业绩这么少，原因是张业绩办理的合同信息被删掉了
 - 如果只删除员工，却不删除员工对应的合同表数据，那么合同的员工编号对应的员工信息不存在，那么就会产生垃圾数据，出现无主合同，根本不知道有张业绩这个人的存在
 - 经过我们的分析之后，我们不应该将表中的数据删除掉，得留着，但是又得把离职的人和在职的人区分开，这样就解决了上述问题![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/459fd2c45a95c5682eae8555319eafd8.png)
-
-
-- 区分的方式，就是在员工表中添加一列数据`deleted`，如果为0说明在职员工，如果离职则将其改完1，（0和1所代表的含义是可以自定义的）
+- 区分的方式，就是在员工表中添加一列`deleted`，如果为0说明在职员工，如果离职则将其改完1，（0和1所代表的含义是可以自定义的）
 
 所以对于删除操作业务问题来说有:
-
 - 物理删除:业务数据从数据库中丢弃，执行的是delete操作
 - 逻辑删除:为数据设置是否可用状态字段，删除时设置状态字段为不可用状态，数据保留在数据库中，执行的是update操作
 
 MP中逻辑删除具体该如何实现?
-
 - `步骤一：`修改数据库表，添加`deleted`列  
     字段名任意，类型int，长度1，默认值0（个人习惯，你随便）
 - `步骤二：`实体类添加属性  
@@ -1216,7 +1195,6 @@ void testLogicDelete(){
 - 从测试结果来看，逻辑删除最后走的是update操作，执行的是`UPDATE tb_user SET deleted=1 WHERE id=? AND deleted=0`，会将指定的字段修改成删除状态对应的值。
     
 - 思考：逻辑删除，对查询有没有影响呢?
-    
     - 执行查询操作
 ```java
 @Test  
@@ -1258,7 +1236,6 @@ mybatis-plus:
 ```
 使用yml配置文件配置了之后，就不需要在模型类上用`@TableLogic`注解了
 
-使用yml配置文件配置了之后，就不需要在模型类上用`@TableLogic`注解了
 ```sql
 UPDATE tb_user SET deleted=1 WHERE id=? AND deleted=0
 ```
@@ -1583,6 +1560,7 @@ public class UserServiceImpl extends ServiceImpl<UserDao, User> implements UserS
 @SpringBootTest  
 class Mybatisplus04GeneratorApplicationTests {  
   
+    @AutoWired
     private IUserService userService;  
   
     @Test  
