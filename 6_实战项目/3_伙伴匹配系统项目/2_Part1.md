@@ -65,18 +65,24 @@
 ![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1bce9d301828aab5347c2d9323e4e37a.png)
 ### 4.2 整合组件库Vant
 
-看官方文档：[Vant 3 - 轻量、可靠的移动端组件库 (gitee.io)](https://vant-contrib.gitee.io/vant/v3/#/zh-CN)
+看官方文档：[Vant 4 - 快速上手](https://vant-ui.github.io/vant/#/zh-CN/quickstart)
 
 **安装**：我们使用的vite项目，所以选择**按需引入**，直接复制命令安装即可
-![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f7709eed41837d62f95a27d6c1981cc2.png)
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b0994fcce95a9b8b88e9c05e75173833.png)
 
-**配置插件**：全选，覆盖原有文件即可
-![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b98512b5bdd0efa776d44bc9fbf7186c.png)
+
+**配置插件**：全选，看文件缺哪里复制哪里，不然样式不起作用
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ebb8143dfd43cec4e38406f88fa9d14c.png)
+
 
 
 **使用组件和API**：
-![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5c568353a05291780fc145526b45e70a.png)
-
+- 我们先使用一下Button按钮，复制到App.vue文件中的template标签中即可
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b9844353f3ea5247ac194f4e2b275858.png)
+  - **注意：**
+	  - 教程中，按需引入，还需要导入Button组件，后续使用的组件都需要这样导入
+	    ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/fc2ede85ab7860f808504a71d87534d6.png)
+	- 但是在Vnat4版本中，就不需要这么做了；因为在`按需安装vant`的时候，我们导入了==自动导入样式的解析器@vant/auto-import-.resolver==，它可以帮我们自动注入组件
 ## 5 前端页面构建
 
 开发页面的经验：
@@ -93,15 +99,25 @@
 
 **第一步：设计NavBar导航栏 **
 - 导入UI模板
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/340d6e0e57d83fc7a228c6df2513ca73.png)
-- 修改一：去掉返回字样，只留下按钮
-- 修改而：通过插槽自定义导航栏两侧的内容，注意代码复制的情况
-		![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2e31ad8befdd78072bb396f0b3273559.png)
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cc825bdc464fb0e3babe7b956c568a79.png)
 
-**第二步：设计tabber标签栏**
+- 修改一：去掉返回字样，只留下按钮
+- 修改二：使用插槽，将右侧变为搜索图标的功能，通过插槽自定义导航栏两侧的内容，注意代码复制的情况
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2db78a871f2ab76e5a5ccc334f289e98.png)
+
+- 完整的代码如下：
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/07de120dbed95d21aa63bba429ed8abf.png)
+
+
+
+**第二步：设计Tabber标签栏**
 - 使用监听切换事件
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c19593febb241e9d79b2441e99c90862.png)
-- 修改`tabber-item`中的属性，设置为我们需要的内容
+- 修改一：将`tabber-item`中的属性name，设置为我们需要的内容
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a8f81042f09080bc63e0809f0016b4e3.png)
+- 修改二：通过active关联每个标签中的name属性，当点击某一个tab的时候，就会触发`onChange`方法，并且更改active中的值为该标签的name属性的值
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/663330804373308a6ef70eca0cba9275.png)
+
 
   
 

@@ -35,3 +35,12 @@ server: { host: 'localhost', hmr: true }
 ```
 
 改完代码保存后，重新断开跑一下才会生效。
+
+
+## 问题4
+
+问题：Uncaught TypeError: Toast is not a function
+
+原因：使用组件库是vant3版本的，但是npm安装的是vant4版本
+
+解决：更换vant的版本
