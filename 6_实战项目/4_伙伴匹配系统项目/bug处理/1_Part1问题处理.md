@@ -43,4 +43,13 @@ server: { host: 'localhost', hmr: true }
 
 原因：使用组件库是vant3版本的，但是npm安装的是vant4版本
 
-解决：更换vant的版本
+解决：更换vant的版本，最好是按照最新的vant版本来，**看清楚快速入门的说明**
+
+
+### 问题5
+
+问题：Vue3报错：Property “xxx“ was accessed during render but is not defined on instance.
+
+原因：执行的数据没有使用单引号 或 双引号包括起来
+
+解决：外层是双引号，内部引用字段使用单引号包括起来
