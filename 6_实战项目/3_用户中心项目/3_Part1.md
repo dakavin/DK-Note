@@ -30,11 +30,11 @@
 
 原因：之后我们可能有很多个系统，不可能每个系统都开发独立的用户中心，例如我们一个微信账号可以登录很多个平台。所以我们可以把集中管理的东西，抽取出来。
 
-那么用户中心需要有那些功能呢？
-1. 登录 / 注册
-2. 用户管理（仅管理员可见）：对用户的查询和修改等功能
+**那么用户中心需要有那些功能呢？**
+1. **登录 / 注册**
+2. **用户管理（仅管理员可见**）：对用户的查询和修改等功能
 	- 我们项目中就分为用户和管理员即可，因为不像企业那样有那么多的人，分为不同的角色，所以我们==暂时不需要用户权限（后续根据实际情况去优化即可）“先完成再优化”==
-3. 用户校验：仅那些用户可以加入，例如仅星球用户可以加入
+3. **用户校验**：仅那些用户可以加入，例如仅星球用户可以加入
 ## 4 技术选型（各技术作用讲解）
 
 前端：主要运用阿里Ant Design生态：
@@ -58,18 +58,19 @@
 - Nginx Web服务器
 - Docker容器
 - 容器托管平台
-## 5 Ant Design Pro框架引入
+
+## 5 前端初始化
 
 ### 5.1 nodejs的安装
 
 如果是没接触过前端的伙伴，可以先去nodejs官网，下载一下nodejs
 
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b598e16c5b09e541826bf3a1eb9ade80.png)
+![image.png|200|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b598e16c5b09e541826bf3a1eb9ade80.png)
 
 **注意使用nodejs需要一下操作**
 - 设置本地全局依赖目录和本地全局缓存目录，并设置到path去
 - 给node和npm管理员权限
-### 5.2 Ant Design Pro框架的使用
+### 5.2 Ant Design Pro框架引入
 
 [Ant Design Pro框架](https://pro.ant.design/zh-CN/docs/getting-started/)我们把这个当成一个 **开箱即用的管理系统即可**
 
@@ -99,66 +100,66 @@ npm i --save-dev @umijs/preset-ui -D
 - 可以使用魔法加快速度，不然速度会有点慢
 - 此时我们可以看到小米饭插件了
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c681b743cbec57d9eb2132ebdd0d8ead.png)
-## 6 框架瘦身
+### 5.3 框架瘦身
 
-### 6.1 移除国际化的代码
+**第一步：移除国际化的代码**
 
-国际化代码的位置：`src/locales`
+- 国际化代码的位置：`src/locales`
 
-移除国际化代码的办法：使用脚本中的`i18n-remove`这个脚本
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a2eead39f6211c2dee9f84fe12307898.png)
+- 移除国际化代码的办法：使用脚本中的`i18n-remove`这个脚本
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a2eead39f6211c2dee9f84fe12307898.png)
+- 执行脚本的代码展示：
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e9141b8ea354ddf8c80e3f064bc13e3a.png)
 
-执行脚本的代码展示：
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e9141b8ea354ddf8c80e3f064bc13e3a.png)
+**第二步：快速过一遍目录**
+- **注意：删除一个文件跑一遍，看看是否影响主要功能**
 
-### 6.2 快速过一遍目录
+- `config`：前端项目的一些配置
+	- `oneapi.json`：定义项目用到的接口，==直接删掉！==
 
-**注意：删除一个文件跑一遍，看看是否影响主要功能**
+- `dist`：部署项目的时候，已经编译好的项目目录
 
-`config`：前端项目的一些配置
-- `oneapi.json`：定义项目用到的接口，==直接删掉！==
+- `mock`：提供前端展示使用的模拟数据
 
-`dist`：部署项目的时候，已经编译好的项目目录
+- `node_modules`：项目所需要的依赖
 
-`mock`：提供前端展示使用的模拟数据
+- `public`：项目所需要的一些静态资源
 
-`node_modules`：项目所需要的依赖
+- `src`：写代码的目录
+	- `components`：页面使用到的组件
+	- `pages`：项目的各个页面
+		- 删除页面的时候，在`config/routes.ts`文件中检查一下，是否用到了，然后一块删除
+	- `locales`：国际化所使用的各个语言，==执行脚本后删掉！==
+	- `e2e`：一个集成测试，定义了一些列的测试流程，==直接删掉！==
+	- `services`：一些服务使用的组件
+		- `swagger`：一些接口文档根据，==直接删掉！==后续会讲
+		- `app.tsx`：前端项目的入口
+		- `global.less`：全局页面引用的样式，类似于css，==不要动！==
+		- `global.tsx`：全局的脚本文件，类似于js，==不要动！==
+		- `service-work.js`：前端的页面缓存，==先不要理解==
+		- `typings.d.ts`：定义了一些ts的类型，类似于c++的宏定义，==先不要理解==
 
-`public`：项目所需要的一些静态资源
+- `tests`：测试文件，一般只有在企业很大的项目才会去测试，==直接删掉！==
 
-`src`：写代码的目录
-- `components`：页面使用到的组件
-- `pages`：项目的各个页面
-	- 删除页面的时候，在`config/routes.ts`文件中检查一下，是否用到了，然后一块删除
-- `locales`：国际化所使用的各个语言，==执行脚本后删掉！==
-- `e2e`：一个集成测试，定义了一些列的测试流程，==直接删掉！==
-- `services`：一些服务使用的组件
-	- `swagger`：一些接口文档根据，==直接删掉！==后续会讲
-	- `app.tsx`：前端项目的入口
-	- `global.less`：全局页面引用的样式，类似于css，==不要动！==
-	- `global.tsx`：全局的脚本文件，类似于js，==不要动！==
-	- `service-work.js`：前端的页面缓存，==先不要理解==
-	- `typings.d.ts`：定义了一些ts的类型，类似于c++的宏定义，==先不要理解==
+- `.editorconfig`：代码编辑器的配置，格式化代码
+- `.eslintignore`：
+- `.eslintrc.js`：检查js语法是否规范
+- `.prettierrc.js`：美化代码的工具
+- `jest.config.js`：测试工具，==直接删掉！==
+- `.stylelintrc.js`：检查css语法是否规范
+- `playwright.config.ts`：也是测试模拟根据，==直接删掉！==
 
-`tests`：测试文件，一般只有在企业很大的项目才会去测试，==直接删掉！==
+- 其实使用WSR软件的时候，删除文件时，会告诉你哪里会有联系，看一下顺带删了就好
 
-`.editorconfig`：代码编辑器的配置，格式化代码
-`.eslintignore`：
-`.eslintrc.js`：检查js语法是否规范
-`.prettierrc.js`：美化代码的工具
-`jest.config.js`：测试工具，==直接删掉！==
-`.stylelintrc.js`：检查css语法是否规范
-`playwright.config.ts`：也是测试模拟根据，==直接删掉！==
+- 没有顺带删除的结果如图：
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d24d54b57ee283bd3165fa4f40cc1240.png)
 
-其实使用WSR软件的时候，删除文件时，会告诉你哪里会有联系，看一下顺带删了就好
+- 使用全局搜索`(ctrl + n)`，找一下哪里用到了这个文件
 
-没有顺带删除的结果如图：
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d24d54b57ee283bd3165fa4f40cc1240.png)
+- 最后，重新执行，只要不报错，就完成前端工程瘦身啦！！
+## 6 后端初始化
 
-使用全局搜索`(ctrl + n)`，找一下哪里用到了这个文件
-
-最后，重新执行，只要不报错，就完成前端工程瘦身啦！！
-## 7 3种方式初始化Java项目
+### 6.1 三种方式初始化项目
 
 **方式一：github上搜索SpringBoot Template**
 
@@ -182,8 +183,7 @@ npm i --save-dev @umijs/preset-ui -D
 	- mybatis
 - 还需要添加依赖（因为初始化后端项目的时候没办法选取）
 	- mybatis-plus
-## 8 环境搭建
+### 6.2 环境搭建
 
-## 9 Spring Boot框架整合
-
-## 10 项目分层介绍
+测试：mybatis-plus给的demo
+问题：[问题3](bug处理/1_Part1-BUG.md#问题3)

@@ -21,3 +21,11 @@
 	```
 - 如图所示：
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5d63120ccfe2f2f54d7c465d0908be70.png)
+
+## 问题3
+
+问题：在test包下创建我们自己的单元测试类，使用@SpringBootTest注解，无法获取到Spring环境中的bean，需要在类上使用@RunWith注解添加Spring配置类的类对象才可以使用
+
+原因：我们使用的是Junit4这个jar包的@Test注解，所以没有@RunWith注解是无法加载Spring环境的，从而无法导入bean
+
+解决：将@Test注解，修改为org.junit.jupiter.api的注解，就可以解决这个问题了
