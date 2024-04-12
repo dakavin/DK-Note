@@ -16,3 +16,23 @@
 原因：yml文件，数据库用户名，写成了user
 
 解决：应该写为username
+
+
+## 问题3
+
+问题：IDEA插件Auto filliing Java call arguments 无法正常使用
+
+原因：不支持IDEA2023.3之后的版本
+
+解决：
+- 在IDEA 2023.3.3 的版本后失效，手动更换可以生效的插件
+- 地址：https://github.com/CymricNPG/AutoFillingCallArguments/releases/tag/1.2.1
+- 具体的操作流程：https://www.jianshu.com/p/6a8dba3e7dff
+
+## 问题4
+
+问题：IDEA2023版本，使用alt+enter无法生成序列化ID
+
+原因：版本没有默认自动生成序列化ID
+
+解决：[【IDEA2023自动生成序列化ID】_idea serializable 生成id 快捷键-CSDN博客](https://blog.csdn.net/qq_43495421/article/details/130662017)
