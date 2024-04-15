@@ -364,7 +364,7 @@ public User doLogin(String userAccont, String userPassword, HttpServletRequest r
         return null;  
     }  
   
-    //5.用户信息脱敏  
+    //5.用户信息脱敏（用的多的话，可以抽取为独立的方法）
     User safetyUser = new User();  
     safetyUser.setId(loginUser.getId());  
     safetyUser.setUsername(loginUser.getUsername());  
@@ -378,6 +378,7 @@ public User doLogin(String userAccont, String userPassword, HttpServletRequest r
   
     //6.记录用户的登录态(使用request)  
     HttpSession session = req.getSession();  
+    //这里使用了全局常量
     session.setAttribute(USER_LOGIN_STATE,safetyUser);  
   
     return safetyUser;  
@@ -464,8 +465,8 @@ Content-Type: application/json
 	- 允许根据用户名查询
 2. 删除用户
 
-**管理员查询用户**
-- UserController代码
+
+**UserController代码**
 ```mysql
 @RestController  
 @RequestMapping("/user")  
@@ -508,7 +509,8 @@ public class UserController {
      * 用户鉴权方法  
      * @param req 用户的请求  
      * @return 用户是否为管理员，是则为true  
-     */    private boolean isAdmin(HttpServletRequest req){  
+     */    
+     private boolean isAdmin(HttpServletRequest req){  
         //鉴权  
         HttpSession session = req.getSession();  
         Object userObj = session.getAttribute(USER_LOGIN_STATE);  
@@ -586,7 +588,7 @@ Content-Type: application/json
 
 - 继续修改`index.tsx`
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/662dd9137dddc841e70e10f64d10b7e1.png)
-- ==删除代码==：没有的代码如下图
+- ==具体删除和修改的代码==如下图
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f48c869a240e18232afdafe39cb45a5e.png)
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1f190eb87c6530ab5fd8adf81938d357.png)
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/12b1a7fe92c391e9541d1b4158831d15.png)
@@ -603,9 +605,9 @@ Content-Type: application/json
 - 后来又axios封装了ajax
 - 然后在我们这个前端界面中request又封装了一次（ant design项目）
 
-### 5.3 表单组件使用
+### 5.3 登录页面修改
 
-我们看一下登录页面有哪些方法，可以在里面看到有个` onFinish`方法，这就是表单提交的方法
+我们==看一下登录页面有哪些方法==，可以在里面看到有个` onFinish`方法，这就是表单提交的方法
 - 方法的传递如下图：
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a510f0204166f0823d4b3d4493f8886c.png)
 - 使用快捷键 `shift+f6`修改LoginParams中的值（可以一键重构），与后端对应即可
@@ -628,7 +630,7 @@ Content-Type: application/json
 - 如果实在找到不前缀，直接在url中写完整的后端请求路径
 	- 或者，在request所在的文件中定义一个全局前缀`const BASE_PREFIX process.env ? 'http://localhost:8080' : 'https:/xxx' ;`
 
-### 5.4 API接口测试
+### 5.4 登录API接口测试
 
 根据上述的设置，我们已经完成url前缀的设置了
 
@@ -642,32 +644,26 @@ Content-Type: application/json
 
 我们使用代理服务器，修改config目录下的proxy.ts文件，修改如下图：（==不能使用localhost==）
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/41034f9ee2ebf1cd1234dea071c631ce.png)
-在app.tsx文件中，设置全局url前缀（==可以在api.ts文件中每个都加api前缀也行==）
+在`app.tsx`文件中，设置全局url前缀（==可以在api.ts文件中每个url都加api前缀也行==）
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d302976fe04cdc72f0ad5d4dfc146480.png)
-在 api.ts文件中，登录接口不用动
+在 `api.ts`文件中，登录接口不用动
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/65c675a7b90cc5f5cb9932183a95dcb8.png)
 回到后端项目，设置全局前缀
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4bba0c907eb1678b8e301d471964358f.png)
 
-在 api.ts文件中，修改登录页面中的 username 和 password 为我们后台的参数
+在`api.ts`文件中，修改登录页面中的 username 和 password 为我们后台的参数
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/169a5affaa35416683505a49c242fd1a.png)
 
-在 api.ts文件中，添加密码校验规则，具体参数参考ant design官网
+在 `api.ts`文件中，添加密码校验规则，具体参数参考ant design官网
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/78e46da3d7e935a567da905f1f32f7ee.png)
 
-在 api.ts文件中，修改用户登录方法的校验
+在 `api.ts`文件中，修改用户登录方法的校验
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/812ea541ca157ff832735e499c686027.png)
 
 
 开启前后端，后端登录的代码打上断点，前端开始登录，发现进入断点了，然后不断跳过断点，发现可以登录成功即可（账号密码要写数据库中对的哈！）
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/39c47a847fc64f10a317a954493d546e.png)
 成功！
-
-### 5.5 登录态管理
-
-### 5.6 请求库的使用
-
-### 5.7 页面开发与验证
 
 ## 6 代理知识
 
