@@ -79,44 +79,48 @@ public Integer userLogout(HttpServletRequest req){
 
 ### 2.1 后端
 
-先在用户表中补充一个字段，直接增加一个邀请码 inviteCode
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/876e14e5debf3012ca633acc2aaec88f.png)
+**数据库补充inviteCode字段**
+- 先在用户表中补充一个字段，直接增加一个邀请码 inviteCode
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/876e14e5debf3012ca633acc2aaec88f.png)
+- 现在表结构发生变化，我们重新生成一下对象（==尽量不要频繁修改表结构==）
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/06ff5ef6aa03d5c4ff3d76ca5033d8de.png)
 
-现在表结构发生变化，我们重新生成一下对象（==尽量不要频繁修改表结构==）
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/06ff5ef6aa03d5c4ff3d76ca5033d8de.png)
+- 然后把这新生成的User中的星球编号字段复制，粘贴到model.domain包下的User中
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4a9c4b892e9ae40bfc9daa04e6ed48e9.png)
 
-然后把这新生成的User中的星球编号字段复制，粘贴到model.domain包下的User中
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4a9c4b892e9ae40bfc9daa04e6ed48e9.png)
+- 把resources目录下的mapper目录中的UserMapper.xml文件修改一下
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dc6ec4a85cb878cd6d89178e8fe8eff2.png)
+- 然后删除生成的generator包
 
-把resources目录下的mapper目录中的UserMapper.xml文件修改一下
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/dc6ec4a85cb878cd6d89178e8fe8eff2.png)
-然后删除生成的generator包
+---
 
-修改UserServiceImpl中，用户加密的时候，将邀请码返回
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b970392b8e3620d1f8e36c3f47534d2e.png)
-给注册请求类UserRegisterRequest补充一个星球编号的参数
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/019c6430e6e27267389ebc7b72692f4d.png)
+**编写邀请码代码**
 
-修改UserService接口和UserServiceImpl实现类的注册方法
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/546397f18191ef0a89d2705a8bd51916.png)
+- 修改UserServiceImpl中，用户加密的时候，将邀请码返回
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b970392b8e3620d1f8e36c3f47534d2e.png)
+- 给注册请求类UserRegisterRequest补充一个星球编号的参数
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/019c6430e6e27267389ebc7b72692f4d.png)
 
-在constant包中编写邀请码枚举类InviteCodeEnum
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8e583436ce51ab250b4be3f724373c6.png)
+- 修改UserService接口和UserServiceImpl实现类的注册方法
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/546397f18191ef0a89d2705a8bd51916.png)
 
-继续修改UserServiceImpl中的注册方法，添加邀请码校验（是否是合法的邀请码），并将邀请码保存在数据库
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c5b1c081e83a436f09f47003c50daa52.png)
+- 在constant包中编写邀请码枚举类InviteCodeEnum
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c8e583436ce51ab250b4be3f724373c6.png)
 
-继续修改UserController控制类中的userRegister方法（注册接口）
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/473e8e0cfdb87b130e892c2057b93545.png)
+- 继续修改UserServiceImpl中的注册方法，添加邀请码校验（是否是合法的邀请码），并将邀请码保存在数据库
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/c5b1c081e83a436f09f47003c50daa52.png)
+
+- 继续修改UserController控制类中的userRegister方法（注册接口）
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/473e8e0cfdb87b130e892c2057b93545.png)
 
 
-修改一下之前的UserServiceTest测试类中的userRegister方法
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce31129146bed47d1c777ba5aebdc553.png)
+- 修改一下之前的UserServiceTest测试类中的userRegister方法
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ce31129146bed47d1c777ba5aebdc553.png)
 
-开始测试，发现到最后一步的断言报错，检查原因：发现邀请码判断逻辑出错，修改为下图
-![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/85fcf0abe4e0682383254b21b51b7866.png)
+- 开始测试，发现到最后一步的断言报错，检查原因：发现邀请码判断逻辑出错，修改为下图
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/85fcf0abe4e0682383254b21b51b7866.png)
 
-好啦，后端开发完成，我们继续开发前端
+- 好啦，后端开发完成，我们继续开发前端
 ### 2.2 前端
 
 前端注册页面需要补充一个输入框，用于输入邀请码，找到注册页面，然后复制账号框，并修改
@@ -397,7 +401,7 @@ public class GlobalExceptionHandler {
   ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/11dff74da7336eedbc56acccd3aaeeaa.png)
 **此时发现，如果按照上述过程，之后我们要对每一个页面都需要取data，很麻烦**
 
-### 4.2 尝试改框架的请求响应拦截器
+### 4.2 尝试改框架的请求响应拦截器（可以跳过）
 
 **所以我们可以设置一个全局拦截器，帮我们把data取出来（`这里可以跳过`）**
 - 我们看一下调用每一个方法的时候，都是用request方法，点进去看看

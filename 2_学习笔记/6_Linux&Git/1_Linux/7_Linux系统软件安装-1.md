@@ -125,7 +125,7 @@ rm -rf xxx
 rm -rf /etc/my.cnf
 ```
 
-### 2.4 安装
+### 2.4 安装（命令安装-简单）
 
 #### 2.4.1 安装
 
@@ -147,7 +147,7 @@ Loading mirror speeds from cached hostfile
 
 #### 2.4.2 安装 MySQL rpm 源信息
 
-打开 [http://dev.mysql.com/downloads/repo/yum/](https://link.zhihu.com/?target=http%3A//dev.mysql.com/downloads/repo/yum/)
+打开[MySQL :: Download MySQL Yum Repository](https://dev.mysql.com/downloads/repo/yum/)
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/16c4bc328f124cf2085f94f7e86af223.webp)
 
 根据你的系统版本，选择对应的安装包，例如我的是CentOS 7.5，这个系统的Linux内核是 Linux 7，所以我选择了红框内的地址，大家依次类推。
@@ -155,23 +155,33 @@ Loading mirror speeds from cached hostfile
 拼接下载地址头：[http://dev.mysql.com/get/](https://link.zhihu.com/?target=http%3A//dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm)，得到以下地址
 
 ```text
- http://dev.mysql.com/get/mysql80-community-release-el7-11.noarch.rpm
+http://dev.mysql.com/get/mysql80-community-release-el7-11.noarch.rpm
 ```
 
 使用 wget + 刚才拼接的地址，下载安装包源信息
 ```text
+// mysql8.0
 wget  http://dev.mysql.com/get/mysql80-community-release-el7-11.noarch.rpm
+
+// mysql5.7
+wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+
 ```
 
 rpm 安装源信息
 ```text
-rpm -ivh mysql80-community-release-el7-7.noarch.rpm
+// mysql8.0
+rpm -ivh mysql80-community-release-el7-11.noarch.rpm
+
+// mysql5.7
+rpm -Uvh mysql57-community-release-el7-11.noarch.rpm
 ```
 
 #### 2.4.3 再次安装
 
 再尝试使用 yum 安装MySQL
 ```text
+//会自动安装8.0 或 5.7 版本的mysql
 yum install mysql-community-server
 ```
 
@@ -397,6 +407,177 @@ systemctl restart mysqld
 
 至此，MySQL就安装完成并可用了，请妥善保存好MySQL的root密码。
 
+### 2.5 服务器安装（shell）
+
+本例使用的是腾讯云的服务器，其他服务器请网上自行查找资料
+
+---
+
+**第一步：重置密码**
+
+首先，先找到自己买的的服务器，然后选择VNC登录，重置密码
+![image.png|200|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/308e829b08855729f6a317b1c19365e8.png)
+
+- VNC登录是适用于web登录linux系统的
+- 密码/秘钥登录是适用于xshell等软件登录linux系统的
+
+---
+**第二步：创建快照**
+
+我们创建一个快照，避免安装mysql的时候出错了，方便我们回滚继续学习
+![image.png|200|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b3455d4343a2191252b905e8a6ba011b.png)
+
+---
+
+**第三步：远程工具连接服务器**
+
+直接在服务器面板上，找到这个查看更多方式，官方给出了具体的连接教程
+
+![image.png|200|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b78be6a1804e2a17bf03d45795f2ba06.png)
+
+在远程根据上的注意事项：
+- 输入命令回车后，要等待它执行完毕，重新出现可以输入命令的行，才能继续输入命令
+- 旁边是连接的用户名和服务器名字，不用管，当然也可以设置一个用户用于区分roor用户！
+
+---
+
+**第四步：Mysql安装**
+
+检查我们的yum源，我们服务器的yum源必须要是正常的，不管是本地源还是网络源都可以|
+
+检查我们的网关
+```shell
+ping baidu.com # 看看能不能行
+```
+
+服务器必须有wget命令
+```shell
+yum install -y wget
+```
+
+下载MySQL的yum源配置
+```mysql
+wget http://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+```
+
+安装MySQL的yum源
+```shell
+yum -y install mysql57-community-release-el7-11.noarch.rpm
+```
+
+使用yum的方式安装MySQL5.7
+```shell
+# 不校验数字签名 --nogpgcheck
+yum -y install mysql-server --nogpgcheck  
+```
+
+然后等待，即可安装成功，MySQL数据库的相关命令
+```shell
+systemctl start mysqld.service 
+systemctl status mysql.service
+systemctl disable mysqld.service 
+systemctl restart mysql.service
+systemctl stop mysql.service
+```
+
+**第五步：修改mysql5.7的默认密码和增加其他用户**
+
+登录mysql之前找到mysql的默认密码
+```shell
+cat /var/log/mysqld.log| grep password
+```
+
+使用默认密码登录mysql
+```shell
+mysql -uroot -p'默认密码'
+```
+
+登录进mysql，要求更改密码（**密码需要一定的复杂度！！！**），并且给其他机器授权可以登录mysql
+```mysql
+ALTER USER USER() IDENTIFIED BY '密码';
+
+# 立即刷新配置
+flush privileges;
+
+# 创建另外一个用户也拥有 root权限
+create user '用户名'@'%' identified with mysql_native_password by '密码';
+
+# 再次刷新配置
+flush privileges;
+```
+
+此时就可以使用该用户来登录数据库了！
+
+把所有数据库的所有表的所有权限赋值给位于所有IP地址的==新建用户==
+```mysql
+grant all privileges on *.* to '新建用户'@'%' with grant option;
+
+
+```
+
+防火墙开放3306端口
+```shell
+firewall-cmd --zone==public --add-port=3306/tcp --permanent
+//如果显示这个FirewallD is not running，就开启防火墙
+systemctl start firewalld.service
+
+//如果添加失败，直接在配置文件中添加
+vi /etc/firewalld/zones/public.xml
+
+//开放3306端口
+firewall-cmd --zone=public --add-port=3306/tcp --permanent
+//防火墙重新加载配置
+firewall-cmd --reload
+//检查防火墙开放的端口
+firewall-cmd --list-ports
+```
+
+防火墙相关命令
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4f8c0edbb4e8f426f68fc359e3a7b5f6.png)
+
+配置mysql默认编码为utf-8，修改 /etc/my.cnf配置文件，在[mysqld]下添加编码，配置如下
+```cnf
+[client]
+default-character-set=utf8mb4
+
+[mysql]
+default-character-set=utf8mb4
+
+[mysqld]
+//collation-server = utf8mb4_unicode_ci
+//character-set-client-handshake = FALSE
+character_set_server=utf8mb4
+init_connect='SET NAMES utf8mb4'
+```
+
+重启mysql `systemctl restart mysqld`，登录mysql查看编码
+```mysql
+show variables like '%character%';
+```
+
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2fb953af3396a499dc4ff6f4b3344553.png)
+
+云服务器也要放行3306端口，否则本地无法获取云服务器中的mysql
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b93c27b54301112782731aed195a09bf.png)
+
+navicat连接服务器的数据库，参考文章[Navicate 连接阿里云MySQL（两种方式及原理讲解）_navicat连接数据库原理-CSDN博客](https://blog.csdn.net/qq_38723677/article/details/108178409)
+
+IDEA连接服务器的数据库
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d4f7dc45229d6dbf1447f58fc723c6cc.png)
+
+在远程数据库中创建user-center数据库，然后把我们之前建表的语句赋值过去执行
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/816a202ee08d6de5474ad051366aaf03.png)
+
+### 2.6 宝塔一键安装mysql5.7
+
+直接在软件商店，搜索mysql，找到mysql5.7，然后选择极速安装即可，不过很慢
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d83e62e1db19b7793af1adadcfbc9a09.png)
+
+然后开放3306端口，使用shell连接服务器，来设置mysql
+
+然后就是创建用户，给用户远程连接的权限，和上面的操作一样，==只不过字符集不需要更改==
+
+
 ## 3 Tomcat
 
 ### 3.1 简介
@@ -621,8 +802,8 @@ Nginx同样需要配置额外的yum仓库，才可以使用yum安装
 1. 安装yum依赖程序
 
    ```shell
-   # root执行
-   yum install -y yum-utils
+# root执行
+yum install -y yum-utils
    ```
 
 2. 手动添加，nginx的yum仓库
@@ -630,25 +811,25 @@ Nginx同样需要配置额外的yum仓库，才可以使用yum安装
    yum程序使用的仓库配置文件，存放在：`/etc/yum.repo.d`内。
 
    ```shell
-   # root执行
-   # 创建文件使用vim编辑
-   vim /etc/yum.repos.d/nginx.repo
-   # 填入如下内容并保存退出
-   [nginx-stable]
-   name=nginx stable repo
-   baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
-   gpgcheck=1
-   enabled=1
-   gpgkey=https://nginx.org/keys/nginx_signing.key
-   module_hotfixes=true
-   
-   [nginx-mainline]
-   name=nginx mainline repo
-   baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/
-   gpgcheck=1
-   enabled=0
-   gpgkey=https://nginx.org/keys/nginx_signing.key
-   module_hotfixes=true
+ # root执行
+ # 创建文件使用vim编辑
+ vim /etc/yum.repos.d/nginx.repo
+ # 填入如下内容并保存退出
+ [nginx-stable]
+ name=nginx stable repo
+ baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+ gpgcheck=1
+ enabled=1
+ gpgkey=https://nginx.org/keys/nginx_signing.key
+ module_hotfixes=true
+ 
+ [nginx-mainline]
+ name=nginx mainline repo
+ baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/
+ gpgcheck=1
+ enabled=0
+ gpgkey=https://nginx.org/keys/nginx_signing.key
+ module_hotfixes=true
    ```
 
    > 通过如上操作，我们手动添加了nginx的yum仓库
@@ -656,19 +837,19 @@ Nginx同样需要配置额外的yum仓库，才可以使用yum安装
 3. 通过yum安装最新稳定版的nginx
 
    ```shell
-   # root执行
-   yum install -y nginx
+ # root执行
+ yum install -y nginx
    ```
 
 4. 启动
 
    ```shell
-   # nginx自动注册了systemctl系统服务
-   systemctl start nginx		# 启动
-   systemctl stop nginx		# 停止
-   systemctl status nginx		# 运行状态
-   systemctl enable nginx		# 开机自启
-   systemctl disable nginx		# 关闭开机自启
+ # nginx自动注册了systemctl系统服务
+ systemctl start nginx		# 启动
+ systemctl stop nginx		# 停止
+ systemctl status nginx		# 运行状态
+ systemctl enable nginx		# 开机自启
+ systemctl disable nginx		# 关闭开机自启
    ```
 
 5. 配置防火墙放行
@@ -676,13 +857,13 @@ Nginx同样需要配置额外的yum仓库，才可以使用yum安装
    nginx默认绑定80端口，需要关闭防火墙或放行80端口
 
    ```shell
-   # 方式1（推荐），关闭防火墙
-   systemctl stop firewalld		# 关闭
-   systemctl disable firewalld		# 关闭开机自启
-   
-   # 方式2，放行80端口
-   firewall-cmd --add-port=80/tcp --permanent		# 放行tcp规则下的80端口，永久生效
-   firewall-cmd --reload							# 重新加载防火墙规则
+ # 方式1（推荐），关闭防火墙
+ systemctl stop firewalld		# 关闭
+ systemctl disable firewalld		# 关闭开机自启
+ 
+ # 方式2，放行80端口
+ firewall-cmd --add-port=80/tcp --permanent		# 放行tcp规则下的80端口，永久生效
+ firewall-cmd --reload							# 重新加载防火墙规则
    ```
 
 6. 启动后浏览器输入Linux服务器的IP地址或主机名即可访问
@@ -850,9 +1031,9 @@ RabbitMQ在企业开发中十分常见，课程为大家演示快速搭建Rabbit
 
 至此，RabbitMQ已经安装完成了。
 
-## 6 Redis安装部署【简单】
+## 1 Redis安装部署【简单】
 
-### 6.1 简介
+### 1.1 简介
 
 redis是一个开源的、使用C语言编写的、支持网络交互的、可基于内存也可持久化的Key-Value数据库。
 
@@ -860,13 +1041,13 @@ redis的特点就是：`快`，可以基于内存存储数据并提供超低延�
 
 一般用于在系统中提供快速缓存的能力。
 
-### 6.2 安装
+### 1.2 安装
 
 参考文章：[3_环境搭建](../../../8_Java训练营（复习）/2_Redis复习笔记/1_Redis入门/3_环境搭建.md)
 
-## 7 ElasticSearch安装部署
+## 2 ElasticSearch安装部署
 
-### 7.1 简介
+### 2.1 简介
 
 [全文搜索](https://baike.baidu.com/item/全文搜索引擎)属于最常见的需求，开源的 [Elasticsearch](https://www.elastic.co/) （以下简称 es）是目前全文搜索引擎的首选。
 
@@ -876,7 +1057,7 @@ Elasticsearch简称es，在企业内同样是一款应用非常广泛的搜索�
 
 很多服务中的搜索功能，都是基于es来实现的。
 
-### 7.2 安装
+### 2.2 安装
 
 1. 添加yum仓库
 

@@ -132,7 +132,7 @@ new DBConfig("db-" + env + ".properties");
 
 ---
 
-**问题：怎么把这个传输传进去呢？**
+**问题：怎么把这个配置传输传进去呢？**
 
 **分析：**
 - 我们启动项目的时候，是在package.json文件里启动的，这里定义了一系列的命令，那么我们就可以在执行这些命令的时候给这个前端项目传递一些参数！
@@ -180,14 +180,533 @@ new DBConfig("db-" + env + ".properties");
 
 ### 1.5 后端多环境实战
 
+想一下我们后端做了什么事情，是不是就是提供了用户的增删改查、登录注册。
+
+那我们用户的增删改查的数据存在本地的mysql数据库，上线的时候，是不是要把这个数据库地址改成一个远程地址，起码要公网可以访问，或者说自己的前后端项目部署的那个服务器可以访问
+
+所以，**后端多环境主要修改的是**：
+- 依赖的环境地址
+	- 数据库地址
+	- 缓存地址
+	- 消息队列地址
+	- 项目端口号
+- 服务器配置
+
+---
+
+**后端怎么去区分不同的环境?**
+
+和前端一样，基本上所有的项目都是这种模式：**通过配置文件后面加一个后缀来区分环境**
+
+我们项目是Springboot框架的，所以配置文件就是`applicaiton.yml文件`
+- 这个文件是==公共的配置==，公共配置就是==任何环境都会加载这个配置==，所以像一些MP这种框架层面的配置就写在这里就好了
+
+那么我们直接复制这个文件，再创建一个`application-prod.yml文件`
+- 这个文件就是，用于==生产环境的配置==，所以我们要删除掉一些公共的配置，如下图
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/12e2069ec04ffbb3c08c0da4726bc7dd.png)
+> 提示：我们可以将我们创建的user表的sql文件保存在项目的sql目录下，==后期我们就可以将这个创建表的sql语句，放在服务器上的mysql执行了==
+> ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1e070c8c49cea650bc710013bf170a74.png)
+
+---
+
+**修改application-prod.yml中数据库的配置**
+
+前提：
+- 有一个云端的数据库
+- 或者，自己的服务器上已经安装了mysql数据库，并且正常启动
+- 没有的话，先看后面[2 项目的部署上线](#2%20项目的部署上线)  以及 [2.5 服务器安装](../../2_学习笔记/6_Linux&Git/1_Linux/7_Linux系统软件安装-1.md#2.5%20服务器安装)
+
+这个文件是生产环境使用的，那么数据库肯定也是连接生成环境的，所以我们需要将项目数据库的相关配置进行修改，修改如下
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/57f54e1812991e2261b8fd368bce52c4.png)
+
+我们现在使用maven工具，将本地项目打一个jar包，会在文件中生成一个target目录，目录下有一个jar包就是我们后端项目打包形成的
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/462f05bbe71c9a05ec67514249a057be.png)
+
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0abfefe7a3751a55a039e9fbdced069b.png)
+
+现在我们进入终端，运行jar包，并传入一个参数
+```shell
+java -jar ./usercenter-backend-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+```
+
+如果报错（没有清单主属性），说明是使用阿里云镜像创建的springboot项目，需要在pom.xml文件中注释掉这一行
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0691e24f7b378dcf4ab075268847b8ce.png)
+
+
+运行后端项目成功后，我们运行前端项目，看一看前端访问那一个数据库。
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/97a23ff5859d69457190a536c79c267c.png)
+
+我们也可以直接注册，然后发现注册的数据在服务器上的数据库，说明成功了
+  ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a98381e78798e1d193b5f04c868926d2.png)
 ## 2 项目的部署上线
 
 ### 2.1 原始部署
 
+**什么的软件都自己安装！**
 #### 2.1.1 部署前端
+
+前端部署需要的软件（web服务器）
+- ==nginx==：主要使用的
+- apache
+- tomcat
+
+---
+
+**安装nginx服务器**
+
+安装方法：
+- 用系统自带的软件包管理器快速安装，centos系统中是yum
+- 自己到[官网](http://nginx.org/en/linux_packages.html)，下载安装包，来安装（我们用这种方式来进行）
+
+下载nginx服务器，复制选择款的链接
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/75b1d32dea5d1fd1364f08d3fb2bc86c.png)
+安装前，先做一点准备工作
+```shell
+//查看当前目录
+pwd
+
+// 在usr目录下创建services目录，用来存放所有项目的依赖和安装包
+mkdir services /usr/services
+
+//列出目前目录所包含的文件和文件夹
+ls
+
+//进入services目录中
+cd services
+ls
+```
+
+在当前services目录下，下载和解压nginx
+```shell
+//下载
+curl -o nginx-1.24.0.tar.gz http://nginx.org/download/nginx-1.24.0.tar.gz
+
+//解压
+tar -zxvf nginx-1.24.0.tar.gz
+```
+
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7f69f8a9e430d20cd50eed8a5127a9c8.png)
+
+进入到nginx目录中，并查看内容
+```shelll
+cd nginx-1.24.0.tar.gz
+ls
+```
+
+还需要安装nginx的相关依赖
+```shell
+yum install pcre pcre-devel -y
+yum install openssl openssl-devel -y
+```
+
+设置系统配置参数（注意这个时候是在nginx的目录下执行的）
+```shell
+./configure --with-http_ssl_module --with-http_v2_module --with-stream
+```
+
+此时直接编译
+```shell
+make
+```
+
+**如果编译报错，还需要安装下面的依赖**
+```shell
+yum -y install make zlib-devel gcc-c++ libtool openssl openssl-devel
+
+// 然后重新configure 和 make
+```
+
+再来安装
+```shell
+make install
+```
+
+配置nginx的环境变量，加入到系统环境变量中去
+```shell
+// 打开使用 /etc/profile这个文件
+vim /etc/profile
+
+// 按下shigt+g 将光标定位到最后一行，新增如下内容：
+export PATH=$PATH:/usr/local/nginx/sbin
+
+// 使用上述文件生效
+source /ect/profile
+```
+
+测试nginx命令能否使用，如果没有报错，就说明成功了
+```shell
+nginx
+```
+
+使用命令`netstat -ntlp`，继续查看当前所有tcp端口情况，可以看到nginx启动成功
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/058c6269e555df8b3661953187824820.png)
+
+复制nginx.conf文件，并重命名为nginx.default.conf
+```shell
+cd /usr/local/nginx/conf
+cp nginx.conf nginx.default.conf
+```
+
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0835e4a7310f328a561514e352266343.png)
+
+回到services目录
+```shell
+cd /usr/services
+```
+
+---
+
+**前端开始部署**
+
+前端build一下，打包后，将dist包拖入到我们的services目录下，并改名
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d31ee9ae382c3882e2dc7bf7c7085990.png)
+
+```shell
+// 改名
+mv dist usercenter-frontend
+```
+
+修改nginx配置文件，设置==启动用户==和==前端项目所在路径==
+```shell
+// 注意不是nginx目录下的嗷
+
+vim /usr/local/nginx/conf/nginx.conf
+```
+
+修改的内容如图所示
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/1f6e05f2bd110bcdabdf77c4e1d89f66.png)
+
+补充：上述图片不需要`/root`这个目录
+
+更新nginx.conf文件
+```shell
+nginx -s reload
+```
+
+访问我们公网的地址，出现页面
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/086b24b40f3bf10a2e32fb866a556569.png)
 
 #### 2.1.2 部署后端
 
+后端的部署需要两个依赖 java  和 maven
+
+---
+
+**安装java**
+
+```shell
+yum install -y java-1.8.0-openjdk*
+// yum安装不用配置环境变量
+// 查看java版本，安装成功
+java -version
+```
+
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f0090856272c79e1eb7612dc47667a1f.png)
+
+--- 
+
+**安装maven**
+
+```shell
+cd /usr/services
+
+curl -o apache-maven-3.8.8-bin.tar.gz https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
+
+tar -zxvf apache-maven-3.8.8-bin.tar.gz
+```
+
+修改镜像为阿里云
+```shell
+vim apache-maven-3.8.8/conf/settings.xml
+
+//找到<mirrors>标签在标签里面添加阿里云镜像配置
+    <mirror>  
+        <id>nexus-aliyun</id>
+        <mirrorOf>*</mirrorOf>
+        <name>Nexus aliyun</name>
+        <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+
+    </mirror>
+
+  </mirrors>
+
+```
+
+进入到maven
+```shell
+cd apache-maven-3.8.8
+cd bin
+ls
+// ls打开后看到的mvnmvn是maven的可执行文件，咱们就是用这个文件去构建项目
+
+pwd
+//获取当前目录路径后，复制一下
+```
+
+添加环境变量
+```shell
+vim /etc/profile
+
+// 把乖乖复制的路径，放在nginx环境变量后面
+
+//使文件生效
+source /ect/profile
+
+//检查一些环境变量是否设置成功
+mvn -v
+```
+
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/35aa18f3c13d8ddff7e2292e134d2550.png)
+
+---
+
+**将后端项目部署到服务器**
+
+使用git直接把拖到services目录中，先下载git
+```shell
+yum install -y git
+```
+
+使用git拉取我们的项目，这里代码省略，学过git就知道啦
+
+进入到我们下载好的后端项目，使用如下命令，来打包构建我们的后端项目
+```shell
+cd usercenter-backend
+
+//打包构建，并跳过测试 或者 直接将我们window中打包好的项目放入也行
+mvn package -DskipTests
+```
+
+打包完成之后会在这个后端项目生成一个target目录，目录下保存着我们的jar包
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a78588eb544081872f2060656a9c9109.png)
+
+执行这个jar包
+```shell
+//注意目录
+java -jar ./usercenter-backend-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod
+
+//之后如果显示没有权限，给这个文件添加可执行权限
+chmod a+x usercenter-backend-0.0.1-SNAPSHOT.jar
+
+//再次执行上述命令
+
+//这样的话这个，窗口就一直被这个jar包执行的内容所占满了，我们ctrl+c终止
+
+// 使用如下命令，让他在后台运行
+nohup java -jar ./usercenter-backend-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod & 
+
+//直接回车，不要管，就回到命令界面了
+
+// 使用如下命令，查看后台运行的情况
+jobs
+netstat -ntlp
+//或者
+jps
+```
+
+关闭
+```shell
+ps -ef | grep 你的jar包文件名
+kill [-9] 找到其运行的进程
+```
+
+**友情提示：到这里最好镜像一下嗷！**
+
 ### 2.2 宝塔
 
+
+宝塔只是一个Linux运维面板，方便管理服务器，方便服务器中安装软件，也可以自行去官网安装，[官网地址](https://www.bt.cn/new/download.html)
+
+目前（2024-4-15）购买的腾讯云服务器，已经自带了宝塔Linux面板，就不需要在服务器中安装宝塔了
+
+---
+
+**开启宝塔界面**
+
+放行端口一下就好，就是让自己的电脑（ip）可以访问服务器
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6ea5d05ebdcdec8c2eb2aa52d9df3f27.png)
+
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/34b3d2aa5ae7b2ddcf65e3fd905a361d.png)
+
+回到应用管理，可以看到面板首页地址，本机使用这个地址到浏览器中就可以访问
+不过先需要点击下面的登录，然后输入命令获取用户名和密码
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2941109707f4504b84dc6e9b4cfbc6cd.png)
+
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ad70279abe74950aded044972e1941e7.png)
+
+进入宝塔界面之后，点击面板设置，修改一下安全入口、用户名、密码登资料
+
+---
+
+**回到服务器最初的镜像文件中（啥都没有），我们之前保存了**
+
+开始使用宝塔安装剩余的软件：nginx、tomcat、docker
+
+---
+
+**部署前端页面**
+
+域名部署参考链接：[宝塔Linux面板Java项目部署域名访问 (SpringBoot项目)_宝塔 java项目 配置域名-CSDN博客](https://blog.csdn.net/weixin_43652507/article/details/132076705)
+
+回到宝塔面板，点击添加站点![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/85cd1142c94ce1a7a0cdfebba023b962.png)
+进入到站点的目录
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/6eb64da817953ecd506ae9696031bcc2.png)
+
+全选文件删除掉！
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/56568b1882ffa1dada80511ccd20fdaa.png)
+
+然后直接把前端打包好的项目dist，扔进去！
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/69853f05b4b550794a1d9bff199817eb.png)
+
+直接在公网访问一下，`如果是域名就访问域名，如果是服务器ip就访问服务器ip`
+
+---
+
+**部署后端部分**
+
+找到侧边栏的文件，来到wwwroot目录下，创建一个usercenter-backend目录，用于存放我们后端项目
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/2a31961742c4773fcb51fdac5187551c.png)
+
+进入这个项目，把之前打包好的jar包，放进去
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d719ca5b7c0f23e19404f9256d41336a.png)
+
+复制该jar包所在的路径，然后去网站哪里创建Java项目
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/55fe403876493b43a69a42be53dfc74d.png)
+```shell
+/www/server/java/jdk1.8.0_371/bin/java  -jar -Xmx1024M -Xms256M  /www/wwwroot/usercenter-backend/usercenter-backend-0.0.1-SNAPSHOT.jar --server.port=8080 --spring.profiles.active=prod
+```
+
+
+可以发现项目运行中，但是端口还没有放行![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/cee8f76b84d00a27065c76b9334edeb0.png)
+先把tomcat停掉，否则tomcat占用8080端口
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a17e9afe5b67f2818e176d721a63fa03.png)
+
+
+去防火墙，把8080端口放行
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/bb8be2b7170adf61486e8cd661f3aaa1.png)
+
+访问一下`服务器ip：8080`，发现无法访问
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/5154020362139ab30870ea253cdffb69.png)
+
+本地修改一些配置，重新打个包，传到宝塔上面（下面错了，直接写0.0.0.0即可）
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/87ffca32dda6c0a435dc9b4745721e0a.png)
+
+再次访问，出现如下界面，随便加一个路径，成功了
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/54bac77bdedca732f45281be7e3d5ea7.png)
+
+---
+
+前后端联调
+
 ### 2.3 Docker
+
+Docker 是容器，可以将项目的环境（java、nginx）和项目的代码一起打包成镜像，这样有权限的用户能下载镜像，更容易分发和移植
+
+再启动项目时，不需要敲一大堆命令，而是直接下载docker镜像，启动镜像就启动项目了
+
+**docker可以理解为软件安装包**
+
+--- 
+
+**安装**
+- 官网安装
+- 宝塔安装（我们用这个）
+
+---
+
+**什么是Dockerfile文件**
+怎么把我们的前后端项目制作成镜像，肯定是需要一个文件来定义，所以我们需要把我们的前端项目的依赖、启动流程，全部写到一个文件里面，这个文件就是Dockerfile
+
+所以，Dockerfile用于指定构建Docker镜像的方法：
+- 一般情况下不需要完全从0自己写，建议去github，gitee等托管平台参考同类项目即可
+
+---
+
+**构建后端**
+
+我们这里直接复制鱼皮的后端Dockerfile
+```dockerfile
+# Docker 镜像构建
+FROM maven:3.5-jdk-8-alpine as builder
+
+# Copy local code to the container image.
+WORKDIR /app
+COPY pom.xml .
+COPY src ./src
+
+# Build a release artifact.
+RUN mvn package -DskipTests
+
+# Run the web service on container startup.
+CMD ["java","-jar","/app/target/usercenter-backend-0.0.1-SNAPSHOT.jar","--spring.profiles.active=prod"]
+```
+
+在后端项目根目录下，新建一个Dockerfile，并复制代码
+![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a7c11b009250c2d852737d8f64086939.png)
+
+然后再shell中，进入 /www/wwwroot下 使用git拉取后端项目
+```shell
+git clone 后端项目的地址
+```
+
+拉取完成后，进入项目的目录中，可以发现Dockerfile已经存在了,我们使用它来构建后端镜像
+```shell
+sudo docker build -t usercenter-backend:v0.0.1 .
+```
+
+---
+
+**构建前端**
+
+还是使用鱼皮的Dockerfile，这个复制到根目录下的Dockerfile文件中
+```dockerfile
+FROM nginx
+WORKDIR /usr/share/nginx/html/
+USER root
+COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
+COPY ./dist  /usr/share/nginx/html/
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+还需要粘贴一个nginx.conf的配置，这个复制到docker目录（在根目录）下的nginx.conf配置中
+```conf
+server {
+    listen 80;
+    
+    # gzip config
+    gzip on;
+    gzip_min_length 1k;
+    gzip_comp_level 9;
+    gzip_types text/plain text/css text/javascript application/json application/javascript application/x-javascript application/xml;
+    gzip_vary on;
+    gzip_disable "MSIE [1-6]\.";
+    root /usr/share/nginx/html;
+    include /etc/nginx/mime.types;
+    location / {
+        try_files $uri /index.html;
+    }
+}
+```
+
+同理，使用git拉取我们的前端代码，太后使用dockerfile构建前端镜像
+```shell
+sudo docker build -t usercenter-frontent:v0.0.1 .
+
+// 可以看一下安装的镜像
+sudo docker images
+```
+- Docker 构建优化可以从这些方面入手：减少尺寸、减少构建时间等，感兴趣可以试试
+
+---
+
+**启动项目**
+```shell
+docker run -p 80:80 -d usercenter-frontend:v0.0.1
+
+docker run -p 8080:8080 usercenter-backend:v0.0.1
+```
+
+
+
+
