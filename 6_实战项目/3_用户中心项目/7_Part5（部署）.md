@@ -620,9 +620,19 @@ Docker 是容器，可以将项目的环境（java、nginx）和项目的代码�
 所以，Dockerfile用于指定构建Docker镜像的方法：
 - 一般情况下不需要完全从0自己写，建议去github，gitee等托管平台参考同类项目即可
 
+Dockfile文件编写：
+- FROM：依赖的基础镜像
+- WORKDIR：工作目录
+- COPY：从本机复制文件
+- RUN：执行命令
+- CMD/ENTRYPOINT：附加额外参数，指定运行容器时默认执行的命令
+
 ---
 
 **构建后端**
+
+**推荐使用使用IDEA连接服务器的docker，然后本地构建镜像到服务器上去**
+- [1_SpringBoot项目部署（Docker）](../../5_实用文件/8_部署上线相关/1_SpringBoot项目部署（Docker）.md)
 
 我们这里直接复制鱼皮的后端Dockerfile
 ```dockerfile
@@ -654,17 +664,27 @@ git clone 后端项目的地址
 sudo docker build -t usercenter-backend:v0.0.1 .
 ```
 
+然后我们可以发现，这里命令执行的很慢，为什么呢？
+- 因为我们把我们把maevn构建打包项目放在了dockefile里面了
+- 优化，我们可以把maven现在本地构建，然后打包放过去
+
 ---
 
 **构建前端**
 
 还是使用鱼皮的Dockerfile，这个复制到根目录下的Dockerfile文件中
 ```dockerfile
+// docker镜像依赖的web服务器
 FROM nginx
+// 指定nginx的工作目录
 WORKDIR /usr/share/nginx/html/
+// 指定一下用户，可以不写
 USER root
+// 将docker中的nginx文件，覆盖前端项目的nginx文件
 COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
+// 将我们前端的代码，转移到nginx默认可以识别的html目录下
 COPY ./dist  /usr/share/nginx/html/
+// 项目端口
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
@@ -688,14 +708,16 @@ server {
     }
 }
 ```
+- try_files：表示如果用户找不到某个页面的话，直接到index主页去
 
-同理，使用git拉取我们的前端代码，太后使用dockerfile构建前端镜像
+同理，使用git拉取我们的前端代码，然后使用dockerfile构建前端镜像
 ```shell
 sudo docker build -t usercenter-frontent:v0.0.1 .
 
 // 可以看一下安装的镜像
 sudo docker images
 ```
+
 - Docker 构建优化可以从这些方面入手：减少尺寸、减少构建时间等，感兴趣可以试试
 
 ---
@@ -705,6 +727,41 @@ sudo docker images
 docker run -p 80:80 -d usercenter-frontend:v0.0.1
 
 docker run -p 8080:8080 usercenter-backend:v0.0.1
+```
+
+虚拟化：
+- 端口映射：把本机的资源（实际访问地址）和容器内部的资源（应用启动端口）进行关联
+- 目录映射：把本机的端口和容器应用端口进行关联
+
+---
+
+[Docker 命令大全 | 菜鸟教程 (runoob.com)](https://www.runoob.com/docker/docker-command-manual.html)
+
+**查看日志**
+```shell
+//查看进程(可以查看已经启动的容器ID，没有权限用sudo)
+//容器ID不是固定的，不要盲目复制命令哦
+docker ps
+
+//查看日志 docker logs 容器ID
+//这些都是咱们的访问记录,可以看到哪个用户,哪个IP,在什么时间访问了你的网页的哪些文件
+docker logs 61444cbea251
+```
+
+这样看日志有点麻烦，怎么样让这个日志保持始终的持续不断的输出
+```shell
+//-f跟踪日志输出(没有权限用sudo)
+docker logs 容器ID -f
+
+//ctrl + c退出 杀死掉这个容器 docker kill 容器ID
+docker kill 61444cbea251
+```
+
+举例：如果说我们觉得这些镜像太占用空间了，想把它删掉，怎么删？
+```shell
+//查看镜像
+docker images
+//强制删除镜像 docker rmi -f 镜像id
 ```
 
 
