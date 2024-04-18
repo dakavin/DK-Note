@@ -89,8 +89,8 @@
 	}
 	```
 	
-- 报错1：[问题1](bug处理/2_Part2-BUG.md#问题1)
-- 报错2：[问题2](bug处理/2_Part2-BUG.md#问题2)
+- 报错1：[问题1](0_bug处理/2_Part2-BUG.md#问题1)
+- 报错2：[问题2](0_bug处理/2_Part2-BUG.md#问题2)
 ## 3 规整项目目录
 
 创建一些用到的文件夹
@@ -409,7 +409,7 @@ public class UserController {
 }
 ```
 - controller层一般倾向于请求参数本身的校验，不涉及业务逻辑本身（越少越好）
-- [问题3](bug处理/2_Part2-BUG.md#问题3)
+- [问题3](0_bug处理/2_Part2-BUG.md#问题3)
 
 - 在这个方法中，使用了一个封装接受前端参数的类
 ```java
@@ -421,7 +421,7 @@ public class UserRegisterRequest implements Serializable {
     private String checkPassword;  
 }
 ```
-- [问题4](bug处理/2_Part2-BUG.md#问题4)
+- [问题4](0_bug处理/2_Part2-BUG.md#问题4)
 
 **测试**
 - 先启动启动类
@@ -574,7 +574,7 @@ Content-Type: application/json
 ## 5 前端实现
 ### 5.1 快速页面开发
 
-问题：使用`start:dev`脚本启动项目无法启动，和part1启动start脚本问题一样，参考[问题2](bug处理/1_Part1-BUG.md#问题2)
+问题：使用`start:dev`脚本启动项目无法启动，和part1启动start脚本问题一样，参考[问题2](0_bug处理/1_Part1-BUG.md#问题2)
 
 **开始删除登录页面的东西**：`src/pages/user/Login/index.tsx` 文件
 - `ctrl + shift + - ` 一键折叠所有代码，然后一级级的展开代码

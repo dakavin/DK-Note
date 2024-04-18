@@ -280,7 +280,7 @@ git commit -m "本次提交的内容"
 git push -u origin main/master（看清楚分支）
 ```
 
-也可以使用本地可视化工具，具体见文章[3_gitkralen的破解](../../5_实用文件/6_Linux&Git&IDEA/3_Git/3_gitkralen的破解.md)
+也可以使用本地可视化工具，具体见文章[3_gitkralen的破解](../../../5_实用文件/6_Linux&Git&IDEA/3_Git/3_gitkralen的破解.md)
 
 ## 4 个人域名
 

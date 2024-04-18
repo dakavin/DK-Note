@@ -214,7 +214,7 @@ new DBConfig("db-" + env + ".properties");
 前提：
 - 有一个云端的数据库
 - 或者，自己的服务器上已经安装了mysql数据库，并且正常启动
-- 没有的话，先看后面[2 项目的部署上线](#2%20项目的部署上线)  以及 [2.5 服务器安装](../../2_学习笔记/6_Linux&Git/1_Linux/7_Linux系统软件安装-1.md#2.5%20服务器安装)
+- 没有的话，先看后面[2 项目的部署上线](#2%20项目的部署上线)  以及 [2.5 服务器安装](../../../2_学习笔记/6_Linux&Git/1_Linux/7_Linux系统软件安装-1.md#2.5%20服务器安装)
 
 这个文件是生产环境使用的，那么数据库肯定也是连接生成环境的，所以我们需要将项目数据库的相关配置进行修改，修改如下
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/57f54e1812991e2261b8fd368bce52c4.png)
@@ -632,7 +632,7 @@ Dockfile文件编写：
 **构建后端**
 
 **推荐使用使用IDEA连接服务器的docker，然后本地构建镜像到服务器上去**
-- [1_SpringBoot项目部署（Docker）](../../5_实用文件/8_部署上线相关/1_SpringBoot项目部署（Docker）.md)
+- [1_SpringBoot项目部署（Docker）](../../../5_实用文件/8_部署上线相关/1_SpringBoot项目部署（Docker）.md)
 
 我们这里直接复制鱼皮的后端Dockerfile
 ```dockerfile

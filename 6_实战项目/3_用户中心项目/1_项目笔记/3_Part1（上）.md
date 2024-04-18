@@ -78,7 +78,7 @@
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d1d6b4bd49fe29ae08e7da919e70adc1.png)
 
 找一个目录来安装这个前端项目，按照官方说明依次输入指令即可
-- `问题一`：详见[问题1](bug处理/1_Part1-BUG.md#问题1)
+- `问题一`：详见[问题1](0_bug处理/1_Part1-BUG.md#问题1)
 
 然后使用Wsrstrom软件打开项目，打开项目后使用`npm i`安装项目所需的依赖
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/68304e273af6c019767294e0eee45377.png)
@@ -86,7 +86,7 @@
 等待依赖安装完毕后，我们启动package.json中的脚本start，使用命令`npm start`（或者直接点击start旁边的按钮）运行一下我们这个前端模版项目，启动成功后如图所示：
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/a8d9b0890c37edae634f3ddba4bdf19c.png)
 - 补充：`start dev`这个启动脚本，`MOCK=none`是无法进入后台的
-- `问题二：`详见[问题2](bug处理/1_Part1-BUG.md#问题2)
+- `问题二：`详见[问题2](0_bug处理/1_Part1-BUG.md#问题2)
 
 直接登录，账户密码都在填写框内给出提示了
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/ddfce54affb43cb20e9ec1ed5c3e5a5f.png)
@@ -186,4 +186,4 @@ npm i --save-dev @umijs/preset-ui -D
 ### 6.2 环境搭建
 
 测试：mybatis-plus给的demo
-问题：[问题3](bug处理/1_Part1-BUG.md#问题3)
+问题：[问题3](0_bug处理/1_Part1-BUG.md#问题3)
