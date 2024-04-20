@@ -249,7 +249,7 @@ HashMap的数据结构： 底层使用hash表数据结构，即数组和链表�
 
 **候选人：**
 - 嗯～～~，好的。
-- 在java中提供了量大类的集合框架，主要分为两类：第一个是Collection 属于单列集合，第二个是Map 属于双列集合
+- 在java中提供了大量的集合框架，主要分为两类：第一个是Collection 属于单列集合，第二个是Map 属于双列集合
 - 在Collection中有两个子接口List和Set。在我们平常开发的过程中用的比较多像list 接口中的实现类ArrarList和LinkedList。 在Set接口中有实现类HashSet和 TreeSet。
 - 在map接口中有很多的实现类，平时比较常见的是HashMap、TreeMap，还有一个 线程安全的map:ConcurrentHashMap
 
@@ -284,7 +284,7 @@ HashMap的数据结构： 底层使用hash表数据结构，即数组和链表�
 
 **候选者：**
 - 嗯，这个在我们平时开发很常见
-- 数组转list，可以使用jdk自动的一个工具类Arrars，里面有一个asList方法可以转换为数组
+- 数组转list，可以使用jdk自动的一个工具类Arrarys，里面有一个asList方法可以将数组转换为一个固定大小的 `List`，不过不能向其中添加或删除元素。
 - List转数组，可以直接调用list中的toArray方法，需要给一个参数，指定数组的类型，需要指定数组的长度。
 
 ---
@@ -292,7 +292,7 @@ HashMap的数据结构： 底层使用hash表数据结构，即数组和链表�
 **面试官：用Arrays.asList转List后，如果修改了数组内容，list受影响吗？List 用toArray转数组后，如果修改了List内容，数组受影响吗**
 
 **候选者：**
-- Arrays.asList转换list之后，如果修改了数组的内容，list会受影响，因为它的 ==底层使用的Arrays类中的一个内部类ArrayList来构造的集合==，在这个集合的 构造器中，把我们传入的这个集合进行了包装而已，最终指向的都是同一个 内存地址
+- Arrays.asList转换list之后，如果修改了数组的内容，list会受影响，返回的 `List` 并不是 `java.util.ArrayList` 的实例，而是 `java.util.Arrays` 类内部的一个静态类 `ArrayList` 的实例。这个内部类与 `java.util.ArrayList` 是不同的，尽管它们有相似的名字。它是对原数组的“视图”（view）
 - list用了toArray转数组后，如果修改了list内容，数组不会影响，当调用了 toArray以后，在==底层是它是进行了数组的拷贝==，跟原来的元素就没啥关系 了，所以即使list修改了以后，数组也不受影响
 
 ---
@@ -300,17 +300,17 @@ HashMap的数据结构： 底层使用hash表数据结构，即数组和链表�
 **面试官：ArrayList 和 LinkedList 的区别是什么？**
 
 **候选者：**
-- 嗯，它们两个主要是底层使用的数据结构不一样，ArrayList 是动态数组， LinkedList 是双向链表，这也导致了它们很多不同的特点。
-- 从操作数据效率来说
+- 嗯，它们两个`主要是底层使用的数据结构`不一样，ArrayList 是动态数组， LinkedList 是双向链表，这也导致了它们很多不同的特点。
+- 从`查询数据效率`来说
 	- ArrayList按照下标查询的时间复杂度O(1)【内存是连续的，根据寻址公 式】， LinkedList不支持下标查询
 	- 查找（未知索引）： ArrayList需要遍历，链表也需要链表，时间复杂度都是 O(n)
-- 新增和删除
+- `新增和删除`
 	- ArrayList尾部插入和删除，时间复杂度是O(1)；其他部分增删需要挪动数组，时 间复杂度是O(n)
 	- LinkedList头尾节点增删时间复杂度是O(1)，其他都需要遍历链表，时间复杂度是 O(n)
-- 内存空间占用来说
+- `内存空间占用来说`
 	- ArrayList底层是数组，内存连续，节省内存
 	- LinkedList 是双向链表需要存储数据，和两个指针，更占用内存
-- 从线程安全来说，ArrayList和LinkedList都不是线程安全的
+- 从`线程安全`来说，ArrayList和LinkedList都不是线程安全的
 
 ---
 
@@ -318,21 +318,21 @@ HashMap的数据结构： 底层使用hash表数据结构，即数组和链表�
 
 **候选者：**
 - 嗯，是这样的，主要有两种解决方案：
-- 第一：我们使用这个集合，优先在方法内使用，定义为局部变量，这样的 话，就不会出现线程安全问题。
+- 第一：我们使用这个集合，`优先在方法内使用，定义为局部变量`，这样的 话，就不会出现线程安全问题。
 - 第二：如果非要在成员变量中使用的话，可以使用线程安全的集合来替代
-	- ArrayList可以通过Collections 的 synchronizedList 方法将 ArrayList 转换成线 程安全的容器后再使用。
-	- LinkedList 换成ConcurrentLinkedQueue来使用
+	- ArrayList可以通过`Collections 的 synchronizedList` 方法将 ArrayList 转换成线程安全的容器后再使用。
+	- `LinkedList 换成ConcurrentLinkedQueue`来使用
 ### 4.3 HashMap
 
 **面试官：说一下HashMap的实现原理？**
 
 **候选者：**
 - 嗯。它主要分为了一下几个部分：
-- 底层使用hash表数据结构，即数组+（链表 | 红黑树）
-- 添加数据时，计算key的值确定元素在数组中的下标
+- `底层`使用hash表数据结构，即数组+（链表 | 红黑树）
+- `添加数据`时，计算key的值确定元素在数组中的下标
 	- key相同则替换
 	- 不同则存入链表或红黑树中
-- 获取数据通过key的hash计算数组下标获取元素
+- `获取数据`通过key的hash计算数组下标获取元素
 
 ---
 
