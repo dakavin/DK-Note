@@ -136,7 +136,7 @@ npm run dev
 
 ![|200|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/aec991063f95f92546e43110f7336e28.png)
 
-- ,vscode 目录：和编辑器有关，无序理会
+- .vscode 目录：和编辑器有关，无序理会
 
 - node_modules：存放项目所需要的依赖文件
 
@@ -223,7 +223,8 @@ npm run dev
 + App.vue
 
 ```html
-<script>  //去掉了标签内的setup字样
+<script>  
+	//去掉了标签内的setup字样
     //存储vue页面逻辑js代码
 </script>
 

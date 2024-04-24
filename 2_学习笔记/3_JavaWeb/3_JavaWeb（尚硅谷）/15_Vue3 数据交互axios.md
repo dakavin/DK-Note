@@ -112,12 +112,9 @@
 
 >  `async 用于标识函数的`
 
-1. async标识函数后,async函数的返回值会变成一个promise对象
-
+1. async标识函数后,函数的返回值会变成一个promise对象
 2. 如果函数内部返回的数据是一个非promise对象,async函数的结果会返回一个成功状态 promise对象
-
 3. 如果函数内部返回的是一个promise对象,则async函数返回的状态与结果由该对象决定
-
 4. 如果函数内部抛出的是一个异常,则async函数返回的是一个失败的promise对象
 
 ```js
@@ -601,8 +598,6 @@ axios.post(url,{key:value //此位置数据，没有空对象即可{}},{
    上面指定配置key:配置值
 })
 ```
-
-
 
 > 测试get参数
 
