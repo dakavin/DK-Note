@@ -511,8 +511,6 @@ flush privileges;
 把所有数据库的所有表的所有权限赋值给位于所有IP地址的==新建用户==
 ```mysql
 grant all privileges on *.* to '新建用户'@'%' with grant option;
-
-
 ```
 
 防火墙开放3306端口

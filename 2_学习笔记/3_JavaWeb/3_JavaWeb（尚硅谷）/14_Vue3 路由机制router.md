@@ -456,7 +456,7 @@ export default router
     
 2. **全局后置守卫**：在路由切换之后被调用，可以用于处理数据、操作 DOM 、记录日志等。
     
-3. **守卫代码的位置**: 在router.js中
+3. **守卫代码的位置**: 在router.js中，或者单独提取出来export，然后import
 
 ```js
 //全局前置路由守卫
