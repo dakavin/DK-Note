@@ -69,3 +69,6 @@ yarn gitcracken patcher  //输入完成后，等待几十秒就好了
 - 可以创建快捷方式等
 
 - 展示一张图![image.png|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/7e31bd35a97ece29349157248a403cf5.png)
+## 汉化
+
+参考地址：https://github.com/yk47g/gitkraken-chinese
