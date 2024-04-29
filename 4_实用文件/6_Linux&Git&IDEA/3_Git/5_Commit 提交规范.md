@@ -161,8 +161,15 @@ npm install -g commitizen cz-con
 
 然后，在项目根目录里，运行下面的命令，使其支持 Angular 的 Commit message 格式。
 ```text
+# 适用于npm
 commitizen init cz-conventional-changelog --save --save-exact
+
+# 适用于pnpm
+ pnpx commitizen init cz-conventional-changelog --pnpm -Dw
 ```
+
+[pnpm中使用commitizen init](https://juejin.cn/post/7215608036394827836)
+
 这将在项目中安装 `cz-conventional-changelog` 适配器，并在 `package.json` 中添加相应的配置
 
 
