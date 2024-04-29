@@ -205,7 +205,7 @@ Does this change affect any open issues? (y/N) # 此处我输入的是N
 内容填写参考指引：
 - 选择提交类型：
   ![|300|300](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/02f4764ab10fd4e861f287fe7e99deb5.webp)
-	-  feat:     新功能
+	- feat:     新功能
 	- fix:      修复 Bug
 	- docs:     文档更新
 	- style:    代码样式调整
