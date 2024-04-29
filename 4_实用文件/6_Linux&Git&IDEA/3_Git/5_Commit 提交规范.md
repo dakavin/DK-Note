@@ -45,7 +45,7 @@ Git commit message规范指提交代码时编写的规范注释，编写良好�
 - perf: 改进性能的代码更改
 - test: 添加缺少的测试或更正现有测试
 - chore: 对构建过程或辅助工具和库（如文档）的更改
-    
+
 
 除此之外，还有一些常用的类型：
 
@@ -154,21 +154,83 @@ Body部分的格式是固定的，必须写成`This reverts commit &lt;hash>`.�
 可以使用典型的git工作流程或通过使用CLI向导[Commitizen](https://link.zhihu.com/?target=https%3A//github.com/commitizen/cz-cli)来添加提交消息格式。
 ### 2.1 安装
 
+全局安装commitizen插件
 ```text
-npm install -g commitizen
+npm install -g commitizen cz-con
 ```
 
-然后，在项目目录里，运行下面的命令，使其支持 Angular 的 Commit message 格式。
-
+然后，在项目根目录里，运行下面的命令，使其支持 Angular 的 Commit message 格式。
 ```text
 commitizen init cz-conventional-changelog --save --save-exact
 ```
+这将在项目中安装 `cz-conventional-changelog` 适配器，并在 `package.json` 中添加相应的配置
+
 
 以后，凡是用到`git commit`命令，一律改为使用`git cz`。这时，就会出现选项，用来生成符合格式的 Commit message。  
 
-![](https://pic2.zhimg.com/80/v2-bd067dba7814b556cbffcaa2de118069_720w.webp)
+下面git cz 的具体解释
+```shell
+# 命令解析
+## 本次提交你修改的类型是什么？使用方向键进行选择
+Select the type of change that you're committing: (Use arrow keys)
+❯ feat:     A new feature # 实现新功能
+  fix:      A bug fix # bug修复
+  docs:     Documentation only changes # md文件修改
+  style:    Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)  # 样式修改
+  refactor: A code change that neither fixes a bug nor adds a feature # 功能重构
+  perf:     A code change that improves performance # 性能提升
+  test:     Adding missing tests or correcting existing tests # 与测试有关的更改
+  build:    Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm) # 影响到项目构建的相关修改
+  ci:       Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) # 对CI配置文件和脚本的修改
+  chore:    Other changes that don't modify src or test files # 不会修改src或测试文件的更改
+  revert:   Reverts a previous commit # 恢复上一次提交
 
-  
+## 本次提交更改的范围
+What is the scope of this change (e.g. component or file name): (press enter to skip) # 输入更改的内容后按回车，此处我的内容是：设计图
+
+## 本次提交修改内容的简短概括，最多89个字
+ Write a short, imperative tense description of the change (max 89 chars):
+ (0)   # 输入本次更改的内容后按回车，此处我的内容是：设计模块添加设计图
+ 
+## 本次提交修改内容的详细描述，用1，2，3..数字来描述，每一点之间用空格隔开
+Provide a longer description of the change: (press enter to skip) # 此处我的内容是：1.添加反馈设计图 2.添加文件列表设计图 3.添加账户信息设计图
+
+## 是否有重大变化
+Are there any breaking changes? (y/N) # 此处我输入的是N
+
+## 此更改是否会影响到未解决的问题
+Does this change affect any open issues? (y/N) # 此处我输入的是N
+```
+
+内容填写参考指引：
+- 选择提交类型：
+  ![|300|300](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/02f4764ab10fd4e861f287fe7e99deb5.webp)
+	-  feat:     新功能
+	- fix:      修复 Bug
+	- docs:     文档更新
+	- style:    代码样式调整
+	- refactor: 代码重构
+	- perf:     性能优化
+	- test:     添加或更新测试
+	- chore:    构建过程或辅助工具的变动
+- 这次提交的改动所影响的范围? (按回车键跳过)
+	- 如果我们的更改影响到特定的模块或组件，可以在这里输入相应的范围，否则直接按回车键跳过。
+- 输入一个简短的描述：
+	- 写一个简短的变化描述，使用命令式语气，尽量包含主语（50个字符以内）
+	- 输入一个简洁明了的描述，说明这次提交的主要变化，例如：添加用户注册功能
+- 输入一个更详细的描述（可选）：
+	- 如果需要提供更多关于这次变更的信息，可以在这里输入多行描述，每行以 `|` 符号开头。如果不需要详细描述，直接按回车键跳过。
+- 是否有任何破坏性变更：
+	- 如果这次提交包含了破坏性变更，即可能影响到其他部分的功能或者与之前的版本不兼容，需要输入 `y` 并按回车键。否则，直接按回车键选择默认的 `N`。
+- 是否关闭了某个 Issue：
+	- 如果这次提交解决了某个 Issue，可以输入 `y` 并在提示中输入 Issue 的编号，多个 Issue 编号以逗号分隔。如果不关闭任何 Issue，直接按回车键选择默认的 `N`。
+
+
+
+git cz的具体过程参考图片
+![image.png|300|300](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c7d942c8acd0cb8ec35107286950f9c.png)
+### 2.2 参考示例
+
 
 ## 3 validate-commit-msg
 
