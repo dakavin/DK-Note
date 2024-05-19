@@ -632,7 +632,7 @@ Dockfile文件编写：
 **构建后端**
 
 **推荐使用使用IDEA连接服务器的docker，然后本地构建镜像到服务器上去**
-- [1_SpringBoot项目部署（Docker）](../../../4_实用文件/8_docker&nginx/1_SpringBoot项目部署（Docker）.md)
+- [1_SpringBoot项目部署（Docker）](../../../4_实用文件/8_运维/1_docker/1_SpringBoot项目部署（Docker）.md)
 
 我们这里直接复制鱼皮的后端Dockerfile
 ```dockerfile
@@ -712,7 +712,7 @@ server {
 
 同理，使用git拉取我们的前端代码，然后使用dockerfile构建前端镜像
 ```shell
-sudo docker build -t usercenter-frontent:v0.0.1 .
+sudo docker build -t usercenter-frontend:v0.0.1 .
 
 // 可以看一下安装的镜像
 sudo docker images

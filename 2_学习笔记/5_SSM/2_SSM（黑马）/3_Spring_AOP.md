@@ -2216,7 +2216,6 @@ public class AccountServiceImpl implements AccountService {
 ```
 
 注意:`@Transactional`可以写在接口类上、接口方法上、实现类上和实现类方法上
-
 - 写在接口类上，该接口的所有实现类的所有方法都会有事务
 - 写在接口方法上，该接口的所有实现类的该方法都会有事务
 - 写在实现类上，该类中的所有方法都会有事务
@@ -2292,8 +2291,6 @@ public class SpringConfig {
 这部分我们重点要理解两个概念，分别是`事务管理员`和`事务协调员`。
 
 当未开启Spring事务之前![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/b07b03c1ed52b8e8fc1a37d938cbd45b.png)
-
-
 - AccountDao的outMoney因为是修改操作，会开启一个事务T1
 - AccountDao的inMoney因为是修改操作，会开启一个事务T2
 - AccountService的transfer没有事务，

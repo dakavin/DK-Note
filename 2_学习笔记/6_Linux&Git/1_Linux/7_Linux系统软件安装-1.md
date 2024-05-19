@@ -531,8 +531,6 @@ firewall-cmd --list-ports
 ```
 
 防火墙相关命令
-
-/usr/bin/java  -jar -Xmx1024M -Xms256M  /www/wwwroot/user-center-backend/user-center-0.0.1-SNAPSHOT.jar --server.port=8080 --spring.profiles.active-prod
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/4f8c0edbb4e8f426f68fc359e3a7b5f6.png)
 
 配置mysql默认编码为utf-8，修改 /etc/my.cnf配置文件，在[mysqld]下添加编码，配置如下

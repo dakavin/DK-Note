@@ -1,5 +1,5 @@
 
-关于部署前后端项目的docker镜像到服务器中，建议参考文章：[1_SpringBoot项目部署（Docker）](../../../4_实用文件/8_docker&nginx/1_SpringBoot项目部署（Docker）.md)
+关于部署前后端项目的docker镜像到服务器中，建议参考文章：[1_SpringBoot项目部署（Docker）](../../../4_实用文件/8_运维/1_docker/1_SpringBoot项目部署（Docker）.md)
 
 使用IDEA部署docker镜像到服务器上后，就不需要我们做如下工作
 - 使用git拉取代码

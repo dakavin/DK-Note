@@ -115,7 +115,9 @@ docker pull ccr.ccs.tencentyun.com/library/nginx:latest
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/f4be65f2ea74ef833c9c56c7c794120b.png)
 
 在IDEA底部service中就会出现Docker选项，然后选择这个选项，会显示容器中的内容
+
 ![image.png|200](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/e6da63d54ec40a3a64748d358671cdf1.png)
+
 ## 3 整合项目Dockerfile文件
 
 
