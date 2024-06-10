@@ -67,9 +67,9 @@ Git软件是免费、开源的。最初Git软件是为辅助 Linux 内核开发�
 
 当然了，配置的过程并不复杂，输入相关指令即可
 ```git
-git config --global user.name dakkk
+git config --global user.name dakavin
 
-git config --global user.email test@126.com
+git config --global user.email mikeylay@126.com
 ```
 
 这里的`--global表示全局配置`，后续的所有文件操作都会使用该用户名称及邮箱。此时`在操作系统的用户目录，会产生新的配置文件`

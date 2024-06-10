@@ -168,6 +168,14 @@ commitizen init cz-conventional-changelog --save --save-exact
 
 # 适用于pnpm
  pnpx commitizen init cz-conventional-changelog --pnpm -Dw
+
+# 移除操作
+npm uninstall cz-conventional-changelog commitizen
+# 或
+yarn remove cz-conventional-changelog commitizen
+# 移除Husky钩子
+rm .husky/commit-msg
+
 ```
 
 [pnpm中使用commitizen init](https://juejin.cn/post/7215608036394827836)
@@ -239,7 +247,6 @@ Does this change affect any open issues? (y/N) # 此处我输入的是N
 git cz的具体过程参考图片
 ![image.png|300|300](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/0c7d942c8acd0cb8ec35107286950f9c.png)
 ### 2.2 参考示例
-
 
 ## 3 validate-commit-msg
 

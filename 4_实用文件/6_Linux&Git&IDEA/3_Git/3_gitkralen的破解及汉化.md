@@ -58,7 +58,7 @@ yarn gitcracken patcher  //输入完成后，等待几十秒就好了
 
 ### 5.1 方式一：修改Host
 
-在C:\Windows\System32\drivers\etc下的hosts文件中最下面添加一行`127.0.0.1 release.gitkraken.com`即可。
+在`C: \ Windows \ System32 \ drivers \ etc`下的hosts文件中最下面添加一行`127.0.0.1 release.gitkraken.com`即可。
 ### 5.2 方式二：直接删除update.exe文件
 
 直接在AppData/Local/gitkraken目录下，将update.exe删掉，也可禁止gitkraken自动更新。

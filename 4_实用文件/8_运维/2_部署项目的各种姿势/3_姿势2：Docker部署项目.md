@@ -1,5 +1,7 @@
 ## 1 前置操作
 
+**安装Docker，请参考《9_补充：安装Docker（本地和Linux）》**
+
 因为使用Docker的nginx镜像，所以我们需要关闭云服务器的nginx服务
 
 ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/05/ba1dd41c576fe1bbd9d6245e3dd1bc78.png)
@@ -178,7 +180,7 @@ docker ps
 
 **注意：不建议使用这种方式，虽然部署比较简单，但是会产生一堆无用镜像，且无法删除**
 
-先参考文章 [6_JetBrains全家桶集成服务器上的Docker服务](6_JetBrains全家桶集成服务器上的Docker服务.md) 完成IDE可以连接远程服务器的docker服务
+先参考文章 [9_补充：JetBrains全家桶集成服务器上的Docker服务](9_补充：JetBrains全家桶集成服务器上的Docker服务.md) 完成IDE可以连接远程服务器的docker服务
 
 连接后点击，下面的小齿轮按钮，可以发现Docker容器的情况
 
@@ -283,7 +285,7 @@ docker ps
 
 **注意：不建议使用这种方式，虽然部署比较简单，但是会产生一堆无用镜像，且无法删除**
 
-先参考文章 [6_JetBrains全家桶集成服务器上的Docker服务](6_JetBrains全家桶集成服务器上的Docker服务.md) 完成IDE可以连接远程服务器的docker服务
+先参考文章 [9_补充：JetBrains全家桶集成服务器上的Docker服务](9_补充：JetBrains全家桶集成服务器上的Docker服务.md) 完成IDE可以连接远程服务器的docker服务
 
 连接后点击，下面的小齿轮按钮，可以发现Docker容器的情况
 
@@ -606,46 +608,4 @@ server {
 尝试访问`usercenter-backend`项目，可以发现安全的访问到了
 
 ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/05/3e0d591aed22f87fe17858d9bee8b945.png)
-
-
-目前我有两个前端项目和一个后端项目，一个是home，一个是usercenter，使用vite+npm打包后项目的内容都在dist文件夹中，目前的方式是使用docker中的一个nginx容器，该容器映射linux中的数据盘，数据盘如下： 
-1. /docker-data/nginx/cert文件夹包括了各个项目的SSL证书文件夹，这个文件夹映射/etc/nginx/cert 
-2. /docker-data/nginx/conf.d文件夹 包括default.conf、home.conf、usercenter-frontend.conf和usercenter-backend.conf配置文件，这些配置文件设置了home的域名为 dakkk.top，usercenter的域名为usercenter.dakkk.top，usercenter-backend的域名为usercenter-backend.dakkk.top，这个conf.d文件夹映射/etc/nginx/conf.d 
-3. html文件夹，包括了home和usercenter两个文件夹，这两个文件夹分别包含这两个项目打包后的dist文件的内容（手动复制到服务器对应的文件夹），这个html文件夹映射/usr/share/nginx/html 
-4. /docker-data/nginx/nginx.conf映射/etc/nginx/nginx.conf 5. /docker-data/nginx/logs映射/var/log/nginx 后端项目是单独构建镜像，Dockfile为使用jdk的jar命令打包运行的 
-
-目前有个问题，在同一台服务器，我该怎么优化这两个前端项目的部署方式呢，复制这个文件到服务器太麻烦了
-
-每个项目的目录结构是这样的 
-home/
-├── dist/
-├── nginx
-│   ├── config.d
-│   ├── home-cert
-│   │   ├── dakkk.top.key
-│   │   ├── dakkk.top_bundle.pem
-│   └── home.conf
-usercenter-frontend/
-├── dist/
-├── nginx
-│   ├── config.d
-│   ├── usercenter-frontend-cert
-│   │   ├── usercenter.dakkk.top.key
-│   │   ├── usercenter.dakkk.top_bundle.pem
-│   └── usercenter-frontend.conf
-usercenter-backend/
-├── target
-│   └── usercenter-backend-0.0.1-SNAPSHOT.jar
-├── nginx
-│   ├── config.d
-│   ├── usercenter-backend-cert
-│   │   ├── usercenter-backend.dakkk.top.key
-│   │   ├── usercenter-backend.dakkk.top_bundle.pem
-│   └── usercenter-backend.conf
-
-
-每个项目是保存在不同的仓库中的，且通过一个docker中的nginx容器运行的
-
-
-
 
