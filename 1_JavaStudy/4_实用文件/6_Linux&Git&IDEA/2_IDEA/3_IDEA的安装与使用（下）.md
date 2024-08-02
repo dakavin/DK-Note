@@ -653,3 +653,4 @@ IDEA 支持各种主题插件，其中最出名的当属 Material Theme UI。
 
 安装后，可以从该插件内置的各种风格个选择自己最喜欢的一种。
 
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/07/b63c76371a1b07c24867079a361994e1.png)
