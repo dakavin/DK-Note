@@ -10,12 +10,32 @@
 	- 取消勾选：`run.process.with.pty`
 	  ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/07/6cd6c08aa68ee9c19a3fb07c68c2e40a.png)
 
-## 2 插件推荐
 
-参考链接：[2023年Clion插件推荐 - 北极的大企鹅 - 博客园 (cnblogs.com)](https://www.cnblogs.com/liuyangfirst/p/17569046.html)
-![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/07/4079bf2454fd9211ed141dd9b9700d18.png)
+## 2 HelloWorld的实现
 
+### 2.1 新建Project
+
+- 选择"New Project"：
+  ![image.png|500|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/04/1edc54945a217398d9834f47f9c5c603.png)
+- 指定创建C可执行文件、工程目录，图中的“untitled1”需要修改为自己的工程名称。如下所示：
+  ![image.png|500|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/04/27e38ec27d83beab4424878e2012dbdc.png)
+- 选择C可执行文件，修改工程名称为demo1
+  ![image.png|500|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/04/b35b2a78fba7cd2abd648c5396a87047.png)
+  - 点击“Create”进行下一步，如图所示
+	  - 这里Toolset需要改本地的，不然不会有编写提示
+    ![image.png|500|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/04/769cb8a559d2d11588fe6b04ea897632.png)
+- 此处选择编译器，默认MinGW即可，点击“OK”按钮，如图所示，默认创建了main.c文件。
+  ![image.png|500|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/04/fad08a9f5789e57eea555895c8c9a33a.png)
+### 2.2 运行
+
+- 点击执行按钮，如下所示
+  
 ## 3 一个文件夹如何创建多个c文件
+
+参考链接：
+- https://www.cnblogs.com/liuyangfirst/p/9559199.html
+- https://www.cnblogs.com/liuyangfirst/p/17568673.html
+- https://www.cnblogs.com/liuyangfirst/p/16710565.html
 
 参考链接：https://github.com/CarmJos/CWorks/blob/master/.doc/SETTINGS_C.md
 
@@ -40,12 +60,39 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.library)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.runtime)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/.path)
 
-# 遍历项目根目录下所有的 .c 文件，自动添加
+# 遍历项目根目录下所有的 .c 文件，为每一个 .c文件生成一个独立的目标
 file(GLOB_RECURSE files *.c **/*.c)
 foreach (file ${files})
     string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
     add_executable(${exe} ${file})
     message(\ \ \ \ --\ \[${exe}.c\]\ will\ be\ compiled\ to\ \'.runtime/${exe}.exe\')
+endforeach ()
+```
+
+```CMake
+cmake_minimum_required(VERSION 3.28)
+# 注意目标文件是一个
+project(3_C_Algorithm C)
+
+# 按照书本要求设定C语言版本
+set(CMAKE_C_STANDARD 99)
+
+# 设定构建运行路径，避免污染根目录
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.archive)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.library)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.runtime)
+set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/.path)
+
+# 遍历项目根目录下所有的 .c 文件
+file(GLOB_RECURSE files *.c **/*.c)
+
+# 将所有 .c 文件添加到一个目标中
+add_executable(3_C_Algorithm ${files})
+
+# 打印每个文件的编译信息
+foreach (file ${files})
+    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
+    message(\ \ \ \ --\ \[${exe}.c\]\ will\ be\ compiled\ to\ \'.runtime/3_C_Algorithm.exe\')
 endforeach ()
 ```
 
@@ -128,3 +175,8 @@ ${BODY}
  * 
  */
 ```
+
+## 5 插件推荐
+
+参考链接：[2023年Clion插件推荐 - 北极的大企鹅 - 博客园 (cnblogs.com)](https://www.cnblogs.com/liuyangfirst/p/17569046.html)
+![image.png|500|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/04/4079bf2454fd9211ed141dd9b9700d18.png)

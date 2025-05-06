@@ -1,5 +1,9 @@
 
-**推荐主题：green-theme**
+**护眼设置**
+
+参考连接：[关于VScode设置护眼色的方法_vs code 背景护眼色-CSDN博客](https://blog.csdn.net/qq_39233554/article/details/105639331)
+
+
 
 **设置编辑文字大小**
 ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/07/ee7ef4296748a24d154a2a57f31e1a78.png)
@@ -22,3 +26,8 @@
 ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/07/01c7840637db677e2ec070c3a6eaf49b.png)
 
 **自动切换中英文插件：Smrat IME**
+
+**取消下方横向滚动条**
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/68c2303d41fcd84d71296b76e8c9ce89.png)
+
+
