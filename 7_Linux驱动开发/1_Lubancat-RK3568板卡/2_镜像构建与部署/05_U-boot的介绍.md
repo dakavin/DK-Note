@@ -119,7 +119,7 @@ ext4文件系统的命令使用方式和FAT使用方式相似，仅命令名不�
    ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/c57258146b509bca24c01f1ebea0a877.png)
 ## 5 U-boot启动内核过程
 
-bootcmd与bootargs可以说是U-boot最重要的两个环境参数， U-boot执行完毕之后，如果没有按下回车，则会自动执行bootcmd命环境参数里的内容， 而bootargs则是传递给内核的启动参数。
+`bootcmd与bootargs可以说是U-boot最重要的两个环境参数`， U-boot执行完毕之后，如果没有按下回车，则会自动执行bootcmd命环境参数里的内容， 而bootargs则是传递给内核的启动参数。
 
 使用 **printenv bootcmd** 可查看bootcmd的内容
 ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/983455679397d2b89b6fe4edbf21e69c.png)

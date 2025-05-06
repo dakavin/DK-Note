@@ -29,11 +29,33 @@ LubanCat_Chip_SDK是基于瑞芯微通用Linux SDK工程的深度定制版本，
 **注意1：** 由于基于rkboot分区的LubanCat专用镜像已停止支持，相关SDK配置文件已移动至 device/rockchip/rk356x/.others 目录下，以下相关内容仅做参考。
 ### 2.1 extboot分区系统镜像特点
 
+❗️❗️❗️extboot 分区是 **对传统 boot 分区的增强**❗️❗️❗️
+
 extboot分区系统是野火基于瑞芯微Linux_SDK框架搭建的一种LubanCat-RK系列板卡通用镜像实现方式。实现一个镜像烧录到Lubancat使用相同处理器的所有板卡，解决了默认rkboot分区固定设备树导致一个镜像只能失配一款板卡的问题，大大降低了型号众多导致的后期维护复杂性。
 
-extboot分区使用ext4文件系统格式，在编译过程中将所有LubanCat-RK系列板卡设备树都编译并打包到分区内， 并借助SDRADC读取板卡硬件ID，来实现设备树自动切换。同时支持设备树插件，自动更新内核deb包，在线更新内核和驱动模块等功能。
+extboot分区使用ext4文件系统格式
+- 在编译过程中**将所有LubanCat-RK系列板卡设备树都编译并打包到extboot分区内**
+- 并借助SDRADC读取板卡硬件ID，来**实现设备树自动切换**
+- 同时支持设备树插件，自动更新内核deb包，在线更新内核和驱动模块等功能
 
-还对系统镜像的分区做了调整，删减一些冗余功能，仅包含uboot、boot、rootfs分区，实现了对系统存储的高效利用。
+还对系统镜像的分区做了调整，删减一些冗余功能，仅包含uboot、boot、rootfs分区，实现了对系统存储的高效利用
+
+```shell
+1. uboot 启动  
+   ──► 初始化 SoC 核心硬件（DDR、时钟等，依赖 uboot 自身代码或极简 dtb）  
+   ──► 挂载 extboot 分区（ext4 文件系统）  
+
+2. 动态选择设备树  
+   ──► 通过 SDRADC 读取硬件 ID  
+   ──► 根据 ID 从 extboot 分区加载对应的 .dtb（如 rk3568-lubancat2.dtb）  
+
+3. 启动内核  
+   ──► 将选中的 dtb 传递给内核  
+   ──► 内核基于 dtb 初始化外设（Display、PMIC 等）  
+
+4. 挂载 rootfs  
+   ──► 从 extboot 或独立分区加载 rootfs  
+```
 ### 2.2 rkboot分区系统镜像特点（停止支持）
 
 rkboot分区是使用瑞芯微Linux_SDK自带的boot分区打包脚本所构建的分区，仅修改了kernel配置文件和适配板卡设备树，系统更加原汁原味。 使用此类型boot分区的优点是启动快，冗余功能强，进一步配置可以实现OTA，多系统，镜像校验等功能(需二次开发自行适配)，但是像设备树插件这些功能是缺失的。
