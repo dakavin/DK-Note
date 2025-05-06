@@ -20,5 +20,5 @@
     merge = refs/heads/master
 ```
 
-参考截图：
+参考截图 ：
 ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/12/6088c55a790f59caa6ee43e96991508f.png)
