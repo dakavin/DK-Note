@@ -9,8 +9,6 @@
 	- 取消run.processes.with.pty功能，按下Ctrl+shift+alt+/ 调出maintenance界面，点击Registry...进行配置
 	- 取消勾选：`run.process.with.pty`
 	  ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/07/6cd6c08aa68ee9c19a3fb07c68c2e40a.png)
-
-
 ## 2 HelloWorld的实现
 
 ### 2.1 新建Project
@@ -69,31 +67,28 @@ foreach (file ${files})
 endforeach ()
 ```
 
+拆分为不同的文件夹，文件夹内部的c和h文件有联系，外部没有
 ```CMake
-cmake_minimum_required(VERSION 3.28)
-# 注意目标文件是一个
-project(3_C_Algorithm C)
-
-# 按照书本要求设定C语言版本
-set(CMAKE_C_STANDARD 99)
-
-# 设定构建运行路径，避免污染根目录
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.archive)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.library)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.runtime)
-set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/.path)
-
-# 遍历项目根目录下所有的 .c 文件
-file(GLOB_RECURSE files *.c **/*.c)
-
-# 将所有 .c 文件添加到一个目标中
-add_executable(3_C_Algorithm ${files})
-
-# 打印每个文件的编译信息
-foreach (file ${files})
-    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
-    message(\ \ \ \ --\ \[${exe}.c\]\ will\ be\ compiled\ to\ \'.runtime/3_C_Algorithm.exe\')
-endforeach ()
+cmake_minimum_required(VERSION 3.28)  
+project(3_C_Algorithm C)  
+  
+# 按照书本要求设定C语言版本  
+set(CMAKE_C_STANDARD 99)  
+  
+# 设定构建运行路径，避免污染根目录  
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.archive)  
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.library)  
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.runtime)  
+set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/.path)  
+  
+# 遍历项目根目录下所有的 .c 文件，自动添加  
+file(GLOB_RECURSE files *.c **/*.c)  
+foreach(dir IN ITEMS a b c)
+    file(GLOB sources ${dir}/*.c)
+    add_executable(${dir}_exec ${sources})
+    target_include_directories(${dir}_exec PRIVATE ${CMAKE_SOURCE_DIR}/${dir})
+    message(STATUS "Compile ${dir}/*.c into ${dir}_exec")
+endforeach()
 ```
 
 使用此CMakeList时，若要新建C语言文件，请按照以下步骤：
@@ -108,7 +103,6 @@ endforeach ()
 **针对初学者使用CLion的注意事项——C++**
 
 **修改CMakeList.txt**
-
 
 默认情况下，Clion适用于单独的项目，即一个项目下的文件有且仅有一个main函数。
 
@@ -176,7 +170,49 @@ ${BODY}
  */
 ```
 
-## 5 插件推荐
+## 5 ssh连接远端服务器
+
+需要提前**安装cmake、gcc、g++和gdb**
+- cmake：跨平台的自动化构建系统生成工具，用于管理编译过程
+- gcc：c编译器
+- g++：c++编译器
+- gdb：gnu调试器，调试
+```shell
+sudo apt install cmake -y
+sudo apt install gcc -y
+sudo apt install g++ -y
+sudo apt install gdb -y
+
+#验证
+cmake --version
+gcc -v
+g++ -v
+gdb -v
+
+#查看安装路径
+which命令即可
+```
+
+打开设置添加远程主机，并点击凭据后的设置按钮
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/c09548be4f7ef65ec7a83e52bd921d84.png)
+
+
+输入ssh相关信息，然后测试连接，成功即可
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/9709f74da3bf2f6dc9aa45ca571c3a0d.png)
+
+指定远程linux的相关编译工具的路径，一般都是在 /bin 或者 /usr/bin 目录下
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/1c82c4ff08a1b13f9a8d31308bd5df2d.png)
+
+接下来开始部署，来到映射，配置部署路径，这个部署路径就是你Clion项目放到Linux上面的位置，然后点击应用
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/9c528c43d144bddc3ef71ade13eb5979.png)
+
+接着是CMake，将工具链换成远程主机的，生成器推荐使用Ninja(要在Linux上面安装了并写到环境变量才能使用，不然会报错)，点击应用
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/c8aba9584384211fd83c47c5107e11f1.png)
+
+接着回到项目页面，你就发现Clion自动将项目文件上传到远程主机了。
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/70d5036743501515bef91d60e68686da.png)
+
+## 6 插件推荐
 
 参考链接：[2023年Clion插件推荐 - 北极的大企鹅 - 博客园 (cnblogs.com)](https://www.cnblogs.com/liuyangfirst/p/17569046.html)
 ![image.png|500|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/04/4079bf2454fd9211ed141dd9b9700d18.png)

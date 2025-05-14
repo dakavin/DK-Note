@@ -174,8 +174,6 @@
 
 语法：`ps -ef`，查看全部进程信息，可以搭配grep做过滤：`ps -ef | grep xxx`
 
-
-
 ## 11 kill命令
 
 ![image-20221027221303037|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/d2d25e324c4dd86928b5ea5513d2ed0e.png)

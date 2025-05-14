@@ -126,6 +126,14 @@ FinalShell登陆终端后，默认的工作目录就是用户的HOME目录
 - 参数1：被移动的
 - 参数2：要移动去的地方，参数2如果不存在，则会进行改名
 
+```shell
+#移动多个文件
+mv file1.txt file2.txt /home/user/
+#重命名目录
+mv old_directory new_directory
+#移动目录及其内容
+mv myfolder/* /home/user/
+```
 ## 14 rm命令
 
 功能：删除文件、文件夹
