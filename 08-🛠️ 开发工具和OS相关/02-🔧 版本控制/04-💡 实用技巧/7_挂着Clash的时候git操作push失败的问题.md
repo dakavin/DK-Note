@@ -17,6 +17,6 @@ git config --global --unset https.proxy
 # 查看代理
 git config --global --get http.proxy
 git config --global --get https.proxy
-git  config --list
+git config --list
 
 ```
