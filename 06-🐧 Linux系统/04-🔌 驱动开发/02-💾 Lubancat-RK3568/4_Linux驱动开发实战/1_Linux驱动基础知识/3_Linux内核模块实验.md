@@ -209,7 +209,8 @@ bear --make
 #### 1.3.1 内核模块相关命令（加载）
 
 **lsmod命令**
-- 列出当前内核中加载的模块，格式化显示在终端，其原理就是将/proc/modules中的信息调整一下格式输出
+- **功能：** 列出当前内核中加载的模块，格式化显示在终端
+- **原理：** 将/proc/modules中的信息调整一下格式输出
 -  lsmod输出列表有一列 Used by， 它表明此模块正在被其他模块使用，显示了模块之间的依赖关系
 
 **insmod命令**
@@ -221,18 +222,21 @@ bear --make
 - 有些内核模块有依赖关系，不能直接用insmod加载，需要前加载前置模块，下一节实验会讲到
 
 **modprobe命令**
-- 和insmod具备同样的功能，同样可以将模块加载到内核中
-- 除此以外modprobe还**能检查模块之间的依赖关系， 并且按照顺序加载这些依赖**，可以理解为按照顺序多次执行insmod
-- 需要先用depmod -a建立模块之间的依赖关系，但值得注意的是使用depmod -a必须要将驱动模块放入系统驱动模块存放和配置的文件夹，否者无法管理依赖关系
+- 功能同insmod，可加载内核模块
+- **核心特性**：自动处理模块依赖关系并按需加载
+- **使用前提**：
+  1. 需先执行`depmod -a`生成依赖配置
+  2. 模块必须存放在`/lib/modules/<内核版本>`目录
 
 **depmod命令**
 - 用于创建模块关系依赖的文件，给modprobe命令使用
-- 在Linux系统中，/lib/modules目录通常包含内核相关的模块和配置文件，该文件夹包含了与内核版本号相关文件夹，用来存放的模块和配置信息 ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/60bdfa1f12f6bffe40b98a994c832b94.png) ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/e9f234291911a110555feee3abab5689.png)
+- 在Linux系统中，`/lib/modules`目录包含了与内核版本号相关文件夹，用来存放的模块和配置信息
+  ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/5d32ef3e2352ccd0550d2217376ac083.png)![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/e9f234291911a110555feee3abab5689.png)
 - 主要关注配置文件 `modules.dep`，其列出了模块之间的依赖关系，执行`depmod -a`时，会把依赖关系写入到该配置文件中
 
 **rmmod命令**
 - 将内核中运行的模块删除，只需要传给它路径就能实现
-- 工作原理：卸载某个内存模块时，内存模块会自动执行`*_exit()`函数，进行清理操作
+- 原理：卸载某个内存模块时，内存模块会自动执行`*_exit()`函数，进行清理操作
 - 在我们的hellomodule中，*exit函数在控制台没有显示，可以用dmesg查看* ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/883289a7d036fc45b269dc2f10d038d9.png)
 	- 原因：与printk的打印等级有关，前面有关于printk函数有详细讲解
 - 不会卸载一个模块所依赖的模块，需要依次卸载，当然是用modprobe -r 可以一键卸载
@@ -245,7 +249,7 @@ bear --make
 我们可以使用depmod和modprode工具，来实现模块hellomodule.ko在板子开机自动加载，方式如下
 - 将模块放到 `/lib/modules/内核版本` 目录下
 	- 内核版本，可以通过命令`uname -r`查询
-- 然后使用depmod建立模块之间的依赖关系，命令为`depmod -a`，就可以在modules.dep文件中看到模块依赖关系，命令如下
+- 然后使用depmod建立模块之间的依赖关系（即更新一下modules.dep文件），命令为`sudo depmod -a`，就可以在modules.dep文件中看到模块依赖关系，命令如下
 ```shell
 cat /lib/modules/4.19.232/modules.dep | grep hellomodule
 ```
@@ -266,9 +270,73 @@ cat /lib/modules/4.19.232/modules.dep | grep hellomodule
 
 **Linux内核提供一个宏来实现模块的参数传递**
 - 代码路径：`内核源码/include/linux/moduleparam.h`
+```shell
+#define module_param(name, type, perm)				\
+	module_param_named(name, name, type, perm)
+
+#define module_param_array(name, type, nump, perm)		\
+	module_param_array_named(name, name, type, nump, perm)
+```
+- `name`：参数名称（变量名）
+- `type`：参数的类型，内核支持--->byte，short，ushort，int，uint，long，ulong，charp，bool，invbool
+	- charp：字符指针，即char*
+	- bool：布尔类型，0/1，ture=1，false=0
+	- invbool：反布尔类型，0/1，ture=0，false=1
+	- char：用该类型时，传参只能是byte
+- `perm`：该文件的权限（**参数也是文件，具有权限！！！**）
+
+| 权限类别  | 标志位     | 数字表示（八进制）无执行权限！ | 说明     |
+| ----- | ------- | --------------- | ------ |
+| 当前用户  | S_IRUSR | 0400            | 用户可读   |
+|       | S_IWUSR | 0300            | 用户可写   |
+| 当前用户组 | S_IRGRP | 0040            | 同组用户可读 |
+|       | S_IWGRP | 0030            | 同组用户可写 |
+| 其他用户  | S_IROTH | 0004            | 其他用户可读 |
+|       | S_IWOTH | 0003            | 其他用户可写 |
+**❗️注意：** 
+- 文件权限唯独没有关于可执行权限的设置，该文件不允许它具有可执行权限
+- 强行给该参数赋予表示可执行权限的参数值S_IXUGO， 那么最终生成的内核模块在加载时会提示错误，见下图
+  ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/fba50a9ca45739261b9e1e0695289600.png)
+---
+
+宏的相关定义已经解释完毕了，下面开始编写实验代码
+```c
+// 定义4个常见变量
+// 使用module_param宏来声明这4个参数
+static int itype=0;
+module_param(itype,int,0);
+
+static bool btype=0;
+module_param(btype,bool,0644);
+
+static char ctype=0;
+module_param(ctype,byte,0);
+
+static char  *stype=0;
+module_param(stype,charp,0644);
+
+//在param_init中输出上面声明的四个参数
+static int __init param_init(void)
+{
+   printk(KERN_ALERT "param init!\n");
+   printk(KERN_ALERT "itype=%d\n",itype);
+   printk(KERN_ALERT "btype=%d\n",btype);
+   printk(KERN_ALERT "ctype=%d\n",ctype);
+   printk(KERN_ALERT "stype=%s\n",stype);
+   return 0;
+}
+```
+
+上面4个模块参数，**会以模块参数为名的文件，存在于 `/sys/module/模块名/parameters/` 目录**，其中itype和ctype的权限为0，所以无权限查看该参数
+![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/189c4e54004a75aea462b041d878da39.png)
 
 #### 2.1.2 符号共享代码讲解
 
+[2_Linux内核模块](2_Linux内核模块.md)中已经详细分析了关于导出符号的内核源码
+
+**符号就是在内核模块中导出函数和变量，在加载模块时被记录在公共内核符号表中，以供其他模块调用**
+
+有了这个机制，可以允许我们使用分层的实现解决一些复杂的模块设计，即编写一个驱动时，可以把驱动按照功能分成几个内核模块，**借助符号共享去实现模块之间的接口调用，变量共享**。
 ### 2.2 实验准备
 
 #### 2.2.1 makefile说明
