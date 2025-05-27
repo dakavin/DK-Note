@@ -1,3 +1,30 @@
+---
+文章标题: "[[5_📕整合 Spring Security]]" 
+文章作者: Dakkk
+文章概要: |
+  文章介绍了Spring Security框架，阐述其重要性。它指导读者在一个多模块Spring Boot项目中初步整合Spring Security，包括模块配置、依赖添加，并演示了如何通过`WebSecurityConfig`配置基于表单和HTTP Basic的基础认证和URL权限控制。
+文章标签:
+- "Spring Security"
+- "Spring Boot"
+- "Web安全"
+- "认证"
+- "授权"
+- "Maven"
+- "多模块项目"
+相关文章:
+- "[[0_参考文章索引]]"
+- "[[2_Maven和Springboot下多环境的区别]]"
+- "[[7_Springboot]]"
+- "[[1_搭建多模块工程（Spring Initializr）]]"
+- "[[0_导读]]"
+文章分类: "🚀 项目实战"
+文章路径: "10-🚀 项目实战/01-📝 博客系统/03-📝 开发日志/3_登录模块开发/5_📕整合 Spring Security.md"
+文章难度: 初级 💧
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-04-22 22:21:31
+修改时间: 2025-05-27 00:54:47
+---
 
 在现代的 Web 应用程序中，安全性是系统至关重要的一环。Spring Security 是一个功能强大的安全框架，能够帮助您在应用程序中实现认证（Authentication）和授权（Authorization）功能。本小节中，将带着大家在 `blog` 项目中初步整合 Spring Security 框架。
 

@@ -1,3 +1,29 @@
+---
+文章标题: "[[9_RocketMQ源码探讨]]" 
+文章作者: Dakkk
+文章概要: |
+  文章深入探讨RocketMQ消息存储核心机制，详细介绍了CommitLog、ConsumeQueue、IndexFile三大文件架构。阐述了利用操作系统PageCache和Mmap内存映射技术优化读写性能的原理，并比较了同步刷盘与异步刷盘两种消息持久化方式的优缺点及其应用场景。
+tags:
+- "RocketMQ"
+- "消息存储"
+- "CommitLog"
+- "ConsumeQueue"
+- "IndexFile"
+- "内存映射"
+- "刷盘"
+- "分布式消息队列"
+相关文章:
+- "[[8_RocketMQ消息问题]]"
+- "[[秒杀+分布式锁项目]]"
+文章分类: "🔬 中间件技术"
+文章路径: "09-🔬 中间件技术/01-📨 消息队列/01-🚀 RocketMQ/9_RocketMQ源码探讨.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-28 01:16:27
+---
+
 ### 0.1 消息存储
 
 ![|380](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/3b9e1a22796eb140c8090704fa94bdee.png)

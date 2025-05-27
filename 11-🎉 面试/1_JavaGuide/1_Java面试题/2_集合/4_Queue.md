@@ -1,3 +1,31 @@
+---
+文章标题: "[[4_Queue]]" 
+文章作者: Dakkk
+文章概要: |
+  文章全面介绍了Java中Queue、Deque、PriorityQueue和BlockingQueue等核心队列接口与实现。详细对比了ArrayDeque与LinkedList、ArrayBlockingQueue与LinkedBlockingQueue的底层结构、性能和并发特性，是理解Java集合与并发编程的重要资料。
+文章标签:
+- "Java"
+- "队列"
+- "Queue"
+- "Deque"
+- "PriorityQueue"
+- "BlockingQueue"
+- "数据结构"
+- "并发编程"
+相关文章:
+- "[[6_集合Queue]]"
+- "[[1_232.用栈实现队列]]"
+- "[[2_225.用队列实现栈]]"
+- "[[3_二叉树的层序遍历]]"
+- "[[4_1047.删除字符串中的所有相邻重复项]]"
+文章分类: "🎉 面试"
+文章路径: "11-🎉 面试/1_JavaGuide/1_Java面试题/2_集合/4_Queue.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-08-11 18:15:12
+修改时间: 2024-08-11 18:15:12
+---
 
 ## 1 Queue 与 Deque的区别？
 

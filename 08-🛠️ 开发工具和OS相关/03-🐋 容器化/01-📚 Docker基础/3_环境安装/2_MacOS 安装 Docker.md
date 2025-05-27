@@ -1,3 +1,31 @@
+---
+文章标题: "[[2_MacOS 安装 Docker]]" 
+文章作者: Dakkk
+文章概要: |
+  本文详细介绍了在macOS上安装Docker Desktop的两种方法：通过Homebrew Cask命令行安装和手动下载`.dmg`包安装。并指导用户如何启动Docker及验证其运行状态和版本，适合初学者快速搭建Docker环境。
+tags:
+- "Docker"
+- "macOS"
+- "安装"
+- "Homebrew"
+- "Docker Desktop"
+- "容器"
+- "环境配置"
+相关文章:
+- "[[3_CentOS 安装 Docker]]"
+- "[[4_Ubuntu 安装 Docker]]"
+- "[[1_启动容器]]"
+- "[[2_安装与卸载]]"
+- "[[2_安装MySQL]]"
+文章分类: "🛠️ 开发工具和OS相关"
+文章路径: "08-🛠️ 开发工具和OS相关/03-🐋 容器化/01-📚 Docker基础/3_环境安装/2_MacOS 安装 Docker.md"
+文章难度: 入门 🌱
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-28 01:03:09
+---
+
 ## 1 使用 Homebrew 安装
 
 通过 [Homebrew](https://brew.sh/) 的 [Cask](https://github.com/Homebrew/homebrew-cask) 可以很方便的安装 Docker, 命令如下：

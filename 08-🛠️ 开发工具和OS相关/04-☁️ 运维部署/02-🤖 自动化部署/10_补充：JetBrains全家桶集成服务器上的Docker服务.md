@@ -1,3 +1,31 @@
+---
+文章标题: "[[10_补充：JetBrains全家桶集成服务器上的Docker服务]]" 
+文章作者: Dakkk
+文章概要: |
+  文章详述了Linux服务器上Docker Remote API的配置方法，包括服务修改、端口开放及镜像源设置。随后指导用户在JetBrains IDEA中集成此远程Docker服务，实现IDE内便捷管理容器与镜像，提高开发部署效率。
+tags:
+- "Docker"
+- "IDEA"
+- "Docker Remote API"
+- "Linux配置"
+- "容器管理"
+- "开发效率"
+- "IDE集成"
+相关文章:
+- "[[4_配置 Lombok]]"
+- "[[0_导论]]"
+- "[[0_项目知识补充]]"
+- "[[1_idea创建不了spring2.X版本，无法使用JDK8]]"
+- "[[15_使用Docker构建根文件系统（Skip）]]"
+文章分类: "🛠️ 开发工具和OS相关"
+文章路径: "08-🛠️ 开发工具和OS相关/04-☁️ 运维部署/02-🤖 自动化部署/10_补充：JetBrains全家桶集成服务器上的Docker服务.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-28 01:03:09
+---
+
 
 参考文章：[IDEA中使用Docker插件构建镜像并推送至私服Harbor_idea中springboot项目使用dockerfile+harbor部署-CSDN博客](https://blog.csdn.net/An1090239782/article/details/111316025)
 

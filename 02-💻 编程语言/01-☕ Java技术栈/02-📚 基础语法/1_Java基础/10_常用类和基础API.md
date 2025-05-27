@@ -2,24 +2,29 @@
 文章标题: "[[10_常用类和基础API]]" 
 文章作者: Dakkk
 文章概要: |
-  本文详细介绍了Java核心API，包括String、StringBuffer、StringBuilder的特性、内存管理及常用方法；深入解析JDK8前后日期时间API；并阐述对象比较器（Comparable/Comparator）及System、Math等实用工具类应用。
-文章标签:
-- "Java基础API"
+  文章全面讲解Java常用API，涵盖String特性与内存，以及可变字符串。详细介绍JDK8前后日期时间API、对象比较器Comparable/Comparator接口，并涉及System、Math、BigInteger、BigDecimal等实用工具类，内容丰富且实用。
+tags:
+- "Java基础"
 - "String"
-- "字符串操作"
-- "日期时间"
+- "StringBuffer"
+- "StringBuilder"
+- "日期时间API"
 - "Comparable"
 - "Comparator"
-- "System类"
-- "数学工具类"
-相关文章: 暂无 🤷
+- "Java核心API"
+相关文章:
+- "[[3_Set]]"
+- "[[8_String]]"
+- "[[1_容器概览]]"
+- "[[4_集合Set]]"
+- "[[4_StringBuffer & StringBuffer]]"
 文章分类: "💻 编程语言"
 文章路径: "02-💻 编程语言/01-☕ Java技术栈/02-📚 基础语法/1_Java基础/10_常用类和基础API.md"
-文章难度: 中级 🌳
+文章难度: 初级 💧
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐⭐ 精通必备
 创建时间: 2024-08-11 18:15:12
-修改时间: 2025-05-26 07:14:51
+修改时间: 2025-05-27 21:36:04
 ---
 
 ## 1 本章专题与脉络

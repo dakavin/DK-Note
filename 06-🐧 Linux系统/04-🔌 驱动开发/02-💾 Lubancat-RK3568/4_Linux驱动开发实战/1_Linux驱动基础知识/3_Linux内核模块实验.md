@@ -1,3 +1,28 @@
+---
+文章标题: "[[3_Linux内核模块实验]]" 
+文章作者: Dakkk
+文章概要: |
+  介绍Linux内核模块开发基础，包含hellomodule实验、模块传参和符号共享机制，涵盖代码框架、头文件、加载卸载函数、编译部署等核心知识点
+tags:
+- "Linux内核模块"
+- "驱动开发"
+- "printk"
+- "insmod"
+- "rmmod"
+- "模块传参"
+- "符号导出"
+- "Kbuild"
+相关文章:
+- "[[1_驱动关键技术]]"
+- "[[1_嵌入式Linux_Android学习路线]]"
+文章分类: "🐧 Linux系统"
+文章路径: "06-🐧 Linux系统/04-🔌 驱动开发/02-💾 Lubancat-RK3568/4_Linux驱动开发实战/1_Linux驱动基础知识/3_Linux内核模块实验.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2025-05-06 16:55:39
+修改时间: 2025-05-28 00:19:51
+---
 
 本节实验使用到Lubancat_RK系列板卡（Lubancat2-RK3568）
 ## 1 hellomodule实验
@@ -54,9 +79,9 @@ Linux内核模块的代码框架通常由下面几个部分组成：
 
 前面我们已经接触过了Linux的应用编程，了解到Linux的头文件都存放在/usr/include中。**编写内核模块所需要的头文件，并不在上述说到的目录，而是在Linux内核源码中的include文件夹。**
 
-- **#include <linux/module.h>：** 包含内核模块信息声明的相关函数
-- **#include <linux/init.h>：** 包含了 module_init()和 module_exit()函数的声明
-- **#include <linux/kernel.h>：** 包含内核提供的各种函数，如printk
+- **# include <linux/module.h>：** 包含内核模块信息声明的相关函数
+- **# include <linux/init.h>：** 包含了 module_init()和 module_exit()函数的声明
+- **# include <linux/kernel.h>：** 包含内核提供的各种函数，如printk
 
 `init.h头文件(位于内核源码 /include/linux/init.h)`
 ![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/593f62c69e7ff9cbe934db9b98adbfe3.png)
@@ -96,27 +121,6 @@ module_init(func_init);
 - 用于通知内核初始化模块的时候， 要使用哪个函数进行初始化
 - 会将函数地址加入到相应的节区section中， 这样的话，开机的时候就可以自动加载模块了
 
----
-
-**2. 模块卸载函数**
-
-内核加载函数相反，内核模块卸载函数func_exit主要是用于释放初始化阶段分配的内存， 分配的设备号等，是初始化过程的逆过程
-```c
-static void __exit func_exit(void){
-	
-}
-module_exit(func_exit);
-```
-- 返回值是void类型
-- 修饰符使用 `__exit`，表示将该函数放在可执行文件的__exit节区，当执行完模块卸载阶段之后，就会自动释放该区域的空间
-
-`__exit、__exitdata`宏定义，位于`内核源码/linux/init.h`
-![image.png|500](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2025/05/c1998a3dca3963d1fa3311fb5d1afb00.png)
-- `__exit`用于修饰函数
-- `__exitdata`用于修饰变量
-- 宏定义`module_exit`用于告诉内核，当卸载模块时，需要调用哪个函数
-
----
 
 **3. printk函数**
 - printf：glibc实现的打印函数，工作于用户空间

@@ -1,3 +1,31 @@
+---
+文章标题: "[[4_VMware和Docker冲突怎么办？]]" 
+文章作者: Dakkk
+文章概要: |
+  介绍了Windows 10系统中VMware与Docker因Hyper-V虚拟化内核冲突的原因，提供了通过bcdedit命令切换hypervisorlaunchtype参数来解决冲突的简单方法。
+tags:
+- "VMware"
+- "Docker"
+- "Hyper-V"
+- "Windows 10"
+- "虚拟化"
+- "bcdedit"
+- "系统冲突"
+- "容器技术"
+相关文章:
+- "[[1_Window 安装 Docker]]"
+- "[[2_ Docker VS 虚拟机]]"
+- "[[3_查看镜像信息]]"
+- "[[5_删除镜像]]"
+- "[[0_导论]]"
+文章分类: "🐧 Linux系统"
+文章路径: "06-🐧 Linux系统/02-⚙️ 系统基础/01-💻 命令行操作/4_VMware和Docker冲突怎么办？.md"
+文章难度: 初级 💧
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-28 00:19:51
+---
 
 参考文章：[VMware和Docker冲突怎么办？超级简单_docker vmware冲突-CSDN博客](https://blog.csdn.net/weixin_43038752/article/details/112062334?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-112062334-blog-116693203.235%5Ev43%5Epc_blog_bottom_relevance_base2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-112062334-blog-116693203.235%5Ev43%5Epc_blog_bottom_relevance_base2&utm_relevant_index=2)
 

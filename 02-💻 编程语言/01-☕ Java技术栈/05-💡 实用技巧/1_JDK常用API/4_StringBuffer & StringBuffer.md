@@ -2,28 +2,29 @@
 文章标题: "[[4_StringBuffer & StringBuffer]]" 
 文章作者: Dakkk
 文章概要: |
-  文章介绍了Java中`StringBuilder`和`StringBuffer`的常用API，包括字符串追加、删除、替换、插入、查找和反转等。强调其API一致性及方法链操作，并提供Java代码示例，展示了这些API的基本用法。
-文章标签:
+  文章详细列举并示例了Java中`StringBuilder`和`StringBuffer`类常用的字符串操作API，包括追加、删除、替换、插入、查找、截取、反转等，并指出它们API一致且支持方法链操作。
+tags:
 - "Java"
 - "StringBuilder"
 - "StringBuffer"
 - "字符串操作"
 - "API"
-- "字符串拼接"
 - "方法链"
+- "字符串拼接"
+- "容器类"
 相关文章:
-- "[[9_api token收费分析]]"
-- "[[0_try catch finally原理]]"
-- "[[1_面向对象]]"
-- "[[1_Arrays工具类]]"
-- "[[1_Java泛型解析]]"
+- "[[3_字符串替换]]"
+- "[[1_JDBC概述]]"
+- "[[4📕_151.翻转字符串里的单词]]"
+- "[[5_左或右旋转字符串]]"
+- "[[6_383.赎金信]]"
 文章分类: "💻 编程语言"
 文章路径: "02-💻 编程语言/01-☕ Java技术栈/05-💡 实用技巧/1_JDK常用API/4_StringBuffer & StringBuffer.md"
 文章难度: 入门 🌱
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐ 核心能力
 创建时间: 2024-08-11 18:15:12
-修改时间: 2024-08-11 18:15:12
+修改时间: 2025-05-27 21:53:49
 ---
 
 StringBuilder、StringBuffer的API是完全一致的，并且很多方法与String相同。

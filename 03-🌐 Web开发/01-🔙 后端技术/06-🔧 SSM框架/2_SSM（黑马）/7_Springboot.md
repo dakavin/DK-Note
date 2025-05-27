@@ -1,4 +1,33 @@
- 
+---
+文章标题: "[[7_Springboot]]" 
+文章作者: Dakkk
+文章概要: |
+  介绍SpringBoot框架基础知识，包括快速入门、配置文件使用、多环境配置、整合JUnit和MyBatis，并通过SSM整合案例演示SpringBoot简化Spring开发的实践。
+tags:
+- "SpringBoot"
+- "Spring"
+- "Java"
+- "MyBatis"
+- "Maven"
+- "配置管理"
+- "微服务"
+- "SSM"
+相关文章:
+- "[[11_反射]]"
+- "[[2_Maven和Springboot下多环境的区别]]"
+- "[[1_Java学习路线]]"
+- "[[1_mapstruct 和 lombok 的冲突问题]]"
+- "[[2_后端封装 MD 转换 HTML 工具类]]"
+文章分类: "🌐 Web开发"
+文章路径: "03-🌐 Web开发/01-🔙 后端技术/06-🔧 SSM框架/2_SSM（黑马）/7_Springboot.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-27 23:34:19
+---
+
+
 ## 1 本文摘要：
 
 - 掌握基于SpringBoot框架的程序开发步骤

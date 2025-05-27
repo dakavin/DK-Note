@@ -1,3 +1,32 @@
+---
+文章标题: "[[6_使用Makefile控制编译📕]]" 
+文章作者: Dakkk
+文章概要: |
+  介绍Linux环境下Makefile编译控制工具的基础语法、变量使用、函数调用和分支控制，通过实例演示如何编写高效的编译脚本管理多文件项目。
+tags:
+- "Makefile"
+- "Linux编译"
+- "GCC"
+- "自动化构建"
+- "变量函数"
+- "伪目标"
+- "依赖管理"
+- "交叉编译"
+相关文章:
+- "[[6_Makefile文件示例]]"
+- "[[3_编译与烧写（保留，直接看Lubancat板卡即可）]]"
+- "[[1_初识C语言]]"
+- "[[1_搭建多模块工程（Spring Initializr）]]"
+- "[[1_Maven入门和进阶]]"
+文章分类: "🐧 Linux系统"
+文章路径: "06-🐧 Linux系统/04-🔌 驱动开发/02-💾 Lubancat-RK3568/3_Linux基础与应用开发实战/2_使用板卡开发C程序/6_使用Makefile控制编译📕.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2025-05-06 17:05:46
+修改时间: 2025-05-28 00:19:51
+---
+
 
 关于Makefile的详细使用可参考《跟我一起写Makefile》一书或GNU官方的make说 明文档：[https://www.gnu.org/software/make/manual](https://www.gnu.org/software/make/manual)，本章仅以示例对Makefile的基础语法进行讲解。
 

@@ -1,3 +1,29 @@
+---
+文章标题: "[[1_解决国内网页无法加载reCaptcha的方法]]" 
+文章作者: Dakkk
+文章概要: |
+  针对reCaptcha在国内无法加载的问题，文章提供解决方案：通过安装“Header Editor”浏览器扩展，并导入预设重定向规则，将Google域名请求导向可访问地址，确保reCaptcha正常显示。
+tags:
+- "reCaptcha"
+- "网络访问限制"
+- "浏览器扩展"
+- "Header Editor"
+- "HTTP重定向"
+- "Chrome"
+- "Edge"
+- "验证码"
+相关文章:
+- "[[8_Response]]"
+- "[[9_Cookie&Session]]"
+- "[[4_开启HDR后，浏览器过曝]]"
+文章分类: "🛠️ 开发工具和OS相关"
+文章路径: "08-🛠️ 开发工具和OS相关/05-Windows/1_解决国内网页无法加载reCaptcha的方法.md"
+文章难度: 初级 💧
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-28 01:03:09
+---
 
 引用大佬文章：[reCaptcha人机验证无法显示和CSP问题解决方案 – Azure Zeng Blog](https://blog.azurezeng.com/recaptcha-use-in-china/)
 

@@ -1,3 +1,32 @@
+---
+文章标题: "[[9_补充：安装Docker（本地和Linux）]]" 
+文章作者: Dakkk
+文章概要: |
+  本文详细阐述了在Windows（基于WSL 2）和Linux（CentOS）系统上安装Docker的完整步骤，包括环境准备、安装流程、常见问题解决及验证。同时，也提供了配置阿里云镜像加速器以优化Docker镜像下载速度的指南。
+tags:
+- "Docker"
+- "Docker Desktop"
+- "WSL 2"
+- "Linux"
+- "CentOS"
+- "Docker安装"
+- "镜像加速器"
+- "容器化"
+相关文章:
+- "[[1_初识Linux]]"
+- "[[1_Linux下的MySQL]]"
+- "[[2_RocketMQ安装]]"
+- "[[3_Linux系统简介]]"
+- "[[7_Part5（部署）]]"
+文章分类: "🛠️ 开发工具和OS相关"
+文章路径: "08-🛠️ 开发工具和OS相关/04-☁️ 运维部署/02-🤖 自动化部署/9_补充：安装Docker（本地和Linux）.md"
+文章难度: 初级 💧
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-28 01:03:09
+---
+
 
 参考文章：https://www.quanxiaoha.com/docker/docker-tutorial.html
 ## 1 本地/Windows安装Docker

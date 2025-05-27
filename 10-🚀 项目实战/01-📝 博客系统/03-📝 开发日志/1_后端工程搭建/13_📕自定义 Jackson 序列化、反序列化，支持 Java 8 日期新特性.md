@@ -1,3 +1,32 @@
+---
+文章标题: "[[13_📕自定义 Jackson 序列化、反序列化，支持 Java 8 日期新特性]]" 
+文章作者: Dakkk
+文章概要: |
+  文章指导如何配置Spring Boot的Jackson，使其支持Java 8新的日期时间API（如`LocalDateTime`）的序列化与反序列化。通过自定义`ObjectMapper`和`JavaTimeModule`，有效解决了旧日期API的痛点，提供了详细配置和测试案例。
+文章标签:
+- "Jackson"
+- "Java 8 Date API"
+- "序列化"
+- "反序列化"
+- "Spring Boot"
+- "LocalDateTime"
+- "ObjectMapper"
+- "JavaTimeModule"
+相关文章:
+- "[[6_📕Spring Boot 自定义注解，实现 API 请求日志切面]]"
+- "[[9_📕Spring Boot 自定义响应工具类]]"
+- "[[0_参考文章索引]]"
+- "[[0_导读]]"
+- "[[1_idea创建不了spring2.X版本，无法使用JDK8]]"
+文章分类: "🚀 项目实战"
+文章路径: "10-🚀 项目实战/01-📝 博客系统/03-📝 开发日志/1_后端工程搭建/13_📕自定义 Jackson 序列化、反序列化，支持 Java 8 日期新特性.md"
+文章难度: 初级 💧
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-04-17 00:48:37
+修改时间: 2025-05-27 00:52:55
+---
+
 Java 8 中，引入了新的时间和日期 API，相比较老旧的 `Date` , 它使用起来更加便捷，用过的都懂。本小节中，将带着大家自定义 Spring Boot 内置的 JSON 框架 Jackson，让出入参支持序列化、反序列化 Java 8 中新的日期 API : `LocalDateTime`、`LocalDate`、`LocalTime`, 废话不多说，开整~
 ## 1 为什么要用Java8新的日期API
 

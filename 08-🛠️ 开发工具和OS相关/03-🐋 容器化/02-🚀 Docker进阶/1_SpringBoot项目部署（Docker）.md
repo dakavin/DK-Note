@@ -1,3 +1,30 @@
+---
+文章标题: "[[1_SpringBoot项目部署（Docker）]]" 
+文章作者: Dakkk
+文章概要: |
+  本文详细指导在IDEA中利用Docker插件部署Spring Boot项目。内容涵盖Docker基础概念、Linux服务器Docker远程API配置、防火墙及国内镜像源设置，以及Spring Boot应用的Dockerfile编写，最终实现通过IDEA构建并运行Docker镜像。
+tags:
+- "SpringBoot"
+- "Docker"
+- "IDEA"
+- "Dockerfile"
+- "远程部署"
+- "Linux配置"
+- "容器化"
+相关文章:
+- "[[10_补充：JetBrains全家桶集成服务器上的Docker服务]]"
+- "[[0_导论]]"
+- "[[2_Part2-BUG]]"
+- "[[3_姿势2：Docker部署项目]]"
+- "[[8_补充：本地使用Docker安装Jenkins]]"
+文章分类: "🛠️ 开发工具和OS相关"
+文章路径: "08-🛠️ 开发工具和OS相关/03-🐋 容器化/02-🚀 Docker进阶/1_SpringBoot项目部署（Docker）.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-28 01:03:09
+---
 
 [IDEA中使用Docker插件构建镜像并推送至私服Harbor_idea中springboot项目使用dockerfile+harbor部署-CSDN博客](https://blog.csdn.net/An1090239782/article/details/111316025)
 ## 1 Dockefile初识

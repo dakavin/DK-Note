@@ -1,3 +1,31 @@
+---
+文章标题: "[[2_Servlet]]" 
+文章作者: Dakkk
+文章概要: |
+  本文深入探讨了Servlet核心概念，包括其生命周期（init、service、destroy），GET/POST请求方式差异，常用API（request/response），以及forward/redirect的对比。同时，文章还阐述了Tomcat实例化Servlet原理、Cookie与Session的会话管理区别，并简要提及Servlet线程安全。
+文章标签:
+- "Servlet"
+- "Servlet生命周期"
+- "HTTP请求"
+- "GET POST"
+- "Forward Redirect"
+- "Cookie Session"
+- "Web开发"
+- "线程安全"
+相关文章:
+- "[[1_Web乱码和路径问题总结]]"
+- "[[10_EL&JSTL]]"
+- "[[9_Cookie&Session]]"
+- "[[0_前置知识快速回顾]]"
+- "[[1_概述]]"
+文章分类: "🎉 面试"
+文章路径: "11-🎉 面试/1_JavaGuide/1_Java面试题/7_JavaWeb/2_Servlet.md"
+文章难度: 初级 💧
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-08-11 18:15:12
+修改时间: 2024-08-11 18:15:12
+---
 
 ## 1 Servlet生命周期
 

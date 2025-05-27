@@ -1,3 +1,31 @@
+---
+文章标题: "[[3_实战web服务]]" 
+文章作者: Dakkk
+文章概要: |
+  文章通过Docker Compose搭建了一个简单的Web服务，使用Spring Boot和Redis实现访问计数功能。详细讲解了Spring Boot应用、Dockerfile和docker-compose.yml的配置与构建，展示了如何将多服务应用容器化并部署运行。
+tags:
+- "Docker Compose"
+- "Spring Boot"
+- "Redis"
+- "Dockerfile"
+- "Web服务"
+- "容器化"
+- "多服务部署"
+相关文章:
+- "[[5_技术二面（华为Od）]]"
+- "[[秒杀+分布式锁项目]]"
+- "[[1_SpringBoot项目部署（Docker）]]"
+- "[[0_导读]]"
+- "[[0_课程介绍]]"
+文章分类: "🛠️ 开发工具和OS相关"
+文章路径: "08-🛠️ 开发工具和OS相关/03-🐋 容器化/01-📚 Docker基础/8_Docker Compose/3_实战web服务.md"
+文章难度: 初级 💧
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-28 01:03:09
+---
+
 本小节中，我们将通过 Docker Compose 搭建一个简单的网站。
 
 ## 1 需求

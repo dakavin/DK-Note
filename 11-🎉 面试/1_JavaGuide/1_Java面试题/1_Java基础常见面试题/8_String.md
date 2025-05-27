@@ -1,3 +1,31 @@
+---
+文章标题: "[[8_String]]" 
+文章作者: Dakkk
+文章概要: |
+  文章深入剖析Java String、StringBuffer、StringBuilder的区别，涵盖可变性、线程安全与性能。详解String不可变性、字符串拼接机制（含JDK9优化）、字符串常量池原理及`new String()`创建对象数量与`intern()`方法。
+文章标签:
+- "Java String"
+- "StringBuffer"
+- "StringBuilder"
+- "字符串常量池"
+- "不可变性"
+- "性能优化"
+- "线程安全"
+- "JVM"
+相关文章:
+- "[[4_StringBuffer & StringBuffer]]"
+- "[[0_前置知识快速回顾]]"
+- "[[1_📕文章管理模块功能分析、表设计]]"
+- "[[1_关于==和equals的区别]]"
+- "[[1_牛客网错题集]]"
+文章分类: "🎉 面试"
+文章路径: "11-🎉 面试/1_JavaGuide/1_Java面试题/1_Java基础常见面试题/8_String.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-08-11 18:15:12
+修改时间: 2024-08-11 18:15:12
+---
 
 ## 1 String、StringBuffer、StringBuilder的区别？
 

@@ -1,3 +1,32 @@
+---
+文章标题: "[[02_不同LubanCat_SDK对比]]" 
+文章作者: Dakkk
+文章概要: |
+  介绍野火基于LubanCat-RK系列板卡推出的三个SDK版本，对比LubanCat_Gen_SDK和LubanCat_Chip_SDK的功能差异、更新状态和板卡支持情况。
+tags:
+- "LubanCat"
+- "SDK"
+- "RK3568"
+- "嵌入式Linux"
+- "野火开发板"
+- "镜像构建"
+- "固件开发"
+- "硬件支持"
+相关文章:
+- "[[03_LubanCat_Gen_SDK]]"
+- "[[09_修改启动logo（Skip）]]"
+- "[[15_使用Docker构建根文件系统（Skip）]]"
+- "[[05_U-boot的介绍]]"
+- "[[14_Ubuntu根文件系统构建（Skip）]]"
+文章分类: "🐧 Linux系统"
+文章路径: "06-🐧 Linux系统/04-🔌 驱动开发/02-💾 Lubancat-RK3568/2_镜像构建与部署/02_不同LubanCat_SDK对比.md"
+文章难度: 初级 💧
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐ 重要技能
+创建时间: 2025-05-04 19:11:18
+修改时间: 2025-05-28 00:19:51
+---
+
 
 > LubanCat_Chip_SDK已于2024.9.10停止更新，只做BUG修复。RK系列板卡后续开发支持转移到LubanCat_Linux_Generic_SDK。 各版本SDK独有内容将在标题添加 **(Gen)** 或 **(Chip)** 标识，未添加此标识则表示内容通用。
 

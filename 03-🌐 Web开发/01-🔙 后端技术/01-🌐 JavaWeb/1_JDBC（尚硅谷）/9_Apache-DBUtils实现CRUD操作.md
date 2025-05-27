@@ -1,3 +1,31 @@
+---
+文章标题: "[[9_Apache-DBUtils实现CRUD操作]]" 
+文章作者: Dakkk
+文章概要: |
+  介绍Apache DBUtils工具库的使用，包括DbUtils、QueryRunner类和ResultSetHandler接口的主要API，通过代码示例展示了如何使用DBUtils简化JDBC的CRUD操作。
+tags:
+- "Apache DBUtils"
+- "JDBC"
+- "QueryRunner"
+- "ResultSetHandler"
+- "数据库操作"
+- "Java"
+- "CRUD"
+- "数据库连接池"
+相关文章:
+- "[[2_📕文章管理：文章发布接口开发（1）]]"
+- "[[4_📕博客设置：更新接口开发]]"
+- "[[4_📕文章分类：删除接口开发]]"
+- "[[5_📕文章管理：分页接口开发]]"
+- "[[6_📕博客设置：获取详情接口开发]]"
+文章分类: "🌐 Web开发"
+文章路径: "03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/1_JDBC（尚硅谷）/9_Apache-DBUtils实现CRUD操作.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-27 23:34:19
+---
 
 ## 1 Apache-DBUtils简介
 

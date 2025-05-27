@@ -2,27 +2,29 @@
 文章标题: "[[2_ Collection]]" 
 文章作者: Dakkk
 文章概要: |
-  本文详细阐述了Java集合框架中的List、Set、Map接口及Vector、ArrayList、LinkedList、HashSet、HashMap、HashTable、ConcurrentHashMap等主要实现类。对比分析了它们的内部结构、存储特性、性能、线程安全性及使用场景。
-文章标签:
-- "Java集合"
-- "Collection"
+  本文深入介绍了Java集合框架，详细阐述了List（Vector、ArrayList、LinkedList）、Set（HashSet）和Map（HashMap、HashTable、ConcurrentHashMap）中常用类的内部实现、数据结构、线程安全性、性能特点以及对元素顺序和重复性的处理，提供源码片段辅助理解。
+tags:
+- "Java集合框架"
 - "List"
 - "Set"
 - "Map"
 - "ArrayList"
 - "HashMap"
+- "ConcurrentHashMap"
 - "线程安全"
 相关文章:
-- "[[11_集合框架]]"
-- "[[13_数据结构与集合源码]]"
-- "[[9_多线程]]"
+- "[[1_集合概述]]"
+- "[[1_Java集合相关面试题]]"
+- "[[3_集合框架Collection、Map]]"
+- "[[2_List]]"
+- "[[4_LinkedHashSet源码分析]]"
 文章分类: "💻 编程语言"
 文章路径: "02-💻 编程语言/01-☕ Java技术栈/02-📚 基础语法/2_Java复习笔记/6_容器/2_ Collection.md"
 文章难度: 初级 💧
 目前阶段: ✅ 已完成
-重要性: ⭐⭐⭐⭐⭐ 精通必备
+重要性: ⭐⭐⭐⭐ 核心能力
 创建时间: 2024-08-11 18:15:12
-修改时间: 2024-08-11 18:15:12
+修改时间: 2025-05-27 21:36:04
 ---
 
 ## 1 前言

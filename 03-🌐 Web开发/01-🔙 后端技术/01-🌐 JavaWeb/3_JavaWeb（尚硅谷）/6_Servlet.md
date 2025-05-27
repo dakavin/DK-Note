@@ -1,3 +1,31 @@
+---
+文章标题: "[[6_Servlet]]" 
+文章作者: Dakkk
+文章概要: |
+  详细介绍Servlet技术，包括静态动态资源概念、Servlet开发流程、生命周期、继承结构、请求响应对象及MVC架构模式。
+tags:
+- "Servlet"
+- "JavaEE"
+- "HttpServletRequest"
+- "HttpServletResponse"
+- "MVC架构"
+- "生命周期"
+- "Tomcat"
+相关文章:
+- "[[4_JavaEE的13项规范]]"
+- "[[5_JaveWeb软件环境部署及相关设置]]"
+- "[[1_Tomcat]]"
+- "[[2_Servlet]]"
+- "[[7_Linux系统软件安装-1]]"
+文章分类: "🌐 Web开发"
+文章路径: "03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/3_JavaWeb（尚硅谷）/6_Servlet.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-03-28 10:36:00
+修改时间: 2025-05-27 23:34:19
+---
+
 ## 1 Servlet简介
 
 ### 1.1 静态资源和动态资源

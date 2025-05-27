@@ -1,3 +1,32 @@
+---
+文章标题: "[[7_📕Spring Security 整合 JWT ：实现接口鉴权]]" 
+文章作者: Dakkk
+文章概要: |
+  本文详细讲解了 Spring Security 如何整合 JWT 实现接口鉴权。通过自定义 `TokenAuthenticationFilter` 校验 JWT 令牌，并配置 `AuthenticationEntryPoint` 和 `AccessDeniedHandler` 统一处理鉴权异常，确保后端接口安全。涵盖过滤器、安全配置及错误响应优化。
+文章标签:
+- "Spring Security"
+- "JWT"
+- "接口鉴权"
+- "Token 校验"
+- "认证过滤器"
+- "RESTful API 安全"
+- "Java 后端"
+- "Spring Boot"
+相关文章:
+- "[[6_📕Spring Security 整合 JWT ：实现身份认证]]"
+- "[[5_📕整合 Spring Security]]"
+- "[[0_参考文章索引]]"
+- "[[0_导读]]"
+- "[[1_idea创建不了spring2.X版本，无法使用JDK8]]"
+文章分类: "🚀 项目实战"
+文章路径: "10-🚀 项目实战/01-📝 博客系统/03-📝 开发日志/3_登录模块开发/7_📕Spring Security 整合 JWT ：实现接口鉴权.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-04-24 15:33:21
+修改时间: 2024-04-24 16:43:17
+---
+
 ## 1 前言
 
 ![image.png|700](https://my-obsidian-image.oss-cn-guangzhou.aliyuncs.com/2024/04/66cdc2a348563dbbee5f7d7ff35fa40d.png)

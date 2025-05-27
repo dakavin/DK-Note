@@ -1,3 +1,32 @@
+---
+文章标题: "[[6_SpringBoot3实战]]" 
+文章作者: Dakkk
+文章概要: |
+  介绍SpringBoot3的特性与配置，涵盖快速入门、配置文件管理、框架整合及项目打包运行等核心开发技能
+tags:
+- "SpringBoot3"
+- "自动配置"
+- "YAML配置"
+- "微服务"
+- "Maven"
+- "Mybatis整合"
+- "Druid数据源"
+- "项目部署"
+相关文章:
+- "[[1_搭建多模块工程（Spring Initializr）]]"
+- "[[1_克隆项目]]"
+- "[[1_前言]]"
+- "[[1_Java学习路线]]"
+- "[[1_mapstruct 和 lombok 的冲突问题]]"
+文章分类: "🌐 Web开发"
+文章路径: "03-🌐 Web开发/01-🔙 后端技术/06-🔧 SSM框架/3_SSM（尚硅谷）/6_SpringBoot3实战.md"
+文章难度: 中级 🌳
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐⭐ 精通必备
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-27 23:34:19
+---
+
 ## 1 SpringBoot3介绍
 
 ### 1.1 SpringBoot3简介
@@ -323,7 +352,7 @@ public class DataSourceProperties {
     4.  YAML配置文件的扩展名是yaml 或 yml
     5.  例如：
         ```yaml
-#YAML配置文件示例
+# YAML配置文件示例
 app_name: 我的应用程序
 version: 1.0.0
 author: 张三

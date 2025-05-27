@@ -1,3 +1,33 @@
+---
+文章标题: "[[1_彻底搞懂使用MyBatis时为什么Dao层不需要@Repository]]" 
+文章作者: Dakkk
+文章概要: |
+  分析MyBatis框架中Dao层接口不需要@Repository注解的原因，通过源码解析ClassPathMapperScanner如何扫描接口并注册为MapperFactoryBean类型的Bean
+tags:
+- "MyBatis"
+- "Spring"
+- "Bean注册"
+- "MapperScan"
+- "动态代理"
+- "源码分析"
+- "Dao层"
+- "框架原理"
+相关文章:
+- "[[11_反射]]"
+- "[[0_课程介绍]]"
+- "[[4_Java反射机制详解]]"
+- "[[1_ArrayList源码分析]]"
+- "[[1_Java反射]]"
+文章分类: "🌐 Web开发"
+文章路径: "03-🌐 Web开发/01-🔙 后端技术/06-🔧 SSM框架/💡 实用技巧/1_彻底搞懂使用MyBatis时为什么Dao层不需要@Repository.md"
+文章难度: 高级 🔥
+目前阶段: ✅ 已完成
+重要性: ⭐⭐⭐⭐ 核心能力
+创建时间: 2024-08-11 18:15:12
+修改时间: 2025-05-27 23:34:19
+---
+
+
 参考文章 : [彻底搞懂使用MyBatis时为什么Dao层不需要@Repository_mybatis中不需要用@respository-CSDN博客](https://blog.csdn.net/tianshan2010/article/details/105889133)
 ## 1 问题
 
