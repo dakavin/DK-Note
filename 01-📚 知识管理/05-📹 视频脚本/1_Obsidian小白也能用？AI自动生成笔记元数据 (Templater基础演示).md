@@ -1,25 +1,25 @@
 ---
-文章标题: "[[1_Obsidian小白也能用？AI自动生成笔记元数据 (Templater基础演示)]]" 
+文章标题: "[[1_Obsidian小白也能用？AI自动生成笔记元数据 (Templater基础演示)]]"
 文章作者: Dakkk
 文章概要: |
   本文展示如何结合Obsidian的Templater插件与AI模型，自动化生成笔记元数据。通过Templater调用JavaScript脚本与AI API交互，分析笔记内容并返回结构化数据，显著提升Obsidian笔记创建和管理效率，减少手动填写耗时。
 tags:
-- "Obsidian"
-- "Templater"
-- "AI自动化"
-- "笔记元数据"
-- "知识管理"
-- "效率工具"
-- "JavaScript"
-- "API调用"
+  - Obsidian
+  - Templater
+  - AI自动化
+  - 笔记元数据
+  - 知识管理
+  - 效率工具
+  - JavaScript
+  - API调用
 相关文章:
-- "[[2_【续集高能】上次的Obsidian AI脚本弱爆了？看这个全功能进化版！(Templater)]]"
-- "[[3_【AI脚本第三弹】Obsidian笔记太多？用DataviewJS一键搞定所有元数据！]]"
-- "[[0_obsidian使用的插件说明]]"
-- "[[1_学习思维导图]]"
-- "[[10_文章分类：删除功能开发]]"
-文章分类: "📚 知识管理"
-文章路径: "01-📚 知识管理/05-📹 视频脚本/1_Obsidian小白也能用？AI自动生成笔记元数据 (Templater基础演示).md"
+  - "[[2_【续集高能】上次的Obsidian AI脚本弱爆了？看这个全功能进化版！(Templater)]]"
+  - "[[3_【AI脚本第三弹】Obsidian笔记太多？用DataviewJS一键搞定所有元数据！]]"
+  - "[[../../13-🔧 系统配置/04-🛠️ Obsidian技巧/0_obsidian使用的插件说明]]"
+  - "[[../../06-🐧 Linux系统/04-🔌 驱动开发/01-📝 训练营笔记/2_嵌入式基础能力/6_Linux应用开发/1_学习思维导图]]"
+  - "[[10_文章分类：删除功能开发]]"
+文章分类: 📚 知识管理
+文章路径: 01-📚 知识管理/05-📹 视频脚本/1_Obsidian小白也能用？AI自动生成笔记元数据 (Templater基础演示).md
 文章难度: 中级 🌳
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐ 核心能力

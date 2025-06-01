@@ -1,0 +1,6 @@
+相比与V2R0,V3R0的改动：
+1. MINI PCIE电源增加220uF钽电容
+2. 添加外挂RTC BM8563MA
+3. 改为支持40PIN排针5V供电
+4. USER_LED由GPIO0_C7改为GPIO1_A4
+5. 更新board id

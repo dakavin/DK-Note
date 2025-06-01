@@ -85,7 +85,7 @@ $ bear make zImage -j4
 ### 1.3 RK3568板卡
 
 **下载内核代码：** 不做介绍，查看下面即可
-- [2 获取内核源码](../../02-💾%20Lubancat-RK3568/4_Linux驱动开发实战/1_Linux驱动基础知识/1_驱动章节实验环境搭建.md#2%20获取内核源码)
+- [2 获取内核源码](../../02-💾%20Lubancat-RK3568/4_Linux驱动开发实战/1_Linux驱动基础知识(重点)/1_驱动章节实验环境搭建.md#2%20获取内核源码)
 
 **配置工具链**
 ```shell
@@ -155,27 +155,31 @@ CompileFlags:
 官网安装即可，不做介绍，主要写一些用得到的插件
 
 依次输入下列插件名字，安装：
+- Lingma - Alibaba Cloud AI Coding Assistant
+- Arm Assembly
+- Atom One Light Theme
+- Bracket Pair Colorization Toggler
 - C/C++
 - C/C++ Extension Pack
 - C/C++ Snippets
-- Clangd
-- Remote SSH
+- clangd
+- clangd
+- Cmake Tools
 - Code Runner
 - Code Spell Checker
-- vscode-icons
+- CodeSnap
 - compareit
 - DeviceTree
-- 通义灵码
-- Bracket Pair Colorization Toggler
+- Hex Editor
+- indent-rainbow
+- JetBrains Icon Theme
+- JetBrains IDE Keymap
 - Rainbow Highlighter
 	- 高亮文字：shift + alt + z
 	- 取消高亮：shift + alt + a
-- Arm Assembly
-- Chinese
-- Hex Editor
-- One Dark Pro
-- Markdown All in One
-- Markdown Preview Enhanced
+- Remote-SSH
+- Remote-SSH:Editing Configuration Files
+- Remote Explorer
 
 ### 2.2 设置SSH
 
@@ -238,15 +242,36 @@ unzip clangd-linux-19.1.2.zip
 - 在setting.json中写入如下内容(我们第1次打开源码目录后，这个文件可能被自动修改，你需要再次修改它)：
 ```json
 {
-    "C_Cpp.default.intelliSenseMode": "linux-gcc-arm",
+	// ========== C/C++ 和 clangd 配置 ==========
+    // 完全禁用 C/C++ 扩展的 IntelliSense
     "C_Cpp.intelliSenseEngine": "Disabled",
-    "clangd.path": "/home/lubancat/clangd_19.1.2/bin/clangd",
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.formatting": "Disabled",
+    "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+    
+    // clangd 配置
+    "clangd.path": "/home/dakkk/clangd_19.1.2/bin/clangd",
     "clangd.arguments": [
-    "--log=verbose",
-    "--query-driver=/usr/bin/aarch64-linux-gnu-gcc",  // 指向交叉编译器
-    "--background-index",
-    "--header-insertion=never"
+        "--log=verbose",
+        "--query-driver=/usr/bin/aarch64-linux-gnu-gcc", // 指向交叉编译器
+        "--background-index",
+        "--header-insertion=never",
+        "--clang-tidy",
+        // 添加内核头文件路径
+        "--compile-commands-dir=.",
+        // 禁用一些可能冲突的功能
+        "--completion-style=detailed"
     ],
+    
+    // 禁用默认格式化器，让 clangd 处理
+    "editor.defaultFormatter": null,
+    "[c]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
 }
 ```
 

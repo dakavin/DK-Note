@@ -1,0 +1,547 @@
+# 全面活动追踪仪表板
+
+> 本文件建议放置在：`12-📅 日常记录\02-📊 Dashboard`
+
+```dataviewjs
+// ===== 配置区域 =====
+// 修改这里来切换查看不同月份的记录
+const BASE_PATH = "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年";
+const REFERENCE_DATE = dv.date("today"); // 可以改为具体日期，如 dv.date("2025-01-15")
+// 计算本周范围
+const weekStart = REFERENCE_DATE.minus(dv.duration(REFERENCE_DATE.weekday + " days"));
+const weekEnd = REFERENCE_DATE.plus(dv.duration((6 - REFERENCE_DATE.weekday) + " days"));
+// 计算最近14天范围
+const fourteenDaysAgo = REFERENCE_DATE.minus(dv.duration("13 days"));
+// 计算本月范围
+const monthStart = REFERENCE_DATE.startOf('month');
+const monthEnd = REFERENCE_DATE.endOf('month');
+// 显示当前配置信息
+dv.paragraph(`
+📊 **当前配置**
+- 📁 **数据来源**: ${BASE_PATH.split("/").pop()}
+- 📅 **参考日期**: ${REFERENCE_DATE.toFormat("yyyy-MM-dd")} (${REFERENCE_DATE.toFormat("cccc")})
+- 🗓️ **本周范围**: ${weekStart.toFormat("MM-dd")} 至 ${weekEnd.toFormat("MM-dd")} 
+- 📈 **14天范围**: ${fourteenDaysAgo.toFormat("MM-dd")} 至 ${REFERENCE_DATE.toFormat("MM-dd")} 
+- 📅 **本月范围**: ${monthStart.toFormat("MM-dd")} 至 ${monthEnd.toFormat("MM-dd")}
+`);
+```
+
+## 1 📊 活动数据概览
+
+### 1.1 本周活动汇总
+```dataview
+TABLE WITHOUT ID 
+    "📅 " + split(file.name, " - ")[1] as "日期", 
+    choice(contains(lower(split(活动, "-")[3]), "学习"),
+            "📚 **" + split(活动, "-")[2] + "**",
+            split(活动, "-")[2]) as "活动内容",
+    choice(contains(lower(split(活动, "-")[3]), "学习"),
+            "🎓 **" + split(活动, "-")[3] + "**",
+            split(活动, "-")[3]) as "类别",
+    choice(split(活动, "-")[4] AND number(split(活动, "-")[4]), 
+           choice(
+             number(split(活动, "-")[4]) >= 60,
+             floor(number(split(活动, "-")[4]) / 60) + "小时" + (number(split(活动, "-")[4]) % 60) + "分钟",
+             number(split(活动, "-")[4]) + "分钟"
+           ), 
+           "未知") as "时长",
+    split(活动, "-")[5] as "备注"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+    AND date(split(file.name, " - ")[1]) >= (date(today) - dur(string(date(today).weekday) + " days"))
+    AND date(split(file.name, " - ")[1]) <= (date(today) + dur(string(6 - date(today).weekday) + " days"))
+FLATTEN 活动
+WHERE 活动 
+    AND contains(活动, "-") 
+    AND length(split(活动, "-")) >= 5 
+    AND contains(split(活动,"-")[0],":")
+SORT split(file.name, " - ")[1] DESC, split(活动,"-")[0] ASC
+```
+
+### 1.2 近期活动统计汇总（最近14天）
+```dataview
+TABLE WITHOUT ID 
+  split(file.name, " - ")[1] as "日期",
+  length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":"))) as "总活动数",
+  choice(
+    sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) > 0,
+    choice(
+      sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) >= 60,
+      floor(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) / 60) + "小时" + (sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) % 60) + "分钟",
+      sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) + "分钟"
+    ),
+    "0分钟"
+  ) as "总时长",
+  length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(lower(split(x, "-")[3]), "学习"))) as "学习活动数",
+  choice(
+    sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(lower(split(x, "-")[3]), "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) > 0,
+    choice(
+      sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(lower(split(x, "-")[3]), "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) >= 60,
+      floor(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(lower(split(x, "-")[3]), "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) / 60) + "小时" + (sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(lower(split(x, "-")[3]), "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) % 60) + "分钟",
+      sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(lower(split(x, "-")[3]), "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) + "分钟"
+    ),
+    "0分钟"
+  ) as "学习时长"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND 活动
+  AND date(split(file.name, " - ")[1]) >= (date(today) - dur("13 days"))
+SORT file.name DESC
+```
+
+## 2 📚 学习活动专项统计
+
+### 2.1 本月学习活动汇总
+```dataview
+TABLE WITHOUT ID
+  split(file.name, " - ")[1] as "日期",
+  split(活动, "-")[2] as "学习内容",
+  choice(split(活动, "-")[4] AND number(split(活动, "-")[4]), 
+         choice(
+           number(split(活动, "-")[4]) >= 60,
+           floor(number(split(活动, "-")[4]) / 60) + "小时" + (number(split(活动, "-")[4]) % 60) + "分钟",
+           number(split(活动, "-")[4]) + "分钟"
+         ), 
+         "未知") as "时长",
+  split(活动, "-")[5] as "备注"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "学习") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+SORT file.name DESC
+```
+
+### 2.2 学习内容分类统计（本月）
+```dataview
+TABLE WITHOUT ID
+  key as "学习类型",
+  length(rows) as "出现次数",
+  choice(
+    default(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))), 0) > 0,
+    choice(
+      default(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))), 0) >= 60,
+      floor(default(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))), 0) / 60) + "小时" + (default(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))), 0) % 60) + "分钟",
+      default(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))), 0) + "分钟"
+    ),
+    "0分钟"
+  ) as "总时长"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "学习") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[2] as key
+SORT default(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))), 0) DESC
+```
+
+### 2.3 高频学习内容
+```dataview
+TABLE WITHOUT ID
+  key as "学习内容",
+  length(rows) as "学习次数",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) as "累计时长",
+  join(sort(unique(map(rows, (r) => split(r.file.name, " - ")[1]))), ", ") as "学习日期"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "学习") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[2] as key
+WHERE length(rows) >= 2
+SORT sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) DESC
+```
+## 3 🎯 全面时间分配分析（本月）
+
+### 3.1 各类别活动统计
+```dataview
+TABLE WITHOUT ID
+  key as "活动类别",
+  length(rows) as "活动次数",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) as "总时长",
+  join(sort(unique(map(rows, (r) => split(r.file.name, " - ")[1]))), ", ") as "出现日期"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(活动, "-") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[3] as key
+SORT sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) DESC
+```
+
+### 3.2 活动趋势分析
+```dataview
+TABLE WITHOUT ID
+  split(file.name, " - ")[1] as "日期",
+  length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习"))) as "学习次数",
+  choice(
+    default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) > 0,
+    choice(
+      default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) >= 60,
+      floor(default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) / 60) + "小时" + (default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) % 60) + "分钟",
+      default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) + "分钟"
+    ),
+    "0分钟"
+  ) as "学习时长",
+  length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "工作"))) as "工作次数",
+  choice(
+    default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "工作")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) > 0,
+    choice(
+      default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "工作")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) >= 60,
+      floor(default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "工作")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) / 60) + "小时" + (default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "工作")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) % 60) + "分钟",
+      default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "工作")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) + "分钟"
+    ),
+    "0分钟"
+  ) as "工作时长",
+  length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "运动"))) as "运动次数",
+  choice(
+    default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "运动")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) > 0,
+    choice(
+      default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "运动")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) >= 60,
+      floor(default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "运动")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) / 60) + "小时" + (default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "运动")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) % 60) + "分钟",
+      default(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "运动")), (r) => choice(split(r, "-")[4] AND number(split(r, "-")[4]), number(split(r, "-")[4]), 0))), 0) + "分钟"
+    ),
+    "0分钟"
+  ) as "运动时长"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND 活动
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+SORT file.name DESC
+```
+
+### 3.3 每日学习效率分析
+```dataview
+TABLE WITHOUT ID
+  split(file.name, " - ")[1] as "日期",
+  length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习"))) as "学习活动数",
+  choice(
+    sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) > 0,
+    choice(
+      sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) >= 60,
+      floor(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) / 60) + "小时" + (sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) % 60) + "分钟",
+      sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) + "分钟"
+    ),
+    "0分钟"
+  ) as "学习总时长",
+  choice(
+    length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习"))) > 0 AND sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) > 0,
+    choice(
+      round(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) / length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习"))), 0) >= 60,
+      floor(round(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) / length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习"))), 0) / 60) + "小时" + (round(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) / length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习"))), 0) % 60) + "分钟",
+      string(round(sum(map(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习") AND split(x, "-")[4] AND number(split(x, "-")[4])), (r) => number(split(r, "-")[4]))) / length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习"))), 0)) + "分钟"
+    ),
+    "0分钟"
+  ) as "平均每次时长"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND 活动
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+WHERE length(filter(活动, (x) => contains(x, "-") AND length(split(x, "-")) >= 5 AND contains(split(x,"-")[0],":") AND contains(split(x, "-")[3], "学习"))) > 0
+SORT file.name DESC
+```
+
+## 4 💪 其他活动类别统计（本月）
+
+### 4.1 工作活动统计
+```dataview
+TABLE WITHOUT ID
+  key as "工作内容",
+  length(rows) as "工作次数",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) as "累计时长",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60, 1) + " 小时",
+    "0.0 小时"
+  ) as "累计时长(小时)"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "工作") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[2] as key
+SORT sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) DESC
+```
+
+### 4.2 运动活动统计
+```dataview
+TABLE WITHOUT ID
+  key as "运动类型",
+  length(rows) as "运动次数",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) as "累计时长",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60, 1) + " 小时",
+    "0.0 小时"
+  ) as "累计时长(小时)"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "运动") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[2] as key
+SORT sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) DESC
+```
+
+### 4.3 日常生活活动统计
+```dataview
+TABLE WITHOUT ID
+  key as "日常生活内容",
+  length(rows) as "日常活动次数",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) as "累计时长",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60, 1) + " 小时",
+    "0.0 小时"
+  ) as "累计时长(小时)"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "日常生活") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[2] as key
+SORT sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) DESC
+```
+
+### 4.4 娱乐活动统计
+```dataview
+TABLE WITHOUT ID
+  key as "娱乐内容",
+  length(rows) as "娱乐次数",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) as "累计时长",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60, 1) + " 小时",
+    "0.0 小时"
+  ) as "累计时长(小时)"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "娱乐") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[2] as key
+SORT sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) DESC
+```
+
+### 4.5 社交活动统计
+```dataview
+TABLE WITHOUT ID
+  key as "社交内容",
+  length(rows) as "社交次数",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) as "累计时长",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60, 1) + " 小时",
+    "0.0 小时"
+  ) as "累计时长(小时)"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "社交") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[2] as key
+SORT sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) DESC
+```
+
+## 5 📊 月度汇总统计
+
+### 5.1 本月活动总览
+
+```dataview
+LIST WITHOUT ID
+"📊 **本月活动统计 (" + date(today).year + "-" + string(padleft(string(date(today).month), 2, "0")) + ")**" + "  
+- 总活动时长：" + choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) + "  
+- 活动总数：" + string(length(rows)) + " 次" + "  
+- 活跃天数：" + string(length(unique(map(rows, (r) => r.file.name)))) + " 天" + "  
+- 平均每天活动：" + choice(
+    length(unique(map(rows, (r) => r.file.name))) > 0,
+    choice(
+      round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / length(unique(map(rows, (r) => r.file.name))), 0) >= 60,
+      floor(round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / length(unique(map(rows, (r) => r.file.name))), 0) / 60) + "小时" + (round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / length(unique(map(rows, (r) => r.file.name))), 0) % 60) + "分钟",
+      string(round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / length(unique(map(rows, (r) => r.file.name))), 0)) + "分钟"
+    ),
+    "0分钟"
+  )
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(活动, "-") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY "统计"
+```
+
+### 5.2 学习专项月度总览
+
+```dataview
+LIST WITHOUT ID
+"📚 **本月学习统计 (" + date(today).year + "-" + string(padleft(string(date(today).month), 2, "0")) + ")**" + "  
+- 总学习时长：" + choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) + "  
+- 学习活动总数：" + string(length(rows)) + " 次" + "  
+- 学习天数：" + string(length(unique(map(rows, (r) => r.file.name)))) + " 天" + "  
+- 平均每天学习：" + choice(
+    length(unique(map(rows, (r) => r.file.name))) > 0,
+    choice(
+      round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / length(unique(map(rows, (r) => r.file.name))), 0) >= 60,
+      floor(round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / length(unique(map(rows, (r) => r.file.name))), 0) / 60) + "小时" + (round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / length(unique(map(rows, (r) => r.file.name))), 0) % 60) + "分钟",
+      string(round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / length(unique(map(rows, (r) => r.file.name))), 0)) + "分钟"
+    ),
+    "0分钟"
+  )
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(split(活动, "-")[3], "学习") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY "学习统计"
+```
+
+### 5.3 各类别活动月度对比
+
+```dataview
+TABLE WITHOUT ID
+  key as "活动类别",
+  length(rows) as "活动次数",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    choice(
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) >= 60,
+      floor(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60) + "小时" + (sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) % 60) + "分钟",
+      sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) + "分钟"
+    ),
+    "0分钟"
+  ) as "累计时长",
+  choice(
+    sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) > 0,
+    round(sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) / 60, 1) + " 小时",
+    "0.0 小时"
+  ) as "累计时长(小时)"
+FROM "12-📅 日常记录/01-📆 每日计划/01-🍃 2025年"
+WHERE contains(file.name, "Daily Plan") 
+  AND date(split(file.name, " - ")[1]).year = date(today).year
+  AND date(split(file.name, " - ")[1]).month = date(today).month
+FLATTEN 活动
+WHERE 活动 
+  AND contains(活动, "-") 
+  AND length(split(活动, "-")) >= 5
+  AND contains(split(活动,"-")[0],":")
+GROUP BY split(活动, "-")[3] as key
+SORT sum(map(rows, (r) => choice(split(r.活动, "-")[4] AND number(split(r.活动, "-")[4]), number(split(r.活动, "-")[4]), 0))) DESC
+```
