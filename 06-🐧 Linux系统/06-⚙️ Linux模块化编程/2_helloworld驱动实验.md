@@ -268,9 +268,8 @@ CONFIG_ROCKCHIP_TEST=y
 **第六步：使用menuconfig配置**
 也可以通过图形化界面进行配置：
 ```bash
-make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- menuconfig
+make menuconfig
 ```
-
 在菜单中找到"Device Drivers" -> "test" -> "ROCKCHIP_TEST"，选择启用。
 
 **第七步：编译验证**
