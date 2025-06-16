@@ -1,0 +1,10 @@
+# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
+.obsidian/
+.smart-env/
+.smtcmp_json_db/
+.trash/
+14-🤐 个人文件/
+.cursorignore
+.gitignore
+.smtcmp_vector_db.tar.gz
+LICENSE

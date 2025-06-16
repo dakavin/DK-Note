@@ -1,25 +1,25 @@
 ---
-文章标题: "[[8_Response]]" 
+文章标题: "[[8_Response]]"
 文章作者: Dakkk
 文章概要: |
   详细讲解HTTP响应消息结构，包括Response对象的使用、重定向、输出数据、验证码生成，以及ServletContext对象的功能和文件下载实现。
 tags:
-- "HTTP协议"
-- "Response"
-- "重定向"
-- "ServletContext"
-- "文件下载"
-- "Java Web"
-- "Servlet"
-- "验证码"
+  - HTTP协议
+  - Response
+  - 重定向
+  - ServletContext
+  - 文件下载
+  - Java Web
+  - Servlet
+  - 验证码
 相关文章:
-- "[[9_Cookie&Session]]"
-- "[[1_解决国内网页无法加载reCaptcha的方法]]"
-- "[[14_RESTful规范]]"
-- "[[2_※HTTP报文格式]]"
-- "[[2_Linux基础命令]]"
-文章分类: "🌐 Web开发"
-文章路径: "03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/2_JavaWeb(黑马)/8_Response.md"
+  - "[[9_Cookie&Session]]"
+  - "[[../../../../01-📚 知识管理/06-🛠️ 技巧/2-Windows/1_解决国内网页无法加载reCaptcha的方法]]"
+  - "[[14_RESTful规范]]"
+  - "[[2_※HTTP报文格式]]"
+  - "[[2_Linux基础命令]]"
+文章分类: 🌐 Web开发
+文章路径: 03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/2_JavaWeb(黑马)/8_Response.md
 文章难度: 中级 🌳
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐ 核心能力

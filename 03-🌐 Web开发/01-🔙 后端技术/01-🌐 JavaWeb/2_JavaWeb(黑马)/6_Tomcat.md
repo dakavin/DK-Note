@@ -1,25 +1,25 @@
 ---
-文章标题: "[[6_Tomcat]]" 
+文章标题: "[[6_Tomcat]]"
 文章作者: Dakkk
 文章概要: |
   详细介绍了Tomcat Web服务器的安装配置、部署方式，以及与IDEA集成的具体步骤，涵盖了Web开发的基础概念和实践操作。
 tags:
-- "Tomcat"
-- "Web服务器"
-- "JavaEE"
-- "IDEA配置"
-- "部署"
-- "servlet"
-- "端口配置"
-- "热部署"
+  - Tomcat
+  - Web服务器
+  - JavaEE
+  - IDEA配置
+  - 部署
+  - servlet
+  - 端口配置
+  - 热部署
 相关文章:
-- "[[6_Servlet]]"
-- "[[1_Tomcat]]"
-- "[[4_JavaEE的13项规范]]"
-- "[[5_JaveWeb软件环境部署及相关设置]]"
-- "[[1_SpringBoot项目部署（Docker）]]"
-文章分类: "🌐 Web开发"
-文章路径: "03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/2_JavaWeb(黑马)/6_Tomcat.md"
+  - "[[6_Servlet]]"
+  - "[[1_Tomcat]]"
+  - "[[4_JavaEE的13项规范]]"
+  - "[[5_JaveWeb软件环境部署及相关设置]]"
+  - "[[../../../../08-🛠️ 开发工具/03-🐋 容器化/02-🚀 Docker进阶/1_SpringBoot项目部署（Docker）]]"
+文章分类: 🌐 Web开发
+文章路径: 03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/2_JavaWeb(黑马)/6_Tomcat.md
 文章难度: 初级 💧
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐ 核心能力

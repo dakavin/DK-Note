@@ -1,25 +1,25 @@
 ---
-文章标题: "[[6_📕Spring Security 整合 JWT ：实现身份认证]]" 
+文章标题: "[[6_📕Spring Security 整合 JWT ：实现身份认证]]"
 文章作者: Dakkk
 文章概要: |
   文章详细阐述了Spring Security整合JWT实现身份认证的完整过程。内容涵盖JWT工具类创建、密码加密、UserDetailsService实现、自定义认证过滤器及处理器，并整合到Spring Security配置中，最终实现无状态的JWT认证，附带详细代码示例与测试。
 文章标签:
-- "Spring Security"
-- "JWT"
-- "身份认证"
-- "Spring Boot"
-- "Stateless"
-- "Java"
-- "Web安全"
-- "JJWT"
+  - Spring Security
+  - JWT
+  - 身份认证
+  - Spring Boot
+  - Stateless
+  - Java
+  - Web安全
+  - JJWT
 相关文章:
-- "[[10_※HTTP状态]]"
-- "[[3_实战web服务]]"
-- "[[8_📕Spring Boot 实现优雅的参数校验]]"
-- "[[0_参考文章索引]]"
-- "[[0_导读]]"
-文章分类: "🚀 项目实战"
-文章路径: "10-🚀 项目实战/01-📝 博客系统/03-📝 开发日志/3_登录模块开发/6_📕Spring Security 整合 JWT ：实现身份认证.md"
+  - "[[10_※HTTP状态]]"
+  - "[[../../../../08-🛠️ 开发工具/03-🐋 容器化/01-📚 Docker基础/8_Docker Compose/3_实战web服务]]"
+  - "[[8_📕Spring Boot 实现优雅的参数校验]]"
+  - "[[0_参考文章索引]]"
+  - "[[0_导读]]"
+文章分类: 🚀 项目实战
+文章路径: 10-🚀 项目实战/01-📝 博客系统/03-📝 开发日志/3_登录模块开发/6_📕Spring Security 整合 JWT ：实现身份认证.md
 文章难度: 中级 🌳
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐⭐ 精通必备

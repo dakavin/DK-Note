@@ -1,25 +1,25 @@
 ---
-文章标题: "[[9_Cookie&Session]]" 
+文章标题: "[[9_Cookie&Session]]"
 文章作者: Dakkk
 文章概要: |
   深入讲解Java Web会话技术Cookie和Session的概念、原理和使用方法，包含验证码登录案例的完整实现
 tags:
-- "Cookie"
-- "Session"
-- "会话技术"
-- "JSP"
-- "HttpSession"
-- "验证码"
-- "Servlet"
-- "Java Web"
+  - Cookie
+  - Session
+  - 会话技术
+  - JSP
+  - HttpSession
+  - 验证码
+  - Servlet
+  - Java Web
 相关文章:
-- "[[8_会话_过滤器_监听器]]"
-- "[[10_※HTTP状态]]"
-- "[[4_JavaEE的13项规范]]"
-- "[[1_※认识HTTP]]"
-- "[[1_解决国内网页无法加载reCaptcha的方法]]"
-文章分类: "🌐 Web开发"
-文章路径: "03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/2_JavaWeb(黑马)/9_Cookie&Session.md"
+  - "[[8_会话_过滤器_监听器]]"
+  - "[[10_※HTTP状态]]"
+  - "[[4_JavaEE的13项规范]]"
+  - "[[1_※认识HTTP]]"
+  - "[[../../../../01-📚 知识管理/06-🛠️ 技巧/2-Windows/1_解决国内网页无法加载reCaptcha的方法]]"
+文章分类: 🌐 Web开发
+文章路径: 03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/2_JavaWeb(黑马)/9_Cookie&Session.md
 文章难度: 中级 🌳
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐ 核心能力

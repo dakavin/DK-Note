@@ -1,24 +1,24 @@
 ---
-文章标题: "[[14_maven]]" 
+文章标题: "[[14_maven]]"
 文章作者: Dakkk
 文章概要: |
   详细介绍Maven项目管理工具的概念、依赖管理、生命周期、IDEA集成及常用命令等核心知识点
 tags:
-- "Maven"
-- "项目管理"
-- "依赖管理"
-- "IDEA集成"
-- "POM"
-- "构建工具"
-- "Java"
+  - Maven
+  - 项目管理
+  - 依赖管理
+  - IDEA集成
+  - POM
+  - 构建工具
+  - Java
 相关文章:
-- "[[1_搭建多模块工程（Spring Initializr）]]"
-- "[[1_mapstruct 和 lombok 的冲突问题]]"
-- "[[2_后端封装 MD 转换 HTML 工具类]]"
-- "[[4_配置 Lombok]]"
-- "[[5_姿势3：使用 GitHub Action（后端项目）]]"
-文章分类: "🌐 Web开发"
-文章路径: "03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/2_JavaWeb(黑马)/14_maven.md"
+  - "[[1_搭建多模块工程（Spring Initializr）]]"
+  - "[[1_mapstruct 和 lombok 的冲突问题]]"
+  - "[[2_后端封装 MD 转换 HTML 工具类]]"
+  - "[[4_配置 Lombok]]"
+  - "[[../../../../08-🛠️ 开发工具/04-☁️ 运维部署/02-🤖 自动化部署/5_姿势3：使用 GitHub Action（后端项目）]]"
+文章分类: 🌐 Web开发
+文章路径: 03-🌐 Web开发/01-🔙 后端技术/01-🌐 JavaWeb/2_JavaWeb(黑马)/14_maven.md
 文章难度: 初级 💧
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐ 核心能力

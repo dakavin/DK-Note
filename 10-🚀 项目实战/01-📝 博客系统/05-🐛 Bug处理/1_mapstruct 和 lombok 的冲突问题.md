@@ -1,25 +1,25 @@
 ---
-文章标题: "[[1_mapstruct 和 lombok 的冲突问题]]" 
+文章标题: "[[1_mapstruct 和 lombok 的冲突问题]]"
 文章作者: Dakkk
 文章概要: |
   文章阐述并解决了Java项目中Lombok与MapStruct同时使用导致的`ExceptionInInitializerError`。通过调整Maven `pom.xml`中`maven-compiler-plugin`的`annotationProcessorPaths`，并添加`lombok-mapstruct-binding`依赖，确保注解处理器按正确顺序执行，从而消除冲突。
 文章标签:
-- "Java"
-- "Lombok"
-- "MapStruct"
-- "Maven"
-- "Annotation Processor"
-- "`pom.xml`"
-- "编译冲突"
-- "DO-VO转换"
+  - Java
+  - Lombok
+  - MapStruct
+  - Maven
+  - Annotation Processor
+  - "`pom.xml`"
+  - 编译冲突
+  - DO-VO转换
 相关文章:
-- "[[4_配置 Lombok]]"
-- "[[19_Mybatis入门]]"
-- "[[5_姿势3：使用 GitHub Action（后端项目）]]"
-- "[[2_后端封装 MD 转换 HTML 工具类]]"
-- "[[2_文章归档分页接口开发]]"
-文章分类: "🚀 项目实战"
-文章路径: "10-🚀 项目实战/01-📝 博客系统/05-🐛 Bug处理/1_mapstruct 和 lombok 的冲突问题.md"
+  - "[[4_配置 Lombok]]"
+  - "[[19_Mybatis入门]]"
+  - "[[../../../08-🛠️ 开发工具/04-☁️ 运维部署/02-🤖 自动化部署/5_姿势3：使用 GitHub Action（后端项目）]]"
+  - "[[2_后端封装 MD 转换 HTML 工具类]]"
+  - "[[2_文章归档分页接口开发]]"
+文章分类: 🚀 项目实战
+文章路径: 10-🚀 项目实战/01-📝 博客系统/05-🐛 Bug处理/1_mapstruct 和 lombok 的冲突问题.md
 文章难度: 中级 🌳
 目前阶段: ✅ 已完成
 重要性: ⭐⭐⭐⭐ 核心能力
