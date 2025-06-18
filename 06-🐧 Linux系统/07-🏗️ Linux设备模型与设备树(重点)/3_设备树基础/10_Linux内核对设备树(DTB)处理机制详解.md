@@ -410,7 +410,6 @@ spi_register_controller()                            // 注册SPI控制器
 ### 8.3 匹配过程详解
 
 **注册platform_driver时的匹配**：
-
 ```c
 platform_driver_register()
  └── driver_register()
