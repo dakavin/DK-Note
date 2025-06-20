@@ -1,0 +1,118 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="RZSF0nIk2rkPdXb4GEfK">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-1" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;SysFs&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="10" y="395" width="151.67" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-98" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1Rhm2QBHLja1xeX6joI6-4" target="1Rhm2QBHLja1xeX6joI6-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-4" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;概述&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="191.67000000000007" y="32.5" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-5" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Linux内核提供的一种&lt;b&gt;虚拟文件系统&lt;/b&gt;，用于向用户空间提供内核中设备、驱动程序和其他内核对象的信息&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="341.6700000000001" y="30" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-6" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;主要特点&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="191.67000000000007" y="180" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-7" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;统一接口：&lt;/b&gt;提供统一方式浏览和管理内核对象&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="340.6700000000001" y="95.5" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-8" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;层次管理：&lt;/b&gt;以目录树的形式反映对象之间的关系&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="340.6700000000001" y="150" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-9" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;实时信息：&lt;/b&gt;动态反映内核状态的变化&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="340.6700000000001" y="207.5" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-10" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;双向交互：&lt;/b&gt;既可以读取信息，也可以配置参数&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="340.6700000000001" y="267.5" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-101" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1Rhm2QBHLja1xeX6joI6-36" target="1Rhm2QBHLja1xeX6joI6-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-36" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;和/dev区别&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="191.67000000000007" y="335" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-77" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;/dev 目录&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="341.6700000000001" y="335" width="260" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-78" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;包含&lt;b&gt;真实的&lt;/b&gt;设备文件&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1Rhm2QBHLja1xeX6joI6-77" vertex="1">
+          <mxGeometry y="30" width="260" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-80" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;通用由 udev 在运行时创建&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1Rhm2QBHLja1xeX6joI6-77" vertex="1">
+          <mxGeometry y="56" width="260" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-82" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;用于应用程序的实际设备操作&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1Rhm2QBHLja1xeX6joI6-77" vertex="1">
+          <mxGeometry y="82" width="260" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-91" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;使用open、write、ioctl等函数访问&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1Rhm2QBHLja1xeX6joI6-77" vertex="1">
+          <mxGeometry y="114" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-84" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;/sys目录&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="601.6700000000001" y="335" width="270" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-85" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;内核运行时动态导出&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1Rhm2QBHLja1xeX6joI6-84" vertex="1">
+          <mxGeometry y="30" width="270" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-87" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;展示dev、drv和bus的层次关系&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1Rhm2QBHLja1xeX6joI6-84" vertex="1">
+          <mxGeometry y="56" width="270" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-89" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;用于设备信息查询和配置&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1Rhm2QBHLja1xeX6joI6-84" vertex="1">
+          <mxGeometry y="82" width="270" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-92" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;通过文件读写进行交互&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1Rhm2QBHLja1xeX6joI6-84" vertex="1">
+          <mxGeometry y="114" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-93" value="&lt;h2&gt;核心目录&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="191.67000000000007" y="565" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-94" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;/sys/devices：包含系统中所有设备的物理拓扑结构&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="341.6700000000001" y="505" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-95" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;/sys/bus：包含各种总线类型的管理信息，每个总线有自己的子目录&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="341.6700000000001" y="559.5" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-96" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;/sys/class：将设备按照功能进行分类，提供逻辑上的设备组织方式&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="341.6700000000001" y="617" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-99" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="161.67" y="50" width="30" height="760" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-100" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="311.6700000000001" y="110" width="29" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-102" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="311.6700000000001" y="530" width="29" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-104" value="&lt;font style=&quot;font-size: 27px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="621.6700000000001" y="710" width="250" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-313" value="&lt;h2&gt;核心流程&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="191.67000000000007" y="790" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-314" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;SysFs构建流程&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="341.67" y="680" width="258.33" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-315" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;设备注册过程：device_register&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="341.67" y="730" width="258.33" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-316" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;驱动注册过程：driver_register&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="342.51" y="782" width="258.33" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-317" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;总线注册过程：bus_register&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="342.51" y="830" width="258.33" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-318" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;类注册过程：class_register&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="343.34" y="880" width="258.33" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="1Rhm2QBHLja1xeX6joI6-319" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.2872413793103423;" parent="1" vertex="1">
+          <mxGeometry x="311.67" y="700" width="29" height="210" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
