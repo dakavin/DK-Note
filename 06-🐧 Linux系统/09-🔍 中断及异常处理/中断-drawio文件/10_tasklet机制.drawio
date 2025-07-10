@@ -1,0 +1,119 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="fRo_DuRjfZFH-iuQD6cJ">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-1" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;2、相关API&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="235.32999999999993" y="348.25" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-3" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;初始化（使能）&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;：&lt;b&gt;DECLARE_TASKLET&lt;/b&gt;(name, func, data)&lt;br&gt;&lt;b&gt;初始化（非使能）&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;：&lt;b&gt;DECLARE_TASKLET_DISABLED&lt;/b&gt;(name, func, data)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="412" y="220" width="618" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-5" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="381.33" y="236.5" width="29" height="263.5" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-6" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1、概述&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="236.33999999999992" y="85" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-7" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;一种特殊的软中断机制，&lt;b&gt;常见且广泛&lt;/b&gt;用于下半部处理，是&lt;b&gt;软中断的TASKLET_SOFTIRQ&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="411.65999999999997" y="10" width="620.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-9" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;tasklet&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="374.99999999999994" width="165.34" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-10" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="205.34" y="130" width="29" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-11" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;同一时间&lt;b&gt;只能在一个CPU上运行&lt;/b&gt;，避免了在多核系统中的并发问题&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="411.99" y="60" width="620" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-12" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="382.65999999999997" y="30" width="29" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-16" value="&lt;h2&gt;3、内部机制&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="234.33999999999992" y="672.4099999999999" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-18" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;调用tasklet_schedule&lt;/b&gt;时，发生下面事件&lt;br&gt;1. 把tasklet的&lt;b&gt;state设置为 TASKLET_STATE_SCHED&lt;/b&gt;&lt;br&gt;2. 把tasklet放入对应&lt;b&gt;CPU的待执行链表&lt;/b&gt;中&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="409.99" y="540" width="618.34" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-19" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;tasklet的软中断处理流程&lt;br&gt;1. 处理硬中断&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;2. 处理软中断&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;3. &lt;b&gt;调用tasklet_action&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="410.67" y="623.99" width="618.34" height="80.81" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-20" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;tasklet_action 会调用 &lt;b&gt;tasklet_action_common&lt;/b&gt;：&lt;br&gt;1. 从tasklet链表取出每一项&lt;br&gt;2. 判断是否为SCHED状态&lt;br&gt;3. 执行对应的func&lt;br&gt;4. 将已经完成的tasklet从链表中取出&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="409.99" y="730" width="618.34" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-22" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;绑定的函数&lt;b&gt;不能调用可能导致睡眠的函数&lt;/b&gt;，因为tasklet运行在原子上下文中&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="411.99" y="110" width="620" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-68" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;数据结构体&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="411.99" y="160" width="128.01" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-69" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;动态初始化：&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;void &lt;b&gt;tasklet_init&lt;/b&gt;(struct tasklet_struct *&lt;b&gt;t&lt;/b&gt;, void (*&lt;b&gt;func&lt;/b&gt;)(unsigned long), unsigned long &lt;b&gt;data&lt;/b&gt;)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="411.00999999999993" y="280" width="618" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-100" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="380.98999999999995" y="570" width="29" height="244.81" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-108" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="252.16999999999996" y="160" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-109" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;struct&amp;nbsp;tasklet_struct / tasklet_t(别名)&lt;/span&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: 400;&quot;&gt;软中断上下文中执行延迟工作，支持单处理器串行化执行，&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 14px;&quot;&gt;include/linux/interrupt.h&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=16;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="60" width="540" height="240" as="geometry">
+            <mxRectangle x="20" y="90" width="400" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-110" value="struct tasklet_struct&amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&lt;b&gt;next&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 链表指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry y="50" width="540" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-119" value="unsigned long&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;state&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 状态标志位" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry y="76" width="540" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-118" value="atomic_t&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;count&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 禁用计数器" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry y="102" width="540" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-117" value="bool&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;use_callback&lt;/b&gt;;&amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 回调函数类型标志" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry y="128" width="540" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-116" value="unsigned long&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;data&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 传递给回调函数的参数" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry y="154" width="540" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-112" value="" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry y="180" width="540" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-113" value="void &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;(*&lt;b&gt;func&lt;/b&gt;)(unsigned long data);&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// 传统回调函数指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry y="188" width="540" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-124" value="void &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;(*&lt;b&gt;callback&lt;/b&gt;)(struct tasklet_struct *);&amp;nbsp; // 新式回调函数指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry y="214" width="540" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.006;entryY=0.113;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="NBOaaTaNcheqs9Ab85eF-68" target="NBOaaTaNcheqs9Ab85eF-109">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="180" />
+              <mxPoint x="1050" y="87" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-126" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;禁用：&lt;/b&gt;void &lt;b&gt;tasklet_disable&lt;/b&gt;(struct tasklet_struct *t);&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="410.3299999999999" y="330" width="618" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-127" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;启用：&lt;/b&gt;void &lt;b&gt;tasklet_enable&lt;/b&gt;(struct tasklet_struct *t);&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="410.3299999999999" y="380" width="618" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="NBOaaTaNcheqs9Ab85eF-128" target="NBOaaTaNcheqs9Ab85eF-130">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-128" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;调度：&lt;/b&gt;void &lt;b&gt;tasklet_schedule&lt;/b&gt;(struct tasklet_struct *t);&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="410.3299999999999" y="430" width="618" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-129" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;销毁：&lt;/b&gt;void &lt;b&gt;tasklet_kill&lt;/b&gt;(struct tasklet_struct *t);&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="410.3299999999999" y="480" width="618" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NBOaaTaNcheqs9Ab85eF-130" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;1. 通知系统需要处理，非立即执行&lt;br&gt;2. 一般在中断处理函数中调用&lt;br&gt;3. 调用多次，也只执行一次&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="420" width="260" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

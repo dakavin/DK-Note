@@ -1,0 +1,430 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="2RZZ2tBeQzuVOvMOnQxP">
+    <mxGraphModel dx="2431" dy="1413" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="QZTIxAdS9PWCWQ_r34Lz-2" value="&lt;b&gt;（驱动程序层）中断的使用者&lt;/b&gt;，主要包括各类&lt;b&gt;外设设备驱动程序&lt;/b&gt;；" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="150" y="160" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QZTIxAdS9PWCWQ_r34Lz-3" value="驱动程序&lt;b&gt;通过中断相关的API进行中断的申请和注册&lt;/b&gt;；" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="150" y="200" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QZTIxAdS9PWCWQ_r34Lz-4" value="当外设触发中断时，用户层驱动程序会进行相应的回调处理，执行特定的操作" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="150" y="240" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-1" target="4o8_NsfVZ0rOwa23npXj-69">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="215" />
+              <mxPoint x="30" y="905" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-1" value="&lt;h2&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;用户层&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="30" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-5" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="290" as="sourcePoint" />
+            <mxPoint x="1280" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="730" y="160" width="540" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-7" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Device Driver&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="750" y="185" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-11" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Device Driver&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="880" y="185" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-12" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Device Driver&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="185" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-13" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;......&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="185" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-14" value="&lt;b&gt;（框架层）与硬件无关的层次&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="150" y="310" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-15" value="通用层代码在所有硬件平台通用，&lt;b&gt;不依赖于具体的硬件架构或中断控制器&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="150" y="350" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-16" value="&lt;b&gt;提供统一的接口和功能&lt;/b&gt;，用于管理和处理中断，便于&lt;b&gt;驱动程序在不同硬件上复用&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="150" y="390" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-17" value="&lt;h2&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;通用层&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="80" y="310" width="30" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="730" y="310" width="540" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-19" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Interrupt Common Framework&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="750" y="335" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-23" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="440" as="sourcePoint" />
+            <mxPoint x="1280" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-25" value="&lt;b&gt;特定处理器：&lt;/b&gt;包含与其相关的代码，如ARM64处理器的中断处理相关代码，负责处理特定架构的中断机制，如中断向量表、中断处理程序等" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="150" y="460" width="530" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-26" value="&lt;b&gt;中断控制器：&lt;/b&gt;包含与其相关的驱动代码，用于中断控制器进行通信和配置，与具体的中断控制器硬件相关，如GIC中断控制器" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="150" y="540" width="530" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-28" value="&lt;h2&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;硬件相关层&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="80" y="460" width="30" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="730" y="460" width="540" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-30" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Arch-specific&lt;br&gt;code&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="780" y="485" width="150" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-31" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Interrupt Controller&lt;br&gt;Driver&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="485" width="170" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-32" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="620" as="sourcePoint" />
+            <mxPoint x="1280" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-33" value="位于最底层，与具体的硬件连接相关" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="150" y="640" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-34" value="包括外设与Soc的物理连接部分" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="150" y="680" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-35" value="中断信号从外设传递到中断控制器，有中断控制器统一管理和路由到处理器" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="150" y="720" width="530" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-36" target="4o8_NsfVZ0rOwa23npXj-85">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="95" y="780" />
+              <mxPoint x="1000" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-36" value="&lt;h2&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;硬件层&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="80" y="640" width="30" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-37" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="730" y="640" width="540" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-38" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;CPU / PE&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="750" y="665" width="95" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-39" target="4o8_NsfVZ0rOwa23npXj-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-39" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Interrupt Controller&lt;br&gt;Driver&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="900" y="650" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-40" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Device&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="655" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-41" target="4o8_NsfVZ0rOwa23npXj-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-41" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Device&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="685" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-42" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Device&lt;/b&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="715" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-40">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1050" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-58" value="&lt;b&gt;中断信号&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4o8_NsfVZ0rOwa23npXj-43">
+          <mxGeometry x="-0.0661" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.827;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-42" target="4o8_NsfVZ0rOwa23npXj-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;targetPerimeterSpacing=6;sourcePerimeterSpacing=6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-30" target="4o8_NsfVZ0rOwa23npXj-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="855" y="610" />
+              <mxPoint x="797" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-31" target="4o8_NsfVZ0rOwa23npXj-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1145" y="600" />
+              <mxPoint x="975" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-51" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;中断子系统架构图&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="1190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="670" as="sourcePoint" />
+            <mxPoint x="845" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-56" value="IRQ" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontStyle=1" vertex="1" connectable="0" parent="4o8_NsfVZ0rOwa23npXj-53">
+          <mxGeometry x="-0.106" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="900" y="720" as="sourcePoint" />
+            <mxPoint x="845" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-55" value="&lt;b&gt;FIQ&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4o8_NsfVZ0rOwa23npXj-54">
+          <mxGeometry x="0.1966" relative="1" as="geometry">
+            <mxPoint x="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-78" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;软件框架&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;组成&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="800" width="600" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-59" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=default;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="829" width="600" height="181" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-60" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-59">
+          <mxGeometry width="600" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-61" value="硬件无关的代码" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-60">
+          <mxGeometry width="130" height="61" as="geometry">
+            <mxRectangle width="130" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-62" value="&lt;b&gt;内核通用中断处理模块，中断子系统核心部分；&lt;br&gt;&lt;/b&gt;将各种CPU和控制器在中断处理过程相同的内容抽象出来；&lt;br&gt;对于各个外设的驱动代码，用统一的接口实现irq相关的管理；" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-60">
+          <mxGeometry x="130" width="470" height="61" as="geometry">
+            <mxRectangle width="470" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-69" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-59">
+          <mxGeometry y="61" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-70" value="其他普通驱动" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-69">
+          <mxGeometry width="130" height="30" as="geometry">
+            <mxRectangle width="130" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-71" value="使用内核通用中断API来实现驱动逻辑" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-69">
+          <mxGeometry x="130" width="470" height="30" as="geometry">
+            <mxRectangle width="470" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-79" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-59">
+          <mxGeometry y="91" width="600" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-80" value="CPU架构相关的中断处理" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-79">
+          <mxGeometry width="130" height="60" as="geometry">
+            <mxRectangle width="130" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-81" value="和具体的CPU架构相关&lt;br&gt;不同的CPU架构（ARM64、X86）有不同的&lt;b&gt;中断处理机制和指令集&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-79">
+          <mxGeometry x="130" width="470" height="60" as="geometry">
+            <mxRectangle width="470" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-82" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-59">
+          <mxGeometry y="151" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-83" value="中断控制器驱动代码" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-82">
+          <mxGeometry width="130" height="30" as="geometry">
+            <mxRectangle width="130" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-84" value="和&lt;b&gt;系统使用的中断控制器相关&lt;/b&gt;，不同芯片厂商使用不同类型的中断控制器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-82">
+          <mxGeometry x="130" width="470" height="30" as="geometry">
+            <mxRectangle width="470" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-85" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;硬件框架&lt;/span&gt;（&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;硬件层&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;）组成&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="800" width="560" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-86" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="720" y="829" width="560" height="151" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-87" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;fillColor=none;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-86">
+          <mxGeometry width="560" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-88" value="外设" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;fontSize=14;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-87">
+          <mxGeometry width="90" height="31" as="geometry">
+            <mxRectangle width="90" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-89" value="发生中断时，通过外设上的电气信号箱中断控制器请求处理" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-87">
+          <mxGeometry x="90" width="470" height="31" as="geometry">
+            <mxRectangle width="470" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-90" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;fillColor=none;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-86">
+          <mxGeometry y="31" width="560" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-91" value="中断控制器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;top=0;left=0;bottom=0;right=0;overflow=hidden;fontSize=14;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-90">
+          <mxGeometry width="90" height="60" as="geometry">
+            <mxRectangle width="90" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-92" value="管理数量众多的中断&lt;br&gt;连接外设中断和CPU系统，负责上报中断信号&lt;br&gt;如：&lt;b&gt;GIC中断控制器&lt;/b&gt;，将外部中断信号标记为FIQ、IRQ等，传输给CPU" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-90">
+          <mxGeometry x="90" width="470" height="60" as="geometry">
+            <mxRectangle width="470" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-93" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=14;fillColor=none;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-86">
+          <mxGeometry y="91" width="560" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-94" value="CPU" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;top=0;left=0;bottom=0;right=0;overflow=hidden;fontSize=14;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-93">
+          <mxGeometry width="90" height="60" as="geometry">
+            <mxRectangle width="90" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-95" value="主要功能是运行，不处理中断优先级，只接收中断控制器的中断信息&lt;br&gt;如：接收到IRQ和FIQ信号，分别让ARM进入IRQ mode和FIQ mode" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;fontSize=14;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-93">
+          <mxGeometry x="90" width="470" height="60" as="geometry">
+            <mxRectangle width="470" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.652;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-28" target="4o8_NsfVZ0rOwa23npXj-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.639;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="4o8_NsfVZ0rOwa23npXj-17" target="4o8_NsfVZ0rOwa23npXj-60">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="365" />
+              <mxPoint x="50" y="868" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-103" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="919.16" y="400" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-104" value="&lt;h1&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;重要概念说明&lt;/span&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF88;strokeColor=#36393d;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1030" width="600" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-105" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#36393d;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1059" width="600" height="231" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-106" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-105">
+          <mxGeometry width="600" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-107" value="硬件中断号" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-106">
+          <mxGeometry width="110" height="61" as="geometry">
+            <mxRectangle width="110" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-108" value="硬件中断ID，就是GIC硬件上的irq ID&lt;br&gt;GIC标准定义的，这是硬件层面的真实编号" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-106">
+          <mxGeometry x="110" width="490" height="61" as="geometry">
+            <mxRectangle width="490" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-109" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-105">
+          <mxGeometry y="61" width="600" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-110" value="软件中断号" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-109">
+          <mxGeometry width="110" height="50" as="geometry">
+            <mxRectangle width="110" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-111" value="IRQ number是软件方面定义，和硬件无关&lt;br&gt;CPU需要为每一个外设中断编号，我们称之IRQ Number" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-109">
+          <mxGeometry x="110" width="490" height="50" as="geometry">
+            <mxRectangle width="490" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-112" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-105">
+          <mxGeometry y="111" width="600" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-113" value="中断域" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-112">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-114" value="irq domain，将某一类资源划分为不同的区域，相同的域共享相同的特性&lt;br&gt;irq domain的产生是因为GIC对级联的支持&lt;br&gt;&lt;b&gt;负责hwirq和virq的映射&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-112">
+          <mxGeometry x="110" width="490" height="60" as="geometry">
+            <mxRectangle width="490" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-115" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-105">
+          <mxGeometry y="171" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-116" value="中断向量表" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-115">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-117" value="irq_desc数组，存放中断源所对应的中断处理程序的入口地址" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-115">
+          <mxGeometry x="110" width="490" height="30" as="geometry">
+            <mxRectangle width="490" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-118" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-105">
+          <mxGeometry y="201" width="600" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-119" value="中断处理架构" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-118">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-120" value="让中断服务程序尽量短小精悍，将中断处理分为中断上半部和中断下半部" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-118">
+          <mxGeometry x="110" width="490" height="30" as="geometry">
+            <mxRectangle width="490" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-121" value="&lt;h1&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;中断上下半部概念说明&lt;/span&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="1030" width="560" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-122" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#9673a6;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="720" y="1059" width="560" height="141" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-123" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-122">
+          <mxGeometry width="560" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-124" value="中断上半部" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-123">
+          <mxGeometry width="103" height="31" as="geometry">
+            <mxRectangle width="103" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-125" value="在中断上下文中快速执行，处理紧急事务" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-123">
+          <mxGeometry x="103" width="457" height="31" as="geometry">
+            <mxRectangle width="457" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-126" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-122">
+          <mxGeometry y="31" width="560" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-127" value="中断下半部" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-126">
+          <mxGeometry width="103" height="30" as="geometry">
+            <mxRectangle width="103" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-128" value="在合适的时机执行耗时的处理工作" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-126">
+          <mxGeometry x="103" width="457" height="30" as="geometry">
+            <mxRectangle width="457" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-129" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-122">
+          <mxGeometry y="61" width="560" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-130" value="下半部包含" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#d79b00;fontSize=14;fontStyle=1" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-129">
+          <mxGeometry width="103" height="80" as="geometry">
+            <mxRectangle width="103" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4o8_NsfVZ0rOwa23npXj-131" value="&lt;div&gt;&lt;b&gt;softirq&lt;/b&gt;：软中断机制&lt;/div&gt;&lt;div&gt;&lt;b&gt;tasklet&lt;/b&gt;：基于softirq实现的任务机制&lt;/div&gt;&lt;div&gt;&lt;b&gt;workqueue&lt;/b&gt;：工作队列机制&lt;/div&gt;&lt;div&gt;&lt;b&gt;中断线程化处理&lt;/b&gt;：将中断处理程序运行在内核线程中&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="4o8_NsfVZ0rOwa23npXj-129">
+          <mxGeometry x="103" width="457" height="80" as="geometry">
+            <mxRectangle width="457" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

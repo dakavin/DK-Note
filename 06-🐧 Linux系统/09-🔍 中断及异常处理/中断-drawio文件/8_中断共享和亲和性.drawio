@@ -1,0 +1,222 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="IJzpOib294g5p_OWRGwV">
+    <mxGraphModel dx="2066" dy="2855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-5" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;2、工作原理&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="304.3399999999999" y="136.75" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-7" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;中断发生：&lt;/b&gt;硬件产生中断信号&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="80" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-27" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450.68" y="93.5" width="29" height="126.5" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-29" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1、基本概念&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="304.3399999999999" y="5" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-32" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;中断线的&lt;b&gt;资源有限&lt;/b&gt;，所以多个设备一般&lt;b&gt;共享一个中断&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480.67" y="-10" width="539.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-43" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;中断共享&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="160" y="225" width="115.34" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-45" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="275.34" y="40" width="29" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-48" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Linux内核一般会将一个中断线(号)上的&lt;b&gt;所有中断处理函数都调用一次&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="481.66" y="30" width="538.34" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-49" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="452.66" width="29" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-51" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;遍历处理函数链表：&lt;/b&gt;本质就是遍历actions链表，上所有的处理函数&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="120" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-52" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;设备状态检查：&lt;/b&gt;在处理函数中，设备检查是否自己产生的中断&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="156.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-53" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;返回结果：&lt;/b&gt;是——处理后返回IRQ_HANDLED，否——直接返回IRQ_NONE&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="196.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-55" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;3、开启中断共享&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="304.3399999999999" y="301.75" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-56" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;调用request_irq函数时，设置flags为IRQF_SHARED&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="250" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-57" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450.68" y="263.5" width="29" height="116.5" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-58" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;注意：dev_id不能为NULL，&lt;/b&gt;释放中断时需要用它区分不同的设备&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="479.68" y="321.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="azhI_IpdhpdGgQq5YiUR-59" target="azhI_IpdhpdGgQq5YiUR-62">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-59" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;要求：&lt;/b&gt;共享的设备必须能通过读取硬件寄存器判断是否自己产生的中断&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="479.68" y="358.5" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-61" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;设备树上，在interrupts属性上，设置为同一个中断号即可&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="286.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-62" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;所以共享的中断处理函数&lt;br&gt;必须先检查是否本设备中断&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="343.5" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-64" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;4、应用场景&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="304.3399999999999" y="441.75" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-65" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;PCI设备：&lt;/b&gt;PCI总线多个设备经常共享中断&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="410" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-66" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450.68" y="423.5" width="29" height="76.5" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-67" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;如：&lt;/b&gt;汽车电子系统，多个传感器可能共享同一个中断线&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="479.68" y="481.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-69" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;GPIO中断：&lt;/b&gt;多个外设可能连接同一个GPIO引脚&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="446.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-70" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;2、配置方法&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="305.3299999999999" y="661.75" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="azhI_IpdhpdGgQq5YiUR-71" target="azhI_IpdhpdGgQq5YiUR-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-71" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;位掩码方式： &lt;/b&gt;写文件 &lt;b&gt;/proc/irq/IRQ#/smp_affinity&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="630" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-72" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="450.68" y="643.5" width="29" height="76.5" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-73" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1、基本概念&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="304.3399999999999" y="555" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-74" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;允许&lt;b&gt;设置某个中断由哪个处理器来处理&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480.67" y="540" width="539.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-75" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;中断亲和性&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="160" y="767" width="115.34" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-76" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="275.34" y="570" width="29" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-77" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;中断控制器会根据设备，将特定的中断发给指定的处理器核心&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="481.66" y="580" width="538.34" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-78" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="452.66" y="550" width="29" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="azhI_IpdhpdGgQq5YiUR-79" target="azhI_IpdhpdGgQq5YiUR-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-79" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;处理器列表方式：&lt;/b&gt;写文件 &lt;b&gt;/proc/irq/IRQ#/smp_affinity_list&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="670" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="azhI_IpdhpdGgQq5YiUR-80" target="azhI_IpdhpdGgQq5YiUR-103">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="748" y="740" />
+              <mxPoint x="658" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-80" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;编程API：irq_set_affinity&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="477.68" y="706.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-90" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;3、应用场景&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="305.3299999999999" y="1001.75" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-91" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;网络密集型应用：&lt;/b&gt;将网卡中断绑定特定CPU，网络队列对应一个CPU核心&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="478.67" y="970" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-92" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="451.67" y="983.5" width="29" height="76.5" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-93" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;高性能计算：&lt;/b&gt;根据计算任务特定分配中断处理&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480.67" y="1041.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-94" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;实时系统：&lt;/b&gt;为关键中断分配CPU核心，隔离实时任务和普通任务&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="478.67" y="1006.75" width="541.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="azhI_IpdhpdGgQq5YiUR-95" target="azhI_IpdhpdGgQq5YiUR-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-95" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;假设4个CPU核心&lt;br&gt;让中断32只在0和2上处理&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1075" y="545" width="230" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-96" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;echo 05 &amp;gt; /proc/irq/32/smp_affinity&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="630" width="280" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-98" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;echo 0,2 &amp;gt; /proc/irq/32/smp_affinity_list&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="670" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-103" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;irq_set_affinity&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="477.67999999999995" y="760" width="360" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-104" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;通过编程的方式设置中断亲和性&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-103">
+          <mxGeometry y="30" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-105" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-103">
+          <mxGeometry y="56" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-106" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;irq&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;：&lt;/b&gt;要关联的中断号&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-103">
+          <mxGeometry y="64" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-107" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;cpumask ：&lt;/b&gt;指定处理中断的CPU核心&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-103">
+          <mxGeometry y="90" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-111" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-103">
+          <mxGeometry y="116" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-112" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;成功：0&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-103">
+          <mxGeometry y="124" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-113" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;失败：负数错误码&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-103">
+          <mxGeometry y="150" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-114" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;cpu掩码操作&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="870" y="744" width="370" height="218" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-115" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;cpumask_clear()：清空CPU掩码&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="30" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-116" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="56" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-117" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;cpumask_set_cpu()：在掩码中设置指定CPU&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="64" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-119" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="90" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-123" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;cpumask_clear_cpu()：在掩码中清除指定CPU&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="98" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-124" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="124" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-125" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;cpumask_test_cpu()：测试指定CPU是否在掩码中&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="132" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-126" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="158" width="370" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-127" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;cpumask_copy()：复制CPU掩码&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="166" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-135" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;cpumask_of(xx)：指定cpu&lt;/b&gt;&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry y="192" width="370" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.002;entryY=0.079;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="azhI_IpdhpdGgQq5YiUR-107" target="azhI_IpdhpdGgQq5YiUR-114">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="azhI_IpdhpdGgQq5YiUR-136" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;1. 先注册中断处理函数&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;2. 再设置CPU亲和性&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="772.5" width="170" height="77.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

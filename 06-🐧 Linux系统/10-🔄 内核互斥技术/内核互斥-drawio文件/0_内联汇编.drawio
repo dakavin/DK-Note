@@ -1,0 +1,199 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="wAIENwQ3Hwlp1NEz17po">
+    <mxGraphModel dx="2066" dy="2855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-135" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="110" y="-980" width="1300" height="910" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-610" width="358.33" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-2" value="&lt;div style=&quot;line-height: 10%;&quot;&gt;&lt;h1 style=&quot;line-height: 10%;&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 18px; line-height: 10%;&quot;&gt;内联汇编基本语法&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;/div&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeWidth=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-610" width="358.33" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-4" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; [&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;: InputOperands&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-540" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-6" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; [&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;: Clobbers&amp;nbsp; ]&amp;nbsp; ])&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-520" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-7" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;// 示例：a+b&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-480" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-9" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;asm [asm-qulifiers] ( AssemblerTemplate&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-580" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-12" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#d6b656;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="780" y="-581" width="610" height="481" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-13" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-12">
+          <mxGeometry width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-14" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;asm标识符&lt;/font&gt;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-13">
+          <mxGeometry width="160" height="31" as="geometry">
+            <mxRectangle width="160" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-15" value="标准写法：&lt;b&gt;asm&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;避免关键字冲突写法：&lt;b&gt;__asm__&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-13">
+          <mxGeometry x="160" width="450" height="31" as="geometry">
+            <mxRectangle width="450" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-16" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-12">
+          <mxGeometry y="31" width="610" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-17" value="&lt;b&gt;asm-qulifiers特性&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-16">
+          <mxGeometry width="160" height="70" as="geometry">
+            <mxRectangle width="160" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-18" value="&lt;b&gt;volatile&lt;/b&gt;：告诉编译器不要&lt;b&gt;优化/删除&lt;/b&gt;这段代码&lt;br&gt;&lt;b&gt;inline&lt;/b&gt;：建议内联展开&lt;br&gt;&lt;b&gt;goto&lt;/b&gt;：支持跳转标签" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-16">
+          <mxGeometry x="160" width="450" height="70" as="geometry">
+            <mxRectangle width="450" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-19" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-12">
+          <mxGeometry y="101" width="610" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-20" value="&lt;b&gt;AssemblerTemplate&lt;br&gt;汇编指令&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-19">
+          <mxGeometry width="160" height="50" as="geometry">
+            <mxRectangle width="160" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-21" value="每条指令用&lt;b&gt;\n&lt;/b&gt;分开，&lt;b&gt;%0、%1&lt;/b&gt;是&lt;b&gt;操作数占位符&lt;/b&gt;&lt;br&gt;具体指令参考[[ 个人技巧 / 汇编指令汇总 ]]" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-19">
+          <mxGeometry x="160" width="450" height="50" as="geometry">
+            <mxRectangle width="450" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-22" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-12">
+          <mxGeometry y="151" width="610" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-23" value="&lt;b&gt;OutputOperands&lt;br&gt;输出操作数&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-22">
+          <mxGeometry width="160" height="160" as="geometry">
+            <mxRectangle width="160" height="160" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-24" value="格式：&lt;b&gt;[asmSymbolicName] constraint (cvariablename)&lt;/b&gt;&lt;br&gt;举例：&lt;br&gt;[result] &quot;=r&quot; (sum)&amp;nbsp; &amp;nbsp; // 有符号名的写法&lt;div&gt;&quot;=r&quot; (sum)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// 无符号名的写法&lt;br&gt;&lt;br&gt;符号：= 写操作数，+ 读写操作数，% 可交换操作数&lt;br&gt;操作数：r-寄存器操作数，g-编译器自由宣传，m-内存操作数&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-22">
+          <mxGeometry x="160" width="450" height="160" as="geometry">
+            <mxRectangle width="450" height="160" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-25" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-12">
+          <mxGeometry y="311" width="610" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-26" value="&lt;b&gt;InputOperands&lt;br&gt;输入操作数&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-25">
+          <mxGeometry width="160" height="100" as="geometry">
+            <mxRectangle width="160" height="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-27" value="格式：&lt;b&gt;[asmSymbolicName] constraint (cexpression)&lt;br&gt;&lt;/b&gt;举例：&lt;br&gt;[a_val]&quot;r&quot;(a), [b_val]&quot;r&quot;(b)&amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 有符号名&lt;div&gt;&quot;r&quot;(a), &quot;r&quot;(b)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 无符号名&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-25">
+          <mxGeometry x="160" width="450" height="100" as="geometry">
+            <mxRectangle width="450" height="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-28" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-12">
+          <mxGeometry y="411" width="610" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-29" value="&lt;b&gt;Clobbers副作用声明&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-28">
+          <mxGeometry width="160" height="70" as="geometry">
+            <mxRectangle width="160" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-30" value="&lt;b&gt;声明会被修改但不在输入输出中列出的寄存器&lt;br&gt;CC：&lt;/b&gt;汇编代码会修改条件码寄存器&lt;br&gt;&lt;b&gt;memory：&lt;/b&gt;会读写更多的内存" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="bK9gfhu-DfvOfKs9mBab-28">
+          <mxGeometry x="160" width="450" height="70" as="geometry">
+            <mxRectangle width="450" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-34" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;基本语法解释&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="780" y="-610" width="610" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-36" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;: OutputOperands&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-560" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-49" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__asm__ volatile (&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-419.75" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-50" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;};&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-280" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-52" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;int add(int a, int b){&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-459.75" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-55" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;int sum;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-439.75" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-92" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;内联汇编&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="120" y="-680" width="101.67" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-93" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1、概念&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="252.67000000000007" y="-925" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-94" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;在C函数中直接使用汇编代码，很多锁的底层实现就是内敛汇编&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="401.6700000000001" y="-955" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-95" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;2、使用场景&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="253.67000000000007" y="-757.75" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-96" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;特殊算法需要手工优化&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="402.6700000000001" y="-840" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-97" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;需要调用特殊的汇编指令（如原子操作指令）&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="402.6700000000001" y="-785.5" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-98" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;对性能要求极高的代码段&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="401.6700000000001" y="-731" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-99" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;访问特殊的硬件寄存器&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="402.6700000000001" y="-676" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-100" value="&lt;h2&gt;3、基本语法&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="253.67000000000007" y="-399.75" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-102" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="221.67" y="-910" width="30" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-103" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="373.67" y="-825.5" width="29" height="175.5" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-104" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="372.67" y="-590" width="29" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-108" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="251.67000000000004" y="-570.39" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-119" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="252.67" y="-840" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-121" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;主要目标：提高代码执行效率&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="400.6700000000001" y="-900" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-123" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="371.67" y="-930" width="29" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-126" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&quot;add %0, %1, %2&quot;&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-399.75" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-127" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;: &quot;=r&quot; (sum)&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-380.25" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-130" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;: &quot;r&quot; (a), &quot;r&quot;(b)&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-360" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-131" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;: &quot;cc&quot;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-340" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-132" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;);&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-320" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-133" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;return sum;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="401.67" y="-300" width="358.33" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bK9gfhu-DfvOfKs9mBab-134" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;分析示例：&lt;br&gt;1. 先看输出操作数：&lt;/b&gt;%0，结存存储在sum变量&lt;br&gt;&lt;b&gt;2. 在看输入操作数：&lt;/b&gt;%1，%2，输入a和b&lt;br&gt;&lt;b&gt;3. 继续看副作用&amp;nbsp; &amp;nbsp; ：&lt;/b&gt;修改条件码寄存器&lt;br&gt;&lt;b&gt;4. 看汇编指令： &lt;/b&gt;加法运行，1+2，存储到0&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="402.67" y="-230" width="357.33" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

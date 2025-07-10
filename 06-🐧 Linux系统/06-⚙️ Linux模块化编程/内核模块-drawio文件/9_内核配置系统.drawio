@@ -1,0 +1,133 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="hNeEtAAX0cMM87YdJEwq">
+    <mxGraphModel dx="1425" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="v4TpQet38alnKsEidVDH-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="600" y="60" width="500" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-3" value="&lt;h1 style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Kconfig语法&lt;/font&gt;&lt;/h1&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#6c8ebf;strokeWidth=1;fillColor=#dae8fc;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="600" y="60" width="500" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-5" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;menu &quot;菜单标题&quot;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="88" width="490" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-6" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;config CONFIG_NAME&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="132" width="490" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-7" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;tristate &quot;配置项描述&quot;&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;// n-不编译，y-编译，m-编译为模块&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="148" width="500" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-8" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;帮助信息" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="204" width="490" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-10" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;config XXX&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="244" width="490" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-11" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;depends on DEPENDENCY_EXPRESSION&amp;nbsp;&amp;nbsp;//依赖关系&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="260" width="490" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-17" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//其他配置&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="292" width="480" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-18" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;endmenu&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="332" width="490" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-21" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;default y&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="600" y="168" width="490" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-22" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;help&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="184" width="490" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-23" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;# 具体的菜单内容&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="600" y="108" width="490" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-24" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;Kconfig&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" vertex="1" parent="1">
+          <mxGeometry x="20" y="60" width="540" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-25" value="&lt;b&gt;1. 定义内核配置界面的菜单结构&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-24">
+          <mxGeometry x="100" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-28" value="2. 顶层Kconfig文件是整个配置系统的入口" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-24">
+          <mxGeometry x="100" y="30" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-29" value="3. 子目录的Kconfig文件，定义该目录相关配置选项" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-24">
+          <mxGeometry x="100" y="60" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-30" value="4. 语法基础如右图所示" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-24">
+          <mxGeometry x="100" y="90" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.615;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="v4TpQet38alnKsEidVDH-30" target="v4TpQet38alnKsEidVDH-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-32" value="&lt;b&gt;5. 内核目录make menuconfig打开，配置界面&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="120" y="180" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" edge="1" parent="1" source="v4TpQet38alnKsEidVDH-33" target="v4TpQet38alnKsEidVDH-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-33" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;.config&lt;/b&gt;&lt;/span&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#d5e8d4;strokeColor=#82b366;height=30;" vertex="1" parent="1">
+          <mxGeometry x="20" y="380" width="540" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-34" value="&lt;b&gt;1. 整个配置系统的核心输出&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-33">
+          <mxGeometry x="100" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-35" value="2. 决定最终编译的内核包含哪些内容或功能" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-33">
+          <mxGeometry x="100" y="30" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-36" value="3. 生成的文件路径&amp;nbsp; &lt;b&gt;内核源码/.config&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-33">
+          <mxGeometry x="100" y="60" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;entryX=0.384;entryY=-0.071;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v4TpQet38alnKsEidVDH-24" target="v4TpQet38alnKsEidVDH-34">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-40" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px; color: rgb(153, 153, 255);&quot;&gt;menuconfig完成配置并保存&lt;br&gt;scripts/kconfig解析和生成&lt;br&gt;.config配置文件&lt;/font&gt;&lt;/b&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="v4TpQet38alnKsEidVDH-39">
+          <mxGeometry x="-0.2067" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-45" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;auto.conf&lt;/b&gt;&lt;/span&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" vertex="1" parent="1">
+          <mxGeometry x="20" y="540" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-48" value="供Makefile使用的配置变量" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-45">
+          <mxGeometry x="100" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-49" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;autoconf.h&lt;/b&gt;&lt;/span&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=100;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" vertex="1" parent="1">
+          <mxGeometry x="300" y="540" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-50" value="供C代码使用的宏定义" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-49">
+          <mxGeometry x="100" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.185;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" edge="1" parent="1" source="v4TpQet38alnKsEidVDH-33" target="v4TpQet38alnKsEidVDH-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-53" value="&lt;font style=&quot;font-size: 14px; color: rgb(153, 153, 255);&quot;&gt;&lt;b&gt;syncconfig将其转换为可用的格式&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="v4TpQet38alnKsEidVDH-51">
+          <mxGeometry x="-0.9173" y="-1" relative="1" as="geometry">
+            <mxPoint x="1" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-54" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;defconfig&lt;/b&gt;&lt;/span&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="600" y="380" width="540" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-55" value="&lt;b&gt;1. 为特定硬件平台提供的默认配置，即每个板子都有自己的defconfig&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-54">
+          <mxGeometry x="100" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-56" value="2. 一般在 /arch/$(ARCH)/configs 目录下" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-54">
+          <mxGeometry x="100" y="30" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-57" value="3. 通过make xxx.defconfig，编译出实际使用的.config配置文件" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="v4TpQet38alnKsEidVDH-54">
+          <mxGeometry x="100" y="60" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="v4TpQet38alnKsEidVDH-57" target="v4TpQet38alnKsEidVDH-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="v4TpQet38alnKsEidVDH-61" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="425" y="250" width="125" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

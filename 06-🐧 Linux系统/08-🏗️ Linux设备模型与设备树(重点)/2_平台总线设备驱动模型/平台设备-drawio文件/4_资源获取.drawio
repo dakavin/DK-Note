@@ -1,0 +1,248 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="JkVJmWxJf3_o4UWh-LbL">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;strokeWidth=2;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="415.0000000000002" y="69" width="735" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-1">
+          <mxGeometry width="735" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-3" value="获取platform设备资源" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-2">
+          <mxGeometry width="175" height="81" as="geometry">
+            <mxRectangle width="175" height="81" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-4" value="&lt;div&gt;struct resource *&lt;b&gt;platform_get_resource&lt;/b&gt;(struct platform_device *pdev,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; unsigned int type,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; unsigned int num);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-2">
+          <mxGeometry x="175" width="560" height="81" as="geometry">
+            <mxRectangle width="560" height="81" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-5" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-1">
+          <mxGeometry y="81" width="735" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-6" value="直接访问resource" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-5">
+          <mxGeometry width="175" height="41" as="geometry">
+            <mxRectangle width="175" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-7" value="通过for循环遍历pdev的resource即可" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-5">
+          <mxGeometry x="175" width="560" height="41" as="geometry">
+            <mxRectangle width="560" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-14" value="&lt;h1&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;内存资源获取API&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="415.0000000000002" y="30" width="735" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-15" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;platform_get_resource&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="10" y="29" width="340" height="202" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-16" value="&lt;span&gt;获取platform设备的resource资源&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry y="30" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-17" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry y="56" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-18" value="&lt;span&gt;&lt;b&gt;pdev：&lt;/b&gt;&lt;/span&gt;获取资源的Platform设备指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry y="64" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-75" value="&lt;span&gt;&lt;b&gt;type：&lt;/b&gt;&lt;/span&gt;资源类型（IORESOURCE_MEM等）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry y="90" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-19" value="&lt;b&gt;num：&lt;/b&gt;资源索引号（同类型资源可能有多个）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry y="116" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry y="142" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-21" value="&lt;span&gt;成功：&lt;/span&gt;指向资源resource结构体指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry y="150" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-22" value="&lt;span&gt;失败：NULL&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry y="176" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-58" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#d79b00;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;strokeWidth=2;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="415.0000000000002" y="649" width="735" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-59" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-58">
+          <mxGeometry width="735" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-60" value="获取中断资源" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-59">
+          <mxGeometry width="175" height="41" as="geometry">
+            <mxRectangle width="175" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-61" value="int &lt;b&gt;platform_get_irq&lt;/b&gt;(struct platform_device *pdev, unsigned int num);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-59">
+          <mxGeometry x="175" width="560" height="41" as="geometry">
+            <mxRectangle width="560" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-74" value="&lt;h1&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;中断资源获取与管理API&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="415.0000000000002" y="610" width="735" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.009;entryY=0.094;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="dpfKsmJWWGXtv5K0ERfv-2" target="dpfKsmJWWGXtv5K0ERfv-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-83" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#82b366;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;strokeWidth=2;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="415.0000000000002" y="249" width="735" height="172" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-90" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-83">
+          <mxGeometry width="735" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-91" value="手动映射" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-90">
+          <mxGeometry width="175" height="40" as="geometry">
+            <mxRectangle width="175" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-92" value="void __iomem *&lt;b&gt;ioremap&lt;/b&gt;(phys_addr_t paddr,unsigned long size)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-90">
+          <mxGeometry x="175" width="560" height="40" as="geometry">
+            <mxRectangle width="560" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-93" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-83">
+          <mxGeometry y="40" width="735" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-94" value="手动取消映射" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-93">
+          <mxGeometry width="175" height="39" as="geometry">
+            <mxRectangle width="175" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-95" value="void &lt;b&gt;iounmap&lt;/b&gt;(void *addr)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-93">
+          <mxGeometry x="175" width="560" height="39" as="geometry">
+            <mxRectangle width="560" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-96" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-83">
+          <mxGeometry y="79" width="735" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-97" value="自动映射" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-96">
+          <mxGeometry width="175" height="52" as="geometry">
+            <mxRectangle width="175" height="52" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-98" value="void __iomem *&lt;b&gt;devm_ioremap_resource&lt;/b&gt;(struct device *dev, struct resource *res)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-96">
+          <mxGeometry x="175" width="560" height="52" as="geometry">
+            <mxRectangle width="560" height="52" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-99" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-83">
+          <mxGeometry y="131" width="735" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-100" value="设备树映射" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-99">
+          <mxGeometry width="175" height="41" as="geometry">
+            <mxRectangle width="175" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-101" value="void __iomem *&lt;b&gt;of_iomap&lt;/b&gt;(struct device_node *np, int index);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-99">
+          <mxGeometry x="175" width="560" height="41" as="geometry">
+            <mxRectangle width="560" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-105" value="&lt;h1&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;获取资源后内存映射API&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="415.0000000000002" y="210" width="735" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-106" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;ioremap&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="10" y="260" width="340" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-107" value="&lt;span&gt;将物理地址映射成虚拟地址&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-106">
+          <mxGeometry y="30" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-108" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-106">
+          <mxGeometry y="56" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-109" value="&lt;span&gt;&lt;b&gt;paddr：&lt;/b&gt;&lt;/span&gt;要映射的物理地址（寄存器地址）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-106">
+          <mxGeometry y="64" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-110" value="&lt;span&gt;&lt;b&gt;size：&lt;/b&gt;&lt;/span&gt;需要映射的字节数" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-106">
+          <mxGeometry y="90" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-112" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-106">
+          <mxGeometry y="116" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-113" value="返回：映射后的虚拟地址指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-106">
+          <mxGeometry y="124" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-116" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;of_ioremap&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="520" y="430" width="340" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-117" value="&lt;span&gt;将设备树上的reg物理地址映射成虚拟地址&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-116">
+          <mxGeometry y="30" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-118" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-116">
+          <mxGeometry y="56" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-119" value="&lt;span&gt;&lt;b&gt;np：&lt;/b&gt;&lt;/span&gt;设备树节点指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-116">
+          <mxGeometry y="64" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-120" value="&lt;span&gt;&lt;b&gt;index：&lt;/b&gt;&lt;/span&gt;reg属性中的索引号" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-116">
+          <mxGeometry y="90" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-121" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-116">
+          <mxGeometry y="116" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-122" value="返回：映射后的虚拟地址指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-116">
+          <mxGeometry y="124" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-123" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;devm_ioremap_resource&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="10" y="430" width="340" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-124" value="&lt;span&gt;映射resource物理地址资源为虚拟地址&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-123">
+          <mxGeometry y="30" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-125" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-123">
+          <mxGeometry y="56" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-126" value="&lt;span&gt;&lt;b&gt;dev：&lt;/b&gt;&lt;/span&gt;设备结构体指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-123">
+          <mxGeometry y="64" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-127" value="&lt;span&gt;&lt;b&gt;res：&lt;/b&gt;&lt;/span&gt;资源结构体指针，描述要映射的内存区域" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-123">
+          <mxGeometry y="90" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-128" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-123">
+          <mxGeometry y="116" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-129" value="返回：映射后的虚拟地址指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-123">
+          <mxGeometry y="124" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-130" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.006;entryY=0.113;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="dpfKsmJWWGXtv5K0ERfv-90" target="dpfKsmJWWGXtv5K0ERfv-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-131" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;platform_get_irq&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="10" y="620" width="340" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-132" value="&lt;span&gt;获取平台设备的中断资源&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-131">
+          <mxGeometry y="30" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-133" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-131">
+          <mxGeometry y="56" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-134" value="&lt;span&gt;&lt;b&gt;pdev：&lt;/b&gt;&lt;/span&gt;要映射的物理地址（寄存器地址）" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-131">
+          <mxGeometry y="64" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-135" value="&lt;span&gt;&lt;b&gt;num：&lt;/b&gt;&lt;/span&gt;需要映射的字节数" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-131">
+          <mxGeometry y="90" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-136" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-131">
+          <mxGeometry y="116" width="340" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-137" value="返回：映射后的虚拟地址指针" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="dpfKsmJWWGXtv5K0ERfv-131">
+          <mxGeometry y="124" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-152" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="920" y="469.81" width="190" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-153" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.997;entryY=0.133;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="dpfKsmJWWGXtv5K0ERfv-96" target="dpfKsmJWWGXtv5K0ERfv-123">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.003;entryY=0.133;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="dpfKsmJWWGXtv5K0ERfv-99" target="dpfKsmJWWGXtv5K0ERfv-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dpfKsmJWWGXtv5K0ERfv-155" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.003;entryY=0.113;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="dpfKsmJWWGXtv5K0ERfv-59" target="dpfKsmJWWGXtv5K0ERfv-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

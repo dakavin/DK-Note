@@ -1,0 +1,115 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="U6bOug9AyoX9wMItCG7B">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="feUPj6XX5vVowWXXgQsC-1" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;平台模型简介&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="140" y="244" width="151.67" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-2" value="&lt;h2&gt;平台设备&lt;br&gt;Platform Device&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="318" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-3" value="&lt;h2&gt;平台总线&lt;br&gt;Platform Driver&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="446" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-4" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.41650000000000204;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="291.67" y="88" width="28.33" height="382" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-5" value="&lt;h2&gt;平台总线&lt;br&gt;Platform Bus&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="188" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-6" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;&lt;b&gt;职责&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="160" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-7" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;连接设备和驱动，提供匹配服务&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-6">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-8" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;&lt;b&gt;功能&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="202" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-9" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;设备注册、驱动注册、自动匹配&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-8">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-10" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;特点&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="240" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-11" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Linux内核自动提供，开发者无需关心&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-10">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-14" value="&lt;b style=&quot;font-size: 16px; text-align: left;&quot;&gt;职责&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="290" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-15" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;描述硬件资源信息&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-14">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-16" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;内容&lt;/b&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="332" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-17" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;寄存器地址、中断号、GPIO配置等&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-16">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-18" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;特点&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="370" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-19" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;只描述&quot;有什么&quot;，不关心&quot;怎么用&quot;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-18">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-22" value="&lt;b style=&quot;font-size: 16px; text-align: left;&quot;&gt;职责&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="420" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-23" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;实现设备控制逻辑&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-22">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-24" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;内容&lt;/b&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="462" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-25" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;初始化函数、操作函数、清理函数等&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-24">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-26" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;特点&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="500" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-27" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;只关心&quot;怎么用&quot;，不关心具体的硬件地址&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-26">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-30" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="460" y="168" width="20" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-31" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="460" y="301" width="20" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-32" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="460" y="430" width="20" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-33" value="&lt;h2&gt;核心思想&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="58" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-34" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;分离关注&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#d5e8d4;strokeColor=#82b366;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="30" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-35" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;硬件信息和驱动逻辑完全分离&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-34">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-36" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;&lt;b&gt;统一接口&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#d5e8d4;strokeColor=#82b366;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="72" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-37" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;通过总线提供标准化的设备管理接口&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-36">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-38" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;自动匹配&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#d5e8d4;strokeColor=#82b366;height=30;" vertex="1" parent="1">
+          <mxGeometry x="480" y="110" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-39" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;总线负责设备与驱动的智能配对&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="feUPj6XX5vVowWXXgQsC-38">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-42" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="460" y="40" width="20" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="feUPj6XX5vVowWXXgQsC-46" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="160" y="130" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,317 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="zVDmS7z6VsqBZTHIltCp">
+    <mxGraphModel dx="2929" dy="1693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oLeti2AwXSvscEIiD4af-257" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="32" y="1100" width="1100" height="540" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="37" y="10" width="1100" height="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-198" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="287" y="821" width="800" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-150" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="287" y="651" width="800" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-122" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="287" y="541" width="800" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-112" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="287" y="383" width="800" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-5" target="oLeti2AwXSvscEIiD4af-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-5" target="oLeti2AwXSvscEIiD4af-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-5" target="oLeti2AwXSvscEIiD4af-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-5" value="&lt;h2&gt;insmod module.ko&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="47" y="71" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-6" value="&lt;h1&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;内核模块加载流程（&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;kernel/module.c&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;）&lt;/font&gt;&lt;/b&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="47" y="20" width="1070" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-8" value="&lt;h2&gt;通过文件系统读取ko到usr空间的内存中&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="152" y="121" width="360" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-12" target="oLeti2AwXSvscEIiD4af-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-343" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;本质是系统调用 --&amp;gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;b style=&quot;&quot;&gt;SYSCALL_DEFINE3(delete_module&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="oLeti2AwXSvscEIiD4af-9" vertex="1" connectable="0">
+          <mxGeometry x="-0.0158" y="3" relative="1" as="geometry">
+            <mxPoint x="-1" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-344" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;本质是系统调用 --&amp;gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;b style=&quot;&quot;&gt;SYSCALL_DEFINE2(delete_module&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="oLeti2AwXSvscEIiD4af-9" vertex="1" connectable="0">
+          <mxGeometry x="-0.0158" y="3" relative="1" as="geometry">
+            <mxPoint x="17" y="1083" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-337" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-12" target="oLeti2AwXSvscEIiD4af-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-338" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-12" target="oLeti2AwXSvscEIiD4af-20" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-339" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-12" target="oLeti2AwXSvscEIiD4af-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-12" value="&lt;h2&gt;sys_init_module&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="152" y="171" width="145" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-14" target="oLeti2AwXSvscEIiD4af-18" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-14" value="&lt;h2&gt;may_init_module&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="247" y="221" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-15" value="&lt;h2&gt;终端执行加载命令&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="71" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-17" value="&lt;h2&gt;&lt;font style=&quot;&quot;&gt;内核模块加载的入口点&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="171" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-18" value="&lt;h2&gt;&lt;font style=&quot;font-weight: normal;&quot;&gt;检查当前进程有无权限&lt;br&gt;加载模块&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="221" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-20" target="oLeti2AwXSvscEIiD4af-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-20" value="&lt;h2&gt;copy_module_from_user&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="247" y="271" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-22" target="oLeti2AwXSvscEIiD4af-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-22" target="oLeti2AwXSvscEIiD4af-78" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-238" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-22" target="oLeti2AwXSvscEIiD4af-156" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-239" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-22" target="oLeti2AwXSvscEIiD4af-141" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-245" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-22" target="oLeti2AwXSvscEIiD4af-200" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-250" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-22" target="oLeti2AwXSvscEIiD4af-227" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-385" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-22" target="oLeti2AwXSvscEIiD4af-134" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-22" value="&lt;h2&gt;load_module&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="247" y="321" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-31" value="&lt;h2&gt;&lt;font style=&quot;font-weight: normal;&quot;&gt;在vmalloc分区分配空间&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="271" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-32" value="&lt;h2&gt;&lt;font style=&quot;&quot;&gt;核心加载过程&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="321" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-71" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="37" y="393" width="183" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oLeti2AwXSvscEIiD4af-24" target="oLeti2AwXSvscEIiD4af-33" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-24" value="&lt;h2&gt;elf_heder_check&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="342" y="423" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-33" value="&lt;h2&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font&gt;验证ELF文件头格式&lt;/font&gt;&lt;/span&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="423" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-34" value="&lt;h2&gt;&lt;font style=&quot;&quot;&gt;设置加载信息结构&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=0;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="473" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oLeti2AwXSvscEIiD4af-78" target="oLeti2AwXSvscEIiD4af-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-78" value="&lt;h2&gt;setup_load_info&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=0" parent="1" vertex="1">
+          <mxGeometry x="342" y="473" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-114" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;&lt;b&gt;1、验证和准备阶段&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="597" y="393" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-22" target="oLeti2AwXSvscEIiD4af-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-130" value="&lt;h2&gt;&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(255, 255, 255));&quot;&gt;计算模块内存布局并分配&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="859.75" y="581" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oLeti2AwXSvscEIiD4af-134" target="oLeti2AwXSvscEIiD4af-130" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-134" value="&lt;h2&gt;layout_and_allocate&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="349.5" y="581" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-138" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;&lt;b&gt;2、内存布局和分配&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="597" y="551" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oLeti2AwXSvscEIiD4af-141" target="oLeti2AwXSvscEIiD4af-144" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-141" value="&lt;h2&gt;apply_relocations&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="342" y="751" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-144" value="&lt;h2&gt;&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(255, 255, 255));&quot;&gt;应用重定位信息&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="751" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-155" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-156" target="oLeti2AwXSvscEIiD4af-160" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-156" value="&lt;h2&gt;simplify_symbols&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="342" y="691" width="185" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-160" value="&lt;h2&gt;&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(255, 255, 255));&quot;&gt;修正符号表，符号值转换为内存地址&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="691" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-166" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;&lt;b&gt;3、符号解析和重定位&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="597" y="661" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-199" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oLeti2AwXSvscEIiD4af-200" target="oLeti2AwXSvscEIiD4af-205" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-200" value="&lt;h2&gt;complete_formation&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="342" y="861" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-205" value="&lt;h2&gt;&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(255, 255, 255));&quot;&gt;完成模块构造&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="861" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-214" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;&lt;b&gt;4、模块激活&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="597" y="831" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-223" value="&lt;h2&gt;&lt;font style=&quot;font-weight: normal;&quot;&gt;执行模块的初始化函数&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="911" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-226" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oLeti2AwXSvscEIiD4af-227" target="oLeti2AwXSvscEIiD4af-223" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-254" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-227" target="oLeti2AwXSvscEIiD4af-253" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-227" value="&lt;h2&gt;do_init_module&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="342" y="911" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-256" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-253" target="oLeti2AwXSvscEIiD4af-255" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-253" value="&lt;h2&gt;module_init(fn)&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="467" y="981" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-255" value="&lt;h2&gt;&lt;font style=&quot;font-weight: normal;&quot;&gt;执行具体的初始化函数&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="852.25" y="981" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-262" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-265" target="oLeti2AwXSvscEIiD4af-272" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-263" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-265" target="oLeti2AwXSvscEIiD4af-267" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-264" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-265" target="oLeti2AwXSvscEIiD4af-269" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-265" value="&lt;h2&gt;rmmod module.ko&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="42" y="1164" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-266" value="&lt;h1&gt;&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;内核模块卸载流程&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;（&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 22px;&quot;&gt;kernel/module.c&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px;&quot;&gt;&lt;font style=&quot;font-size: 26px;&quot;&gt;）&lt;/font&gt;&lt;/b&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="42" y="1110" width="1070" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-267" value="&lt;h2&gt;将要卸载的模块名称从用户空间传递到内核空积攒&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="147" y="1214" width="421" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-268" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-269" target="oLeti2AwXSvscEIiD4af-273" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-379" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-269" target="oLeti2AwXSvscEIiD4af-345" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-380" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-269" target="oLeti2AwXSvscEIiD4af-353" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-381" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-269" target="oLeti2AwXSvscEIiD4af-356" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-382" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-269" target="oLeti2AwXSvscEIiD4af-359" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-383" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-269" target="oLeti2AwXSvscEIiD4af-362" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-384" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-269" target="oLeti2AwXSvscEIiD4af-365" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-269" value="&lt;h2&gt;sys_delete_module&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="147" y="1264" width="201" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-272" value="&lt;h2&gt;终端执行卸载命令&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="847.25" y="1164" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-273" value="&lt;h2&gt;&lt;font style=&quot;&quot;&gt;内核模块卸载的入口点&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="847.25" y="1264" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-348" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-345" target="oLeti2AwXSvscEIiD4af-347" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-345" value="&lt;h2&gt;capable&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="278" y="1324" width="201" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-347" value="&lt;h2&gt;&lt;font style=&quot;font-weight: normal;&quot;&gt;检查权限&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="847.25" y="1324" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-352" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-353" target="oLeti2AwXSvscEIiD4af-354" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-353" value="&lt;h2&gt;strncpy_from_user&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="278" y="1374" width="201" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-354" value="&lt;h2&gt;&lt;font style=&quot;font-weight: normal;&quot;&gt;从用户空间复制模块名&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="847.25" y="1374" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-355" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-356" target="oLeti2AwXSvscEIiD4af-357" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-356" value="&lt;h2&gt;find_module&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="278" y="1424" width="201" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-357" value="&lt;h2&gt;&lt;font style=&quot;&quot;&gt;根据名称查找模块&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontColor=light-dark(#FF0000,#FFFFFF);" parent="1" vertex="1">
+          <mxGeometry x="847.25" y="1424" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-358" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-359" target="oLeti2AwXSvscEIiD4af-360" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-359" value="&lt;h2&gt;try_stop_module&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="278" y="1476" width="201" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-360" value="&lt;h2&gt;&lt;font style=&quot;&quot;&gt;停止模块运行（无引用）&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontColor=light-dark(#FF0000,#FFFFFF);" parent="1" vertex="1">
+          <mxGeometry x="847.25" y="1476" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-361" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-362" target="oLeti2AwXSvscEIiD4af-363" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-362" value="&lt;h2&gt;mod-&amp;gt;exit&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="278" y="1530" width="201" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-363" value="&lt;h2&gt;调用模块exit函数&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontColor=light-dark(#FF0000,#FFFFFF);" parent="1" vertex="1">
+          <mxGeometry x="847.25" y="1530" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-364" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oLeti2AwXSvscEIiD4af-365" target="oLeti2AwXSvscEIiD4af-366" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-365" value="&lt;h2&gt;free_module&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="278" y="1584" width="201" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oLeti2AwXSvscEIiD4af-366" value="&lt;h2&gt;&lt;font style=&quot;&quot;&gt;放模块内存和数据结构&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontColor=light-dark(#FF0000,#FFFFFF);" parent="1" vertex="1">
+          <mxGeometry x="847.25" y="1584" width="200" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

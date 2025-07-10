@@ -12,7 +12,7 @@ tags:
   - 录制问题
   - 故障排除
 相关文章:
-  - "[[../1_obsidian技巧/1_使用editing-toolbar插件卡顿]]"
+  - "[[../1_obsidian/1_使用editing-toolbar插件卡顿]]"
   - "[[1_Part1-BUG]]"
   - "[[1_Part1问题处理]]"
   - "[[2_Part2-BUG]]"

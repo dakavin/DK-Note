@@ -1,0 +1,224 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="jYIrKezd6__9459T_uZ2">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;strokeWidth=2;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="44.00000000000023" y="79" width="695" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" parent="BAyyfJF-Jhxf_yc68yaH-1" vertex="1">
+          <mxGeometry width="695" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-3" value="初始化调用的核心宏" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#82b366;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" parent="BAyyfJF-Jhxf_yc68yaH-2" vertex="1">
+          <mxGeometry width="175" height="101" as="geometry">
+            <mxRectangle width="175" height="101" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-4" value="&lt;div&gt;#define &lt;b&gt;__define_initcall&lt;/b&gt;(fn, id) \&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; static initcall_t __initcall_##fn##id __used \&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; __attribute__((__section__(&quot;.initcall&quot; #id &quot;.init&quot;))) = fn; \&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; LTO_REFERENCE_INITCALL(__initcall_##fn##id)&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=#82b366;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" parent="BAyyfJF-Jhxf_yc68yaH-2" vertex="1">
+          <mxGeometry x="175" width="520" height="101" as="geometry">
+            <mxRectangle width="520" height="101" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-8" value="&lt;h1&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;优先级宏定义分析&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="44" y="40" width="695" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-19" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(255, 255, 255));&quot;&gt;__define_initcall&lt;/font&gt;&lt;/span&gt;&lt;br style=&quot;font-size: 18px;&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: 400;&quot;&gt;将初始化函数按优先级顺序放入特定的ELF段中（id越大，执行越晚）&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="220" width="700" height="180" as="geometry">
+            <mxRectangle x="20" y="770" width="260" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-20" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;static initcall_t &lt;b&gt;__initcall_##fn##id : &lt;/b&gt;创建一个函数指针变量&lt;/span&gt;" style="text;strokeColor=#82b366;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="BAyyfJF-Jhxf_yc68yaH-19" vertex="1">
+          <mxGeometry y="50" width="700" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-21" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;##&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ：&lt;/b&gt;宏连接符，将fn和id连接成变量名&lt;/span&gt;" style="text;strokeColor=#82b366;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="BAyyfJF-Jhxf_yc68yaH-19" vertex="1">
+          <mxGeometry y="76" width="700" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-24" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;__used&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ：&lt;/b&gt;告诉编译器函数即使不用也不要优化掉&lt;/span&gt;" style="text;strokeColor=#82b366;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="BAyyfJF-Jhxf_yc68yaH-19" vertex="1">
+          <mxGeometry y="102" width="700" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-25" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;__section__(&quot;.initcall#&quot; #id &quot; .init&quot;) :&amp;nbsp; &lt;/b&gt;将函数指针放入特定ELF段&lt;/span&gt;" style="text;strokeColor=#82b366;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="BAyyfJF-Jhxf_yc68yaH-19" vertex="1">
+          <mxGeometry y="128" width="700" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-26" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;id=1 ---&amp;gt;&amp;nbsp; &amp;nbsp;.initcall1.init&lt;/b&gt;&lt;/span&gt;" style="text;strokeColor=#82b366;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="BAyyfJF-Jhxf_yc68yaH-19" vertex="1">
+          <mxGeometry y="154" width="700" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.161;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-2" target="BAyyfJF-Jhxf_yc68yaH-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-28" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="430" width="702.5" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-29" value="&lt;h1 style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;多个不同优先级的初始化定义&lt;/font&gt;&lt;/h1&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#b85450;strokeWidth=1;fillColor=#f8cecc;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="430" width="702.5" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-30" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define early_initcall(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, early)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//最早执行，在SMP执行前&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="466" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-32" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;#define pure_initcall(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 0)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//纯初始化，没有依赖关系&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="506" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-33" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;core_initcall&lt;/b&gt;(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 1)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//核心执行庭初始化&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="550" width="702.5" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-34" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define core_initcall_sync(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 1s)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="566" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-35" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;arch_initcall&lt;/b&gt;(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 3)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//架构相关初始化&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="622" width="702.5" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-36" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define arch_initcall_sync(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 3s)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="638" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.001;entryY=0.458;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55.54750000000013" y="1046.4879999999998" as="targetPoint" />
+            <mxPoint x="57.5" y="670" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="10" y="670" />
+              <mxPoint x="10" y="1047" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HNHw9Tws9ojpuE0x8ka7-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;curved=1;" edge="1" parent="1" source="BAyyfJF-Jhxf_yc68yaH-37" target="HNHw9Tws9ojpuE0x8ka7-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-37" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;subsys_initcall&lt;/b&gt;(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 4)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//子系统相关初始化&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="662" width="702.5" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-38" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define subsys_initcall_sync(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 4s)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="678" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-39" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;fs_initcall&lt;/b&gt;(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 5)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;//文件系统初始化&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="698" width="702.5" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-40" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define fs_initcall_sync(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 5s)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="714" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-41" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;rootfs_initcall&lt;/b&gt;(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, rootfs)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="738" width="702.5" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-42" target="BAyyfJF-Jhxf_yc68yaH-47" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="22" y="764" />
+              <mxPoint x="22" y="868" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;curved=1;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-42" target="BAyyfJF-Jhxf_yc68yaH-85" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-42" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;device_initcall&lt;/b&gt;(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 6)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//设备初始化&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="754" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-43" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define device_initcall_sync(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 6s)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="778" width="702.5" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-44" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;late_initcall&lt;/b&gt;(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 7)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//最晚执行的初始化&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="794" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-45" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define late_initcall_sync(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 7s)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="818" width="702.5" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;curved=1;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-47" target="BAyyfJF-Jhxf_yc68yaH-84" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="770" y="868" />
+              <mxPoint x="770" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-47" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define __initcall(fn) &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;device_initcall(fn)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="858" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-52" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;postcore_initcall&lt;/b&gt;(fn)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 2)&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;//核心初始化后的处理&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="586" width="702.5" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-53" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define postcore_initcall_sync(fn)&amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__define_initcall(fn, 2s)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="602" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-54" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.478;exitY=1.011;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.476;entryY=-0.005;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-26" target="BAyyfJF-Jhxf_yc68yaH-29" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="384.11000000000007" y="400.98800000000006" as="sourcePoint" />
+            <mxPoint x="384.0025" y="429.81999999999994" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-56" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="930" width="702.5" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;curved=1;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-57" target="BAyyfJF-Jhxf_yc68yaH-83" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="948" />
+              <mxPoint x="790" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-57" value="&lt;h1 style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;设备驱动的module_init&lt;/font&gt;&lt;/h1&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#9673a6;strokeWidth=1;fillColor=#e1d5e7;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="930" width="702.5" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-58" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;// 设备驱动程序使用的 module_init，实际使用的是 device_initcall&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="966" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-77" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#define &lt;b&gt;module_init&lt;/b&gt;(x)&amp;nbsp; &amp;nbsp; __initcall(x);&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="41.5" y="990" width="702.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.016;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-47" target="BAyyfJF-Jhxf_yc68yaH-57" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-81" value="&lt;h1 style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;平台相关驱动框架使用的优先级&lt;/font&gt;&lt;/h1&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#d6b656;strokeWidth=1;fillColor=#fff2cc;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="40.25" y="1030" width="702.5" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-82" target="BAyyfJF-Jhxf_yc68yaH-83" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-82" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;module_init宏展开分析&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="920" y="330" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-83" target="BAyyfJF-Jhxf_yc68yaH-84" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-83" value="&lt;h2&gt;&lt;font style=&quot;font-size: 16px; font-weight: normal;&quot;&gt;module_init(test)&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="915" y="399.5" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-84" target="BAyyfJF-Jhxf_yc68yaH-85" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-84" value="&lt;h2&gt;&lt;span style=&quot;font-size: 16px; font-weight: 400;&quot;&gt;__initcall(test)&lt;/span&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="915" y="470" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-85" target="BAyyfJF-Jhxf_yc68yaH-86" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-85" value="&lt;h2&gt;&lt;span style=&quot;font-size: 16px; font-weight: 400;&quot;&gt;device_initcall(test)&lt;/span&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="907.5" y="540" width="145" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-86" target="BAyyfJF-Jhxf_yc68yaH-88" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-86" value="&lt;h2&gt;&lt;span style=&quot;font-size: 16px; font-weight: 400;&quot;&gt;__define_initcall(test, 6)&lt;/span&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="893.75" y="610" width="172.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-88" target="BAyyfJF-Jhxf_yc68yaH-94" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-88" value="&lt;h2&gt;&lt;span style=&quot;font-size: 16px; font-weight: 400;&quot;&gt;__define_initcall(fn, id, .initcall##id)&lt;br&gt;&lt;br&gt;&lt;/span&gt;&lt;/h2&gt;&lt;h2&gt;&lt;span style=&quot;font-size: 16px; font-weight: 400;&quot;&gt;__define_initcall(test, 6, .initcall6)&lt;/span&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="835" y="676" width="290" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-94" value="&lt;h2&gt;&lt;div style=&quot;font-size: 16px; font-weight: 400; text-align: left;&quot;&gt;static initcall_t __initcall_##fn##id __used \&lt;/div&gt;&lt;div style=&quot;font-size: 16px; font-weight: 400; text-align: left;&quot;&gt;&amp;nbsp; &amp;nbsp; __attribute__((__section__(&quot;.initcall&quot; #id &quot;.init&quot;))) = fn; \&lt;br&gt;&lt;br&gt;static initcall_t __initcall test6 __used \&lt;br&gt;__attribute__((__section__(&quot;.initcall6.init))) = test&lt;/div&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="800" y="790" width="360" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.003;entryY=0.588;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" source="BAyyfJF-Jhxf_yc68yaH-2" target="BAyyfJF-Jhxf_yc68yaH-88" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BAyyfJF-Jhxf_yc68yaH-101" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="907.5000000000001" y="60" width="160" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="HNHw9Tws9ojpuE0x8ka7-1" value="&lt;h2&gt;&lt;font&gt;&lt;font style=&quot;&quot;&gt;Tips：&lt;/font&gt;&lt;font style=&quot;font-weight: normal;&quot;&gt;如果要其他优先级的init，直接使用对应的initcall即可，如sbusys_initcall&lt;/font&gt;&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fad9d5;strokeColor=#ae4132;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="817.5" y="230" width="325" height="54" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

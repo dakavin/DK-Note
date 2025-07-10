@@ -1,0 +1,527 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="9jn4soCzRcZjagRPFvNM">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="189" width="680" height="401" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-1">
+          <mxGeometry width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-3" value="&lt;b&gt;作用&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-2">
+          <mxGeometry width="130" height="30" as="geometry">
+            <mxRectangle width="130" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-4" value="设备树的&quot;官方说明书&quot;，Linux内核中所有设备树绑定（bindings）的详细文档" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-2">
+          <mxGeometry x="130" width="550" height="30" as="geometry">
+            <mxRectangle width="550" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-5" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-1">
+          <mxGeometry y="30" width="680" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-6" value="&lt;b&gt;存放路径&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-5">
+          <mxGeometry width="130" height="31" as="geometry">
+            <mxRectangle width="130" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-7" value="内核源码/Documentation/devicetree/bindings，一般采用yaml格式" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-5">
+          <mxGeometry x="130" width="550" height="31" as="geometry">
+            <mxRectangle width="550" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-8" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-1">
+          <mxGeometry y="61" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-9" value="&lt;b&gt;目录详解&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-8">
+          <mxGeometry width="130" height="270" as="geometry">
+            <mxRectangle width="130" height="270" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-10" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-8">
+          <mxGeometry x="130" width="550" height="270" as="geometry">
+            <mxRectangle width="550" height="270" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-84" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-1">
+          <mxGeometry y="331" width="680" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-85" value="&lt;b&gt;使用方案&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-84">
+          <mxGeometry width="130" height="70" as="geometry">
+            <mxRectangle width="130" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-86" value="1、确定设备类型，从而确定目录名&lt;br&gt;2、找到具体芯片的文档&lt;br&gt;3、查看文档内容，如Required、Optional、Example" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-84">
+          <mxGeometry x="130" width="550" height="70" as="geometry">
+            <mxRectangle width="550" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-20" value="&lt;h1&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;设备树文档（bingdings）&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="360" y="150" width="680" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-21" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fillColor=none;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="490" y="251" width="550" height="263" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-22" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry width="550" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-23" value="目录名" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-22">
+          <mxGeometry width="120" height="19" as="geometry">
+            <mxRectangle width="120" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-24" value="包含内容" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-22">
+          <mxGeometry x="120" width="247" height="19" as="geometry">
+            <mxRectangle width="247" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-25" value="典型设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-22">
+          <mxGeometry x="367" width="183" height="19" as="geometry">
+            <mxRectangle width="183" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-26" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="19" width="550" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-27" value="arm" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-26">
+          <mxGeometry width="120" height="18" as="geometry">
+            <mxRectangle width="120" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-28" value="ARM体系结构相关的设备和驱动程序" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-26">
+          <mxGeometry x="120" width="247" height="18" as="geometry">
+            <mxRectangle width="247" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-29" value="ARM处理器、ARM特定控制器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-26">
+          <mxGeometry x="367" width="183" height="18" as="geometry">
+            <mxRectangle width="183" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-30" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="37" width="550" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-31" value="clock" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-30">
+          <mxGeometry width="120" height="22" as="geometry">
+            <mxRectangle width="120" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-32" value="时钟设备和时钟控制器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-30">
+          <mxGeometry x="120" width="247" height="22" as="geometry">
+            <mxRectangle width="247" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-33" value="PLL、分频器、时钟管理单元" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-30">
+          <mxGeometry x="367" width="183" height="22" as="geometry">
+            <mxRectangle width="183" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-34" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="59" width="550" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-35" value="dma" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-34">
+          <mxGeometry width="120" height="18" as="geometry">
+            <mxRectangle width="120" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-36" value="直接内存访问控制器和设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-34">
+          <mxGeometry x="120" width="247" height="18" as="geometry">
+            <mxRectangle width="247" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-37" value="DMA控制器、DMA通道" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-34">
+          <mxGeometry x="367" width="183" height="18" as="geometry">
+            <mxRectangle width="183" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-38" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="77" width="550" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-39" value="gpio" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-38">
+          <mxGeometry width="120" height="19" as="geometry">
+            <mxRectangle width="120" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-40" value="通用输入输出控制器和设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-38">
+          <mxGeometry x="120" width="247" height="19" as="geometry">
+            <mxRectangle width="247" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-41" value="GPIO控制器、GPIO扩展器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-38">
+          <mxGeometry x="367" width="183" height="19" as="geometry">
+            <mxRectangle width="183" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-42" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="96" width="550" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-43" value="i2c" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-42">
+          <mxGeometry width="120" height="18" as="geometry">
+            <mxRectangle width="120" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-44" value="I2C总线和设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-42">
+          <mxGeometry x="120" width="247" height="18" as="geometry">
+            <mxRectangle width="247" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-45" value="I2C控制器、I2C从设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-42">
+          <mxGeometry x="367" width="183" height="18" as="geometry">
+            <mxRectangle width="183" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-46" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="114" width="550" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-47" value="interrupt-controller" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-46">
+          <mxGeometry width="120" height="19" as="geometry">
+            <mxRectangle width="120" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-48" value="中断控制器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-46">
+          <mxGeometry x="120" width="247" height="19" as="geometry">
+            <mxRectangle width="247" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-49" value="GIC、GPIO中断控制器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-46">
+          <mxGeometry x="367" width="183" height="19" as="geometry">
+            <mxRectangle width="183" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-50" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="133" width="550" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-51" value="media" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-50">
+          <mxGeometry width="120" height="19" as="geometry">
+            <mxRectangle width="120" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-52" value="多媒体设备和驱动程序" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-50">
+          <mxGeometry x="120" width="247" height="19" as="geometry">
+            <mxRectangle width="247" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-53" value="摄像头、视频编解码器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-50">
+          <mxGeometry x="367" width="183" height="19" as="geometry">
+            <mxRectangle width="183" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-54" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="152" width="550" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-55" value="mfd" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-54">
+          <mxGeometry width="120" height="18" as="geometry">
+            <mxRectangle width="120" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-56" value="多功能设备子系统和设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-54">
+          <mxGeometry x="120" width="247" height="18" as="geometry">
+            <mxRectangle width="247" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-57" value="PMIC、多功能芯片" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-54">
+          <mxGeometry x="367" width="183" height="18" as="geometry">
+            <mxRectangle width="183" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-58" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="170" width="550" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-59" value="networking" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-58">
+          <mxGeometry width="120" height="19" as="geometry">
+            <mxRectangle width="120" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-60" value="网络设备和驱动程序" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-58">
+          <mxGeometry x="120" width="247" height="19" as="geometry">
+            <mxRectangle width="247" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-61" value="以太网控制器、PHY芯片" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-58">
+          <mxGeometry x="367" width="183" height="19" as="geometry">
+            <mxRectangle width="183" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-62" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="189" width="550" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-63" value="power" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-62">
+          <mxGeometry width="120" height="18" as="geometry">
+            <mxRectangle width="120" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-64" value="电源管理子系统和设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-62">
+          <mxGeometry x="120" width="247" height="18" as="geometry">
+            <mxRectangle width="247" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-65" value="电源域控制器、电池管理" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-62">
+          <mxGeometry x="367" width="183" height="18" as="geometry">
+            <mxRectangle width="183" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-66" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="207" width="550" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-67" value="spi" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-66">
+          <mxGeometry width="120" height="19" as="geometry">
+            <mxRectangle width="120" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-68" value="SPI总线和设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-66">
+          <mxGeometry x="120" width="247" height="19" as="geometry">
+            <mxRectangle width="247" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-69" value="SPI控制器、SPI设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-66">
+          <mxGeometry x="367" width="183" height="19" as="geometry">
+            <mxRectangle width="183" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-70" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="226" width="550" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-71" value="usb" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-70">
+          <mxGeometry width="120" height="18" as="geometry">
+            <mxRectangle width="120" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-72" value="USB控制器和设备" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-70">
+          <mxGeometry x="120" width="247" height="18" as="geometry">
+            <mxRectangle width="247" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-73" value="USB主机控制器、USB PHY" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-70">
+          <mxGeometry x="367" width="183" height="18" as="geometry">
+            <mxRectangle width="183" height="18" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-74" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-21">
+          <mxGeometry y="244" width="550" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-75" value="video" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-74">
+          <mxGeometry width="120" height="19" as="geometry">
+            <mxRectangle width="120" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-76" value="视频设备和驱动程序" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-74">
+          <mxGeometry x="120" width="247" height="19" as="geometry">
+            <mxRectangle width="247" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-77" value="显示控制器、LCD面板" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-74">
+          <mxGeometry x="367" width="183" height="19" as="geometry">
+            <mxRectangle width="183" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-87" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#b85450;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="360" y="649" width="680" height="451" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-88" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-89" value="&lt;b&gt;查看DTB数据&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-88">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-90" value="&lt;b&gt;hexdump -C /sys/firmware/fdt&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-88">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-91" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="30" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-92" value="&lt;b&gt;----------------------&lt;/b&gt;&lt;b style=&quot;text-align: left;&quot;&gt;----------------&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-91">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-93" value="&lt;b&gt;----------------------------------------------------------------------------------------------&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-91">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-94" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="60" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-95" value="查看设备树根目录" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-94">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-96" value="&lt;b&gt;ls /sys/firmware/devicetree/base/&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-94">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-97" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="90" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-98" value="查看某个节点的属性" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-97">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-99" value="&lt;b&gt;cat /sys/firmware/devicetree/base/chosen/bootargs&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-97">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-100" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="120" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-101" value="查看根节点下所有子节点" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-100">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-102" value="&lt;b&gt;ls -la /sys/firmware/devicetree/base/&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-100">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-103" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="150" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-104" value="查看某个设备节点的所有属性" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-103">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-105" value="&lt;b&gt;ls -la /sys/firmware/devicetree/base/serial@50000000/&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-103">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-107" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="180" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-108" value="查看字符串类型的属性" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-107">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-109" value="&lt;b&gt;cat /sys/firmware/devicetree/base/serial@50000000/compatible&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-107">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-110" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="210" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-111" value="查看数值类型的属性-显示原始字节" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-110">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-112" value="&lt;b&gt;hexdump -C /sys/firmware/devicetree/base/serial@50000000/reg&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-110">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-113" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="240" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-114" value="递归查看整个设备树结构" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-113">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-115" value="&lt;b&gt;find /sys/firmware/devicetree/base/ -type f | head -20&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-113">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-116" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="270" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-117" value="&lt;b&gt;----------------------&lt;/b&gt;&lt;b style=&quot;text-align: left;&quot;&gt;----------------&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-116">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-118" value="&lt;b&gt;----------------------------------------------------------------------------------------------&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-116">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-119" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="300" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-120" value="查看所有platform_device" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-119">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-121" value="&lt;b&gt;ls /sys/devices/platform/&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-119">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-122" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="330" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-123" value="查看特定设备的详细信息" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-122">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-124" value="&lt;b&gt;ls /sys/devices/platform/12c80000.i2c/&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-122">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-125" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="360" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-126" value="查看设备的of_node" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-125">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-127" value="&lt;b&gt;ls /sys/devices/platform/12c80000.i2c/of_node/&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-125">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-128" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="390" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-129" value="&lt;b&gt;----------------------&lt;/b&gt;&lt;b style=&quot;text-align: left;&quot;&gt;----------------&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-128">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-130" value="&lt;b&gt;----------------------------------------------------------------------------------------------&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-128">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-131" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-87">
+          <mxGeometry y="420" width="680" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-132" value="便捷调试链接" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-131">
+          <mxGeometry width="230" height="30" as="geometry">
+            <mxRectangle width="230" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-133" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px; color: rgb(255, 102, 102);&quot;&gt;ls /proc/device-tree&lt;/font&gt;&lt;/b&gt;&amp;nbsp; &amp;nbsp;本质就是 ls&amp;nbsp;/sys/firmware/devicetree/base" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="ULmgJ1kWImtNJEmJD-8s-131">
+          <mxGeometry x="230" width="450" height="30" as="geometry">
+            <mxRectangle width="450" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-106" value="&lt;h1&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;设备树调试手段&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="360" y="610" width="680" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="ULmgJ1kWImtNJEmJD-8s-143" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="370" y="420" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

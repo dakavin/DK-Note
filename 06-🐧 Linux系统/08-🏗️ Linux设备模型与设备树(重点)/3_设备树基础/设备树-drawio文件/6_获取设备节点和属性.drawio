@@ -1,0 +1,313 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="lf4GfefFbn6b2HVsSaDv">
+    <mxGraphModel dx="2066" dy="2855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="msSILXjHhwfkysqtLNNp-41" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="59" width="800" height="351" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-42" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-41">
+          <mxGeometry width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-43" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;by节点名称&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-42">
+          <mxGeometry width="110" height="40" as="geometry">
+            <mxRectangle width="110" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-44" value="struct device_node *&lt;b&gt;of_find_node_by_name&lt;/b&gt;(struct device_node *from， const char *name);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-42">
+          <mxGeometry x="110" width="690" height="40" as="geometry">
+            <mxRectangle width="690" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-49" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-41">
+          <mxGeometry y="40" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-50" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;by节点路径&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-49">
+          <mxGeometry width="110" height="40" as="geometry">
+            <mxRectangle width="110" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-51" value="&lt;div&gt;struct device_node *&lt;b&gt;of_find_node_by_path&lt;/b&gt;(const char *path)&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-49">
+          <mxGeometry x="110" width="690" height="40" as="geometry">
+            <mxRectangle width="690" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-52" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-41">
+          <mxGeometry y="80" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-53" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;by节点类型&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-52">
+          <mxGeometry width="110" height="40" as="geometry">
+            <mxRectangle width="110" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-54" value="struct device_node *&lt;b&gt;of_find_node_by_type&lt;/b&gt;(struct device_node *from,const char *type)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-52">
+          <mxGeometry x="110" width="690" height="40" as="geometry">
+            <mxRectangle width="690" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-55" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-41">
+          <mxGeometry y="120" width="800" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-56" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;by节点类型和&lt;br&gt;compatible&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-55">
+          <mxGeometry width="110" height="61" as="geometry">
+            <mxRectangle width="110" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-57" value="struct device_node *&lt;b&gt;of_find_compatible_node&lt;/b&gt;(struct device_node *from, const char *type, const char *compatible);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-55">
+          <mxGeometry x="110" width="690" height="61" as="geometry">
+            <mxRectangle width="690" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-58" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-41">
+          <mxGeometry y="181" width="800" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-59" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;by匹配表&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-58">
+          <mxGeometry width="110" height="70" as="geometry">
+            <mxRectangle width="110" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-60" value="static inline struct device_node *&lt;b&gt;of_find_matching_node_and_match&lt;/b&gt;(struct device_node *from, const struct of_device_id *matches, const struct of_device_id **match)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-58">
+          <mxGeometry x="110" width="690" height="70" as="geometry">
+            <mxRectangle width="690" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-61" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-41">
+          <mxGeometry y="251" width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-62" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;find 父节点&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-61">
+          <mxGeometry width="110" height="40" as="geometry">
+            <mxRectangle width="110" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-63" value="struct device_node *&lt;b&gt;of_get_parent&lt;/b&gt;(const struct device_node *node)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-61">
+          <mxGeometry x="110" width="690" height="40" as="geometry">
+            <mxRectangle width="690" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-64" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-41">
+          <mxGeometry y="291" width="800" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-65" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;find 子节点&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-64">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-66" value="struct device_node *&lt;b&gt;of_get_next_child&lt;/b&gt;(const struct device_node *node, struct device_node *prev)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-64">
+          <mxGeometry x="110" width="690" height="60" as="geometry">
+            <mxRectangle width="690" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-48" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;&quot;&gt;of函数获取设备节点&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; font-weight: normal; font-size: 16px; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;前面已学习&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;device_node结构体&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-weight: normal; font-size: 16px; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;，即下面的函数&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;返回值都是device_node/NULL&lt;/span&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="200" width="800" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-73" value="&lt;b&gt;from：&lt;/b&gt;查找的起始节点，NULL-根节点开始，&lt;b&gt;name：&lt;/b&gt;匹配节点name属性字符串" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="64" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-42" target="msSILXjHhwfkysqtLNNp-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-76" value="&lt;b&gt;path：&lt;/b&gt;查查找节点的绝对路径，/ 开头，非 / 开头-从aliases节点查找" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="104" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-49" target="msSILXjHhwfkysqtLNNp-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-78" value="&lt;b&gt;from：&lt;/b&gt;同上，&lt;b&gt;type：&lt;/b&gt;匹查找的节点类型（device_node -&amp;gt; type）" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="144" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-52" target="msSILXjHhwfkysqtLNNp-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-80" value="&lt;b&gt;from：&lt;/b&gt;同上，&lt;b&gt;type：&lt;/b&gt;同上，&lt;b&gt;compatible：&lt;/b&gt;匹配节点compatible的属性列表" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="194.5" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-55" target="msSILXjHhwfkysqtLNNp-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-82" value="&lt;b&gt;from：&lt;/b&gt;同上，&lt;b&gt;matches：&lt;/b&gt;指向of_device_id匹配表数组制作&lt;br&gt;&lt;b&gt;match：&lt;/b&gt;用于返回实际匹配到的of_device_id匹配表" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="250" width="500" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-58" target="msSILXjHhwfkysqtLNNp-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-84" value="&lt;b&gt;node：&lt;/b&gt;获取父节点的设备节点" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="315" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-61" target="msSILXjHhwfkysqtLNNp-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-86" value="&lt;b&gt;node：&lt;/b&gt;获取子节点的设备节点，&lt;b&gt;prev：&lt;/b&gt;明确前一个子节点可填写" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="365" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-64" target="msSILXjHhwfkysqtLNNp-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-88" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#82b366;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="489" width="800" height="541" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-89" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-88">
+          <mxGeometry width="800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-90" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;通用属性查找&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-89">
+          <mxGeometry width="110" height="40" as="geometry">
+            <mxRectangle width="110" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-91" value="struct property *&lt;b&gt;of_find_property&lt;/b&gt;(const struct device_node *np, const char *name, int *lenp)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-89">
+          <mxGeometry x="110" width="690" height="40" as="geometry">
+            <mxRectangle width="690" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-92" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-88">
+          <mxGeometry y="40" width="800" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-93" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;获取属性&lt;br&gt;元素数量&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-92">
+          <mxGeometry width="110" height="61" as="geometry">
+            <mxRectangle width="110" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-94" value="int &lt;b&gt;of_property_count_elems_of_size&lt;/b&gt;(const struct device_node *np, const char *propname, int elem_size)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-92">
+          <mxGeometry x="110" width="690" height="61" as="geometry">
+            <mxRectangle width="690" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-95" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-88">
+          <mxGeometry y="101" width="800" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-96" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;索引读取整型（&lt;/b&gt;&lt;b&gt;例&lt;/b&gt;&lt;b&gt;u32）&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-95">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-97" value="int &lt;b&gt;of_property_read_u32_index&lt;/b&gt;(const struct device_node *np, const char *propname, u32 index, u32 *out_value)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-95">
+          <mxGeometry x="110" width="690" height="60" as="geometry">
+            <mxRectangle width="690" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-98" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-88">
+          <mxGeometry y="161" width="800" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-99" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;读取变长&lt;br&gt;整型数组&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-98">
+          <mxGeometry width="110" height="100" as="geometry">
+            <mxRectangle width="110" height="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-100" value="int &lt;b&gt;of_property_read_variable_u32_array&lt;/b&gt;(const struct device_node *np, const char *propname, u32 *out_values, size_t sz_min, size_t sz_max)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-98">
+          <mxGeometry x="110" width="690" height="100" as="geometry">
+            <mxRectangle width="690" height="100" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-101" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-88">
+          <mxGeometry y="261" width="800" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-102" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;读取固定&lt;br&gt;数组&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-101">
+          <mxGeometry width="110" height="70" as="geometry">
+            <mxRectangle width="110" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-103" value="int of_property_read_u32_array(const struct device_node *np, const char *propname, u32 *out_values, size_t sz)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-101">
+          <mxGeometry x="110" width="690" height="70" as="geometry">
+            <mxRectangle width="690" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-104" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-88">
+          <mxGeometry y="331" width="800" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-105" value="&lt;b&gt;基础字符串&lt;br&gt;读取&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-104">
+          <mxGeometry width="110" height="70" as="geometry">
+            <mxRectangle width="110" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-106" value="int &lt;b&gt;of_property_read_string&lt;/b&gt;(const struct device_node *np, const char *propname, const char **out_string)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-104">
+          <mxGeometry x="110" width="690" height="70" as="geometry">
+            <mxRectangle width="690" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-107" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-88">
+          <mxGeometry y="401" width="800" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-108" value="&lt;b style=&quot;color: rgb(0, 0, 0);&quot;&gt;索引字符串&lt;br&gt;读取&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-107">
+          <mxGeometry width="110" height="80" as="geometry">
+            <mxRectangle width="110" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-109" value="int &lt;b&gt;of_property_read_string_index&lt;/b&gt;(struct device_node *np, const char *propname, int index, const char **out_string)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-107">
+          <mxGeometry x="110" width="690" height="80" as="geometry">
+            <mxRectangle width="690" height="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-127" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-88">
+          <mxGeometry y="481" width="800" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-128" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;属性存在检查&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="msSILXjHhwfkysqtLNNp-127">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-129" value="static inline bool &lt;b&gt;of_property_read_bool&lt;/b&gt;(const struct device_node *np, const char *propname)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="msSILXjHhwfkysqtLNNp-127">
+          <mxGeometry x="110" width="690" height="60" as="geometry">
+            <mxRectangle width="690" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-110" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;&quot;&gt;of函数获取节点属性&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px; font-weight: normal;&quot;&gt;前面已学习&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;property结构体&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px; font-weight: normal;&quot;&gt;，即下面的函数&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;返回值大部分是property/NULL&lt;/span&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="200" y="430" width="800" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-111" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;name：&lt;/b&gt;属性名称，&lt;b&gt;lenp：&lt;/b&gt;输出参数，返回属性值大小" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="494" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" source="msSILXjHhwfkysqtLNNp-89" target="msSILXjHhwfkysqtLNNp-111" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-126" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;OF函数的声明&lt;/b&gt;都可以在 &lt;b&gt;内核源码/include/linux/of.h&lt;/b&gt; 中找到&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="430" width="500" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-133" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;propname：&lt;/b&gt;属性名称，&lt;b&gt;elem_size：&lt;/b&gt;单个元素的大小&lt;br&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-元素数量，失败-0" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="534.5" width="500" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-92" target="msSILXjHhwfkysqtLNNp-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-135" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;propname：&lt;/b&gt;属性名称，&lt;b&gt;index：&lt;/b&gt;索引值&lt;b&gt;，out_value：&lt;/b&gt;输出参数&lt;br&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-指定索引的u32类型数据，失败-错误码" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="595" width="500" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-95" target="msSILXjHhwfkysqtLNNp-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-137" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;propname：&lt;/b&gt;属性名称，&lt;b&gt;out_value：&lt;/b&gt;输出参数&lt;br&gt;&lt;b&gt;SZ_min：&lt;/b&gt;数组最小值&lt;b&gt;，SZ_max：&lt;/b&gt;数组最大值&lt;br&gt;&lt;div&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-0，失败-错误码&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="665" width="500" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-98" target="msSILXjHhwfkysqtLNNp-137">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-139" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;propname：&lt;/b&gt;属性名称，&lt;b&gt;out_value：&lt;/b&gt;输出参数&lt;br&gt;&lt;b&gt;sz：&lt;/b&gt;指定读取的数据个数&lt;br&gt;&lt;div&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-0，失败-错误码&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="755" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-140" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-101" target="msSILXjHhwfkysqtLNNp-139">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-141" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;propname：&lt;/b&gt;属性名称，&lt;b&gt;out_string：&lt;/b&gt;输出参数&lt;br&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-0，失败-错误码" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="830" width="500" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-142" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-104" target="msSILXjHhwfkysqtLNNp-141">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-143" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;propname：&lt;/b&gt;属性名称，&lt;b&gt;out_string：&lt;/b&gt;输出参数，&lt;b&gt;index：&lt;/b&gt;索引&lt;br&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-0，失败-错误码" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="905" width="500" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-107" target="msSILXjHhwfkysqtLNNp-143">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-145" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;propname：&lt;/b&gt;属性名称&lt;br&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-属性存在，失败-属性不存在" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="975" width="500" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-146" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="msSILXjHhwfkysqtLNNp-127" target="msSILXjHhwfkysqtLNNp-145">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="msSILXjHhwfkysqtLNNp-147" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="9.3" width="250" height="40.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

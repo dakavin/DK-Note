@@ -1,0 +1,146 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="hvhz0mEbT-xumnUmbzxd">
+    <mxGraphModel dx="2066" dy="2855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-4" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;2、异常级别管理&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="245.32999999999998" y="186.75" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-116" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OzN_1pdyWGVlcitIOYUE-5" target="OzN_1pdyWGVlcitIOYUE-113" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-5" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;EL0（用户级别）&lt;/b&gt;：最低权限级别，用于&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;b&gt;普通应用程序执行&lt;/b&gt;&lt;/font&gt;，不能直接访问硬件资源，类比普通员工只能处理日常业务&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="419" y="70" width="530" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OzN_1pdyWGVlcitIOYUE-6" target="OzN_1pdyWGVlcitIOYUE-114" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-6" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;EL1（内核级别）：&lt;/b&gt;用于&lt;b&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;操作系统内核执行&lt;/font&gt;&lt;/b&gt;，拥有管理硬件资源的权限，可以访问系统寄存器，类比部门经理可以调配部门资源&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="419" y="140" width="530" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="OzN_1pdyWGVlcitIOYUE-7" target="OzN_1pdyWGVlcitIOYUE-115" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-7" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;EL2（Hypervisor级别）：&lt;/b&gt;用于&lt;b&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;虚拟化环境中的监管程序&lt;/font&gt;&lt;/b&gt;，可以管理多个虚拟机，控制EL1的行为，类比总经理可以管理多个部门&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="419" y="213.5" width="530" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-8" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;EL3（Secure Monitor级别）：&lt;/b&gt;最高权限级别，用于安全相关操作，管理安全状态切换，类比董事长拥有最高决策权，可以处理最机密的安全事务&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="419" y="290" width="530" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-10" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;3、异常分类&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="245.32999999999998" y="535" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-11" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;同步异常&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="419.6700000000001" y="370" width="850" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-12" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;1. 系统调用异常：程序需要内核服务时主动触发的异常&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;b&gt;如 open函数，by svc指令触发系统调用异常，完成用户态到内核态的切换&lt;/b&gt;&lt;/span&gt;" style="text;strokeColor=#d79b00;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="OzN_1pdyWGVlcitIOYUE-11" vertex="1">
+          <mxGeometry y="30" width="850" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-13" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;2. 内存访问异常：最常见的同步异常类型&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;如 访问数据时页错误异常导致的数据&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;中止&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;和 取指令时的页错误异常导致的指令中止&lt;/span&gt;" style="text;strokeColor=#d79b00;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="OzN_1pdyWGVlcitIOYUE-11" vertex="1">
+          <mxGeometry y="80" width="850" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-14" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;3. 其他同步异常：对齐异常、未定义异常、调试异常&lt;/span&gt;" style="text;strokeColor=#d79b00;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="OzN_1pdyWGVlcitIOYUE-11" vertex="1">
+          <mxGeometry y="130" width="850" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-22" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;概念&lt;/b&gt;：存储&lt;b style=&quot;&quot;&gt;异常处理程序的内存地址数组&lt;/b&gt;，CPU会在这个数组找到对应的处理程序&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="418" y="760" width="852" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-26" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="388.67" y="780" width="29" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-113" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;使用&lt;b&gt;svc（Supervisor Call）&lt;/b&gt;指令陷入异常级别1&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="70" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-114" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;使用&lt;b&gt;hvc（Hypervisor Call）&lt;/b&gt;指令陷入异常级别2&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="140" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-115" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;使用&lt;b&gt;smc（Secure Monitor Call）&lt;/b&gt;指令陷入异常级别1&lt;/span&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="1000" y="213.5" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-119" value="&lt;font color=&quot;#ff6666&quot;&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;异步异常&lt;/span&gt;&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="418.00000000000006" y="560" width="850" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-120" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;1. 普通中断（IRQ）：普通优先级的中断，大部分外设使用的中断类型&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;如&amp;nbsp;网卡接收到数据包、键盘按键、定时器超时等&lt;/span&gt;" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="OzN_1pdyWGVlcitIOYUE-119" vertex="1">
+          <mxGeometry y="30" width="850" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-121" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;2. 快速中断（FIQ）：响应速度更快，优先级更高，有专用的寄存器组&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;FIQ通常用于对时间要求极其严格的场合，比如实时控制系统，Linux一般用IRQ多一些&lt;/span&gt;" style="text;strokeColor=#d79b00;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="OzN_1pdyWGVlcitIOYUE-119" vertex="1">
+          <mxGeometry y="80" width="850" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-122" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;3. 系统错误（SError）：硬件错误触发的异常&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;如&amp;nbsp;内存ECC错误、总线传输错误和缓存一致性错误等&lt;/span&gt;" style="text;strokeColor=#d79b00;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="OzN_1pdyWGVlcitIOYUE-119" vertex="1">
+          <mxGeometry y="130" width="850" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-123" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="391.67" y="93.5" width="29" height="226.5" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-144" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" source="OzN_1pdyWGVlcitIOYUE-124" target="OzN_1pdyWGVlcitIOYUE-125" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-124" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1、异常中断关系&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="244.33999999999997" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" source="OzN_1pdyWGVlcitIOYUE-125" target="OzN_1pdyWGVlcitIOYUE-120" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1290" y="20" />
+              <mxPoint x="1290" y="615" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-128" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;b&gt;异常中断的关系&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="OzN_1pdyWGVlcitIOYUE-127" vertex="1" connectable="0">
+          <mxGeometry x="0.2569" y="2" relative="1" as="geometry">
+            <mxPoint x="-52" y="-270" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-125" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;ARM64体系结构中，中断是异常的一个子集&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="420.67" width="530" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-129" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;4、异常向量表&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="245.32999999999998" y="850" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-131" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b style=&quot;&quot;&gt;演进&lt;/b&gt;：&lt;br&gt;- &lt;b&gt;ARMv7架构&lt;/b&gt;（每个表项4字节，只存放一条跳转指令，功能简单，需要额外跳转表）&lt;br&gt;- &lt;b&gt;ARMv8架构&lt;/b&gt;（表项扩展到128字节，可以存放32条指令，增强处理能力，指令位宽还是32bit的）&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="417.67" y="830" width="852" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-132" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;代码地址：&lt;/b&gt;arch/arm64/kernel/entry.S&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="418" y="940" width="852" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-133" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="392.66" y="380" width="29" height="350" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-134" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;5、异常处理流程&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="239.66999999999996" y="1130" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-136" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;1. 硬件检测到异常条件、完成当前指令执行&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="417.67" y="1010" width="852" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-137" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;2. 保存返回地址到ELR_ELx寄存器，保存处理器状态到&lt;/b&gt;SPSR_ELx寄存器，切换异常级别&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="418" y="1070" width="852" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-138" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;3. 计算异常向量表地址，跳转到向量表入口&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="418.67" y="1130" width="852" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-139" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;4. 获取对应处理函数，执行异常处理，保存/恢复上下文&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="417" y="1189.5" width="852" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-140" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;5. 执行eret指令、恢复处理器状态&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="416" y="1250" width="852" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-143" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;ARM异常体系和&lt;br&gt;中断&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="40" y="540" width="175.34" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-145" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="387" y="1030" width="29" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="OzN_1pdyWGVlcitIOYUE-146" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="215.34" y="20" width="29" height="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="DTLsZqfn-k8iYOhoRjgL-1" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="263.15999999999997" y="350" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="DTLsZqfn-k8iYOhoRjgL-2" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="263.15999999999997" y="650" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

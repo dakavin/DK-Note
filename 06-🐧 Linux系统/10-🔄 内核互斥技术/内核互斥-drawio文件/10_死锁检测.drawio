@@ -1,0 +1,181 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="k8iEVthY29ktoOehdlwr">
+    <mxGraphModel dx="2891" dy="1716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-148" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="70" width="1480" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-1" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1、常见死锁&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="194.33999999999992" y="180" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="J7h7OO_r9uY9Mso1Eg91-2" target="J7h7OO_r9uY9Mso1Eg91-114">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-2" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;AA死锁（中断相关）&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.46" y="155" width="221.54" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-3" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;死锁检测&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="465" width="115.34" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-4" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#1BA1E2;strokeWidth=2;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="165.34" y="200" width="29" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-7" value="&lt;h2&gt;2、lockdep&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="194.3399999999999" y="405" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-8" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;检测示例：查看具体文章内容即可&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.62000000000006" y="505" width="618.34" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-9" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="339.33" y="330" width="29" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="J7h7OO_r9uY9Mso1Eg91-58" target="J7h7OO_r9uY9Mso1Eg91-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-58" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;AA死锁（重复获取同一把锁）&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.62" y="105" width="221.38" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-59" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="339.33" y="120" width="29" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="J7h7OO_r9uY9Mso1Eg91-61" target="J7h7OO_r9uY9Mso1Eg91-115">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-61" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;AB-BA死锁（经典死锁）&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="370.32" y="205" width="219.68" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-62" value="&lt;h2&gt;3、lockdep&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;实现机制&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="194.33999999999992" y="604" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-63" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;将锁的使用上下文进行分类：&lt;/b&gt;硬中断、软中断、进程、硬中断读锁、软中断读锁等&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.8399999999999" y="560" width="654.2" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-64" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;每个锁都有一个状态描述符：struct lockdep_map&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.3299999999999" y="606" width="654.71" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-65" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;依赖关系记录：&lt;/b&gt;维护一个全局的锁依赖图，lock_list&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.3299999999999" y="652" width="654.71" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-67" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="340.79" y="576" width="29" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-102" value="&lt;h2&gt;5、lockdep&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp;最佳实践&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="194.3399999999999" y="780" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-103" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;在开发阶段启用&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.8399999999999" y="710" width="654.2" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-104" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;为锁提供有意义的名称&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.3299999999999" y="756" width="654.71" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-105" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;理解锁的层次结构，明确定义锁的获取顺序&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.3299999999999" y="802" width="654.71" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-106" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="340.79" y="726" width="29" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-110" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="207.83000000000004" y="310" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="J7h7OO_r9uY9Mso1Eg91-112" target="J7h7OO_r9uY9Mso1Eg91-116">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-112" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;复杂的AB-BA死锁&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="370.32" y="255" width="219.68" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-113" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;1. 重复申请同一个自旋锁；2. 先申请读锁，再申请写锁；3. 递归函数重复获取同一个锁&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="640" y="105" width="630" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-114" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;进程获取自旋锁没有禁止硬中断，硬中断抢占后，尝试获取同一个锁&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="640" y="155" width="630" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-115" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;A获取锁1后尝试获取锁2，B获取锁2后尝试获取锁1&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="640" y="205" width="630" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-116" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;A获取锁1后尝试获取锁2，B获取锁2后尝试获取锁1，&lt;b&gt;A和B可能在不同CPU上执行&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="640" y="255" width="630" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-121" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Linux内核提供的，可以在开发阶段动态检测死锁风险的工具&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.46000000000004" y="310" width="618.34" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="J7h7OO_r9uY9Mso1Eg91-122" target="J7h7OO_r9uY9Mso1Eg91-123">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-122" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;检测死锁的方式&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.46000000000004" y="357.19" width="618.34" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-123" value="&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;记录锁的获取历史&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;：跟踪每个锁的获取和释放&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;构建锁依赖图&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;：分析锁之间的依赖关系&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;检测环形依赖&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;：发现可能导致死锁的环形等待&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;运行时验证&lt;/b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;：在每次锁操作时检查是否违反规则&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="328.79" width="410" height="92.81" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="J7h7OO_r9uY9Mso1Eg91-125" target="J7h7OO_r9uY9Mso1Eg91-126">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-125" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;内核配置中启动，&lt;b&gt;CONFIG_LOCKDEP&lt;/b&gt;即可，其他选项如下&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;CONFIG_PROVE_LOCKING：&lt;/b&gt;允许内核报告死锁问题&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;CONFIG_DEBUG_LOCK_ALLOC：&lt;/b&gt;检查内核是否错误地释放被持有的锁&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;CONFIG_DEBUG_LOCKING_API_SELFTESTS：&lt;/b&gt;内核启动时运行自测程序&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.46" y="405" width="618.34" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-126" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;打开CONFIG_PROVE_LOCKING或&lt;br&gt;CONFIG_DEBUG_LOCK_ALLOC时&lt;br&gt;会&lt;b&gt;自动启用CONFIG_LOCKDEP&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="435" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-128" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;struct lock_map&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="541" width="390" height="194" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-129" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;struct lock_class_key&amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&lt;b&gt;key&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// 锁的唯一标识&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-128">
+          <mxGeometry y="30" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-130" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;struct lock_class* &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;class_cache&lt;/b&gt;[XX];&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-128">
+          <mxGeometry y="56" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-131" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;const char&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&lt;b&gt;name&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; // 锁的名称&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-128">
+          <mxGeometry y="82" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-132" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;int&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;cpu&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // 最后使用的CPU&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-128">
+          <mxGeometry y="108" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-135" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;unsigned long&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;ip&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// 获取锁的指令地址&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-128">
+          <mxGeometry y="134" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-133" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-128">
+          <mxGeometry y="160" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-134" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;无回调函数&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-128">
+          <mxGeometry y="168" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.006;entryY=0.101;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="J7h7OO_r9uY9Mso1Eg91-64" target="J7h7OO_r9uY9Mso1Eg91-128">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-137" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;struct lock_list&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="756" width="390" height="168" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-138" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;struct list_head&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;entry&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; // 链表节点&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-137">
+          <mxGeometry y="30" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-139" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;struct lock_class&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;*&lt;b&gt;class&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp;// 指向锁类的指针&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-137">
+          <mxGeometry y="56" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-140" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;struct stack_trace&amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;trace&lt;/b&gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; // 调用栈跟踪信息&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-137">
+          <mxGeometry y="82" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-141" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;int&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;distance&lt;/b&gt;;&amp;nbsp; &amp;nbsp;// 在依赖图中的距离&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-137">
+          <mxGeometry y="108" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-143" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-137">
+          <mxGeometry y="134" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-144" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;无回调函数&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="J7h7OO_r9uY9Mso1Eg91-137">
+          <mxGeometry y="142" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-145" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.083;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="J7h7OO_r9uY9Mso1Eg91-65" target="J7h7OO_r9uY9Mso1Eg91-137">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-146" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;避免在锁内调用可能睡眠的函数&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="368.3299999999999" y="848" width="654.71" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="J7h7OO_r9uY9Mso1Eg91-147" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="207.83000000000004" y="495" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

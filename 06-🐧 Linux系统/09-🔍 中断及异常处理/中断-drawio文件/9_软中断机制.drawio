@@ -1,0 +1,412 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="TXjgn62VueooQiTr7TdR">
+    <mxGraphModel dx="2583" dy="1501" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uS4rpRzAuMaIUso82iS9-4" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;2、注册机制&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="406.3399999999999" y="304.25000000000006" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-248" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="uS4rpRzAuMaIUso82iS9-5" target="uS4rpRzAuMaIUso82iS9-247">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-5" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;void&amp;nbsp;&lt;/span&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;open_softirq&lt;/b&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;(int nr, void (*action)(struct softirq_action *));&lt;br&gt;&lt;b&gt;nr&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/b&gt;：软中断的类型，填入右边类型的值即可，0~9&lt;br&gt;&lt;b&gt;action&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/b&gt;：软中断处理函数指针&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="583.34" y="262" width="618" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-6" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;3、设置(非触发)&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="404.3399999999999" y="497.4100000000001" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-7" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="552.67" y="278.5" width="29" height="91.5" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-8" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1、概述&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="406.3399999999999" y="115" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-9" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;中断处理程序在&lt;b&gt;开启中断&lt;/b&gt;的情况下，用于执行耗时的部分，&lt;b&gt;可以被硬中断抢占&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="581.66" y="40" width="620.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-10" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="551.67" y="424.81" width="29" height="185.19" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-11" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;软中断&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="210" y="664.8" width="165.34" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-12" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="375.34000000000003" y="160" width="29" height="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-15" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;内核定义了&lt;b&gt;softirq_vec(&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;软中断向量表&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;)&lt;/b&gt;，元素是&lt;b&gt;struct softirq_action&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="581.99" y="90" width="620" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-16" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="552.66" y="60" width="29" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-29" value="&lt;b style=&quot;font-size: 16px;&quot;&gt;设置软中断（非触发），内部实现是原子的&lt;/b&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;br&gt;void raise_softirq(unsigned int nr)&lt;br&gt;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="410" width="618.34" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-30" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;函数链路&lt;br&gt;raise_softirq --&amp;gt; raise_softirq_irqoff&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;--&amp;gt;&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;__raise_softirq_irqoff&lt;/b&gt;&lt;/span&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="480" width="618.34" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-31" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;可以设置的阶段&lt;/b&gt;&lt;br&gt;1.&amp;nbsp;硬中断处理函数中（最典型）&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;2.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px;&quot;&gt;软中断处理函数中（设置其他软中断）&lt;br&gt;3.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px;&quot;&gt;进程上下文中&lt;br&gt;4.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px;&quot;&gt;定时器回调中&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="549.81" width="618.34" height="105.19" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-56" value="&lt;h2&gt;4、触发或执行&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="404.3399999999999" y="797.5999999999999" width="147.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-57" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="551.67" y="995.19" width="29" height="164.81" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-58" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;内核执行软中断主要有以下3种情况&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="680.38" width="618.34" height="29.62" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-59" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;1. 硬中断返回时（irq_exit）&lt;br&gt;&amp;nbsp; &amp;nbsp; irq_exit --&amp;gt; __irq_exit_rcu ---&amp;gt; invoke_softirq ---&amp;gt;&amp;nbsp;__do_softirq&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="730" width="618.34" height="54.81" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-60" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;font&gt;2. 软中断线程：&lt;/font&gt;&lt;/b&gt;每个处理器都有一个，名称是 ksoftirqd/ 后面跟着处理器编号，使用SCHED_NORMAL调度策略，优先级是120&lt;br&gt;&lt;br&gt;&lt;b&gt;作用：&lt;/b&gt;保证系统负载很高的情况下，软中断也能得到及时处理&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="807.6" width="618.34" height="82.4" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-61" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;3. &lt;b&gt;开启软中断&lt;/b&gt;时，即调用&lt;b&gt;local_bh_enable&lt;/b&gt;函数时&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.6700000000001" y="910" width="618.34" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-82" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;softirq_action，只有一个action(函数指针字段)，指向具体的处理函数&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="581.99" y="140" width="620" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-83" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1275" y="229.0000000000001" width="610" height="426" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-84" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-85" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-84">
+          <mxGeometry width="170" height="31" as="geometry">
+            <mxRectangle width="170" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-86" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;高优先级软中断&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-84">
+          <mxGeometry x="170" width="440" height="31" as="geometry">
+            <mxRectangle width="440" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-87" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="31" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-88" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;HI_SOFTIRQ = 0&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-87">
+          <mxGeometry width="170" height="30" as="geometry">
+            <mxRectangle width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-89" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;高优先级的小任务，用于紧急处理&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-87">
+          <mxGeometry x="170" width="440" height="30" as="geometry">
+            <mxRectangle width="440" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-90" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="61" width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-91" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;TIMER_SOFTIRQ&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-90">
+          <mxGeometry width="170" height="31" as="geometry">
+            <mxRectangle width="170" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-92" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;定时器软中断，处理定时器到期事件&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-90">
+          <mxGeometry x="170" width="440" height="31" as="geometry">
+            <mxRectangle width="440" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-97" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="92" width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-98" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-97">
+          <mxGeometry width="170" height="31" as="geometry">
+            <mxRectangle width="170" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-99" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;网络相关软中断&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-97">
+          <mxGeometry x="170" width="440" height="31" as="geometry">
+            <mxRectangle width="440" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-100" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="123" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-101" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;NET_TX_SOFTIRQ&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-100">
+          <mxGeometry width="170" height="30" as="geometry">
+            <mxRectangle width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-102" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;网络栈发送报文软中断&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-100">
+          <mxGeometry x="170" width="440" height="30" as="geometry">
+            <mxRectangle width="440" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-103" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="153" width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-104" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;NET_RX_SOFTIRQ&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-103">
+          <mxGeometry width="170" height="31" as="geometry">
+            <mxRectangle width="170" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-105" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;网络栈接收报文软中断&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-103">
+          <mxGeometry x="170" width="440" height="31" as="geometry">
+            <mxRectangle width="440" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-106" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="184" width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-107" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-106">
+          <mxGeometry width="170" height="31" as="geometry">
+            <mxRectangle width="170" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-108" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;存储和调度软中断&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-106">
+          <mxGeometry x="170" width="440" height="31" as="geometry">
+            <mxRectangle width="440" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-109" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="215" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-110" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;BLOCK_SOFTIRQ&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-109">
+          <mxGeometry width="170" height="30" as="geometry">
+            <mxRectangle width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-111" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;块设备软中断，处理磁盘I/O完成&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-109">
+          <mxGeometry x="170" width="440" height="30" as="geometry">
+            <mxRectangle width="440" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-112" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="245" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-113" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;IRQ_POLL_SOFTIRQ&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-112">
+          <mxGeometry width="170" height="30" as="geometry">
+            <mxRectangle width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-114" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;支持I/O轮询的块设备软中断&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-112">
+          <mxGeometry x="170" width="440" height="30" as="geometry">
+            <mxRectangle width="440" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-115" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="275" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-116" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;SCHED_SOFTIRQ&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-115">
+          <mxGeometry width="170" height="30" as="geometry">
+            <mxRectangle width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-117" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;调度软中断，用于处理器之间的负载均衡&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-115">
+          <mxGeometry x="170" width="440" height="30" as="geometry">
+            <mxRectangle width="440" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-145" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="305" width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-146" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-145">
+          <mxGeometry width="170" height="31" as="geometry">
+            <mxRectangle width="170" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-147" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;其他功能软中断&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-145">
+          <mxGeometry x="170" width="440" height="31" as="geometry">
+            <mxRectangle width="440" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-148" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="336" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-149" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span&gt;TASKLET_SOFTIRQ&lt;/span&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#f8cecc;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#b85450;fontSize=14;fontStyle=1" vertex="1" parent="uS4rpRzAuMaIUso82iS9-148">
+          <mxGeometry width="170" height="30" as="geometry">
+            <mxRectangle width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-150" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;低优先级的小任务&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#f8cecc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#b85450;fontSize=14;fontStyle=1" vertex="1" parent="uS4rpRzAuMaIUso82iS9-148">
+          <mxGeometry x="170" width="440" height="30" as="geometry">
+            <mxRectangle width="440" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-151" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="366" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-152" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;HRTIMER_SOFTIRQ&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-151">
+          <mxGeometry width="170" height="30" as="geometry">
+            <mxRectangle width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-153" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;高精度定时器（已废弃）&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-151">
+          <mxGeometry x="170" width="440" height="30" as="geometry">
+            <mxRectangle width="440" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-154" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-83">
+          <mxGeometry y="396" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-155" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;RCU_SOFTIRQ&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-154">
+          <mxGeometry width="170" height="30" as="geometry">
+            <mxRectangle width="170" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-156" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;RCU（读拷贝更新）软中断&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-154">
+          <mxGeometry x="170" width="440" height="30" as="geometry">
+            <mxRectangle width="440" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-96" value="&lt;h1&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;软中断类型&lt;/span&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1275" y="200" width="610" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-168" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="uS4rpRzAuMaIUso82iS9-118" target="uS4rpRzAuMaIUso82iS9-96">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-118" value="&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;软中断分类&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="581.99" y="190" width="128.01" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-157" value="&lt;b&gt;注意：&lt;/b&gt;软中断处理函数可以在多个处理器上同时执行，所以需要&lt;b&gt;使用锁来保护&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="583.3399999999999" y="350" width="618" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-158" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;struct softirq_action&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontSize=16;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="90" width="280" height="90" as="geometry">
+            <mxRectangle x="20" y="90" width="400" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-159" value="无字段" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-158">
+          <mxGeometry y="30" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-166" value="" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontSize=16;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-158">
+          <mxGeometry y="56" width="280" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-167" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;void (*&lt;b&gt;action&lt;/b&gt;)(struct softirq_action *)&lt;/font&gt;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=16;fillColor=none;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-158">
+          <mxGeometry y="64" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-169" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.007;entryY=0.156;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="uS4rpRzAuMaIUso82iS9-82" target="uS4rpRzAuMaIUso82iS9-158">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-171" value="&lt;h2&gt;5、抢占计数器 （控制软中断）&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="406.34" y="1052.6" width="147.33" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-174" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1" source="uS4rpRzAuMaIUso82iS9-172" target="uS4rpRzAuMaIUso82iS9-173">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-172" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;概念：&lt;/b&gt;每个&lt;b&gt;线程&lt;/b&gt;的&lt;b&gt;thread_info结构&lt;/b&gt;都有一个抢占计数器&lt;b&gt;int preempt_count&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="985.5699999999999" width="618.34" height="29.62" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-173" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;0：可以被&lt;b&gt;其他线程抢占&lt;/b&gt;&lt;br&gt;1：不可被&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;其他线程&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;抢占&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="980.38" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-237" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1" source="uS4rpRzAuMaIUso82iS9-175" target="uS4rpRzAuMaIUso82iS9-220">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-175" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;preempt_count：32位整数，&lt;/b&gt;bit位划分看右表&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="1029.9899999999998" width="618.34" height="29.62" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-177" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#9673a6;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="1072.88" width="530" height="209.47999999999956" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-181" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-177">
+          <mxGeometry width="530" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-182" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;0~7&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-181">
+          <mxGeometry width="170" height="47" as="geometry">
+            <mxRectangle width="170" height="47" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-183" value="&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;抢占禁用计数，每次调用preempt_disabLe(）递增，&lt;/span&gt;&lt;span style=&quot;font-size: 16px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;preempt_enable（）递减&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-181">
+          <mxGeometry x="170" width="360" height="47" as="geometry">
+            <mxRectangle width="360" height="47" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-184" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-177">
+          <mxGeometry y="47" width="530" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-185" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;8~15&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-184">
+          <mxGeometry width="170" height="50" as="geometry">
+            <mxRectangle width="170" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-186" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;软中断&lt;/b&gt;上下文计数，表示当前是否在软中断处理中，支持嵌套&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-184">
+          <mxGeometry x="170" width="360" height="50" as="geometry">
+            <mxRectangle width="360" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-190" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-177">
+          <mxGeometry y="97" width="530" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-191" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;16~27&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-190">
+          <mxGeometry width="170" height="50" as="geometry">
+            <mxRectangle width="170" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-192" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;硬中断&lt;/b&gt;上下文计数，表示当前是否在硬中断处理中，支持嵌套&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-190">
+          <mxGeometry x="170" width="360" height="50" as="geometry">
+            <mxRectangle width="360" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-193" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-177">
+          <mxGeometry y="147" width="530" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-194" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;28~31&lt;/font&gt;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-193">
+          <mxGeometry width="170" height="31" as="geometry">
+            <mxRectangle width="170" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-195" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;不可屏蔽中断计数&lt;/b&gt;，表示当前是否在NMI处理中&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-193">
+          <mxGeometry x="170" width="360" height="31" as="geometry">
+            <mxRectangle width="360" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-234" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-177">
+          <mxGeometry y="178" width="530" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-235" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;21&lt;/b&gt;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-234">
+          <mxGeometry width="170" height="31" as="geometry">
+            <mxRectangle width="170" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-236" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;网络栈接收报文软中断&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="uS4rpRzAuMaIUso82iS9-234">
+          <mxGeometry x="170" width="360" height="31" as="geometry">
+            <mxRectangle width="360" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-220" value="&lt;h1&gt;&lt;span style=&quot;font-size: 18px;&quot;&gt;preempt_count bit位分析&lt;/span&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="1043.88" width="530" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-238" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;识别当前CPU执行情况：in_irq、in_sofrirq、in_interrupt、in_task、in_nmi等&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="581.66" y="1079.9999999999998" width="618.34" height="29.62" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-239" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;font&gt;&lt;font color=&quot;#ff0000&quot;&gt;重要结论：&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;软中断可以被硬中断打断，不过如何打断，软中断由于计数原因，只会执行一次&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="581.66" y="1130" width="618.34" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-240" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="551.67" y="695.19" width="29" height="244.81" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-241" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="551.67" y="1209.62" width="29" height="50.38" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-242" value="&lt;h2&gt;6、软中断开关&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="406.34" y="1214.62" width="147.33" height="40.38" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-243" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;禁止软中断：local_bh_disable， &lt;/b&gt;只能禁用当前处理器的软中断&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="1200" width="618.34" height="29.62" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-244" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;开启软中断：local_bh_enable&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="580.67" y="1244.4199999999998" width="618.34" height="29.62" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-247" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;strong style=&quot;&quot;&gt;一旦注册，全局有效，统一执行&lt;/strong&gt;！&lt;br&gt;即一个类型只能绑定死函数了&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="737.6" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-249" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="850" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-250" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="422.16999999999996" y="600" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="uS4rpRzAuMaIUso82iS9-251" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="422.16999999999996" y="190" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

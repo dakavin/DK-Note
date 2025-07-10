@@ -1,0 +1,239 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="5h4J5uamGmEi7DNVwQ6_">
+    <mxGraphModel dx="1722" dy="1001" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CiH82gb4F1CUQtViZD1s-8" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=default;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="79" width="660" height="291" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-9" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-8">
+          <mxGeometry width="660" height="181" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-10" value="&lt;b&gt;ELF头部&lt;br&gt;（ELF HEADER）&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-9">
+          <mxGeometry width="161" height="181" as="geometry">
+            <mxRectangle width="161" height="181" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-11" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;位于文件起始位置，就像文件的&quot;身份证&quot;，描述整个ELF文件的基本信息&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;可以使用命令：&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;i&gt;readelf -h xxx.ko&lt;/i&gt;&lt;/font&gt;&lt;/b&gt; 查看&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;关键字段说明&lt;/span&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;e_type：标识文件类型为ET_REL（可重定位文件）&lt;/li&gt;&lt;li&gt;e_machine：指定目标架构（如x86、ARM）&lt;/li&gt;&lt;li&gt;e_shoff：指向节区头部表（Section Header Table）的偏移量&lt;/li&gt;&lt;li&gt;e_shnum：节区头部表中的条目数量&lt;/li&gt;&lt;li&gt;e_shentsize：每个节区头部表项的字节大小&lt;/li&gt;&lt;li&gt;e_flags：处理器相关标志&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-9">
+          <mxGeometry x="161" width="499" height="181" as="geometry">
+            <mxRectangle width="499" height="181" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-12" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-8">
+          <mxGeometry y="181" width="660" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-13" value="&lt;b&gt;程序头部表&lt;br&gt;（Program Header Table）&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-12">
+          <mxGeometry width="161" height="50" as="geometry">
+            <mxRectangle width="161" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-14" value="&lt;ul&gt;&lt;li&gt;通常为空或无效，主要用于可执行文件或共享库(so文件)&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-12">
+          <mxGeometry x="161" width="499" height="50" as="geometry">
+            <mxRectangle width="499" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-15" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-8">
+          <mxGeometry y="231" width="660" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-16" value="&lt;b&gt;节区头部表&lt;br&gt;（Section Header Table）&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-15">
+          <mxGeometry width="161" height="60" as="geometry">
+            <mxRectangle width="161" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-17" value="&lt;ul&gt;&lt;li&gt;&amp;nbsp;KO文件的核心结构，定义了各个节区（Section）的属性&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;可以使用命令：&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;i&gt;readelf -S xxx.ko&lt;/i&gt;&lt;/font&gt;&lt;/b&gt;&amp;nbsp;查看&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-15">
+          <mxGeometry x="161" width="499" height="60" as="geometry">
+            <mxRectangle width="499" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-27" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;KO文件结构&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px; font-weight: normal;&quot;&gt;KO文件（Kernel Object）是符号ELF（Executable and Linking Format）标准的可重定位目标文件&lt;/font&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="660" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-28" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#82b366;fontSize=14;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="50" y="430" width="640" height="443.0000000000008" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-29" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-28">
+          <mxGeometry width="640" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-30" value="&lt;b&gt;代码与数据节区&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-29">
+          <mxGeometry width="130" height="90" as="geometry">
+            <mxRectangle width="130" height="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-31" value="&lt;ul&gt;&lt;li&gt;&lt;b&gt;.text&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt;：模块的主要执行代码（包括我们写的init和exit函数）&lt;/li&gt;&lt;li&gt;&lt;b&gt;.data&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/b&gt;：已初始化的全局变量&lt;/li&gt;&lt;li&gt;&lt;b&gt;.rodata&lt;/b&gt;： 只读数据（如字符串常量）&lt;/li&gt;&lt;li&gt;&lt;b&gt;.bss&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt;：未初始化的全局变量（实际不占文件空间）&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-29">
+          <mxGeometry x="130" width="510" height="90" as="geometry">
+            <mxRectangle width="510" height="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-32" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-28">
+          <mxGeometry y="90" width="640" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-33" value="&lt;b&gt;模块元信息节区&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-32">
+          <mxGeometry width="130" height="60" as="geometry">
+            <mxRectangle width="130" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-34" value="&lt;ul&gt;&lt;li&gt;&lt;b&gt;.modinfo&lt;/b&gt;：存储模块的元信息，如作者、许可证、依赖模块等&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;可以使用命令：&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;&lt;i&gt;modinfo xxx.ko&lt;/i&gt;&lt;/font&gt;&lt;/b&gt;&amp;nbsp;查看&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-32">
+          <mxGeometry x="130" width="510" height="60" as="geometry">
+            <mxRectangle width="510" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-35" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-28">
+          <mxGeometry y="150" width="640" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-36" value="&lt;b&gt;符号与重定位节区&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-35">
+          <mxGeometry width="130" height="110" as="geometry">
+            <mxRectangle width="130" height="110" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-37" value="&lt;ul&gt;&lt;li&gt;&lt;b&gt;.symtab&lt;/b&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;：符号表，&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;记录模块中定义的函数/变量及引用的外部符号（如内核API）&lt;/li&gt;&lt;li&gt;&lt;b&gt;.strtab&lt;/b&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;：字符串表，存储符号名称、节区名称等字符串&lt;/li&gt;&lt;li&gt;&lt;b&gt;.rel.*.text/.data&lt;/b&gt;&amp;nbsp; &amp;nbsp; ：重定位表，记录代码或数据中需要修正的地址偏移&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-35">
+          <mxGeometry x="130" width="510" height="110" as="geometry">
+            <mxRectangle width="510" height="110" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-40" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-28">
+          <mxGeometry y="260" width="640" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-41" value="&lt;b&gt;版本校验节区&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-40">
+          <mxGeometry width="130" height="50" as="geometry">
+            <mxRectangle width="130" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-42" value="&lt;ul&gt;&lt;li&gt;&lt;b&gt;_versions&amp;nbsp; &lt;/b&gt;: 包含内核版本校验信息，确保模块兼容当前内核的符号版本&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-40">
+          <mxGeometry x="130" width="510" height="50" as="geometry">
+            <mxRectangle width="510" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-43" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-28">
+          <mxGeometry y="310" width="640" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-44" value="&lt;b&gt;模块生命周期节区&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-43">
+          <mxGeometry width="130" height="63" as="geometry">
+            <mxRectangle width="130" height="63" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-45" value="&lt;ul&gt;&lt;li&gt;&lt;b&gt;.init.text&lt;/b&gt;&amp;nbsp; &amp;nbsp;：&amp;nbsp; 模块初始化代码（如module_init宏定义的函数）&lt;/li&gt;&lt;li&gt;&lt;b&gt;.exit.text&lt;/b&gt;&amp;nbsp; ：&amp;nbsp; 模块卸载代码（如module_exit宏定义的函数）&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-43">
+          <mxGeometry x="130" width="510" height="63" as="geometry">
+            <mxRectangle width="510" height="63" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-46" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-28">
+          <mxGeometry y="373" width="640" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-47" value="&lt;b&gt;模块结构体节区&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-46">
+          <mxGeometry width="130" height="70" as="geometry">
+            <mxRectangle width="130" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-48" value="&lt;ul&gt;&lt;li&gt;&lt;b&gt;.gnu.linkonce.this_module&lt;/b&gt;：存储struct module结构体实例，描述模块的元信息（如模块名、导出符号表等）&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-46">
+          <mxGeometry x="130" width="510" height="70" as="geometry">
+            <mxRectangle width="510" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-38" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;关键节区详解&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="50" y="400" width="640" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="CiH82gb4F1CUQtViZD1s-15" target="CiH82gb4F1CUQtViZD1s-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="CiH82gb4F1CUQtViZD1s-50" target="CiH82gb4F1CUQtViZD1s-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-50" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;KO文件的特殊机制&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="785" y="400" width="170" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="CiH82gb4F1CUQtViZD1s-52" target="CiH82gb4F1CUQtViZD1s-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-52" value="&lt;h2&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;1、依赖管理：&lt;/font&gt;&lt;font style=&quot;font-weight: normal; font-size: 14px;&quot;&gt;.modeinf中的depends=字段声明了依赖的其他模块&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="740" y="529" width="260" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="CiH82gb4F1CUQtViZD1s-32" target="CiH82gb4F1CUQtViZD1s-52">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="CiH82gb4F1CUQtViZD1s-56" target="CiH82gb4F1CUQtViZD1s-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-56" value="&lt;h2&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;2、动态重定位：&lt;span style=&quot;font-weight: normal;&quot;&gt;加载模块时，重定位表(&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;.rel.*)会修正代码和数据中的位置&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="740" y="614" width="260" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="CiH82gb4F1CUQtViZD1s-35" target="CiH82gb4F1CUQtViZD1s-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="635.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-59" value="&lt;h2&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;3、版本控制：&lt;span style=&quot;font-weight: normal;&quot;&gt;校验符号的CRC值，防止模块与不兼容的内核版本一起运行&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="740" y="693" width="260" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="CiH82gb4F1CUQtViZD1s-40" target="CiH82gb4F1CUQtViZD1s-59">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="725" y="715" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-66" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="770.0000000000001" y="20" width="160" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-67" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#d6b656;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;strokeWidth=2;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="720" y="210" width="290" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-68" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-67">
+          <mxGeometry width="290" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-69" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;查看ELF头部&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-68">
+          <mxGeometry width="105" height="41" as="geometry">
+            <mxRectangle width="105" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-70" value="readelf -h example.ko" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-68">
+          <mxGeometry x="105" width="185" height="41" as="geometry">
+            <mxRectangle width="185" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-71" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-67">
+          <mxGeometry y="41" width="290" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-72" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;查看节区头部表&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-71">
+          <mxGeometry width="105" height="41" as="geometry">
+            <mxRectangle width="105" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-73" value="readelf -S example.ko" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-71">
+          <mxGeometry x="105" width="185" height="41" as="geometry">
+            <mxRectangle width="185" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-74" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-67">
+          <mxGeometry y="82" width="290" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-75" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;查看符号表&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-74">
+          <mxGeometry width="105" height="39" as="geometry">
+            <mxRectangle width="105" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-76" value="readelf -s example.ko" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-74">
+          <mxGeometry x="105" width="185" height="39" as="geometry">
+            <mxRectangle width="185" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-81" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-67">
+          <mxGeometry y="121" width="290" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-82" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;查看重定位表&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=16;fontStyle=1;align=left;spacing=4;spacingTop=0;spacingLeft=0;spacingBottom=0;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-81">
+          <mxGeometry width="105" height="39" as="geometry">
+            <mxRectangle width="105" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-83" value="readelf -r example.ko" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=0;overflow=hidden;strokeColor=inherit;fontSize=16;spacing=4;spacingTop=0;spacingBottom=0;strokeWidth=1;" vertex="1" parent="CiH82gb4F1CUQtViZD1s-81">
+          <mxGeometry x="105" width="185" height="39" as="geometry">
+            <mxRectangle width="185" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="CiH82gb4F1CUQtViZD1s-80" value="&lt;h1&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;内核模块结构分析API&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="720" y="171" width="290" height="39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,657 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="AyFMUgNPCCXgkEQ0xlti">
+    <mxGraphModel dx="2431" dy="1413" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-382" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="620" width="1360" height="790" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-381" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="64.5" width="1360" height="545.5" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-376" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="830" width="610" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="640" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-19" value="&lt;div style=&quot;line-height: 10%;&quot;&gt;&lt;h1 style=&quot;line-height: 10%;&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 18px; line-height: 10%;&quot;&gt;自旋锁核心实现代码&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;/div&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeWidth=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="640" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-21" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;unsigned long tmp;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="150" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-23" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;u32 newval;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="170" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-26" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;// arch/arm/include/asm/spinlock.h&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="110" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-28" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;arch_spinlock_t lockval;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="190" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-29" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="109" width="610" height="271" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-30" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-31" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;输出操作数&lt;/font&gt;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-30">
+          <mxGeometry width="150" height="31" as="geometry">
+            <mxRectangle width="150" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-32" value="%0 - lockval，%1 - newval，%2 - tmp" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-30">
+          <mxGeometry x="150" width="460" height="31" as="geometry">
+            <mxRectangle width="460" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-33" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry y="31" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-34" value="&lt;b&gt;输出操作数&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-33">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-35" value="%3 - 锁变量地址，%4 - 立即数常量" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-33">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-36" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry y="61" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-37" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;汇编指令分析&lt;/font&gt;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-36">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-38" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-36">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-39" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry y="91" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-40" value="&lt;b&gt;#interrupt-cells&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-39">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-41" value="该控制器管理的中断，使用interrupts属性时，u32的个数" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-39">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-42" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry y="121" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-43" value="&lt;span style=&quot;font-weight: 700; text-align: left;&quot;&gt;ldrex %0, [%3]&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-42">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-44" value="&lt;b&gt;独占加载指令&lt;/b&gt;，加载%3(锁)到%0，表示当前内存地址独占访问" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-42">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-45" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry y="151" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-46" value="&lt;b&gt;add %1, %0, %4&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-45">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-47" value="将%0和%4相加，存储到%1，相当于newval(票号)+1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-45">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-48" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry y="181" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-49" value="&lt;b&gt;strex %2, %1, [%3]&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-48">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-50" value="&lt;b&gt;独占存储指令&lt;/b&gt;，%1的值存储到地址%3，操作结果存储在%2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-48">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-188" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry y="211" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-189" value="&lt;b&gt;teq %2, #0&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-188">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-190" value="测试是否相同，检查返回值%2，一样是0，表示成功" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-188">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-191" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-29">
+          <mxGeometry y="241" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-192" value="&lt;b&gt;bne 1b&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-191">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-193" value="跳转指令，如果%2不是0，失败，跳转到1指令去" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-191">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-51" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;汇编代码分析&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="810" y="80" width="610" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-53" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;static inline void &lt;b&gt;arch_spin_lock&lt;/b&gt;(arch_spinlock_t *lock) {&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="130" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-161" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;prefetchw(&amp;amp;lock-&amp;gt;slock);&amp;nbsp; &amp;nbsp; // 预取锁变量到缓存&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="210" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-163" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;__asm__ __volatile__(&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="250" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-223" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-164" target="_HkzGitfnTXO_-6m-vzi-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-164" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&quot;1: &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;ldrex   %0, [%3]\n&quot;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;// 1. 取票，lockval = lock -&amp;gt; slock&lt;/span&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="270" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-224" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-165" target="_HkzGitfnTXO_-6m-vzi-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-165" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&quot;&lt;/b&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;add     %1, %0, %4\n&quot;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/b&gt;// 2.取票机号码+1, newval = lockval + (1&amp;lt;&amp;lt;TICKET_SHIFT)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="290" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-225" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-166" target="_HkzGitfnTXO_-6m-vzi-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-166" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&quot;&lt;/b&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;strex   %2, %1, [%3]\n&quot;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/b&gt;// 3.新号码写回, lock-&amp;gt;slock = newval&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="310" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-226" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-167" target="_HkzGitfnTXO_-6m-vzi-188">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-167" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&quot;&lt;/b&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;teq     %2, #0\n&quot;&lt;/b&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 4.检查写入是否成功&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="330" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-227" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-168" target="_HkzGitfnTXO_-6m-vzi-191">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-168" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&quot;&lt;/b&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;bne     1b&quot;&lt;/b&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-weight: bold; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 5.失败则重新取票&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="350" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-169" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;: &quot;=&amp;amp;r&quot; (lockval), &quot;=&amp;amp;r&quot; (newval), &quot;=&amp;amp;r&quot; (tmp)&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="372" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-170" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;: &quot;r&quot; (&amp;amp;lock-&amp;gt;slock), &quot;I&quot; (1 &amp;lt;&amp;lt; TICKET_SHIFT)&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="392" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-171" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;: &quot;cc&quot;);&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="412" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-173" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;while (lockval.tickets.next != lockval.tickets.owner) {&amp;nbsp; // 拿到的号 == 叫号&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="452" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-230" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-174" target="_HkzGitfnTXO_-6m-vzi-201">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-174" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px;&quot;&gt;&lt;b&gt;wfe&lt;/b&gt;();&amp;nbsp; &amp;nbsp; // 6. 还没轮到，先休息一下&lt;/span&gt;&lt;/blockquote&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="472" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-229" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-175" target="_HkzGitfnTXO_-6m-vzi-204">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-175" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;lockval.tickets.owner = READ_ONCE(lock-&amp;gt;tickets.owner);&amp;nbsp; // 7. 看一眼叫号&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="492" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-176" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="512" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-177" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 运行到这里，表示手上的号码就是叫号&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="532" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-178" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;}&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="572" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-228" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;curved=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-187" target="_HkzGitfnTXO_-6m-vzi-207">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-187" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;smp_mb();&amp;nbsp; &amp;nbsp; // 在获取锁后和释放锁前，使用内存屏障&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="552" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-194" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="426" width="610" height="174" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-195" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-194">
+          <mxGeometry width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-196" value="&lt;b&gt;预取优化&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-195">
+          <mxGeometry width="150" height="31" as="geometry">
+            <mxRectangle width="150" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-197" value="prefetchw指令将锁变量预存到CPU缓存，减少访问延迟" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-195">
+          <mxGeometry x="150" width="460" height="31" as="geometry">
+            <mxRectangle width="460" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-198" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-194">
+          <mxGeometry y="31" width="610" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-199" value="&lt;b&gt;独占指令&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-198">
+          <mxGeometry width="150" height="33" as="geometry">
+            <mxRectangle width="150" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-200" value="ldrex和strex，独占内存地址，避免对票号并发访问" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-198">
+          <mxGeometry x="150" width="460" height="33" as="geometry">
+            <mxRectangle width="460" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-201" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-194">
+          <mxGeometry y="64" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-202" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;WFE机制&lt;/font&gt;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-201">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-203" value="等待事件，CPU进入低功耗状态" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-201">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-204" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-194">
+          <mxGeometry y="94" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-205" value="&lt;b&gt;READ_ONCE&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-204">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-206" value="每次都从内存中&lt;b&gt;读取最新值&lt;/b&gt;，防止编译器优化为寄存器变量" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-204">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-207" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-194">
+          <mxGeometry y="124" width="610" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-208" value="&lt;span style=&quot;font-weight: 700; text-align: left;&quot;&gt;smp_mb&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-207">
+          <mxGeometry width="150" height="50" as="geometry">
+            <mxRectangle width="150" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-209" value="临界区的内存访问不会重排到锁操作之外&lt;br&gt;其他CPU能及时看到锁状态的变化" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-207">
+          <mxGeometry x="150" width="460" height="50" as="geometry">
+            <mxRectangle width="460" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-222" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;代码分析&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="810" y="397" width="610" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-231" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="100" y="630" width="640" height="610" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-232" value="&lt;div style=&quot;line-height: 10%;&quot;&gt;&lt;h1 style=&quot;line-height: 10%;&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 18px; line-height: 10%;&quot;&gt;自旋锁的数据结构（从上至下）&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;/div&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeWidth=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="100" y="630" width="640" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-233" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;union {&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="700" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-234" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;struct raw_spinlock rlock;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="720" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-235" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;// 1. 最上层：spinlock_t&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="660" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-236" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;}；&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="740" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-237" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;typedef struct spinlock {&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="680" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-238" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;省略部分内容&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="760" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-255" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;} spinlock_t；&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="780" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-256" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;arch_spinlock_t raw_lock;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="860" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-258" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;// 2. 中间层：raw_spinlock&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="820" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-260" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;typedef struct raw_spinlockk {&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="840" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-261" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;省略部分内容&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="880" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-262" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;} spinlock_t；&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="900" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-263" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;union {&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="980" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-264" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;u32 slock;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1000" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-265" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;// 3. 底层：arch_spinlock_t (ARM64架构)&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="940" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-267" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;typedef struct spinlock {&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="960" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-270" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;struct __raw_tickets {&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1020" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-271" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#ifdef __ARMEB__&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1040" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-272" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;u16 next;&amp;nbsp; &amp;nbsp;// 大端序&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1060" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-273" value="&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;u16 owner;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1080" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-274" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#else&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1100" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-275" value="&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: transparent; font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;u16 owner;&amp;nbsp; // 小端序：取票号码&lt;/span&gt;&lt;/blockquote&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="1120" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-276" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;u16 next;&amp;nbsp; &amp;nbsp;// 小端序：叫号号码&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="1140" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-277" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#endif&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1160" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-278" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;} tickets;&lt;/b&gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1180" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-279" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;};&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1200" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-280" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;} arch_spinlock_t;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1220" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-281" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#82b366;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="659" width="610" height="161" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-282" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-281">
+          <mxGeometry width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-283" value="&lt;b&gt;说明&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-282">
+          <mxGeometry width="150" height="31" as="geometry">
+            <mxRectangle width="150" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-284" value="自旋锁使用了类似银行排队取票的机制" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-282">
+          <mxGeometry x="150" width="460" height="31" as="geometry">
+            <mxRectangle width="460" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-285" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-281">
+          <mxGeometry y="31" width="610" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-286" value="&lt;b&gt;取票机&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-285">
+          <mxGeometry width="150" height="33" as="geometry">
+            <mxRectangle width="150" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-287" value="显示下一个要发放的票号(next)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-285">
+          <mxGeometry x="150" width="460" height="33" as="geometry">
+            <mxRectangle width="460" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-288" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-281">
+          <mxGeometry y="64" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-289" value="&lt;b&gt;叫号牌&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-288">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-290" value="显示当前正在服务的票号(owner)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-288">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-291" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-281">
+          <mxGeometry y="94" width="610" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-292" value="&lt;b&gt;顾客&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-291">
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-293" value="每个进程/线程/中断处理程序都相当于顾客，需要取票排队" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-291">
+          <mxGeometry x="150" width="460" height="30" as="geometry">
+            <mxRectangle width="460" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-294" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-281">
+          <mxGeometry y="124" width="610" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-295" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;b&gt;服务规则&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-294">
+          <mxGeometry width="150" height="37" as="geometry">
+            <mxRectangle width="150" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-296" value="只有当你的&lt;b&gt;票号等于叫号牌&lt;/b&gt;显示的号码时，才能获得服务" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-294">
+          <mxGeometry x="150" width="460" height="37" as="geometry">
+            <mxRectangle width="460" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-297" value="&lt;h1&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;取票排队机制&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="810" y="630" width="610" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-298" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="580" y="694.81" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-299" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="600" y="355.61" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-300" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-307">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="932.5" y="1210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-301" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;进程1&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="862.6600000000001" y="850" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-302" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-309">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1279.5" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-303" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;进程2&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1209.8400000000001" y="850" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-304" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-301" target="_HkzGitfnTXO_-6m-vzi-305">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="932.6600000000001" y="1269.9999999999995" as="targetPoint" />
+            <mxPoint x="932.6600000000001" y="880" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-327" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-305" target="_HkzGitfnTXO_-6m-vzi-310">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-328" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;获取票号=0&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_HkzGitfnTXO_-6m-vzi-327">
+          <mxGeometry x="-0.095" y="4" relative="1" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-305" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="922.6600000000001" y="910" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-306" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-305" target="_HkzGitfnTXO_-6m-vzi-307">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="932.6600000000001" y="1269.9999999999995" as="targetPoint" />
+            <mxPoint x="932.6600000000001" y="1020" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-338" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-307" target="_HkzGitfnTXO_-6m-vzi-337">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-307" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="922.6600000000001" y="1060" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-308" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-315" target="_HkzGitfnTXO_-6m-vzi-309">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1279.8400000000001" y="1269.9999999999995" as="targetPoint" />
+            <mxPoint x="1279.6599999999999" y="880" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-309" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1269.8400000000001" y="1075" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-331" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1.011;exitY=0.51;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-310" target="_HkzGitfnTXO_-6m-vzi-315">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1197.5" y="940" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-333" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;获取票号=1&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="_HkzGitfnTXO_-6m-vzi-331">
+          <mxGeometry x="-0.1982" y="-2" relative="1" as="geometry">
+            <mxPoint y="11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-378" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-310" target="_HkzGitfnTXO_-6m-vzi-330">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-310" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;owner=0，next=1&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1022.5" y="925" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-314" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-303" target="_HkzGitfnTXO_-6m-vzi-315">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1279.6599999999999" y="1090" as="targetPoint" />
+            <mxPoint x="1279.6599999999999" y="880" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-329" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.985;entryY=0.533;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-315" target="_HkzGitfnTXO_-6m-vzi-330">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1197.5" y="985" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-315" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1269.8400000000001" y="955" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-377" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-323" target="_HkzGitfnTXO_-6m-vzi-310">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-323" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;初始状态&lt;br&gt;owner=0 next=0&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1027.5" y="850" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-324" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="922.6600000000001" y="985" width="20" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-326" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;票号 = owner，执行工作&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="822.5" y="980" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-379" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-330" target="_HkzGitfnTXO_-6m-vzi-337">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-330" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;owner=0，next=2&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1022.5" y="985" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-335" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;color: rgb(255, 0, 0);&quot;&gt;票号1 != owner0，自旋等待&lt;/font&gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1187.5" y="1000" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-336" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;工作执行完毕，释放锁&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="842.5" y="1055" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-339" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-337" target="_HkzGitfnTXO_-6m-vzi-309">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-341" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;票号1 != owner1，开始工作&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1177.5" y="1105" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-342" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#9673a6;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="101.66999999999996" y="1309" width="610" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-343" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-342">
+          <mxGeometry width="610" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-344" value="&lt;b&gt;内核不支持抢占&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-343">
+          <mxGeometry width="150" height="31" as="geometry">
+            <mxRectangle width="150" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-345" value="spin_lock是空函数，因为无法抢占，顺序执行不存在冲突" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-343">
+          <mxGeometry x="150" width="460" height="31" as="geometry">
+            <mxRectangle width="460" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-346" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-342">
+          <mxGeometry y="31" width="610" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-347" value="&lt;b&gt;内核支持抢占&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-346">
+          <mxGeometry width="150" height="33" as="geometry">
+            <mxRectangle width="150" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-348" value="spin_lock 退化为 preempt_disable，即禁用内核抢占" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-346">
+          <mxGeometry x="150" width="460" height="33" as="geometry">
+            <mxRectangle width="460" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-358" value="&lt;h1&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;单核（UP）系统自旋锁的简化&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="101.66999999999996" y="1280" width="610" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-359" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#9673a6;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="797.5" y="1265" width="602.5" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-360" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-359">
+          <mxGeometry width="602.5" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-361" value="&lt;b&gt;spin_lock_irq&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-360">
+          <mxGeometry width="150" height="71" as="geometry">
+            <mxRectangle width="150" height="71" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-362" value="中断访问临界资源：使用local_irq_disable来禁用中断&lt;br&gt;进程访问临界资源：使用preempt_disable来禁用内存抢占" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-360">
+          <mxGeometry x="150" width="453" height="71" as="geometry">
+            <mxRectangle width="453" height="71" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-372" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-359">
+          <mxGeometry y="71" width="602.5" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-373" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;b&gt;其他变种&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-372">
+          <mxGeometry width="150" height="37" as="geometry">
+            <mxRectangle width="150" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-374" value="和上面差不多的" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d6b656;fontSize=16;" vertex="1" parent="_HkzGitfnTXO_-6m-vzi-372">
+          <mxGeometry x="150" width="453" height="37" as="geometry">
+            <mxRectangle width="453" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-380" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.471;entryY=0.921;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;endArrow=none;startFill=0;" edge="1" parent="1" source="_HkzGitfnTXO_-6m-vzi-337" target="_HkzGitfnTXO_-6m-vzi-376">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-375" value="&lt;h1&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;自旋锁的其他变种API&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="797.5" y="1236" width="602.5" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="_HkzGitfnTXO_-6m-vzi-337" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;owner=1，next=2&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1022.5" y="1075" width="150" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

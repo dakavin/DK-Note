@@ -1,0 +1,487 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="2KphrL-Kdyti_KFZzXZo">
+    <mxGraphModel dx="2066" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P-v68q7aPYjMMSlhREZp-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="30" width="780" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-6" value="&lt;h1 style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;HelloWorld驱动代码&lt;/font&gt;&lt;/h1&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#0085FC;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="30" y="30" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-7" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=default;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="850" y="159" width="630" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-8" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-7" vertex="1">
+          <mxGeometry width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-9" value="&lt;b&gt;------必须部分-----&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-8" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-10" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-8" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-11" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-7" vertex="1">
+          <mxGeometry y="30" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-12" value="&lt;b&gt;模块加载函数&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#6c8ebf;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-11" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-13" value="驱动程序的&quot;开机启动&quot;代码，加载驱动模块时，内核会自动执行" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-11" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-14" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-7" vertex="1">
+          <mxGeometry y="60" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-15" value="&lt;b&gt;模块卸载函数&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#f8cecc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#b85450;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-14" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-16" value="驱动程序的&quot;关机清理&quot;代码，卸载驱动模块时，内核会执行这个函数" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#f8cecc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#b85450;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-14" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-92" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-7" vertex="1">
+          <mxGeometry y="90" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-93" value="&lt;b&gt;模块许可证&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-92" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-94" value="不声明许可证，模块加载时会收到&quot;内核被污染（kernel tainted）&quot;的警告" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-92" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-95" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-7" vertex="1">
+          <mxGeometry y="120" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-96" value="&lt;b&gt;------可选部分-----&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-95" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-97" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-95" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-98" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-7" vertex="1">
+          <mxGeometry y="150" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-99" value="&lt;b&gt;模块参数&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-98" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-100" value="在加载驱动时可以传递给它的值，让驱动更加灵活（后面讲）" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-98" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-101" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-7" vertex="1">
+          <mxGeometry y="180" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-102" value="&lt;b&gt;模块导出符号&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-101" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-103" value="可以将驱动中的函数或变量分享给其他模块使用（后面讲）" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-101" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-104" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-7" vertex="1">
+          <mxGeometry y="210" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-105" value="&lt;b&gt;模块作者&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-104" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-106" value="包括版本号、作者、描述等信息，方便管理和维护" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-104" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-26" value="&lt;h1&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;代码说明&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="120" width="630" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-28" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#include &amp;lt;linux/module.h&amp;gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="70" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-62" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;#include &amp;lt;linux/kernel.h&amp;gt;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="90" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-63" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;#include &amp;lt;linux/init.h&amp;gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="110" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-64" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;static int __init helloworld_init(void) {&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;//驱动入口函数&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#dae8fc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="130" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-65" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; printk(KERN_EMERG &quot;helloworld_init\r\n&quot;);&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;//注意： 内核打印用 printk 而不是 printf&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#dae8fc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="150" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-66" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; return 0;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#dae8fc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="170" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-67" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;}&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#dae8fc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="190" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-68" value="" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="210" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-69" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;static void __exit helloworld_exit(void){&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;//驱动出口函数&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#f8cecc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="230" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-70" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp; &amp;nbsp; printk(KERN_EMERG &quot;helloworld_exit\r\n&quot;);&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#f8cecc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="250" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-71" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;}&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#f8cecc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="270" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-72" value="" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="290" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-73" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;module_init(helloworld_init);&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;//告诉linux模块入口函数，加载模块代码到操作系统&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#dae8fc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="310" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-74" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;module_exit(helloworld_exit);&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;//卸载&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#f8cecc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="330" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-75" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;MODULE_LICENSE(&quot;GPL v2&quot;);&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;//同意 GPL 开源协议&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="350" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-76" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;MODULE_VERSION(&quot;1.0&quot;);&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;//驱动的版本&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="370" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-77" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;MODULE_AUTHOR(&quot;Cavium Inc&quot;);&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#d5e8d4;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="390" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-78" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;MODULE_DESCRIPTION(&quot;helloworld Driver&quot;);&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;//lsmod&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="30" y="410" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" parent="1" source="P-v68q7aPYjMMSlhREZp-11" target="P-v68q7aPYjMMSlhREZp-64" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" parent="1" source="P-v68q7aPYjMMSlhREZp-14" target="P-v68q7aPYjMMSlhREZp-69" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" source="P-v68q7aPYjMMSlhREZp-104" target="P-v68q7aPYjMMSlhREZp-77" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-109" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;上面的程序如何编译成内核模块呢？使用Makefile。&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="30" y="450" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-110" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="30" y="510" width="780" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-111" value="&lt;h1 style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 21px;&quot;&gt;Makefile&lt;/font&gt;&lt;/h1&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=none;strokeWidth=1;fillColor=#0085FC;fontColor=#FFFFFF;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="30" y="510" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-112" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=default;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="850" y="550" width="630" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-113" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-112" vertex="1">
+          <mxGeometry width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-114" value="&lt;b&gt;内核源码目录&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-113" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-115" value="内核模块属于内核的一段代码，编译时需要指定内核目录" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-113" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-116" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-112" vertex="1">
+          <mxGeometry y="30" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-117" value="&lt;b&gt;架构设置&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-116" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-118" value="64位ARM架构，适用于现代ARM处理器" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-116" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-119" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-112" vertex="1">
+          <mxGeometry y="60" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-120" value="&lt;b&gt;交叉编译链&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=#d79b00;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-119" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-121" value="告诉编译器要为ARM64架构的目标设备编译代码，而不是当前的x86电脑" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#d79b00;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-119" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-122" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-112" vertex="1">
+          <mxGeometry y="90" width="630" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-123" value="&lt;b&gt;编译目标设置&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-122" vertex="1">
+          <mxGeometry width="110" height="90" as="geometry">
+            <mxRectangle width="110" height="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-124" value="1、&lt;b&gt;obj-m&lt;/b&gt;：编译成ko文件，可以动态加载和卸载&lt;br&gt;2、&lt;b&gt;obj-y&lt;/b&gt;：随内核编译而静态编译到内核中，无ko文件，系统启动时自动加载&lt;br&gt;3、如果要编译可执行文件，添加一行&amp;nbsp;out = 目标文件名称" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-122" vertex="1">
+          <mxGeometry x="110" width="520" height="90" as="geometry">
+            <mxRectangle width="520" height="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-125" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-112" vertex="1">
+          <mxGeometry y="180" width="630" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-126" value="&lt;b&gt;编译规则说明&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-125" vertex="1">
+          <mxGeometry width="110" height="90" as="geometry">
+            <mxRectangle width="110" height="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-127" value="1、KERNEL_DIR，切换到内核源码执行make&lt;br&gt;2、CURDIR：指定模块源码在当前目录&lt;br&gt;3、modules：编译模块目标&lt;br&gt;4、-j8：8个线程并行编译，加快编译速度&lt;br&gt;5、编译可执行文件，$(CROSS_COMPILE)gcc -o $(out) xxx.c" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-125" vertex="1">
+          <mxGeometry x="110" width="520" height="90" as="geometry">
+            <mxRectangle width="520" height="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-128" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-112" vertex="1">
+          <mxGeometry y="270" width="630" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-129" value="&lt;b&gt;编译指令&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-128" vertex="1">
+          <mxGeometry width="110" height="30" as="geometry">
+            <mxRectangle width="110" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-130" value="make" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-128" vertex="1">
+          <mxGeometry x="110" width="520" height="30" as="geometry">
+            <mxRectangle width="520" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-137" value="&lt;h1&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;代码说明&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="850" y="511" width="630" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-138" value="&lt;span&gt;KERNEL_DIR= ../../../kernel/&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;fillColor=#dae8fc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="550" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-139" value="&lt;span&gt;ARCH = arm64&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;fillColor=#d5e8d4;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="30" y="570" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-140" value="&lt;font&gt;CROSS_COMPILE = aarch64-linux-gnu-&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="30" y="590" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-141" value="&lt;span&gt;export ARCH CROSS_COMPILE&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="610" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-142" value="" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="630" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-143" value="&lt;span&gt;# 以模块的方式编译，注意文件名要和c文件一致&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="650" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-144" value="&lt;span&gt;obj-m := hello.o&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="670" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-145" value="" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="690" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-146" value="&lt;font&gt;all：&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="710" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-147" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;$(MAKE) -C $(KERNEL_DIR) M=$(CURDIR) modules -j8" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="730" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-148" value="" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="750" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-149" value=".PHONY: clean" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="770" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-150" value="clean:" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="790" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-151" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;$(MAKE) -C $(KERNEL_DIR) M=$(CURDIR) clean" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="810" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-154" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;rm -f $(out)" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=16;" parent="1" vertex="1">
+          <mxGeometry x="30" y="830" width="780" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="P-v68q7aPYjMMSlhREZp-113" target="P-v68q7aPYjMMSlhREZp-138" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="P-v68q7aPYjMMSlhREZp-116" target="P-v68q7aPYjMMSlhREZp-139" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-161" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="P-v68q7aPYjMMSlhREZp-119" target="P-v68q7aPYjMMSlhREZp-140" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-162" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;在内核源码内部编译成模块（正式发布使用）&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="30" y="870" width="780" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-163" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=default;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="31" y="910" width="780" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-164" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-165" value="&lt;b&gt;1、在drivers目录创建目录&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-164" vertex="1">
+          <mxGeometry width="250" height="30" as="geometry">
+            <mxRectangle width="250" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-166" value="目录地址：&lt;b&gt;内核源码/kernel/drivers&lt;/b&gt;，假设创建 test 目录" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-164" vertex="1">
+          <mxGeometry x="250" width="530" height="30" as="geometry">
+            <mxRectangle width="530" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-167" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="30" width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-168" value="&lt;b&gt;2、修改&lt;/b&gt;&lt;b&gt;drivers&lt;/b&gt;&lt;b&gt;目录的Makefile&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-167" vertex="1">
+          <mxGeometry width="250" height="30" as="geometry">
+            <mxRectangle width="250" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-169" value="在最后一行添加：obj-y += test/&amp;nbsp; ，即该目录的内容始终编译到内核中" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-167" vertex="1">
+          <mxGeometry x="250" width="530" height="30" as="geometry">
+            <mxRectangle width="530" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-170" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="60" width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-171" value="&lt;b&gt;3、创建test目录的Makefile&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-170" vertex="1">
+          <mxGeometry width="250" height="30" as="geometry">
+            <mxRectangle width="250" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-172" value="使用obj-m += xxx.o ，即该目录内部也可以独立编译成模块" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-170" vertex="1">
+          <mxGeometry x="250" width="530" height="30" as="geometry">
+            <mxRectangle width="530" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-173" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="90" width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-174" value="&lt;b&gt;4、编译整个内核&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-173" vertex="1">
+          <mxGeometry width="250" height="30" as="geometry">
+            <mxRectangle width="250" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-175" value="编译内核完成后，test目录下会出现对应的ko文件" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#dae8fc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-173" vertex="1">
+          <mxGeometry x="250" width="530" height="30" as="geometry">
+            <mxRectangle width="530" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-176" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="120" width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-177" value="&lt;b&gt;------------使用Kconfig条件编译-----------&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-176" vertex="1">
+          <mxGeometry width="250" height="30" as="geometry">
+            <mxRectangle width="250" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-178" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-176" vertex="1">
+          <mxGeometry x="250" width="530" height="30" as="geometry">
+            <mxRectangle width="530" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-179" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="150" width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-180" value="&lt;b&gt;1、修改&lt;/b&gt;&lt;b&gt;drivers目录下的Kconfig&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-179" vertex="1">
+          <mxGeometry width="250" height="30" as="geometry">
+            <mxRectangle width="250" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-181" value="在适当的位置添加，&lt;b&gt;source &quot;drivers/test/Kconfig&quot;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-179" vertex="1">
+          <mxGeometry x="250" width="530" height="30" as="geometry">
+            <mxRectangle width="530" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-183" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="180" width="780" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-184" value="&lt;b&gt;2、创建test目录的Kconfig&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#fff2cc;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-183" vertex="1">
+          <mxGeometry width="250" height="90" as="geometry">
+            <mxRectangle width="250" height="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-185" value="添加图片所示内容&lt;br&gt;1. 定义了一个 &lt;b&gt;ROCKCHIP_TEST&lt;/b&gt; 配置项&lt;br&gt;2. 默认不编译 default n&lt;br&gt;3. bool 选择是否编译" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#fff2cc;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-183" vertex="1">
+          <mxGeometry x="250" width="530" height="90" as="geometry">
+            <mxRectangle width="530" height="90" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-186" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="270" width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-187" value="&lt;b&gt;3、修改test目录的Makefile&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-186" vertex="1">
+          <mxGeometry width="250" height="30" as="geometry">
+            <mxRectangle width="250" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-188" value="将 &lt;b&gt;obj-m&lt;/b&gt; 改为 &lt;b&gt;obj-$(CONFIG_ROCKCHIP_TEST)&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-186" vertex="1">
+          <mxGeometry x="250" width="530" height="30" as="geometry">
+            <mxRectangle width="530" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-189" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="300" width="780" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-190" value="&lt;b&gt;4、修改defconfig文件&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-189" vertex="1">
+          <mxGeometry width="250" height="70" as="geometry">
+            <mxRectangle width="250" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-191" value="确定板卡的defconfig文件&lt;br&gt;这里是：&lt;b&gt;kernel/arch/arm64/configs/lubancat2_defconfig&lt;/b&gt;&lt;br&gt;最后一行，添加&lt;b&gt; CONFIG_ROCKCHIP_TEST=y&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-189" vertex="1">
+          <mxGeometry x="250" width="530" height="70" as="geometry">
+            <mxRectangle width="530" height="70" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-203" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-163" vertex="1">
+          <mxGeometry y="370" width="780" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-204" value="&lt;b&gt;5、后续可以在menuconfig中开启&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-203" vertex="1">
+          <mxGeometry width="250" height="30" as="geometry">
+            <mxRectangle width="250" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-205" value="在内核目录输入 make menuconfig，即可开启界面，选择配置是否编译" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="P-v68q7aPYjMMSlhREZp-203" vertex="1">
+          <mxGeometry x="250" width="530" height="30" as="geometry">
+            <mxRectangle width="530" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-201" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/png,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;" parent="1" vertex="1">
+          <mxGeometry x="910" y="1037.5" width="389" height="195" as="geometry" />
+        </mxCell>
+        <mxCell id="P-v68q7aPYjMMSlhREZp-202" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" parent="1" source="P-v68q7aPYjMMSlhREZp-183" target="P-v68q7aPYjMMSlhREZp-201" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2ErJi95Z3krQxJ6BuFoA-1" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="910.0000000000001" y="39.610000000000014" width="160" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="rVVqUDDWdTkg7BkMZYb7-1" value="&lt;h2&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;Tips：&lt;span style=&quot;font-weight: normal;&quot;&gt;指定obj-y，就无法单独编译ko文件了&lt;/span&gt;&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="910" y="965" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="rVVqUDDWdTkg7BkMZYb7-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="P-v68q7aPYjMMSlhREZp-170" target="rVVqUDDWdTkg7BkMZYb7-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

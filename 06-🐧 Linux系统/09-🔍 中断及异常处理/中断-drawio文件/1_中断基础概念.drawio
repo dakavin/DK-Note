@@ -1,0 +1,148 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="zX557dNH0itw9ocLyIi2">
+    <mxGraphModel dx="2431" dy="1413" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-1" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;中断基础概念&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="151.67" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-3" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;1、概述&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="221.67000000000007" y="60" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-4" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;CPU运行期间，由&lt;b&gt;外部(硬件)中断&lt;/b&gt;或&lt;b&gt;内部(软件)中断&lt;/b&gt;引起的一种机制&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="30" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-5" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;2、中断优势&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="222.67000000000007" y="244.5" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-6" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;中断机制解决了&lt;b&gt;轮询方式&lt;/b&gt;的所有问题&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="160" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-7" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;提高CPU利用率：&lt;/b&gt;CPU可以专注于有意义的工作，避免轮询浪费时间&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="214.5" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-8" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;改善系统响应：&lt;/b&gt;紧急事件能够立即得到处理&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="272" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-9" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;支持多任务：&lt;/b&gt;不同设备可以&quot;并发&quot;工作&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="332" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" edge="1" parent="1" source="nXasdtfTC5qk2J0WBxWj-11" target="nXasdtfTC5qk2J0WBxWj-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-11" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;3、中断分类&lt;/font&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="221.67000000000007" y="400" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-12" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;&lt;font style=&quot;color: rgb(255, 102, 102);&quot;&gt;硬件中断(关注!&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(255, 102, 102); font-size: 18px; background-color: transparent;&quot;&gt;)&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="400" width="260" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-13" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;由外部硬件设备产生的&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-12">
+          <mxGeometry y="30" width="260" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-14" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;完全异步，可在任何时刻发生&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-12">
+          <mxGeometry y="56" width="260" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-15" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;通过硬件信号线传递给CPU&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-12">
+          <mxGeometry y="82" width="260" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-16" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;需要硬件支持和驱动配合&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-12">
+          <mxGeometry y="114" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-17" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;软件中断&lt;/span&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="631.6700000000001" y="400" width="270" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-18" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;由软件程序主动触发的中断&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-17">
+          <mxGeometry y="30" width="270" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-19" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;同步发生，由程序控制&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-17">
+          <mxGeometry y="56" width="270" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-20" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;通过特定指令触发&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-17">
+          <mxGeometry y="82" width="270" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-21" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;用于系统调用和异常处理&lt;/span&gt;" style="text;strokeColor=default;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-17">
+          <mxGeometry y="114" width="270" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-22" value="&lt;h2&gt;4、应用场景&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="221.67000000000007" y="620" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-23" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;键盘输入：&lt;/b&gt;用户按键→产生中断&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;→CPU再执行中断程序读取按键信息&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="560" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-24" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;网络通信：&lt;/b&gt;网卡收包&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;→产生中断&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;→CPU再处理数据&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="614.5" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-25" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;定时器：&lt;/b&gt;固定频率产生中断&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;→利用该中断进行任务调度(时间片和进程切换)&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.67" y="672" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-26" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="191.67" y="80" width="30" height="790" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-27" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="342.6700000000001" y="174.5" width="29" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-28" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="341.6700000000001" y="585" width="29" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-30" value="&lt;h2&gt;5、处理流程&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="221.67000000000007" y="847.25" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-36" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.2872413793103423;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="341.67" y="744.5" width="29" height="245.5" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-37" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;中断发生→CPU保存当前态&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;→执行中断处理&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;→恢复之前态&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;→继续执行&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="371.6700000000001" y="90" width="530" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-39" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="342.67" y="50" width="29" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-40" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;中断请求&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="371.67" y="730" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-48" value="硬件设备向中断控制器发送中断，中断控制器发送给CPU" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-40">
+          <mxGeometry x="100" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-42" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;中断响应&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="371.67" y="770" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-49" value="CPU检查是否允许中断，允许则完成当前指令后响应中断" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-42">
+          <mxGeometry x="99" width="431" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-43" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;保护现场&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="370.67" y="810" width="541" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-50" value="保存程序计数器、程序状态寄存器、其他必要的寄存器到&lt;b&gt;栈中&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-43">
+          <mxGeometry x="101" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-44" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;中断识别&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="371.67" y="850" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-51" value="确定哪个设备产生的中断，获取中断号" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-44">
+          <mxGeometry x="100" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-45" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;执行中断程序&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=110;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="371.67" y="890" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-52" value="根据中断号调用对应的处理程序，完成设备所需的具体操作" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-45">
+          <mxGeometry x="120" width="420" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-46" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;恢复现场&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="371.67" y="930" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-53" value="恢复之前保存的寄存器，恢复程序状态" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-46">
+          <mxGeometry x="100" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-47" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b style=&quot;&quot;&gt;中断返回&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" vertex="1" parent="1">
+          <mxGeometry x="371.67" y="970" width="540" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-54" value="返回到被中断的程序，继续执行原来的任务" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" vertex="1" parent="nXasdtfTC5qk2J0WBxWj-47">
+          <mxGeometry x="100" width="440" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nXasdtfTC5qk2J0WBxWj-55" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="60" y="530" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,618 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="GIGIkH4q3lXyd6JlszPY">
+    <mxGraphModel dx="3756" dy="2184" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="340" y="270" width="640" height="930" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-2" value="&lt;div style=&quot;line-height: 10%;&quot;&gt;&lt;h1 style=&quot;line-height: 10%;&quot;&gt;&lt;font&gt;&lt;span style=&quot;font-size: 18px; line-height: 10%;&quot;&gt;时钟节点图示（掌握）&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;/div&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#6c8ebf;strokeWidth=1;fillColor=#dae8fc;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=14;spacing=5;" parent="1" vertex="1">
+          <mxGeometry x="340" y="270" width="640" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-3" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;// 时钟生产者1：单个时钟源&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="300" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-4" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;clock-frequency&lt;/b&gt; = &amp;lt;24000000&amp;gt;; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 时钟频率24MHz&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#d5e8d4;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="360" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-5" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;clock-output-names&lt;/b&gt; = &quot;osc24m&quot;;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 输出名称&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#ffe6cc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="380" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-6" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;};&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="420" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-7" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1055" y="1019" width="600" height="153" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-8" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-7" vertex="1">
+          <mxGeometry width="600" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-9" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;clocks&lt;/font&gt;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#cdeb8b;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#36393d;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-8" vertex="1">
+          <mxGeometry width="210" height="42" as="geometry">
+            <mxRectangle width="210" height="42" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-10" value="指定时钟消费者节点所需的时钟源&lt;br&gt;&lt;b&gt;单时钟源-直接引用，多时钟源-引用+时钟编号&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-8" vertex="1">
+          <mxGeometry x="210" width="390" height="42" as="geometry">
+            <mxRectangle width="390" height="42" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-11" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-7" vertex="1">
+          <mxGeometry y="42" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-12" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;clock-names&lt;/font&gt;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffff88;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#36393d;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-11" vertex="1">
+          <mxGeometry width="210" height="40" as="geometry">
+            <mxRectangle width="210" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-13" value="指定时钟消费者节点所需时钟源的名称" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-11" vertex="1">
+          <mxGeometry x="210" width="390" height="40" as="geometry">
+            <mxRectangle width="390" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-14" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-7" vertex="1">
+          <mxGeometry y="82" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-15" value="&lt;b&gt;assigned-clock&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#e1d5e7;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#9673a6;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-14" vertex="1">
+          <mxGeometry width="210" height="40" as="geometry">
+            <mxRectangle width="210" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-16" value="消费者使用的时钟是什么" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-14" vertex="1">
+          <mxGeometry x="210" width="390" height="40" as="geometry">
+            <mxRectangle width="390" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-17" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-7" vertex="1">
+          <mxGeometry y="122" width="600" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-18" value="&lt;b&gt;assigned-clock-rates&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#b0e3e6;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#0e8088;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-17" vertex="1">
+          <mxGeometry width="210" height="31" as="geometry">
+            <mxRectangle width="210" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-19" value="消费者使用的时钟频率是多少" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-17" vertex="1">
+          <mxGeometry x="210" width="390" height="31" as="geometry">
+            <mxRectangle width="390" height="31" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-20" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;时钟 消费者 属性描述&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1055" y="990" width="600" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-21" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;osc24m: osc24m {&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="320" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-22" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;#clock-cells&lt;/b&gt; = &amp;lt;0&amp;gt;; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 单时钟&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#f5f5f5;strokeColor=none;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="340" y="400" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-23" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="349" width="610" height="282" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-24" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-23" vertex="1">
+          <mxGeometry width="610" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-25" value="&lt;b&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;#clock-cells&lt;/font&gt;&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" parent="j1z7r6bg39GeYNTvLI-P-24" vertex="1">
+          <mxGeometry width="190" height="41" as="geometry">
+            <mxRectangle width="190" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-26" value="&lt;b&gt;0-提供单个时钟，1-提供多个时钟&lt;br&gt;决定clocks引用是否要编号&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-24" vertex="1">
+          <mxGeometry x="190" width="420" height="41" as="geometry">
+            <mxRectangle width="420" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-27" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-23" vertex="1">
+          <mxGeometry y="41" width="610" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-28" value="&lt;b&gt;clock-frequency&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#d5e8d4;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#82b366;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-27" vertex="1">
+          <mxGeometry width="190" height="40" as="geometry">
+            <mxRectangle width="190" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-29" value="时钟信号的频率，使用赫兹(Hz)作为单位" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-27" vertex="1">
+          <mxGeometry x="190" width="420" height="40" as="geometry">
+            <mxRectangle width="420" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-30" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-23" vertex="1">
+          <mxGeometry y="81" width="610" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-31" value="&lt;b&gt;clock-output-names&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#ffe6cc;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d79b00;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-30" vertex="1">
+          <mxGeometry width="190" height="41" as="geometry">
+            <mxRectangle width="190" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-32" value="给提供的时钟信号指定描述性名称，搭配#clock-cells使用" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-30" vertex="1">
+          <mxGeometry x="190" width="420" height="41" as="geometry">
+            <mxRectangle width="420" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-33" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-23" vertex="1">
+          <mxGeometry y="122" width="610" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-34" value="&lt;b&gt;clock-indices&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#fff2cc;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#d6b656;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-33" vertex="1">
+          <mxGeometry width="190" height="40" as="geometry">
+            <mxRectangle width="190" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-35" value="建立多个时钟的索引，从0开始" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-33" vertex="1">
+          <mxGeometry x="190" width="420" height="40" as="geometry">
+            <mxRectangle width="420" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-36" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-23" vertex="1">
+          <mxGeometry y="162" width="610" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-37" value="&lt;b&gt;assigned-clock-parents&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#f8cecc;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#b85450;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-36" vertex="1">
+          <mxGeometry width="190" height="40" as="geometry">
+            <mxRectangle width="190" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-38" value="指定父时钟源" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-36" vertex="1">
+          <mxGeometry x="190" width="420" height="40" as="geometry">
+            <mxRectangle width="420" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-39" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-23" vertex="1">
+          <mxGeometry y="202" width="610" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-40" value="&lt;b&gt;assigned-clock&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#e1d5e7;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#9673a6;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-39" vertex="1">
+          <mxGeometry width="190" height="40" as="geometry">
+            <mxRectangle width="190" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-41" value="生产者提供的时钟有哪些" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-39" vertex="1">
+          <mxGeometry x="190" width="420" height="40" as="geometry">
+            <mxRectangle width="420" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-42" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-23" vertex="1">
+          <mxGeometry y="242" width="610" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-43" value="&lt;b&gt;assigned-clock-rates&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=#b0e3e6;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#0e8088;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-42" vertex="1">
+          <mxGeometry width="190" height="40" as="geometry">
+            <mxRectangle width="190" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-44" value="生产者提供的时钟对应的频率是多少" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=16;" parent="j1z7r6bg39GeYNTvLI-P-42" vertex="1">
+          <mxGeometry x="190" width="420" height="40" as="geometry">
+            <mxRectangle width="420" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-45" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;时钟 生产者 属性描述&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="320" width="610" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-46" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;b&gt;概念&lt;/b&gt;&lt;/font&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="270" width="590" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-47" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;描述硬件设备和系统中的&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(255, 255, 255));&quot;&gt;时钟源&lt;/font&gt;以及&lt;font style=&quot;color: light-dark(rgb(255, 0, 0), rgb(255, 255, 255));&quot;&gt;时钟相关配置和连接关系&lt;/font&gt;&lt;/font&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="j1z7r6bg39GeYNTvLI-P-46" vertex="1">
+          <mxGeometry x="100" width="490" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-48" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;compatible = &quot;fixed-clock&quot;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 固定时钟源&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="340" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-49" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;// 时钟生产者2：多个时钟源&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="458" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-50" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;reg = &amp;lt;0x0 0xfdd20000 0x0 0x1000&amp;gt;;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="518" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-51" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;};&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="658" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-52" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;cru: clock-controller@fdd20000&amp;nbsp;{&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="478" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-53" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;#clock-cells = &amp;lt;1&amp;gt;; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 多时钟，需要索引&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="538" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-54" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;compatible = &quot;rockchip,rk3568-cru&quot;; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 时钟控制器&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="498" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-55" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;clock-indices&lt;/b&gt; = &amp;lt;0&amp;gt;, &amp;lt;1&amp;gt;, &amp;lt;2&amp;gt;; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 时钟索引编号&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#fff2cc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="558" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-56" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;clock-output-names = &quot;clk_cpu&quot;, &quot;clk_ddr&quot;, &quot;clk_gpu&quot;; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 多个输出名称&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="578" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-57" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;assigned-clock-parents&lt;/b&gt; = &amp;lt;&amp;amp;osc24m&amp;gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 指定父时钟源&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#f8cecc;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="598" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-58" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;assigned-clocks&lt;/b&gt; = &amp;lt;&amp;amp;cru 0&amp;gt;, &amp;lt;&amp;amp;cru 1&amp;gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 分配的时钟&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#e1d5e7;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="618" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-59" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;b&gt;assigned-clock-rates&lt;/b&gt; = &amp;lt;1800000000&amp;gt;, &amp;lt;800000000&amp;gt;; // 频率1.8GHz,800MHz&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#b0e3e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="638" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-60" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;// 时钟生产者3：PLL时钟源&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="699" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-61" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;clock-frequency = &amp;lt;600000000&amp;gt;; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 时钟频率600MHz&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="759" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-62" value="&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;clock-output-names = &quot;pll_out&quot;;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;// 输出名称&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="779" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-63" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;};&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="819" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-64" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;pll: pll-clock&amp;nbsp;{&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="719" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-65" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;#clock-cells = &amp;lt;0&amp;gt;; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 单时钟&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="799" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-66" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;compatible = &quot;fixed-clock&quot;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 固定时钟源&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="739" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-67" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;// 时钟消费者1：UART设备&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="860" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-68" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;reg = &amp;lt;0x0 0xfdd50000 0x0 0x100&amp;gt;;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="920" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-69" value="&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;clocks = &amp;lt;&amp;amp;cru 116&amp;gt;, &amp;lt;&amp;amp;osc24m&amp;gt;;&lt;/b&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 时钟源引用&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#cdeb8b;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="940" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-70" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;};&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="980" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-71" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;uart0: serial@fdd50000&amp;nbsp;{&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="880" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-72" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;clock-names = &quot;baudclk&quot;, &quot;apb_pclk&quot;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 时钟名称标识&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#ffff88;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="960" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-73" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;compatible = &quot;rockchip,rk3568-uart&quot;;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="900" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-74" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;//&amp;nbsp;时钟消费者2：VOP显示控制器&amp;nbsp;&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1020" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-75" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;reg = &amp;lt;0x0 0xfe040000 0x0 0x3000&amp;gt;;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1080" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-76" value="&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;clocks = &amp;lt;&amp;amp;cru 2&amp;gt;, &amp;lt;&amp;amp;pll&amp;gt;;&lt;/b&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;// 引用GPU时钟和PLL时钟&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1100" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-77" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;};&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1180" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-78" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;vop: vop@fe040000&amp;nbsp;{&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1040" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-79" value="&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;clock-names = &quot;clk_vop&quot;, &quot;clk_pll&quot;;&amp;nbsp;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;// 时钟名称标识&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1120" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-80" value="&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;compatible = &quot;rockchip,rk3568-vop&quot;;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1060" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-81" value="&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;assigned-clocks = &amp;lt;&amp;amp;cru 2&amp;gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 分配的时钟源&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#e1d5e7;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1140" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-82" value="&lt;span style=&quot;font-size: 16px; white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;assigned-clock-rates = &amp;lt;300000000&amp;gt;;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;// 分配频率300MHz&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=14;fillColor=#b0e3e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="340" y="1160" width="640" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-24" target="j1z7r6bg39GeYNTvLI-P-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="369" />
+              <mxPoint x="1020" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-27" target="j1z7r6bg39GeYNTvLI-P-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="409" />
+              <mxPoint x="1040" y="365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-30" target="j1z7r6bg39GeYNTvLI-P-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-33" target="j1z7r6bg39GeYNTvLI-P-55" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-36" target="j1z7r6bg39GeYNTvLI-P-57" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-39" target="j1z7r6bg39GeYNTvLI-P-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#b0e3e6;strokeColor=#0e8088;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-42" target="j1z7r6bg39GeYNTvLI-P-59" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#cdeb8b;strokeColor=#009900;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-8" target="j1z7r6bg39GeYNTvLI-P-69" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="1040" />
+              <mxPoint x="1030" y="945" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#ffff88;strokeColor=#CCCC00;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-11" target="j1z7r6bg39GeYNTvLI-P-72" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-14" target="j1z7r6bg39GeYNTvLI-P-81" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#b0e3e6;strokeColor=#0e8088;strokeWidth=2;curved=1;" parent="1" source="j1z7r6bg39GeYNTvLI-P-17" target="j1z7r6bg39GeYNTvLI-P-82" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j1z7r6bg39GeYNTvLI-P-94" value="&lt;h2&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;注意：&lt;br&gt;&lt;br&gt;1. &lt;span style=&quot;font-weight: normal;&quot;&gt;assigned-clock和assigned-clock-rates是&lt;/span&gt;成对出现&lt;span style=&quot;font-weight: normal;&quot;&gt;的，并且在生产者和消费者中含义不一样&lt;/span&gt;&lt;br&gt;&lt;br&gt;2. 单时钟使用&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-align: center;&quot;&gt;&lt;font style=&quot;&quot;&gt;clock-frequency&lt;span style=&quot;font-weight: normal;&quot;&gt;设置频率即可&lt;/span&gt;&lt;br&gt;&lt;br&gt;3. &lt;span style=&quot;font-weight: normal;&quot;&gt;uart&lt;/span&gt;没有assigned相关属性&lt;span style=&quot;font-weight: normal;&quot;&gt;，原因：&lt;/span&gt;默认频率即可&lt;span style=&quot;font-weight: normal;&quot;&gt;、驱动动态配置、频率容忍性强&lt;/span&gt;&lt;/font&gt;&lt;/span&gt;&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;" parent="1" vertex="1">
+          <mxGeometry x="1060" y="669" width="610" height="251" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1269" width="590" height="451" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-1">
+          <mxGeometry width="590" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-3" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;获取句柄数量&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-2">
+          <mxGeometry width="110" height="91" as="geometry">
+            <mxRectangle width="110" height="91" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-4" value="&lt;div&gt;int &lt;b&gt;of_count_phandle_with_args&lt;/b&gt;(const struct device_node *np,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;const char *list_name,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;const char *cells_name);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-2">
+          <mxGeometry x="110" width="480" height="91" as="geometry">
+            <mxRectangle width="480" height="91" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-5" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-1">
+          <mxGeometry y="91" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-6" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;上面便捷函数&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-5">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-7" value="static inline int &lt;b&gt;of_clk_get_parent_count&lt;/b&gt;(const struct device_node *np)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-5">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-8" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-1">
+          <mxGeometry y="151" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-9" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;by index&lt;br&gt;获取时钟&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-8">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-10" value="struct clk *&lt;b&gt;of_clk_get&lt;/b&gt;(struct device_node *np, int index);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-8">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-23" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-1">
+          <mxGeometry y="211" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-24" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;by name&lt;br&gt;获取时钟&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-23">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-25" value="struct clk *&lt;b&gt;of_clk_get_by_name&lt;/b&gt;(struct device_node *np, const char *name);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-23">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-26" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-1">
+          <mxGeometry y="271" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-27" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;设置管理版本&lt;br&gt;获取时钟&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-26">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-28" value="struct clk *&lt;b&gt;devm_clk_get&lt;/b&gt;(struct device *dev, const char *id);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-26">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-29" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-1">
+          <mxGeometry y="331" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-30" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;上面可选&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-29">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-31" value="struct clk *&lt;b&gt;devm_clk_get_optional&lt;/b&gt;(struct device *dev, const char *id);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-29">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-32" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-1">
+          <mxGeometry y="391" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-33" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;批量获取多个时钟&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-32">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-34" value="int &lt;b&gt;devm_clk_bulk_get&lt;/b&gt;(struct device *dev, int num_clks, struct clk_bulk_data *clks);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-32">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-14" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;&quot;&gt;of函数获取时钟资源&lt;/font&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1240" width="590" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-15" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;list_name：&lt;/b&gt;时钟属性名称（如&quot;clocks&quot;）&lt;div&gt;&lt;b&gt;cells_name：&lt;/b&gt;cells属性名称（如“#clock-cells”）&lt;br&gt;&lt;b&gt;flags：&lt;/b&gt;输出参数，返回GPIO标志&lt;br&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-句柄数量，失败-负数错误码&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1271.13" width="460" height="86.75" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-16" value="&lt;b&gt;同上&lt;br&gt;&lt;/b&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-时钟数量，失败-负数错误码&lt;b&gt;&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1375" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="cGqC3KwnjUPW_tw-klLG-2" target="cGqC3KwnjUPW_tw-klLG-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="cGqC3KwnjUPW_tw-klLG-5" target="cGqC3KwnjUPW_tw-klLG-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-19" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;index：&lt;/b&gt;时钟索引（0开始）&lt;div&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-clk指针，失败-错误指针&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1430" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="cGqC3KwnjUPW_tw-klLG-8" target="cGqC3KwnjUPW_tw-klLG-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-35" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#6c8ebf;fontSize=16;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1769" width="590" height="511" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-36" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-35">
+          <mxGeometry width="590" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-37" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;准备和使能时钟&lt;br&gt;（原子操作）&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-36">
+          <mxGeometry width="110" height="91" as="geometry">
+            <mxRectangle width="110" height="91" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-38" value="int &lt;b&gt;clk_prepare_enable&lt;/b&gt;(struct clk *clk);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-36">
+          <mxGeometry x="110" width="480" height="91" as="geometry">
+            <mxRectangle width="480" height="91" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-39" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-35">
+          <mxGeometry y="91" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-40" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;禁用和取消时钟&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-39">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-41" value="void &lt;b&gt;clk_disable_unprepare&lt;/b&gt;(struct clk *clk);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-39">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-42" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-35">
+          <mxGeometry y="151" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-43" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;准备时钟&lt;br&gt;（可能休眠）&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-42">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-44" value="int &lt;b&gt;clk_prepare&lt;/b&gt;(struct clk *clk);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-42">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-45" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-35">
+          <mxGeometry y="211" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-46" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;使能时钟&lt;br&gt;（原子操作）&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-45">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-47" value="int &lt;b&gt;clk_enable&lt;/b&gt;(struct clk *clk);&amp;nbsp;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-45">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-48" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-35">
+          <mxGeometry y="271" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-49" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;禁用时钟&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-48">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-50" value="void &lt;b&gt;clk_disable&lt;/b&gt;(struct clk *clk);&amp;nbsp;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-48">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-51" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-35">
+          <mxGeometry y="331" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-52" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;取消准备&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-51">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-53" value="void &lt;b&gt;clk_unprepare&lt;/b&gt;(struct clk *clk);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-51">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-54" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-35">
+          <mxGeometry y="391" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-55" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;获取时钟频率&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-54">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-56" value="unsigned long &lt;b&gt;clk_get_rate&lt;/b&gt;(struct clk *clk);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-54">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-64" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-35">
+          <mxGeometry y="451" width="590" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-65" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b&gt;设置时钟频率&lt;/b&gt;&lt;/font&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=#666666;fontSize=16;fontColor=#333333;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-64">
+          <mxGeometry width="110" height="60" as="geometry">
+            <mxRectangle width="110" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-66" value="int &lt;b&gt;clk_set_rate&lt;/b&gt;(struct clk *clk, unsigned long rate);" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="cGqC3KwnjUPW_tw-klLG-64">
+          <mxGeometry x="110" width="480" height="60" as="geometry">
+            <mxRectangle width="480" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-57" value="&lt;h1&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;&quot;&gt;时钟操作函数&lt;/font&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1740" width="590" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-58" value="&lt;b&gt;入参：clk-时钟指针&lt;br&gt;返回值：&lt;/b&gt;成功-0，失败-负数错误码&amp;nbsp; 或者 无返回值" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1800.06" width="460" height="39.94" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="cGqC3KwnjUPW_tw-klLG-57" target="cGqC3KwnjUPW_tw-klLG-58" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-67" value="&lt;b&gt;np：&lt;/b&gt;设备节点，&lt;b&gt;name：&lt;/b&gt;时钟名称字符串&lt;div&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-clk指针，失败-错误指针&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1490" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="cGqC3KwnjUPW_tw-klLG-23" target="cGqC3KwnjUPW_tw-klLG-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-69" value="&lt;b&gt;dev：&lt;/b&gt;设备节点，&lt;b&gt;id：&lt;/b&gt;时钟ID字符串&lt;div&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-clk指针，失败-错误指针&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1550" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="cGqC3KwnjUPW_tw-klLG-26" target="cGqC3KwnjUPW_tw-klLG-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-71" value="&lt;b&gt;同上&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1610" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="cGqC3KwnjUPW_tw-klLG-29" target="cGqC3KwnjUPW_tw-klLG-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-73" value="&lt;b&gt;dev：&lt;/b&gt;设备节点，&lt;b&gt;num_clks：&lt;/b&gt;时钟数量&lt;b&gt;，clks：&lt;/b&gt;clk_bulk_data数组&lt;div&gt;&lt;b&gt;返回值：&lt;/b&gt;成功-0，失败-负数错误码&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1670" width="460" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="cGqC3KwnjUPW_tw-klLG-32" target="cGqC3KwnjUPW_tw-klLG-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-77" value="&lt;b&gt;rate：目标频率（HZ）&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="2230.0299999999997" width="460" height="39.94" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1" source="cGqC3KwnjUPW_tw-klLG-64" target="cGqC3KwnjUPW_tw-klLG-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-79" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="1950" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+        <mxCell id="cGqC3KwnjUPW_tw-klLG-80" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="800" y="839" width="111.67" height="70.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

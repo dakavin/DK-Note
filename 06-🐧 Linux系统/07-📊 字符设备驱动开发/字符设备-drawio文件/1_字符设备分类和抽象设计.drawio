@@ -1,0 +1,252 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram name="第 1 页" id="pD2GV590Yic6Sk1TRUbM">
+    <mxGraphModel dx="2050" dy="1185" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1-1qPPfnHiISvSacmwwY-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" target="1-1qPPfnHiISvSacmwwY-112" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="330" as="sourcePoint" />
+            <mxPoint x="750" y="609.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="960" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-113" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="790" y="228" width="330" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-119" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1-1qPPfnHiISvSacmwwY-109" target="1-1qPPfnHiISvSacmwwY-106" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="780" />
+              <mxPoint x="850" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-124" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;调用顺序&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1-1qPPfnHiISvSacmwwY-119" vertex="1" connectable="0">
+          <mxGeometry x="-0.0364" relative="1" as="geometry">
+            <mxPoint x="10" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-128" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;代码编写顺序&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="1-1qPPfnHiISvSacmwwY-119" vertex="1" connectable="0">
+          <mxGeometry x="-0.0364" relative="1" as="geometry">
+            <mxPoint x="-750" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-1" value="&lt;h1&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;Linux设备分类&lt;/span&gt;&lt;/h1&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="20" y="239" width="151.67" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="1-1qPPfnHiISvSacmwwY-115" target="1-1qPPfnHiISvSacmwwY-109" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="840" />
+              <mxPoint x="850" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-3" value="&lt;h2&gt;块设备&lt;br&gt;block_device&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="248" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-4" value="&lt;h2&gt;网络设备&lt;br&gt;net_device&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="428" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-6" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;size=0.41650000000000204;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="171.67" y="88" width="28.33" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-60" value="&lt;h2&gt;字符设备&lt;br&gt;cdev&lt;/h2&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="68" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-61" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;传输方式&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="20" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-62" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;按字节/字符顺序传输数据&lt;/b&gt;，像流水一样&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-61" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-63" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;&lt;b&gt;缓存特性&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="62" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-64" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;通常&lt;b&gt;不使用缓存&lt;/b&gt;，数据直接传输&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-63" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-65" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;访问方式&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="100" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-66" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;只能&lt;b&gt;按顺序访问&lt;/b&gt;，不支持随机定位&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-65" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-67" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;典型设备&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#dae8fc;strokeColor=#6c8ebf;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="140" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-68" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;串口、键盘、鼠标、LED、传感器&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-67" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-69" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;传输方式&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="198" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-70" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;以固定大小的&lt;b&gt;数据块为单位进行传输&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-69" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-71" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;&lt;b&gt;缓存特性&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="240" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-72" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;使用缓存&lt;/b&gt;提高访问效率&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-71" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-73" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;访问方式&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="278" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-74" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;支持&lt;b&gt;随机访问&lt;/b&gt;，可以跳转到任意位置&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-73" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-75" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;典型设备&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#fff2cc;strokeColor=#d6b656;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="318" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-76" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;硬盘、U盘、SD卡、闪存&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-75" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-85" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;传输方式&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="378" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-86" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;不存在于/dev&lt;/b&gt;目录下&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-85" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-87" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 16px;&quot;&gt;&lt;b&gt;缓存特性&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="420" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-88" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;负责&lt;b&gt;网络数据&lt;/b&gt;的收发&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-87" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-89" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;访问方式&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="458" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-90" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;通过&lt;b&gt;socket接口&lt;/b&gt;访问&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-89" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-91" value="&lt;b style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;典型设备&lt;/font&gt;&lt;/b&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=95;fillColor=#f8cecc;strokeColor=#b85450;height=30;" parent="1" vertex="1">
+          <mxGeometry x="360" y="498" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-92" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;网卡、WiFi模块&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;dashed=1;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-91" vertex="1">
+          <mxGeometry x="100" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-93" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="340" y="28" width="20" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-94" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="340" y="209" width="20" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-95" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="340" y="388" width="20" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-98" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="770" y="88" width="20" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-99" value="&lt;b&gt;1、Linux系统将设备抽象为这三类设备&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="800" y="244" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-100" value="&lt;b&gt;2、具体的设备都可以继承它们的属性和操作&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=#82b366;dashed=1;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="800" y="282" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-102" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=0;strokeColor=#82b366;fontSize=14;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="160" y="639" width="660" height="231" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-103" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-102" vertex="1">
+          <mxGeometry width="660" height="61" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-104" value="&lt;b&gt;硬件设备层&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-103" vertex="1">
+          <mxGeometry width="161" height="61" as="geometry">
+            <mxRectangle width="161" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-105" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;通过硬件原理图、芯片数据手册，确定底层需配置的寄存器&lt;/li&gt;&lt;li&gt;寄存器操作(如open、write、read、ioctl等)写在file_operations中&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-103" vertex="1">
+          <mxGeometry x="161" width="499" height="61" as="geometry">
+            <mxRectangle width="499" height="61" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-106" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-102" vertex="1">
+          <mxGeometry y="61" width="660" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-107" value="&lt;b&gt;驱动层&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-106" vertex="1">
+          <mxGeometry width="161" height="50" as="geometry">
+            <mxRectangle width="161" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-108" value="&lt;div&gt;&lt;ul&gt;&lt;li&gt;注册file_operations到内核中的设备（如cdev）&lt;/li&gt;&lt;li&gt;内核通过散列表（如cdev_map）来登记设备&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-106" vertex="1">
+          <mxGeometry x="161" width="499" height="50" as="geometry">
+            <mxRectangle width="499" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-109" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-102" vertex="1">
+          <mxGeometry y="111" width="660" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-110" value="&lt;b&gt;文件系统层&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-109" vertex="1">
+          <mxGeometry width="161" height="60" as="geometry">
+            <mxRectangle width="161" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-111" value="&lt;ul&gt;&lt;li&gt;&amp;nbsp;为每个文件创建唯一的inode，绑定设备号和设备&lt;/li&gt;&lt;li&gt;每打开一个文件都创建一个file，file-&amp;gt;指向fops&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-109" vertex="1">
+          <mxGeometry x="161" width="499" height="60" as="geometry">
+            <mxRectangle width="499" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-115" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-102" vertex="1">
+          <mxGeometry y="171" width="660" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-116" value="&lt;b&gt;用户层&lt;/b&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;strokeColor=inherit;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-115" vertex="1">
+          <mxGeometry width="161" height="60" as="geometry">
+            <mxRectangle width="161" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-117" value="&lt;ul&gt;&lt;li&gt;使用标准文件操作函数，打开/dev目录下的设备&amp;nbsp;&lt;/li&gt;&lt;li&gt;上面操作通过系统调用进入内核空间，内核VFS转发到对应的file&lt;/li&gt;&lt;/ul&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;strokeColor=#82b366;fontSize=14;" parent="1-1qPPfnHiISvSacmwwY-115" vertex="1">
+          <mxGeometry x="161" width="499" height="60" as="geometry">
+            <mxRectangle width="499" height="60" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1-1qPPfnHiISvSacmwwY-102" source="1-1qPPfnHiISvSacmwwY-103" target="1-1qPPfnHiISvSacmwwY-106" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-30" y="31" />
+              <mxPoint x="-30" y="81" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-112" value="&lt;h1&gt;&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 20px;&quot;&gt;字符设备抽象设计&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px; font-weight: normal;&quot;&gt;虽然C语言没有面向对象的语法，但Linux内核通过结构体的巧妙设计，实现了面向对象的编程思想&lt;/font&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="160" y="580" width="660" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="820" y="720" as="sourcePoint" />
+            <mxPoint x="820" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="850" y="720" />
+              <mxPoint x="850" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="729.5" as="sourcePoint" />
+            <mxPoint x="160" y="779.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="729.5" />
+              <mxPoint x="130" y="779.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1-1qPPfnHiISvSacmwwY-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.4;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="160" y="790" as="sourcePoint" />
+            <mxPoint x="160" y="840" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130" y="790" />
+              <mxPoint x="130" y="840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DihBrw_8lqoa1BjjdLB--1" value="&lt;font style=&quot;font-size: 30px;&quot;&gt;🌻Make By Dakkk&lt;/font&gt;" style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#1CA5B8;strokeWidth=1;fillColor=none;fontColor=#1CA5B8;whiteSpace=wrap;align=center;verticalAlign=middle;spacingLeft=0;fontStyle=1;fontSize=16;spacing=5;" vertex="1" parent="1">
+          <mxGeometry x="830.0000000000001" y="41.81" width="160" height="70.39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
